@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Aeropedia</string>
+    <string name="airbus">Airbus</string>
+    <string name="boeing">Boeing</string>
+    <string name="embraer">Embraer</string>
+    <string name="bombardier">Bombardier</string>
 </resources>
