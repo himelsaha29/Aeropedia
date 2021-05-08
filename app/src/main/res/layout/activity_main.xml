@@ -7,63 +7,74 @@
     tools:context=".MainActivity"
     android:background="@drawable/background">
 
-    <Button
+
+    <com.royrodriguez.transitionbutton.TransitionButton
         android:id="@+id/airbus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/button"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:backgroundTint="#72A8E1"
         android:text="@string/airbus"
         android:textColor="@color/white"
-        app:backgroundTint="#72A8E1"
+        app:defaultColor="#72A8E1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207" />
+        app:layout_constraintVertical_bias="0.206"
+        app:loaderColor="@android:color/white" />
 
-    <Button
+    <com.royrodriguez.transitionbutton.TransitionButton
         android:id="@+id/boeing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/button"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:backgroundTint="#72A8E1"
         android:text="@string/boeing"
         android:textColor="@color/white"
-        app:backgroundTint="#72A8E1"
+        app:defaultColor="#72A8E1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.382" />
+        app:layout_constraintVertical_bias="0.375"
+        app:loaderColor="@android:color/white" />
 
-    <Button
-        android:id="@+id/embraer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button"
-        android:text="@string/embraer"
-        android:textColor="@color/white"
-        app:backgroundTint="#72A8E1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566" />
-
-    <Button
+    <com.royrodriguez.transitionbutton.TransitionButton
         android:id="@+id/bombardier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/button"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:backgroundTint="#72A8E1"
         android:text="@string/bombardier"
         android:textColor="@color/white"
-        app:backgroundTint="#72A8E1"
+        app:defaultColor="#72A8E1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.746" />
+        app:layout_constraintVertical_bias="0.566"
+        app:loaderColor="@android:color/white" />
+
+    <com.royrodriguez.transitionbutton.TransitionButton
+        android:id="@+id/embraer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:backgroundTint="#72A8E1"
+        android:text="@string/embraer"
+        android:textColor="@color/white"
+        app:defaultColor="#72A8E1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.745"
+        app:loaderColor="@android:color/white" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
