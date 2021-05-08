@@ -7,24 +7,12 @@
     tools:context=".MainActivity"
     android:background="@drawable/background">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.174" />
-
     <Button
         android:id="@+id/airbus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/material_on_primary_disabled"
         android:text="@string/airbus"
+        android:background="@drawable/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -36,7 +24,7 @@
         android:id="@+id/boeing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/material_on_background_disabled"
+        android:background="@color/material_on_primary_disabled"
         android:text="@string/boeing"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +35,7 @@
         android:id="@+id/embraer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/material_on_background_disabled"
+        android:background="@color/material_on_primary_disabled"
         android:text="@string/embraer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
