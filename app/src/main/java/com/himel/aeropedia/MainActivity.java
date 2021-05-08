@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,10 +28,17 @@ public class MainActivity extends AppCompatActivity {
         airbus = findViewById(R.id.airbus);
         embraer = findViewById(R.id.embraer);
 
+        Animation translate = AnimationUtils.loadAnimation(this, R.anim.animation);
+
+
         bombardier.getBackground().setAlpha(100);
+        bombardier.setAnimation(translate);
         airbus.getBackground().setAlpha(100);
+        airbus.setAnimation(translate);
         boeing.getBackground().setAlpha(100);
+        boeing.setAnimation(translate);
         embraer.getBackground().setAlpha(100);
+        embraer.setAnimation(translate);
 
     }
 
