@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
+
+
+    <com.royrodriguez.transitionbutton.TransitionButton
+        android:id="@+id/a350"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:backgroundTint="#72A8E1"
+        android:text="A350"
+        android:textColor="@color/white"
+        app:defaultColor="#72A8E1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.206"
+        app:loaderColor="@android:color/white" />
+
+    <com.royrodriguez.transitionbutton.TransitionButton
+        android:id="@+id/a380"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:backgroundTint="#72A8E1"
+        android:text="A380"
+        android:textColor="@color/white"
+        app:defaultColor="#72A8E1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.375"
+        app:loaderColor="@android:color/white" />
+
+    <com.royrodriguez.transitionbutton.TransitionButton
+        android:id="@+id/a320"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:backgroundTint="#72A8E1"
+        android:text="A320"
+        android:textColor="@color/white"
+        app:defaultColor="#72A8E1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.566"
+        app:loaderColor="@android:color/white" />
+
+    <com.royrodriguez.transitionbutton.TransitionButton
+        android:id="@+id/a340"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:backgroundTint="#72A8E1"
+        android:text="A340"
+        android:textColor="@color/white"
+        app:defaultColor="#72A8E1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.745"
+        app:loaderColor="@android:color/white" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
