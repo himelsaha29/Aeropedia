@@ -3,6 +3,7 @@ package com.himel.aeropedia;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,22 +20,26 @@ import android.widget.Toast;
 
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
-import com.royrodriguez.transitionbutton.TransitionButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TransitionButton bombardier;
-    private TransitionButton embraer;
-    private TransitionButton boeing;
-    private TransitionButton airbus;
+    private CardView airbusCard;
     private boolean flag = false;
-    private FlowingDrawer mDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        airbusCard = findViewById(R.id.airbusCard);
 
+        airbusCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), Airbus.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

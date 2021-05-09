@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.himel.aeropedia"
-        minSdkVersion 21
+        minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -40,8 +40,6 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.royrodriguez:transitionbutton:0.2.0'
-    implementation "androidx.cardview:cardview:1.0.0"
     implementation 'com.mxn.soul:flowingdrawer-core:2.1.0'
     implementation 'com.nineoldandroids:library:2.4.0'
 }

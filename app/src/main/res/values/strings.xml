@@ -7,4 +7,10 @@
     <string name="cessna">Cessna</string>
     <string name="gulfstream">Gulfstream</string>
     <string name="antonov">Antonov</string>
+    <string name="a350">A350</string>
+    <string name="a380">A380</string>
+    <string name="a320">A320</string>
+    <string name="a319">A319</string>
+    <string name="a340">A340</string>
+    <string name="a321">A321</string>
 </resources>
