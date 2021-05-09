@@ -21,12 +21,13 @@
             android:layout_width="match_parent">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/airbusCard"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:backgroundTint="#72A8E1"
-                app:cardElevation="6dp"
+                app:cardElevation="50dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -40,27 +41,30 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:background="@drawable/ic_launcher_foreground"/>
+                        android:background="@drawable/ic_launcher_foreground"
+                        android:scaleType="centerCrop"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="-122dp"
+                        android:textSize="38dp"
                         android:layout_marginTop="12dp"
-                        android:textColor="@color/black"
-                        android:textSize="18dp"
-                        android:text="AIRBUS" />
+                        android:text="@string/airbus"
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/boeingCard"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:backgroundTint="#72A8E1"
-                app:cardElevation="6dp"
+                app:cardElevation="50dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -80,21 +84,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:textColor="@color/black"
-                        android:textSize="18dp"
-                        android:text="BOEING" />
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="-122dp"
+                        android:textSize="38dp"
+                        android:text="@string/boeing" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/bombardierCard"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:backgroundTint="#72A8E1"
-                app:cardElevation="6dp"
+                app:cardElevation="50dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -114,21 +120,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:textColor="@color/black"
-                        android:textSize="18dp"
-                        android:text="BOMBARDIER" />
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="-82dp"
+                        android:textSize="38dp"
+                        android:text="@string/bombardier" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/embraerCard"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:backgroundTint="#72A8E1"
-                app:cardElevation="6dp"
+                app:cardElevation="50dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -148,21 +156,59 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:textColor="@color/black"
-                        android:textSize="18dp"
-                        android:text="EMBRAER" />
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="-107dp"
+                        android:textSize="38dp"
+                        android:text="@string/embraer" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/antonovCard"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:backgroundTint="#72A8E1"
-                app:cardElevation="6dp"
+                app:cardElevation="50dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/ic_launcher_foreground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="-107dp"
+                        android:textSize="38dp"
+                        android:text="@string/antonov" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cessnaCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:backgroundTint="#72A8E1"
+                app:cardElevation="50dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -182,9 +228,46 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:textColor="@color/black"
-                        android:textSize="18dp"
-                        android:text="ANTONOV" />
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="-115dp"
+                        android:textSize="38dp"
+                        android:text="@string/cessna" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/gulfstreamCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:backgroundTint="#72A8E1"
+                app:cardElevation="50dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/ic_launcher_foreground"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="-84dp"
+                        android:textSize="38dp"
+                        android:text="@string/gulfstream" />
 
                 </LinearLayout>
 

@@ -4,4 +4,7 @@
     <string name="boeing">Boeing</string>
     <string name="embraer">Embraer</string>
     <string name="bombardier">Bombardier</string>
+    <string name="cessna">Cessna</string>
+    <string name="gulfstream">Gulfstream</string>
+    <string name="antonov">Antonov</string>
 </resources>
