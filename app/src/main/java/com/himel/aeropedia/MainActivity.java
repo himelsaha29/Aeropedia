@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         airbusCard = findViewById(R.id.airbusCard);
         antonovCard = findViewById(R.id.antonovCard);
-        airbusCard.getBackground().setAlpha(75);
+        //airbusCard.getBackground().setAlpha(75);
         antonovCard.getBackground().setAlpha(75);
         airbusCard.setOnClickListener(new View.OnClickListener() {
 
