@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private CardView airbusCard;
     private CardView antonovCard;
+    private CardView embraerCard;
     private boolean flag = false;
 
     @Override
@@ -33,8 +34,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         airbusCard = findViewById(R.id.airbusCard);
         antonovCard = findViewById(R.id.antonovCard);
-        //airbusCard.getBackground().setAlpha(75);
-        antonovCard.getBackground().setAlpha(75);
+        embraerCard = findViewById(R.id.embraerCard);
+        airbusCard.getBackground().setAlpha(65);
+        antonovCard.getBackground().setAlpha(65);
+        embraerCard.getBackground().setAlpha(65);
+
+
         airbusCard.setOnClickListener(new View.OnClickListener() {
 
             @Override
