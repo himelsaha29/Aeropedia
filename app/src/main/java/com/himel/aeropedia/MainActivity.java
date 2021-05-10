@@ -24,6 +24,7 @@ import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 public class MainActivity extends AppCompatActivity {
 
     private CardView airbusCard;
+    private CardView boeingCard;
     private CardView antonovCard;
     private CardView embraerCard;
     private boolean flag = false;
@@ -33,9 +34,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         airbusCard = findViewById(R.id.airbusCard);
+        boeingCard = findViewById(R.id.boeingCard);
         antonovCard = findViewById(R.id.antonovCard);
         embraerCard = findViewById(R.id.embraerCard);
         airbusCard.getBackground().setAlpha(65);
+        boeingCard.getBackground().setAlpha(65);
         antonovCard.getBackground().setAlpha(65);
         embraerCard.getBackground().setAlpha(65);
 

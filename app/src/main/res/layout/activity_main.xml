@@ -56,37 +56,31 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/boeingCard"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                app:cardPreventCornerOverlap="false"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:backgroundTint="#72A8E1"
                 app:cardElevation="0dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/ic_launcher_foreground"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/boeing_cover"
+                        android:scaleType="centerCrop"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="-120dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="132dp"
                         android:fontFamily="@font/maven_pro_medium"
                         android:text="@string/boeing"
                         android:textColor="@color/white"
                         android:textSize="38dp" />
-
-                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -142,7 +136,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/airbus_cover"
+                        android:src="@drawable/embraer"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"/>
 
