@@ -52,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        antonovCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), AirbusA350.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
