@@ -37,14 +37,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/mod"
+                        android:src="@drawable/airbus_cover"
                         android:scaleType="centerCrop"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
-                        android:layout_marginTop="172dp"
+                        android:layout_marginTop="132dp"
                         android:fontFamily="@font/maven_pro_medium"
                         android:text="@string/airbus"
                         android:textColor="@color/white"
@@ -142,7 +142,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/mod"
+                        android:src="@drawable/airbus_cover"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"/>
 
@@ -150,7 +150,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
-                        android:layout_marginTop="172dp"
+                        android:layout_marginTop="132dp"
                         android:fontFamily="@font/maven_pro_medium"
                         android:text="@string/embraer"
                         android:textColor="@color/white"
