@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundonelight"
+    android:background="@drawable/backgroundonedark"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -87,37 +87,31 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/bombardierCard"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                app:cardPreventCornerOverlap="false"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:backgroundTint="#72A8E1"
                 app:cardElevation="0dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/ic_launcher_foreground"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/bombardier_cover"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="-75dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginTop="132dp"
                         android:fontFamily="@font/maven_pro_medium"
                         android:text="@string/bombardier"
                         android:textColor="@color/white"
                         android:textSize="38dp" />
-
-                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -157,37 +151,32 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/antonovCard"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                app:cardPreventCornerOverlap="false"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:backgroundTint="#72A8E1"
                 app:cardElevation="0dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/ic_launcher_foreground" />
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/antonov_cover"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="-103dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="132dp"
                         android:fontFamily="@font/maven_pro_medium"
                         android:text="@string/antonov"
                         android:textColor="@color/white"
                         android:textSize="38dp" />
 
-                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
