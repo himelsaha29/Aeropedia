@@ -41,14 +41,16 @@
                         android:scaleType="centerCrop"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="12dp"
-                        android:layout_marginTop="132dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
                         android:fontFamily="@font/maven_pro_medium"
                         android:text="@string/airbus"
                         android:textColor="@color/white"
-                        android:textSize="38dp" />
+                        android:gravity="bottom"
+                        android:textSize="38sp" />
 
 
             </androidx.cardview.widget.CardView>
