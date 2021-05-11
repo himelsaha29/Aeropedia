@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         boeingCard.setAnimation(translate);
         bombardierCard.setAnimation(translate);
         embraerCard.setAnimation(translate);
+        antonovCard.setAnimation(translate);
 
 
         airbusCard.setOnClickListener(new View.OnClickListener() {
