@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private CardView airbusCard;
     private CardView boeingCard;
+    private CardView bombardierCard;
     private CardView antonovCard;
     private CardView embraerCard;
     private boolean flag = false;
@@ -35,12 +36,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         airbusCard = findViewById(R.id.airbusCard);
         boeingCard = findViewById(R.id.boeingCard);
-        antonovCard = findViewById(R.id.antonovCard);
+        bombardierCard = findViewById(R.id.bombardierCard);
         embraerCard = findViewById(R.id.embraerCard);
+        antonovCard = findViewById(R.id.antonovCard);
+
         airbusCard.getBackground().setAlpha(65);
         boeingCard.getBackground().setAlpha(65);
-        antonovCard.getBackground().setAlpha(65);
+        bombardierCard.getBackground().setAlpha(65);
         embraerCard.getBackground().setAlpha(65);
+        antonovCard.getBackground().setAlpha(65);
+
+
+        Animation translate = AnimationUtils.loadAnimation(this, R.anim.animation);
+        airbusCard.setAnimation(translate);
+        boeingCard.setAnimation(translate);
+        bombardierCard.setAnimation(translate);
+        embraerCard.setAnimation(translate);
 
 
         airbusCard.setOnClickListener(new View.OnClickListener() {
