@@ -55,6 +55,41 @@
 
             </androidx.cardview.widget.CardView>
 
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/antonovCard"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:cardPreventCornerOverlap="false"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/antonov_cover"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/maven_pro_medium"
+                    android:text="@string/antonov"
+                    android:textColor="@color/white"
+                    android:gravity="bottom"
+                    android:textSize="38sp" />
+
+
+            </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/boeingCard"
                 android:layout_height="wrap_content"
@@ -75,14 +110,16 @@
                         android:scaleType="centerCrop"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="12dp"
-                        android:layout_marginTop="132dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
                         android:fontFamily="@font/maven_pro_medium"
                         android:text="@string/boeing"
                         android:textColor="@color/white"
-                        android:textSize="38dp" />
+                        android:gravity="bottom"
+                        android:textSize="38sp" />
 
             </androidx.cardview.widget.CardView>
 
@@ -106,14 +143,16 @@
                         android:scaleType="centerCrop"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="11dp"
-                        android:layout_marginTop="132dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
                         android:fontFamily="@font/maven_pro_medium"
                         android:text="@string/bombardier"
                         android:textColor="@color/white"
-                        android:textSize="38dp" />
+                        android:gravity="bottom"
+                        android:textSize="38sp" />
 
             </androidx.cardview.widget.CardView>
 
@@ -137,50 +176,21 @@
                         android:scaleType="centerCrop"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="12dp"
-                        android:layout_marginTop="132dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
                         android:fontFamily="@font/maven_pro_medium"
                         android:text="@string/embraer"
                         android:textColor="@color/white"
-                        android:textSize="38dp" />
+                        android:gravity="bottom"
+                        android:textSize="38sp" />
 
 
 
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/antonovCard"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                app:cardPreventCornerOverlap="false"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="0dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/antonov_cover"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="132dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:text="@string/antonov"
-                        android:textColor="@color/white"
-                        android:textSize="38dp" />
-
-
-            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cessnaCard"
@@ -206,14 +216,18 @@
                         android:background="@drawable/ic_launcher_foreground"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:textColor="@color/white"
-                        android:layout_marginLeft="-115dp"
-                        android:textSize="38dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
                         android:fontFamily="@font/maven_pro_medium"
-                        android:text="@string/cessna" />
+                        android:text="@string/cessna"
+                        android:textColor="@color/white"
+                        android:gravity="bottom"
+                        android:textSize="38sp"
+
+                         />
 
                 </LinearLayout>
 
@@ -243,14 +257,16 @@
                         android:background="@drawable/ic_launcher_foreground"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
                         android:fontFamily="@font/maven_pro_medium"
-                        android:layout_marginLeft="-80dp"
-                        android:textSize="38dp"
-                        android:text="@string/gulfstream" />
+                        android:text="@string/gulfstream"
+                        android:textColor="@color/white"
+                        android:gravity="bottom"
+                        android:textSize="38sp" />
 
                 </LinearLayout>
 
