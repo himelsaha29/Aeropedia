@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private CardView antonovCard;
     private CardView embraerCard;
     private boolean flag = false;
+    private Animation translate = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,13 +47,7 @@ public class MainActivity extends AppCompatActivity {
         embraerCard.getBackground().setAlpha(65);
         antonovCard.getBackground().setAlpha(65);
 
-
-        Animation translate = AnimationUtils.loadAnimation(this, R.anim.animation);
-        airbusCard.setAnimation(translate);
-        boeingCard.setAnimation(translate);
-        bombardierCard.setAnimation(translate);
-        embraerCard.setAnimation(translate);
-        antonovCard.setAnimation(translate);
+        animateCards();
 
 
         airbusCard.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onRestart() {
+        super.onRestart();
+        animateCards();
+    }
+
+    @Override
     public void onBackPressed() {
         if(!flag) {
             Toast.makeText(MainActivity.this, "Press again to exit", Toast.LENGTH_LONG).show();
@@ -91,6 +92,15 @@ public class MainActivity extends AppCompatActivity {
         } else {
             this.finishAffinity();
         }
+    }
+
+    private void animateCards() {
+        translate = AnimationUtils.loadAnimation(this, R.anim.animation);
+        airbusCard.setAnimation(translate);
+        boeingCard.setAnimation(translate);
+        bombardierCard.setAnimation(translate);
+        embraerCard.setAnimation(translate);
+        antonovCard.setAnimation(translate);
     }
 
 
