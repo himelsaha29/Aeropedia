@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundonedark"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/main_scroll">
 
     <LinearLayout
         android:orientation="vertical"

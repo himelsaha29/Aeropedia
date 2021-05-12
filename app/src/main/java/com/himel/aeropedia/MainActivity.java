@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private CardView embraerCard;
     private boolean flag = false;
     private Animation translate = null;
+    private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         bombardierCard = findViewById(R.id.bombardierCard);
         embraerCard = findViewById(R.id.embraerCard);
         antonovCard = findViewById(R.id.antonovCard);
+
 
         airbusCard.getBackground().setAlpha(65);
         boeingCard.getBackground().setAlpha(65);
@@ -73,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
+        scrollView = findViewById(R.id.main_scroll);
+        scrollView.scrollTo(0, scrollView.getTop());
         animateCards();
     }
 
