@@ -90,7 +90,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        this.getFragmentManager().popBackStack();
+        if(!flag) {
+            Toast.makeText(MainActivity.this, "Press again to exit", Toast.LENGTH_LONG).show();
+            flag = true;
+            new CountDownTimer(3000, 1000) {
+                public void onTick(long millisUntilFinished) {
+                    // no function
+                }
+                public void onFinish() {
+                    flag = false;
+                }
+            }.start();
+        } else {
+            this.finishAffinity();
+        }
     }
 
     private void animateCards() {
