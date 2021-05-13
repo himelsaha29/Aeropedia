@@ -73,8 +73,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                fragment = new AirbusA380();
-                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
             }
         });
 
