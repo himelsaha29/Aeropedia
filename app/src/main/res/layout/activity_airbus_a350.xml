@@ -1,41 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/backgroundonelight">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="100dp"
-            android:fontFamily="@font/maven_pro_medium"
-            android:gravity="center_horizontal"
-            android:text="Airbus 350"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="38sp" />
-
-    </LinearLayout>
-
-
-
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:nestedScrollingEnabled="true"
-    tools:context=".AirbusA350">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,284 +10,89 @@
         android:orientation="vertical">
 
 
-        <GridLayout
+        <ImageView
+            android:layout_height="280dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:alignmentMode="alignMargins"
-            android:columnCount="1"
-            android:columnOrderPreserved="false"
-            android:rowCount="3">
-
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/airbusCard"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_marginTop="182dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="42dp"
-                app:cardElevation="0dp"
-                app:cardPreventCornerOverlap="false">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center"
-                    android:layout_weight="1">
-
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/airbus"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:gravity="center_horizontal"
-                        android:textAlignment="center"
-                        android:text="@string/bombardier"
-                        android:textColor="@color/black"
-                        android:textSize="38sp" />
-
-
-                </LinearLayout>
-
-
-            </androidx.cardview.widget.CardView>
-
-
-        </GridLayout>
-
+            android:layout_gravity="top"
+            android:src="@drawable/qc"
+            android:layout_centerHorizontal="true"/>
 
     </LinearLayout>
 
 
-</ScrollView>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="true"
+        tools:context=".AirbusA350">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="1"
+                android:columnOrderPreserved="false"
+                android:rowCount="3">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/airbusCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="182dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="42dp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        tools:ignore="ExtraText">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center_horizontal"
+                            android:text="The Airbus A350 is a long-range, wide-body jet airliner developed by Airbus. The first A350 design proposed by Airbus in 2004, in response to the Boeing 787 Dreamliner, would have been a development of the A330 with composite wings and new engines. As market support was inadequate, in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB turbofan engines."
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="38sp" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </GridLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 </RelativeLayout>

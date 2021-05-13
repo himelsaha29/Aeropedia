@@ -7,7 +7,7 @@
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundtwolight"
+    android:background="@drawable/background_two_dark"
     tools:context=".Airbus">
 
     <LinearLayout
