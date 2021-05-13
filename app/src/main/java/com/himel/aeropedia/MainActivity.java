@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
     private boolean flag = false;
     private Animation translate = null;
     private ScrollView scrollView;
+    public final FragmentManager fragmentManager = getSupportFragmentManager();
 
+    Fragment fragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         embraerCard.getBackground().setAlpha(65);
         antonovCard.getBackground().setAlpha(65);
 
+
+
         animateCards();
 
 
@@ -66,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AirbusA350.class);
-                startActivity(intent);
+                fragment = new AirbusA380();
+                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
             }
         });
 
@@ -83,19 +89,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(!flag) {
-            Toast.makeText(MainActivity.this, "Press again to exit", Toast.LENGTH_LONG).show();
-            flag = true;
-            new CountDownTimer(3000, 1000) {
-                public void onTick(long millisUntilFinished) {
-                    // no function
-                }
-                public void onFinish() {
-                    flag = false;
-                }
-            }.start();
-        } else {
-            this.finishAffinity();
+        if(fragment instanceof AirbusA380) {
+            fragmentManager.popBackStackImmediate();
         }
     }
 

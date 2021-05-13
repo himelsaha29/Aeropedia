@@ -1,301 +1,306 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flContainer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/backgroundonedark"
-    tools:context=".MainActivity"
-    android:id="@+id/main_scroll">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
+        android:id="@+id/main_scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/backgroundonedark"
+        tools:context=".MainActivity">
 
-        <GridLayout
-            android:columnCount="1"
-            android:rowCount="3"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/airbusCard"
-                android:layout_height="wrap_content"
+            <GridLayout
                 android:layout_width="match_parent"
-                app:cardPreventCornerOverlap="false"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardElevation="0dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="1"
+                android:columnOrderPreserved="false"
+                android:rowCount="3">
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/airbusCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false">
 
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/airbus_cover"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/airbus_cover" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="12dp"
                         android:layout_marginStart="10dp"
+                        android:layout_marginLeft="12dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/maven_pro_medium"
+                        android:gravity="bottom"
                         android:text="@string/airbus"
                         android:textColor="@color/white"
-                        android:gravity="bottom"
                         android:textSize="38sp" />
 
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/antonovCard"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                app:cardPreventCornerOverlap="false"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardElevation="0dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-
-
-                <ImageView
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/antonovCard"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/antonov_cover"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerCrop"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/maven_pro_medium"
-                    android:text="@string/antonov"
-                    android:textColor="@color/white"
-                    android:gravity="bottom"
-                    android:textSize="38sp" />
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/boeingCard"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                app:cardPreventCornerOverlap="false"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardElevation="0dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false">
 
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/boeing_cover"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/antonov_cover" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="12dp"
                         android:layout_marginStart="10dp"
+                        android:layout_marginLeft="12dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/maven_pro_medium"
+                        android:gravity="bottom"
+                        android:text="@string/antonov"
+                        android:textColor="@color/white"
+                        android:textSize="38sp" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/boeingCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/boeing_cover" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/maven_pro_medium"
+                        android:gravity="bottom"
                         android:text="@string/boeing"
                         android:textColor="@color/white"
-                        android:gravity="bottom"
                         android:textSize="38sp" />
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/bombardierCard"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                app:cardPreventCornerOverlap="false"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardElevation="0dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bombardierCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false">
 
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/bombardier_cover"
                         android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bombardier_cover" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="12dp"
                         android:layout_marginStart="10dp"
+                        android:layout_marginLeft="12dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/maven_pro_medium"
+                        android:gravity="bottom"
                         android:text="@string/bombardier"
                         android:textColor="@color/white"
-                        android:gravity="bottom"
                         android:textSize="38sp" />
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/embraerCard"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardPreventCornerOverlap="false"
-                app:cardElevation="0dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/embraerCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false">
 
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/embraer_cover"
                         android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/embraer_cover" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="12dp"
                         android:layout_marginStart="10dp"
+                        android:layout_marginLeft="12dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/maven_pro_medium"
+                        android:gravity="bottom"
                         android:text="@string/embraer"
                         android:textColor="@color/white"
-                        android:gravity="bottom"
                         android:textSize="38sp" />
 
 
+                </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cessnaCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:backgroundTint="#72A8E1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cessnaCard"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:backgroundTint="#72A8E1"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardElevation="0dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/ic_launcher_foreground"/>
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:text="@string/cessna"
-                        android:textColor="@color/white"
-                        android:gravity="bottom"
-                        android:textSize="38sp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                         />
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/ic_launcher_foreground" />
 
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="bottom"
+                            android:text="@string/cessna"
+                            android:textColor="@color/white"
+                            android:textSize="38sp"
 
-            </androidx.cardview.widget.CardView>
+                            />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/gulfstreamCard"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:backgroundTint="#72A8E1"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardElevation="0dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                    </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center">
+                </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/ic_launcher_foreground"/>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/gulfstreamCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:backgroundTint="#72A8E1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:text="@string/gulfstream"
-                        android:textColor="@color/white"
-                        android:gravity="bottom"
-                        android:textSize="38sp" />
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/ic_launcher_foreground" />
 
-            </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="bottom"
+                            android:text="@string/gulfstream"
+                            android:textColor="@color/white"
+                            android:textSize="38sp" />
 
-        </GridLayout>
+                    </LinearLayout>
 
-    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-</ScrollView>
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

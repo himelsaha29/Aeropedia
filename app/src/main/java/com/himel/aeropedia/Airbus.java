@@ -22,6 +22,7 @@ public class Airbus extends AppCompatActivity {
         a319Card = findViewById(R.id.a319Card);
         a319Card.getBackground().setAlpha(75);
 
+
     }
 
 
