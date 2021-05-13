@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), Airbus.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
@@ -89,9 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(fragment instanceof AirbusA380) {
-            fragmentManager.popBackStackImmediate();
-        }
+        this.getFragmentManager().popBackStack();
     }
 
     private void animateCards() {
