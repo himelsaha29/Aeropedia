@@ -3,10 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AirbusA350">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:fitsSystemWindows="true">
@@ -31,6 +33,17 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"/>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:foregroundGravity="bottom"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="-35dp"
+                android:layout_marginBottom="0dp"
+                android:baselineAlignBottom="true"
+                android:src="@drawable/description_box_layout" />
+
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -39,17 +52,36 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="38sp"
-            android:fontFamily="@font/maven_pro_medium"
-            android:background="@color/white"
-            android:textColor="@color/black"
-            android:text="The Airbus A350 is a long-range, wide-body jet airliner developed by Airbus. The first A350 design proposed by Airbus in 2004, in response to the Boeing 787 Dreamliner, would have been a development of the A330 with composite wings and new engines. As market support was inadequate, in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB turbofan engines."/>
+            android:orientation="vertical"
+            android:layout_marginRight="0dp"
+            android:layout_marginEnd="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="38sp"
+                android:fontFamily="@font/maven_pro_medium"
+                android:textColor="@color/black"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:textAlignment="center"
+                android:text="The Airbus A350 is a long-range, wide-body jet airliner developed by Airbus. The first A350 design proposed by Airbus in 2004, in response to the Boeing 787 Dreamliner, would have been a development of the A330 with composite wings and new engines. As market support was inadequate, in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB turbofan engines."
+                android:gravity="center_horizontal" />
+
+
+        </LinearLayout>
+
 
     </androidx.core.widget.NestedScrollView>
+
+
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
