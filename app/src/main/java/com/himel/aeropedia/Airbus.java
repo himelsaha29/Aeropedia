@@ -6,6 +6,9 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class Airbus extends AppCompatActivity {
@@ -15,6 +18,8 @@ public class Airbus extends AppCompatActivity {
     private CardView a380Card;
     private CardView a319Card;
     private TextView a319text;
+    private Animation translate = null;
+    private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,7 @@ public class Airbus extends AppCompatActivity {
         a380Card.getBackground().setAlpha(65);
         a319Card.getBackground().setAlpha(65);
 
+        animateCards();
 
         a350Card.setOnClickListener(new View.OnClickListener() {
 
@@ -52,5 +58,20 @@ public class Airbus extends AppCompatActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        scrollView = findViewById(R.id.main_scroll);
+        scrollView.scrollTo(0, scrollView.getTop());
+        animateCards();
+    }
+
+    private void animateCards() {
+        translate = AnimationUtils.loadAnimation(this, R.anim.animation);
+        a330Card.setAnimation(translate);
+        a350Card.setAnimation(translate);
+        a380Card.setAnimation(translate);
     }
 }
