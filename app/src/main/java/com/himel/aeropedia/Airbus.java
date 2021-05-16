@@ -11,6 +11,8 @@ import android.widget.TextView;
 public class Airbus extends AppCompatActivity {
 
     private CardView a350Card;
+    private CardView a330Card;
+    private CardView a380Card;
     private CardView a319Card;
     private TextView a319text;
 
@@ -19,9 +21,15 @@ public class Airbus extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_airbus);
         a350Card = findViewById(R.id.a350Card);
-        a350Card.getBackground().setAlpha(75);
+        a380Card = findViewById(R.id.a380Card);
+        a330Card = findViewById(R.id.a330Card);
         a319Card = findViewById(R.id.a319Card);
-        a319Card.getBackground().setAlpha(75);
+
+
+        a350Card.getBackground().setAlpha(65);
+        a330Card.getBackground().setAlpha(65);
+        a380Card.getBackground().setAlpha(65);
+        a319Card.getBackground().setAlpha(65);
 
 
         a350Card.setOnClickListener(new View.OnClickListener() {

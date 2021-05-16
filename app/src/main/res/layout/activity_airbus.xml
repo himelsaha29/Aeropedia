@@ -54,7 +54,7 @@
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/maven_pro_medium"
                         android:gravity="bottom"
-                        android:text="@string/boeing"
+                        android:text="@string/a330"
                         android:textColor="@color/white"
                         android:textSize="38sp" />
 
