@@ -42,6 +42,7 @@
                 android:layout_marginRight="-35dp"
                 android:layout_marginBottom="0dp"
                 android:baselineAlignBottom="true"
+
                 android:src="@drawable/description_box_layout" />
 
 
