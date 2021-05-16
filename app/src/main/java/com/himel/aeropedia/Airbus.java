@@ -16,6 +16,7 @@ public class Airbus extends AppCompatActivity {
     private CardView a350Card;
     private CardView a330Card;
     private CardView a380Card;
+    private CardView a220Card;
     private CardView a319Card;
     private TextView a319text;
     private Animation translate = null;
@@ -29,12 +30,14 @@ public class Airbus extends AppCompatActivity {
         a380Card = findViewById(R.id.a380Card);
         a330Card = findViewById(R.id.a330Card);
         a319Card = findViewById(R.id.a319Card);
+        a220Card = findViewById(R.id.a220Card);
 
 
         a350Card.getBackground().setAlpha(65);
         a330Card.getBackground().setAlpha(65);
         a380Card.getBackground().setAlpha(65);
         a319Card.getBackground().setAlpha(65);
+        a220Card.getBackground().setAlpha(65);
 
         animateCards();
 
@@ -73,5 +76,6 @@ public class Airbus extends AppCompatActivity {
         a330Card.setAnimation(translate);
         a350Card.setAnimation(translate);
         a380Card.setAnimation(translate);
+        a220Card.setAnimation(translate);
     }
 }
