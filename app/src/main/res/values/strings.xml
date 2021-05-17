@@ -16,6 +16,7 @@
     <string name="a330">A330</string>
     <string name="a220">A220</string>
     <string name="beluga">Beluga XL</string>
+    <string name="language_fr"><b>FR</b></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
