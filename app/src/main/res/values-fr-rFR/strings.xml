@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Aeropedia</string>
+    <string name="app_name">Aéropedia</string>
     <string name="airbus">Airbus</string>
     <string name="boeing">Boeing</string>
     <string name="embraer">Embraer</string>
@@ -7,7 +7,7 @@
     <string name="cessna">Cessna</string>
     <string name="gulfstream">Gulfstream</string>
     <string name="antonov">Antonov</string>
-    <string name="a350">A350</string>
+    <string name="a350">à350</string>
     <string name="a380">A380</string>
     <string name="a320">A320</string>
     <string name="a319">A319</string>
@@ -16,6 +16,6 @@
     <string name="a330">A330</string>
     <string name="a220">A220</string>
     <string name="beluga">Beluga XL</string>
-    <string name="language"><b>FR</b></string>
-    <string name="a350_desc">The Airbus A350 is a long-range, wide-body jet airliner developed by Airbus. The first A350 design proposed by Airbus in 2004, in response to the Boeing 787 Dreamliner, would have been a development of the A330 with composite wings and new engines. As market support was inadequate, in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB turbofan engines.</string>
+    <string name="language"><b>EN</b></string>
+    <string name="a350_desc">Le Airbus A350 est un long-range, wide-body jet airliner developed by Airbus. The first A350 design proposed by Airbus in 2004, in response to the Boeing 787 Dreamliner, would have been a development of the A330 with composite wings and new engines. As market support was inadequate, in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB turbofan engines.</string>
 </resources>
