@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            app:contentScrim="#72A8E1"
+            app:contentScrim="@android:color/transparent"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             app:title="@string/a350">
 
