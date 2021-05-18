@@ -32,8 +32,6 @@ public class AirbusA350 extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                System.out.println(getResources().getConfiguration().locale);
-                System.out.println(Locale.FRANCE);
                 if(getResources().getConfiguration().locale.toString().contains("fr")) {
                     setLocale("en");
                     recreate();
