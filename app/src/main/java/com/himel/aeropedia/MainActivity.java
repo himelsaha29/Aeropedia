@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private boolean flag = false;
     private Animation translate = null;
     private ScrollView scrollView;
-    public final FragmentManager fragmentManager = getSupportFragmentManager();
 
     Fragment fragment;
     @Override
@@ -92,7 +91,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if(!flag) {
-            Toast.makeText(MainActivity.this, "Press again to exit", Toast.LENGTH_LONG).show();
+
+            if(getResources().getConfiguration().locale.toString().contains("fr")) {
+                Toast.makeText(MainActivity.this, "Appuyez à nouveau pour quitter", Toast.LENGTH_LONG).show();
+            } else if (getResources().getConfiguration().toString().contains("en")) {
+                Toast.makeText(MainActivity.this, "Press again to exit", Toast.LENGTH_LONG).show();
+            }
+
+
             flag = true;
             new CountDownTimer(3000, 1000) {
                 public void onTick(long millisUntilFinished) {
