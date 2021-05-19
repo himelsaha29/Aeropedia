@@ -7,7 +7,10 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -24,6 +27,8 @@ import android.widget.Toast;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private CardView airbusCard;
@@ -34,11 +39,14 @@ public class MainActivity extends AppCompatActivity {
     private boolean flag = false;
     private Animation translate = null;
     private ScrollView scrollView;
+    Locale locale;
 
     Fragment fragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadLocale();
+        locale = Locale.getDefault();
         setContentView(R.layout.activity_main);
         airbusCard = findViewById(R.id.airbusCard);
         boeingCard = findViewById(R.id.boeingCard);
@@ -53,10 +61,7 @@ public class MainActivity extends AppCompatActivity {
         embraerCard.getBackground().setAlpha(65);
         antonovCard.getBackground().setAlpha(65);
 
-
-
         animateCards();
-
 
         airbusCard.setOnClickListener(new View.OnClickListener() {
 
@@ -83,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
+
+        if(!locale.equals(Locale.getDefault())) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
         scrollView = findViewById(R.id.main_scroll);
         scrollView.scrollTo(0, scrollView.getTop());
         animateCards();
@@ -121,6 +132,35 @@ public class MainActivity extends AppCompatActivity {
         embraerCard.setAnimation(translate);
         antonovCard.setAnimation(translate);
     }
+
+
+
+
+    /** Changing app language **/
+
+    private void setLocale(String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("Language", language);
+        editor.apply();
+    }
+
+    public void loadLocale() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2)).equals("")) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+            editor.apply();
+        }
+        String language = prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+        setLocale(language);
+    }
+
+    /** Changing app language **/
 
 
 }

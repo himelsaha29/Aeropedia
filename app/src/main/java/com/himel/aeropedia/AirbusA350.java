@@ -20,11 +20,13 @@ import java.util.Locale;
 public class AirbusA350 extends AppCompatActivity {
 
     private Button langToggle;
+    Locale locale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadLocale();
+        locale = Locale.getDefault();
         setContentView(R.layout.activity_airbus_a350);
         langToggle = findViewById(R.id.lang_toggle);
 
@@ -35,10 +37,14 @@ public class AirbusA350 extends AppCompatActivity {
             public void onClick(View v) {
                 if(getResources().getConfiguration().locale.toString().contains("fr")) {
                     setLocale("en");
-                    recreate();
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
                 } else if (getResources().getConfiguration().toString().contains("en")) {
                     setLocale("fr");
-                    recreate();
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
                 }
             }
         });
@@ -64,6 +70,19 @@ public class AirbusA350 extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+
+        if(!locale.equals(Locale.getDefault())) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+    }
+
+
+    /** Changing app language **/
 
     private void setLocale(String language) {
         Locale locale = new Locale(language);
@@ -86,6 +105,8 @@ public class AirbusA350 extends AppCompatActivity {
         String language = prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
         setLocale(language);
     }
+
+    /** Changing app language **/
 
     @Override
     public void finish() {

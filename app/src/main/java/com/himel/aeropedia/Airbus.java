@@ -1,15 +1,21 @@
 package com.himel.aeropedia;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import java.util.Locale;
 
 public class Airbus extends AppCompatActivity {
 
@@ -21,10 +27,13 @@ public class Airbus extends AppCompatActivity {
     private TextView a319text;
     private Animation translate = null;
     private ScrollView scrollView;
+    Locale locale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadLocale();
+        locale = Locale.getDefault();
         setContentView(R.layout.activity_airbus);
         a350Card = findViewById(R.id.a350Card);
         a380Card = findViewById(R.id.a380Card);
@@ -51,11 +60,7 @@ public class Airbus extends AppCompatActivity {
             }
         });
 
-
     }
-
-
-
 
     @Override
     public void finish() {
@@ -66,10 +71,17 @@ public class Airbus extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
+
+        if(!locale.equals(Locale.getDefault())) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
         scrollView = findViewById(R.id.main_scroll);
         scrollView.scrollTo(0, scrollView.getTop());
         animateCards();
     }
+
 
     private void animateCards() {
         translate = AnimationUtils.loadAnimation(this, R.anim.animation);
@@ -78,4 +90,30 @@ public class Airbus extends AppCompatActivity {
         a380Card.setAnimation(translate);
         a220Card.setAnimation(translate);
     }
+
+    /** Changing app language **/
+
+    private void setLocale(String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("Language", language);
+        editor.apply();
+    }
+
+    public void loadLocale() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2)).equals("")) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+            editor.apply();
+        }
+        String language = prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+        setLocale(language);
+    }
+
+    /** Changing app language **/
 }
