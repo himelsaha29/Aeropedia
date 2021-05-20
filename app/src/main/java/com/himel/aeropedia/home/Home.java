@@ -1,10 +1,12 @@
-package com.himel.aeropedia;
+package com.himel.aeropedia.home;
 
 import android.animation.ArgbEvaluator;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
+
+import com.himel.aeropedia.R;
 
 import java.util.ArrayList;
 import java.util.List;

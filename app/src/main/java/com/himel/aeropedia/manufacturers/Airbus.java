@@ -1,6 +1,5 @@
-package com.himel.aeropedia;
+package com.himel.aeropedia.manufacturers;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -14,6 +13,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.himel.aeropedia.R;
+import com.himel.aeropedia.airbus.AirbusA350;
 
 import java.util.Locale;
 

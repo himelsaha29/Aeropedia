@@ -1,4 +1,4 @@
-package com.himel.aeropedia;
+package com.himel.aeropedia.home;
 
 public class Model {
 

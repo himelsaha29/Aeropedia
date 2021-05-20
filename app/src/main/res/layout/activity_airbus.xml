@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background_two_dark"
-        tools:context=".Airbus">
+        tools:context=".home.Airbus">
 
         <LinearLayout
             android:layout_width="match_parent"

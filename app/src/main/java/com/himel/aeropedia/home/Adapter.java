@@ -1,4 +1,4 @@
-package com.himel.aeropedia;
+package com.himel.aeropedia.home;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.himel.aeropedia.R;
 
 import java.util.List;
 

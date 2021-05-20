@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".Home"/>
-        <activity android:name=".AirbusA350"/>
-        <activity android:name=".Airbus" />
+        <activity android:name=".home.Home"/>
+        <activity android:name=".airbus.AirbusA350"/>
+        <activity android:name=".manufacturers.Airbus" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

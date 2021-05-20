@@ -1,4 +1,4 @@
-package com.himel.aeropedia;
+package com.himel.aeropedia.airbus;
 
 import android.os.Bundle;
 
@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.himel.aeropedia.R;
 
 public class AirbusA380 extends Fragment {
 
