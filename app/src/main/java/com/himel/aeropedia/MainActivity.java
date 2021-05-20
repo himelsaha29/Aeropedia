@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private CardView bombardierCard;
     private CardView antonovCard;
     private CardView embraerCard;
+    private CardView cessnaCard;
     private boolean flag = false;
     private Animation translate = null;
     private ScrollView scrollView;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         bombardierCard = findViewById(R.id.bombardierCard);
         embraerCard = findViewById(R.id.embraerCard);
         antonovCard = findViewById(R.id.antonovCard);
+        cessnaCard = findViewById(R.id.cessnaCard);
 
 
         airbusCard.getBackground().setAlpha(65);
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         bombardierCard.getBackground().setAlpha(65);
         embraerCard.getBackground().setAlpha(65);
         antonovCard.getBackground().setAlpha(65);
+        cessnaCard.getBackground().setAlpha(65);
 
         animateCards();
 
@@ -123,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
         bombardierCard.setAnimation(translate);
         embraerCard.setAnimation(translate);
         antonovCard.setAnimation(translate);
+        cessnaCard.setAnimation(translate);
     }
 
 
