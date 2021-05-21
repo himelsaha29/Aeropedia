@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         loadLocale();
         locale = Locale.getDefault();
         setContentView(R.layout.activity_main);
+        darkToggle = findViewById(R.id.dark_toggle);
         scrollView = findViewById(R.id.main_scroll);
         loadDarkSettings();
 
@@ -67,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         cessnaCard = findViewById(R.id.cessnaCard);
         scrollView = findViewById(R.id.main_scroll);
         langToggle = findViewById(R.id.lang_toggle);
-        darkToggle = findViewById(R.id.dark_toggle);
         drawer = findViewById(R.id.drawerlayout);
 
 
@@ -125,18 +125,9 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
                 if (prefs.getString("DarkMode", "").equals("Yes")) {
                     toggleDark("No");
-                    darkToggle.setImageResource(R.drawable.ic_bulb_black_lit);
-                    //darkToggle.setBackgroundResource(R.drawable.ic_bulb_black_lit);
-                    Intent intent = getIntent();
-                    finish();
-                    startActivity(intent);
                 } else if (prefs.getString("DarkMode", "").equals("No")) {
                     toggleDark("Yes");
-                    darkToggle.setImageResource(R.drawable.ic_bulb_black);
-                    //darkToggle.setBackgroundResource(R.drawable.ic_bulb_black);
-                    Intent intent = getIntent();
-                    finish();
-                    startActivity(intent);
+
                 }
 
             }
@@ -280,8 +271,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (enableDark.equals("Yes")) {
             scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_two_dark, null));
+            darkToggle.setImageResource(R.drawable.ic_bulb_black_lit);
         } else {
             scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_one_light, null));
+            darkToggle.setImageResource(R.drawable.ic_bulb_black);
         }
 
     }
