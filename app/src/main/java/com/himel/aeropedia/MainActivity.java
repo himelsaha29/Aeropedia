@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private ScrollView scrollView;
     Locale locale;
     private Button langToggle;
-    private Button darkToggle;
+    private ImageButton darkToggle;
     private String enableDark;
     private FlowingDrawer drawer;
 
