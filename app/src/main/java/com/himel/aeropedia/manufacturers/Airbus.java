@@ -8,19 +8,24 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA350;
+import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
+import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 
 import java.util.Locale;
 
 public class Airbus extends AppCompatActivity {
 
+    private Button langToggle;
     private CardView a350Card;
     private CardView a330Card;
     private CardView a380Card;
@@ -42,6 +47,7 @@ public class Airbus extends AppCompatActivity {
         a330Card = findViewById(R.id.a330Card);
         a319Card = findViewById(R.id.a319Card);
         a220Card = findViewById(R.id.a220Card);
+        langToggle = findViewById(R.id.lang_toggle);
 
 
         a350Card.getBackground().setAlpha(65);
@@ -62,6 +68,42 @@ public class Airbus extends AppCompatActivity {
             }
         });
 
+
+        langToggle.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(getResources().getConfiguration().locale.toString().contains("fr")) {
+                    setLocale("en");
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                } else if (getResources().getConfiguration().toString().contains("en")) {
+                    setLocale("fr");
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }
+            }
+        });
+
+
+        FlowingDrawer mDrawer= null;
+        mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
+        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_FULLSCREEN);
+        mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
+            @Override
+            public void onDrawerStateChange(int oldState, int newState) {
+                if (newState == ElasticDrawer.STATE_CLOSED) {
+                    Log.i("MainActivity", "Drawer STATE_CLOSED");
+                }
+            }
+
+            @Override
+            public void onDrawerSlide(float openRatio, int offsetPixels) {
+                Log.i("MainActivity", "openRatio=" + openRatio + " ,offsetPixels=" + offsetPixels);
+            }
+        });
     }
 
     @Override
