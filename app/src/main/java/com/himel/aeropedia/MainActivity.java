@@ -2,6 +2,7 @@ package com.himel.aeropedia;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 
 import android.app.Activity;
@@ -39,21 +40,31 @@ public class MainActivity extends AppCompatActivity {
     private ScrollView scrollView;
     Locale locale;
     private Button langToggle;
+    private Button darkToggle;
+    private String enableDark;
+
+    int i = 3;
 
     Fragment fragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadLocale();
         locale = Locale.getDefault();
         setContentView(R.layout.activity_main);
+        scrollView = findViewById(R.id.main_scroll);
+        loadDarkSettings();
+
         airbusCard = findViewById(R.id.airbusCard);
         boeingCard = findViewById(R.id.boeingCard);
         bombardierCard = findViewById(R.id.bombardierCard);
         embraerCard = findViewById(R.id.embraerCard);
         antonovCard = findViewById(R.id.antonovCard);
         cessnaCard = findViewById(R.id.cessnaCard);
+        scrollView = findViewById(R.id.main_scroll);
         langToggle = findViewById(R.id.lang_toggle);
+        darkToggle = findViewById(R.id.dark_toggle);
 
 
         airbusCard.getBackground().setAlpha(65);
@@ -89,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if(getResources().getConfiguration().locale.toString().contains("fr")) {
+                if (getResources().getConfiguration().locale.toString().contains("fr")) {
                     setLocale("en");
                     Intent intent = getIntent();
                     finish();
@@ -103,9 +114,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        darkToggle.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+                if (prefs.getString("DarkMode", "").equals("Yes")) {
+                    toggleDark("No");
+                } else if (prefs.getString("DarkMode", "").equals("No")) {
+                    toggleDark("Yes");
+                }
+
+            }
+        });
 
 
-        FlowingDrawer mDrawer= null;
+        FlowingDrawer mDrawer = null;
         mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
         mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_FULLSCREEN);
         mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
@@ -128,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
 
-        if(!locale.equals(Locale.getDefault())) {
+        if (!locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
@@ -140,9 +164,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(!flag) {
+        if (!flag) {
 
-            if(getResources().getConfiguration().locale.toString().contains("fr")) {
+            if (getResources().getConfiguration().locale.toString().contains("fr")) {
                 Toast.makeText(MainActivity.this, "Appuyez à nouveau pour quitter", Toast.LENGTH_LONG).show();
             } else if (getResources().getConfiguration().toString().contains("en")) {
                 Toast.makeText(MainActivity.this, "Press again to exit", Toast.LENGTH_LONG).show();
@@ -154,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onTick(long millisUntilFinished) {
                     // no function
                 }
+
                 public void onFinish() {
                     flag = false;
                 }
@@ -174,9 +199,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-    /** Changing app language **/
+    /**
+     * Changing app language
+     **/
 
     private void setLocale(String language) {
         Locale locale = new Locale(language);
@@ -189,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    public void loadLocale() {
+    private void loadLocale() {
         SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
         if (prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2)).equals("")) {
             SharedPreferences.Editor editor = prefs.edit();
@@ -201,6 +226,52 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /** Changing app language **/
+
+
+    /**
+     * Dark mode
+     **/
+
+    private void toggleDark(String darkEnabled) {
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("DarkMode", darkEnabled);
+        editor.apply();
+        loadDarkSettings();
+    }
+
+
+    private void loadDarkSettings() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("DarkMode", "").equals("")) {
+
+            SharedPreferences.Editor editor = prefs.edit();
+            int currentNightMode = getResources().getConfiguration().uiMode
+                    & Configuration.UI_MODE_NIGHT_MASK;
+
+            switch (currentNightMode) {
+                case Configuration.UI_MODE_NIGHT_NO:
+                    editor.putString("DarkMode", "No");
+                    editor.apply();
+                    break;
+                default:
+                    editor.putString("DarkMode", "Yes");
+                    editor.apply();
+                    break;
+
+            }
+        }
+
+        enableDark = prefs.getString("DarkMode", "Yes");
+
+        if (enableDark.equals("Yes")) {
+            scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_two_dark, null));
+        } else {
+            scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_one_light, null));
+        }
+
+    }
+
+    /** Dark mode **/
 
 
 }
