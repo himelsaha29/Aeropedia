@@ -34,7 +34,7 @@ public class Airbus extends AppCompatActivity {
     private TextView a319text;
     private Animation translate = null;
     private ScrollView scrollView;
-    Locale locale;
+    private Locale locale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,7 +148,7 @@ public class Airbus extends AppCompatActivity {
         editor.apply();
     }
 
-    public void loadLocale() {
+    private void loadLocale() {
         SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
         if (prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2)).equals("")) {
             SharedPreferences.Editor editor = prefs.edit();

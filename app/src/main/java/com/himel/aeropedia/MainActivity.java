@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private Button langToggle;
     private Button darkToggle;
     private String enableDark;
+    private FlowingDrawer drawer;
 
     int i = 3;
 
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         scrollView = findViewById(R.id.main_scroll);
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
+        drawer = findViewById(R.id.drawerlayout);
 
 
         airbusCard.getBackground().setAlpha(65);
@@ -121,8 +124,12 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
                 if (prefs.getString("DarkMode", "").equals("Yes")) {
                     toggleDark("No");
+                    drawer.setBackgroundColor(Color.parseColor("#F272A8E1"));
+                    drawer.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_three_light, null));
                 } else if (prefs.getString("DarkMode", "").equals("No")) {
                     toggleDark("Yes");
+                    drawer.setBackgroundColor(Color.parseColor("#F2042234"));
+                    drawer.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_one_light, null));
                 }
 
             }
@@ -144,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDrawerSlide(float openRatio, int offsetPixels) {
                 Log.i("MainActivity", "openRatio=" + openRatio + " ,offsetPixels=" + offsetPixels);
             }
+
         });
 
     }
