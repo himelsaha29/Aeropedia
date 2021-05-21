@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean flag = false;
     private Animation translate = null;
     private ScrollView scrollView;
-    Locale locale;
+    private Locale locale;
     private Button langToggle;
     private ImageButton darkToggle;
     private String enableDark;
@@ -125,10 +125,18 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
                 if (prefs.getString("DarkMode", "").equals("Yes")) {
                     toggleDark("No");
-                    drawer.setBackgroundColor(Color.parseColor("#F272A8E1"));
-                    drawer.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_three_light, null));
+                    darkToggle.setImageResource(R.drawable.ic_bulb_black_lit);
+                    //darkToggle.setBackgroundResource(R.drawable.ic_bulb_black_lit);
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
                 } else if (prefs.getString("DarkMode", "").equals("No")) {
                     toggleDark("Yes");
+                    darkToggle.setImageResource(R.drawable.ic_bulb_black);
+                    //darkToggle.setBackgroundResource(R.drawable.ic_bulb_black);
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
                 }
 
             }

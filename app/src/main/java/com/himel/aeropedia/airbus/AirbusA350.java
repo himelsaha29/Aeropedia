@@ -21,7 +21,7 @@ import java.util.Locale;
 public class AirbusA350 extends AppCompatActivity {
 
     private Button langToggle;
-    Locale locale;
+    private Locale locale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
