@@ -44,16 +44,12 @@ public class MainActivity extends AppCompatActivity {
     private String enableDark;
     private FlowingDrawer drawer;
 
-    int i = 3;
-
-    Fragment fragment;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadLocale();
         locale = Locale.getDefault();
-        verifyDarkMode(); // sets enable
+        verifyDarkMode();
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_main_light);
         } else {
@@ -62,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         darkToggle = findViewById(R.id.dark_toggle);
         scrollView = findViewById(R.id.main_scroll);
         loadDarkSettings();
-        setBulb();
         airbusCard = findViewById(R.id.airbusCard);
         boeingCard = findViewById(R.id.boeingCard);
         bombardierCard = findViewById(R.id.bombardierCard);
@@ -128,14 +123,11 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
                 if (prefs.getString("DarkMode", "").equals("Yes")) {
                     toggleDark("No");
-                    loadDarkSettings();
                     Intent intent = getIntent();
                     finish();
                     startActivity(intent);
-                    loadDarkSettings();
                 } else if (prefs.getString("DarkMode", "").equals("No")) {
                     toggleDark("Yes");
-                    loadDarkSettings();
                     Intent intent = getIntent();
                     finish();
                     startActivity(intent);
@@ -245,23 +237,18 @@ public class MainActivity extends AppCompatActivity {
     /** Changing app language **/
 
 
-    /**
-     * Dark mode
-     **/
+    /** Dark mode **/
 
     private void toggleDark(String darkEnabled) {
         SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
         editor.putString("DarkMode", darkEnabled);
         editor.apply();
-        //loadDarkSettings();
     }
 
 
     private void loadDarkSettings() {
-        //verifyDarkMode();
-
         if (enableDark.equals("Yes")) {
-            scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_two_dark, null));
+            scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_one_dark, null));
             darkToggle.setImageResource(R.drawable.ic_bulb_black_lit);
         } else {
             scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_one_light, null));
@@ -292,17 +279,6 @@ public class MainActivity extends AppCompatActivity {
         }
         enableDark = prefs.getString("DarkMode", "Yes");
 
-    }
-
-    private void setBulb() {
-
-        //
-
-        if (enableDark.equals("Yes")) {
-            darkToggle.setImageResource(R.drawable.ic_bulb_black_lit);
-        } else {
-            darkToggle.setImageResource(R.drawable.ic_bulb_black);
-        }
     }
 
     /** Dark mode **/

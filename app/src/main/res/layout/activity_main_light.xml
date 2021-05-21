@@ -22,7 +22,7 @@
             android:id="@+id/main_scroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/background_one_dark"
+            android:background="@drawable/background_one_light"
             tools:context=".MainActivity">
 
             <LinearLayout
