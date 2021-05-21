@@ -9,7 +9,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -22,7 +21,6 @@ import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.himel.aeropedia.airbus.AirbusA350;
-import com.himel.aeropedia.home.Home;
 import com.himel.aeropedia.manufacturers.Airbus;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
@@ -55,11 +53,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         loadLocale();
         locale = Locale.getDefault();
-        setContentView(R.layout.activity_main);
+        verifyDarkMode(); // sets enable
+        if(enableDark.equals("No")) {
+            setContentView(R.layout.activity_main_light);
+        } else {
+            setContentView(R.layout.activity_main_dark);
+        }
         darkToggle = findViewById(R.id.dark_toggle);
         scrollView = findViewById(R.id.main_scroll);
         loadDarkSettings();
-
+        setBulb();
         airbusCard = findViewById(R.id.airbusCard);
         boeingCard = findViewById(R.id.boeingCard);
         bombardierCard = findViewById(R.id.bombardierCard);
@@ -125,9 +128,17 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
                 if (prefs.getString("DarkMode", "").equals("Yes")) {
                     toggleDark("No");
+                    loadDarkSettings();
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                    loadDarkSettings();
                 } else if (prefs.getString("DarkMode", "").equals("No")) {
                     toggleDark("Yes");
-
+                    loadDarkSettings();
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
                 }
 
             }
@@ -242,11 +253,24 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
         editor.putString("DarkMode", darkEnabled);
         editor.apply();
-        loadDarkSettings();
+        //loadDarkSettings();
     }
 
 
     private void loadDarkSettings() {
+        //verifyDarkMode();
+
+        if (enableDark.equals("Yes")) {
+            scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_two_dark, null));
+            darkToggle.setImageResource(R.drawable.ic_bulb_black_lit);
+        } else {
+            scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_one_light, null));
+            darkToggle.setImageResource(R.drawable.ic_bulb_black);
+        }
+
+    }
+
+    private void verifyDarkMode() {
         SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
         if (prefs.getString("DarkMode", "").equals("")) {
 
@@ -266,17 +290,19 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
-
         enableDark = prefs.getString("DarkMode", "Yes");
 
+    }
+
+    private void setBulb() {
+
+        //
+
         if (enableDark.equals("Yes")) {
-            scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_two_dark, null));
             darkToggle.setImageResource(R.drawable.ic_bulb_black_lit);
         } else {
-            scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_one_light, null));
             darkToggle.setImageResource(R.drawable.ic_bulb_black);
         }
-
     }
 
     /** Dark mode **/
