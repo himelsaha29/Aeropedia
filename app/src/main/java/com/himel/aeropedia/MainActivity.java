@@ -128,8 +128,6 @@ public class MainActivity extends AppCompatActivity {
                     drawer.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_three_light, null));
                 } else if (prefs.getString("DarkMode", "").equals("No")) {
                     toggleDark("Yes");
-                    drawer.setBackgroundColor(Color.parseColor("#F2042234"));
-                    drawer.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_one_light, null));
                 }
 
             }
