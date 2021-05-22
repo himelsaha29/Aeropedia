@@ -28,7 +28,6 @@ android {
     }
     repositories {
         jcenter()
-        mavenCentral()
     }
 }
 
@@ -44,6 +43,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.mxn.soul:flowingdrawer-core:2.1.0'
     implementation 'com.nineoldandroids:library:2.4.0'
-    compile 'jp.wasabeef:blurry:4.0.0'
     implementation 'io.alterac.blurkit:blurkit:1.1.0'
 }

@@ -15,7 +15,8 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/coordinator_layout">
 
 
         <ScrollView
@@ -303,6 +304,7 @@
 
                 </GridLayout>
 
+
             </LinearLayout>
 
         </ScrollView>
@@ -314,6 +316,17 @@
             android:layout_margin="30dp"
             android:background="@drawable/bottom_nav"
             android:elevation="2dp" /> -->
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/blurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:blk_blurRadius="10"
+            app:blk_fps="0"
+            android:visibility="gone"
+            app:blk_downscaleFactor="0.34"/>
+
+
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
