@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -34,20 +35,31 @@ public class Airbus extends AppCompatActivity {
     private TextView a319text;
     private Animation translate = null;
     private ScrollView scrollView;
+    private ImageButton darkToggle;
+    private String enableDark;
     private Locale locale;
+    private FlowingDrawer mDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadLocale();
         locale = Locale.getDefault();
-        setContentView(R.layout.activity_airbus);
+        verifyDarkMode();
+        if(enableDark.equals("No")) {
+            setContentView(R.layout.activity_airbus_light);
+        } else {
+            setContentView(R.layout.activity_airbus_dark);
+        }
+        darkToggle = findViewById(R.id.dark_toggle);
+        scrollView = findViewById(R.id.main_scroll);
         a350Card = findViewById(R.id.a350Card);
         a380Card = findViewById(R.id.a380Card);
         a330Card = findViewById(R.id.a330Card);
         a319Card = findViewById(R.id.a319Card);
         a220Card = findViewById(R.id.a220Card);
         langToggle = findViewById(R.id.lang_toggle);
+        mDrawer = findViewById(R.id.drawerlayout);
 
 
         a350Card.getBackground().setAlpha(65);
@@ -55,6 +67,7 @@ public class Airbus extends AppCompatActivity {
         a380Card.getBackground().setAlpha(65);
         a319Card.getBackground().setAlpha(65);
         a220Card.getBackground().setAlpha(65);
+
 
         animateCards();
 
@@ -87,8 +100,26 @@ public class Airbus extends AppCompatActivity {
             }
         });
 
+        darkToggle.setOnClickListener(new View.OnClickListener() {
 
-        FlowingDrawer mDrawer= null;
+            @Override
+            public void onClick(View v) {
+                SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+                if (prefs.getString("DarkMode", "").equals("Yes")) {
+                    toggleDark("No");
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                } else if (prefs.getString("DarkMode", "").equals("No")) {
+                    toggleDark("Yes");
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }
+
+            }
+        });
+
         mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
         mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_FULLSCREEN);
         mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
@@ -160,4 +191,39 @@ public class Airbus extends AppCompatActivity {
     }
 
     /** Changing app language **/
+
+    /** Dark mode **/
+
+    private void toggleDark(String darkEnabled) {
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("DarkMode", darkEnabled);
+        editor.apply();
+    }
+
+    private String verifyDarkMode() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("DarkMode", "").equals("")) {
+
+            SharedPreferences.Editor editor = prefs.edit();
+            int currentNightMode = getResources().getConfiguration().uiMode
+                    & Configuration.UI_MODE_NIGHT_MASK;
+
+            switch (currentNightMode) {
+                case Configuration.UI_MODE_NIGHT_NO:
+                    editor.putString("DarkMode", "No");
+                    editor.apply();
+                    break;
+                default:
+                    editor.putString("DarkMode", "Yes");
+                    editor.apply();
+                    break;
+
+            }
+        }
+        enableDark = prefs.getString("DarkMode", "Yes");
+
+        return enableDark;
+    }
+
+    /** Dark mode **/
 }

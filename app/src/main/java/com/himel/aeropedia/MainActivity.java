@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private Button langToggle;
     private ImageButton darkToggle;
     private String enableDark;
-    private FlowingDrawer drawer;
+    private FlowingDrawer mDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +63,8 @@ public class MainActivity extends AppCompatActivity {
         embraerCard = findViewById(R.id.embraerCard);
         antonovCard = findViewById(R.id.antonovCard);
         cessnaCard = findViewById(R.id.cessnaCard);
-        scrollView = findViewById(R.id.main_scroll);
         langToggle = findViewById(R.id.lang_toggle);
-        drawer = findViewById(R.id.drawerlayout);
+        mDrawer = findViewById(R.id.drawerlayout);
 
 
         airbusCard.getBackground().setAlpha(65);
@@ -135,9 +134,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        FlowingDrawer mDrawer = null;
-        mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
         mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_FULLSCREEN);
         mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
             @Override
@@ -165,6 +161,13 @@ public class MainActivity extends AppCompatActivity {
             finish();
             startActivity(intent);
         }
+
+        if (!enableDark.equals(verifyDarkMode())) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+
         scrollView = findViewById(R.id.main_scroll);
         scrollView.scrollTo(0, scrollView.getTop());
         animateCards();
@@ -244,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    private void verifyDarkMode() {
+    private String verifyDarkMode() {
         SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
         if (prefs.getString("DarkMode", "").equals("")) {
 
@@ -266,6 +269,7 @@ public class MainActivity extends AppCompatActivity {
         }
         enableDark = prefs.getString("DarkMode", "Yes");
 
+        return enableDark;
     }
 
     /** Dark mode **/

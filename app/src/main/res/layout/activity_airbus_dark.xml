@@ -8,7 +8,7 @@
     android:clipChildren="false"
     android:clipToPadding="false"
     android:hapticFeedbackEnabled="true"
-    app:edMenuBackground="#F272A8E1"
+    app:edMenuBackground="#F2042234"
     app:edMenuSize="260dp"
     app:edPosition="1">
 
@@ -380,19 +380,24 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:text="@string/language"
+                android:textColor="@android:color/white"
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/dark_toggle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:src="@drawable/ic_bulb_black_lit"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:paddingBottom="4dp"
                 android:background="@android:color/transparent"
-                android:text="@string/language"
-                android:textSize="25sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent" />
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
