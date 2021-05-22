@@ -323,6 +323,8 @@
             android:layout_height="match_parent"
             app:blk_blurRadius="10"
             app:blk_fps="0"
+            android:animateLayoutChanges="true"
+            android:alpha="0"
             android:visibility="gone"
             app:blk_downscaleFactor="0.34"/>
 
