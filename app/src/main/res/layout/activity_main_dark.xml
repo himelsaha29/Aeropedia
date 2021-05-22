@@ -307,18 +307,18 @@
 
         </ScrollView>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_margin="30dp"
-            android:background="@drawable/bottom_nav"
-            android:elevation="2dp" />
+    <!-- <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="30dp"
+        android:background="@drawable/bottom_nav"
+        android:elevation="2dp" /> -->
 
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    <!--menu-->
+<!--menu-->
     <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
         android:id="@+id/menulayout"
         android:layout_width="match_parent"
