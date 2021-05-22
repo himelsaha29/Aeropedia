@@ -343,6 +343,7 @@
                 android:id="@+id/dark_toggle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:src="@drawable/ic_bulb_black_lit"
                 android:paddingLeft="10dp"
                 android:paddingRight="0dp"
                 android:paddingEnd="0dp"

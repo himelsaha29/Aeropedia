@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         }
         darkToggle = findViewById(R.id.dark_toggle);
         scrollView = findViewById(R.id.main_scroll);
-        loadDarkSettings();
         airbusCard = findViewById(R.id.airbusCard);
         boeingCard = findViewById(R.id.boeingCard);
         bombardierCard = findViewById(R.id.bombardierCard);
@@ -243,18 +242,6 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
         editor.putString("DarkMode", darkEnabled);
         editor.apply();
-    }
-
-
-    private void loadDarkSettings() {
-        if (enableDark.equals("Yes")) {
-            scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_one_dark, null));
-            darkToggle.setImageResource(R.drawable.ic_bulb_black_lit);
-        } else {
-            scrollView.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.background_one_light, null));
-            darkToggle.setImageResource(R.drawable.ic_bulb_black);
-        }
-
     }
 
     private void verifyDarkMode() {
