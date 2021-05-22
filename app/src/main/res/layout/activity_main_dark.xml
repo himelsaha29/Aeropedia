@@ -307,18 +307,28 @@
 
         </ScrollView>
 
-    <!-- <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_margin="30dp"
-        android:background="@drawable/bottom_nav"
-        android:elevation="2dp" /> -->
+        <!-- <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="30dp"
+            android:background="@drawable/bottom_nav"
+            android:elevation="2dp" /> -->
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/blurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:blk_fps="0"
+            app:blk_blurRadius="3"
+            android:clickable="false"
+            app:blk_downscaleFactor="0.12"/>
 
-<!--menu-->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--menu-->
     <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
         android:id="@+id/menulayout"
         android:layout_width="match_parent"
@@ -334,8 +344,8 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:text="@string/language"
-                android:textSize="25sp"
                 android:textColor="@android:color/white"
+                android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
 
@@ -343,15 +353,15 @@
                 android:id="@+id/dark_toggle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_bulb_black_lit"
-                android:paddingLeft="10dp"
-                android:paddingRight="0dp"
-                android:paddingEnd="0dp"
-                android:paddingStart="10dp"
-                android:paddingBottom="4dp"
                 android:background="@android:color/transparent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="4dp"
+                android:src="@drawable/ic_bulb_black_lit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
