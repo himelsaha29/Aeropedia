@@ -31,6 +31,7 @@ import android.widget.Toast;
 
 import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.manufacturers.Airbus;
+import com.himel.aeropedia.treeview.TreeView;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingMenuLayout;
@@ -106,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AirbusA350.class);
+                Intent intent = new Intent(getBaseContext(), TreeView.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
