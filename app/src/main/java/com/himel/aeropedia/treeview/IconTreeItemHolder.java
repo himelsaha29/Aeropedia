@@ -18,7 +18,7 @@ import com.unnamed.b.atv.model.TreeNode;
  */
 public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItemHolder.IconTreeItem> {
     private TextView tvValue;
-    private ImageView arrowView;
+    private PrintView arrowView;
 
     public IconTreeItemHolder(Context context) {
         super(context);
@@ -31,10 +31,10 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
         tvValue = (TextView) view.findViewById(R.id.node_value);
         tvValue.setText(value.text);
 
-        final ImageView iconView = (ImageView) view.findViewById(R.id.icon);
-        //iconView.setText(context.getResources().getString(value.icon));
+        final PrintView iconView = (PrintView) view.findViewById(R.id.icon);
+        iconView.setIconText(context.getResources().getString(value.icon));
 
-        arrowView = (ImageView) view.findViewById(R.id.arrow_icon);
+        arrowView = (PrintView) view.findViewById(R.id.arrow_icon);
 
         view.findViewById(R.id.btn_addFolder).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +61,7 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
 
     @Override
     public void toggle(boolean active) {
-        //arrowView.setIconText(context.getResources().getString(active ? R.string.ic_keyboard_arrow_down : R.string.ic_keyboard_arrow_right));
+        arrowView.setIconText(context.getResources().getString(active ? R.string.ic_keyboard_arrow_down : R.string.ic_keyboard_arrow_right));
     }
 
     public static class IconTreeItem {

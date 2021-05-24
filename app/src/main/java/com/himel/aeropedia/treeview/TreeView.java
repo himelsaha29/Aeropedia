@@ -27,8 +27,8 @@ public class TreeView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setHasOptionsMenu(true);
 
-        setContentView(R.layout.tree_view);
-        ViewGroup containerView = (ViewGroup) findViewById(R.id.container);
+        setContentView(R.layout.activity_main_dark);
+        ViewGroup containerView = (ViewGroup) findViewById(R.id.inside);
 
 
         TreeNode root = TreeNode.root();
@@ -55,7 +55,7 @@ public class TreeView extends AppCompatActivity {
         root.addChildren(computerRoot);
 
         tView = new AndroidTreeView(this, root);
-        tView.setDefaultAnimation(true);
+        //tView.setDefaultAnimation(true);
         tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);
         tView.setDefaultViewHolder(IconTreeItemHolder.class);
 
