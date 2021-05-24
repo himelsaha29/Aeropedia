@@ -341,23 +341,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:weightSum="100" >
 
                 <RelativeLayout
                     android:id="@+id/inside"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="50" >
+                    android:layout_height="match_parent"
+                    android:paddingBottom="95dp"
+                    android:paddingTop="75dp">
 
-                    <!-- Your RelativeLayout Items -->
 
                 </RelativeLayout>
 
-            </LinearLayout>
 
 
             <Button

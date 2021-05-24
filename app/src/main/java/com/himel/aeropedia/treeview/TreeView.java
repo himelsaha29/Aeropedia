@@ -120,7 +120,7 @@ public class TreeView extends AppCompatActivity {
     private void fillDownloadsFolder(TreeNode node) {
         TreeNode downloads = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, "Downloads" + (counter++)));
         node.addChild(downloads);
-        if (counter < 5) {
+        if (counter < 15) {
             fillDownloadsFolder(downloads);
         }
     }
