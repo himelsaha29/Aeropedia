@@ -3,6 +3,7 @@ package com.himel.aeropedia.treeview;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,13 +15,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.himel.aeropedia.R;
+import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
+import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
+import com.mxn.soul.flowingdrawer_core.FlowingMenuLayout;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 
+import io.alterac.blurkit.BlurLayout;
+
 public class TreeView extends AppCompatActivity {
 
-    private TextView statusBar;
     private AndroidTreeView tView;
+
+    private FlowingDrawer mDrawer;
+    private FlowingMenuLayout flowingMenuLayout;
+    private BlurLayout blur;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,6 +37,40 @@ public class TreeView extends AppCompatActivity {
         //setHasOptionsMenu(true);
 
         setContentView(R.layout.activity_main_dark);
+
+
+
+        blur = findViewById(R.id.blurLayout);
+        flowingMenuLayout = findViewById(R.id.menulayout);
+        mDrawer = findViewById(R.id.drawerlayout);
+        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_FULLSCREEN);
+        mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
+            @Override
+            public void onDrawerStateChange(int oldState, int newState) {
+                if (newState == ElasticDrawer.STATE_CLOSING) {
+                    Log.i("MainActivity", "Drawer STATE_CLOSED");
+                    blur.setVisibility(View.GONE);
+                    blur.setAlpha(0f);
+                }
+                else if (newState == ElasticDrawer.STATE_OPENING) {
+                    blur.invalidate();
+                    blur.setAlpha(0.0f);
+                    blur.setVisibility(View.VISIBLE);
+                    blur.animate().alpha(1.0f).setDuration(1400);
+                }
+
+            }
+
+            @Override
+            public void onDrawerSlide(float openRatio, int offsetPixels) {
+                Log.i("MainActivity", "openRatio=" + openRatio + " ,offsetPixels=" + offsetPixels);
+            }
+
+        });
+
+
+
+
         ViewGroup containerView = (ViewGroup) findViewById(R.id.inside);
 
 
