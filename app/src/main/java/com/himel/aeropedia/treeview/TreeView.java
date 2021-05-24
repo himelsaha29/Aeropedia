@@ -30,7 +30,6 @@ public class TreeView extends AppCompatActivity {
         setContentView(R.layout.tree_view);
         ViewGroup containerView = (ViewGroup) findViewById(R.id.container);
 
-        statusBar = (TextView) findViewById(R.id.status_bar);
 
         TreeNode root = TreeNode.root();
         TreeNode computerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "My Computer"));
@@ -59,7 +58,6 @@ public class TreeView extends AppCompatActivity {
         tView.setDefaultAnimation(true);
         tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);
         tView.setDefaultViewHolder(IconTreeItemHolder.class);
-        tView.setDefaultNodeClickListener(nodeClickListener);
 
         containerView.addView(tView.getView());
 
@@ -81,16 +79,6 @@ public class TreeView extends AppCompatActivity {
             fillDownloadsFolder(downloads);
         }
     }
-
-    private TreeNode.TreeNodeClickListener nodeClickListener = new TreeNode.TreeNodeClickListener() {
-        @Override
-        public void onClick(TreeNode node, Object value) {
-            IconTreeItemHolder.IconTreeItem item = (IconTreeItemHolder.IconTreeItem) value;
-            statusBar.setText("Last clicked: " + item.text);
-        }
-    };
-
-
 
     @Override
     public void onSaveInstanceState(Bundle outState) {

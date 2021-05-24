@@ -7,16 +7,19 @@
     android:layout_height="match_parent">
 
 
-    <ImageView
+    <com.github.johnkil.print.PrintView
         android:layout_alignParentLeft="true"
         android:id="@+id/arrow_icon"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_foreground"/>
+        app:iconText="@string/ic_keyboard_arrow_right"
+        app:iconColor="#12558C"
+        app:iconFont="fonts/material-icon-font.ttf"
+        app:iconSize="20dp" />
 
-    <ImageView
+    <com.github.johnkil.print.PrintView
         android:layout_alignWithParentIfMissing="true"
         android:id="@+id/icon"
         android:layout_toRightOf="@id/arrow_icon"
@@ -24,7 +27,10 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_foreground"/>
+        app:iconText="@string/ic_email"
+        app:iconColor="#12558C"
+        app:iconFont="fonts/material-icon-font.ttf"
+        app:iconSize="24dp" />
 
     <TextView
         android:layout_centerVertical="true"
@@ -46,19 +52,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <ImageView
+        <com.github.johnkil.print.PrintView
             android:id="@+id/btn_addFolder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:src="@drawable/ic_launcher_foreground" />
+            app:iconSize="20dp"
+            app:iconColor="#99cc00"
+            app:iconFont="fonts/material-icon-font.ttf"
+            app:iconText="@string/ic_add" />
 
 
-        <ImageView
+        <com.github.johnkil.print.PrintView
             android:padding="5dp"
             android:id="@+id/btn_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_foreground" />
+            app:iconSize="20dp"
+            app:iconColor="#ff4444"
+            app:iconFont="fonts/material-icon-font.ttf"
+            app:iconText="@string/ic_close" />
     </LinearLayout>
 </RelativeLayout>
