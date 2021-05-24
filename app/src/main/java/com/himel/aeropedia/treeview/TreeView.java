@@ -30,6 +30,7 @@ public class TreeView extends AppCompatActivity {
     private FlowingDrawer mDrawer;
     private FlowingMenuLayout flowingMenuLayout;
     private BlurLayout blur;
+    private RelativeLayout layout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class TreeView extends AppCompatActivity {
         setContentView(R.layout.activity_main_dark);
 
 
+        layout = findViewById(R.id.inside);
 
         blur = findViewById(R.id.blurLayout);
         flowingMenuLayout = findViewById(R.id.menulayout);

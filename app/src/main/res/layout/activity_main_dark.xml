@@ -337,14 +337,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-            <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/inside"
                 android:orientation="vertical"
-                android:layout_marginStart="0dp"
-                android:paddingTop="0dp"
-                android:paddingStart="0dp"/>
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:id="@+id/inside"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="50" >
+
+                    <!-- Your RelativeLayout Items -->
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
 
             <Button
                 android:id="@+id/lang_toggle"
@@ -371,7 +385,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent" />
 
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
