@@ -17,7 +17,7 @@ import com.himel.aeropedia.R;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 
-public class TreeView extends Fragment {
+public class TreeView extends AppCompatActivity {
 
     private TextView statusBar;
     private AndroidTreeView tView;
@@ -25,16 +25,12 @@ public class TreeView extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
-    }
+        //setHasOptionsMenu(true);
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        setContentView(R.layout.tree_view);
+        ViewGroup containerView = (ViewGroup) findViewById(R.id.container);
 
-        View rootView = inflater.inflate(R.layout.tree_view, null, false);
-        ViewGroup containerView = (ViewGroup) rootView.findViewById(R.id.container);
-
-        statusBar = (TextView) rootView.findViewById(R.id.status_bar);
+        statusBar = (TextView) findViewById(R.id.status_bar);
 
         TreeNode root = TreeNode.root();
         TreeNode computerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "My Computer"));
@@ -59,12 +55,11 @@ public class TreeView extends Fragment {
 
         root.addChildren(computerRoot);
 
-        tView = new AndroidTreeView(this.getContext(), root);
+        tView = new AndroidTreeView(this, root);
         tView.setDefaultAnimation(true);
         tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);
         tView.setDefaultViewHolder(IconTreeItemHolder.class);
         tView.setDefaultNodeClickListener(nodeClickListener);
-        tView.setDefaultNodeLongClickListener(nodeLongClickListener);
 
         containerView.addView(tView.getView());
 
@@ -74,9 +69,8 @@ public class TreeView extends Fragment {
                 tView.restoreState(state);
             }
         }
-
-        return rootView;
     }
+
 
     private int counter = 0;
 
@@ -96,14 +90,7 @@ public class TreeView extends Fragment {
         }
     };
 
-    private TreeNode.TreeNodeLongClickListener nodeLongClickListener = new TreeNode.TreeNodeLongClickListener() {
-        @Override
-        public boolean onLongClick(TreeNode node, Object value) {
-            IconTreeItemHolder.IconTreeItem item = (IconTreeItemHolder.IconTreeItem) value;
-            Toast.makeText(getActivity(), "Long click: " + item.text, Toast.LENGTH_SHORT).show();
-            return true;
-        }
-    };
+
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
