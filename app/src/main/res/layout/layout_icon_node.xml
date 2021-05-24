@@ -4,11 +4,12 @@
     android:layout_width="match_parent"
     android:minHeight="48dp"
     android:background="?android:attr/selectableItemBackground"
-    android:layout_height="match_parent">
+    android:layout_height="0dp"
+    android:layout_weight=".7">
 
 
     <com.github.johnkil.print.PrintView
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:id="@+id/arrow_icon"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
@@ -22,7 +23,7 @@
     <com.github.johnkil.print.PrintView
         android:layout_alignWithParentIfMissing="true"
         android:id="@+id/icon"
-        android:layout_toRightOf="@id/arrow_icon"
+        android:layout_toEndOf="@id/arrow_icon"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
@@ -35,11 +36,14 @@
     <TextView
         android:layout_centerVertical="true"
         android:textSize="16sp"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/icon"
-
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/icon"
+        android:paddingEnd="5dp"
+        android:paddingStart="0dp"
         android:id="@+id/node_value"
-        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/maven_pro_medium"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <!--android:layout_toLeftOf="@+id/buttonsContainer"-->
 

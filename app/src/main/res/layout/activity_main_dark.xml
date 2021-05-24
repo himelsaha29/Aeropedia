@@ -346,8 +346,9 @@
                     android:id="@+id/inside"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingBottom="95dp"
+
                     android:paddingTop="75dp">
+                    <!--android:paddingBottom="95dp"-->
 
 
                 </RelativeLayout>

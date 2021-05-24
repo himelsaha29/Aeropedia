@@ -107,6 +107,9 @@ public class TreeView extends AppCompatActivity {
         root.addChildren(manufacturerRoot);
         root.addChildren(amazonRoot);
         root.addChildren(firebaseRoot);
+        manufacturerRoot.setExpanded(true);
+        airbus.setExpanded(true);
+
 
         tView = new AndroidTreeView(this, root);
         tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);

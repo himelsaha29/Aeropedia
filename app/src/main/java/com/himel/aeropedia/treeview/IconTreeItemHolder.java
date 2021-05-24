@@ -10,12 +10,7 @@ import android.widget.TextView;
 import com.github.johnkil.print.PrintView;
 import com.himel.aeropedia.R;
 import com.unnamed.b.atv.model.TreeNode;
-//import com.unnamed.b.atv.R;
 
-
-/**
- * Created by Bogdan Melnychuk on 2/12/15.
- */
 public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItemHolder.IconTreeItem> {
     private TextView tvValue;
     private PrintView arrowView;
