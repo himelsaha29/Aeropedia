@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -59,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
     private FlowingMenuLayout flowingMenuLayout;
     private BlurLayout blur;
 
+    public final FragmentManager fragmentManager = getSupportFragmentManager();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,9 +110,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), TreeView.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+//                Intent showContent = new Intent(getApplicationContext(),
+//                        TreeView.class);
+//                startActivity(showContent);
+                //overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+                Fragment fragment = new TreeView();
+                fragmentManager.beginTransaction().replace(R.id.coordinator_layout, fragment).commit();
             }
         });
 

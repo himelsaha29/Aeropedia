@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".treeview.TreeView"/>
         <activity android:name=".home.Home"/>
         <activity android:name=".airbus.AirbusA350"/>
         <activity android:name=".manufacturers.Airbus" />

@@ -2,11 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/treeview"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".treeview.TreeView"
     android:background="@android:color/holo_blue_light"
     android:backgroundTint="@android:color/holo_blue_light">
+
+    <TextView
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:text="Last Clicked:"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/holo_blue_dark"
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 
     </RelativeLayout>
