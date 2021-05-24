@@ -2,6 +2,7 @@ package com.himel.aeropedia.treeview;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -26,6 +27,10 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
         tvValue = (TextView) view.findViewById(R.id.node_value);
         tvValue.setText(value.text);
 
+        if(value.highlight) {
+            tvValue.setTextColor(Color.parseColor("#72A8E1"));
+        }
+
         final PrintView iconView = (PrintView) view.findViewById(R.id.icon);
         iconView.setIconText(context.getResources().getString(value.icon));
 
@@ -33,6 +38,7 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
 
         return view;
     }
+
 
     @Override
     public void toggle(boolean active) {
@@ -42,11 +48,14 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
     public static class IconTreeItem {
         public int icon;
         public String text;
+        public boolean highlight;
 
-        public IconTreeItem(int icon, String text) {
+        public IconTreeItem(int icon, String text, boolean highlight) {
             this.icon = icon;
             this.text = text;
+            this.highlight = highlight;
         }
+
     }
 }
 
