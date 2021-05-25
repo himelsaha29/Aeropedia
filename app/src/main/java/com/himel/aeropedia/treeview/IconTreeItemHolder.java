@@ -3,6 +3,7 @@ package com.himel.aeropedia.treeview;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -27,12 +28,21 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
         tvValue = (TextView) view.findViewById(R.id.node_value);
         tvValue.setText(value.text);
 
-        if(value.highlight) {
+        if(value.highlight.equals("Highlight")) {
             tvValue.setTextColor(Color.parseColor("#72A8E1"));
         }
 
+
         final PrintView iconView = (PrintView) view.findViewById(R.id.icon);
-        iconView.setIconText(context.getResources().getString(value.icon));
+
+
+        if(value.iconXML.equals("Alexa")) {
+            iconView.setIconFont(Typeface.createFromAsset(context.getAssets(), "fonts/icomoon.ttf"));
+            iconView.setIconText(context.getResources().getString(value.icon));
+        } else {
+            iconView.setIconFont(Typeface.createFromAsset(context.getAssets(), "fonts/material-icon-font.ttf"));
+
+        }
 
         arrowView = (PrintView) view.findViewById(R.id.arrow_icon);
 
@@ -48,12 +58,14 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
     public static class IconTreeItem {
         public int icon;
         public String text;
-        public boolean highlight;
+        public String highlight;
+        public String iconXML;
 
-        public IconTreeItem(int icon, String text, boolean highlight) {
+        public IconTreeItem(int icon, String text, String highlight, String iconXML) {
             this.icon = icon;
             this.text = text;
             this.highlight = highlight;
+            this.iconXML = iconXML;
         }
 
     }

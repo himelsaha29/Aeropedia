@@ -14,9 +14,9 @@
 
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/coordinator_layout">
+        android:layout_height="match_parent">
 
 
         <ScrollView
@@ -321,12 +321,12 @@
             android:id="@+id/blurLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:blk_blurRadius="10"
-            app:blk_fps="0"
-            android:animateLayoutChanges="true"
             android:alpha="0"
+            android:animateLayoutChanges="true"
             android:visibility="gone"
-            app:blk_downscaleFactor="0.34"/>
+            app:blk_blurRadius="10"
+            app:blk_downscaleFactor="0.34"
+            app:blk_fps="0" />
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
@@ -342,17 +342,16 @@
             android:layout_height="match_parent">
 
 
-                <RelativeLayout
-                    android:id="@+id/inside"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+            <RelativeLayout
+                android:id="@+id/inside"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
-                    android:paddingTop="75dp">
-                    <!--android:paddingBottom="95dp"-->
+                android:paddingTop="75dp">
+                <!--android:paddingBottom="95dp"-->
 
 
-                </RelativeLayout>
-
+            </RelativeLayout>
 
 
             <Button

@@ -343,6 +343,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <RelativeLayout
+                android:id="@+id/inside"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:paddingTop="75dp">
+                <!--android:paddingBottom="95dp"-->
+
+
+            </RelativeLayout>
+
             <Button
                 android:id="@+id/lang_toggle"
                 android:layout_width="wrap_content"
