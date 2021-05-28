@@ -14,9 +14,9 @@
 
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/coordinator_layout">
+        android:layout_height="match_parent">
 
 
         <ScrollView
@@ -262,43 +262,38 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/gulfstreamCard"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
-                        android:backgroundTint="#72A8E1"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="0dp">
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="false">
 
-                        <LinearLayout
+
+                        <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="16dp">
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/gulfstream_cover" />
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:background="@drawable/ic_launcher_foreground" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="bottom"
+                            android:text="@string/gulfstream"
+                            android:textColor="@color/white"
+                            android:textSize="38sp" />
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginLeft="12dp"
-                                android:layout_marginBottom="10dp"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:gravity="bottom"
-                                android:text="@string/gulfstream"
-                                android:textColor="@color/white"
-                                android:textSize="38sp" />
-
-                        </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
 
@@ -321,14 +316,12 @@
             android:id="@+id/blurLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:blk_blurRadius="10"
-            app:blk_fps="0"
-            android:animateLayoutChanges="true"
             android:alpha="0"
+            android:animateLayoutChanges="true"
             android:visibility="gone"
-            app:blk_downscaleFactor="0.34"/>
-
-
+            app:blk_blurRadius="10"
+            app:blk_downscaleFactor="0.34"
+            app:blk_fps="0" />
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
@@ -369,15 +362,15 @@
                 android:id="@+id/dark_toggle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_bulb_black"
-                android:paddingLeft="10dp"
-                android:paddingRight="0dp"
-                android:paddingEnd="0dp"
-                android:paddingStart="10dp"
-                android:paddingBottom="4dp"
                 android:background="@android:color/transparent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="4dp"
+                android:src="@drawable/ic_bulb_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
