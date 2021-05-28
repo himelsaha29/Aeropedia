@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml:2:1-5:12
+INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml:2:1-5:12
+INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml:2:1-5:12
+	package
+		ADDED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml:3:5-46
+		INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml
+		INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml:2:11-69
+uses-sdk
+INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml
+INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml
+INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml
+INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml
+		ADDED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml
+		INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml
+		ADDED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml
+		INJECTED from C:\Users\HimelSaha\Documents\AndroidStudioProjects\AlexaAndroid\libs\speechutils-master\AndroidManifest.xml

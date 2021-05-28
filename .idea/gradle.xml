@@ -13,6 +13,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/libs" />
+            <option value="$PROJECT_DIR$/libs/AmazonAlexa" />
+            <option value="$PROJECT_DIR$/libs/RecorderLevelView" />
+            <option value="$PROJECT_DIR$/libs/speechutils" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
