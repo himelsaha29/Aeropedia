@@ -61,7 +61,7 @@
                         android:layout_marginEnd="0dp"
                         android:layout_marginBottom="0dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/description_box_layout"
+                        android:src="@drawable/description_box_layout_dark"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintDimensionRatio="H, 16:9"
                         app:layout_constraintEnd_toEndOf="parent"
