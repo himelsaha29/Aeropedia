@@ -33,6 +33,7 @@ import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.himel.aeropedia.airbus.AirbusA350;
+import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.manufacturers.Airbus;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
 import com.himel.aeropedia.treeview.TreeView;
@@ -119,8 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent showContent = new Intent(getApplicationContext(),
-                        TreeView.class);
+                Intent showContent = new Intent(getApplicationContext(), AlexaActivity.class);
                 startActivity(showContent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
