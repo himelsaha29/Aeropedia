@@ -38,6 +38,7 @@ import com.willblaschko.android.alexa.interfaces.speechsynthesizer.AvsSpeakItem;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.himel.aeropedia.alexa.Global.PRODUCT_ID;
 
 
 public abstract class CoreActivity extends AppCompatActivity implements AVSListener {
