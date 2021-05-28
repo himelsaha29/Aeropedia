@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:id="@+id/linearLayout">
+        <com.willblaschko.android.recorderview.RecorderView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/recorder"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#22ffffff"
+        android:text="@string/action_send_audio_description"
+        android:padding="@dimen/activity_horizontal_margin"/>
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/loading"
+        android:layout_gravity="center"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="visible"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:id="@+id/status"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="@string/status_listening"/>
+
+</LinearLayout>
