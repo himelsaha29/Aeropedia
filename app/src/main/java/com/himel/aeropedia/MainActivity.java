@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent showContent = new Intent(getApplicationContext(), AlexaActivity.class);
+                Intent showContent = new Intent(getApplicationContext(), TreeView.class);
                 startActivity(showContent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }

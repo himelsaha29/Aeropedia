@@ -37,7 +37,7 @@ public class TreeView extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main_dark);
+        setContentView(R.layout.activity_neumorphism);
 
 
         layout = findViewById(R.id.inside);
@@ -119,8 +119,8 @@ public class TreeView extends AppCompatActivity {
         root.addChildren(manufacturerRoot);
         root.addChildren(amazonRoot);
         root.addChildren(firebaseRoot);
-        manufacturerRoot.setExpanded(true);
-        airbus.setExpanded(true);
+        //manufacturerRoot.setExpanded(true);
+        //airbus.setExpanded(true);
 
 
         tView = new AndroidTreeView(this, root);
