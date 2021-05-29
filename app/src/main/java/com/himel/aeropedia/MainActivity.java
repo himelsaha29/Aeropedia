@@ -126,6 +126,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        boeingCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent showContent = new Intent(getApplicationContext(), AlexaActivity.class);
+                startActivity(showContent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
         langToggle.setOnClickListener(new View.OnClickListener() {
 
             @Override
