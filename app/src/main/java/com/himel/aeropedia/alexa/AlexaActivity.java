@@ -53,7 +53,7 @@ public class AlexaActivity extends CoreActivity {
         });
 
 
-        statusBar = findViewById(R.id.status_bar);
+        //statusBar = findViewById(R.id.status_bar);
         status = (TextView) findViewById(R.id.status);
         loading = findViewById(R.id.loading);
 
@@ -130,7 +130,7 @@ public class AlexaActivity extends CoreActivity {
         if(status != null) {
             status.setText(R.string.status_listening);
             loading.setVisibility(View.GONE);
-            statusBar.animate().alpha(1);
+            //statusBar.animate().alpha(1);
         }
     }
     protected void stateProcessing(){
@@ -165,7 +165,7 @@ public class AlexaActivity extends CoreActivity {
         }
     }
     protected void stateNone(){
-        statusBar.animate().alpha(0);
+        //statusBar.animate().alpha(0);
     }
 
     @Override
