@@ -20,6 +20,7 @@ import java.io.IOException;
 import ee.ioc.phon.android.speechutils.AudioRecorder;
 import ee.ioc.phon.android.speechutils.RawAudioRecorder;
 import okio.BufferedSink;
+import soup.neumorphism.NeumorphImageButton;
 
 
 public class AlexaActivity extends CoreActivity {
@@ -31,7 +32,7 @@ public class AlexaActivity extends CoreActivity {
     private final static int MY_PERMISSIONS_REQUEST_RECORD_AUDIO = 1;
     private static final int AUDIO_RATE = 16000;
     private RawAudioRecorder recorder;
-    private RecorderView recorderView;
+    private NeumorphImageButton recorderView;
 
 
 
@@ -40,7 +41,7 @@ public class AlexaActivity extends CoreActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_audio);
-        recorderView = (RecorderView) findViewById(R.id.recorder);
+        recorderView = findViewById(R.id.recorder);
         recorderView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +81,7 @@ public class AlexaActivity extends CoreActivity {
                         recorderView.post(new Runnable() {
                             @Override
                             public void run() {
-                                recorderView.setRmsdbLevel(rmsdb);
+                                //recorderView.setRmsdbLevel(rmsdb);
                             }
                         });
                     }

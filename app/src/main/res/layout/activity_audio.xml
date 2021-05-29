@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#fff4f1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,9 +16,16 @@
         android:orientation="vertical"
         android:padding="@dimen/activity_horizontal_margin"
         android:id="@+id/linearLayout">
-        <com.willblaschko.android.recorderview.RecorderView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+
+        <soup.neumorphism.NeumorphImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="flat"
+            app:neumorph_shadowElevation="6dp"
+            android:src="@drawable/ic_amazon_alexa"
             android:id="@+id/recorder"/>
 
 
@@ -35,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:textAppearanceLarge"
                 android:id="@+id/status"
+                android:textColor="@color/black"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:text="@string/status_listening"/>
@@ -44,6 +55,7 @@
 
 
 </LinearLayout>
+
 
     <!--<TextView
         android:layout_width="match_parent"
