@@ -22,7 +22,7 @@
             android:id="@+id/main_scroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#72A8E1"
+            android:background="#1F1B24"
             tools:context=".MainActivity">
 
             <LinearLayout
@@ -46,8 +46,8 @@
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
                         app:neumorph_shapeType="flat"
-                        app:neumorph_shadowColorLight="#9ac1ea"
-                        app:neumorph_shadowColorDark="#5f8bba"
+                        app:neumorph_shadowColorLight="#39343e"
+                        app:neumorph_shadowColorDark="#241d2d"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackground"
@@ -72,7 +72,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="bottom"
                             android:text="@string/airbus"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="38sp" />
 
 
@@ -88,8 +88,8 @@
                         android:layout_margin="12dp"
                         android:clickable="true"
                         app:neumorph_shapeType="flat"
-                        app:neumorph_shadowColorLight="#9ac1ea"
-                        app:neumorph_shadowColorDark="#5f8bba"
+                        app:neumorph_shadowColorLight="#484150"
+                        app:neumorph_shadowColorDark="#241d2d"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         app:cardCornerRadius="12dp"
@@ -113,7 +113,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="bottom"
                             android:text="@string/antonov"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="38sp" />
 
 
@@ -128,8 +128,8 @@
                         android:layout_margin="12dp"
                         android:clickable="true"
                         app:neumorph_shapeType="flat"
-                        app:neumorph_shadowColorLight="#9ac1ea"
-                        app:neumorph_shadowColorDark="#5f8bba"
+                        app:neumorph_shadowColorLight="#484150"
+                        app:neumorph_shadowColorDark="#241d2d"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         app:cardCornerRadius="12dp"
@@ -153,7 +153,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="bottom"
                             android:text="@string/boeing"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="38sp" />
 
                     </soup.neumorphism.NeumorphCardView>
@@ -164,8 +164,8 @@
                         android:layout_height="wrap_content"
                         android:layout_rowWeight="1"
                         app:neumorph_shapeType="flat"
-                        app:neumorph_shadowColorLight="#9ac1ea"
-                        app:neumorph_shadowColorDark="#5f8bba"
+                        app:neumorph_shadowColorLight="#484150"
+                        app:neumorph_shadowColorDark="#241d2d"
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
                         android:clickable="true"
@@ -192,7 +192,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="bottom"
                             android:text="@string/bombardier"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="38sp" />
 
                     </soup.neumorphism.NeumorphCardView>
@@ -202,8 +202,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:neumorph_shapeType="flat"
-                        app:neumorph_shadowColorLight="#9ac1ea"
-                        app:neumorph_shadowColorDark="#5f8bba"
+                        app:neumorph_shadowColorLight="#484150"
+                        app:neumorph_shadowColorDark="#241d2d"
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
@@ -231,7 +231,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="bottom"
                             android:text="@string/embraer"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="38sp" />
 
 
@@ -245,8 +245,8 @@
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         app:neumorph_shapeType="flat"
-                        app:neumorph_shadowColorLight="#9ac1ea"
-                        app:neumorph_shadowColorDark="#5f8bba"
+                        app:neumorph_shadowColorLight="#484150"
+                        app:neumorph_shadowColorDark="#241d2d"
                         android:layout_margin="12dp"
                         android:clickable="true"
                         android:focusable="true"
@@ -271,7 +271,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="bottom"
                             android:text="@string/cessna"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="38sp" />
 
 
@@ -286,8 +286,8 @@
                         android:layout_margin="12dp"
                         android:clickable="true"
                         app:neumorph_shapeType="flat"
-                        app:neumorph_shadowColorLight="#9ac1ea"
-                        app:neumorph_shadowColorDark="#5f8bba"
+                        app:neumorph_shadowColorLight="#484150"
+                        app:neumorph_shadowColorDark="#241d2d"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         app:cardCornerRadius="12dp"
@@ -311,7 +311,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="bottom"
                             android:text="@string/gulfstream"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="38sp" />
 
 
@@ -358,7 +358,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp">
 
 
             <RelativeLayout
@@ -378,30 +380,29 @@
             <soup.neumorphism.NeumorphButton
                 style="@style/Widget.Neumorph.Button"
                 android:id="@+id/lang_toggle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:text="@string/language"
                 app:neumorph_shapeType="flat"
                 app:neumorph_shadowColorLight="#9ac1ea"
                 app:neumorph_shadowColorDark="#5f8bba"
                 android:textColor="@android:color/white"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
 
+
+
             <soup.neumorphism.NeumorphImageButton
+                style="@style/Widget.Neumorph.Button"
                 android:id="@+id/dark_toggle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:background="@android:color/transparent"
-                android:paddingStart="10dp"
-                android:paddingLeft="10dp"
-                android:paddingEnd="0dp"
                 app:neumorph_shapeType="flat"
                 app:neumorph_shadowColorLight="#9ac1ea"
                 app:neumorph_shadowColorDark="#5f8bba"
-                android:paddingRight="0dp"
-                android:paddingBottom="4dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/ic_bulb_black_lit"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent" />
