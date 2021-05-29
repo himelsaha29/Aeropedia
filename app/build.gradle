@@ -29,6 +29,10 @@ android {
     repositories {
         jcenter()
     }
+    configurations {
+        cleanedAnnotations
+        compile.exclude group: 'org.jetbrains' , module:'annotations'
+    }
 }
 
 dependencies {
@@ -50,4 +54,6 @@ dependencies {
     compile project(path: ':libs:AmazonAlexa')
     compile project(path: ':libs:RecorderLevelView')
     compile project(path: ':libs:speechutils')
+
+    implementation 'com.github.fornewid:neumorphism:0.3.0'
 }
