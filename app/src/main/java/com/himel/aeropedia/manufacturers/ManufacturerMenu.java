@@ -359,6 +359,15 @@ public class ManufacturerMenu extends AppCompatActivity {
 
 
     @Override
+    public void onBackPressed() {
+        if (mDrawer.getDrawerState() == ElasticDrawer.STATE_CLOSING || mDrawer.getDrawerState() == ElasticDrawer.STATE_OPEN) {
+            mDrawer.closeMenu();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);

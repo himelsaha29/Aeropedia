@@ -152,6 +152,13 @@ public class Airbus extends AppCompatActivity {
             finish();
             startActivity(intent);
         }
+
+        if (!enableDark.equals(verifyDarkMode())) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+
         scrollView = findViewById(R.id.main_scroll);
         scrollView.scrollTo(0, scrollView.getTop());
         animateCards();
