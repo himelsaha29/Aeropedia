@@ -11,7 +11,7 @@ import com.himel.aeropedia.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Home extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     ViewPager viewPager;
     Adapter adapter;
@@ -22,7 +22,7 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_main);
 
         models = new ArrayList<Model>();
         models.add(new Model(R.drawable.a350_cover, "A350", "A350"));

@@ -1,21 +1,13 @@
-package com.himel.aeropedia;
+package com.himel.aeropedia.manufacturers;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.content.res.ResourcesCompat;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.text.TextUtils;
@@ -25,16 +17,12 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
-import com.himel.aeropedia.airbus.AirbusA350;
+import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.AlexaActivity;
-import com.himel.aeropedia.manufacturers.Airbus;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
 import com.himel.aeropedia.treeview.TreeView;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
@@ -47,7 +35,7 @@ import java.util.Locale;
 
 import io.alterac.blurkit.BlurLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class ManufacturerMenu extends AppCompatActivity {
 
     private CardView airbusCard;
     private CardView boeingCard;
@@ -77,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
         locale = Locale.getDefault();
         verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_main_light);
+            setContentView(R.layout.activity_manufacturer_menu_light);
         } else {
-            setContentView(R.layout.activity_main_dark);
+            setContentView(R.layout.activity_manufacturer_menu_dark);
         }
         darkToggle = findViewById(R.id.dark_toggle);
         scrollView = findViewById(R.id.main_scroll);
@@ -240,9 +228,9 @@ public class MainActivity extends AppCompatActivity {
         if (!flag) {
 
             if (getResources().getConfiguration().locale.toString().contains("fr")) {
-                Toast.makeText(MainActivity.this, "Appuyez à nouveau pour quitter", Toast.LENGTH_LONG).show();
+                Toast.makeText(ManufacturerMenu.this, "Appuyez à nouveau pour quitter", Toast.LENGTH_LONG).show();
             } else if (getResources().getConfiguration().toString().contains("en")) {
-                Toast.makeText(MainActivity.this, "Press again to exit", Toast.LENGTH_LONG).show();
+                Toast.makeText(ManufacturerMenu.this, "Press again to exit", Toast.LENGTH_LONG).show();
             }
 
 

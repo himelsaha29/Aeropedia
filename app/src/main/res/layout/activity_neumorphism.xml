@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#1F1B24"
-            tools:context=".MainActivity">
+            tools:context=".manufacturers.ManufacturerMenu">
 
             <LinearLayout
                 android:layout_width="match_parent"

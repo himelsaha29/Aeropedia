@@ -14,10 +14,10 @@
         android:theme="@style/Theme.Aeropedia">
         <activity android:name=".alexa.AlexaActivity"/>
         <activity android:name=".treeview.TreeView"/>
-        <activity android:name=".home.Home"/>
+        <activity android:name=".manufacturers.ManufacturerMenu"/>
         <activity android:name=".airbus.AirbusA350"/>
         <activity android:name=".manufacturers.Airbus" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
