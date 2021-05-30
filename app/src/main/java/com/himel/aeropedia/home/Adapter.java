@@ -1,6 +1,7 @@
 package com.himel.aeropedia.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.alexa.AlexaActivity;
+import com.himel.aeropedia.manufacturers.Airbus;
+import com.himel.aeropedia.manufacturers.ManufacturerMenu;
 
 import java.util.List;
 
@@ -56,7 +60,14 @@ public class Adapter extends PagerAdapter {
             @Override
             public void onClick(View v) {
 
-                // TODO
+                if (position == 0) {
+                    Intent showContent = new Intent(context, ManufacturerMenu.class);
+                    context.startActivity(showContent);
+                }
+                else if (position == 1) {
+                    Intent showContent = new Intent(context, AlexaActivity.class);
+                    context.startActivity(showContent);
+                }
             }
         });
 

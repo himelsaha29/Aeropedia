@@ -1,12 +1,16 @@
 package com.himel.aeropedia.home;
 
 import android.animation.ArgbEvaluator;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.alexa.AlexaActivity;
+import com.himel.aeropedia.manufacturers.Airbus;
+import com.himel.aeropedia.treeview.TreeView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         models = new ArrayList<Model>();
-        models.add(new Model(R.drawable.a350_cover, "A350", "A350"));
-        models.add(new Model(R.drawable.a380_cover, "A380", "A280"));
+        models.add(new Model(R.drawable.a350_cover, "Airbus", "Airbus family"));
+        models.add(new Model(R.drawable.a380_cover, "Amazon Alexa", "Smart voice assistant"));
         models.add(new Model(R.drawable.bombardier_cover, "BOMBARDIER", "BOMBARDIER"));
         models.add(new Model(R.drawable.boeing_cover, "BOEING", "787"));
 
@@ -65,10 +69,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
+
             @Override
             public void onPageSelected(int position) {
 
             }
+
+
 
             @Override
             public void onPageScrollStateChanged(int state) {
