@@ -223,32 +223,6 @@ public class ManufacturerMenu extends AppCompatActivity {
         animateCards();
     }
 
-    @Override
-    public void onBackPressed() {
-        if (!flag) {
-
-            if (getResources().getConfiguration().locale.toString().contains("fr")) {
-                Toast.makeText(ManufacturerMenu.this, "Appuyez à nouveau pour quitter", Toast.LENGTH_LONG).show();
-            } else if (getResources().getConfiguration().toString().contains("en")) {
-                Toast.makeText(ManufacturerMenu.this, "Press again to exit", Toast.LENGTH_LONG).show();
-            }
-
-
-            flag = true;
-            new CountDownTimer(3000, 1000) {
-                public void onTick(long millisUntilFinished) {
-                    // no function
-                }
-
-                public void onFinish() {
-                    flag = false;
-                }
-            }.start();
-        } else {
-            this.finishAffinity();
-        }
-    }
-
     private void animateCards() {
         translate = AnimationUtils.loadAnimation(this, R.anim.animation);
         airbusCard.setAnimation(translate);
@@ -383,4 +357,10 @@ public class ManufacturerMenu extends AppCompatActivity {
         /** TreeView **/
     }
 
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 }

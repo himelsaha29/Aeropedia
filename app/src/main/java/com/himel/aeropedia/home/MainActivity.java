@@ -3,6 +3,8 @@ package com.himel.aeropedia.home;
 import android.animation.ArgbEvaluator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -10,6 +12,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.manufacturers.Airbus;
+import com.himel.aeropedia.manufacturers.ManufacturerMenu;
 import com.himel.aeropedia.treeview.TreeView;
 
 import java.util.ArrayList;
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     List<Model> models;
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
+    private boolean flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,5 +87,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (!flag) {
+
+            if (getResources().getConfiguration().locale.toString().contains("fr")) {
+                Toast.makeText(MainActivity.this, "Appuyez à nouveau pour quitter", Toast.LENGTH_LONG).show();
+            } else if (getResources().getConfiguration().toString().contains("en")) {
+                Toast.makeText(MainActivity.this, "Press again to exit", Toast.LENGTH_LONG).show();
+            }
+
+
+            flag = true;
+            new CountDownTimer(3000, 1000) {
+                public void onTick(long millisUntilFinished) {
+                    // no function
+                }
+
+                public void onFinish() {
+                    flag = false;
+                }
+            }.start();
+        } else {
+            this.finishAffinity();
+        }
     }
 }
