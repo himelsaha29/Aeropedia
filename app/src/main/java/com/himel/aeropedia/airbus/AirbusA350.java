@@ -9,22 +9,33 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.treeview.IconTreeItemHolder;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
+import com.unnamed.b.atv.model.TreeNode;
+import com.unnamed.b.atv.view.AndroidTreeView;
 
 import java.util.Locale;
 
+import io.alterac.blurkit.BlurLayout;
+import soup.neumorphism.NeumorphButton;
+import soup.neumorphism.NeumorphImageButton;
+import soup.neumorphism.ShapeType;
+
 public class AirbusA350 extends AppCompatActivity {
 
-    private Button langToggle;
+    private NeumorphButton langToggle;
     private Locale locale;
-    private ImageButton darkToggle;
+    private NeumorphImageButton darkToggle;
     private String enableDark;
     private FlowingDrawer mDrawer;
+    private BlurLayout blur;
+    private AndroidTreeView tView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +50,15 @@ public class AirbusA350 extends AppCompatActivity {
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
+        mDrawer = findViewById(R.id.drawerlayout);
+        blur = findViewById(R.id.blurLayout);
+
+        // setting NeumorphismButton shape based on state
+        if (locale.toString().contains("en")) {
+            langToggle.setShapeType(ShapeType.FLAT);
+        } else if (locale.toString().contains("fr")) {
+            langToggle.setShapeType(ShapeType.BASIN);
+        }
 
 
         langToggle.setOnClickListener(new View.OnClickListener() {
@@ -79,13 +99,20 @@ public class AirbusA350 extends AppCompatActivity {
             }
         });
 
-        mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
+
         mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_FULLSCREEN);
         mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
             @Override
             public void onDrawerStateChange(int oldState, int newState) {
-                if (newState == ElasticDrawer.STATE_CLOSED) {
+                if (newState == ElasticDrawer.STATE_CLOSING) {
                     Log.i("MainActivity", "Drawer STATE_CLOSED");
+                    blur.setVisibility(View.GONE);
+                    blur.setAlpha(0f);
+                } else if (newState == ElasticDrawer.STATE_OPENING) {
+                    blur.invalidate();
+                    blur.setAlpha(0.0f);
+                    blur.setVisibility(View.VISIBLE);
+                    blur.animate().alpha(1.0f).setDuration(1400);
                 }
             }
 
@@ -94,6 +121,8 @@ public class AirbusA350 extends AppCompatActivity {
                 Log.i("MainActivity", "openRatio=" + openRatio + " ,offsetPixels=" + offsetPixels);
             }
         });
+
+        createTreeView(savedInstanceState);
     }
 
 
@@ -181,4 +210,76 @@ public class AirbusA350 extends AppCompatActivity {
     }
 
     /** Dark mode **/
+
+
+    /** TreeView **/
+
+    private void createTreeView(Bundle savedInstanceState) {
+
+        ViewGroup containerView = (ViewGroup) findViewById(R.id.inside);
+
+
+        TreeNode root = TreeNode.root();
+        TreeNode manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Manufacturers", "No", "Manufacturers"));
+        TreeNode amazonRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.drawable.ic_amazon_alexa, "Amazon Alexa", "No", "Alexa"));
+        TreeNode firebaseRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Firebase", "No", "firebase"));
+
+
+
+        TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "No", "airbus"));
+        TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a220), "No", "a220"));
+        TreeNode a319Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a319), "No", "a319"));
+        TreeNode a320Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a320), "No", "a320"));
+        TreeNode a321Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a321), "No", "a321"));
+
+        TreeNode a330Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_alexa, this.getString(R.string.a330), "No", "a330"));
+        TreeNode a340Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a340), "No", "a340"));
+        TreeNode a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "Highlight", "a350"));
+        TreeNode a380Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a380), "No", "a380"));
+
+
+        airbus.addChildren(a220Node, a319Node, a320Node, a321Node, a330Node, a340Node, a350Node, a380Node);
+
+
+        TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_photo_library, this.getString(R.string.boeing), "No", "boeing"));
+        TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_photo, "B777", "No", "b777"));
+        TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_photo, "B787", "No", "b787"));
+        boeing.addChildren(b777, b787);
+
+        manufacturerRoot.addChildren(airbus, boeing);
+
+
+        root.addChildren(manufacturerRoot);
+        root.addChildren(amazonRoot);
+        root.addChildren(firebaseRoot);
+        manufacturerRoot.setExpanded(true);
+        airbus.setExpanded(true);
+
+
+        tView = new AndroidTreeView(this, root);
+        tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);
+        tView.setDefaultViewHolder(IconTreeItemHolder.class);
+
+        containerView.addView(tView.getView());
+
+//        if (savedInstanceState != null) {
+//            String state = savedInstanceState.getString("tState");
+//            if (!TextUtils.isEmpty(state)) {
+//                tView.restoreState(state);
+//            }
+//        }
+
+    }
+
+    /** TreeView **/
+
+
+    @Override
+    public void onBackPressed() {
+        if (mDrawer.getDrawerState() == ElasticDrawer.STATE_CLOSING || mDrawer.getDrawerState() == ElasticDrawer.STATE_OPEN) {
+            mDrawer.closeMenu();
+        } else {
+            super.onBackPressed();
+        }
+    }
 }

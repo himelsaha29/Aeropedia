@@ -96,7 +96,7 @@ public class ManufacturerMenu extends AppCompatActivity {
         gulfstreamCard.getBackground().setAlpha(65);
 
 
-        // setting NeumorphismImageButton shape based on state
+        // setting NeumorphismButton shape based on state
         if (locale.toString().contains("en")) {
             langToggle.setShapeType(ShapeType.FLAT);
         } else if (locale.toString().contains("fr")) {
@@ -319,7 +319,7 @@ public class ManufacturerMenu extends AppCompatActivity {
 
 
         TreeNode root = TreeNode.root();
-        TreeNode manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Manufacturers", "No", "Manufacturers"));
+        TreeNode manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Manufacturers", "Highlight", "Manufacturers"));
         TreeNode amazonRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.drawable.ic_amazon_alexa, "Amazon Alexa", "No", "Alexa"));
         TreeNode firebaseRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Firebase", "No", "firebase"));
 
@@ -331,7 +331,7 @@ public class ManufacturerMenu extends AppCompatActivity {
         TreeNode a320Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a320), "No", "a320"));
         TreeNode a321Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a321), "No", "a321"));
 
-        TreeNode a330Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_alexa, this.getString(R.string.a330), "Highlight", "a330"));
+        TreeNode a330Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_alexa, this.getString(R.string.a330), "No", "a330"));
         TreeNode a340Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a340), "No", "a340"));
         TreeNode a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "No", "a350"));
         TreeNode a380Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a380), "No", "a380"));
@@ -352,7 +352,6 @@ public class ManufacturerMenu extends AppCompatActivity {
         root.addChildren(amazonRoot);
         root.addChildren(firebaseRoot);
         manufacturerRoot.setExpanded(true);
-        airbus.setExpanded(true);
 
 
         tView = new AndroidTreeView(this, root);
@@ -361,12 +360,12 @@ public class ManufacturerMenu extends AppCompatActivity {
 
         containerView.addView(tView.getView());
 
-        if (savedInstanceState != null) {
-            String state = savedInstanceState.getString("tState");
-            if (!TextUtils.isEmpty(state)) {
-                tView.restoreState(state);
-            }
-        }
+//        if (savedInstanceState != null) {
+//            String state = savedInstanceState.getString("tState");
+//            if (!TextUtils.isEmpty(state)) {
+//                tView.restoreState(state);
+//            }
+//        }
 
     }
 

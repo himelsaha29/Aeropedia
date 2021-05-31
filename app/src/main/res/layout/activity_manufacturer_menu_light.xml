@@ -375,7 +375,7 @@
                 app:neumorph_shadowColorLight="#9ac1ea"
                 app:neumorph_shadowColorDark="#5f8bba"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_bulb_black_lit"
+                android:src="@drawable/ic_bulb_black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent" />
 
