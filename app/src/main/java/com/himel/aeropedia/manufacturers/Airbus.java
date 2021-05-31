@@ -163,7 +163,7 @@ public class Airbus extends AppCompatActivity {
             }
         });
 
-        createTreeView(savedInstanceState);
+        createTreeView();
 
     }
 
@@ -187,6 +187,7 @@ public class Airbus extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
+            createTreeView();
         }
 
         scrollView = findViewById(R.id.main_scroll);
@@ -267,7 +268,7 @@ public class Airbus extends AppCompatActivity {
 
     /** TreeView **/
 
-    private void createTreeView(Bundle savedInstanceState) {
+    private void createTreeView() {
 
         ViewGroup containerView = (ViewGroup) findViewById(R.id.inside);
 
@@ -279,7 +280,12 @@ public class Airbus extends AppCompatActivity {
 
 
 
-        TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "Highlight", "airbus"));
+        TreeNode airbus = null;
+        if (verifyDarkMode().equals("Yes")) {
+            airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "HighlightLight", "airbus"));
+        } else {
+            airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "HighlightDark", "airbus"));
+        }
         TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a220), "No", "a220"));
         TreeNode a319Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a319), "No", "a319"));
         TreeNode a320Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a320), "No", "a320"));

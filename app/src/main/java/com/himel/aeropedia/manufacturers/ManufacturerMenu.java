@@ -209,7 +209,7 @@ public class ManufacturerMenu extends AppCompatActivity {
 //        }
 //        flowingMenuLayout.setLayoutParams(params);
 
-        createTreeView(savedInstanceState);
+        createTreeView();
 
     }
 
@@ -227,6 +227,7 @@ public class ManufacturerMenu extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
+            createTreeView();
         }
 
         scrollView = findViewById(R.id.main_scroll);
@@ -313,13 +314,18 @@ public class ManufacturerMenu extends AppCompatActivity {
 
     /** TreeView **/
 
-    private void createTreeView(Bundle savedInstanceState) {
+    private void createTreeView() {
 
         ViewGroup containerView = (ViewGroup) findViewById(R.id.inside);
 
 
         TreeNode root = TreeNode.root();
-        TreeNode manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Manufacturers", "Highlight", "Manufacturers"));
+        TreeNode manufacturerRoot = null;
+        if (verifyDarkMode().equals("Yes")) {
+            manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Manufacturers", "HighlightLight", "Manufacturers"));
+        } else {
+            manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Manufacturers", "HighlightDark", "Manufacturers"));
+        }
         TreeNode amazonRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.drawable.ic_amazon_alexa, "Amazon Alexa", "No", "Alexa"));
         TreeNode firebaseRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Firebase", "No", "firebase"));
 

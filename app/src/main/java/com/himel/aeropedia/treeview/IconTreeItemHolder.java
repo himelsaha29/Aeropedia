@@ -28,8 +28,10 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
         tvValue = (TextView) view.findViewById(R.id.node_value);
         tvValue.setText(value.text);
 
-        if(value.highlight.equals("Highlight")) {
+        if(value.highlight.equals("HighlightLight")) {
             tvValue.setTextColor(Color.parseColor("#72A8E1"));
+        } else if(value.highlight.equals("HighlightDark")) {
+            tvValue.setTextColor(Color.parseColor("#042234"));
         }
 
 
