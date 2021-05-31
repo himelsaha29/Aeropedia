@@ -34,6 +34,9 @@ import com.unnamed.b.atv.view.AndroidTreeView;
 import java.util.Locale;
 
 import io.alterac.blurkit.BlurLayout;
+import soup.neumorphism.NeumorphButton;
+import soup.neumorphism.NeumorphImageButton;
+import soup.neumorphism.ShapeType;
 
 public class ManufacturerMenu extends AppCompatActivity {
 
@@ -48,8 +51,8 @@ public class ManufacturerMenu extends AppCompatActivity {
     private Animation translate = null;
     private ScrollView scrollView;
     private Locale locale;
-    private Button langToggle;
-    private ImageButton darkToggle;
+    private NeumorphButton langToggle;
+    private NeumorphImageButton darkToggle;
     private String enableDark;
     private FlowingDrawer mDrawer;
     private FlowingMenuLayout flowingMenuLayout;
@@ -91,6 +94,14 @@ public class ManufacturerMenu extends AppCompatActivity {
         antonovCard.getBackground().setAlpha(65);
         cessnaCard.getBackground().setAlpha(65);
         gulfstreamCard.getBackground().setAlpha(65);
+
+
+        // setting NeumorphismImageButton shape based on state
+        if (locale.toString().contains("en")) {
+            langToggle.setShapeType(ShapeType.FLAT);
+        } else if (locale.toString().contains("fr")) {
+            langToggle.setShapeType(ShapeType.BASIN);
+        }
 
         animateCards();
 
@@ -299,8 +310,11 @@ public class ManufacturerMenu extends AppCompatActivity {
 
     /** Dark mode **/
 
+
+    /** TreeView **/
+
     private void createTreeView(Bundle savedInstanceState) {
-        /** TreeView **/
+
         ViewGroup containerView = (ViewGroup) findViewById(R.id.inside);
 
 
@@ -354,8 +368,9 @@ public class ManufacturerMenu extends AppCompatActivity {
             }
         }
 
-        /** TreeView **/
     }
+
+    /** TreeView **/
 
 
     @Override

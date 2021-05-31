@@ -371,7 +371,7 @@
                 android:layout_width="90dp"
                 android:layout_height="70dp"
                 android:background="@android:color/transparent"
-                app:neumorph_shapeType="flat"
+                app:neumorph_shapeType="basin"
                 app:neumorph_shadowColorLight="#9ac1ea"
                 app:neumorph_shadowColorDark="#5f8bba"
                 android:scaleType="centerCrop"
