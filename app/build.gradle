@@ -56,4 +56,6 @@ dependencies {
     compile project(path: ':libs:speechutils')
 
     implementation 'com.github.fornewid:neumorphism:0.3.0'
+
+    implementation 'com.airbnb.android:lottie:3.7.0'
 }
