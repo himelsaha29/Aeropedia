@@ -37,6 +37,19 @@
 
 
 
+
+        <soup.neumorphism.NeumorphImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            style="@style/Widget.Neumorph.ImageButton"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="basin"
+            app:neumorph_shadowElevation="6dp"
+            android:src="@drawable/ic_amazon_alexa"
+            app:neumorph_backgroundColor="#fff4f1"/>
+
         <soup.neumorphism.NeumorphImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
