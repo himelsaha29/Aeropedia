@@ -177,13 +177,18 @@ public class Airbus extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
 
-        if(!locale.equals(Locale.getDefault())) {
+        if(!enableDark.equals(verifyDarkMode()) && !locale.equals(Locale.getDefault())) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+            createTreeView();
+        }
+        else if (!locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
         }
-
-        if (!enableDark.equals(verifyDarkMode())) {
+        else if (!enableDark.equals(verifyDarkMode())) {
             Intent intent = getIntent();
             finish();
             startActivity(intent);

@@ -19,6 +19,7 @@ import java.io.IOException;
 
 import ee.ioc.phon.android.speechutils.AudioRecorder;
 import ee.ioc.phon.android.speechutils.RawAudioRecorder;
+import io.alterac.blurkit.BlurLayout;
 import okio.BufferedSink;
 import soup.neumorphism.NeumorphImageButton;
 
@@ -33,6 +34,8 @@ public class AlexaActivity extends CoreActivity {
     private static final int AUDIO_RATE = 16000;
     private RawAudioRecorder recorder;
     private NeumorphImageButton recorderView;
+
+    private BlurLayout blur;
 
 
 
@@ -55,8 +58,13 @@ public class AlexaActivity extends CoreActivity {
 
 
         //statusBar = findViewById(R.id.status_bar);
-        status = (TextView) findViewById(R.id.status);
+        status = findViewById(R.id.status);
         loading = findViewById(R.id.loading);
+        blur = findViewById(R.id.blurBackground);
+
+        blur.invalidate();
+        blur.setAlpha(0.0f);
+        blur.setVisibility(View.VISIBLE);
 
     }
 
