@@ -53,7 +53,7 @@ public abstract class CoreActivity extends AppCompatActivity implements AVSListe
     private final static int STATE_PROMPTING = 4;
     private final static int STATE_FINISHED = 0;
 
-    private AlexaAudioPlayer audioPlayer;
+    protected AlexaAudioPlayer audioPlayer;
     private List<AvsItem> avsQueue = new ArrayList<>();
 
     private long startTime = 0;

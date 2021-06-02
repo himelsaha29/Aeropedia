@@ -6,10 +6,9 @@
     android:orientation="vertical"
     android:background="#fff4f1">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_centerInParent="true"
@@ -17,63 +16,23 @@
         android:id="@+id/linearLayout">
 
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:layout_width="350dp"
-            android:layout_height="350dp"
-            app:lottie_rawRes="@raw/wifi"
-            app:lottie_loop="true"
-            app:lottie_autoPlay="true"
-            android:layout_gravity="center"/>
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:layout_width="270dp"
-            android:layout_height="270dp"
-            app:lottie_rawRes="@raw/audio"
-            app:lottie_loop="true"
-            app:lottie_autoPlay="true"
-            android:layout_gravity="center"
-            android:visibility="gone"
-            android:rotation="132"/>
-
-        <io.alterac.blurkit.BlurLayout
-            android:id="@+id/blurBackground"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:alpha="0"
-            android:animateLayoutChanges="true"
-            android:visibility="gone"
-            app:blk_blurRadius="5"
-            app:blk_downscaleFactor="0.14"
-            android:layout_gravity="center"
-            app:blk_fps="50" />
-
-
-
 
         <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/recorder"
+            style="@style/Widget.Neumorph.ImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
-            style="@style/Widget.Neumorph.ImageButton"
-            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-            app:neumorph_shapeType="basin"
-            app:neumorph_shadowElevation="6dp"
             android:src="@drawable/ic_amazon_alexa"
-            app:neumorph_backgroundColor="#fff4f1"/>
-
-        <soup.neumorphism.NeumorphImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:scaleType="centerCrop"
-            style="@style/Widget.Neumorph.ImageButton"
-            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-            app:neumorph_shapeType="flat"
-            app:neumorph_shadowElevation="6dp"
-            android:src="@drawable/ic_amazon_alexa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:neumorph_backgroundColor="#fff4f1"
-            android:id="@+id/recorder"/>
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="flat" />
 
 
             <ProgressBar
@@ -86,7 +45,11 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginLeft="0dp"
-                android:layout_marginStart="0dp"/>
+                android:layout_marginStart="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -96,20 +59,43 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:text="@string/status_listening"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:lottie_rawRes="@raw/audio"
-                app:lottie_loop="true"
-                app:lottie_autoPlay="true"
-                android:layout_gravity="bottom"
-                android:visibility="visible"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/listening"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recorder"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/speaking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/audio"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recorder"/>
 
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

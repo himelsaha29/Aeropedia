@@ -11,9 +11,9 @@ import androidx.core.content.ContextCompat;
 import android.view.View;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.himel.aeropedia.R;
 import com.willblaschko.android.alexa.requestbody.DataRequestBody;
-import com.willblaschko.android.recorderview.RecorderView;
 
 import java.io.IOException;
 
@@ -29,13 +29,16 @@ public class AlexaActivity extends CoreActivity {
     private View statusBar;
     private TextView status;
     private View loading;
+    LottieAnimationView listening;
+    LottieAnimationView speaking;
 
     private final static int MY_PERMISSIONS_REQUEST_RECORD_AUDIO = 1;
     private static final int AUDIO_RATE = 16000;
     private RawAudioRecorder recorder;
     private NeumorphImageButton recorderView;
 
-    private BlurLayout blur;
+    private boolean speak = false;
+
 
 
 
@@ -43,12 +46,17 @@ public class AlexaActivity extends CoreActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_audio);
+        setContentView(R.layout.activity_alexa);
         recorderView = findViewById(R.id.recorder);
         recorderView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(recorder == null) {
+                if(speak) {
+                    audioPlayer.stop();
+                    loading.setVisibility(View.GONE);
+                    speaking.setVisibility(View.GONE);
+                }
+                else if(recorder == null) {
                     startListening();
                 }else{
                     stopListening();
@@ -60,11 +68,8 @@ public class AlexaActivity extends CoreActivity {
         //statusBar = findViewById(R.id.status_bar);
         status = findViewById(R.id.status);
         loading = findViewById(R.id.loading);
-        blur = findViewById(R.id.blurBackground);
-
-        blur.invalidate();
-        blur.setAlpha(0.0f);
-        blur.setVisibility(View.VISIBLE);
+        listening = findViewById(R.id.listening);
+        speaking = findViewById(R.id.speaking);
 
     }
 
@@ -90,6 +95,7 @@ public class AlexaActivity extends CoreActivity {
                             @Override
                             public void run() {
                                 //recorderView.setRmsdbLevel(rmsdb);
+                                listening.setVisibility(View.VISIBLE);
                             }
                         });
                     }
@@ -131,6 +137,7 @@ public class AlexaActivity extends CoreActivity {
             recorder.release();
             recorder = null;
         }
+        listening.setVisibility(View.GONE);
     }
 
 
@@ -140,6 +147,7 @@ public class AlexaActivity extends CoreActivity {
             status.setText(R.string.status_listening);
             loading.setVisibility(View.GONE);
             //statusBar.animate().alpha(1);
+            listening.setVisibility(View.VISIBLE);
         }
     }
     protected void stateProcessing(){
@@ -152,10 +160,13 @@ public class AlexaActivity extends CoreActivity {
     }
     protected void stateSpeaking(){
 
+        speak = true;
         if(status != null) {
             status.setText(R.string.status_speaking);
             loading.setVisibility(View.VISIBLE);
             //statusBar.animate().alpha(1);
+            listening.setVisibility(View.GONE);
+            speaking.setVisibility(View.VISIBLE);
         }
     }
     protected void statePrompting(){
@@ -170,11 +181,16 @@ public class AlexaActivity extends CoreActivity {
         if(status != null) {
             status.setText("");
             loading.setVisibility(View.GONE);
+            speaking.setVisibility(View.GONE);
             //statusBar.animate().alpha(0);
+            speak = false;
         }
     }
     protected void stateNone(){
         //statusBar.animate().alpha(0);
+        speaking.setVisibility(View.GONE);
+        listening.setVisibility(View.GONE);
+        speak = false;
     }
 
     @Override
