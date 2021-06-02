@@ -8,8 +8,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_gravity="center"
+        android:layout_weight="0.8"
         android:gravity="center"
         android:layout_centerInParent="true"
         android:orientation="vertical"
@@ -20,8 +21,8 @@
         <soup.neumorphism.NeumorphImageButton
             android:id="@+id/recorder"
             style="@style/Widget.Neumorph.ImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_amazon_alexa"
@@ -96,9 +97,6 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
 
 

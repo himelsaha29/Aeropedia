@@ -1,7 +1,9 @@
 package com.himel.aeropedia.home;
 
 import android.animation.ArgbEvaluator;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.Toast;
@@ -17,6 +19,7 @@ import com.himel.aeropedia.treeview.TreeView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -93,9 +96,10 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (!flag) {
 
-            if (getResources().getConfiguration().locale.toString().contains("fr")) {
+            SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+            if (prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2)).contains("fr")) {
                 Toast.makeText(MainActivity.this, "Appuyez à nouveau pour quitter", Toast.LENGTH_LONG).show();
-            } else if (getResources().getConfiguration().toString().contains("en")) {
+            } else if (prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2)).contains("en")) {
                 Toast.makeText(MainActivity.this, "Press again to exit", Toast.LENGTH_LONG).show();
             }
 

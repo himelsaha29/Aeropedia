@@ -53,8 +53,9 @@ public class AlexaActivity extends CoreActivity {
             public void onClick(View v) {
                 if(speak) {
                     audioPlayer.stop();
-                    loading.setVisibility(View.GONE);
+                    stateFinished();
                     speaking.setVisibility(View.GONE);
+                    listening.setVisibility(View.GONE);
                 }
                 else if(recorder == null) {
                     startListening();
@@ -81,7 +82,8 @@ public class AlexaActivity extends CoreActivity {
         }
         recorder.start();
         alexaManager.sendAudioRequest(requestBody, getRequestCallback());
-
+        listening.setVisibility(View.VISIBLE);
+        speaking.setVisibility(View.GONE);
     }
 
     private DataRequestBody requestBody = new DataRequestBody() {
@@ -95,7 +97,7 @@ public class AlexaActivity extends CoreActivity {
                             @Override
                             public void run() {
                                 //recorderView.setRmsdbLevel(rmsdb);
-                                listening.setVisibility(View.VISIBLE);
+                                //listening.setVisibility(View.VISIBLE);
                             }
                         });
                     }
