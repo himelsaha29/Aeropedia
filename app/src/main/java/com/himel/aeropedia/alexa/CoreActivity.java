@@ -44,7 +44,7 @@ import static com.himel.aeropedia.alexa.Global.PRODUCT_ID;
 
 public abstract class CoreActivity extends AppCompatActivity implements AVSListener {
 
-    protected AlexaManager alexaManager;
+    private AlexaManager alexaManager;
 
 
     private final static int STATE_LISTENING = 1;
@@ -53,7 +53,7 @@ public abstract class CoreActivity extends AppCompatActivity implements AVSListe
     private final static int STATE_PROMPTING = 4;
     private final static int STATE_FINISHED = 0;
 
-    protected AlexaAudioPlayer audioPlayer;
+    private AlexaAudioPlayer audioPlayer;
     protected List<AvsItem> avsQueue = new ArrayList<>();
 
     private long startTime = 0;
@@ -408,7 +408,7 @@ public abstract class CoreActivity extends AppCompatActivity implements AVSListe
         inst.sendKeyDownUpSync(keyCode);
     }
 
-    protected void setState(final int state){
+    private void setState(final int state){
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
