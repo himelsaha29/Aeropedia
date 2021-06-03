@@ -41,7 +41,8 @@
             style="@style/Widget.Neumorph.ImageButton"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
             android:layout_gravity="top"
-            android:src="@drawable/al"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_information"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
