@@ -93,7 +93,6 @@ public class AlexaActivity extends CoreActivity {
         public void writeTo(BufferedSink sink) throws IOException {
             while (recorder != null && recorder.getState() != AudioRecorder.State.ERROR && !recorder.isPausing()) {
                 if(recorder != null) {
-                    final float rmsdb = recorder.getRmsdb();
                     if(recorderView != null) {
                         recorderView.post(new Runnable() {
                             @Override
@@ -106,10 +105,6 @@ public class AlexaActivity extends CoreActivity {
                     if(sink != null && recorder != null) {
                         sink.write(recorder.consumeRecording());
                     }
-//                    if(BuildConfig.DEBUG){
-//                        // Log.i(TAG, "Received audio");
-//                        // Log.i(TAG, "RMSDB: " + rmsdb);
-//                    }
                 }
 
                 try {
