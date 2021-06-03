@@ -52,7 +52,8 @@ public class AlexaActivity extends CoreActivity {
             @Override
             public void onClick(View v) {
                 if(speak) {
-                    audioPlayer.stop();
+                    AlexaActivity.super.avsQueue.clear();
+                    onStop();
                     stateFinished();
                     speaking.setVisibility(View.GONE);
                     listening.setVisibility(View.GONE);
@@ -61,6 +62,7 @@ public class AlexaActivity extends CoreActivity {
                     startListening();
                 }else{
                     stopListening();
+                    listening.setVisibility(View.GONE);
                 }
             }
         });
@@ -140,6 +142,7 @@ public class AlexaActivity extends CoreActivity {
             recorder = null;
         }
         listening.setVisibility(View.GONE);
+        speak = false;
     }
 
 
@@ -149,8 +152,9 @@ public class AlexaActivity extends CoreActivity {
             status.setText(R.string.status_listening);
             loading.setVisibility(View.GONE);
             //statusBar.animate().alpha(1);
-            listening.setVisibility(View.VISIBLE);
+            speak = false;
         }
+        listening.setVisibility(View.VISIBLE);
     }
     protected void stateProcessing(){
 
@@ -159,6 +163,7 @@ public class AlexaActivity extends CoreActivity {
             loading.setVisibility(View.VISIBLE);
             //statusBar.animate().alpha(1);
         }
+        speak = false;
     }
     protected void stateSpeaking(){
 
@@ -167,9 +172,9 @@ public class AlexaActivity extends CoreActivity {
             status.setText(R.string.status_speaking);
             loading.setVisibility(View.VISIBLE);
             //statusBar.animate().alpha(1);
-            listening.setVisibility(View.GONE);
-            speaking.setVisibility(View.VISIBLE);
         }
+        listening.setVisibility(View.GONE);
+        speaking.setVisibility(View.VISIBLE);
     }
     protected void statePrompting(){
 
@@ -182,11 +187,11 @@ public class AlexaActivity extends CoreActivity {
     protected void stateFinished(){
         if(status != null) {
             status.setText("");
-            loading.setVisibility(View.GONE);
-            speaking.setVisibility(View.GONE);
             //statusBar.animate().alpha(0);
             speak = false;
         }
+        loading.setVisibility(View.GONE);
+        speaking.setVisibility(View.GONE);
     }
     protected void stateNone(){
         //statusBar.animate().alpha(0);

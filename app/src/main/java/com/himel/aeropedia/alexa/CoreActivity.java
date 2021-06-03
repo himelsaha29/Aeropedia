@@ -54,7 +54,7 @@ public abstract class CoreActivity extends AppCompatActivity implements AVSListe
     private final static int STATE_FINISHED = 0;
 
     protected AlexaAudioPlayer audioPlayer;
-    private List<AvsItem> avsQueue = new ArrayList<>();
+    protected List<AvsItem> avsQueue = new ArrayList<>();
 
     private long startTime = 0;
 
@@ -408,7 +408,7 @@ public abstract class CoreActivity extends AppCompatActivity implements AVSListe
         inst.sendKeyDownUpSync(keyCode);
     }
 
-    private void setState(final int state){
+    protected void setState(final int state){
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -436,7 +436,6 @@ public abstract class CoreActivity extends AppCompatActivity implements AVSListe
         });
     }
 
-    //public abstract void loadFragment(Fragment fragment, boolean addToBackStack);
 
     protected abstract void stateListening();
     protected abstract void stateProcessing();
