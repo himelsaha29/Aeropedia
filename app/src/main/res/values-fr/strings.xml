@@ -466,4 +466,6 @@
     <string name="fragment_action_send_audio">envoyer de l\'audio</string>
     <string name="action_send_audio_description">Appuyez the microphone to start recording. Recording will end either when pressed again or end of speech detected.\n\n\nSending audio can be very efficient if using the DataRequestBody option, since it can write to the POST while the audio is still being recorded, giving the impression of a very fast response. This can also be used to prepend or append audio to a recorded stream, if you wanted to limit the control to a single skill: "Open Hey Dad and ask for a joke about…" followed by the joke type..</string>
 
+
+    <string name="login">Connectez-vous avec Amazon</string>
 </resources>

@@ -36,6 +36,7 @@
             app:neumorph_shapeType="flat" />
 
         <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/info"
             android:layout_width="100dp"
             android:layout_height="100dp"
             style="@style/Widget.Neumorph.ImageButton"
@@ -45,6 +46,7 @@
             android:src="@drawable/ic_information"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
+
 
 
 
