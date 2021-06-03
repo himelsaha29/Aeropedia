@@ -44,7 +44,7 @@ import static com.himel.aeropedia.alexa.Global.PRODUCT_ID;
 
 public abstract class CoreActivity extends AppCompatActivity implements AVSListener {
 
-    private AlexaManager alexaManager;
+    protected AlexaManager alexaManager;
 
 
     private final static int STATE_LISTENING = 1;
