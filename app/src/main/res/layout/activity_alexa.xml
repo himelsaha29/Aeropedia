@@ -10,7 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.1">
+        android:layout_weight="0.1"
+        android:id="@+id/top_constraint">
 
         <soup.neumorphism.NeumorphImageButton
             android:id="@+id/info"
@@ -29,7 +30,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/middle_constraint"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_centerInParent="true"
@@ -42,16 +43,19 @@
         <soup.neumorphism.NeumorphImageButton
             android:id="@+id/recorder"
             style="@style/Widget.Neumorph.ImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_gravity="center"
-            android:scaleType="fitXY"
+            android:scaleY="0.55"
+            android:scaleX="0.55"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
             android:src="@drawable/ic_amazon_alexa"
+            app:layout_constraintDimensionRatio="H, 1:1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:neumorph_backgroundColor="#fff4f1"
             app:neumorph_shadowElevation="6dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
             app:neumorph_shapeType="flat" />
@@ -94,7 +98,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.2">
+        android:layout_weight="0.2"
+        android:id="@+id/bottom_constraint">
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/listening"
