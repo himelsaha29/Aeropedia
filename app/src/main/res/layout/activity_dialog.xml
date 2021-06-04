@@ -3,22 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#fff4f1">
+    android:background="#72A8E1">
 
     <TextView
         android:id="@+id/instruction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/instruction"
-        android:textSize="25sp"
-        android:textAlignment="center"
         android:fontFamily="@font/maven_pro_medium"
+        android:padding="30dp"
+        android:text="@string/instruction"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <soup.neumorphism.NeumorphButton
         android:id="@+id/close_dialog"
@@ -33,10 +32,19 @@
         android:textColor="#042234"
         android:textSize="25sp"
         android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:neumorph_shadowColorLight="#9ac1ea"
+        app:neumorph_shadowColorDark="#5f8bba"
+        app:layout_constraintTop_toBottomOf="@id/instruction"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/instruction" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/close_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
