@@ -468,4 +468,7 @@
 
 
     <string name="login">Connectez-vous avec Amazon</string>
+
+    <string name="instruction">Appuyez sur la bouton Alexa et commencez à parler. L\'enregistreur va arreter automatiquement ou appuyez sur la bouton à nouveau pour l\'arreter manuellement</string>
+    <string name="close">Je comprends</string>
 </resources>

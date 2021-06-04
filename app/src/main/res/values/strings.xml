@@ -467,5 +467,7 @@
 
 
     <string name="login">Login with Amazon</string>
+    <string name="instruction">Press Alexa button and start talking. The recorder will stop automatically or press the button again to manually stop it</string>
+    <string name="close">Got it</string>
 
 </resources>

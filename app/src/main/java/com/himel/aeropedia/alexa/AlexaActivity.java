@@ -1,6 +1,7 @@
 package com.himel.aeropedia.alexa;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
@@ -9,6 +10,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -21,6 +23,7 @@ import ee.ioc.phon.android.speechutils.AudioRecorder;
 import ee.ioc.phon.android.speechutils.RawAudioRecorder;
 import io.alterac.blurkit.BlurLayout;
 import okio.BufferedSink;
+import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphImageButton;
 
 
@@ -36,6 +39,8 @@ public class AlexaActivity extends CoreActivity {
     private static final int AUDIO_RATE = 16000;
     private RawAudioRecorder recorder;
     private NeumorphImageButton recorderView;
+    private NeumorphImageButton informationButton;
+    private NeumorphButton closeDialog;
 
     private boolean speak = false;
 
@@ -73,6 +78,30 @@ public class AlexaActivity extends CoreActivity {
         loading = findViewById(R.id.loading);
         listening = findViewById(R.id.listening);
         speaking = findViewById(R.id.speaking);
+        informationButton = findViewById(R.id.info);
+        closeDialog = findViewById(R.id.close_dialog);
+
+        Dialog dialog = new Dialog(AlexaActivity.this);
+        dialog.setContentView(R.layout.activity_dialog);
+        //dialog.getWindow().setBac
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
+
+        NeumorphButton close = dialog.findViewById(R.id.close_dialog);
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        informationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.show();
+            }
+        });
 
     }
 
