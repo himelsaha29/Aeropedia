@@ -24,6 +24,7 @@
             app:layout_constraintDimensionRatio="H, 1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
 
 
@@ -33,25 +34,24 @@
         android:id="@+id/middle_constraint"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:layout_weight="0.7"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constrainedHeight="true"
+        android:padding="5dp">
 
 
         <soup.neumorphism.NeumorphImageButton
             android:id="@+id/recorder"
             style="@style/Widget.Neumorph.ImageButton"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:scaleY="0.55"
-            android:scaleX="0.55"
+            app:layout_constrainedHeight="true"
             android:scaleType="fitCenter"
             android:padding="10dp"
             android:src="@drawable/ic_amazon_alexa"
-            app:layout_constraintDimensionRatio="H, 1:1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
