@@ -43,6 +43,7 @@ public class AlexaActivity extends CoreActivity {
     private NeumorphImageButton recorderView;
     private NeumorphImageButton informationButton;
     private NeumorphButton closeDialog;
+    private NeumorphButton login;
     private boolean loggedIn = false;
     private boolean speak = false;
 
@@ -50,10 +51,22 @@ public class AlexaActivity extends CoreActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         loggedIn = checkLogin();
 
         if (!loggedIn) {
             setContentView(R.layout.activity_alexa_login);
+            login = findViewById(R.id.login);
+
+            login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    alexaManager.sendAudioRequest(requestBody, getRequestCallback());
+                }
+            });
+
+
+
         }
         else {
 
@@ -115,12 +128,13 @@ public class AlexaActivity extends CoreActivity {
     @Override
     protected void startListening() {
 
-        if(loggedIn) {
-            if (recorder == null) {
-                recorder = new RawAudioRecorder(AUDIO_RATE);
-            }
-            recorder.start();
-            alexaManager.sendAudioRequest(requestBody, getRequestCallback());
+        if (recorder == null) {
+            recorder = new RawAudioRecorder(AUDIO_RATE);
+        }
+        recorder.start();
+        alexaManager.sendAudioRequest(requestBody, getRequestCallback());
+
+        if (loggedIn) {
             listening.setVisibility(View.VISIBLE);
             speaking.setVisibility(View.GONE);
         }
@@ -158,7 +172,7 @@ public class AlexaActivity extends CoreActivity {
 
 
     private void stopListening() {
-        if(loggedIn) {
+        if (loggedIn) {
             if (recorder != null) {
                 recorder.stop();
                 recorder.release();
@@ -170,8 +184,8 @@ public class AlexaActivity extends CoreActivity {
     @Override
     public void onStop() {
         super.onStop();
-            //tear down our recorder on stop
-        if(loggedIn) {
+        //tear down our recorder on stop
+        if (loggedIn) {
             if (recorder != null) {
                 recorder.stop();
                 recorder.release();
@@ -184,7 +198,7 @@ public class AlexaActivity extends CoreActivity {
 
 
     protected void stateListening() {
-        if(loggedIn) {
+        if (loggedIn) {
             if (status != null) {
                 status.setText(R.string.status_listening);
                 loading.setVisibility(View.GONE);
@@ -196,7 +210,7 @@ public class AlexaActivity extends CoreActivity {
     }
 
     protected void stateProcessing() {
-        if(loggedIn) {
+        if (loggedIn) {
             if (status != null) {
                 status.setText(R.string.status_processing);
                 loading.setVisibility(View.VISIBLE);
@@ -207,7 +221,7 @@ public class AlexaActivity extends CoreActivity {
     }
 
     protected void stateSpeaking() {
-        if(loggedIn) {
+        if (loggedIn) {
             speak = true;
             if (status != null) {
                 status.setText(R.string.status_speaking);
@@ -220,7 +234,7 @@ public class AlexaActivity extends CoreActivity {
     }
 
     protected void statePrompting() {
-        if(loggedIn) {
+        if (loggedIn) {
             if (status != null) {
                 status.setText("");
                 loading.setVisibility(View.VISIBLE);
@@ -230,7 +244,7 @@ public class AlexaActivity extends CoreActivity {
     }
 
     protected void stateFinished() {
-        if(loggedIn) {
+        if (loggedIn) {
             if (status != null) {
                 status.setText("");
                 //statusBar.animate().alpha(0);
@@ -242,7 +256,7 @@ public class AlexaActivity extends CoreActivity {
     }
 
     protected void stateNone() {
-        if(loggedIn) {
+        if (loggedIn) {
             speaking.setVisibility(View.GONE);
             listening.setVisibility(View.GONE);
             speak = false;
@@ -278,9 +292,9 @@ public class AlexaActivity extends CoreActivity {
             @Override
             public void success(Boolean result) {
                 //if we are, return a success
-                if(result){
+                if (result) {
                     loggedIn[0] = true;
-                }else{
+                } else {
                     loggedIn[0] = false;
                 }
             }
