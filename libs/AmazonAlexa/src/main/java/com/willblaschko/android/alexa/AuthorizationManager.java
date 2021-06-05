@@ -67,19 +67,23 @@ public class AuthorizationManager {
      * @param context
      * @param callback
      */
-    public void checkLoggedIn(Context context, final AsyncCallback<Boolean, Throwable> callback){
+    public boolean checkLoggedIn(Context context, final AsyncCallback<Boolean, Throwable> callback){
+        final boolean[] flag = {false};
         TokenManager.getAccessToken(mAuthManager, context, new TokenManager.TokenCallback() {
             @Override
             public void onSuccess(String token) {
                 callback.success(true);
+                flag[0] = true;
             }
 
             @Override
             public void onFailure(Throwable e) {
                 callback.success(false);
                 callback.failure(e);
+                flag[0] = false;
             }
         });
+        return flag[0];
     }
 
     /**

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#72A8E1"
+    android:background="#fff4f1"
     android:orientation="vertical">
 
 
@@ -28,10 +28,10 @@
             android:textColor="@color/black"
             android:textSize="25sp"
             android:padding="10dp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="100sp"
-            android:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_constraint"
-        android:layout_weight="0.15">
+        android:padding="0dp">
 
         <soup.neumorphism.NeumorphButton
             android:id="@+id/close_dialog"
@@ -52,18 +52,16 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/close"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="100sp"
-            android:autoSizeStepGranularity="2sp"
-            style="@style/Widget.Neumorph.Button"
             android:fontFamily="@font/maven_pro_medium"
             android:textColor="#042234"
-            android:textSize="18sp"
-            app:neumorph_shadowColorLight="#9ac1ea"
-            app:neumorph_shadowColorDark="#5f8bba"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            style="@style/Widget.Neumorph.Button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -72,18 +70,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.05">
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>
