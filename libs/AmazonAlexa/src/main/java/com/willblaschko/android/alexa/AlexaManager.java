@@ -375,7 +375,7 @@ public class AlexaManager {
                         @Override
                         public void onSuccess() {
                             //call our function again
-                            sendAudioRequest(requestBody, callback);
+                            //sendAudioRequest(requestBody, callback);
                         }
                     });
                 }
