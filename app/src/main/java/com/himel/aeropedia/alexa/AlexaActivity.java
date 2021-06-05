@@ -43,15 +43,16 @@ public class AlexaActivity extends CoreActivity {
     private NeumorphImageButton recorderView;
     private NeumorphImageButton informationButton;
     private NeumorphButton closeDialog;
-
+    private boolean loggedIn = false;
     private boolean speak = false;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loggedIn = checkLogin();
 
-        if (!checkLogin()) {
+        if (!loggedIn) {
             setContentView(R.layout.activity_alexa_login);
         }
         else {
@@ -114,13 +115,15 @@ public class AlexaActivity extends CoreActivity {
     @Override
     protected void startListening() {
 
-        if (recorder == null) {
-            recorder = new RawAudioRecorder(AUDIO_RATE);
+        if(loggedIn) {
+            if (recorder == null) {
+                recorder = new RawAudioRecorder(AUDIO_RATE);
+            }
+            recorder.start();
+            alexaManager.sendAudioRequest(requestBody, getRequestCallback());
+            listening.setVisibility(View.VISIBLE);
+            speaking.setVisibility(View.GONE);
         }
-        recorder.start();
-        alexaManager.sendAudioRequest(requestBody, getRequestCallback());
-        listening.setVisibility(View.VISIBLE);
-        speaking.setVisibility(View.GONE);
     }
 
     private DataRequestBody requestBody = new DataRequestBody() {
@@ -155,83 +158,95 @@ public class AlexaActivity extends CoreActivity {
 
 
     private void stopListening() {
-        if (recorder != null) {
-            recorder.stop();
-            recorder.release();
-            recorder = null;
+        if(loggedIn) {
+            if (recorder != null) {
+                recorder.stop();
+                recorder.release();
+                recorder = null;
+            }
         }
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        //tear down our recorder on stop
-        if (recorder != null) {
-            recorder.stop();
-            recorder.release();
-            recorder = null;
+            //tear down our recorder on stop
+        if(loggedIn) {
+            if (recorder != null) {
+                recorder.stop();
+                recorder.release();
+                recorder = null;
+            }
+            listening.setVisibility(View.GONE);
+            speak = false;
         }
-        listening.setVisibility(View.GONE);
-        speak = false;
     }
 
 
     protected void stateListening() {
-
-        if (status != null) {
-            status.setText(R.string.status_listening);
-            loading.setVisibility(View.GONE);
-            //statusBar.animate().alpha(1);
-            speak = false;
+        if(loggedIn) {
+            if (status != null) {
+                status.setText(R.string.status_listening);
+                loading.setVisibility(View.GONE);
+                //statusBar.animate().alpha(1);
+                speak = false;
+            }
+            listening.setVisibility(View.VISIBLE);
         }
-        listening.setVisibility(View.VISIBLE);
     }
 
     protected void stateProcessing() {
-
-        if (status != null) {
-            status.setText(R.string.status_processing);
-            loading.setVisibility(View.VISIBLE);
-            //statusBar.animate().alpha(1);
+        if(loggedIn) {
+            if (status != null) {
+                status.setText(R.string.status_processing);
+                loading.setVisibility(View.VISIBLE);
+                //statusBar.animate().alpha(1);
+            }
+            speak = false;
         }
-        speak = false;
     }
 
     protected void stateSpeaking() {
-
-        speak = true;
-        if (status != null) {
-            status.setText(R.string.status_speaking);
-            loading.setVisibility(View.VISIBLE);
-            //statusBar.animate().alpha(1);
+        if(loggedIn) {
+            speak = true;
+            if (status != null) {
+                status.setText(R.string.status_speaking);
+                loading.setVisibility(View.VISIBLE);
+                //statusBar.animate().alpha(1);
+            }
+            listening.setVisibility(View.GONE);
+            speaking.setVisibility(View.VISIBLE);
         }
-        listening.setVisibility(View.GONE);
-        speaking.setVisibility(View.VISIBLE);
     }
 
     protected void statePrompting() {
-
-        if (status != null) {
-            status.setText("");
-            loading.setVisibility(View.VISIBLE);
-            //statusBar.animate().alpha(1);
+        if(loggedIn) {
+            if (status != null) {
+                status.setText("");
+                loading.setVisibility(View.VISIBLE);
+                //statusBar.animate().alpha(1);
+            }
         }
     }
 
     protected void stateFinished() {
-        if (status != null) {
-            status.setText("");
-            //statusBar.animate().alpha(0);
-            speak = false;
+        if(loggedIn) {
+            if (status != null) {
+                status.setText("");
+                //statusBar.animate().alpha(0);
+                speak = false;
+            }
+            loading.setVisibility(View.GONE);
+            speaking.setVisibility(View.GONE);
         }
-        loading.setVisibility(View.GONE);
-        speaking.setVisibility(View.GONE);
     }
 
     protected void stateNone() {
-        speaking.setVisibility(View.GONE);
-        listening.setVisibility(View.GONE);
-        speak = false;
+        if(loggedIn) {
+            speaking.setVisibility(View.GONE);
+            listening.setVisibility(View.GONE);
+            speak = false;
+        }
     }
 
     @Override
