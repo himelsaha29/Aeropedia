@@ -8,11 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.PagerAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.manufacturers.ManufacturerMenu;
 
@@ -23,6 +25,7 @@ public class Adapter extends PagerAdapter {
     private List<Model> models;
     private LayoutInflater layoutInflater;
     private Context context;
+    private CardView cards;
 
     public Adapter(List<Model> models, Context context) {
         this.models = models;
@@ -53,11 +56,31 @@ public class Adapter extends PagerAdapter {
 
         imageView.setImageResource(models.get(position).getImage());
         title.setText(models.get(position).getTitle());
+        cards = view.findViewById(R.id.viewpage_card);
+
+        cards.getBackground().setAlpha(65);
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                if (position == 0) {
+                    Intent showContent = new Intent(context, ManufacturerMenu.class);
+                    context.startActivity(showContent);
+                    ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                }
+                else if (position == 1) {
+                    Intent showContent = new Intent(context, AlexaActivity.class);
+                    context.startActivity(showContent);
+                    ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                }
+            }
+        });
+
+        cards.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
                 if (position == 0) {
                     Intent showContent = new Intent(context, ManufacturerMenu.class);
                     context.startActivity(showContent);
