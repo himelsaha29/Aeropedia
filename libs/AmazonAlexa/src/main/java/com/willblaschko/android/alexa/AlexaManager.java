@@ -2,6 +2,7 @@ package com.willblaschko.android.alexa;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -33,6 +34,7 @@ import okhttp3.Call;
 import okhttp3.Response;
 import okio.BufferedSink;
 
+import static android.content.Context.MODE_PRIVATE;
 import static com.willblaschko.android.alexa.AuthorizationManager.createCodeVerifier;
 import static com.willblaschko.android.alexa.interfaces.response.ResponseParser.getBoundary;
 import static com.willblaschko.android.alexa.utility.Util.IDENTIFIER;
@@ -383,6 +385,8 @@ public class AlexaManager {
 
         });
     }
+
+
 
     public void cancelAudioRequest() {
         //check if the user is already logged in

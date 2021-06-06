@@ -1,7 +1,10 @@
 package com.himel.aeropedia.alexa;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
@@ -15,6 +18,8 @@ import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.airbus.AirbusA350;
+import com.willblaschko.android.alexa.AlexaManager;
 import com.willblaschko.android.alexa.AuthorizationManager;
 import com.willblaschko.android.alexa.callbacks.AsyncCallback;
 import com.willblaschko.android.alexa.requestbody.DataRequestBody;
@@ -34,9 +39,8 @@ public class AlexaActivity extends CoreActivity {
     private View statusBar;
     private TextView status;
     private View loading;
-    LottieAnimationView listening;
-    LottieAnimationView speaking;
-
+    private LottieAnimationView listening;
+    private LottieAnimationView speaking;
     private final static int MY_PERMISSIONS_REQUEST_RECORD_AUDIO = 1;
     private static final int AUDIO_RATE = 16000;
     private RawAudioRecorder recorder;
@@ -69,60 +73,64 @@ public class AlexaActivity extends CoreActivity {
 
         }
         else {
+            load();
 
-            setContentView(R.layout.activity_alexa);
-            recorderView = findViewById(R.id.recorder);
-            recorderView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (speak) {
-                        AlexaActivity.super.avsQueue.clear();
-                        onStop();
-                        stateFinished();
-                        speaking.setVisibility(View.GONE);
-                        listening.setVisibility(View.GONE);
-                    } else if (recorder == null) {
-                        startListening();
-                    } else {
-                        stopListening();
-                        listening.setVisibility(View.GONE);
-                    }
-                }
-            });
-
-
-            //statusBar = findViewById(R.id.status_bar);
-            status = findViewById(R.id.status);
-            loading = findViewById(R.id.loading);
-            listening = findViewById(R.id.listening);
-            speaking = findViewById(R.id.speaking);
-            informationButton = findViewById(R.id.info);
-            closeDialog = findViewById(R.id.close_dialog);
-
-            Dialog dialog = new Dialog(AlexaActivity.this);
-            dialog.setContentView(R.layout.activity_dialog);
-            dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
-            dialog.getWindow().setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.95), ViewGroup.LayoutParams.WRAP_CONTENT);
-            dialog.setCancelable(false);
-
-            closeDialog = dialog.findViewById(R.id.close_dialog);
-
-            closeDialog.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dialog.dismiss();
-                }
-            });
-
-            informationButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dialog.show();
-                }
-            });
 
         }
 
+    }
+
+    private void load() {
+        setContentView(R.layout.activity_alexa);
+        recorderView = findViewById(R.id.recorder);
+        recorderView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (speak) {
+                    AlexaActivity.super.avsQueue.clear();
+                    onStop();
+                    stateFinished();
+                    speaking.setVisibility(View.GONE);
+                    listening.setVisibility(View.GONE);
+                } else if (recorder == null) {
+                    startListening();
+                } else {
+                    stopListening();
+                    listening.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+        //statusBar = findViewById(R.id.status_bar);
+        status = findViewById(R.id.status);
+        loading = findViewById(R.id.loading);
+        listening = findViewById(R.id.listening);
+        speaking = findViewById(R.id.speaking);
+        informationButton = findViewById(R.id.info);
+        closeDialog = findViewById(R.id.close_dialog);
+
+        Dialog dialog = new Dialog(AlexaActivity.this);
+        dialog.setContentView(R.layout.activity_dialog);
+        dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
+        dialog.getWindow().setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.95), ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
+
+        closeDialog = dialog.findViewById(R.id.close_dialog);
+
+        closeDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        informationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.show();
+            }
+        });
     }
 
     @Override
@@ -267,16 +275,34 @@ public class AlexaActivity extends CoreActivity {
     protected void onRestart() {
         super.onRestart();
 
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.RECORD_AUDIO)
-                != PackageManager.PERMISSION_GRANTED) {
-            if (!ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.RECORD_AUDIO)) {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.RECORD_AUDIO},
-                        MY_PERMISSIONS_REQUEST_RECORD_AUDIO);
+        boolean checkLogin = checkLogin();
+        System.out.println("CHECKLOGIN = " + checkLogin);
+        System.out.println("LOGGEDIN = " + loggedIn);
+
+
+        if(loggedIn != true) {
+
+            System.out.println("here =================================== ");
+
+//            Intent intent = new Intent(getBaseContext(), AlexaActivity.class);;
+//            finish();
+//            startActivity(intent);
+            load();
+            System.out.println("activity should have started ======================");
+
+
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.RECORD_AUDIO)
+                    != PackageManager.PERMISSION_GRANTED) {
+                if (!ActivityCompat.shouldShowRequestPermissionRationale(this,
+                        Manifest.permission.RECORD_AUDIO)) {
+                    ActivityCompat.requestPermissions(this,
+                            new String[]{Manifest.permission.RECORD_AUDIO},
+                            MY_PERMISSIONS_REQUEST_RECORD_AUDIO);
+                }
             }
         }
+
     }
 
     private boolean checkLogin() {
