@@ -1,168 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<com.mxn.soul.flowingdrawer_core.FlowingDrawer xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff4f1"
-    android:orientation="vertical">
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    app:edMenuBackground="#72A8E1"
+    app:edMenuSize="260dp"
+    app:edPosition="1">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.12"
-        android:id="@+id/top_constraint">
+        android:layout_height="match_parent">
 
-        <soup.neumorphism.NeumorphImageButton
-            android:id="@+id/info"
-            style="@style/Widget.Neumorph.ImageButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="top"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_information"
-            app:layout_constraintDimensionRatio="H, 1:1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/middle_constraint"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_weight="0.68"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constrainedHeight="true"
-        android:padding="5dp">
-
-
-        <soup.neumorphism.NeumorphImageButton
-            android:id="@+id/recorder"
-            style="@style/Widget.Neumorph.ImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:layout_constrainedHeight="true"
-            android:scaleType="fitCenter"
-            android:padding="10dp"
-            android:src="@drawable/ic_amazon_alexa"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:neumorph_shadowElevation="6dp"
-            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-            app:neumorph_shapeType="flat" />
-
-
-        <ProgressBar
-            android:id="@+id/loading"
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="@string/status_listening"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="@color/black"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:id="@+id/bottom_constraint">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/listening"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:scaleType="fitCenter"
-            android:visibility="gone"
-            app:layout_constraintDimensionRatio="H, 16:9"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/loading" />
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/speaking"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:scaleType="fitXY"
+            android:background="#fff4f1"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.12">
+
+                <soup.neumorphism.NeumorphImageButton
+                    android:id="@+id/info"
+                    style="@style/Widget.Neumorph.ImageButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_information"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="H, 1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/middle_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.68"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constrainedHeight="true">
+
+
+                <soup.neumorphism.NeumorphImageButton
+                    android:id="@+id/recorder"
+                    style="@style/Widget.Neumorph.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_amazon_alexa"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:neumorph_shadowElevation="6dp"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                    app:neumorph_shapeType="flat" />
+
+
+                <ProgressBar
+                    android:id="@+id/loading"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/status_listening"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bottom_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/listening"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="H, 16:9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/loading" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/speaking"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/audio" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/blurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:animateLayoutChanges="true"
             android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/audio" />
+            app:blk_blurRadius="10"
+            app:blk_downscaleFactor="0.34"
+            app:blk_fps="0" />
 
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</LinearLayout>
-
-
-    <!--<TextView
+    <!--menu-->
+    <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
+        android:id="@+id/menulayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#22ffffff"
-        android:text="@string/action_send_audio_description"
-        android:padding="@dimen/activity_horizontal_margin"/>
+        android:layout_height="match_parent">
 
-    <ProgressBar
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:id="@+id/loading"
-        android:layout_gravity="center"
-        style="?android:attr/progressBarStyleLarge"
-        android:visibility="visible"
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginStart="0dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceLarge"
-        android:id="@+id/status"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:text="@string/status_listening"/> -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
 
+            <RelativeLayout
+                android:id="@+id/inside"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:paddingTop="75dp">
+                <!--android:paddingBottom="95dp"-->
+
+
+            </RelativeLayout>
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/lang_toggle"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:text="@string/language"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:neumorph_shadowColorDark="#5f8bba"
+                app:neumorph_shadowColorLight="#9ac1ea"
+                app:neumorph_shapeType="flat" />
+
+
+            <soup.neumorphism.NeumorphImageButton
+                android:id="@+id/dark_toggle"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_bulb_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:neumorph_shadowColorDark="#5f8bba"
+                app:neumorph_shadowColorLight="#9ac1ea"
+                app:neumorph_shapeType="basin" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
+
+</com.mxn.soul.flowingdrawer_core.FlowingDrawer>
