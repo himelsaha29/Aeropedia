@@ -68,19 +68,16 @@ public class AlexaActivity extends CoreActivity {
                     alexaManager.sendAudioRequest(requestBody, getRequestCallback());
                 }
             });
-
-
-
         }
         else {
-            load();
+            loadAlexa();
 
 
         }
 
     }
 
-    private void load() {
+    private void loadAlexa() {
         setContentView(R.layout.activity_alexa);
         recorderView = findViewById(R.id.recorder);
         recorderView.setOnClickListener(new View.OnClickListener() {
@@ -275,21 +272,10 @@ public class AlexaActivity extends CoreActivity {
     protected void onRestart() {
         super.onRestart();
 
-        boolean checkLogin = checkLogin();
-        System.out.println("CHECKLOGIN = " + checkLogin);
-        System.out.println("LOGGEDIN = " + loggedIn);
-
-
         if(loggedIn != true) {
 
-            System.out.println("here =================================== ");
-
-//            Intent intent = new Intent(getBaseContext(), AlexaActivity.class);;
-//            finish();
-//            startActivity(intent);
-            load();
-            System.out.println("activity should have started ======================");
-
+            loggedIn = true;
+            loadAlexa();
 
             if (ContextCompat.checkSelfPermission(this,
                     Manifest.permission.RECORD_AUDIO)
