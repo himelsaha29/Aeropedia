@@ -1,5 +1,6 @@
 package com.himel.aeropedia.home;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -63,10 +64,12 @@ public class Adapter extends PagerAdapter {
                 if (position == 0) {
                     Intent showContent = new Intent(context, ManufacturerMenu.class);
                     context.startActivity(showContent);
+                    ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
                 else if (position == 1) {
                     Intent showContent = new Intent(context, AlexaActivity.class);
                     context.startActivity(showContent);
+                    ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
             }
         });
