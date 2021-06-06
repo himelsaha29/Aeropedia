@@ -378,16 +378,16 @@ public class AlexaActivity extends CoreActivity {
 
         TreeNode root = TreeNode.root();
         TreeNode manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Manufacturers", "No", "Manufacturers"));
-        TreeNode amazonRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.drawable.ic_amazon_alexa, "Amazon Alexa", "No", "Alexa"));
+        TreeNode amazonRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.drawable.ic_amazon_alexa, "Amazon Alexa", "HighlightDark", "Alexa"));
         TreeNode firebaseRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Firebase", "No", "firebase"));
 
 
 
         TreeNode airbus = null;
         //if (verifyDarkMode().equals("Yes")) {
-            airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "HighlightLight", "airbus"));
+            //airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "HighlightLight", "airbus"));
 //        } else {
-//            airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "HighlightDark", "airbus"));
+            airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "No", "airbus"));
 //        }
         TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a220), "No", "a220"));
         TreeNode a319Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a319), "No", "a319"));
@@ -414,8 +414,6 @@ public class AlexaActivity extends CoreActivity {
         root.addChildren(manufacturerRoot);
         root.addChildren(amazonRoot);
         root.addChildren(firebaseRoot);
-        manufacturerRoot.setExpanded(true);
-        airbus.setExpanded(true);
 
 
         tView = new AndroidTreeView(this, root);
