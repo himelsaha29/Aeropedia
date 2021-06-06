@@ -62,6 +62,7 @@ public class AlexaActivity extends CoreActivity {
     private NeumorphButton langToggle;
     private NeumorphImageButton darkToggle;
     private String enableDark;
+    private String enableDarkOnCreate;
     private Locale locale;
 
     @Override
@@ -74,7 +75,7 @@ public class AlexaActivity extends CoreActivity {
 
             loadLocale();
             locale = Locale.getDefault();
-            verifyDarkMode();
+            enableDarkOnCreate = verifyDarkMode();
             if(enableDark.equals("No")) {
                 setContentView(R.layout.activity_alexa_login_light);
             } else {
@@ -105,7 +106,7 @@ public class AlexaActivity extends CoreActivity {
     private void loadAlexa() {
         loadLocale();
         locale = Locale.getDefault();
-        verifyDarkMode();
+        enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_alexa_light);
         } else {
@@ -354,7 +355,7 @@ public class AlexaActivity extends CoreActivity {
             }
         }
 
-        if(!enableDark.equals(verifyDarkMode()) && !locale.equals(Locale.getDefault())) {
+        if(!enableDarkOnCreate.equals(verifyDarkMode()) && !locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
@@ -365,7 +366,7 @@ public class AlexaActivity extends CoreActivity {
             finish();
             startActivity(intent);
         }
-        else if (!enableDark.equals(verifyDarkMode())) {
+        else if (!enableDarkOnCreate.equals(verifyDarkMode())) {
             Intent intent = getIntent();
             finish();
             startActivity(intent);

@@ -54,6 +54,7 @@ public class ManufacturerMenu extends AppCompatActivity {
     private NeumorphButton langToggle;
     private NeumorphImageButton darkToggle;
     private String enableDark;
+    private String enableDarkOnCreate;
     private FlowingDrawer mDrawer;
     private FlowingMenuLayout flowingMenuLayout;
     private BlurLayout blur;
@@ -66,7 +67,7 @@ public class ManufacturerMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         loadLocale();
         locale = Locale.getDefault();
-        verifyDarkMode();
+        enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_manufacturer_menu_light);
         } else {
@@ -217,7 +218,7 @@ public class ManufacturerMenu extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
 
-        if(!enableDark.equals(verifyDarkMode()) && !locale.equals(Locale.getDefault())) {
+        if(!enableDarkOnCreate.equals(verifyDarkMode()) && !locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
@@ -228,7 +229,7 @@ public class ManufacturerMenu extends AppCompatActivity {
             finish();
             startActivity(intent);
         }
-        else if (!enableDark.equals(verifyDarkMode())) {
+        else if (!enableDarkOnCreate.equals(verifyDarkMode())) {
             Intent intent = getIntent();
             finish();
             startActivity(intent);

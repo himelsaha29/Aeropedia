@@ -33,6 +33,7 @@ public class AirbusA350 extends AppCompatActivity {
     private Locale locale;
     private NeumorphImageButton darkToggle;
     private String enableDark;
+    private String enableDarkOnCreate;
     private FlowingDrawer mDrawer;
     private BlurLayout blur;
     private AndroidTreeView tView;
@@ -42,7 +43,7 @@ public class AirbusA350 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         loadLocale();
         locale = Locale.getDefault();
-        verifyDarkMode();
+        enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_airbus_a350_light);
         } else {
@@ -130,7 +131,7 @@ public class AirbusA350 extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
 
-        if(!enableDark.equals(verifyDarkMode()) && !locale.equals(Locale.getDefault())) {
+        if(!enableDarkOnCreate.equals(verifyDarkMode()) && !locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
@@ -141,7 +142,7 @@ public class AirbusA350 extends AppCompatActivity {
             finish();
             startActivity(intent);
         }
-        else if (!enableDark.equals(verifyDarkMode())) {
+        else if (!enableDarkOnCreate.equals(verifyDarkMode())) {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
