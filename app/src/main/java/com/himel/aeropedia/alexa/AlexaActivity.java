@@ -1,8 +1,12 @@
 package com.himel.aeropedia.alexa;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -26,6 +30,7 @@ import com.willblaschko.android.alexa.callbacks.AsyncCallback;
 import com.willblaschko.android.alexa.requestbody.DataRequestBody;
 
 import java.io.IOException;
+import java.util.Locale;
 
 import ee.ioc.phon.android.speechutils.AudioRecorder;
 import ee.ioc.phon.android.speechutils.RawAudioRecorder;
@@ -33,11 +38,11 @@ import io.alterac.blurkit.BlurLayout;
 import okio.BufferedSink;
 import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphImageButton;
+import soup.neumorphism.ShapeType;
 
 
 public class AlexaActivity extends CoreActivity {
 
-    private View statusBar;
     private TextView status;
     private View loading;
     private LottieAnimationView listening;
@@ -54,7 +59,10 @@ public class AlexaActivity extends CoreActivity {
     private FlowingDrawer mDrawer;
     private BlurLayout blur;
     private AndroidTreeView tView;
-
+    private NeumorphButton langToggle;
+    private NeumorphImageButton darkToggle;
+    private String enableDark;
+    private Locale locale;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -63,7 +71,16 @@ public class AlexaActivity extends CoreActivity {
         loggedIn = checkLogin();
 
         if (!loggedIn) {
-            setContentView(R.layout.activity_alexa_login_light);
+
+            loadLocale();
+            locale = Locale.getDefault();
+            verifyDarkMode();
+            if(enableDark.equals("No")) {
+                setContentView(R.layout.activity_alexa_login_light);
+            } else {
+                setContentView(R.layout.activity_alexa_login_dark);
+            }
+
             login = findViewById(R.id.login);
 
             login.setOnClickListener(new View.OnClickListener() {
@@ -72,10 +89,12 @@ public class AlexaActivity extends CoreActivity {
                     alexaManager.sendAudioRequest(requestBody, getRequestCallback());
                 }
             });
+            languageDarkToggle();
             loadDrawer();
         }
         else {
             loadAlexa();
+            languageDarkToggle();
             loadDrawer();
         }
 
@@ -84,7 +103,15 @@ public class AlexaActivity extends CoreActivity {
     }
 
     private void loadAlexa() {
-        setContentView(R.layout.activity_alexa_light);
+        loadLocale();
+        locale = Locale.getDefault();
+        verifyDarkMode();
+        if(enableDark.equals("No")) {
+            setContentView(R.layout.activity_alexa_light);
+        } else {
+            setContentView(R.layout.activity_alexa_dark);
+        }
+
         recorderView = findViewById(R.id.recorder);
         recorderView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -307,10 +334,12 @@ public class AlexaActivity extends CoreActivity {
     protected void onRestart() {
         super.onRestart();
 
+        checkLogin();
         if(loggedIn != true) {
 
             loggedIn = true;
             loadAlexa();
+            languageDarkToggle();
             loadDrawer();
 
             if (ContextCompat.checkSelfPermission(this,
@@ -325,10 +354,28 @@ public class AlexaActivity extends CoreActivity {
             }
         }
 
+        if(!enableDark.equals(verifyDarkMode()) && !locale.equals(Locale.getDefault())) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+            createTreeView();
+        }
+        else if (!locale.equals(Locale.getDefault())) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+        else if (!enableDark.equals(verifyDarkMode())) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+            createTreeView();
+        }
+
     }
 
     private boolean checkLogin() {
-        final boolean[] loggedIn = {false};
+        boolean[] loggedIn = {false};
         AuthorizationManager authManager = new AuthorizationManager(this, Global.PRODUCT_ID);
 
         authManager.checkLoggedIn(this, new AsyncCallback<Boolean, Throwable>() {
@@ -358,7 +405,7 @@ public class AlexaActivity extends CoreActivity {
             }
         });
 
-        System.out.println(loggedIn[0]);
+        System.out.println("logged in method ======= " + loggedIn[0]);
         return loggedIn[0];
 
     }
@@ -427,5 +474,117 @@ public class AlexaActivity extends CoreActivity {
     }
 
     /** TreeView **/
+
+
+    private void languageDarkToggle() {
+
+        darkToggle = findViewById(R.id.dark_toggle);
+        langToggle = findViewById(R.id.lang_toggle);
+        // setting NeumorphismButton shape based on state
+        if (locale.toString().contains("en")) {
+            langToggle.setShapeType(ShapeType.FLAT);
+        } else if (locale.toString().contains("fr")) {
+            langToggle.setShapeType(ShapeType.BASIN);
+        }
+
+        langToggle.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(getResources().getConfiguration().locale.toString().contains("fr")) {
+                    setLocale("en");
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                } else if (getResources().getConfiguration().toString().contains("en")) {
+                    setLocale("fr");
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }
+            }
+        });
+
+        darkToggle.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+                if (prefs.getString("DarkMode", "").equals("Yes")) {
+                    toggleDark("No");
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                } else if (prefs.getString("DarkMode", "").equals("No")) {
+                    toggleDark("Yes");
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }
+
+            }
+        });
+    }
+
+    /** Changing app language **/
+
+    private void setLocale(String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("Language", language);
+        editor.apply();
+    }
+
+    private void loadLocale() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2)).equals("")) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+            editor.apply();
+        }
+        String language = prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+        setLocale(language);
+    }
+
+    /** Changing app language **/
+
+    /** Dark mode **/
+
+    private void toggleDark(String darkEnabled) {
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("DarkMode", darkEnabled);
+        editor.apply();
+    }
+
+    private String verifyDarkMode() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("DarkMode", "").equals("")) {
+
+            SharedPreferences.Editor editor = prefs.edit();
+            int currentNightMode = getResources().getConfiguration().uiMode
+                    & Configuration.UI_MODE_NIGHT_MASK;
+
+            switch (currentNightMode) {
+                case Configuration.UI_MODE_NIGHT_NO:
+                    editor.putString("DarkMode", "No");
+                    editor.apply();
+                    break;
+                default:
+                    editor.putString("DarkMode", "Yes");
+                    editor.apply();
+                    break;
+
+            }
+        }
+        enableDark = prefs.getString("DarkMode", "Yes");
+
+        return enableDark;
+    }
+
+    /** Dark mode **/
 
 }
