@@ -9,12 +9,12 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
+        app:cardCornerRadius="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_margin="8dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="300dp">
 
             <ImageView
                 android:id="@+id/image"
@@ -25,29 +25,17 @@
 
             <TextView
                 android:id="@+id/title"
-                android:textColor="#262626"
+                android:textColor="@android:color/white"
                 android:layout_below="@id/image"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="16dp"
                 android:text="@string/a350"
                 android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/desc"
-                android:layout_below="@id/title"
-                android:layout_marginTop="3dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:maxLines="3"
-                android:drawablePadding="10dp"
-                android:ellipsize="end"
-                android:text="A350 Description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </RelativeLayout>
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/maven_pro_medium"
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
 
     </androidx.cardview.widget.CardView>

@@ -4,12 +4,10 @@ public class Model {
 
     private int image;
     private String title;
-    private String desc;
 
-    public Model(int image, String title, String desc) {
+    public Model(int image, String title) {
         this.image = image;
         this.title = title;
-        this.desc = desc;
     }
 
     public int getImage() {
@@ -28,11 +26,4 @@ public class Model {
         this.title = title;
     }
 
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
 }

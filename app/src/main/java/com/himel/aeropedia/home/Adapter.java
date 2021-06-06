@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.AlexaActivity;
-import com.himel.aeropedia.manufacturers.Airbus;
 import com.himel.aeropedia.manufacturers.ManufacturerMenu;
 
 import java.util.List;
@@ -44,18 +43,16 @@ public class Adapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, final int position) {
         layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.item, container, false);
+        View view = layoutInflater.inflate(R.layout.viewpager_items, container, false);
 
         ImageView imageView;
         TextView title, desc;
 
         imageView = view.findViewById(R.id.image);
         title = view.findViewById(R.id.title);
-        desc = view.findViewById(R.id.desc);
 
         imageView.setImageResource(models.get(position).getImage());
         title.setText(models.get(position).getTitle());
-        desc.setText(models.get(position).getDesc());
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override

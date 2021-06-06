@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         models = new ArrayList<Model>();
-        models.add(new Model(R.drawable.a350_cover, "Airbus", "Airbus family"));
-        models.add(new Model(R.drawable.a380_cover, "Amazon Alexa", "Smart voice assistant"));
-        models.add(new Model(R.drawable.bombardier_cover, "BOMBARDIER", "BOMBARDIER"));
-        models.add(new Model(R.drawable.boeing_cover, "BOEING", "787"));
+        models.add(new Model(R.drawable.a350_cover, "Aviation"));
+        models.add(new Model(R.drawable.a380_cover, "Amazon Alexa"));
+        models.add(new Model(R.drawable.bombardier_cover, "BOMBARDIER"));
+        models.add(new Model(R.drawable.boeing_cover, "BOEING"));
 
         adapter = new Adapter(models, this);
 
