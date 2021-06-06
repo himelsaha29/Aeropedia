@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mxn.soul.flowingdrawer_core.FlowingDrawer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    app:edMenuBackground="#72A8E1"
+    app:edMenuSize="260dp"
+    app:edPosition="1">
+
+    <!--content-->
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#042234">
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/login"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/maven_pro_medium"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#fff4f1"
+                android:textSize="25sp"
+                app:neumorph_shadowColorLight="#39343e"
+                app:neumorph_shadowColorDark="#241d2d"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/blurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            app:blk_blurRadius="10"
+            app:blk_downscaleFactor="0.34"
+            app:blk_fps="0" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--menu-->
+    <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
+        android:id="@+id/menulayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp">
+
+            <RelativeLayout
+                android:id="@+id/inside"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:paddingTop="75dp">
+                <!--android:paddingBottom="95dp"-->
+
+
+            </RelativeLayout>
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/lang_toggle"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:text="@string/language"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:neumorph_shadowColorDark="#5f8bba"
+                app:neumorph_shadowColorLight="#9ac1ea"
+                app:neumorph_shapeType="flat" />
+
+
+            <soup.neumorphism.NeumorphImageButton
+                android:id="@+id/dark_toggle"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_bulb_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:neumorph_shadowColorDark="#5f8bba"
+                app:neumorph_shadowColorLight="#9ac1ea"
+                app:neumorph_shapeType="basin" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
+
+</com.mxn.soul.flowingdrawer_core.FlowingDrawer>

@@ -1,10 +1,7 @@
 package com.himel.aeropedia.alexa;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.Dialog;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
@@ -19,13 +16,11 @@ import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.himel.aeropedia.R;
-import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
-import com.willblaschko.android.alexa.AlexaManager;
 import com.willblaschko.android.alexa.AuthorizationManager;
 import com.willblaschko.android.alexa.callbacks.AsyncCallback;
 import com.willblaschko.android.alexa.requestbody.DataRequestBody;
@@ -68,7 +63,7 @@ public class AlexaActivity extends CoreActivity {
         loggedIn = checkLogin();
 
         if (!loggedIn) {
-            setContentView(R.layout.activity_alexa_login);
+            setContentView(R.layout.activity_alexa_login_light);
             login = findViewById(R.id.login);
 
             login.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +84,7 @@ public class AlexaActivity extends CoreActivity {
     }
 
     private void loadAlexa() {
-        setContentView(R.layout.activity_alexa);
+        setContentView(R.layout.activity_alexa_light);
         recorderView = findViewById(R.id.recorder);
         recorderView.setOnClickListener(new View.OnClickListener() {
             @Override
