@@ -151,7 +151,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:lottie_autoPlay="true"
                     app:lottie_loop="true"
-                    app:lottie_rawRes="@raw/audio" />
+                    app:lottie_rawRes="@raw/matrix" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
