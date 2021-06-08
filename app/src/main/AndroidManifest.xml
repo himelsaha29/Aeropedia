@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.himel.aeropedia">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,10 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".alexa.AlexaActivity"/>
-        <activity android:name=".treeview.TreeView"/>
-        <activity android:name=".manufacturers.ManufacturerMenu"/>
-        <activity android:name=".airbus.AirbusA350"/>
+        <activity android:name=".Demo"></activity>
+        <activity android:name=".alexa.AlexaActivity" />
+        <activity android:name=".treeview.TreeView" />
+        <activity android:name=".manufacturers.ManufacturerMenu" />
+        <activity android:name=".airbus.AirbusA350" />
         <activity android:name=".manufacturers.Airbus" />
         <activity android:name=".home.MainActivity">
             <intent-filter>
@@ -24,33 +25,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".alexa.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
-                    android:scheme="https"
                     android:host="www.amazon.com"
-                    android:pathPattern="/ap/oa"/>
+                    android:pathPattern="/ap/oa"
+                    android:scheme="https" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.amazon.identity.auth.device.workflow.WorkflowActivity"
-            android:theme="@android:style/Theme.NoDisplay"
+        <activity
+            android:name="com.amazon.identity.auth.device.workflow.WorkflowActivity"
             android:allowTaskReparenting="true"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
                 <!-- android:host must use the full package name found in Manifest General Attributes -->
-                <data android:host="${applicationId}" android:scheme="amzn"/>
+                <data
+                    android:host="${applicationId}"
+                    android:scheme="amzn" />
             </intent-filter>
         </activity>
-
-
 
         <meta-data
             android:name="preloaded_fonts"

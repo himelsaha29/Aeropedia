@@ -456,9 +456,6 @@
     <string name="ic_work">&#xe1b0;</string>
 
 
-
-
-
     <string name="status_listening">LISTENING…</string>
     <string name="status_processing">PROCESSING…</string>
     <string name="status_speaking">SPEAKING…</string>
