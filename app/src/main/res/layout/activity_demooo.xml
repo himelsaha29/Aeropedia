@@ -6,8 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".Demo">
 
-    <fragment
+
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        app:mapbox_cameraTargetLat="45.508888"
+        app:mapbox_cameraTargetLng="-73.561668"
+        app:mapbox_cameraZoom="11"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
