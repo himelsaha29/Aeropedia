@@ -10,9 +10,9 @@
         android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        mapbox:mapbox_cameraTargetLat="22.75"
-        mapbox:mapbox_cameraTargetLng="80.52"
-        mapbox:mapbox_cameraZoom="3.05" />
+        mapbox:mapbox_cameraTargetLat="45.508888"
+        mapbox:mapbox_cameraTargetLng="-73.561668"
+        mapbox:mapbox_cameraZoom="11" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -27,7 +27,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@android:color/holo_green_light"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:visibility="gone"/>
 
     </androidx.cardview.widget.CardView>
 

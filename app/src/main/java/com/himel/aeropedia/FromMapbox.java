@@ -12,6 +12,8 @@ import com.mapbox.geojson.Feature;
 import com.mapbox.geojson.FeatureCollection;
 import com.mapbox.geojson.Point;
 import com.mapbox.mapboxsdk.Mapbox;
+import com.mapbox.mapboxsdk.annotations.Icon;
+import com.mapbox.mapboxsdk.annotations.IconFactory;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapView;
@@ -19,16 +21,23 @@ import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 import com.mapbox.mapboxsdk.maps.Style;
 import com.mapbox.mapboxsdk.style.layers.Property;
+import com.mapbox.mapboxsdk.style.layers.PropertyFactory;
 import com.mapbox.mapboxsdk.style.layers.SymbolLayer;
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
 import com.mapbox.mapboxsdk.utils.BitmapUtils;
 
+import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
+
+import org.opensky.api.OpenSkyApi;
+import org.opensky.model.OpenSkyStates;
+import org.opensky.model.StateVector;
 
 import static com.mapbox.mapboxsdk.style.expressions.Expression.get;
 import static com.mapbox.mapboxsdk.style.expressions.Expression.literal;
@@ -52,10 +61,21 @@ public class FromMapbox extends AppCompatActivity implements
     private static final String ICON_PROPERTY = "ICON_PROPERTY";
     private MapView mapView;
     private MapboxMap mapboxMap;
+    private List<StateVector> sv = new ArrayList<>();
+
+    private LatLng currentPosition = new LatLng(45.508888, -73.561668);
+    private GeoJsonSource geoJsonSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getCoordinates();
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e ){
+            System.out.println("PAUSED");
+        }
+        System.out.println("PAUSED FINISHED");
 
         // Mapbox access token is configured here. This needs to be called either in your application
         // object or in the same activity which contains the mapview.
@@ -71,43 +91,28 @@ public class FromMapbox extends AppCompatActivity implements
 
     @Override
     public void onMapReady(@NonNull final MapboxMap mapboxMap) {
-        MarkerOptions options = new MarkerOptions();
-        options.position(new LatLng(19.05822387777432, 72.88055419921875));
-        mapboxMap.addMarker(options);
-        mapboxMap.setStyle(new Style.Builder().fromUri("mapbox://styles/mapbox/cj44mfrt20f082snokim4ungi")
-
-                // Add the SymbolLayer icon image to the map style
 
 
-                .withImage(RED_ICON_ID, BitmapUtils.getBitmapFromDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.marker, null)))
-
-                .withImage(YELLOW_ICON_ID, BitmapUtils.getBitmapFromDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.marker, null)))
-
-                // Adding a GeoJson source for the SymbolLayer icons.
-                .withSource(new GeoJsonSource(SOURCE_ID,
-                        FeatureCollection.fromFeatures(initCoordinateData())))
-
-                // Adding the actual SymbolLayer to the map style. The match expression will check the
-                // ICON_PROPERTY property key and then use the partner value for the actual icon id.
-                .withLayer(new SymbolLayer(LAYER_ID, SOURCE_ID)
-                        .withProperties(iconImage(match(
-                                get(ICON_PROPERTY), literal(RED_ICON_ID),
-                                stop(YELLOW_ICON_ID, YELLOW_ICON_ID),
-                                stop(RED_ICON_ID, RED_ICON_ID))),
-                                iconAllowOverlap(true),
-                                iconAnchor(Property.ICON_ANCHOR_BOTTOM))
-                ), new Style.OnStyleLoaded() {
+        mapboxMap.setStyle(Style.MAPBOX_STREETS, new Style.OnStyleLoaded() {
             @Override
             public void onStyleLoaded(@NonNull Style style) {
 
-                // Map is set up and the style has loaded. Now you can add additional data or make other map adjustments.
+                style.addImage(("marker_icon"), BitmapUtils.getBitmapFromDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.marker, null)));
+                geoJsonSource = new GeoJsonSource("source-id",
+                        FeatureCollection.fromFeatures(initCoordinateData()));
+                style.addSource(geoJsonSource);
 
-                FromMapbox.this.mapboxMap = mapboxMap;
+                style.addLayer(new SymbolLayer("layer-id", "source-id")
+                        .withProperties(
+                                PropertyFactory.iconImage("marker_icon"),
+                                PropertyFactory.iconIgnorePlacement(true),
+                                PropertyFactory.iconAllowOverlap(true)
+                        ));
 
-                mapboxMap.addOnMapClickListener(FromMapbox.this);
 
-                Toast.makeText(FromMapbox.this, "instruction",
-                        Toast.LENGTH_SHORT).show();
+                System.out.println(sv.size() + " SV SIZE");
+
+
             }
         });
     }
@@ -163,11 +168,23 @@ public class FromMapbox extends AppCompatActivity implements
                         12.988500396985364));
 
         List<Feature> symbolLayerIconFeatureList = new ArrayList<>();
-        symbolLayerIconFeatureList.add(singleFeatureOne);
-        symbolLayerIconFeatureList.add(singleFeatureTwo);
-        symbolLayerIconFeatureList.add(singleFeatureThree);
-        symbolLayerIconFeatureList.add(singleFeatureFour);
-        symbolLayerIconFeatureList.add(singleFeatureFive);
+
+
+        for (StateVector s : sv) {
+            System.out.println("SV =  " + s.getLatitude());
+            double latitude = 0.0;
+            double longitude = 0.0;
+            try {
+                latitude = s.getLatitude();
+                longitude = s.getLongitude();
+            } catch (Exception e) {
+                System.out.println("CAUGHT");
+            }
+            System.out.println("PRINTS = " + latitude + " " + longitude);
+            symbolLayerIconFeatureList.add(Feature.fromGeometry(Point.fromLngLat(longitude, latitude)));
+        }
+
+
         return symbolLayerIconFeatureList;
     }
 
@@ -214,5 +231,40 @@ public class FromMapbox extends AppCompatActivity implements
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         mapView.onSaveInstanceState(outState);
+    }
+
+
+    private void getCoordinates() {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try  {
+                    OpenSkyStates states = null;
+                    OpenSkyApi api = null;
+                    OpenSkyStates os = null;
+                    try {
+                        //states = new OpenSkyApi().getStates(0, new String[1]);
+                        api = new OpenSkyApi("Saha", "opensky");
+                        os = api.getStates(0, null);
+                    } catch (IOException e) {
+                        System.out.println(e);
+                    }
+                    //System.out.println("Number of states: " + states.getStates().size());
+                    System.out.println(os.getStates().size());
+                    for(StateVector s : os.getStates()) {
+                        sv.add(s);
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("EXCEPTION");
+                }
+            }
+
+        });
+
+
+
+        thread.start();
     }
 }
