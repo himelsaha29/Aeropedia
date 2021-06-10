@@ -13,8 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".DemoMap"></activity>
-        <activity android:name=".Demo"></activity>
+        <activity android:name=".FromMapbox"></activity>
+        <activity android:name=".DemoMap" />
+        <activity android:name=".Demo" />
         <activity android:name=".alexa.AlexaActivity" />
         <activity android:name=".treeview.TreeView" />
         <activity android:name=".manufacturers.ManufacturerMenu" />

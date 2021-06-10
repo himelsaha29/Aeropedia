@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.himel.aeropedia.Demo;
 import com.himel.aeropedia.DemoMap;
+import com.himel.aeropedia.FromMapbox;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
@@ -132,7 +133,7 @@ public class ManufacturerMenu extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent showContent = new Intent(getApplicationContext(), DemoMap.class);
+                Intent showContent = new Intent(getApplicationContext(), FromMapbox.class);
                 startActivity(showContent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
