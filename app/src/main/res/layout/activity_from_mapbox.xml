@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         mapbox:mapbox_cameraTargetLat="45.508888"
         mapbox:mapbox_cameraTargetLng="-73.561668"
-        mapbox:mapbox_cameraZoom="11" />
+        mapbox:mapbox_cameraZoom="3" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
