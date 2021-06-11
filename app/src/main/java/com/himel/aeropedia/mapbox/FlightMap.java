@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PointF;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -64,20 +65,12 @@ public class FlightMap extends AppCompatActivity implements
     private MapboxMap mapboxMap;
     private List<StateVector> sv = new ArrayList<>();
 
-    private LatLng currentPosition = new LatLng(45.508888, -73.561668);
     private GeoJsonSource geoJsonSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getCoordinates();
-        try {
-            Thread.sleep(3000);
-        } catch (Exception e ){
-            System.out.println("PAUSED");
-        }
-        System.out.println("PAUSED FINISHED");
-
         // Mapbox access token is configured here. This needs to be called either in your application
         // object or in the same activity which contains the mapview.
         Mapbox.getInstance(this, getString(R.string.mapbox_access_token));
@@ -86,6 +79,12 @@ public class FlightMap extends AppCompatActivity implements
         setContentView(R.layout.activity_from_mapbox);
 
         mapView = findViewById(R.id.mapView);
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e ){
+            System.out.println("PAUSED");
+        }
+        System.out.println("PAUSED FINISHED");
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
     }
@@ -133,7 +132,7 @@ public class FlightMap extends AppCompatActivity implements
         if (!features.isEmpty()) {
             // Show the Feature in the TextView to show that the icon is based on the ICON_PROPERTY key/value
             TextView featureInfoTextView = findViewById(R.id.feature_info);
-            featureInfoTextView.setText(features.get(0).toJson());
+            //featureInfoTextView.setText(features.get(0).toJson());
             return true;
         } else {
             return false;
@@ -141,33 +140,6 @@ public class FlightMap extends AppCompatActivity implements
     }
 
     private List<Feature> initCoordinateData() {
-        Feature singleFeatureOne = Feature.fromGeometry(
-                Point.fromLngLat(72.88055419921875,
-                        19.05822387777432));
-        singleFeatureOne.addStringProperty(ICON_PROPERTY, RED_ICON_ID);
-
-        Feature singleFeatureTwo = Feature.fromGeometry(
-                Point.fromLngLat(77.22015380859375,
-                        28.549544699103865));
-
-        singleFeatureTwo.addStringProperty(ICON_PROPERTY, YELLOW_ICON_ID);
-
-        Feature singleFeatureThree = Feature.fromGeometry(
-                Point.fromLngLat(88.36647033691406,
-                        22.52016858599439));
-
-        singleFeatureThree.addStringProperty(ICON_PROPERTY, RED_ICON_ID);
-
-        // Not adding a ICON_PROPERTY property to fourth and fifth features in order to show off the default
-        // nature of the match expression used in the example up above
-        Feature singleFeatureFour = Feature.fromGeometry(
-                Point.fromLngLat(78.42315673828125,
-                        17.43320034474222));
-
-        Feature singleFeatureFive = Feature.fromGeometry(
-                Point.fromLngLat(80.16448974609375,
-                        12.988500396985364));
-
         List<Feature> symbolLayerIconFeatureList = new ArrayList<>();
 
 
@@ -175,13 +147,15 @@ public class FlightMap extends AppCompatActivity implements
             System.out.println("SV =  " + s.getLatitude());
             double latitude = 0.0;
             double longitude = 0.0;
+            String x = null;
             try {
                 latitude = s.getLatitude();
                 longitude = s.getLongitude();
+                x = s.toString();
             } catch (Exception e) {
-                System.out.println("CAUGHT");
+                System.out.println("CAUGHT : " + e.getMessage());
             }
-            System.out.println("PRINTS = " + latitude + " " + longitude);
+            System.out.println("PRINTS = " + x);
             symbolLayerIconFeatureList.add(Feature.fromGeometry(Point.fromLngLat(longitude, latitude)));
         }
 
@@ -240,7 +214,6 @@ public class FlightMap extends AppCompatActivity implements
             @Override
             public void run() {
                 try  {
-                    OpenSkyStates states = null;
                     OpenSkyApi api = null;
                     OpenSkyStates os = null;
                     try {
