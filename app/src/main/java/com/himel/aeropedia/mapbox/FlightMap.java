@@ -93,14 +93,7 @@ public class FlightMap extends AppCompatActivity implements
         setContentView(R.layout.activity_from_mapbox);
 
         mapView = findViewById(R.id.mapView);
-        try {
-            Thread.sleep(3000);
-        } catch (Exception e ){
-            System.out.println("PAUSED");
-        }
-        System.out.println("PAUSED FINISHED");
         mapView.onCreate(savedInstanceState);
-        //mapView.getMapAsync(this);
     }
 
     @Override
@@ -288,7 +281,7 @@ public class FlightMap extends AppCompatActivity implements
                                 System.out.println("SV size after filling = " + sv.size());
                                 System.out.println(jsonArray.length());
                                 System.out.println("jsonARRAY CONTENT : " + jsonArray.getJSONArray(0));
-                                initCoordinateData();
+                                //initCoordinateData();
                             } catch (JSONException e) {
                                 System.out.println("JSONARRAY EXCEPTION: === " + e.getMessage());
                                 e.printStackTrace();
