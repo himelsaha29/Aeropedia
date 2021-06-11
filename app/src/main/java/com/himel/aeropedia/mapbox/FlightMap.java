@@ -77,7 +77,7 @@ public class FlightMap extends AppCompatActivity implements
 
     private MapView mapView;
     private MapboxMap mapboxMap;
-    private List<StateVector> sv = new ArrayList<>();
+    private List<JSONArray> sv = new ArrayList<>();
 
     private GeoJsonSource geoJsonSource;
 
@@ -100,7 +100,7 @@ public class FlightMap extends AppCompatActivity implements
         }
         System.out.println("PAUSED FINISHED");
         mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(this);
+        //mapView.getMapAsync(this);
     }
 
     @Override
@@ -157,16 +157,22 @@ public class FlightMap extends AppCompatActivity implements
         List<Feature> symbolLayerIconFeatureList = new ArrayList<>();
 
 
-        for (StateVector s : sv) {
-            System.out.println("SV =  " + s.getLatitude());
+        for (int i = 0; i < sv.size(); i++) {
+            try {
+                System.out.println("SV =  " + sv.get(i).get(2));
+            } catch (JSONException e){
+                e.printStackTrace();
+            }
             double latitude = 0.0;
             double longitude = 0.0;
             String x = null;
             try {
-                latitude = s.getLatitude();
-                longitude = s.getLongitude();
-                x = s.toString();
-            } catch (Exception e) {
+                System.out.println("LONGITUDE === " + sv.get(i).get(6));
+
+                latitude = (double) sv.get(i).getDouble(6);
+                longitude = (double) sv.get(i).getDouble(5);
+//                x = s.toString();
+            } catch (JSONException e) {
                 System.out.println("CAUGHT : " + e.getMessage());
             }
             //System.out.println("PRINTS = " + x);
@@ -239,9 +245,9 @@ public class FlightMap extends AppCompatActivity implements
                     }
                     System.out.println("Number of states: " + os.getStates().size());
                     System.out.println(os.getStates().size());
-                    for(StateVector s : os.getStates()) {
-                        sv.add(s);
-                    }
+//                    for(StateVector s : os.getStates()) {
+//                        sv.add(s);
+//                    }
 
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -262,8 +268,9 @@ public class FlightMap extends AppCompatActivity implements
                 client.newCall(request).enqueue(new Callback() {
                     @Override
                     public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                        //mapView.getMapAsync(FlightMap.this);
                         e.printStackTrace();
-                        System.out.println("OKHTTP : EXCEPTION");
+                        System.out.println("OKHTTP : FAILED");
                     }
 
                     @Override
@@ -274,13 +281,19 @@ public class FlightMap extends AppCompatActivity implements
                                 JSONObject jsonObject = new JSONObject(responseData);
                                 System.out.println(jsonObject);
                                 JSONArray jsonArray = jsonObject.getJSONArray("states");
+                                for (int i = 0; i < jsonArray.length(); i++) {
+                                    sv.add(jsonArray.getJSONArray(i));
+                                }
+                                System.out.println((jsonArray.get(0)).getClass());
+                                System.out.println("SV size after filling = " + sv.size());
                                 System.out.println(jsonArray.length());
-                                System.out.println("jsonARRAY CONTENT : " + jsonArray.toString());
+                                System.out.println("jsonARRAY CONTENT : " + jsonArray.getJSONArray(0));
+                                initCoordinateData();
                             } catch (JSONException e) {
                                 System.out.println("JSONARRAY EXCEPTION: === " + e.getMessage());
                                 e.printStackTrace();
                             }
-                            System.out.println(" RESPONSE : === " + response.body());
+                            //mapView.getMapAsync(FlightMap.this);
                         }
                     }
                 });
