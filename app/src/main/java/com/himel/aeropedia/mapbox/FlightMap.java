@@ -1,4 +1,4 @@
-package com.himel.aeropedia;
+package com.himel.aeropedia.mapbox;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.alexa.Global;
 import com.mapbox.geojson.Feature;
 import com.mapbox.geojson.FeatureCollection;
 import com.mapbox.geojson.Point;
@@ -51,7 +52,7 @@ import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.iconImage;
  * Display {@link SymbolLayer} icons on the map and determine the appropriate icon
  * based on a property in each {@link Feature}.
  */
-public class FromMapbox extends AppCompatActivity implements
+public class FlightMap extends AppCompatActivity implements
         OnMapReadyCallback, MapboxMap.OnMapClickListener {
 
     private static final String SOURCE_ID = "SOURCE_ID";
@@ -244,7 +245,7 @@ public class FromMapbox extends AppCompatActivity implements
                     OpenSkyStates os = null;
                     try {
                         //states = new OpenSkyApi().getStates(0, new String[1]);
-                        api = new OpenSkyApi("Saha", "opensky");
+                        api = new OpenSkyApi(Global.username, Global.password);
                         os = api.getStates(0, null);
                     } catch (IOException e) {
                         System.out.println(e);
