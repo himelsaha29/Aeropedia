@@ -61,6 +61,9 @@ public class FlightMap extends AppCompatActivity implements
     private static final String YELLOW_ICON_ID = "YELLOW_ICON_ID";
     private static final String LAYER_ID = "LAYER_ID";
     private static final String ICON_PROPERTY = "ICON_PROPERTY";
+
+    private static final String BASE_URL = "https://opensky-network.org/api";
+
     private MapView mapView;
     private MapboxMap mapboxMap;
     private List<StateVector> sv = new ArrayList<>();
