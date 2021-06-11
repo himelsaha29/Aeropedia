@@ -293,7 +293,13 @@ public class FlightMap extends AppCompatActivity implements
                                 System.out.println("JSONARRAY EXCEPTION: === " + e.getMessage());
                                 e.printStackTrace();
                             }
-                            //mapView.getMapAsync(FlightMap.this);
+
+                            FlightMap.this.runOnUiThread(new Runnable() {
+                                public void run() {
+                                    mapView.getMapAsync(FlightMap.this);
+                                }
+                            });
+
                         }
                     }
                 });
