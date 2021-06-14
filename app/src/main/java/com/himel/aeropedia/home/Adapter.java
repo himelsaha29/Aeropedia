@@ -77,7 +77,7 @@ public class Adapter extends PagerAdapter {
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
                 else if (position == 2) {
-                    Intent showContent = new Intent(context, MapsActivity.class);
+                    Intent showContent = new Intent(context, FlightMap.class);
                     context.startActivity(showContent);
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
@@ -99,7 +99,7 @@ public class Adapter extends PagerAdapter {
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
                 else if (position == 2) {
-                    Intent showContent = new Intent(context, MapsActivity.class);
+                    Intent showContent = new Intent(context, FlightMap.class);
                     context.startActivity(showContent);
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }

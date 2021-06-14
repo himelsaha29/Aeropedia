@@ -14,7 +14,6 @@ public class Demo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demooo);
 
         Thread thread = new Thread(new Runnable() {
 

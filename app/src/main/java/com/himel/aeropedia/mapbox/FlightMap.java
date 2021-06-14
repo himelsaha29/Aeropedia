@@ -8,6 +8,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.Global;
 import java.io.IOException;
@@ -34,24 +40,45 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class FlightMap extends AppCompatActivity {
+public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
     private static final String BASE_URL = "https://opensky-network.org/api";
 
-    List<JSONArray> sv = new ArrayList<>();
+    private List<JSONArray> sv = new ArrayList<>();
+
+    private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        getCoordinates();
         // This contains the MapView in XML and needs to be called after the access token is configured.
-        setContentView(R.layout.activity_from_mapbox);
+        setContentView(R.layout.activity_maps);
 
     }
 
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        mMap = googleMap;
 
+        double latitude = 0.0;
+        double longitude = 0.0;
+        float true_track = 0.0f;
 
+        for(int i = 0; i < sv.size(); i++) {
+            try {
+                latitude = (double) sv.get(i).getDouble(6);
+                longitude = (double) sv.get(i).getDouble(5);
+                true_track = (float) sv.get(i).getDouble(10);
+                LatLng sydney = new LatLng(latitude, longitude);
+                mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney").rotation(true_track));
+                //mMap.moveCamera(CameraUpdateFactory.zoomBy(11));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
 
+    }
 
 
     private void getCoordinates() {
@@ -121,7 +148,9 @@ public class FlightMap extends AppCompatActivity {
                             FlightMap.this.runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-
+                                    SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                                            .findFragmentById(R.id.map);
+                                    mapFragment.getMapAsync(FlightMap.this);
                                 }
                             });
 
@@ -135,4 +164,6 @@ public class FlightMap extends AppCompatActivity {
 
         thread.start();
     }
+
+
 }
