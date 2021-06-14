@@ -1,30 +1,29 @@
-package com.himel.aeropedia.mapbox;
+package com.himel.aeropedia.flightmap;
 
+import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.PointF;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.Global;
 import java.io.IOException;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
+import androidx.core.content.ContextCompat;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -32,7 +31,6 @@ import org.json.JSONObject;
 import org.json.JSONException;
 import org.opensky.api.OpenSkyApi;
 import org.opensky.model.OpenSkyStates;
-import org.opensky.model.StateVector;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -71,12 +69,13 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 longitude = (double) sv.get(i).getDouble(5);
                 true_track = (float) sv.get(i).getDouble(10);
                 LatLng sydney = new LatLng(latitude, longitude);
-                mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney").rotation(true_track));
-                //mMap.moveCamera(CameraUpdateFactory.zoomBy(11));
+                mMap.addMarker(new MarkerOptions().position(sydney).anchor(0.5f,0.5f)
+                        .rotation(true_track).icon(BitmapDescriptorFactory.fromResource(R.drawable.airplane)));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
+
 
     }
 
@@ -165,5 +164,17 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         thread.start();
     }
 
+
+    private BitmapDescriptor bitmapDescriptorFromVector(Context context, @DrawableRes int vectorDrawableResourceId) {
+        Drawable background = ContextCompat.getDrawable(context, R.drawable.ic_marker);
+        background.setBounds(0, 0, background.getIntrinsicWidth(), background.getIntrinsicHeight());
+        Drawable vectorDrawable = ContextCompat.getDrawable(context, vectorDrawableResourceId);
+        vectorDrawable.setBounds(40, 20, vectorDrawable.getIntrinsicWidth() + 40, vectorDrawable.getIntrinsicHeight() + 20);
+        Bitmap bitmap = Bitmap.createBitmap(background.getIntrinsicWidth(), background.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        background.draw(canvas);
+        vectorDrawable.draw(canvas);
+        return BitmapDescriptorFactory.fromBitmap(bitmap);
+    }
 
 }

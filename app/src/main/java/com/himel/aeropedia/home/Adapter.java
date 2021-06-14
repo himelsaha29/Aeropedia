@@ -13,12 +13,10 @@ import androidx.viewpager.widget.PagerAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.himel.aeropedia.MapsActivity;
 import com.himel.aeropedia.R;
-import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.manufacturers.ManufacturerMenu;
-import com.himel.aeropedia.mapbox.FlightMap;
+import com.himel.aeropedia.flightmap.FlightMap;
 
 import java.util.List;
 

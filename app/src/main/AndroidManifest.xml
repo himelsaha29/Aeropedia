@@ -31,10 +31,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
-        <activity android:name=".mapbox.FlightMap" />
+
+        <activity android:name=".flightmap.FlightMap" />
         <activity android:name=".Demo" />
         <activity android:name=".alexa.AlexaActivity" />
         <activity android:name=".treeview.TreeView" />

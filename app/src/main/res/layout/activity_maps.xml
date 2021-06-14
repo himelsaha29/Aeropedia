@@ -6,4 +6,8 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapsActivity" />
+    class="com.google.android.gms.maps.SupportMapFragment"
+    map:cameraTargetLat="45.5017"
+    map:cameraTargetLng="-73.5673"
+    map:cameraZoom="1"
+    tools:context=".flightmap.FlightMap" />
