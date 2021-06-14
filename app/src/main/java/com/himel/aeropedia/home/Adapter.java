@@ -13,6 +13,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.himel.aeropedia.MapsActivity;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.alexa.AlexaActivity;
@@ -76,7 +77,7 @@ public class Adapter extends PagerAdapter {
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
                 else if (position == 2) {
-                    Intent showContent = new Intent(context, FlightMap.class);
+                    Intent showContent = new Intent(context, MapsActivity.class);
                     context.startActivity(showContent);
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
@@ -98,7 +99,7 @@ public class Adapter extends PagerAdapter {
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
                 else if (position == 2) {
-                    Intent showContent = new Intent(context, FlightMap.class);
+                    Intent showContent = new Intent(context, MapsActivity.class);
                     context.startActivity(showContent);
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
