@@ -466,7 +466,6 @@
     <string name="login">Login with Amazon</string>
     <string name="instruction">Press Alexa button and start talking. The recorder will stop automatically or press the button again to manually stop it</string>
     <string name="close">Got it</string>
-
-    <string name="mapbox_access_token">pk.eyJ1IjoiaGltZWxzYWhhMjkiLCJhIjoiY2twcTVxbXVvMGE4bjJvcXA0dnZyNWcwNSJ9.-8pbVSB0GmhzZT13bnH9Vw</string>
+<string name="title_activity_maps">Map</string>
 
 </resources>

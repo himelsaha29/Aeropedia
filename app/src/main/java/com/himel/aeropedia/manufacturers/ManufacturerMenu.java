@@ -9,22 +9,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ScrollView;
-import android.widget.Toast;
 
-import com.himel.aeropedia.Demo;
-import com.himel.aeropedia.DemoMap;
 import com.himel.aeropedia.R;
-import com.himel.aeropedia.alexa.AlexaActivity;
+import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
 import com.himel.aeropedia.treeview.TreeView;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
@@ -132,7 +125,7 @@ public class ManufacturerMenu extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent showContent = new Intent(getApplicationContext(), DemoMap.class);
+                Intent showContent = new Intent(getApplicationContext(), FlightMap.class);
                 startActivity(showContent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }

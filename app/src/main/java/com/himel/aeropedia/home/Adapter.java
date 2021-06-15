@@ -14,9 +14,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.himel.aeropedia.R;
-import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.manufacturers.ManufacturerMenu;
+import com.himel.aeropedia.flightmap.FlightMap;
 
 import java.util.List;
 
@@ -74,6 +74,11 @@ public class Adapter extends PagerAdapter {
                     context.startActivity(showContent);
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
+                else if (position == 2) {
+                    Intent showContent = new Intent(context, FlightMap.class);
+                    context.startActivity(showContent);
+                    ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                }
             }
         });
 
@@ -88,6 +93,11 @@ public class Adapter extends PagerAdapter {
                 }
                 else if (position == 1) {
                     Intent showContent = new Intent(context, AlexaActivity.class);
+                    context.startActivity(showContent);
+                    ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                }
+                else if (position == 2) {
+                    Intent showContent = new Intent(context, FlightMap.class);
                     context.startActivity(showContent);
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }

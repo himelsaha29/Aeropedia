@@ -469,5 +469,5 @@
     <string name="instruction">Appuyez sur la bouton Alexa et commencez à parler. L\'enregistreur va arreter automatiquement ou appuyez sur la bouton à nouveau pour l\'arreter manuellement</string>
     <string name="close">Je comprends</string>
 
-    <string name="mapbox_access_token">pk.eyJ1IjoiaGltZWxzYWhhMjkiLCJhIjoiY2twcTVxbXVvMGE4bjJvcXA0dnZyNWcwNSJ9.-8pbVSB0GmhzZT13bnH9Vw</string>
+    <string name="title_activity_maps">Carte</string>
 </resources>
