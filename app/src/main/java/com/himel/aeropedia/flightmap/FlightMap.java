@@ -6,8 +6,10 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -52,6 +54,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private GoogleMap mMap;
     private Dialog dialog;
     private NeumorphButton retry;
+    private TextView loadingText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +70,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         dialog.setCancelable(false);
 
         dialog.show();
+
+        loadingText = dialog.findViewById(R.id.loading_text);
+
+        dynamicDialog();
+
+
 
     }
 
@@ -145,6 +154,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                     @Override
                                     public void onClick(View v) {
                                         dialog.setContentView(R.layout.activity_map_loading_dialog);
+                                        dynamicDialog();
                                     }
                                 });
                                 getCoordinates();
@@ -207,6 +217,22 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         background.draw(canvas);
         vectorDrawable.draw(canvas);
         return BitmapDescriptorFactory.fromBitmap(bitmap);
+    }
+
+    private void dynamicDialog() {
+        new CountDownTimer(5000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                if(millisUntilFinished == 3000) {
+                    loadingText.setText(R.string.map_loading2);
+                }
+            }
+
+
+            public void onFinish() {
+                loadingText.setText(R.string.map_loading3);
+            }
+        }.start();
     }
 
 }

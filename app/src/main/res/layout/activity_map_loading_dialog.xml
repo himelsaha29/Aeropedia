@@ -45,9 +45,10 @@
 
 
         <TextView
+            android:id="@+id/loading_text"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="Loading"
+            android:text="@string/map_loading1"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"

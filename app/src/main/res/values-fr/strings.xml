@@ -472,4 +472,10 @@
     <string name="close">Je comprends</string>
 
     <string name="title_activity_maps">Carte</string>
+
+    <string name="map_loading1">Refoulement</string>
+    <string name="map_loading2">Avion au roulage</string>
+    <string name="map_loading3">Bouclez votre ceinture, décollage bientôt</string>
+
+    <string name="retry">Réessayez</string>
 </resources>

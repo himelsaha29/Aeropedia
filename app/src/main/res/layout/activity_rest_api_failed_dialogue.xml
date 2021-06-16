@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Retry"
+            android:text="@string/retry"
             android:fontFamily="@font/maven_pro_medium"
             android:textColor="#042234"
             android:textSize="14sp"
