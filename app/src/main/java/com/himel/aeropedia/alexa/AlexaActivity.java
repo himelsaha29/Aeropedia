@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -64,6 +65,7 @@ public class AlexaActivity extends CoreActivity {
     private String enableDark;
     private String enableDarkOnCreate;
     private Locale locale;
+    private MediaPlayer mp;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -113,6 +115,8 @@ public class AlexaActivity extends CoreActivity {
             setContentView(R.layout.activity_alexa_dark);
         }
 
+
+        mp = MediaPlayer.create(this, R.raw.google_notification);
         recorderView = findViewById(R.id.recorder);
         recorderView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -199,6 +203,7 @@ public class AlexaActivity extends CoreActivity {
         if (recorder == null) {
             recorder = new RawAudioRecorder(AUDIO_RATE);
         }
+        mp.start();
         recorder.start();
         alexaManager.sendAudioRequest(requestBody, getRequestCallback());
 

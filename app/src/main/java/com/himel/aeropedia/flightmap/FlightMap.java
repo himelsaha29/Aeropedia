@@ -70,7 +70,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 true_track = (float) sv.get(i).getDouble(10);
                 LatLng sydney = new LatLng(latitude, longitude);
                 mMap.addMarker(new MarkerOptions().position(sydney).anchor(0.5f,0.5f)
-                        .rotation(true_track).icon(BitmapDescriptorFactory.fromResource(R.drawable.airplane)));
+                        .rotation(true_track).icon(BitmapDescriptorFactory.fromResource(R.drawable.plain)));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
