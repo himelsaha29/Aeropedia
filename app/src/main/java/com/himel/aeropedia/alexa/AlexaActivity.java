@@ -116,7 +116,7 @@ public class AlexaActivity extends CoreActivity {
         }
 
 
-        mp = MediaPlayer.create(this, R.raw.notification_sound);
+        mp = MediaPlayer.create(this, R.raw.google_notification);
         recorderView = findViewById(R.id.recorder);
         recorderView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -146,7 +146,11 @@ public class AlexaActivity extends CoreActivity {
         //closeDialog = findViewById(R.id.close_dialog);
 
         Dialog dialog = new Dialog(AlexaActivity.this);
-        dialog.setContentView(R.layout.activity_dialog_alexa_light);
+        if(enableDark.equals("No")) {
+            dialog.setContentView(R.layout.activity_dialog_alexa_light);
+        } else {
+            dialog.setContentView(R.layout.activity_dialog_alexa_dark);
+        }
         dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
         dialog.getWindow().setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.95), ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false);
