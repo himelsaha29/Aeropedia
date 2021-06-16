@@ -2,11 +2,13 @@ package com.himel.aeropedia.flightmap;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -68,13 +70,21 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
         dialog.getWindow().setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.95), ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false);
-
         dialog.show();
+        dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
+            @Override
+            public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+                if (keyCode == android.view.KeyEvent.KEYCODE_BACK) {
 
+                    dialog.dismiss();
+                    finish();
+
+                    return true;
+                }
+                return false;
+            }
+        });
         dynamicDialog();
-
-
-
     }
 
     @Override
@@ -226,14 +236,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     loadingText.setText(R.string.map_loading2);
                 }
 
-                System.out.println("SECOND ITERRRRRRRRRRRRRRRRRRRRR");
             }
 
             public void onFinish() {
                 loadingText = dialog.findViewById(R.id.loading_text);
                 loadingText.setText(R.string.map_loading3);
 
-                System.out.println("SECOND ITERRRRRRRRRRRRRRRRRRRRRFINISHHHHHHHHHHH");
             }
         }.start();
     }
