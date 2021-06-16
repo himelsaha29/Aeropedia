@@ -223,11 +223,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         new CountDownTimer(5000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                if(millisUntilFinished == 3000) {
+                if((millisUntilFinished - 2000) >= 0 && (millisUntilFinished - 2000) <= 1000 ) {
                     loadingText.setText(R.string.map_loading2);
                 }
             }
-
 
             public void onFinish() {
                 loadingText.setText(R.string.map_loading3);

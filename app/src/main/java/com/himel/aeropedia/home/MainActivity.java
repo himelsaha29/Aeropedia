@@ -115,7 +115,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }.start();
         } else {
-            this.finishAffinity();
+            //this.finishAffinity();
+            super.onBackPressed();
         }
     }
 }
