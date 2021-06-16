@@ -1,10 +1,12 @@
 package com.himel.aeropedia.flightmap;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.ViewGroup;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -14,6 +16,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.alexa.Global;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -45,6 +48,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private List<JSONArray> sv = new ArrayList<>();
 
     private GoogleMap mMap;
+    private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +56,14 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         getCoordinates();
         // This contains the MapView in XML and needs to be called after the access token is configured.
         setContentView(R.layout.activity_maps);
+
+        dialog = new Dialog(FlightMap.this);
+        dialog.setContentView(R.layout.activity_map_loading_dialog);
+        dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
+        dialog.getWindow().setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.95), ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(true);
+
+        dialog.show();
 
     }
 
@@ -154,6 +166,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                             });
 
                         }
+                        dialog.dismiss();
                     }
                 });
             }

@@ -116,7 +116,7 @@ public class AlexaActivity extends CoreActivity {
         }
 
 
-        mp = MediaPlayer.create(this, R.raw.google_notification);
+        mp = MediaPlayer.create(this, R.raw.notification_sound);
         recorderView = findViewById(R.id.recorder);
         recorderView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,7 +143,7 @@ public class AlexaActivity extends CoreActivity {
         listening = findViewById(R.id.listening);
         speaking = findViewById(R.id.speaking);
         informationButton = findViewById(R.id.info);
-        closeDialog = findViewById(R.id.close_dialog);
+        //closeDialog = findViewById(R.id.close_dialog);
 
         Dialog dialog = new Dialog(AlexaActivity.this);
         dialog.setContentView(R.layout.activity_dialog);
