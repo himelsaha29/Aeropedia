@@ -146,7 +146,7 @@ public class AlexaActivity extends CoreActivity {
         //closeDialog = findViewById(R.id.close_dialog);
 
         Dialog dialog = new Dialog(AlexaActivity.this);
-        dialog.setContentView(R.layout.activity_dialog);
+        dialog.setContentView(R.layout.activity_dialog_alexa_light);
         dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
         dialog.getWindow().setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.95), ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false);
