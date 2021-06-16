@@ -22,7 +22,7 @@
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="Oops connection timed out"
+            android:text="@string/connection_timed_out"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"

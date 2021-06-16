@@ -474,6 +474,6 @@
     <string name="map_loading1">Refoulement</string>
     <string name="map_loading2">Avion au roulage</string>
     <string name="map_loading3">Bouclez votre ceinture, décollage bientôt</string>
-
     <string name="retry">Réessayez</string>
+    <string name="connection_timed_out">Oups la connexion a expiré</string>
 </resources>

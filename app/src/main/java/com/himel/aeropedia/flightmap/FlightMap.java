@@ -71,8 +71,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
         dialog.show();
 
-        loadingText = dialog.findViewById(R.id.loading_text);
-
         dynamicDialog();
 
 
@@ -224,14 +222,26 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             @Override
             public void onTick(long millisUntilFinished) {
                 if((millisUntilFinished - 2000) >= 0 && (millisUntilFinished - 2000) <= 1000 ) {
+                    loadingText = dialog.findViewById(R.id.loading_text);
                     loadingText.setText(R.string.map_loading2);
                 }
+
+                System.out.println("SECOND ITERRRRRRRRRRRRRRRRRRRRR");
             }
 
             public void onFinish() {
+                loadingText = dialog.findViewById(R.id.loading_text);
                 loadingText.setText(R.string.map_loading3);
+
+                System.out.println("SECOND ITERRRRRRRRRRRRRRRRRRRRRFINISHHHHHHHHHHH");
             }
         }.start();
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
 }

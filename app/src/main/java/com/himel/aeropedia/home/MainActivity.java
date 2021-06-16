@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         models = new ArrayList<Model>();
         models.add(new Model(R.drawable.a350_cover, "Aviation"));
         models.add(new Model(R.drawable.a380_cover, "Amazon Alexa"));
-        models.add(new Model(R.drawable.bombardier_cover, "BOMBARDIER"));
+        models.add(new Model(R.drawable.bombardier_cover, "Real time flight tracker"));
         models.add(new Model(R.drawable.boeing_cover, "BOEING"));
 
         adapter = new Adapter(models, this);

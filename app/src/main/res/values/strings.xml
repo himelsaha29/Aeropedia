@@ -471,7 +471,7 @@
     <string name="map_loading1">Pushback</string>
     <string name="map_loading2">Taxiing</string>
     <string name="map_loading3">Buckle up, taking off soon</string>
-
+    <string name="connection_timed_out">Oops connection timed out</string>
     <string name="retry">Retry</string>
 
 </resources>
