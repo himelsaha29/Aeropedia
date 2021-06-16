@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -40,6 +41,7 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import soup.neumorphism.NeumorphButton;
 
 public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -49,6 +51,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private Dialog dialog;
+    private NeumorphButton retry;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +64,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         dialog.setContentView(R.layout.activity_map_loading_dialog);
         dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
         dialog.getWindow().setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.95), ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialog.setCancelable(true);
+        dialog.setCancelable(false);
 
         dialog.show();
 
@@ -131,7 +134,23 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 client.newCall(request).enqueue(new Callback() {
                     @Override
                     public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                        //mapView.getMapAsync(FlightMap.this);
+
+
+                        FlightMap.this.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                dialog.setContentView(R.layout.activity_rest_api_failed_dialogue);
+                                retry = dialog.findViewById(R.id.retry_rest);
+                                retry.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        dialog.setContentView(R.layout.activity_map_loading_dialog);
+                                    }
+                                });
+                                getCoordinates();
+                            }
+                        });
+
                         e.printStackTrace();
                         System.out.println("OKHTTP : FAILED");
                     }
