@@ -7,21 +7,28 @@
     android:layout_height="match_parent">
 
 
-
     <FrameLayout
+        android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
         android:layout_height="450dp"
-        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:background="@drawable/flight_map_bottom_sheet_background">
 
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_amazon_alexa"/>
-
-
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_gravity="center"/>
 
     </FrameLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="click"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
