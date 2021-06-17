@@ -36,7 +36,7 @@ public class BottomSheet extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bottomSheetBehavior.setPeekHeight(100, true);
+                bottomSheetBehavior.setPeekHeight(100);
                 bottomSheetBehavior.setHideable(true);
             }
         });
@@ -44,7 +44,7 @@ public class BottomSheet extends AppCompatActivity {
         bottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
             public void onStateChanged(@NonNull View bottomSheet, int newState) {
-                if (newState ==BottomSheetBehavior.STATE_COLLAPSED) {
+                if (newState == BottomSheetBehavior.STATE_COLLAPSED) {
                     bottomSheetBehavior.setPeekHeight(0, true);
 
                 }
@@ -55,5 +55,8 @@ public class BottomSheet extends AppCompatActivity {
 
             }
         });
+
     }
+
+
 }
