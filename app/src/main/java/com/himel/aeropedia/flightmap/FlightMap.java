@@ -61,7 +61,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private NeumorphButton retry;
     private TextView loadingText;
     private BottomSheetBehavior bottomSheetBehavior;
-    private Button button;
+    //private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,13 +69,13 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         getCoordinates();
         // This contains the MapView in XML and needs to be called after the access token is configured.
         setContentView(R.layout.activity_maps);
-        button = findViewById(R.id.button);
+        //button = findViewById(R.id.button);
 
         dialog = new Dialog(FlightMap.this);
         dialog.setContentView(R.layout.activity_map_loading_dialog);
         dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
         dialog.getWindow().setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.95), ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialog.setCancelable(true);
+        dialog.setCancelable(false);
         dialog.show();
         dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
             @Override
@@ -94,28 +94,16 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
 
 
-        FrameLayout bottomSheetLayout = findViewById(R.id.bottom_sheet);
-        bottomSheetBehavior = BottomSheetBehavior.from(bottomSheetLayout);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bottomSheetBehavior.setPeekHeight(100);
-            }
-        });
 
-        bottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
-            @Override
-            public void onStateChanged(@NonNull View bottomSheet, int newState) {
-                if (newState == BottomSheetBehavior.STATE_COLLAPSED) {
-                    bottomSheetBehavior.setPeekHeight(0, true);
-                }
-            }
-            @Override
-            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                bottomSheetBehavior.setPeekHeight(100);
+//            }
+//        });
 
-            }
-        });
+
         //bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
 
     }
@@ -140,6 +128,22 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 e.printStackTrace();
             }
         }
+
+        FrameLayout bottomSheetLayout = findViewById(R.id.bottom_sheet);
+        bottomSheetBehavior = BottomSheetBehavior.from(bottomSheetLayout);
+
+        bottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+            @Override
+            public void onStateChanged(@NonNull View bottomSheet, int newState) {
+                if (newState == BottomSheetBehavior.STATE_COLLAPSED) {
+                    bottomSheetBehavior.setPeekHeight(0, true);
+                }
+            }
+            @Override
+            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+
+            }
+        });
     }
 
 
