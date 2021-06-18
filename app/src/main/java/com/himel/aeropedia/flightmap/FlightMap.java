@@ -11,6 +11,8 @@ import android.os.CountDownTimer;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -20,6 +22,7 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.alexa.Global;
@@ -57,6 +60,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private Dialog dialog;
     private NeumorphButton retry;
     private TextView loadingText;
+    private BottomSheetBehavior bottomSheetBehavior;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,12 +69,13 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         getCoordinates();
         // This contains the MapView in XML and needs to be called after the access token is configured.
         setContentView(R.layout.activity_maps);
+        button = findViewById(R.id.button);
 
         dialog = new Dialog(FlightMap.this);
         dialog.setContentView(R.layout.activity_map_loading_dialog);
         dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
         dialog.getWindow().setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.95), ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialog.setCancelable(false);
+        dialog.setCancelable(true);
         dialog.show();
         dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
             @Override
@@ -85,6 +91,33 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             }
         });
         dynamicDialog();
+
+
+
+        FrameLayout bottomSheetLayout = findViewById(R.id.bottom_sheet);
+        bottomSheetBehavior = BottomSheetBehavior.from(bottomSheetLayout);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bottomSheetBehavior.setPeekHeight(100);
+            }
+        });
+
+        bottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+            @Override
+            public void onStateChanged(@NonNull View bottomSheet, int newState) {
+                if (newState == BottomSheetBehavior.STATE_COLLAPSED) {
+                    bottomSheetBehavior.setPeekHeight(0, true);
+                }
+            }
+            @Override
+            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+
+            }
+        });
+        //bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+
     }
 
     @Override
@@ -107,8 +140,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 e.printStackTrace();
             }
         }
-
-
     }
 
 
@@ -199,6 +230,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                     SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                                             .findFragmentById(R.id.map);
                                     mapFragment.getMapAsync(FlightMap.this);
+
+
                                 }
                             });
 
@@ -235,9 +268,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     loadingText = dialog.findViewById(R.id.loading_text);
                     loadingText.setText(R.string.map_loading2);
                 }
-
             }
-
             public void onFinish() {
                 loadingText = dialog.findViewById(R.id.loading_text);
                 loadingText.setText(R.string.map_loading3);
