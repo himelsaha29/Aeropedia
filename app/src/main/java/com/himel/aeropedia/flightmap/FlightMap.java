@@ -43,11 +43,14 @@ import org.json.JSONException;
 import org.opensky.api.OpenSkyApi;
 import org.opensky.model.OpenSkyStates;
 
+import okhttp3.Authenticator;
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.Credentials;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.Route;
 import soup.neumorphism.NeumorphButton;
 
 public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
@@ -174,14 +177,29 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
 
                 OkHttpClient.Builder builder = new OkHttpClient.Builder();
+
+
+                builder.authenticator(new Authenticator() {
+                    @Override
+                    public Request authenticate(Route route, Response response) throws IOException {
+                        if (responseCount(response) >= 3) {
+                            return null;
+                        }
+                        String credential = Credentials.basic(Global.username, Global.password);
+                        return response.request().newBuilder().header("Authorization", credential).build();
+                    }
+                });
+
                 builder.connectTimeout(30, TimeUnit.SECONDS);
                 builder.readTimeout(30, TimeUnit.SECONDS);
                 builder.writeTimeout(30, TimeUnit.SECONDS);
+                String credential = Credentials.basic(Global.username, Global.password);
                 OkHttpClient client = builder.build();
 
                 String url = BASE_URL + "/states/all";
                 Request request = new Request.Builder()
                         .url(url)
+                        .header("Authorization", credential)
                         .build();
                 client.newCall(request).enqueue(new Callback() {
                     @Override
@@ -285,6 +303,14 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    private int responseCount(Response response) {
+        int result = 1;
+        while ((response = response.priorResponse()) != null) {
+            result++;
+        }
+        return result;
     }
 
 }
