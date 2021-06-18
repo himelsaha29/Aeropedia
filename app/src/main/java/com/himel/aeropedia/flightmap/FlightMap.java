@@ -11,7 +11,6 @@ import android.os.CountDownTimer;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -21,10 +20,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.himel.aeropedia.R;
-import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.alexa.Global;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,14 +42,12 @@ import org.json.JSONException;
 import org.opensky.api.OpenSkyApi;
 import org.opensky.model.OpenSkyStates;
 
-import okhttp3.Authenticator;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Credentials;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.Route;
 import soup.neumorphism.NeumorphButton;
 
 public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
@@ -118,16 +115,22 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         double latitude = 0.0;
         double longitude = 0.0;
         float true_track = 0.0f;
+        String icao24 = null;
 
         for(int i = 0; i < sv.size(); i++) {
             try {
                 latitude = (double) sv.get(i).getDouble(6);
                 longitude = (double) sv.get(i).getDouble(5);
                 true_track = (float) sv.get(i).getDouble(10);
-                LatLng sydney = new LatLng(latitude, longitude);
-                mMap.addMarker(new MarkerOptions().position(sydney).anchor(0.5f,0.5f)
-                        .rotation(true_track).icon(BitmapDescriptorFactory.fromResource(R.drawable.plain)));
+                icao24 = sv.get(i).getString(0);
+                if (icao24 == null) System.out.println("ICAO24 IS NULL");
+                LatLng latLng = new LatLng(latitude, longitude);
+                mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f,0.5f)
+                        .rotation(true_track).icon(BitmapDescriptorFactory.fromResource(R.drawable.plane)).snippet(icao24));
             } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                System.out.println("ICAO24 EXCEPTION");
                 e.printStackTrace();
             }
         }
@@ -147,7 +150,17 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
             }
         });
+
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                System.out.println("ICAO24  ===  " + marker.getSnippet());
+                return true;
+            }
+        });
     }
+
 
 
     private void getCoordinates() {
@@ -179,16 +192,16 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 OkHttpClient.Builder builder = new OkHttpClient.Builder();
 
 
-                builder.authenticator(new Authenticator() {
-                    @Override
-                    public Request authenticate(Route route, Response response) throws IOException {
-                        if (responseCount(response) >= 3) {
-                            return null;
-                        }
-                        String credential = Credentials.basic(Global.username, Global.password);
-                        return response.request().newBuilder().header("Authorization", credential).build();
-                    }
-                });
+//                builder.authenticator(new Authenticator() {
+//                    @Override
+//                    public Request authenticate(Route route, Response response) throws IOException {
+//                        if (responseCount(response) >= 3) {
+//                            return null;
+//                        }
+//                        String credential = Credentials.basic(Global.username, Global.password);
+//                        return response.request().newBuilder().header("Authorization", credential).build();
+//                    }
+//                });
 
                 builder.connectTimeout(30, TimeUnit.SECONDS);
                 builder.readTimeout(30, TimeUnit.SECONDS);
@@ -305,12 +318,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
-    private int responseCount(Response response) {
-        int result = 1;
-        while ((response = response.priorResponse()) != null) {
-            result++;
-        }
-        return result;
-    }
+//    private int responseCount(Response response) {
+//        int result = 1;
+//        while ((response = response.priorResponse()) != null) {
+//            result++;
+//        }
+//        return result;
+//    }
 
 }
