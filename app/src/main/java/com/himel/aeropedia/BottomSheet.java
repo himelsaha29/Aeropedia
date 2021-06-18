@@ -23,21 +23,13 @@ public class BottomSheet extends AppCompatActivity {
         setContentView(R.layout.flight_map_bottom_sheet);
         button = findViewById(R.id.button);
 
-
         FrameLayout bottomSheetLayout = findViewById(R.id.bottom_sheet);
         bottomSheetBehavior = BottomSheetBehavior.from(bottomSheetLayout);
-        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
-
-
-
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 bottomSheetBehavior.setPeekHeight(100);
-                bottomSheetBehavior.setHideable(true);
             }
         });
 
@@ -46,10 +38,8 @@ public class BottomSheet extends AppCompatActivity {
             public void onStateChanged(@NonNull View bottomSheet, int newState) {
                 if (newState == BottomSheetBehavior.STATE_COLLAPSED) {
                     bottomSheetBehavior.setPeekHeight(0, true);
-
                 }
             }
-
             @Override
             public void onSlide(@NonNull View bottomSheet, float slideOffset) {
 
