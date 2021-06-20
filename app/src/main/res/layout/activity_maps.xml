@@ -25,15 +25,119 @@
         android:layout_height="450dp"
         android:background="@drawable/flight_map_bottom_sheet_background"
         app:behavior_hideable="false"
-        app:behavior_peekHeight="0dp"
+        app:behavior_peekHeight="450dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <GridLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_launcher_foreground" />
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:padding="10dp"
+            android:columnOrderPreserved="true"
+            android:rowCount="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/maven_pro_medium"
+                android:text="ICAO"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/maven_pro_medium"
+                android:text="Country of origin"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/icao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/maven_pro_medium"
+                android:text="Loading"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/maven_pro_medium"
+                android:text="Loading"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/maven_pro_medium"
+                android:text="Latitude"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/maven_pro_medium"
+                android:text="Longitude"
+                android:textSize="20sp"/>
+
+
+            <TextView
+                android:id="@+id/latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/maven_pro_medium"
+                android:text="Loading"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/maven_pro_medium"
+                android:text="Loading"
+                android:textSize="20sp"/>
+
+
+
+        </GridLayout>
 
     </FrameLayout>
 

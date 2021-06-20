@@ -26,6 +26,8 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.Global;
 import java.io.IOException;
+import java.sql.SQLOutput;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -62,6 +64,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private TextView loadingText;
     private BottomSheetBehavior bottomSheetBehavior;
     //private Button button;
+    private TextView icao;
+    private TextView country;
+    private TextView lamitude;
+    private TextView lomgitude;
+
+    String c = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +120,11 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
 
+        icao = findViewById(R.id.icao);
+        country = findViewById(R.id.country);
+        lamitude = findViewById(R.id.latitude);
+        lomgitude = findViewById(R.id.longitude);
+
         double latitude = 0.0;
         double longitude = 0.0;
         float true_track = 0.0f;
@@ -156,6 +169,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             @Override
             public boolean onMarkerClick(Marker marker) {
                 System.out.println("ICAO24  ===  " + marker.getSnippet());
+                icao.setText(marker.getSnippet());
+                lamitude.setText(String.valueOf(marker.getPosition().latitude));
+                lomgitude.setText(String.valueOf(marker.getPosition().longitude));
+                searchByAircraft(marker.getSnippet());
                 return true;
             }
         });
@@ -167,41 +184,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                try {
-                    OpenSkyApi api = null;
-                    OpenSkyStates os = null;
-                    try {
-                        //states = new OpenSkyApi().getStates(0, new String[1]);
-                        api = new OpenSkyApi(Global.username, Global.password);
-                        os = api.getStates(0, null);
-                    } catch (IOException e) {
-                        System.out.println(e);
-                    }
-                    System.out.println("Number of states: " + os.getStates().size());
-                    System.out.println(os.getStates().size());
-//                    for(StateVector s : os.getStates()) {
-//                        sv.add(s);
-//                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    System.out.println("EXCEPTION");
-                }
-
 
                 OkHttpClient.Builder builder = new OkHttpClient.Builder();
-
-
-//                builder.authenticator(new Authenticator() {
-//                    @Override
-//                    public Request authenticate(Route route, Response response) throws IOException {
-//                        if (responseCount(response) >= 3) {
-//                            return null;
-//                        }
-//                        String credential = Credentials.basic(Global.username, Global.password);
-//                        return response.request().newBuilder().header("Authorization", credential).build();
-//                    }
-//                });
 
                 builder.connectTimeout(30, TimeUnit.SECONDS);
                 builder.readTimeout(30, TimeUnit.SECONDS);
@@ -325,5 +309,79 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 //        }
 //        return result;
 //    }
+
+
+    private void searchByAircraft(String icao){
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                OkHttpClient.Builder builder = new OkHttpClient.Builder();
+
+                builder.connectTimeout(15, TimeUnit.SECONDS);
+                builder.readTimeout(15, TimeUnit.SECONDS);
+                builder.writeTimeout(15, TimeUnit.SECONDS);
+                String credential = Credentials.basic(Global.username, Global.password);
+                OkHttpClient client = builder.build();
+
+                int currentTime = (int) System.nanoTime();
+                System.out.println("CURRENT TIME = " + currentTime);
+
+                String url = BASE_URL + "/flights/aircraft" + "?icao24=" + icao + "&begin=" + (1624148781 - 5) + "&end=" + 1624148781;
+                Request request = new Request.Builder()
+                        .url(url)
+                        .header("Authorization", credential)
+                        .build();
+                System.out.println("HERE========");
+                client.newCall(request).enqueue(new Callback() {
+                    @Override
+                    public void onFailure(@NotNull Call call, @NotNull IOException e) {
+
+
+                        FlightMap.this.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+
+                            }
+                        });
+
+                        e.printStackTrace();
+                        System.out.println("OKHTTP : FAILED");
+                    }
+
+                    @Override
+                    public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                        if (response.isSuccessful()) {
+
+                            String responseData = response.body().string();
+                            System.out.println(responseData);
+                            try {
+                                JSONObject jsonObject = new JSONObject(responseData);
+                                System.out.println(jsonObject);
+                                JSONArray jsonArray = jsonObject.getJSONArray("estDepartureAirport");
+
+                                c = jsonArray.getString(0);
+                                System.out.println(c);
+                            } catch (JSONException e) {
+                                System.out.println("JSONARRAY EXCEPTION: === " + e.getMessage());
+                                e.printStackTrace();
+                            }
+
+                            FlightMap.this.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    System.out.println(c);
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+
+        });
+
+
+        thread.start();
+    }
 
 }
