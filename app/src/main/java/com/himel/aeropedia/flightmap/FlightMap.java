@@ -311,7 +311,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 //    }
 
 
-    private void searchByAircraft(String icao){
+    private void searchByAircraft(String icao24){
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -327,12 +327,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 int currentTime = (int) System.nanoTime();
                 System.out.println("CURRENT TIME = " + currentTime);
 
-                String url = BASE_URL + "/flights/aircraft" + "?icao24=" + icao + "&begin=" + (1624148781 - 5) + "&end=" + 1624148781;
+                String url = BASE_URL + "/flights/aircraft?icao24="+ icao24 + "&begin=1517184000&end=1517270400";
+                //String url = "https://opensky-network.org/api/states/all?time=1458564121&icao24=3c6444";
                 Request request = new Request.Builder()
                         .url(url)
                         .header("Authorization", credential)
                         .build();
-                System.out.println("HERE========");
                 client.newCall(request).enqueue(new Callback() {
                     @Override
                     public void onFailure(@NotNull Call call, @NotNull IOException e) {
@@ -358,9 +358,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                             try {
                                 JSONObject jsonObject = new JSONObject(responseData);
                                 System.out.println(jsonObject);
-                                JSONArray jsonArray = jsonObject.getJSONArray("estDepartureAirport");
+                                String c = jsonObject.getString("estDepartureAirport");
 
-                                c = jsonArray.getString(0);
+                                //c = jsonArray.getString(0);
                                 System.out.println(c);
                             } catch (JSONException e) {
                                 System.out.println("JSONARRAY EXCEPTION: === " + e.getMessage());
