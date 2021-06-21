@@ -73,7 +73,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private TextView lamitude;
     private TextView lomgitude;
 
-    String c = null;
+    private BitmapDescriptor markerPlane;
 
     Route route = new Route();
     String[] flightRoute;
@@ -106,6 +106,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             }
         });
         dynamicDialog();
+
+        markerPlane = bitmapDescriptorFromVector(this, R.drawable.ic_marker_plane);
 
 
 
@@ -146,14 +148,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 latitude = (double) sv.get(i).getDouble(6);
                 longitude = (double) sv.get(i).getDouble(5);
                 true_track = (float) sv.get(i).getDouble(10);
-                if (true_track < 0) {
-                    throw new Exception("NEGATIVE ANGLE !!!!");
-                }
+
                 callsign = sv.get(i).getString(1);
                 if (callsign == null) System.out.println("ICAO24 IS NULL");
                 LatLng latLng = new LatLng(latitude, longitude);
                 mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f,0.5f)
-                        .rotation(true_track).icon(BitmapDescriptorFactory.fromResource(R.drawable.plane)).snippet(callsign));
+                        .rotation(true_track).icon(markerPlane).snippet(callsign));
             } catch (JSONException e) {
                 e.printStackTrace();
             } catch (Exception e) {
