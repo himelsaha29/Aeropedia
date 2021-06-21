@@ -76,6 +76,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     String c = null;
 
     Route route = new Route();
+    String[] flightRoute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,14 +183,46 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                System.out.println("callsign  ===  " + marker.getSnippet());
+                bottomSheetBehavior.setPeekHeight(100);
+                String snippet = marker.getSnippet();
+                System.out.println("callsign  ===  " + snippet);
+                // ======== LOADING ========
+                callsignTV.setText("Loading");
+                lamitude.setText("Loading");
+                lomgitude.setText("Loading");
+                origin.setText("Loading");
+                destination.setText("Loading");
+                aircraft.setText("Loading");
+                // =========================
+
+                Thread thread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        flightRoute = route.getRoute(snippet);
+                    }
+                });
+
+                thread.start();
+
+                // wait until the thread is done, then join with main thread
+                try {
+                    thread.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+
                 callsignTV.setText(marker.getSnippet());
                 lamitude.setText(String.valueOf(marker.getPosition().latitude));
                 lomgitude.setText(String.valueOf(marker.getPosition().longitude));
-                String[] flightRoute = route.getRoute(marker.getSnippet());
                 origin.setText(flightRoute[0]);
                 destination.setText(flightRoute[1]);
-                aircraft.setText(flightRoute[2] + " " + flightRoute[3]);
+
+                if((flightRoute[2] + " " + flightRoute[3]).contains("N/A")) {
+                    aircraft.setText("N/A");
+                } else {
+                    aircraft.setText(flightRoute[2] + " " + flightRoute[3]);
+                }
                 return true;
             }
         });
