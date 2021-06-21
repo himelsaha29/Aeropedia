@@ -135,6 +135,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 latitude = (double) sv.get(i).getDouble(6);
                 longitude = (double) sv.get(i).getDouble(5);
                 true_track = (float) sv.get(i).getDouble(10);
+                if (true_track < 0) {
+                    throw new Exception("NEGATIVE ANGLE !!!!");
+                }
                 icao24 = sv.get(i).getString(0);
                 if (icao24 == null) System.out.println("ICAO24 IS NULL");
                 LatLng latLng = new LatLng(latitude, longitude);
@@ -145,6 +148,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             } catch (Exception e) {
                 System.out.println("ICAO24 EXCEPTION");
                 e.printStackTrace();
+                e.getMessage();
             }
         }
 
@@ -231,6 +235,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                 JSONObject jsonObject = new JSONObject(responseData);
                                 System.out.println(jsonObject);
                                 JSONArray jsonArray = jsonObject.getJSONArray("states");
+                                int time = jsonObject.getInt("time");
+                                System.out.println("TIME === " +  time);
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     sv.add(jsonArray.getJSONArray(i));
                                 }
@@ -327,7 +333,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 int currentTime = (int) System.nanoTime();
                 System.out.println("CURRENT TIME = " + currentTime);
 
-                String url = BASE_URL + "/flights/aircraft?icao24="+ icao24 + "&begin=1517184000&end=1517270400";
+                String url = BASE_URL + "/flights/aircraft?icao24="+ icao24 + "&begin=1624068335&end=1624241135";
                 //String url = "https://opensky-network.org/api/states/all?time=1458564121&icao24=3c6444";
                 Request request = new Request.Builder()
                         .url(url)
@@ -351,6 +357,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
                     @Override
                     public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                        System.out.println("RESPONSE = " + response);
                         if (response.isSuccessful()) {
 
                             String responseData = response.body().string();
