@@ -26,8 +26,6 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.Global;
 import java.io.IOException;
-import java.sql.SQLOutput;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -41,8 +39,6 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONException;
-import org.opensky.api.OpenSkyApi;
-import org.opensky.model.OpenSkyStates;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -73,7 +69,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private TextView lamitude;
     private TextView lomgitude;
 
-    private BitmapDescriptor markerPlane;
+    private BitmapDescriptor markerPlaneBlack;
+    private BitmapDescriptor markerPlaneRed;
+    private Marker markerSelected;
 
     Route route = new Route();
     String[] flightRoute;
@@ -107,7 +105,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         });
         dynamicDialog();
 
-        markerPlane = bitmapDescriptorFromVector(this, R.drawable.ic_marker_plane);
+        markerPlaneBlack = bitmapDescriptorFromVector(this, R.drawable.ic_marker_plane_black);
+        markerPlaneRed = bitmapDescriptorFromVector(this, R.drawable.ic_marker_plane_red);
 
 
 
@@ -153,7 +152,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if (callsign == null) System.out.println("ICAO24 IS NULL");
                 LatLng latLng = new LatLng(latitude, longitude);
                 mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f,0.5f)
-                        .rotation(true_track).icon(markerPlane).snippet(callsign));
+                        .rotation(true_track).icon(markerPlaneBlack).snippet(callsign));
             } catch (JSONException e) {
                 e.printStackTrace();
             } catch (Exception e) {
@@ -171,6 +170,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             public void onStateChanged(@NonNull View bottomSheet, int newState) {
                 if (newState == BottomSheetBehavior.STATE_COLLAPSED) {
                     bottomSheetBehavior.setPeekHeight(0, true);
+                    markerSelected.setIcon(markerPlaneBlack);
                 }
             }
             @Override
@@ -211,7 +211,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     e.printStackTrace();
                 }
 
-
+                markerSelected = marker;
+                marker.setIcon(markerPlaneRed); // NOT WORKING
                 callsignTV.setText(marker.getSnippet());
                 lamitude.setText(String.valueOf(marker.getPosition().latitude));
                 lomgitude.setText(String.valueOf(marker.getPosition().longitude));
