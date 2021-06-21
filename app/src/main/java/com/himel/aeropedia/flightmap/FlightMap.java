@@ -111,7 +111,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         dynamicDialog();
 
         markerPlaneBlack = vectorToBitmap(R.drawable.ic_marker_plane_black, Color.BLACK);
-        markerPlaneRed = vectorToBitmap(R.drawable.ic_marker_plane_black, Color.RED);
+        markerPlaneRed = vectorToBitmap(R.drawable.ic_marker_plane_red, Color.RED);
 
 
 
@@ -364,7 +364,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 vectorDrawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
         vectorDrawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-        DrawableCompat.setTint(vectorDrawable, color);
+        //DrawableCompat.setTint(vectorDrawable, color);
         vectorDrawable.draw(canvas);
         return BitmapDescriptorFactory.fromBitmap(bitmap);
     }
