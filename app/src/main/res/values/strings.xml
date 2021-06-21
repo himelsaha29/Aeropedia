@@ -474,4 +474,8 @@
     <string name="connection_timed_out">Oops connection timed out</string>
     <string name="retry">Retry</string>
 
+    <string name="loading">Loading</string>
+
+
+
 </resources>

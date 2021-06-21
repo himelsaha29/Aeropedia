@@ -142,7 +142,7 @@
                 android:layout_gravity="center_horizontal"
                 android:paddingEnd="20dp"
                 android:paddingBottom="5dp"
-                android:text="Loading"
+                android:text="@string/loading"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -156,7 +156,7 @@
                 android:layout_gravity="center_horizontal"
                 android:paddingEnd="20dp"
                 android:paddingBottom="5dp"
-                android:text="Loading"
+                android:text="@string/loading"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -199,7 +199,7 @@
                 android:paddingEnd="20dp"
                 android:layout_gravity="center_horizontal"
                 android:paddingBottom="5dp"
-                android:text="Loading"
+                android:text="@string/loading"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -213,7 +213,7 @@
                 android:paddingEnd="20dp"
                 android:layout_gravity="center_horizontal"
                 android:paddingBottom="5dp"
-                android:text="Loading"
+                android:text="@string/loading"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -254,7 +254,7 @@
                 android:paddingTop="5dp"
                 android:paddingEnd="20dp"
                 android:paddingBottom="5dp"
-                android:text="Loading"
+                android:text="@string/loading"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -268,7 +268,7 @@
                 android:layout_gravity="center_horizontal"
                 android:paddingEnd="20dp"
                 android:paddingBottom="5dp"
-                android:text="Loading"
+                android:text="@string/loading"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -309,7 +309,7 @@
                 android:layout_gravity="center_horizontal"
                 android:paddingEnd="20dp"
                 android:paddingBottom="5dp"
-                android:text="Loading"
+                android:text="@string/loading"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -322,7 +322,7 @@
                 android:layout_gravity="center_horizontal"
                 android:paddingEnd="20dp"
                 android:paddingBottom="5dp"
-                android:text="Loading"
+                android:text="@string/loading"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
