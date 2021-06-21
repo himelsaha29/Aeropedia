@@ -65,11 +65,17 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private BottomSheetBehavior bottomSheetBehavior;
     //private Button button;
     private TextView icao;
+    private TextView origin;
+    private TextView destination;
+    private TextView aircraft;
+    private TextView callsignTV;
     private TextView country;
     private TextView lamitude;
     private TextView lomgitude;
 
     String c = null;
+
+    Route route = new Route();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +127,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         mMap = googleMap;
 
         icao = findViewById(R.id.icao);
+        origin = findViewById(R.id.origin_airport);
+        destination = findViewById(R.id.destination_airport);
+        aircraft = findViewById(R.id.aircraft);
+        callsignTV = findViewById(R.id.callsign);
         country = findViewById(R.id.country);
         lamitude = findViewById(R.id.latitude);
         lomgitude = findViewById(R.id.longitude);
@@ -128,7 +138,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         double latitude = 0.0;
         double longitude = 0.0;
         float true_track = 0.0f;
-        String icao24 = null;
+        String callsign = null;
 
         for(int i = 0; i < sv.size(); i++) {
             try {
@@ -138,15 +148,15 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if (true_track < 0) {
                     throw new Exception("NEGATIVE ANGLE !!!!");
                 }
-                icao24 = sv.get(i).getString(0);
-                if (icao24 == null) System.out.println("ICAO24 IS NULL");
+                callsign = sv.get(i).getString(1);
+                if (callsign == null) System.out.println("ICAO24 IS NULL");
                 LatLng latLng = new LatLng(latitude, longitude);
                 mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f,0.5f)
-                        .rotation(true_track).icon(BitmapDescriptorFactory.fromResource(R.drawable.plane)).snippet(icao24));
+                        .rotation(true_track).icon(BitmapDescriptorFactory.fromResource(R.drawable.plane)).snippet(callsign));
             } catch (JSONException e) {
                 e.printStackTrace();
             } catch (Exception e) {
-                System.out.println("ICAO24 EXCEPTION");
+                System.out.println("Callsign EXCEPTION");
                 e.printStackTrace();
                 e.getMessage();
             }
@@ -172,11 +182,14 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                System.out.println("ICAO24  ===  " + marker.getSnippet());
-                icao.setText(marker.getSnippet());
+                System.out.println("callsign  ===  " + marker.getSnippet());
+                callsignTV.setText(marker.getSnippet());
                 lamitude.setText(String.valueOf(marker.getPosition().latitude));
                 lomgitude.setText(String.valueOf(marker.getPosition().longitude));
-                searchByAircraft(marker.getSnippet());
+                String[] flightRoute = route.getRoute(marker.getSnippet());
+                origin.setText(flightRoute[0]);
+                destination.setText(flightRoute[1]);
+                aircraft.setText(flightRoute[2] + " " + flightRoute[3]);
                 return true;
             }
         });
@@ -317,78 +330,5 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 //    }
 
 
-    private void searchByAircraft(String icao24){
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-
-                OkHttpClient.Builder builder = new OkHttpClient.Builder();
-
-                builder.connectTimeout(15, TimeUnit.SECONDS);
-                builder.readTimeout(15, TimeUnit.SECONDS);
-                builder.writeTimeout(15, TimeUnit.SECONDS);
-                String credential = Credentials.basic(Global.username, Global.password);
-                OkHttpClient client = builder.build();
-
-                int currentTime = (int) System.nanoTime();
-                System.out.println("CURRENT TIME = " + currentTime);
-
-                String url = BASE_URL + "/flights/aircraft?icao24="+ icao24 + "&begin=1624068335&end=1624241135";
-                //String url = "https://opensky-network.org/api/states/all?time=1458564121&icao24=3c6444";
-                Request request = new Request.Builder()
-                        .url(url)
-                        .header("Authorization", credential)
-                        .build();
-                client.newCall(request).enqueue(new Callback() {
-                    @Override
-                    public void onFailure(@NotNull Call call, @NotNull IOException e) {
-
-
-                        FlightMap.this.runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-
-                            }
-                        });
-
-                        e.printStackTrace();
-                        System.out.println("OKHTTP : FAILED");
-                    }
-
-                    @Override
-                    public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                        System.out.println("RESPONSE = " + response);
-                        if (response.isSuccessful()) {
-
-                            String responseData = response.body().string();
-                            System.out.println(responseData);
-                            try {
-                                JSONObject jsonObject = new JSONObject(responseData);
-                                System.out.println(jsonObject);
-                                String c = jsonObject.getString("estDepartureAirport");
-
-                                //c = jsonArray.getString(0);
-                                System.out.println(c);
-                            } catch (JSONException e) {
-                                System.out.println("JSONARRAY EXCEPTION: === " + e.getMessage());
-                                e.printStackTrace();
-                            }
-
-                            FlightMap.this.runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    System.out.println(c);
-                                }
-                            });
-                        }
-                    }
-                });
-            }
-
-        });
-
-
-        thread.start();
-    }
 
 }

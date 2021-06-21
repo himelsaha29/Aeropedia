@@ -43,21 +43,25 @@
             android:rowCount="1">
 
             <TextView
+                android:id="@+id/origin_airport"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="CDG"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
                 android:paddingTop="30dp"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 android:fontFamily="@font/maven_pro_medium"
                 android:textSize="30sp"/>
 
             <TextView
+                android:id="@+id/destination_airport"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="YUL"
                 android:paddingStart="30dp"
+                android:textColor="@color/white"
                 android:paddingEnd="30dp"
                 android:paddingTop="30dp"
                 android:fontFamily="@font/maven_pro_medium"
@@ -108,6 +112,7 @@
                 android:paddingStart="20dp"
                 android:paddingTop="5dp"
                 android:paddingEnd="20dp"
+                android:textColor="@color/white"
                 android:layout_gravity="center_horizontal"
                 android:paddingBottom="5dp"
                 android:text="Aircraft"
@@ -121,12 +126,14 @@
                 android:paddingTop="5dp"
                 android:layout_gravity="center_horizontal"
                 android:paddingEnd="20dp"
+                android:textColor="@color/white"
                 android:paddingBottom="5dp"
                 android:text="Callsign"
                 android:textSize="20sp" />
 
 
             <TextView
+                android:id="@+id/aircraft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/maven_pro_medium"
@@ -140,6 +147,7 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/callsign"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/maven_pro_medium"
@@ -163,6 +171,7 @@
                 android:layout_gravity="center_horizontal"
                 android:paddingTop="5dp"
                 android:paddingEnd="20dp"
+                android:textColor="@color/white"
                 android:paddingBottom="5dp"
                 android:text="ICAO"
                 android:textSize="20sp" />
@@ -174,6 +183,7 @@
                 android:paddingStart="20dp"
                 android:layout_gravity="center_horizontal"
                 android:paddingTop="5dp"
+                android:textColor="@color/white"
                 android:paddingEnd="20dp"
                 android:paddingBottom="5dp"
                 android:text="Origin country"
@@ -212,6 +222,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/maven_pro_medium"
                 android:paddingStart="20dp"
+                android:textColor="@color/white"
                 android:paddingTop="5dp"
                 android:layout_gravity="center_horizontal"
                 android:paddingEnd="20dp"
@@ -226,6 +237,7 @@
                 android:paddingStart="20dp"
                 android:layout_gravity="center_horizontal"
                 android:paddingTop="5dp"
+                android:textColor="@color/white"
                 android:paddingEnd="20dp"
                 android:paddingBottom="5dp"
                 android:text="Longitude"
@@ -267,6 +279,7 @@
                 android:fontFamily="@font/maven_pro_medium"
                 android:paddingStart="20dp"
                 android:paddingTop="5dp"
+                android:textColor="@color/white"
                 android:layout_gravity="center_horizontal"
                 android:paddingEnd="20dp"
                 android:paddingBottom="5dp"
@@ -280,6 +293,7 @@
                 android:paddingStart="20dp"
                 android:layout_gravity="center_horizontal"
                 android:paddingTop="5dp"
+                android:textColor="@color/white"
                 android:paddingEnd="20dp"
                 android:paddingBottom="5dp"
                 android:text="Source"
