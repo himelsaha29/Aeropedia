@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.airbnb.lottie.utils.Utils;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -30,10 +32,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
+import androidx.core.graphics.drawable.DrawableCompat;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -105,8 +110,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         });
         dynamicDialog();
 
-        markerPlaneBlack = bitmapDescriptorFromVector(this, R.drawable.ic_marker_plane_black);
-        markerPlaneRed = bitmapDescriptorFromVector(this, R.drawable.ic_marker_plane_red);
+        markerPlaneBlack = vectorToBitmap(R.drawable.ic_marker_plane_black, Color.BLACK);
+        markerPlaneRed = vectorToBitmap(R.drawable.ic_marker_plane_black, Color.RED);
 
 
 
@@ -183,6 +188,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
+                if (markerSelected != null) {
+                    markerSelected.setIcon(markerPlaneBlack);
+                }
                 bottomSheetBehavior.setPeekHeight(100);
                 String snippet = marker.getSnippet();
                 System.out.println("callsign  ===  " + snippet);
@@ -319,19 +327,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         thread.start();
     }
 
-
-    private BitmapDescriptor bitmapDescriptorFromVector(Context context, @DrawableRes int vectorDrawableResourceId) {
-        Drawable background = ContextCompat.getDrawable(context, R.drawable.ic_marker);
-        background.setBounds(0, 0, background.getIntrinsicWidth(), background.getIntrinsicHeight());
-        Drawable vectorDrawable = ContextCompat.getDrawable(context, vectorDrawableResourceId);
-        vectorDrawable.setBounds(40, 20, vectorDrawable.getIntrinsicWidth() + 40, vectorDrawable.getIntrinsicHeight() + 20);
-        Bitmap bitmap = Bitmap.createBitmap(background.getIntrinsicWidth(), background.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-        background.draw(canvas);
-        vectorDrawable.draw(canvas);
-        return BitmapDescriptorFactory.fromBitmap(bitmap);
-    }
-
     private void dynamicDialog() {
         new CountDownTimer(5000, 1000) {
             @Override
@@ -362,6 +357,17 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 //        }
 //        return result;
 //    }
+
+    private BitmapDescriptor vectorToBitmap(@DrawableRes int id, @ColorInt int color) {
+        Drawable vectorDrawable = ResourcesCompat.getDrawable(getResources(), id, null);
+        Bitmap bitmap = Bitmap.createBitmap(vectorDrawable.getIntrinsicWidth(),
+                vectorDrawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        vectorDrawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+        DrawableCompat.setTint(vectorDrawable, color);
+        vectorDrawable.draw(canvas);
+        return BitmapDescriptorFactory.fromBitmap(bitmap);
+    }
 
 
 
