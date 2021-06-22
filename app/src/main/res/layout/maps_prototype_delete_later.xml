@@ -6,26 +6,19 @@
     android:layout_height="match_parent">
 
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:map="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        class="com.google.android.gms.maps.SupportMapFragment"
+    <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        map:cameraTargetLat="45.5017"
-        map:cameraTargetLng="-73.5673"
-        map:cameraZoom="1"
-        tools:context=".flightmap.FlightMap" />
+        android:layout_height="wrap_content"
+        android:text="click"/>
 
     <FrameLayout
         android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/flight_map_bottom_sheet_background"
         app:behavior_hideable="false"
-        app:behavior_peekHeight="700dp"
+        app:behavior_peekHeight="0dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
         <ImageView
@@ -71,7 +64,26 @@
                             android:paddingBottom="20dp"
                             android:text="@string/loading"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:gravity="center"
+                            android:src="@drawable/ic_marker_plane_black"
+                            android:paddingBottom="20dp"/>
+
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -92,7 +104,7 @@
                             android:paddingBottom="20dp"
                             android:text="@string/loading"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="20sp" />
 
 
                     </LinearLayout>
@@ -649,12 +661,12 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Special Purpose Indicator"
+                            android:text="Position source"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
                         <TextView
-                            android:id="@+id/spi"
+                            android:id="@+id/position_source"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -689,12 +701,12 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Position source"
+                            android:text="Special Purpose Indicator"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
                         <TextView
-                            android:id="@+id/position_source"
+                            android:id="@+id/spi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

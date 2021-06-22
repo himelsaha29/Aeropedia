@@ -20,7 +20,7 @@ public class BottomSheet extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.flight_map_bottom_sheet);
+        setContentView(R.layout.maps_prototype_delete_later);
         button = findViewById(R.id.button);
 
         FrameLayout bottomSheetLayout = findViewById(R.id.bottom_sheet);
@@ -29,7 +29,7 @@ public class BottomSheet extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bottomSheetBehavior.setPeekHeight(100);
+                bottomSheetBehavior.setPeekHeight(120);
             }
         });
 
