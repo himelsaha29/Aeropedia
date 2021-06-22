@@ -177,7 +177,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             public void onStateChanged(@NonNull View bottomSheet, int newState) {
                 if (newState == BottomSheetBehavior.STATE_COLLAPSED) {
                     bottomSheetBehavior.setPeekHeight(0, true);
-                    markerSelected.setIcon(markerPlaneBlack);
+                    if (markerSelected != null) {
+                        markerSelected.setIcon(markerPlaneBlack);
+                    }
                 }
             }
             @Override
@@ -195,7 +197,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 }
                 bottomSheetBehavior.setPeekHeight(110);
                 String snippet = marker.getSnippet();
-                System.out.println("callsign  ===  " + snippet);
                 // ======== LOADING ========
                 callsignTV.setText("Loading");
                 lamitude.setText("Loading");
