@@ -22,10 +22,10 @@
     <FrameLayout
         android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="match_parent"
         android:background="@drawable/flight_map_bottom_sheet_background"
         app:behavior_hideable="false"
-        app:behavior_peekHeight="500dp"
+        app:behavior_peekHeight="700dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
         <ImageView
@@ -38,137 +38,705 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="50dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingTop="50dp">
 
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content">
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:padding="10dp"
-                        android:layout_height="wrap_content">
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
                         <TextView
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:text="@string/loading"
-                            android:textSize="17sp"
-                            android:textColor="@color/white"
-                            android:fontFamily="@font/maven_pro_medium"
+                            android:id="@+id/origin_airport"
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:gravity="center"/>
-
-
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:paddingBottom="20dp"
+                            android:text="@string/loading"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="0dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:padding="10dip"
-                        android:layout_height="match_parent">
+                        android:orientation="vertical"
+                        android:padding="10dip">
 
                         <TextView
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:text="@string/loading"
-                            android:textSize="17sp"
-                            android:textColor="@color/white"
-                            android:fontFamily="@font/maven_pro_medium"
+                            android:id="@+id/destination_airport"
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:gravity="center"/>
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:paddingBottom="20dp"
+                            android:text="@string/loading"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
 
 
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_weight="1"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="0dp"
+                        android:layout_height="fill_parent"
                         android:layout_weight="1"
-                        android:padding="10dip"
-                        android:layout_height="fill_parent">
+                        android:orientation="vertical"
+                        android:padding="10dip">
 
                         <TextView
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:text="De Havilland DASH-800"
-                            android:textSize="17sp"
-                            android:textColor="@color/white"
-                            android:fontFamily="@font/maven_pro_medium"
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:gravity="center"/>
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Aircraft"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
 
                         <TextView
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:text="De Havilland DASH-800"
-                            android:textSize="17sp"
-                            android:textColor="@color/white"
-                            android:fontFamily="@font/maven_pro_medium"
+                            android:id="@+id/aircraft"
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:gravity="center"/>
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="0dp"
+                        android:layout_height="fill_parent"
                         android:layout_weight="1"
-                        android:padding="10dip"
-                        android:layout_height="fill_parent">
+                        android:orientation="vertical"
+                        android:padding="10dip">
 
                         <TextView
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:text="Bombardier"
-                            android:textSize="17sp"
-                            android:textColor="@color/white"
-                            android:fontFamily="@font/maven_pro_medium"
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:gravity="center"/>
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Airline"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
 
                         <TextView
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:text="Bombardier"
-                            android:textSize="17sp"
-                            android:textColor="@color/white"
-                            android:fontFamily="@font/maven_pro_medium"
+                            android:id="@+id/airline"
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:gravity="center"/>
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
                     </LinearLayout>
+
                 </LinearLayout>
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Engine type"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/engine_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Country of Reg."
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/country_of_reg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Callsign"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/callsign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="ICAO"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/icao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Geometric altitude"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/geometric_altitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Barometric altitude"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/barometric_altitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Velocity (m/s)"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/velocity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Vertical rate (m/s)"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/vertical_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Latitude"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/latitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Longitude"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/longitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="On ground"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/on_ground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Track"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/track"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Squawk"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/squawk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Special Purpose Indicator"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/spi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Position source"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/position_source"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="@string/loading"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:text="Airline"
+                            android:textColor="#72A8E1"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
             </LinearLayout>
         </LinearLayout>
 
     </FrameLayout>
-
-
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
