@@ -193,7 +193,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if (markerSelected != null) {
                     markerSelected.setIcon(markerPlaneBlack);
                 }
-                bottomSheetBehavior.setPeekHeight(100);
+                bottomSheetBehavior.setPeekHeight(110);
                 String snippet = marker.getSnippet();
                 System.out.println("callsign  ===  " + snippet);
                 // ======== LOADING ========
