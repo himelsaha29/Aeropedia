@@ -73,7 +73,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private TextView country;
     private TextView lamitude;
     private TextView lomgitude;
-    private TextView squawk;
+    private TextView airline;
+    private TextView engineType;
 
     private BitmapDescriptor markerPlaneBlack;
     private BitmapDescriptor markerPlaneRed;
@@ -142,7 +143,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         //country = findViewById(R.id.country);
         lamitude = findViewById(R.id.latitude);
         lomgitude = findViewById(R.id.longitude);
-        squawk = findViewById(R.id.squawk);
+        aircraft = findViewById(R.id.aircraft);
+        airline = findViewById(R.id.airline);
+        engineType = findViewById(R.id.engine_type);
 
         double latitude = 0.0;
         double longitude = 0.0;
@@ -204,7 +207,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 origin.setText("Loading");
                 destination.setText("Loading");
                 aircraft.setText("Loading");
-                squawk.setText("Loading");
+                //squawk.setText("Loading");
+                airline.setText("Loading");
+                engineType.setText("Loading");
+
                 // =========================
 
                 Thread thread = new Thread(new Runnable() {
@@ -230,7 +236,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 lomgitude.setText(String.valueOf(marker.getPosition().longitude));
                 origin.setText(flightRoute[0]);
                 destination.setText(flightRoute[1]);
-                squawk.setText(flightRoute[5]);
+                engineType.setText(flightRoute[4]);
+                airline.setText(flightRoute[5]);
 
                 if((flightRoute[2] + " " + flightRoute[3]).contains("N/A")) {
                     aircraft.setText("N/A");
