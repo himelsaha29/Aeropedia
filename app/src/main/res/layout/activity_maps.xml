@@ -25,11 +25,11 @@
         android:layout_height="wrap_content"
         android:background="@drawable/flight_map_bottom_sheet_background"
         app:behavior_hideable="false"
-        app:behavior_peekHeight="0dp"
+        app:behavior_peekHeight="450dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/ic_drag_handle" />
@@ -66,28 +66,6 @@
                 android:paddingTop="30dp"
                 android:fontFamily="@font/maven_pro_medium"
                 android:textSize="30sp"/>
-
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Paris"
-                android:paddingStart="30dp"
-                android:paddingEnd="30dp"
-                android:textAlignment="center"
-                android:fontFamily="@font/maven_pro_medium"
-                android:textSize="15sp"/>
-
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Montreal"
-                android:paddingStart="30dp"
-                android:paddingEnd="30dp"
-                android:textAlignment="center"
-                android:fontFamily="@font/maven_pro_medium"
-                android:textSize="15sp"/>
-
-
 
         </GridLayout>
 

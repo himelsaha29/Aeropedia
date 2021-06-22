@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        map:cameraTargetLat="45.5017"
+        map:cameraTargetLng="-73.5673"
+        map:cameraZoom="1"
+        tools:context=".flightmap.FlightMap" />
+
+    <FrameLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/flight_map_bottom_sheet_background"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="500dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_drag_handle" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="50dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:text="@string/loading"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="10dip"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:text="@string/loading"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="10dip"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:text="De Havilland DASH-800"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:text="De Havilland DASH-800"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="10dip"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:text="Bombardier"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:text="Bombardier"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
