@@ -139,7 +139,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         destination = findViewById(R.id.destination_airport);
         aircraft = findViewById(R.id.aircraft);
         callsignTV = findViewById(R.id.callsign);
-        country = findViewById(R.id.country);
+        //country = findViewById(R.id.country);
         lamitude = findViewById(R.id.latitude);
         lomgitude = findViewById(R.id.longitude);
         squawk = findViewById(R.id.squawk);
@@ -195,7 +195,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if (markerSelected != null) {
                     markerSelected.setIcon(markerPlaneBlack);
                 }
-                bottomSheetBehavior.setPeekHeight(110);
+                bottomSheetBehavior.setPeekHeight(120);
                 String snippet = marker.getSnippet();
                 // ======== LOADING ========
                 callsignTV.setText("Loading");
