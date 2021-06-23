@@ -1,7 +1,6 @@
 package com.himel.aeropedia.flightmap;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -15,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.airbnb.lottie.utils.Utils;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -37,9 +35,7 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
-import androidx.core.graphics.drawable.DrawableCompat;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -65,7 +61,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private NeumorphButton retry;
     private TextView loadingText;
     private BottomSheetBehavior bottomSheetBehavior;
-    private TextView icao;
+    private TextView icaoTV;
     private TextView origin;
     private TextView destination;
     private TextView aircraft;
@@ -77,6 +73,13 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private TextView engineType;
     private TextView baroAltitudeTV;
     private TextView geoAltitudeTV;
+    private TextView onGroundTv;
+    private TextView velocityTV;
+    private TextView verticalRateTV;
+    private TextView trackTV;
+    private TextView squawkTV;
+    private TextView spiTV;
+    private TextView positionSourceTV;
 
     private BitmapDescriptor markerPlaneBlack;
     private BitmapDescriptor markerPlaneRed;
@@ -88,6 +91,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         getCoordinates();
         // This contains the MapView in XML and needs to be called after the access token is configured.
         setContentView(R.layout.activity_maps);
@@ -122,17 +126,27 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
 
-        icao = findViewById(R.id.icao);
+
+        icaoTV = findViewById(R.id.icao);
         origin = findViewById(R.id.origin_airport);
         destination = findViewById(R.id.destination_airport);
         aircraft = findViewById(R.id.aircraft);
         callsignTV = findViewById(R.id.callsign);
-        //country = findViewById(R.id.country);
+        country = findViewById(R.id.country_of_reg);
         lamitude = findViewById(R.id.latitude);
         lomgitude = findViewById(R.id.longitude);
-        aircraft = findViewById(R.id.aircraft);
         airline = findViewById(R.id.airline);
         engineType = findViewById(R.id.engine_type);
+        baroAltitudeTV = findViewById(R.id.barometric_altitude);
+        geoAltitudeTV = findViewById(R.id.geometric_altitude);
+        onGroundTv = findViewById(R.id.on_ground);
+        velocityTV = findViewById(R.id.velocity);
+        verticalRateTV = findViewById(R.id.vertical_rate);
+        trackTV = findViewById(R.id.track);
+        squawkTV = findViewById(R.id.squawk);
+        spiTV = findViewById(R.id.spi);
+        positionSourceTV = findViewById(R.id.position_source);
+
 
         double latitude = 0.0;
         double longitude = 0.0;
@@ -292,22 +306,32 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 bottomSheetBehavior.setPeekHeight(120);
                 String snippet = marker.getSnippet();
                 // ======== LOADING ========
-                callsignTV.setText("Loading");
-                lamitude.setText("Loading");
-                lomgitude.setText("Loading");
-                origin.setText("Loading");
-                destination.setText("Loading");
-                aircraft.setText("Loading");
-                //squawk.setText("Loading");
-                airline.setText("Loading");
-                engineType.setText("Loading");
-
+                icaoTV.setText(R.string.loading);
+                origin.setText(R.string.loading);
+                destination.setText(R.string.loading);
+                aircraft.setText(R.string.loading);
+                callsignTV.setText(R.string.loading);
+                country.setText(R.string.loading);
+                lamitude.setText(R.string.loading);
+                lomgitude.setText(R.string.loading);
+                airline.setText(R.string.loading);
+                engineType.setText(R.string.loading);
+                baroAltitudeTV.setText(R.string.loading);
+                geoAltitudeTV.setText(R.string.loading);
+                onGroundTv.setText(R.string.loading);
+                velocityTV.setText(R.string.loading);
+                verticalRateTV.setText(R.string.loading);
+                squawkTV.setText(R.string.loading);
+                spiTV.setText(R.string.loading);
+                positionSourceTV.setText(R.string.loading);
                 // =========================
+
+                String[] markerInfo = hashMap.get(marker.getSnippet());
 
                 Thread thread = new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        flightRoute = route.getRoute(snippet);
+                        flightRoute = route.getRoute(markerInfo[0]);
                     }
                 });
 
@@ -320,21 +344,36 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     e.printStackTrace();
                 }
 
+
                 markerSelected = marker;
-                marker.setIcon(markerPlaneRed); // NOT WORKING
-                callsignTV.setText(marker.getSnippet());
-                lamitude.setText(String.valueOf(marker.getPosition().latitude));
-                lomgitude.setText(String.valueOf(marker.getPosition().longitude));
+                marker.setIcon(markerPlaneRed);
+
+                icaoTV.setText(marker.getSnippet());
                 origin.setText(flightRoute[0]);
                 destination.setText(flightRoute[1]);
-                engineType.setText(flightRoute[4]);
-                airline.setText(flightRoute[5]);
 
                 if((flightRoute[2] + " " + flightRoute[3]).contains("N/A")) {
                     aircraft.setText("N/A");
                 } else {
                     aircraft.setText(flightRoute[2] + " " + flightRoute[3]);
                 }
+
+                callsignTV.setText(markerInfo[0]);
+                country.setText(markerInfo[1]);
+                lamitude.setText(String.valueOf(marker.getPosition().latitude));
+                lomgitude.setText(String.valueOf(marker.getPosition().longitude));
+                airline.setText(flightRoute[5]);
+                engineType.setText(flightRoute[4]);
+                baroAltitudeTV.setText(markerInfo[2]);
+                geoAltitudeTV.setText(markerInfo[3]);
+                onGroundTv.setText(markerInfo[4]);
+                velocityTV.setText(markerInfo[5]);
+                verticalRateTV.setText(markerInfo[6]);
+                trackTV.setText(String.valueOf(marker.getRotation()) + "°");
+                squawkTV.setText(markerInfo[7]);
+                spiTV.setText(markerInfo[8]);
+                positionSourceTV.setText(markerInfo[9]);
+
                 return true;
             }
         });
