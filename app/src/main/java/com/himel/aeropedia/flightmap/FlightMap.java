@@ -29,6 +29,7 @@ import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.Global;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -57,14 +58,13 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
     private static final String BASE_URL = "https://opensky-network.org/api";
 
-    private List<JSONArray> sv = new ArrayList<>();
-
+    private List<JSONArray> responseArray = new ArrayList<>();
+    private HashMap<String, String[]> hashMap = new HashMap<>();
     private GoogleMap mMap;
     private Dialog dialog;
     private NeumorphButton retry;
     private TextView loadingText;
     private BottomSheetBehavior bottomSheetBehavior;
-    //private Button button;
     private TextView icao;
     private TextView origin;
     private TextView destination;
@@ -75,6 +75,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private TextView lomgitude;
     private TextView airline;
     private TextView engineType;
+    private TextView baroAltitudeTV;
+    private TextView geoAltitudeTV;
 
     private BitmapDescriptor markerPlaneBlack;
     private BitmapDescriptor markerPlaneRed;
@@ -89,7 +91,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         getCoordinates();
         // This contains the MapView in XML and needs to be called after the access token is configured.
         setContentView(R.layout.activity_maps);
-        //button = findViewById(R.id.button);
 
         dialog = new Dialog(FlightMap.this);
         dialog.setContentView(R.layout.activity_map_loading_dialog);
@@ -115,20 +116,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         markerPlaneBlack = vectorToBitmap(R.drawable.ic_marker_plane_black, Color.BLACK);
         markerPlaneRed = vectorToBitmap(R.drawable.ic_marker_plane_red, Color.RED);
 
-
-
-
-
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                bottomSheetBehavior.setPeekHeight(100);
-//            }
-//        });
-
-
-        //bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-
     }
 
     @Override
@@ -150,23 +137,127 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         double latitude = 0.0;
         double longitude = 0.0;
         float true_track = 0.0f;
+        String icao = null;
         String callsign = null;
+        String countryOfReg = null;
+        float baro_altitude = 0.0f;
+        float geo_altitude = 0.0f;
+        boolean onGround;
+        float velocity = 0.0f;
+        float verticalRate = 0.0f;
+        String squawk = null;
+        boolean spi;
+        int positionSource = 0;
 
-        for(int i = 0; i < sv.size(); i++) {
+
+        // adding Markers
+
+        for(int i = 0; i < responseArray.size(); i++) {
             try {
-                latitude = (double) sv.get(i).getDouble(6);
-                longitude = (double) sv.get(i).getDouble(5);
-                true_track = (float) sv.get(i).getDouble(10);
+                latitude = (double) responseArray.get(i).getDouble(6);
+                longitude = (double) responseArray.get(i).getDouble(5);
+                true_track = (float) responseArray.get(i).getDouble(10);
+                icao = responseArray.get(i).getString(0);
 
-                callsign = sv.get(i).getString(1);
-                if (callsign == null) System.out.println("ICAO24 IS NULL");
+                if (icao == null) System.out.println("ICAO24 IS NULL");
                 LatLng latLng = new LatLng(latitude, longitude);
                 mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f,0.5f)
-                        .rotation(true_track).icon(markerPlaneBlack).snippet(callsign));
+                        .rotation(true_track).icon(markerPlaneBlack).snippet(icao));
+
+                try {
+                    callsign = responseArray.get(i).getString(1);
+                } catch (Exception e) {
+                    callsign = "N/A";
+                }
+                try {
+                    countryOfReg = responseArray.get(i).getString(2);
+                } catch (Exception e) {
+                    countryOfReg = "N/A";
+                }
+                try {
+                    baro_altitude = (float) responseArray.get(i).getDouble(7);
+                } catch (Exception e) {
+                    baro_altitude = -0.10169f;
+                }
+                try {
+                    geo_altitude = (float) responseArray.get(i).getDouble(13);
+                } catch (Exception e) {
+                    geo_altitude = -0.10169f;
+                }
+                try {
+                    onGround = responseArray.get(i).getBoolean(8);
+                } catch (Exception e) {
+                    onGround = false;
+                }
+                try {
+                    velocity = (float) responseArray.get(i).getDouble(9);
+                } catch (Exception e) {
+                    velocity = -0.10169f;
+                }
+                try {
+                    verticalRate = (float) responseArray.get(i).getDouble(11);
+                } catch (Exception e) {
+                    verticalRate = -0.10169f;
+                }
+                try {
+                    squawk = responseArray.get(i).getString(14);
+                } catch (Exception e) {
+                    squawk = "N/A";
+                }
+                try {
+                    spi = responseArray.get(i).getBoolean(15);
+                } catch (Exception e) {
+                    spi = false;
+                }
+                try {
+                    positionSource = responseArray.get(i).getInt(16);
+                } catch (Exception e) {
+                    positionSource = -1;
+                }
+
+                String[] storeInMap = new String[10];
+                storeInMap[0] = callsign;
+                storeInMap[1] = countryOfReg;
+                if(baro_altitude == -0.10169f) {
+                    storeInMap[2] = "N/A";
+                } else {
+                    storeInMap[2] = String.valueOf(baro_altitude);
+                }
+                if(geo_altitude == -0.10169f) {
+                    storeInMap[3] = "N/A";
+                } else {
+                    storeInMap[3] = String.valueOf(geo_altitude);
+                }
+                storeInMap[4] = String.valueOf(onGround);
+                if(velocity == -0.10169f) {
+                    storeInMap[5] = "N/A";
+                } else {
+                    storeInMap[5] = String.valueOf(velocity);
+                }
+                if(verticalRate == -0.10169f) {
+                    storeInMap[6] = "N/A";
+                } else {
+                    storeInMap[6] = String.valueOf(verticalRate);
+                }
+                storeInMap[7] = squawk;
+                storeInMap[8] = String.valueOf(spi);
+                if(positionSource == 0) {
+                    storeInMap[9] = "ADS-B";
+                } else if (positionSource == 1) {
+                    storeInMap[9] = "ASTERIX";
+                } else if (positionSource == 2) {
+                    storeInMap[9] = "MLAT";
+                } else {
+                    storeInMap[9] = "N/A";
+                }
+
+                hashMap.put(icao, storeInMap);
+
+
             } catch (JSONException e) {
                 e.printStackTrace();
             } catch (Exception e) {
-                System.out.println("Callsign EXCEPTION");
+                System.out.println("Marker add EXCEPTION");
                 e.printStackTrace();
                 e.getMessage();
             }
@@ -305,10 +396,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                 int time = jsonObject.getInt("time");
                                 System.out.println("TIME === " +  time);
                                 for (int i = 0; i < jsonArray.length(); i++) {
-                                    sv.add(jsonArray.getJSONArray(i));
+                                    responseArray.add(jsonArray.getJSONArray(i));
                                 }
                                 System.out.println((jsonArray.get(0)).getClass());
-                                System.out.println("SV size after filling = " + sv.size());
+                                System.out.println("SV size after filling = " + responseArray.size());
                                 System.out.println(jsonArray.length());
                                 System.out.println("jsonARRAY CONTENT : " + jsonArray.getJSONArray(0));
                             } catch (JSONException e) {
