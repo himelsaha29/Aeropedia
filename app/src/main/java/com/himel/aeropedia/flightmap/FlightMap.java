@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -89,6 +90,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private BitmapDescriptor markerPlaneRed;
     private Marker markerSelected;
     private Button button;
+    private ProgressBar progressBar;
 
     Route route = new Route();
     String[] flightRoute;
@@ -127,6 +129,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         markerPlaneRed = vectorToBitmap(R.drawable.ic_marker_plane_red);
 
         button = findViewById(R.id.button);
+        progressBar = findViewById(R.id.progress_bar);
         button.getBackground().setAlpha(45);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -547,6 +550,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
 
     private void updateRequest(){
+        System.out.println("Updating...");
+        progressBar.setVisibility(View.VISIBLE);
+        button.setVisibility(View.GONE);
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -774,6 +780,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 e.getMessage();
             }
         }
+        progressBar.setVisibility(View.GONE);
+        button.setVisibility(View.VISIBLE);
     }
 
 }

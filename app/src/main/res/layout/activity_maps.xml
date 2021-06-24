@@ -766,7 +766,15 @@
         android:text="LIVE"
         android:background="@drawable/live_button_background"
         android:layout_gravity="right"
+        android:visibility="visible"
         android:textSize="10sp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:visibility="gone"/>
 
 
 
