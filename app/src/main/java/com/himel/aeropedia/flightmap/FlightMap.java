@@ -95,13 +95,14 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
 
+        super.onCreate(savedInstanceState);
+        dialog = new Dialog(FlightMap.this);
         getCoordinates();
         // This contains the MapView in XML and needs to be called after the access token is configured.
         setContentView(R.layout.activity_maps);
 
-        dialog = new Dialog(FlightMap.this);
+
         dialog.setContentView(R.layout.activity_map_loading_dialog);
         dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
         dialog.getWindow().setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.95), ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -193,7 +194,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if (icao == null) System.out.println("ICAO24 IS NULL");
                 LatLng latLng = new LatLng(latitude, longitude);
                 Marker marker = mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f,0.5f)
-                        .rotation(true_track).icon(markerPlaneBlack).snippet(icao));
+                        .rotation(true_track).icon(markerPlaneBlack).snippet(icao).flat(true));
 
                 if (!markerTracker.containsKey(icao)) {
                     markerTracker.put(icao, marker);
@@ -492,8 +493,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                 }
                             });
 
+                            if(dialog != null) {
+                                dialog.dismiss();
+                            }
+
                         }
-                        dialog.dismiss();
+
                     }
                 });
             }
@@ -647,7 +652,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if (!markerTracker.containsKey(icao)) {
                     LatLng latLng = new LatLng(latitude, longitude);
                     Marker marker = mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f,0.5f)
-                            .rotation(true_track).icon(markerPlaneBlack).snippet(icao));
+                            .rotation(true_track).icon(markerPlaneBlack).snippet(icao).flat(true));
 
                     markerTracker.put(icao, marker);
                 } else {
@@ -768,6 +773,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 e.getMessage();
             }
         }
+
+        updateRequest();
+
     }
 
 }
