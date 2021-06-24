@@ -180,6 +180,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
                 try {
                     callsign = responseArray.get(i).getString(1);
+                    if(callsign == null || callsign.equalsIgnoreCase("null")) {
+                        callsign = "N/A";
+                    }
                 } catch (Exception e) {
                     callsign = "N/A";
                 }
@@ -215,6 +218,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 }
                 try {
                     squawk = responseArray.get(i).getString(14);
+                    if(squawk == null || squawk.equalsIgnoreCase("null")) {
+                        squawk = "N/A";
+                    }
                 } catch (Exception e) {
                     squawk = "N/A";
                 }
@@ -242,7 +248,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 } else {
                     storeInMap[3] = String.valueOf(geo_altitude);
                 }
-                storeInMap[4] = String.valueOf(onGround);
+                String tempOnGround = String.valueOf(onGround);
+                storeInMap[4] = tempOnGround.substring(0, 1).toUpperCase() + tempOnGround.substring(1, tempOnGround.trim().length());
                 if(velocity == -0.10169f) {
                     storeInMap[5] = "N/A";
                 } else {
@@ -254,7 +261,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     storeInMap[6] = String.valueOf(verticalRate);
                 }
                 storeInMap[7] = squawk;
-                storeInMap[8] = String.valueOf(spi);
+
+                String tempSpi = String.valueOf(spi);
+                storeInMap[8] = tempSpi.substring(0, 1).toUpperCase() + tempSpi.substring(1, tempSpi.trim().length());
                 if(positionSource == 0) {
                     storeInMap[9] = "ADS-B";
                 } else if (positionSource == 1) {
@@ -371,6 +380,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 verticalRateTV.setText(markerInfo[6]);
                 trackTV.setText(String.valueOf(marker.getRotation()) + "°");
                 squawkTV.setText(markerInfo[7]);
+                System.out.println("sQUAWK = " + markerInfo[7]);
                 spiTV.setText(markerInfo[8]);
                 positionSourceTV.setText(markerInfo[9]);
 
@@ -492,13 +502,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
-//    private int responseCount(Response response) {
-//        int result = 1;
-//        while ((response = response.priorResponse()) != null) {
-//            result++;
-//        }
-//        return result;
-//    }
 
     private BitmapDescriptor vectorToBitmap(@DrawableRes int id, @ColorInt int color) {
         Drawable vectorDrawable = ResourcesCompat.getDrawable(getResources(), id, null);
