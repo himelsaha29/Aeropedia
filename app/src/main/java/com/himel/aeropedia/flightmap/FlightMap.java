@@ -2,6 +2,7 @@ package com.himel.aeropedia.flightmap;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -11,6 +12,7 @@ import android.os.CountDownTimer;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -24,6 +26,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.alexa.Global;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -56,6 +59,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
     private List<JSONArray> responseArray = new ArrayList<>();
     private HashMap<String, String[]> hashMap = new HashMap<>();
+    private HashMap<String, Marker> markerTracker = new HashMap<>();
     private GoogleMap mMap;
     private Dialog dialog;
     private NeumorphButton retry;
@@ -84,6 +88,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private BitmapDescriptor markerPlaneBlack;
     private BitmapDescriptor markerPlaneRed;
     private Marker markerSelected;
+    private Button button;
 
     Route route = new Route();
     String[] flightRoute;
@@ -117,8 +122,18 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         });
         dynamicDialog();
 
-        markerPlaneBlack = vectorToBitmap(R.drawable.ic_marker_plane_black, Color.BLACK);
-        markerPlaneRed = vectorToBitmap(R.drawable.ic_marker_plane_red, Color.RED);
+        markerPlaneBlack = vectorToBitmap(R.drawable.ic_marker_plane_black);
+        markerPlaneRed = vectorToBitmap(R.drawable.ic_marker_plane_red);
+
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                updateRequest();
+            }
+        });
 
     }
 
@@ -148,6 +163,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         positionSourceTV = findViewById(R.id.position_source);
 
 
+
+
         double latitude = 0.0;
         double longitude = 0.0;
         float true_track = 0.0f;
@@ -175,8 +192,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
                 if (icao == null) System.out.println("ICAO24 IS NULL");
                 LatLng latLng = new LatLng(latitude, longitude);
-                mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f,0.5f)
+                Marker marker = mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f,0.5f)
                         .rotation(true_track).icon(markerPlaneBlack).snippet(icao));
+
+                if (!markerTracker.containsKey(icao)) {
+                    markerTracker.put(icao, marker);
+                }
 
                 try {
                     callsign = responseArray.get(i).getString(1);
@@ -507,7 +528,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     }
 
 
-    private BitmapDescriptor vectorToBitmap(@DrawableRes int id, @ColorInt int color) {
+    private BitmapDescriptor vectorToBitmap(@DrawableRes int id) {
         Drawable vectorDrawable = ResourcesCompat.getDrawable(getResources(), id, null);
         Bitmap bitmap = Bitmap.createBitmap(vectorDrawable.getIntrinsicWidth(),
                 vectorDrawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
@@ -519,5 +540,234 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     }
 
 
+    private void updateRequest(){
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                OkHttpClient.Builder builder = new OkHttpClient.Builder();
+
+                builder.connectTimeout(30, TimeUnit.SECONDS);
+                builder.readTimeout(30, TimeUnit.SECONDS);
+                builder.writeTimeout(30, TimeUnit.SECONDS);
+                String credential = Credentials.basic(Global.username, Global.password);
+                OkHttpClient client = builder.build();
+
+                String url = BASE_URL + "/states/all";
+                Request request = new Request.Builder()
+                        .url(url)
+                        .header("Authorization", credential)
+                        .build();
+                client.newCall(request).enqueue(new Callback() {
+                    @Override
+                    public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                        updateRequest();
+
+                        e.printStackTrace();
+                        System.out.println("OKHTTP UPDATE : FAILED");
+                    }
+
+                    @Override
+                    public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                        if (response.isSuccessful()) {
+                            String responseData = response.body().string();
+                            try {
+                                JSONObject jsonObject = new JSONObject(responseData);
+                                System.out.println(jsonObject);
+                                JSONArray jsonArray = jsonObject.getJSONArray("states");
+                                int time = jsonObject.getInt("time");
+                                System.out.println("TIME === " +  time);
+
+                                try {
+                                    for (int i = 0; i < jsonArray.length(); i++) {
+                                        responseArray.add(jsonArray.getJSONArray(i));
+                                    }
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+
+                                System.out.println((jsonArray.get(0)).getClass());
+                                System.out.println("SV size after filling = " + responseArray.size());
+                                System.out.println(jsonArray.length());
+                                System.out.println("jsonARRAY CONTENT : " + jsonArray.getJSONArray(0));
+                            } catch (JSONException e) {
+                                System.out.println("JSONARRAY EXCEPTION: === " + e.getMessage());
+                                e.printStackTrace();
+                            }
+
+
+                            FlightMap.this.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    parseJSONResponse();
+                                }
+                            });
+
+
+
+
+                        }
+                    }
+                });
+            }
+
+        });
+
+
+        thread.start();
+    }
+
+    private void parseJSONResponse() {
+
+        double latitude = 0.0;
+        double longitude = 0.0;
+        float true_track = 0.0f;
+        String icao = null;
+        String callsign = null;
+        String countryOfReg = null;
+        float baro_altitude = 0.0f;
+        float geo_altitude = 0.0f;
+        boolean onGround;
+        float velocity = 0.0f;
+        float verticalRate = 0.0f;
+        String squawk = null;
+        boolean spi;
+        int positionSource = 0;
+
+        for(int i = 0; i < responseArray.size(); i++) {
+            try {
+                latitude = (double) responseArray.get(i).getDouble(6);
+                longitude = (double) responseArray.get(i).getDouble(5);
+                true_track = (float) responseArray.get(i).getDouble(10);
+                icao = responseArray.get(i).getString(0);
+
+                if (icao == null) System.out.println("ICAO24 IS NULL");
+
+
+                if (!markerTracker.containsKey(icao)) {
+                    LatLng latLng = new LatLng(latitude, longitude);
+                    Marker marker = mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f,0.5f)
+                            .rotation(true_track).icon(markerPlaneBlack).snippet(icao));
+
+                    markerTracker.put(icao, marker);
+                } else {
+                    LatLng latLngNew = new LatLng(latitude, longitude);
+                    Marker m = markerTracker.get(icao);
+                    m.setPosition(latLngNew);
+                    m.setRotation(true_track);
+                }
+
+                try {
+                    callsign = responseArray.get(i).getString(1);
+                    if(callsign == null || callsign.equalsIgnoreCase("null")) {
+                        callsign = "N/A";
+                    } else {
+                        callsign = callsign.trim();
+                    }
+                } catch (Exception e) {
+                    callsign = "N/A";
+                }
+                try {
+                    countryOfReg = responseArray.get(i).getString(2);
+                } catch (Exception e) {
+                    countryOfReg = "N/A";
+                }
+                try {
+                    baro_altitude = (float) responseArray.get(i).getDouble(7);
+                } catch (Exception e) {
+                    baro_altitude = -0.10169f;
+                }
+                try {
+                    geo_altitude = (float) responseArray.get(i).getDouble(13);
+                } catch (Exception e) {
+                    geo_altitude = -0.10169f;
+                }
+                try {
+                    onGround = responseArray.get(i).getBoolean(8);
+                } catch (Exception e) {
+                    onGround = false;
+                }
+                try {
+                    velocity = (float) responseArray.get(i).getDouble(9);
+                } catch (Exception e) {
+                    velocity = -0.10169f;
+                }
+                try {
+                    verticalRate = (float) responseArray.get(i).getDouble(11);
+                } catch (Exception e) {
+                    verticalRate = -0.10169f;
+                }
+                try {
+                    squawk = responseArray.get(i).getString(14);
+                    if(squawk == null || squawk.equalsIgnoreCase("null")) {
+                        squawk = "N/A";
+                    } else {
+                        squawk = squawk.trim();
+                    }
+                } catch (Exception e) {
+                    squawk = "N/A";
+                }
+                try {
+                    spi = responseArray.get(i).getBoolean(15);
+                } catch (Exception e) {
+                    spi = false;
+                }
+                try {
+                    positionSource = responseArray.get(i).getInt(16);
+                } catch (Exception e) {
+                    positionSource = -1;
+                }
+
+                String[] storeInMap = new String[10];
+                storeInMap[0] = callsign;
+                storeInMap[1] = countryOfReg;
+                if(baro_altitude == -0.10169f) {
+                    storeInMap[2] = "N/A";
+                } else {
+                    storeInMap[2] = String.valueOf(baro_altitude);
+                }
+                if(geo_altitude == -0.10169f) {
+                    storeInMap[3] = "N/A";
+                } else {
+                    storeInMap[3] = String.valueOf(geo_altitude);
+                }
+                String tempOnGround = String.valueOf(onGround);
+                storeInMap[4] = tempOnGround.substring(0, 1).toUpperCase() + tempOnGround.substring(1, tempOnGround.trim().length());
+                if(velocity == -0.10169f) {
+                    storeInMap[5] = "N/A";
+                } else {
+                    storeInMap[5] = String.valueOf(velocity);
+                }
+                if(verticalRate == -0.10169f) {
+                    storeInMap[6] = "N/A";
+                } else {
+                    storeInMap[6] = String.valueOf(verticalRate);
+                }
+                storeInMap[7] = squawk;
+
+                String tempSpi = String.valueOf(spi);
+                storeInMap[8] = tempSpi.substring(0, 1).toUpperCase() + tempSpi.substring(1, tempSpi.trim().length());
+                if(positionSource == 0) {
+                    storeInMap[9] = "ADS-B";
+                } else if (positionSource == 1) {
+                    storeInMap[9] = "ASTERIX";
+                } else if (positionSource == 2) {
+                    storeInMap[9] = "MLAT";
+                } else {
+                    storeInMap[9] = "N/A";
+                }
+
+                hashMap.put(icao, storeInMap);
+
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                System.out.println("Marker add EXCEPTION");
+                e.printStackTrace();
+                e.getMessage();
+            }
+        }
+    }
 
 }
