@@ -760,10 +760,13 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UPDATE"
-        android:textSize="20sp"/>
+        android:drawableLeft="@drawable/live_icon"
+        android:text="LIVE"
+        android:background="@drawable/live_button_background"
+        android:layout_gravity="right"
+        android:textSize="10sp"/>
 
 
 

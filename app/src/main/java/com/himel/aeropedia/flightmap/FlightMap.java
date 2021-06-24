@@ -127,6 +127,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         markerPlaneRed = vectorToBitmap(R.drawable.ic_marker_plane_red);
 
         button = findViewById(R.id.button);
+        button.getBackground().setAlpha(45);
 
         button.setOnClickListener(new View.OnClickListener() {
 
@@ -773,9 +774,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 e.getMessage();
             }
         }
-
-        updateRequest();
-
     }
 
 }
