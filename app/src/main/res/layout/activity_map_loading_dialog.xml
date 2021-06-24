@@ -19,16 +19,20 @@
         android:padding="5dp">
 
 
-        <ProgressBar
+        <com.airbnb.lottie.LottieAnimationView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:outlineAmbientShadowColor="#72A8E1"
-            android:elevation="5dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            app:lottie_scale="0.2"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H, 1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:padding="30dp"/>
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/quantum_redef" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
