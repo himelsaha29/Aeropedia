@@ -125,7 +125,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
-
+        mMap.setMinZoomPreference(3.5f);
 
         icaoTV = findViewById(R.id.icao);
         origin = findViewById(R.id.origin_airport);

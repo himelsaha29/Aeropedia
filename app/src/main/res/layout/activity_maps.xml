@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         map:cameraTargetLat="45.5017"
         map:cameraTargetLng="-73.5673"
-        map:cameraZoom="1"
+        map:cameraZoom="3.5"
         tools:context=".flightmap.FlightMap" />
 
     <FrameLayout
