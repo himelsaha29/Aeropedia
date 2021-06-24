@@ -182,6 +182,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     callsign = responseArray.get(i).getString(1);
                     if(callsign == null || callsign.equalsIgnoreCase("null")) {
                         callsign = "N/A";
+                    } else {
+                        callsign = callsign.trim();
                     }
                 } catch (Exception e) {
                     callsign = "N/A";
@@ -220,6 +222,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     squawk = responseArray.get(i).getString(14);
                     if(squawk == null || squawk.equalsIgnoreCase("null")) {
                         squawk = "N/A";
+                    } else {
+                        squawk = squawk.trim();
                     }
                 } catch (Exception e) {
                     squawk = "N/A";
