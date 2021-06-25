@@ -476,6 +476,24 @@
 
     <string name="loading">Loading</string>
 
+    <string name="aircraft">Aircraft</string>
+    <string name="airline">Airline</string>
+    <string name="engine_type">Engine type</string>
+    <string name="country">Country of reg.</string>
+    <string name="callsign">Callsign</string>
+    <string name="icao">ICAO</string>
+    <string name="geo_altitude">Geometric altitude</string>
+    <string name="baro_altitude">Barometric altitude</string>
+    <string name="velocity">Velocity (m/s)</string>
+    <string name="vertical_rate">Vertical rate (m/s))</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="on_ground">On Ground</string>
+    <string name="track">Track</string>
+    <string name="squawk">Squawk</string>
+    <string name="pos_source">Position source</string>
+    <string name="spi">Special Purpose Indicator</string>
+
 
 
 </resources>

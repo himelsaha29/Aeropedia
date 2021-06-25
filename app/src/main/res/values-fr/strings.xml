@@ -480,4 +480,22 @@
     <string name="connection_timed_out">Oups la connexion a expiré</string>
 
     <string name="loading">Chargement</string>
+
+    <string name="aircraft">Avion</string>
+    <string name="airline">Compagnie aérienne</string>
+    <string name="engine_type">Type de moteur</string>
+    <string name="country">Pays d\'immatriculation</string>
+    <string name="callsign">Callsign</string>
+    <string name="icao">ICAO</string>
+    <string name="geo_altitude">Altitude géométrique</string>
+    <string name="baro_altitude">Altitude barométrique</string>
+    <string name="velocity">Vitesse (m/s)</string>
+    <string name="vertical_rate">Vitesse verticale (m/s))</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="on_ground">Sur le sol</string>
+    <string name="track">Route</string>
+    <string name="squawk">Squawk</string>
+    <string name="pos_source">Source du position</string>
+    <string name="spi">Indicateur à usage spécial</string>
 </resources>
