@@ -2,7 +2,6 @@ package com.himel.aeropedia.flightmap;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -31,10 +30,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PatternItem;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
-import com.google.android.gms.maps.model.RoundCap;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.himel.aeropedia.R;
-import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.alexa.Global;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,7 +40,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -100,7 +96,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private BitmapDescriptor markerPlaneBlack;
     private BitmapDescriptor markerPlaneRed;
     private Marker markerSelected;
-    private Button button;
+    private Button liveButton;
     private ProgressBar progressBar;
 
     Route route = new Route();
@@ -141,15 +137,18 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         markerPlaneBlack = vectorToBitmap(R.drawable.ic_marker_plane_black);
         markerPlaneRed = vectorToBitmap(R.drawable.ic_marker_plane_red);
 
-        button = findViewById(R.id.button);
+        liveButton = findViewById(R.id.button);
         progressBar = findViewById(R.id.progress_bar);
-        button.getBackground().setAlpha(45);
+        liveButton.getBackground().setAlpha(45);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        liveButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 updateRequest();
+                if(polyline != null) {
+                    polyline.remove();
+                }
             }
         });
 
@@ -339,9 +338,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     bottomSheetBehavior.setPeekHeight(0, true);
                     if (markerSelected != null) {
                         markerSelected.setIcon(markerPlaneBlack);
-                        if(polyline != null) {
-                            polyline.remove();
-                        }
+                    }
+                    if(polyline != null) {
+                        polyline.remove();
                     }
                 }
             }
@@ -357,6 +356,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             public boolean onMarkerClick(Marker marker) {
                 if (markerSelected != null) {
                     markerSelected.setIcon(markerPlaneBlack);
+                }
+                if(polyline != null) {
+                    polyline.remove();
                 }
                 bottomSheetBehavior.setPeekHeight(120);
                 String snippet = marker.getSnippet();
@@ -452,9 +454,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     if(flightTrack[0].equalsIgnoreCase("true")) {
                         Float destinationAirportLat = Float.valueOf(flightTrack[1]);
                         Float destinationAirportLong = Float.valueOf(flightTrack[2]);
-                        if(polyline != null) {
-                            polyline.remove();
-                        }
+
                         polyline = mMap.addPolyline(new PolylineOptions()
                                 .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
                                 .width(7)
@@ -602,7 +602,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private void updateRequest(){
         System.out.println("Updating...");
         progressBar.setVisibility(View.VISIBLE);
-        button.setVisibility(View.GONE);
+        liveButton.setVisibility(View.GONE);
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -831,7 +831,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             }
         }
         progressBar.setVisibility(View.GONE);
-        button.setVisibility(View.VISIBLE);
+        liveButton.setVisibility(View.VISIBLE);
     }
 
 }
