@@ -22,15 +22,20 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Dash;
+import com.google.android.gms.maps.model.Dot;
+import com.google.android.gms.maps.model.Gap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PatternItem;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.alexa.Global;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -57,6 +62,9 @@ import soup.neumorphism.NeumorphButton;
 public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
     private static final String BASE_URL = "https://opensky-network.org/api";
+
+    private List<PatternItem> pattern = Arrays.asList(
+            new Dot(), new Gap(20), new Dash(30), new Gap(20));
 
     private List<JSONArray> responseArray = new ArrayList<>();
     private HashMap<String, String[]> hashMap = new HashMap<>();

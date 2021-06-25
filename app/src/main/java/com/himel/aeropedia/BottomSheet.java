@@ -19,10 +19,16 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Dash;
+import com.google.android.gms.maps.model.Dot;
+import com.google.android.gms.maps.model.Gap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PatternItem;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.Global;
@@ -30,6 +36,7 @@ import com.himel.aeropedia.flightmap.Route;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -409,6 +416,19 @@ public class BottomSheet extends AppCompatActivity implements OnMapReadyCallback
                 putMarkers(coordList);
             }
         });
+
+        List<PatternItem> pattern = Arrays.asList(
+                new Dot(), new Gap(20), new Dash(30), new Gap(20));
+
+
+        Polyline polyline = mMap.addPolyline(new PolylineOptions()
+                .add(new LatLng(45.5017, -73.5673), new LatLng(25.2854, 51.5310))
+                .width(7)
+                .pattern(pattern)
+                .color(Color.BLUE)
+                .geodesic(true));
+
+
     }
 
 
