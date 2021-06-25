@@ -31,6 +31,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PatternItem;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.android.gms.maps.model.RoundCap;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA350;
@@ -338,6 +339,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     bottomSheetBehavior.setPeekHeight(0, true);
                     if (markerSelected != null) {
                         markerSelected.setIcon(markerPlaneBlack);
+                        if(polyline != null) {
+                            polyline.remove();
+                        }
                     }
                 }
             }
@@ -448,6 +452,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     if(flightTrack[0].equalsIgnoreCase("true")) {
                         Float destinationAirportLat = Float.valueOf(flightTrack[1]);
                         Float destinationAirportLong = Float.valueOf(flightTrack[2]);
+                        if(polyline != null) {
+                            polyline.remove();
+                        }
                         polyline = mMap.addPolyline(new PolylineOptions()
                                 .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
                                 .width(7)
