@@ -29,6 +29,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PatternItem;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA350;
@@ -102,6 +104,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
     Route route = new Route();
     String[] flightRoute;
+    String[] flightTrack;
+    private Polyline polyline;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -375,18 +379,18 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
                 String[] markerInfo = hashMap.get(marker.getSnippet());
 
-                Thread thread = new Thread(new Runnable() {
+                Thread threadRoute = new Thread(new Runnable() {
                     @Override
                     public void run() {
                         flightRoute = route.getRoute(markerInfo[0]);
                     }
                 });
 
-                thread.start();
+                threadRoute.start();
 
                 // wait until the thread is done, then join with main thread
                 try {
-                    thread.join();
+                    threadRoute.join();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -418,9 +422,40 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 verticalRateTV.setText(markerInfo[6]);
                 trackTV.setText(String.valueOf(marker.getRotation()) + "°");
                 squawkTV.setText(markerInfo[7]);
-                System.out.println("sQUAWK = " + markerInfo[7]);
                 spiTV.setText(markerInfo[8]);
                 positionSourceTV.setText(markerInfo[9]);
+
+                if(!flightRoute[1].equalsIgnoreCase("N/A")) {
+
+
+                    Thread threadTrack = new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            flightTrack = route.getTrack(flightRoute[1]);
+                        }
+                    });
+
+                    threadTrack.start();
+
+                    // wait until the thread is done, then join with main thread
+                    try {
+                        threadTrack.join();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+
+                    if(flightTrack[0].equalsIgnoreCase("true")) {
+                        Float destinationAirportLat = Float.valueOf(flightTrack[1]);
+                        Float destinationAirportLong = Float.valueOf(flightTrack[2]);
+                        polyline = mMap.addPolyline(new PolylineOptions()
+                                .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
+                                .width(7)
+                                .pattern(pattern)
+                                .color(Color.BLUE)
+                                .geodesic(true));
+                    }
+                }
 
                 return true;
             }
