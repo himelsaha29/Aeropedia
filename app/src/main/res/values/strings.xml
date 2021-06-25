@@ -485,7 +485,7 @@
     <string name="geo_altitude">Geometric altitude</string>
     <string name="baro_altitude">Barometric altitude</string>
     <string name="velocity">Velocity (m/s)</string>
-    <string name="vertical_rate">Vertical rate (m/s))</string>
+    <string name="vertical_rate">Vertical speed (m/s)</string>
     <string name="latitude">Latitude</string>
     <string name="longitude">Longitude</string>
     <string name="on_ground">On Ground</string>
@@ -493,6 +493,7 @@
     <string name="squawk">Squawk</string>
     <string name="pos_source">Position source</string>
     <string name="spi">Special Purpose Indicator</string>
+    <string name="live">LIVE</string>
 
 
 
