@@ -42,6 +42,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import androidx.annotation.DrawableRes;
@@ -74,6 +75,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private HashMap<String, Marker> markerTracker = new HashMap<>();
     private GoogleMap mMap;
     private String enableDark;
+    private Locale locale;
     private String enableDarkOnCreate;
     private Dialog dialog;
     private NeumorphButton retry;
@@ -115,6 +117,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
         super.onCreate(savedInstanceState);
         enableDarkOnCreate = verifyDarkMode();
+        loadLocale();
+        locale = Locale.getDefault();
         dialog = new Dialog(FlightMap.this);
         getCoordinates();
         // This contains the MapView in XML and needs to be called after the access token is configured.
@@ -910,6 +914,35 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     }
 
     /** Dark mode **/
+
+
+    /**
+     * Changing app language
+     **/
+
+    private void setLocale(String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("Language", language);
+        editor.apply();
+    }
+
+    private void loadLocale() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2)).equals("")) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+            editor.apply();
+        }
+        String language = prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+        setLocale(language);
+    }
+
+    /** Changing app language **/
 
 
 }
