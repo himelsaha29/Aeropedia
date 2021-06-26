@@ -121,7 +121,11 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         setContentView(R.layout.activity_maps);
 
 
-        dialog.setContentView(R.layout.activity_map_loading_dialog);
+        if(enableDarkOnCreate.equals("No")) {
+            dialog.setContentView(R.layout.activity_map_loading_dialog_light);
+        } else {
+            dialog.setContentView(R.layout.activity_map_loading_dialog_dark);
+        }
         dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
         dialog.getWindow().setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.95), ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false);
@@ -151,6 +155,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
 
         liveButton = findViewById(R.id.button);
+        if (enableDarkOnCreate.equals("Yes")) {
+            liveButton.setTextColor(Color.WHITE);
+        }
         progressBar = findViewById(R.id.progress_bar);
         liveButton.getBackground().setAlpha(45);
 
@@ -472,12 +479,21 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                         Float destinationAirportLat = Float.valueOf(flightTrack[1]);
                         Float destinationAirportLong = Float.valueOf(flightTrack[2]);
 
-                        polyline = mMap.addPolyline(new PolylineOptions()
-                                .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
-                                .width(7)
-                                .pattern(pattern)
-                                .color(Color.BLUE)
-                                .geodesic(true));
+                        if(enableDarkOnCreate.equals("No")) {
+                            polyline = mMap.addPolyline(new PolylineOptions()
+                                    .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
+                                    .width(7)
+                                    .pattern(pattern)
+                                    .color(Color.BLUE)
+                                    .geodesic(true));
+                        } else {
+                            polyline = mMap.addPolyline(new PolylineOptions()
+                                    .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
+                                    .width(7)
+                                    .pattern(pattern)
+                                    .color(Color.YELLOW)
+                                    .geodesic(true));
+                        }
                     }
                 }
 
@@ -514,12 +530,20 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                         FlightMap.this.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                dialog.setContentView(R.layout.activity_rest_api_failed_dialogue);
+                                if(enableDarkOnCreate.equals("No")) {
+                                    dialog.setContentView(R.layout.activity_rest_api_failed_dialog_light);
+                                } else {
+                                    dialog.setContentView(R.layout.activity_rest_api_failed_dialog_dark);
+                                }
                                 retry = dialog.findViewById(R.id.retry_rest);
                                 retry.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        dialog.setContentView(R.layout.activity_map_loading_dialog);
+                                        if(enableDarkOnCreate.equals("No")) {
+                                            dialog.setContentView(R.layout.activity_map_loading_dialog_light);
+                                        } else {
+                                            dialog.setContentView(R.layout.activity_map_loading_dialog_dark);
+                                        }
                                         dynamicDialog();
                                     }
                                 });

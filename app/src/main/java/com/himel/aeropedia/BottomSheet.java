@@ -108,7 +108,7 @@ public class BottomSheet extends AppCompatActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_maps);
 
         dialog = new Dialog(BottomSheet.this);
-        dialog.setContentView(R.layout.activity_map_loading_dialog);
+        dialog.setContentView(R.layout.activity_map_loading_dialog_light);
         dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
         dialog.getWindow().setLayout((int) (getResources().getDisplayMetrics().widthPixels * 0.95), ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false);
@@ -458,12 +458,12 @@ public class BottomSheet extends AppCompatActivity implements OnMapReadyCallback
                         BottomSheet.this.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                dialog.setContentView(R.layout.activity_rest_api_failed_dialogue);
+                                dialog.setContentView(R.layout.activity_rest_api_failed_dialog_light);
                                 retry = dialog.findViewById(R.id.retry_rest);
                                 retry.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        dialog.setContentView(R.layout.activity_map_loading_dialog);
+                                        dialog.setContentView(R.layout.activity_map_loading_dialog_light);
                                         dynamicDialog();
                                     }
                                 });

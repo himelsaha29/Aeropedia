@@ -764,6 +764,7 @@
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/live_icon"
         android:text="@string/live"
+        android:textColor="@color/black"
         android:background="@drawable/live_button_background"
         android:layout_gravity="right"
         android:visibility="visible"
