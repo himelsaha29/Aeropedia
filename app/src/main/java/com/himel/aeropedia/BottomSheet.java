@@ -30,7 +30,6 @@ import com.google.android.gms.maps.model.PatternItem;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.Global;
 import com.himel.aeropedia.flightmap.Route;
 
@@ -129,8 +128,8 @@ public class BottomSheet extends AppCompatActivity implements OnMapReadyCallback
         });
         dynamicDialog();
 
-        markerPlaneBlack = vectorToBitmap(R.drawable.ic_marker_plane_black, Color.BLACK);
-        markerPlaneRed = vectorToBitmap(R.drawable.ic_marker_plane_red, Color.RED);
+        markerPlaneBlack = vectorToBitmap(R.drawable.marker_plane_black, Color.BLACK);
+        markerPlaneRed = vectorToBitmap(R.drawable.marker_plane_red, Color.RED);
 
     }
 

@@ -87,7 +87,7 @@
                             android:layout_gravity="center"
                             android:adjustViewBounds="true"
                             android:gravity="center"
-                            android:src="@drawable/ic_marker_plane_black"
+                            android:src="@drawable/marker_plane_black"
                             android:paddingBottom="20dp"/>
 
 

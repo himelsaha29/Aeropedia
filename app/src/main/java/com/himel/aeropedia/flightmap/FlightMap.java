@@ -1,7 +1,10 @@
 package com.himel.aeropedia.flightmap;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -70,6 +73,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private HashMap<String, String[]> hashMap = new HashMap<>();
     private HashMap<String, Marker> markerTracker = new HashMap<>();
     private GoogleMap mMap;
+    private String enableDark;
+    private String enableDarkOnCreate;
     private Dialog dialog;
     private NeumorphButton retry;
     private TextView loadingText;
@@ -109,6 +114,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        enableDarkOnCreate = verifyDarkMode();
         dialog = new Dialog(FlightMap.this);
         getCoordinates();
         // This contains the MapView in XML and needs to be called after the access token is configured.
@@ -135,8 +141,14 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         });
         dynamicDialog();
 
-        markerPlaneBlack = vectorToBitmap(R.drawable.ic_marker_plane_black);
-        markerPlaneRed = vectorToBitmap(R.drawable.ic_marker_plane_red);
+        if(enableDarkOnCreate.equals("No")) {
+            markerPlaneBlack = vectorToBitmap(R.drawable.marker_plane_black);
+            markerPlaneRed = vectorToBitmap(R.drawable.marker_plane_red);
+        } else {
+            markerPlaneBlack = vectorToBitmap(R.drawable.marker_plane_white);
+            markerPlaneRed = vectorToBitmap(R.drawable.marker_plane_red_dark);
+        }
+
 
         liveButton = findViewById(R.id.button);
         progressBar = findViewById(R.id.progress_bar);
@@ -159,8 +171,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
         mMap.setMinZoomPreference(3.5f);
-        MapStyleOptions mapStyleOptions = MapStyleOptions.loadRawResourceStyle(this, R.raw.maps_dark_mode);
-        mMap.setMapStyle(mapStyleOptions);
+        if(enableDarkOnCreate.equals("Yes")) {
+            MapStyleOptions mapStyleOptions = MapStyleOptions.loadRawResourceStyle(this, R.raw.maps_dark_mode);
+            mMap.setMapStyle(mapStyleOptions);
+        }
 
         icaoTV = findViewById(R.id.icao);
         origin = findViewById(R.id.origin_airport);
@@ -836,5 +850,42 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         progressBar.setVisibility(View.GONE);
         liveButton.setVisibility(View.VISIBLE);
     }
+
+
+    /** Dark mode **/
+
+    private void toggleDark(String darkEnabled) {
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("DarkMode", darkEnabled);
+        editor.apply();
+    }
+
+    private String verifyDarkMode() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("DarkMode", "").equals("")) {
+
+            SharedPreferences.Editor editor = prefs.edit();
+            int currentNightMode = getResources().getConfiguration().uiMode
+                    & Configuration.UI_MODE_NIGHT_MASK;
+
+            switch (currentNightMode) {
+                case Configuration.UI_MODE_NIGHT_NO:
+                    editor.putString("DarkMode", "No");
+                    editor.apply();
+                    break;
+                default:
+                    editor.putString("DarkMode", "Yes");
+                    editor.apply();
+                    break;
+
+            }
+        }
+        enableDark = prefs.getString("DarkMode", "Yes");
+
+        return enableDark;
+    }
+
+    /** Dark mode **/
+
 
 }
