@@ -283,24 +283,24 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if(baro_altitude == -0.10169f) {
                     storeInMap[2] = "N/A";
                 } else {
-                    storeInMap[2] = String.valueOf(baro_altitude);
+                    storeInMap[2] = String.valueOf(baro_altitude) + " m";
                 }
                 if(geo_altitude == -0.10169f) {
                     storeInMap[3] = "N/A";
                 } else {
-                    storeInMap[3] = String.valueOf(geo_altitude);
+                    storeInMap[3] = String.valueOf(geo_altitude) + " m";
                 }
                 String tempOnGround = String.valueOf(onGround);
                 storeInMap[4] = tempOnGround.substring(0, 1).toUpperCase() + tempOnGround.substring(1, tempOnGround.trim().length());
                 if(velocity == -0.10169f) {
                     storeInMap[5] = "N/A";
                 } else {
-                    storeInMap[5] = String.valueOf(velocity);
+                    storeInMap[5] = String.valueOf(velocity) + " m/s";
                 }
                 if(verticalRate == -0.10169f) {
                     storeInMap[6] = "N/A";
                 } else {
-                    storeInMap[6] = String.valueOf(verticalRate);
+                    storeInMap[6] = String.valueOf(verticalRate) + " m/s";
                 }
                 storeInMap[7] = squawk;
 

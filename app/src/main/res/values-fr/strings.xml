@@ -486,11 +486,11 @@
     <string name="engine_type">Type de moteur</string>
     <string name="country">Pays d\'immatriculation</string>
     <string name="callsign">Callsign</string>
-    <string name="icao">ICAO</string>
+    <string name="icao">Adresse ICAO 24 bits</string>
     <string name="geo_altitude">Altitude géométrique</string>
     <string name="baro_altitude">Altitude barométrique</string>
-    <string name="velocity">Vitesse (m/s)</string>
-    <string name="vertical_rate">Vitesse verticale (m/s)</string>
+    <string name="velocity">Vitesse</string>
+    <string name="vertical_rate">Vitesse verticale</string>
     <string name="latitude">Latitude</string>
     <string name="longitude">Longitude</string>
     <string name="on_ground">Sur le sol</string>

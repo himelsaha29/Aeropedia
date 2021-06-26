@@ -481,11 +481,11 @@
     <string name="engine_type">Engine type</string>
     <string name="country">Country of reg.</string>
     <string name="callsign">Callsign</string>
-    <string name="icao">ICAO</string>
+    <string name="icao">ICAO 24-bit address</string>
     <string name="geo_altitude">Geometric altitude</string>
     <string name="baro_altitude">Barometric altitude</string>
-    <string name="velocity">Velocity (m/s)</string>
-    <string name="vertical_rate">Vertical speed (m/s)</string>
+    <string name="velocity">Velocity</string>
+    <string name="vertical_rate">Vertical speed</string>
     <string name="latitude">Latitude</string>
     <string name="longitude">Longitude</string>
     <string name="on_ground">On Ground</string>
