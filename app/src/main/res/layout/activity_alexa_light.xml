@@ -20,7 +20,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#fff4f1"
+            android:background="#f2f4f6"
             android:orientation="vertical">
 
 
@@ -37,12 +37,18 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="top"
                     android:scaleType="fitCenter"
+                    android:background="#f2f4f6"
+                    app:neumorph_shadowColorLight="#ffffff"
+                    app:neumorph_shadowColorDark="#e4e4e4"
                     android:src="@drawable/ic_information_light"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="H, 1:1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance" />
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance" >
+
+
+                </soup.neumorphism.NeumorphImageButton>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -67,6 +73,9 @@
                     android:layout_gravity="center"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
+                    android:background="#f2f4f6"
+                    app:neumorph_shadowColorLight="#ffffff"
+                    app:neumorph_shadowColorDark="#e4e4e4"
                     android:src="@drawable/ic_amazon_alexa"
                     app:layout_constrainedHeight="true"
                     app:layout_constraintBottom_toBottomOf="parent"

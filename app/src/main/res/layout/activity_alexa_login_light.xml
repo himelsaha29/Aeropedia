@@ -19,7 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#fff4f1">
+            android:background="#f2f4f6">
 
             <soup.neumorphism.NeumorphButton
                 android:id="@+id/login"
@@ -28,6 +28,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/maven_pro_medium"
                 android:gravity="center"
+                android:background="#f2f4f6"
+                app:neumorph_shadowColorLight="#ffffff"
+                app:neumorph_shadowColorDark="#e4e4e4"
                 android:text="@string/login"
                 android:textAlignment="center"
                 android:textAllCaps="false"
