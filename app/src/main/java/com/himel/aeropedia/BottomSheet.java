@@ -129,7 +129,7 @@ public class BottomSheet extends AppCompatActivity implements OnMapReadyCallback
         dynamicDialog();
 
         markerPlaneBlack = vectorToBitmap(R.drawable.marker_plane_black, Color.BLACK);
-        markerPlaneRed = vectorToBitmap(R.drawable.marker_plane_red, Color.RED);
+        markerPlaneRed = vectorToBitmap(R.drawable.marker_plane_red_light, Color.RED);
 
     }
 

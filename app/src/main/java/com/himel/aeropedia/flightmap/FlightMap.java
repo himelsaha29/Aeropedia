@@ -152,7 +152,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
         if(enableDarkOnCreate.equals("No")) {
             markerPlaneBlack = vectorToBitmap(R.drawable.marker_plane_black);
-            markerPlaneRed = vectorToBitmap(R.drawable.marker_plane_red);
+            markerPlaneRed = vectorToBitmap(R.drawable.marker_plane_red_light);
         } else {
             markerPlaneBlack = vectorToBitmap(R.drawable.marker_plane_white);
             markerPlaneRed = vectorToBitmap(R.drawable.marker_plane_red_dark);
