@@ -111,6 +111,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     String[] flightRoute;
     String[] flightTrack;
     private Polyline polyline;
+    private boolean bottomSheetIsExpanded = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -370,6 +371,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     if(polyline != null) {
                         polyline.remove();
                     }
+                    bottomSheetIsExpanded = false;
+                } else if (newState == BottomSheetBehavior.STATE_EXPANDED) {
+                    bottomSheetIsExpanded = true;
                 }
             }
             @Override
@@ -945,4 +949,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     /** Changing app language **/
 
 
+    @Override
+    public void onBackPressed() {
+        if(bottomSheetIsExpanded) {
+            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+        } else {
+            super.onBackPressed();
+        }
+    }
 }
