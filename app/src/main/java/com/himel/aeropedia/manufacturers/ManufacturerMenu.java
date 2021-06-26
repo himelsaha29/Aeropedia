@@ -96,7 +96,7 @@ public class ManufacturerMenu extends AppCompatActivity {
         if (locale.toString().contains("en")) {
             langToggle.setShapeType(ShapeType.FLAT);
         } else if (locale.toString().contains("fr")) {
-            langToggle.setShapeType(ShapeType.BASIN);
+            langToggle.setShapeType(ShapeType.PRESSED);
         }
 
         animateCards();
