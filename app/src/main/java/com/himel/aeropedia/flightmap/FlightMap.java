@@ -618,7 +618,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             public void onTick(long millisUntilFinished) {
                 if((millisUntilFinished - 2000) >= 0 && (millisUntilFinished - 2000) <= 1000 ) {
                     loadingText = dialog.findViewById(R.id.loading_text);
-                    loadingText.setText(R.string.map_loading2);
+                    if(loadingText != null) {
+                        loadingText.setText(R.string.map_loading2);
+                    }
                 }
             }
             public void onFinish() {

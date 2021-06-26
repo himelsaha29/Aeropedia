@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#fff4f1"
+    android:background="#f2f4f6"
     android:orientation="vertical">
 
 
@@ -54,6 +54,9 @@
             android:fontFamily="@font/maven_pro_medium"
             android:textColor="#042234"
             android:textSize="14sp"
+            android:background="#f2f4f6"
+            app:neumorph_shadowColorLight="#fdfdfd"
+            app:neumorph_shadowColorDark="#ececec"
             android:textAlignment="center"
             android:textAllCaps="false"
             app:autoSizeTextType="uniform"
