@@ -115,7 +115,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         enableDarkOnCreate = verifyDarkMode();
         loadLocale();
@@ -601,7 +600,11 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                 public void run() {
                                     SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                                             .findFragmentById(R.id.map);
-                                    mapFragment.getMapAsync(FlightMap.this);
+                                    try {
+                                        mapFragment.getMapAsync(FlightMap.this);
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
 
 
                                 }
