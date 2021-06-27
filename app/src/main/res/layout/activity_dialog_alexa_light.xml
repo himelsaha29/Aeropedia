@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#fff4f1"
+    android:background="#f2f4f6"
     android:orientation="vertical">
 
 
@@ -57,6 +57,9 @@
             android:textSize="14sp"
             android:textAlignment="center"
             android:textAllCaps="false"
+            android:background="#f2f4f6"
+            app:neumorph_shadowColorLight="#fdfdfd"
+            app:neumorph_shadowColorDark="#eaeaea"
             app:autoSizeTextType="uniform"
             app:autoSizeMinTextSize="12sp"
             app:autoSizeMaxTextSize="100sp"

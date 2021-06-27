@@ -9,7 +9,7 @@
     android:clipChildren="false"
     android:clipToPadding="false"
     android:hapticFeedbackEnabled="true"
-    app:edMenuBackground="#042234"
+    app:edMenuBackground="#1b1f1f"
     app:edMenuSize="260dp"
     app:edPosition="1">
 
@@ -160,8 +160,9 @@
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:neumorph_shadowColorDark="#241d2d"
-                app:neumorph_shadowColorLight="#39343e"
+                app:neumorph_backgroundColor="#1b1f1f"
+                app:neumorph_shadowColorLight="#222727"
+                app:neumorph_shadowColorDark="#171a1a"
                 app:neumorph_shapeType="flat" />
 
             <soup.neumorphism.NeumorphImageButton
@@ -174,8 +175,9 @@
                 android:src="@drawable/ic_bulb_black_lit"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:neumorph_shadowColorDark="#241d2d"
-                app:neumorph_shadowColorLight="#39343e"
+                app:neumorph_backgroundColor="#1b1f1f"
+                app:neumorph_shadowColorLight="#222727"
+                app:neumorph_shadowColorDark="#171a1a"
                 app:neumorph_shapeType="flat" />
 
 

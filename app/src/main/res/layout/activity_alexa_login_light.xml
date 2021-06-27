@@ -106,7 +106,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:neumorph_shadowColorDark="#5f8bba"
                 app:neumorph_shadowColorLight="#9ac1ea"
-                app:neumorph_shapeType="basin" />
+                app:neumorph_shapeType="pressed" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
