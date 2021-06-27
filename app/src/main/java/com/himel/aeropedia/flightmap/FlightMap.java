@@ -123,7 +123,11 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         dialog = new Dialog(FlightMap.this);
         getCoordinates();
         // This contains the MapView in XML and needs to be called after the access token is configured.
-        setContentView(R.layout.activity_maps);
+        if(enableDarkOnCreate.equals("No")) {
+            setContentView(R.layout.activity_maps_light);
+        } else {
+            setContentView(R.layout.activity_maps_dark);
+        }
 
 
         if(enableDarkOnCreate.equals("No")) {
@@ -357,7 +361,14 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             }
         }
 
-        FrameLayout bottomSheetLayout = findViewById(R.id.bottom_sheet);
+
+        FrameLayout bottomSheetLayout;
+        if(enableDarkOnCreate.equals("No")) {
+            bottomSheetLayout = findViewById(R.id.bottom_sheet_light);
+        } else {
+            bottomSheetLayout = findViewById(R.id.bottom_sheet_dark);
+        }
+
         bottomSheetBehavior = BottomSheetBehavior.from(bottomSheetLayout);
 
         bottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {

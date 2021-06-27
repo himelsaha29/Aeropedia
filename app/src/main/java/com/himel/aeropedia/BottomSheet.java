@@ -105,7 +105,7 @@ public class BottomSheet extends AppCompatActivity implements OnMapReadyCallback
 
         getCoordinates();
         // This contains the MapView in XML and needs to be called after the access token is configured.
-        setContentView(R.layout.activity_maps);
+        setContentView(R.layout.activity_maps_light);
 
         dialog = new Dialog(BottomSheet.this);
         dialog.setContentView(R.layout.activity_map_loading_dialog_light);

@@ -17,15 +17,15 @@
         map:cameraTargetLat="45.5017"
         map:cameraTargetLng="-73.5673"
         map:cameraZoom="3.5"
-        tools:context=".BottomSheet" />
+        tools:context=".flightmap.FlightMap" />
 
     <FrameLayout
-        android:id="@+id/bottom_sheet"
+        android:id="@+id/bottom_sheet_light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/flight_map_bottom_sheet_background_light"
         app:behavior_hideable="false"
-        app:behavior_peekHeight="450dp"
+        app:behavior_peekHeight="0dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
         <ImageView
@@ -137,7 +137,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Aircraft"
+                            android:text="@string/aircraft"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -168,7 +168,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Airline"
+                            android:text="@string/airline"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -212,7 +212,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Engine type"
+                            android:text="@string/engine_type"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -243,7 +243,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Country of Reg."
+                            android:text="@string/country"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -283,7 +283,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Callsign"
+                            android:text="@string/callsign"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -314,7 +314,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="ICAO"
+                            android:text="@string/icao"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -353,7 +353,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Geometric altitude"
+                            android:text="@string/geo_altitude"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -384,7 +384,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Barometric altitude"
+                            android:text="@string/baro_altitude"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -424,7 +424,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Velocity (m/s)"
+                            android:text="@string/velocity"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -455,7 +455,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Vertical rate (m/s)"
+                            android:text="@string/vertical_rate"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -495,7 +495,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Latitude"
+                            android:text="@string/latitude"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -526,7 +526,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Longitude"
+                            android:text="@string/longitude"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -566,7 +566,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="On ground"
+                            android:text="@string/on_ground"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -597,7 +597,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Track"
+                            android:text="@string/track"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -637,7 +637,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Squawk"
+                            android:text="@string/squawk"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -668,7 +668,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Position source"
+                            android:text="@string/pos_source"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -708,7 +708,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Special Purpose Indicator"
+                            android:text="@string/spi"
                             android:textColor="@color/white"
                             android:textSize="17sp" />
 
@@ -739,7 +739,7 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:text="Airline"
+                            android:text="Dummy"
                             android:textColor="#72A8E1"
                             android:textSize="17sp" />
 
@@ -756,6 +756,26 @@
         </LinearLayout>
 
     </FrameLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/live_icon"
+        android:text="@string/live"
+        android:textColor="@color/black"
+        android:background="@drawable/live_button_background"
+        android:layout_gravity="right"
+        android:visibility="visible"
+        android:textSize="10sp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:visibility="gone"/>
 
 
 

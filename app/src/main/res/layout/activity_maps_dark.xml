@@ -20,10 +20,10 @@
         tools:context=".flightmap.FlightMap" />
 
     <FrameLayout
-        android:id="@+id/bottom_sheet"
+        android:id="@+id/bottom_sheet_dark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/flight_map_bottom_sheet_background"
+        android:background="@drawable/flight_map_bottom_sheet_background_dark"
         app:behavior_hideable="false"
         app:behavior_peekHeight="0dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
@@ -150,7 +150,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -181,7 +181,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -225,7 +225,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -256,7 +256,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -296,7 +296,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -327,7 +327,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -366,7 +366,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -397,7 +397,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -437,7 +437,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -468,7 +468,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -508,7 +508,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -539,7 +539,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -579,7 +579,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -610,7 +610,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -650,7 +650,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -681,7 +681,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -721,7 +721,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="@string/loading"
-                            android:textColor="@color/black"
+                            android:textColor="#72A8E1"
                             android:textSize="17sp" />
                     </LinearLayout>
 
@@ -740,7 +740,7 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:text="Dummy"
-                            android:textColor="#72A8E1"
+                            android:textColor="#1b1f1f"
                             android:textSize="17sp" />
 
                     </LinearLayout>
