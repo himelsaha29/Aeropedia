@@ -71,7 +71,20 @@ public class AlexaActivity extends CoreActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        loggedIn = checkLogin();
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                loggedIn = checkLogin();
+            }
+        });
+        thread.start();
+
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
 
         if (!loggedIn) {
 
@@ -437,9 +450,9 @@ public class AlexaActivity extends CoreActivity {
 
         TreeNode airbus = null;
         //if (verifyDarkMode().equals("Yes")) {
-            //airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "HighlightLight", "airbus"));
+        //airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "HighlightLight", "airbus"));
 //        } else {
-            airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "No", "airbus"));
+        airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "No", "airbus"));
 //        }
         TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a220), "No", "a220"));
         TreeNode a319Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a319), "No", "a319"));
@@ -494,7 +507,7 @@ public class AlexaActivity extends CoreActivity {
         if (locale.toString().contains("en")) {
             langToggle.setShapeType(ShapeType.FLAT);
         } else if (locale.toString().contains("fr")) {
-            langToggle.setShapeType(ShapeType.PRESSED);
+            langToggle.setShapeType(ShapeType.BASIN);
         }
 
         langToggle.setOnClickListener(new View.OnClickListener() {

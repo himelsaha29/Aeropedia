@@ -598,9 +598,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                             FlightMap.this.runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                                            .findFragmentById(R.id.map);
                                     try {
+                                        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                                                .findFragmentById(R.id.map);
+
                                         mapFragment.getMapAsync(FlightMap.this);
                                     } catch (Exception e) {
                                         e.printStackTrace();
@@ -639,7 +640,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             }
             public void onFinish() {
                 loadingText = dialog.findViewById(R.id.loading_text);
-                loadingText.setText(R.string.map_loading3);
+                if(loadingText != null) {
+                    loadingText.setText(R.string.map_loading3);
+                }
 
             }
         }.start();

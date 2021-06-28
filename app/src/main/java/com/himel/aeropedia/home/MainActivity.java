@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         models = new ArrayList<Model>();
         models.add(new Model(R.drawable.a350_cover, "Aviation"));
         models.add(new Model(R.drawable.a380_cover, "Amazon Alexa"));

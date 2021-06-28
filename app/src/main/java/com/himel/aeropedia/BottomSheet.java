@@ -64,7 +64,7 @@ public class BottomSheet extends AppCompatActivity implements OnMapReadyCallback
     private static final String BASE_URL = "https://opensky-network.org/api";
 
     private List<JSONArray> responseArray = new ArrayList<>();
-    private List<MapMarker> coordList = new ArrayList<>();
+    private List<MapMarkers> coordList = new ArrayList<>();
     private HashMap<String, Marker> markerHashMap = new HashMap<>();
     private HashMap<String, String[]> hashMap = new HashMap<>();
     private GoogleMap mMap;
@@ -189,7 +189,7 @@ public class BottomSheet extends AppCompatActivity implements OnMapReadyCallback
 //                mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f,0.5f)
 //                        .rotation(true_track).icon(markerPlaneBlack).snippet(icao));
 
-                coordList.add(new MapMarker(icao, latitude, longitude, true_track));
+                coordList.add(new MapMarkers(icao, latitude, longitude, true_track));
 
                 try {
                     callsign = responseArray.get(i).getString(1);
@@ -555,13 +555,13 @@ public class BottomSheet extends AppCompatActivity implements OnMapReadyCallback
         return BitmapDescriptorFactory.fromBitmap(bitmap);
     }
 
-    private void putMarkers(List<MapMarker> list) {
+    private void putMarkers(List<MapMarkers> list) {
         if(this.mMap != null) {
             //This is the current user-viewable region of the map
             LatLngBounds bounds = mMap.getProjection().getVisibleRegion().latLngBounds;
 
             //Loop through all the items that are available to be placed on the map
-            for(MapMarker item : list) {
+            for(MapMarkers item : list) {
 
                 //If the item is within the the bounds of the screen
                 if (bounds.contains(new LatLng(item.getLatitude(), item.getLongitude()))) {

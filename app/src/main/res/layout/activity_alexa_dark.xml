@@ -20,7 +20,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#1b1f1f"
+            android:background="#141635"
             android:orientation="vertical">
 
 
@@ -38,9 +38,9 @@
                     android:layout_gravity="top"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_information_dark"
-                    app:neumorph_backgroundColor="#1b1f1f"
-                    app:neumorph_shadowColorLight="#222727"
-                    app:neumorph_shadowColorDark="#171a1a"
+                    app:neumorph_backgroundColor="#141635"
+                    app:neumorph_shadowColorLight="#1b1d46"
+                    app:neumorph_shadowColorDark="#0f1027"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="H, 1:1"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -71,9 +71,9 @@
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_amazon_alexa"
-                    app:neumorph_backgroundColor="#1b1f1f"
-                    app:neumorph_shadowColorLight="#222727"
-                    app:neumorph_shadowColorDark="#171a1a"
+                    app:neumorph_backgroundColor="#141635"
+                    app:neumorph_shadowColorLight="#1b1d46"
+                    app:neumorph_shadowColorDark="#0f1027"
                     app:layout_constrainedHeight="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

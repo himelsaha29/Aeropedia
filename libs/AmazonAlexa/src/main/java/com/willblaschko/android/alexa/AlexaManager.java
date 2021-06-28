@@ -47,10 +47,10 @@ import static com.willblaschko.android.alexa.utility.Util.IDENTIFIER;
  */
 public class AlexaManager {
 
-
+    public static boolean iSLoggedIn = false;
     private static final String TAG = "AlexaManager";
     private static final String KEY_URL_ENDPOINT = "url_endpoint";
-
+    private int counter = 1;
     private static AlexaManager mInstance;
     private static AndroidSystemHandler mAndroidSystemHandler;
     private AuthorizationManager mAuthorizationManager;
@@ -388,18 +388,31 @@ public class AlexaManager {
 
 
 
-    public void cancelAudioRequest() {
+    public boolean checkLogin() {
         //check if the user is already logged in
         mAuthorizationManager.checkLoggedIn(mContext, new ImplCheckLoggedInCallback() {
             @Override
             public void success(Boolean result) {
                 if (result) {
                     //if the user is logged in
-                    getSpeechSendAudio().cancelRequest();
+                    //getSpeechSendAudio().cancelRequest();
+
+                    iSLoggedIn = true;
+                } else {
+                    iSLoggedIn = false;
                 }
+                counter = 1;
             }
 
+            @Override
+            public void failure(Throwable error) {
+                if(counter <= 3) {
+                    checkLogin();
+                }
+                counter++;
+            }
         });
+        return iSLoggedIn;
     }
 
     /** Send a confirmation to the Alexa server that the device volume has been changed in response to a directive
