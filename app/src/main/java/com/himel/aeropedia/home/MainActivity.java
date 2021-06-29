@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         models = new ArrayList<Model>();
         models.add(new Model(R.drawable.engine, "Aircraft Gallery"));
-        models.add(new Model(R.drawable.a380_cover, "Ask Alexa"));
-        models.add(new Model(R.drawable.bombardier_cover, "Real time flight tracker"));
+        models.add(new Model(R.drawable.alexa_background, "Ask Alexa"));
+        models.add(new Model(R.drawable.boldmethod, "Real time flight tracker"));
         models.add(new Model(R.drawable.boeing_cover, "BOEING"));
 
         adapter = new Adapter(models, this);
