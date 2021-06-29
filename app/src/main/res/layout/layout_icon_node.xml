@@ -15,6 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:iconText="@string/ic_keyboard_arrow_right"
         app:iconColor="#12558C"
         app:iconFont="fonts/material-icon-font.ttf"
