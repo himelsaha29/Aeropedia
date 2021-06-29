@@ -28,11 +28,17 @@
         app:behavior_peekHeight="0dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
-        <ImageView
+        <soup.neumorphism.NeumorphTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/maven_pro_medium"
+            android:text="°°°"
+            android:textSize="42dp"
+            app:neumorph_backgroundColor="#1b1f1f"
+            app:neumorph_shadowColorLight="#222727"
+            app:neumorph_shadowColorDark="#171a1a"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_drag_handle" />
+            android:textColor="#1b1f1f"/>
 
 
         <LinearLayout
@@ -81,14 +87,18 @@
                         android:orientation="vertical"
                         android:padding="10dip">
 
-                        <ImageView
+                        <soup.neumorphism.NeumorphTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:adjustViewBounds="true"
-                            android:gravity="center"
-                            android:src="@drawable/marker_plane_black"
-                            android:paddingBottom="20dp"/>
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:text="°°°"
+                            android:textSize="32dp"
+                            app:neumorph_backgroundColor="#141635"
+                            app:neumorph_shadowColorLight="#1b1d46"
+                            app:neumorph_shadowColorDark="#0f1027"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#1b1f1f"/>
+
 
 
                     </LinearLayout>
