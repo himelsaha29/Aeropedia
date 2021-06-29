@@ -67,6 +67,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
     private static final String BASE_URL = "https://opensky-network.org/api";
 
+
     private List<PatternItem> pattern = Arrays.asList(
             new Dot(), new Gap(20), new Dash(30), new Gap(20));
 
@@ -308,7 +309,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 } catch (Exception e) {
                     positionSource = -1;
                 }
-
                 String[] storeInMap = new String[10];
                 storeInMap[0] = callsign;
                 storeInMap[1] = countryOfReg;
@@ -322,8 +322,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 } else {
                     storeInMap[3] = String.valueOf(geo_altitude) + " m";
                 }
-                String tempOnGround = String.valueOf(onGround);
-                storeInMap[4] = tempOnGround.substring(0, 1).toUpperCase() + tempOnGround.substring(1, tempOnGround.trim().length());
+                storeInMap[4] = String.valueOf(onGround);
                 if(velocity == -0.10169f) {
                     storeInMap[5] = "N/A";
                 } else {
@@ -382,6 +381,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                         polyline.remove();
                     }
                     bottomSheetIsExpanded = false;
+                    flightRoute = null;
+                    flightTrack = null;
+
                 } else if (newState == BottomSheetBehavior.STATE_EXPANDED) {
                     bottomSheetIsExpanded = true;
                 }
@@ -465,12 +467,22 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 engineType.setText(flightRoute[4]);
                 baroAltitudeTV.setText(markerInfo[2]);
                 geoAltitudeTV.setText(markerInfo[3]);
-                onGroundTv.setText(markerInfo[4]);
+                if(markerInfo[4].equalsIgnoreCase("true")) {
+                    onGroundTv.setText(R.string._true);
+                }
+                else {
+                    onGroundTv.setText(R.string.not_true);
+                }
                 velocityTV.setText(markerInfo[5]);
                 verticalRateTV.setText(markerInfo[6]);
                 trackTV.setText(String.valueOf(marker.getRotation()) + "°");
                 squawkTV.setText(markerInfo[7]);
-                spiTV.setText(markerInfo[8]);
+                if(markerInfo[8].equalsIgnoreCase("true")) {
+                    spiTV.setText(R.string._true);
+                }
+                else {
+                    spiTV.setText(R.string.not_true);
+                }
                 positionSourceTV.setText(markerInfo[9]);
 
                 if(!flightRoute[1].equalsIgnoreCase("N/A")) {
@@ -861,8 +873,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 } else {
                     storeInMap[3] = String.valueOf(geo_altitude) + " m";
                 }
-                String tempOnGround = String.valueOf(onGround);
-                storeInMap[4] = tempOnGround.substring(0, 1).toUpperCase() + tempOnGround.substring(1, tempOnGround.trim().length());
+                storeInMap[4] = String.valueOf(onGround);
                 if(velocity == -0.10169f) {
                     storeInMap[5] = "N/A";
                 } else {

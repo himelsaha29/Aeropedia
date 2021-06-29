@@ -1,7 +1,9 @@
 package com.himel.aeropedia.treeview;
 
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
@@ -11,6 +13,8 @@ import android.widget.TextView;
 
 import com.github.johnkil.print.PrintView;
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.airbus.AirbusA350;
+import com.himel.aeropedia.flightmap.FlightMap;
 import com.unnamed.b.atv.model.TreeNode;
 
 public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItemHolder.IconTreeItem> {
@@ -48,6 +52,16 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
 
         arrowView = (PrintView) view.findViewById(R.id.arrow_icon);
 
+        node.setClickListener(new TreeNode.TreeNodeClickListener() {
+            @Override
+            public void onClick(TreeNode node, Object valuee) {
+                if(value.classToOpen != null) {
+                    Intent showContent = new Intent(context, value.classToOpen);
+                    context.startActivity(showContent);
+                    ((Activity) context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                }
+            }
+        });
         return view;
     }
 
@@ -62,12 +76,14 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
         public String text;
         public String highlight;
         public String iconXML;
+        public Class classToOpen;
 
-        public IconTreeItem(int icon, String text, String highlight, String iconXML) {
+        public IconTreeItem(int icon, String text, String highlight, String iconXML, Class classToOpen) {
             this.icon = icon;
             this.text = text;
             this.highlight = highlight;
             this.iconXML = iconXML;
+            this.classToOpen = classToOpen;
         }
 
     }

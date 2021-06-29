@@ -485,8 +485,8 @@
     <string name="airline">Compagnie aérienne</string>
     <string name="engine_type">Type de moteur</string>
     <string name="country">Pays d\'immatriculation</string>
-    <string name="callsign">Callsign</string>
-    <string name="icao">Adresse ICAO 24 bits</string>
+    <string name="callsign">Indicatif d\'appel</string>
+    <string name="icao">Adresse OACI 24 bits</string>
     <string name="geo_altitude">Altitude géométrique</string>
     <string name="baro_altitude">Altitude barométrique</string>
     <string name="velocity">Vitesse</string>
@@ -499,4 +499,6 @@
     <string name="pos_source">Source du position</string>
     <string name="spi">Indicateur à usage spécial</string>
     <string name="live">EN DIRECT</string>
+    <string name="not_true">Faux</string>
+    <string name="_true">Vrai</string>
 </resources>

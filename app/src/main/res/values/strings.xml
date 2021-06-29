@@ -494,6 +494,8 @@
     <string name="pos_source">Position source</string>
     <string name="spi">Special Purpose Indicator</string>
     <string name="live">LIVE</string>
+    <string name="not_true">False</string>
+    <string name="_true">True</string>
 
 
 
