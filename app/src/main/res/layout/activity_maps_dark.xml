@@ -93,7 +93,7 @@
                             android:layout_gravity="center"
                             android:adjustViewBounds="true"
                             android:gravity="center"
-                            android:src="@drawable/marker_plane_white"
+                            android:src="@drawable/bottom_sheet_plane_icon"
                             android:paddingBottom="20dp"/>
 
 
