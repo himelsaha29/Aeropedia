@@ -28,11 +28,17 @@
         app:behavior_peekHeight="450dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
-        <ImageView
+        <soup.neumorphism.NeumorphTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/maven_pro_medium"
+            android:text="°°°°°"
+            android:textSize="42dp"
+            app:neumorph_backgroundColor="#72A8E1"
+            app:neumorph_shadowColorLight="#82bcfc"
+            app:neumorph_shadowColorDark="#527aa4"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_drag_handle" />
+            android:textColor="#72A8E1"/>
 
 
         <LinearLayout

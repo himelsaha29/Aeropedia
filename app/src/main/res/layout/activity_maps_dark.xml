@@ -32,11 +32,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/maven_pro_medium"
-            android:text="°°°"
+            android:text="°°°°°"
             android:textSize="42dp"
             app:neumorph_backgroundColor="#1b1f1f"
-            app:neumorph_shadowColorLight="#323939"
-            app:neumorph_shadowColorDark="#0c0e0e"
+            app:neumorph_shadowColorLight="#373e3e"
+            app:neumorph_shadowColorDark="#040505"
             android:layout_gravity="center_horizontal"
             android:textColor="#1b1f1f"/>
 
