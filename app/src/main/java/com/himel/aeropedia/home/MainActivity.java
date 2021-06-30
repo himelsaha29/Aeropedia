@@ -2,7 +2,6 @@ package com.himel.aeropedia.home;
 
 import android.animation.ArgbEvaluator;
 import android.app.Activity;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -12,14 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.himel.aeropedia.R;
-import com.himel.aeropedia.alexa.AlexaActivity;
-import com.himel.aeropedia.manufacturers.Airbus;
-import com.himel.aeropedia.manufacturers.ManufacturerMenu;
-import com.himel.aeropedia.treeview.TreeView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         models = new ArrayList<Model>();
-        models.add(new Model(R.drawable.engine, "Aircraft Gallery"));
-        models.add(new Model(R.drawable.alexa_background, "Ask Alexa"));
-        models.add(new Model(R.drawable.boldmethod, "Real time flight tracker"));
+        models.add(new Model(R.drawable.aircraft_gallery_cover, "Aircraft Gallery"));
+        models.add(new Model(R.drawable.alexa_cover, "Ask Alexa"));
+        models.add(new Model(R.drawable.real_time_flight_tracker_cover, "Real time flight tracker"));
         models.add(new Model(R.drawable.boeing_cover, "BOEING"));
 
         adapter = new Adapter(models, this);
