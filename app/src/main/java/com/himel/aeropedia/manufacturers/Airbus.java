@@ -183,7 +183,7 @@ public class Airbus extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            createTreeView();
+            //createTreeView();
         }
         else if (!locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
@@ -194,7 +194,7 @@ public class Airbus extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            createTreeView();
+            //createTreeView();
         }
 
         if(mDrawer.getDrawerState() == ElasticDrawer.STATE_OPEN) {

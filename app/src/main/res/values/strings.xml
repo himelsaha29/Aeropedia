@@ -498,5 +498,11 @@
     <string name="_true">True</string>
 
 
+    <string name="ic_airplane">&#xe90b;</string>
+    <string name="ic_radar">&#xe900;</string>
+    <string name="ic_alxa">&#xe90c;</string>
+    <string name="ic_tail">&#xe90d;</string>
+
+
 
 </resources>

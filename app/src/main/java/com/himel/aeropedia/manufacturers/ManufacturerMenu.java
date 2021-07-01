@@ -218,7 +218,7 @@ public class ManufacturerMenu extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            createTreeView();
+            //createTreeView();
         }
         else if (!locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
@@ -229,7 +229,7 @@ public class ManufacturerMenu extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            createTreeView();
+            //createTreeView();
         }
 
         if(mDrawer.getDrawerState() == ElasticDrawer.STATE_OPEN) {
@@ -330,33 +330,33 @@ public class ManufacturerMenu extends AppCompatActivity {
         TreeNode root = TreeNode.root();
         TreeNode manufacturerRoot = null;
         if (verifyDarkMode().equals("Yes")) {
-            manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Manufacturers", "HighlightLight", "Manufacturers", null));
+            manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_airplane, "Manufacturers", "HighlightLight", "Manufacturers", null));
         } else {
-            manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Manufacturers", "HighlightDark", "Manufacturers", null));
+            manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_airplane, "Manufacturers", "HighlightDark", "Manufacturers", null));
         }
-        TreeNode amazonRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.drawable.ic_amazon_alexa, "Amazon Alexa", "No", "Alexa", AlexaActivity.class));
-        TreeNode firebaseRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Firebase", "No", "firebase", null));
+        TreeNode amazonRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_alxa, "Amazon Alexa", "No", "Alexa", AlexaActivity.class));
+        TreeNode firebaseRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_radar, "Firebase", "No", "firebase", null));
 
 
 
-        TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "No", "airbus", null));
-        TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a220), "No", "a220", null));
-        TreeNode a319Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a319), "No", "a319", null));
-        TreeNode a320Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a320), "No", "a320", null));
-        TreeNode a321Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a321), "No", "a321", null));
+        TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_airplane, this.getString(R.string.airbus), "No", "airbus", null));
+        TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_tail, this.getString(R.string.a220), "No", "a220", null));
+        TreeNode a319Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_tail, this.getString(R.string.a319), "No", "a319", null));
+        TreeNode a320Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_tail, this.getString(R.string.a320), "No", "a320", null));
+        TreeNode a321Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_tail, this.getString(R.string.a321), "No", "a321", null));
 
-        TreeNode a330Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_alexa, this.getString(R.string.a330), "No", "a330", null));
-        TreeNode a340Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a340), "No", "a340", null));
-        TreeNode a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "No", "a350", AirbusA350.class));
-        TreeNode a380Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a380), "No", "a380", null));
+        TreeNode a330Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_tail, this.getString(R.string.a330), "No", "a330", null));
+        TreeNode a340Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_tail, this.getString(R.string.a340), "No", "a340", null));
+        TreeNode a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_tail, this.getString(R.string.a350), "No", "a350", AirbusA350.class));
+        TreeNode a380Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_tail, this.getString(R.string.a380), "No", "a380", null));
 
 
         airbus.addChildren(a220Node, a319Node, a320Node, a321Node, a330Node, a340Node, a350Node, a380Node);
 
 
-        TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_photo_library, this.getString(R.string.boeing), "No", "boeing", null));
-        TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_photo, "B777", "No", "b777", null));
-        TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_photo, "B787", "No", "b787", null));
+        TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_airplane, this.getString(R.string.boeing), "No", "boeing", null));
+        TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_tail, "B777", "No", "b777", null));
+        TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_tail, "B787", "No", "b787", null));
         boeing.addChildren(b777, b787);
 
         manufacturerRoot.addChildren(airbus, boeing);

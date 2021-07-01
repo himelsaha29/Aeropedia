@@ -383,7 +383,7 @@ public class AlexaActivity extends CoreActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            createTreeView();
+            //createTreeView();
         }
         else if (!locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
@@ -394,7 +394,7 @@ public class AlexaActivity extends CoreActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            createTreeView();
+            //createTreeView();
         }
         if(mDrawer.getDrawerState() == ElasticDrawer.STATE_OPEN) {
             mDrawer.closeMenu(false);

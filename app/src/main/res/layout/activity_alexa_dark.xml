@@ -180,56 +180,91 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#1b1f1f"
+            android:orientation="vertical"
             android:paddingStart="15dp"
             android:paddingEnd="15dp">
 
-            <RelativeLayout
-                android:id="@+id/inside"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:paddingTop="75dp">
-                <!--android:paddingBottom="95dp"-->
-
-
-            </RelativeLayout>
-
-            <soup.neumorphism.NeumorphButton
-                android:id="@+id/lang_toggle"
-                style="@style/Widget.Neumorph.Button"
-                android:layout_width="90dp"
-                android:layout_height="70dp"
-                android:text="@string/language"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:neumorph_backgroundColor="#1b1f1f"
-                app:neumorph_shadowColorLight="#222727"
-                app:neumorph_shadowColorDark="#171a1a"
-                app:neumorph_shapeType="flat" />
+                android:layout_height="0dp"
+                android:layout_weight="0.05"
+                android:orientation="vertical">
 
 
-            <soup.neumorphism.NeumorphImageButton
-                android:id="@+id/dark_toggle"
-                style="@style/Widget.Neumorph.Button"
-                android:layout_width="90dp"
-                android:layout_height="70dp"
-                android:background="@android:color/transparent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_bulb_black_lit"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:neumorph_backgroundColor="#1b1f1f"
-                app:neumorph_shadowColorLight="#222727"
-                app:neumorph_shadowColorDark="#171a1a"
-                app:neumorph_shapeType="flat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:id="@+id/inside"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fadeScrollbars="true"
+                    android:fadingEdgeLength="150dp"
+                    android:overScrollMode="always"
+                    android:requiresFadingEdge="vertical"/>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <soup.neumorphism.NeumorphButton
+                        android:id="@+id/lang_toggle"
+                        style="@style/Widget.Neumorph.Button"
+                        android:layout_width="90dp"
+                        android:layout_height="70dp"
+                        android:text="@string/language"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:neumorph_backgroundColor="#1b1f1f"
+                        app:neumorph_shadowColorLight="#222727"
+                        app:neumorph_shadowColorDark="#171a1a"
+                        app:neumorph_shapeType="flat" />
+
+
+                    <soup.neumorphism.NeumorphImageButton
+                        android:id="@+id/dark_toggle"
+                        style="@style/Widget.Neumorph.Button"
+                        android:layout_width="90dp"
+                        android:layout_height="70dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_bulb_black_lit"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:neumorph_backgroundColor="#1b1f1f"
+                        app:neumorph_shadowColorLight="#222727"
+                        app:neumorph_shadowColorDark="#171a1a"
+                        app:neumorph_shapeType="flat" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
 
     </com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
 
