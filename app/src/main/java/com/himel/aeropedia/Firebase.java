@@ -47,7 +47,7 @@ public class Firebase extends AppCompatActivity {
     List<String> selected = new ArrayList<>();
     int childCount = 0;
 
-    Button a350Button, a340Button, a380Button, b787Button, cessnaButton, havillandButton;
+    Button a350Button, a340Button, a380Button, b787Button, cessnaButton, havillandButton, save, show;
 
     boolean a350, a340, a380, b787, citation, de_havilland;
 
@@ -61,6 +61,8 @@ public class Firebase extends AppCompatActivity {
         b787Button = findViewById(R.id.b787);
         cessnaButton = findViewById(R.id.citation);
         havillandButton = findViewById(R.id.havilland);
+        save = findViewById(R.id.save);
+        show = findViewById(R.id.show);
         //button = findViewById(R.id.firebase);
         //update = findViewById(R.id.button);
         DatabaseReference firebase = FirebaseDatabase.getInstance().getReference().child("Aircraft Preference");
@@ -76,47 +78,47 @@ public class Firebase extends AppCompatActivity {
 //
 //
 //
-//        update.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                firebase.addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(DataSnapshot dataSnapshot) {
-//                        map = new HashMap<>();
-//                        System.out.println(dataSnapshot.getChildrenCount());
-//                        for (DataSnapshot ds : dataSnapshot.getChildren()) {
-//                            if(!map.containsKey(ds.child("preferredAircraft").getValue().toString())) {
-//                                map.put(ds.child("preferredAircraft").getValue().toString(), 1);
-//                            } else {
-//                                int x = map.get(ds.child("preferredAircraft").getValue().toString());
-//                                map.put(ds.child("preferredAircraft").getValue().toString(), ++x);
-//                            }
-//
-//                            childCount++;
-//
-//                            if(childCount == dataSnapshot.getChildrenCount()) {
-//
-//                                for(String s : map.keySet()) {
-//                                    System.out.println(s + " : " +  map.get(s));
-//                                }
-//
-//                                childCount = 0;
-//                            }
-//
-//                        }
-//
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                    }
-//
-//                });
-//
-//            }
-//        });
+        show.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                firebase.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        map = new HashMap<>();
+                        System.out.println(dataSnapshot.getChildrenCount());
+                        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                            if(!map.containsKey(ds.child("preferredAircraft").getValue().toString())) {
+                                map.put(ds.child("preferredAircraft").getValue().toString(), 1);
+                            } else {
+                                int x = map.get(ds.child("preferredAircraft").getValue().toString());
+                                map.put(ds.child("preferredAircraft").getValue().toString(), ++x);
+                            }
+
+                            childCount++;
+
+                            if(childCount == dataSnapshot.getChildrenCount()) {
+
+                                for(String s : map.keySet()) {
+                                    System.out.println(s + " : " +  map.get(s));
+                                }
+
+                                childCount = 0;
+                            }
+
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+
+                });
+
+            }
+        });
 
         a350Button.setOnClickListener(new View.OnClickListener() {
 
@@ -216,6 +218,17 @@ public class Firebase extends AppCompatActivity {
                     havillandButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) havillandButton.getText());
                     de_havilland = false;
+                }
+            }
+        });
+
+        save.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                for(String aircraft : selected) {
+                    AircraftPreference preference = new AircraftPreference(aircraft);
+                    firebase.push().setValue(preference);
                 }
             }
         });
