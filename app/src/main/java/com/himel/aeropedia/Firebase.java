@@ -78,6 +78,9 @@ public class Firebase extends AppCompatActivity {
 //
 //
 //
+
+        assignButtons();
+
         show.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -104,6 +107,7 @@ public class Firebase extends AppCompatActivity {
                                 }
 
                                 childCount = 0;
+                                switchLayout();
                             }
 
                         }
@@ -117,9 +121,29 @@ public class Firebase extends AppCompatActivity {
 
                 });
 
+
+
             }
         });
 
+
+
+        save.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                for(String aircraft : selected) {
+                    AircraftPreference preference = new AircraftPreference(aircraft);
+                    firebase.push().setValue(preference);
+                }
+            }
+        });
+
+
+    }
+
+
+    private void assignButtons() {
         a350Button.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -221,18 +245,9 @@ public class Firebase extends AppCompatActivity {
                 }
             }
         });
+    }
 
-        save.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                for(String aircraft : selected) {
-                    AircraftPreference preference = new AircraftPreference(aircraft);
-                    firebase.push().setValue(preference);
-                }
-            }
-        });
-
-
+    private void switchLayout() {
+        setContentView(R.layout.activity_firebase_results);
     }
 }
