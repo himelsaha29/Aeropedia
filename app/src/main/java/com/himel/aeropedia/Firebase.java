@@ -3,11 +3,14 @@ package com.himel.aeropedia;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.amazon.identity.auth.device.api.authorization.User;
 import com.amazon.identity.auth.device.utils.JSONUtils;
@@ -249,5 +252,16 @@ public class Firebase extends AppCompatActivity {
 
     private void switchLayout() {
         setContentView(R.layout.activity_firebase_results);
+        NeumorphButton button = findViewById(R.id.button);
+        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+        ((ViewGroup.LayoutParams) layoutParams).height = dpToPx(130, this);
+        button.setLayoutParams(layoutParams);
+        button.setBackgroundColor(Color.RED);
+        button.setTextColor(Color.RED);
+    }
+
+    private static int dpToPx(int dp, Context context) {
+        float density = context.getResources().getDisplayMetrics().density;
+        return Math.round((float) dp * density);
     }
 }

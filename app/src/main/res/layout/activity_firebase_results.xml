@@ -130,6 +130,7 @@
                         android:layout_height="match_parent">
 
                         <soup.neumorphism.NeumorphButton
+                            android:id="@+id/button"
                             style="@style/Widget.Neumorph.Button"
                             android:layout_width="50dp"
                             android:layout_height="400dp"
