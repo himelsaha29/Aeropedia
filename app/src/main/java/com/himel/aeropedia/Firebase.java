@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -105,12 +106,51 @@ public class Firebase extends AppCompatActivity {
 
                             if(childCount == dataSnapshot.getChildrenCount()) {
 
+                                switchLayout();
+                                DisplayMetrics displayMetrics = new DisplayMetrics();
+                                getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+                                int height = displayMetrics.heightPixels;
+                                int width = displayMetrics.widthPixels;
+
                                 for(String s : map.keySet()) {
+
+                                    if(s.equalsIgnoreCase("Airbus A350")) {
+                                        NeumorphButton button = findViewById(R.id.a350);
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        ((ViewGroup.LayoutParams) layoutParams).height = dpToPx((int)(1 * ((float)map.get(s) / (float)childCount) * 0.7 * height), Firebase.this);
+                                        button.setLayoutParams(layoutParams);
+                                        button.setBackgroundColor(Color.RED);
+                                        button.setTextColor(Color.RED);
+                                    } if(s.equalsIgnoreCase("Airbus A340")) {
+                                        NeumorphButton button = findViewById(R.id.a340);
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        ((ViewGroup.LayoutParams) layoutParams).height = dpToPx((int)(1 * ((float)map.get(s) / (float)childCount) * 0.7 * height), Firebase.this);
+                                        button.setLayoutParams(layoutParams);
+                                        button.setBackgroundColor(Color.RED);
+                                        button.setTextColor(Color.RED);
+                                    } if(s.equalsIgnoreCase("Airbus A380")) {
+                                        NeumorphButton button = findViewById(R.id.a380);
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        int y = (int) ((map.get(s) / childCount) * 3.7 * height);
+
+                                        ((ViewGroup.LayoutParams) layoutParams).height = dpToPx((int)(1 * ((float)map.get(s) / (float)childCount) * 0.7 * height), Firebase.this);
+                                        button.setLayoutParams(layoutParams);
+                                        button.setBackgroundColor(Color.RED);
+                                        button.setTextColor(Color.RED);
+                                    } if(s.equalsIgnoreCase("Boeing 787")) {
+                                        NeumorphButton button = findViewById(R.id.b787);
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        ((ViewGroup.LayoutParams) layoutParams).height = dpToPx((int)(1 * ((float)map.get(s) / (float)childCount) * 0.7 * height), Firebase.this);
+                                        button.setLayoutParams(layoutParams);
+                                        button.setBackgroundColor(Color.RED);
+                                        button.setTextColor(Color.RED);
+                                    }
+
                                     System.out.println(s + " : " +  map.get(s));
                                 }
 
                                 childCount = 0;
-                                switchLayout();
+
                             }
 
                         }
@@ -252,12 +292,7 @@ public class Firebase extends AppCompatActivity {
 
     private void switchLayout() {
         setContentView(R.layout.activity_firebase_results);
-        NeumorphButton button = findViewById(R.id.button);
-        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-        ((ViewGroup.LayoutParams) layoutParams).height = dpToPx(130, this);
-        button.setLayoutParams(layoutParams);
-        button.setBackgroundColor(Color.RED);
-        button.setTextColor(Color.RED);
+
     }
 
     private static int dpToPx(int dp, Context context) {

@@ -48,6 +48,7 @@
                         android:layout_height="match_parent">
 
                         <soup.neumorphism.NeumorphButton
+                            android:id="@+id/a350"
                             style="@style/Widget.Neumorph.Button"
                             android:layout_width="50dp"
                             android:layout_height="200dp"
@@ -76,6 +77,7 @@
                         android:layout_height="match_parent">
 
                         <soup.neumorphism.NeumorphButton
+                            android:id="@+id/a340"
                             style="@style/Widget.Neumorph.Button"
                             android:layout_width="50dp"
                             android:layout_height="250dp"
@@ -103,6 +105,7 @@
                         android:layout_height="match_parent">
 
                         <soup.neumorphism.NeumorphButton
+                            android:id="@+id/a380"
                             style="@style/Widget.Neumorph.Button"
                             android:layout_width="50dp"
                             android:layout_height="190dp"
@@ -130,7 +133,7 @@
                         android:layout_height="match_parent">
 
                         <soup.neumorphism.NeumorphButton
-                            android:id="@+id/button"
+                            android:id="@+id/b787"
                             style="@style/Widget.Neumorph.Button"
                             android:layout_width="50dp"
                             android:layout_height="400dp"
@@ -158,6 +161,7 @@
                         android:layout_height="match_parent">
 
                         <soup.neumorphism.NeumorphButton
+                            android:id="@+id/de_havilland"
                             style="@style/Widget.Neumorph.Button"
                             android:layout_width="50dp"
                             android:layout_height="230dp"
@@ -185,6 +189,7 @@
                         android:layout_height="match_parent">
 
                         <soup.neumorphism.NeumorphButton
+                            android:id="@+id/cessna_citation"
                             style="@style/Widget.Neumorph.Button"
                             android:layout_width="50dp"
                             android:layout_height="130dp"
