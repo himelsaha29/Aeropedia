@@ -15,6 +15,13 @@
         android:layout_weight="0.2"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/maven_pro_medium"
+            android:text="See which group of aviation enthusiasts you are in..."
+            android:textSize="35sp"
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 
@@ -292,26 +299,58 @@
                         android:paddingEnd="20dp"
                         android:layout_height="match_parent">
 
-                        <soup.neumorphism.NeumorphButton
-                            android:id="@+id/de_havilland"
-                            style="@style/Widget.Neumorph.Button"
-                            android:layout_width="50dp"
-                            android:layout_height="230dp"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/maven_pro_medium"
-                            android:padding="5dp"
-                            android:text=" "
-                            android:textAllCaps="false"
-                            android:textColor="#b6d8fc"
-                            android:textSize="15sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:neumorph_backgroundColor="#b6d8fc"
-                            app:neumorph_shadowColorDark="#eaeaea"
-                            app:neumorph_shadowColorLight="#fdfdfd"
-                            app:neumorph_strokeColor="#f2f4f6"
-                            app:neumorph_strokeWidth="5dp" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:id="@+id/status"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:textAlignment="center"
+                                    android:text="IDK \n 0.0%"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <soup.neumorphism.NeumorphButton
+                                    android:id="@+id/idk"
+                                    style="@style/Widget.Neumorph.Button"
+                                    android:layout_width="50dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:padding="5dp"
+                                    android:text=" "
+                                    android:textAllCaps="false"
+                                    android:textColor="#b6d8fc"
+                                    android:textSize="15sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:neumorph_backgroundColor="#b6d8fc"
+                                    app:neumorph_shadowColorDark="#eaeaea"
+                                    app:neumorph_shadowColorLight="#fdfdfd"
+                                    app:neumorph_strokeColor="#f2f4f6"
+                                    app:neumorph_strokeWidth="5dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
