@@ -95,7 +95,7 @@ public class Firebase extends AppCompatActivity {
                         map = new HashMap<>();
                         System.out.println(dataSnapshot.getChildrenCount());
                         for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                            if(!map.containsKey(ds.child("preferredAircraft").getValue().toString())) {
+                            if (!map.containsKey(ds.child("preferredAircraft").getValue().toString())) {
                                 map.put(ds.child("preferredAircraft").getValue().toString(), 1);
                             } else {
                                 int x = map.get(ds.child("preferredAircraft").getValue().toString());
@@ -104,7 +104,7 @@ public class Firebase extends AppCompatActivity {
 
                             childCount++;
 
-                            if(childCount == dataSnapshot.getChildrenCount()) {
+                            if (childCount == dataSnapshot.getChildrenCount()) {
 
                                 switchLayout();
                                 DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -112,41 +112,65 @@ public class Firebase extends AppCompatActivity {
                                 int height = displayMetrics.heightPixels;
                                 int width = displayMetrics.widthPixels;
 
-                                for(String s : map.keySet()) {
+                                for (String s : map.keySet()) {
 
-                                    if(s.equalsIgnoreCase("Airbus A350")) {
+                                    if (s.equalsIgnoreCase("Airbus A350")) {
                                         NeumorphButton button = findViewById(R.id.a350);
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        ((ViewGroup.LayoutParams) layoutParams).height = dpToPx((int)(1 * ((float)map.get(s) / (float)childCount) * 0.7 * height), Firebase.this);
-                                        button.setLayoutParams(layoutParams);
-                                        button.setBackgroundColor(Color.RED);
-                                        button.setTextColor(Color.RED);
-                                    } if(s.equalsIgnoreCase("Airbus A340")) {
-                                        NeumorphButton button = findViewById(R.id.a340);
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        ((ViewGroup.LayoutParams) layoutParams).height = dpToPx((int)(1 * ((float)map.get(s) / (float)childCount) * 0.7 * height), Firebase.this);
-                                        button.setLayoutParams(layoutParams);
-                                        button.setBackgroundColor(Color.RED);
-                                        button.setTextColor(Color.RED);
-                                    } if(s.equalsIgnoreCase("Airbus A380")) {
-                                        NeumorphButton button = findViewById(R.id.a380);
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        int y = (int) ((map.get(s) / childCount) * 3.7 * height);
-
-                                        ((ViewGroup.LayoutParams) layoutParams).height = dpToPx((int)(1 * ((float)map.get(s) / (float)childCount) * 0.7 * height), Firebase.this);
-                                        button.setLayoutParams(layoutParams);
-                                        button.setBackgroundColor(Color.RED);
-                                        button.setTextColor(Color.RED);
-                                    } if(s.equalsIgnoreCase("Boeing 787")) {
-                                        NeumorphButton button = findViewById(R.id.b787);
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        ((ViewGroup.LayoutParams) layoutParams).height = dpToPx((int)(1 * ((float)map.get(s) / (float)childCount) * 0.7 * height), Firebase.this);
+                                        ((ViewGroup.LayoutParams) layoutParams).height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         button.setLayoutParams(layoutParams);
                                         button.setBackgroundColor(Color.RED);
                                         button.setTextColor(Color.RED);
                                     }
 
-                                    System.out.println(s + " : " +  map.get(s));
+                                    if (s.equalsIgnoreCase("Airbus A340")) {
+                                        NeumorphButton button = findViewById(R.id.a340);
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        System.out.println("A340 SIZE = " + size);
+                                        if(size <= 0 || size <= 100) {
+                                            ((ViewGroup.LayoutParams) layoutParams).height = (int) (100);
+                                        } else {
+                                            ((ViewGroup.LayoutParams) layoutParams).height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+
+                                        button.setLayoutParams(layoutParams);
+                                        button.setBackgroundColor(Color.RED);
+                                        button.setTextColor(Color.RED);
+                                    }
+
+                                    if (s.equalsIgnoreCase("Airbus A380")) {
+                                        NeumorphButton button = findViewById(R.id.a380);
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+
+                                        if(size <= 0 || size <= 100) {
+                                            ((ViewGroup.LayoutParams) layoutParams).height = (int) (100);
+                                        } else {
+                                            ((ViewGroup.LayoutParams) layoutParams).height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        button.setBackgroundColor(Color.RED);
+                                        button.setTextColor(Color.RED);
+                                    }
+
+                                    if (s.equalsIgnoreCase("Boeing 787")) {
+                                        NeumorphButton button = findViewById(R.id.b787);
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+
+                                        if(size <= 0 || size <= 100) {
+                                            ((ViewGroup.LayoutParams) layoutParams).height = (int) (100);
+                                        } else {
+                                            ((ViewGroup.LayoutParams) layoutParams).height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        button.setBackgroundColor(Color.RED);
+                                        button.setTextColor(Color.RED);
+                                    }
+
+
+                                    System.out.println(s + " : " + map.get(s));
                                 }
 
                                 childCount = 0;
@@ -165,17 +189,15 @@ public class Firebase extends AppCompatActivity {
                 });
 
 
-
             }
         });
-
 
 
         save.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                for(String aircraft : selected) {
+                for (String aircraft : selected) {
                     AircraftPreference preference = new AircraftPreference(aircraft);
                     firebase.push().setValue(preference);
                 }
@@ -191,12 +213,11 @@ public class Firebase extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if(!a350) {
+                if (!a350) {
                     a350Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
                     selected.add((String) a350Button.getText());
                     a350 = true;
-                }
-                else {
+                } else {
                     a350Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) a350Button.getText());
                     a350 = false;
@@ -208,12 +229,11 @@ public class Firebase extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if(!a340) {
+                if (!a340) {
                     a340Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
                     selected.add((String) a340Button.getText());
                     a340 = true;
-                }
-                else {
+                } else {
                     a340Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) a340Button.getText());
                     a340 = false;
@@ -225,12 +245,11 @@ public class Firebase extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if(!a380) {
+                if (!a380) {
                     a380Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
                     selected.add((String) a380Button.getText());
                     a380 = true;
-                }
-                else {
+                } else {
                     a380Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) a380Button.getText());
                     a380 = false;
@@ -242,12 +261,11 @@ public class Firebase extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if(!b787) {
+                if (!b787) {
                     b787Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
                     selected.add((String) b787Button.getText());
                     b787 = true;
-                }
-                else {
+                } else {
                     b787Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) b787Button.getText());
                     b787 = false;
@@ -259,12 +277,11 @@ public class Firebase extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if(!citation) {
+                if (!citation) {
                     cessnaButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
                     selected.add((String) cessnaButton.getText());
                     citation = true;
-                }
-                else {
+                } else {
                     cessnaButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) cessnaButton.getText());
                     citation = false;
@@ -276,12 +293,11 @@ public class Firebase extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if(!de_havilland) {
+                if (!de_havilland) {
                     havillandButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
                     selected.add((String) havillandButton.getText());
                     de_havilland = true;
-                }
-                else {
+                } else {
                     havillandButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) havillandButton.getText());
                     de_havilland = false;
