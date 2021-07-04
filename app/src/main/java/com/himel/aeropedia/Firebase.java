@@ -3,8 +3,10 @@ package com.himel.aeropedia;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -34,8 +36,10 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
@@ -47,12 +51,13 @@ import okhttp3.Response;
 import soup.neumorphism.NeumorphButton;
 
 public class Firebase extends AppCompatActivity {
-    Button button;
-    Button update;
-    Map<String, Integer> map;
-    List<String> selected = new ArrayList<>();
-    int childCount = 0;
-    DecimalFormat df = new DecimalFormat("###.##");
+    private Button button;
+    private Button update;
+    private Map<String, Integer> map;
+    private List<String> selected = new ArrayList<>();
+    private int childCount = 0;
+    private DecimalFormat df = new DecimalFormat("###.##");
+    private Set<String> chosenAircrafts = new HashSet<String>();;
 
     Button a350Button, a340Button, a380Button, b787Button, cessnaButton, havillandButton, save, show;
 
@@ -85,7 +90,11 @@ public class Firebase extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         map = new HashMap<>();
+                        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+                        Set<String> aircraftsChosen = prefs.getStringSet("ChosenAircrafts", null);
+
                         System.out.println(dataSnapshot.getChildrenCount());
+
                         for (DataSnapshot ds : dataSnapshot.getChildren()) {
                             if (!map.containsKey(ds.child("preferredAircraft").getValue().toString())) {
                                 map.put(ds.child("preferredAircraft").getValue().toString(), 1);
@@ -118,6 +127,9 @@ public class Firebase extends AppCompatActivity {
                                             layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         }
                                         button.setLayoutParams(layoutParams);
+                                        if(chosenAircrafts.contains("Airbus A350")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
                                     }
 
                                     if (s.equalsIgnoreCase("Airbus A340")) {
@@ -132,6 +144,9 @@ public class Firebase extends AppCompatActivity {
                                             layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         }
                                         button.setLayoutParams(layoutParams);
+                                        if(chosenAircrafts.contains("Airbus A340")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
                                     }
 
                                     if (s.equalsIgnoreCase("Airbus A380")) {
@@ -146,6 +161,9 @@ public class Firebase extends AppCompatActivity {
                                             layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         }
                                         button.setLayoutParams(layoutParams);
+                                        if(chosenAircrafts.contains("Airbus A380")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
                                     }
 
                                     if (s.equalsIgnoreCase("Boeing 787")) {
@@ -160,11 +178,15 @@ public class Firebase extends AppCompatActivity {
                                             layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         }
                                         button.setLayoutParams(layoutParams);
+                                        if(chosenAircrafts.contains("Boeing 787")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
                                     }
 
 
                                     System.out.println(s + " : " + map.get(s));
                                     System.out.println(childCount);
+
                                 }
 
                                 childCount = 0;
@@ -194,7 +216,11 @@ public class Firebase extends AppCompatActivity {
                 for (String aircraft : selected) {
                     AircraftPreference preference = new AircraftPreference(aircraft);
                     firebase.push().setValue(preference);
+                    chosenAircrafts.add(aircraft);
                 }
+                SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+                editor.putStringSet("ChosenAircrafts", chosenAircrafts);
+                editor.apply();
             }
         });
 
@@ -305,8 +331,4 @@ public class Firebase extends AppCompatActivity {
 
     }
 
-    private static int dpToPx(int dp, Context context) {
-        float density = context.getResources().getDisplayMetrics().density;
-        return Math.round((float) dp * density);
-    }
 }
