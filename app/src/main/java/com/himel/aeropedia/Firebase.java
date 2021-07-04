@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.amazon.identity.auth.device.api.authorization.User;
 import com.amazon.identity.auth.device.utils.JSONUtils;
@@ -29,6 +30,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -50,6 +52,7 @@ public class Firebase extends AppCompatActivity {
     Map<String, Integer> map;
     List<String> selected = new ArrayList<>();
     int childCount = 0;
+    DecimalFormat df = new DecimalFormat("###.##");
 
     Button a350Button, a340Button, a380Button, b787Button, cessnaButton, havillandButton, save, show;
 
@@ -71,17 +74,6 @@ public class Firebase extends AppCompatActivity {
         //update = findViewById(R.id.button);
         DatabaseReference firebase = FirebaseDatabase.getInstance().getReference().child("Aircraft Preference");
 
-//        button.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                AircraftPreference ap = new AircraftPreference("Boeing 777");
-//                firebase.push().setValue(ap);
-//            }
-//        });
-//
-//
-//
 
         assignButtons();
 
@@ -116,61 +108,63 @@ public class Firebase extends AppCompatActivity {
 
                                     if (s.equalsIgnoreCase("Airbus A350")) {
                                         NeumorphButton button = findViewById(R.id.a350);
+                                        TextView status = findViewById(R.id.a350status);
+                                        status.setText("Airbus A350 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        ((ViewGroup.LayoutParams) layoutParams).height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
                                         button.setLayoutParams(layoutParams);
-                                        button.setBackgroundColor(Color.RED);
-                                        button.setTextColor(Color.RED);
                                     }
 
                                     if (s.equalsIgnoreCase("Airbus A340")) {
                                         NeumorphButton button = findViewById(R.id.a340);
+                                        TextView status = findViewById(R.id.a340status);
+                                        status.setText("Airbus A340 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        System.out.println("A340 SIZE = " + size);
                                         if(size <= 0 || size <= 100) {
-                                            ((ViewGroup.LayoutParams) layoutParams).height = (int) (100);
+                                            layoutParams.height = 100;
                                         } else {
-                                            ((ViewGroup.LayoutParams) layoutParams).height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         }
-
                                         button.setLayoutParams(layoutParams);
-                                        button.setBackgroundColor(Color.RED);
-                                        button.setTextColor(Color.RED);
                                     }
 
                                     if (s.equalsIgnoreCase("Airbus A380")) {
                                         NeumorphButton button = findViewById(R.id.a380);
+                                        TextView status = findViewById(R.id.a380status);
+                                        status.setText("Airbus A380 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-
                                         if(size <= 0 || size <= 100) {
-                                            ((ViewGroup.LayoutParams) layoutParams).height = (int) (100);
+                                            layoutParams.height = 100;
                                         } else {
-                                            ((ViewGroup.LayoutParams) layoutParams).height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         }
                                         button.setLayoutParams(layoutParams);
-                                        button.setBackgroundColor(Color.RED);
-                                        button.setTextColor(Color.RED);
                                     }
 
                                     if (s.equalsIgnoreCase("Boeing 787")) {
                                         NeumorphButton button = findViewById(R.id.b787);
+                                        TextView status = findViewById(R.id.b787status);
+                                        status.setText("Boeing 787 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-
                                         if(size <= 0 || size <= 100) {
-                                            ((ViewGroup.LayoutParams) layoutParams).height = (int) (100);
+                                            layoutParams.height = 100;
                                         } else {
-                                            ((ViewGroup.LayoutParams) layoutParams).height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         }
                                         button.setLayoutParams(layoutParams);
-                                        button.setBackgroundColor(Color.RED);
-                                        button.setTextColor(Color.RED);
                                     }
 
 
                                     System.out.println(s + " : " + map.get(s));
+                                    System.out.println(childCount);
                                 }
 
                                 childCount = 0;
