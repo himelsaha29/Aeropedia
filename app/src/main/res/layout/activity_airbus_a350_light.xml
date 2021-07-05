@@ -125,7 +125,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Wide-body jet airliner"
                                 android:paddingStart="10dp"
-                                android:textSize="16dp"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingEnd="10dp"
                                 android:textColor="@color/black"
@@ -143,7 +143,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Engines"
+                                android:text="Engine"
                                 android:paddingTop="10dp"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
@@ -159,7 +159,7 @@
                                 android:text="Rolls-Royce Trent XWB"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:textSize="16dp"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:textColor="@color/black"
                                 android:layout_gravity="center"
@@ -191,7 +191,7 @@
                                 android:text="14 June 2013"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:textSize="16dp"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:textColor="@color/black"
                                 android:layout_gravity="center"
@@ -219,10 +219,10 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="15 January 2015 \nwith Qatar Airways"
+                                android:text="15 January 2015\nwith Qatar Airways"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:textSize="16dp"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:textColor="@color/black"
                                 android:layout_gravity="center"
@@ -254,7 +254,7 @@
                                 android:text="3"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:textSize="16dp"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:textColor="@color/black"
                                 android:layout_gravity="center"
@@ -285,7 +285,7 @@
                                 android:text="Singapore Airlines"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:textSize="16dp"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:textColor="@color/black"
                                 android:layout_gravity="center"
@@ -308,7 +308,7 @@
                     android:text="@string/a350_desc"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="38sp" />
+                    android:textSize="28sp" />
 
 
             </LinearLayout>

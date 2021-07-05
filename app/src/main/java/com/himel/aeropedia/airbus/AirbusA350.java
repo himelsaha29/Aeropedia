@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.manufacturers.Airbus;
@@ -40,6 +42,7 @@ public class AirbusA350 extends AppCompatActivity {
     private FlowingDrawer mDrawer;
     private BlurLayout blur;
     private AndroidTreeView tView;
+    private CollapsingToolbarLayout collapsingToolbarLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +66,12 @@ public class AirbusA350 extends AppCompatActivity {
         } else if (locale.toString().contains("fr")) {
             langToggle.setShapeType(ShapeType.PRESSED);
         }
+
+
+        Typeface tf = Typeface.createFromAsset(this.getAssets(), "fonts/maven_pro_medium.ttf");
+        collapsingToolbarLayout = findViewById(R.id.collapsing_bar);
+        collapsingToolbarLayout.setCollapsedTitleTypeface(tf);
+        collapsingToolbarLayout.setExpandedTitleTypeface(tf);
 
 
         langToggle.setOnClickListener(new View.OnClickListener() {
