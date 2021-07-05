@@ -75,8 +75,6 @@ public class Firebase extends AppCompatActivity {
         havillandButton = findViewById(R.id.havilland);
         save = findViewById(R.id.save);
         show = findViewById(R.id.show);
-        //button = findViewById(R.id.firebase);
-        //update = findViewById(R.id.button);
         DatabaseReference firebase = FirebaseDatabase.getInstance().getReference().child("Aircraft Preference");
 
 
@@ -99,8 +97,8 @@ public class Firebase extends AppCompatActivity {
                             if (!map.containsKey(ds.child("preferredAircraft").getValue().toString())) {
                                 map.put(ds.child("preferredAircraft").getValue().toString(), 1);
                             } else {
-                                int x = map.get(ds.child("preferredAircraft").getValue().toString());
-                                map.put(ds.child("preferredAircraft").getValue().toString(), ++x);
+                                int count = map.get(ds.child("preferredAircraft").getValue().toString());
+                                map.put(ds.child("preferredAircraft").getValue().toString(), ++count);
                             }
 
                             childCount++;

@@ -90,8 +90,143 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="0dp"
-                android:layout_marginRight="0dp"
                 android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="First flight"
+                                android:paddingTop="10dp"
+                                android:paddingStart="10dp"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingEnd="10dp"
+                                android:layout_gravity="center"
+                                android:textColor="#72A8E1"
+                                android:textAlignment="center"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1st September 2012"
+                                android:paddingStart="10dp"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingEnd="10dp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"
+                                android:textAlignment="center"/>
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="First flight"
+                                android:paddingTop="10dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:layout_gravity="center"
+                                android:textColor="#72A8E1"
+                                android:textAlignment="center"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1st September 2012"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"
+                                android:textAlignment="center"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="First flight"
+                                android:paddingTop="10dp"
+                                android:paddingStart="10dp"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingEnd="10dp"
+                                android:layout_gravity="center"
+                                android:textColor="#72A8E1"
+                                android:textAlignment="center"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1st September 2012"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"
+                                android:textAlignment="center"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="First flight"
+                                android:paddingTop="10dp"
+                                android:paddingStart="10dp"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingEnd="10dp"
+                                android:layout_gravity="center"
+                                android:textColor="#72A8E1"
+                                android:textAlignment="center"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1st September 2012"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"
+                                android:textAlignment="center"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
 
                 <TextView
                     android:layout_width="match_parent"
