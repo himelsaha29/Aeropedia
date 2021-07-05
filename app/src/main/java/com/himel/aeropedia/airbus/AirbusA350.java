@@ -104,7 +104,7 @@ public class AirbusA350 extends AppCompatActivity {
         });
 
 
-        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_FULLSCREEN);
+        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
         mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
             @Override
             public void onDrawerStateChange(int oldState, int newState) {
