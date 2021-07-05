@@ -89,12 +89,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginEnd="0dp"
                 android:orientation="vertical">
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fadingEdge="horizontal"
+                    android:fadingEdgeLength="50dp"
+                    android:fadeScrollbars="true"
+                    android:requiresFadingEdge="horizontal"
                     android:padding="10dp">
 
                     <LinearLayout
@@ -156,7 +159,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Rolls-Royce Trent XWB"
+                                android:text="Rolls-Royce Trent XWB (2)"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
                                 android:textSize="15dp"
@@ -301,8 +304,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="7dp"
-                    android:layout_marginRight="7dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:fontFamily="@font/maven_pro_medium"
                     android:gravity="center_horizontal"
                     android:text="@string/a350_desc"
