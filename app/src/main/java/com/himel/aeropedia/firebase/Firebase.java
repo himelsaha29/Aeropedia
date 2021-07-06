@@ -106,7 +106,7 @@ public class Firebase extends AppCompatActivity {
                                             layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         }
                                         button.setLayoutParams(layoutParams);
-                                        if(chosenAircrafts.contains("Airbus A350")) {
+                                        if(aircraftsChosen.contains("Airbus A350")) {
                                             button.setBackgroundColor(Color.RED);
                                         }
                                     }
@@ -123,9 +123,10 @@ public class Firebase extends AppCompatActivity {
                                             layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         }
                                         button.setLayoutParams(layoutParams);
-                                        if(chosenAircrafts.contains("Airbus A340")) {
+                                        if(aircraftsChosen.contains("Airbus A340")) {
                                             button.setBackgroundColor(Color.RED);
                                         }
+                                        System.out.println();
                                     }
 
                                     if (s.equalsIgnoreCase("Airbus A380")) {
@@ -140,7 +141,7 @@ public class Firebase extends AppCompatActivity {
                                             layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         }
                                         button.setLayoutParams(layoutParams);
-                                        if(chosenAircrafts.contains("Airbus A380")) {
+                                        if(aircraftsChosen.contains("Airbus A380")) {
                                             button.setBackgroundColor(Color.RED);
                                         }
                                     }
@@ -157,7 +158,7 @@ public class Firebase extends AppCompatActivity {
                                             layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         }
                                         button.setLayoutParams(layoutParams);
-                                        if(chosenAircrafts.contains("Boeing 787")) {
+                                        if(aircraftsChosen.contains("Boeing 787")) {
                                             button.setBackgroundColor(Color.RED);
                                         }
                                     }

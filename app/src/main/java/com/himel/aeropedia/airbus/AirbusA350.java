@@ -373,7 +373,8 @@ public class AirbusA350 extends AppCompatActivity {
     }
 
     public void addNewItem(View view) {
-        SliderItem sliderItem = new SliderItem();//sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        SliderItem sliderItem = new SliderItem();
+        //sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
         adapter.addItem(sliderItem);
     }
 
