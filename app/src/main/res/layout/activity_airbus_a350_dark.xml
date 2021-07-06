@@ -100,7 +100,7 @@
                     android:layout_marginRight="7dp"
                     android:fontFamily="@font/maven_pro_medium"
                     android:gravity="center_horizontal"
-                    android:text="@string/a350_desc"
+                    android:text="@string/a350_desc1"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="38sp" />

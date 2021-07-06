@@ -307,23 +307,20 @@
                     android:layout_marginRight="5dp"
                     android:fontFamily="@font/maven_pro_medium"
                     android:gravity="center_horizontal"
-                    android:text="@string/a350_desc"
+                    android:text="@string/a350_desc1"
                     android:textColor="@color/black"
                     android:textSize="28sp" />
 
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="6dp">
 
-
-
-                    <androidx.cardview.widget.CardView
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="12dp"
-                        app:cardCornerRadius="6dp">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                        android:layout_height="wrap_content">
 
                         <com.smarteist.autoimageslider.SliderView
                             android:id="@+id/imageSlider"
@@ -347,9 +344,20 @@
                             app:sliderScrollTimeInSec="1"
                             app:sliderStartAutoCycle="false" />
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/maven_pro_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/a350_desc2"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
 
 
             </LinearLayout>

@@ -2,7 +2,6 @@ package com.himel.aeropedia.manufacturers;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.FragmentManager;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,11 +15,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ScrollView;
 
-import com.himel.aeropedia.Firebase;
+import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.alexa.AlexaActivity;
-import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
 import com.himel.aeropedia.treeview.TreeView;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
@@ -123,15 +121,6 @@ public class ManufacturerMenu extends AppCompatActivity {
             }
         });
 
-        boeingCard.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent showContent = new Intent(getApplicationContext(), Firebase.class);
-                startActivity(showContent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
 
         langToggle.setOnClickListener(new View.OnClickListener() {
 

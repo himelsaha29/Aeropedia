@@ -18,7 +18,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
-
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.alexa.AlexaActivity;

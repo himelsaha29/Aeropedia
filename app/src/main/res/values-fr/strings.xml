@@ -17,8 +17,8 @@
     <string name="a220">A220</string>
     <string name="beluga">Beluga XL</string>
     <string name="language"><b>EN</b></string>
-    <string name="a350_desc">Le Airbus A350 est un long-range, wide-body jet airliner developed by Airbus. The first A350 design proposed by Airbus in 2004, in response to the Boeing 787 Dreamliner, would have been a development of the A330 with composite wings and new engines. As market support was inadequate, in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB turbofan engines.</string>
-
+    <string name="a350_desc1">The Airbus A350 is a long-range, wide-body jet airliner developed by Airbus. The first A350 design proposed by Airbus in 2004, in response to the Boeing 787 Dreamliner, would have been a development of the A330 with composite wings and new engines.</string>
+    <string name="a350_desc2">As market support was inadequate, in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB turbofan engines.</string>
 
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>

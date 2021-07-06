@@ -17,8 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".Firebase" />
-        <activity android:name=".BottomSheet" />
+        <activity android:name=".firebase.Firebase" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

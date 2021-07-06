@@ -12,15 +12,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
+import com.himel.aeropedia.util.SliderAdapter;
+import com.himel.aeropedia.util.SliderItem;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -31,7 +29,6 @@ import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -52,7 +49,7 @@ public class AirbusA350 extends AppCompatActivity {
     private AndroidTreeView tView;
     private CollapsingToolbarLayout collapsingToolbarLayout;
     SliderView sliderView;
-    private SliderAdapterExample adapter;
+    private SliderAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,31 +80,7 @@ public class AirbusA350 extends AppCompatActivity {
         collapsingToolbarLayout.setCollapsedTitleTypeface(tf);
         collapsingToolbarLayout.setExpandedTitleTypeface(tf);
 
-
-
-
-        sliderView = findViewById(R.id.imageSlider);
-
-        adapter = new SliderAdapterExample(this);
-        sliderView.setSliderAdapter(adapter, false);
-        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-        sliderView.setIndicatorSelectedColor(Color.WHITE);
-        sliderView.setIndicatorUnselectedColor(Color.GRAY);
-        sliderView.setScrollTimeInSec(3);
-        sliderView.setAutoCycle(false);
-        renewItems(sliderView);
-
-
-
-        sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
-            @Override
-            public void onIndicatorClicked(int position) {
-                Log.i("GGG", "onIndicatorClicked: " + sliderView.getCurrentPagePosition());
-            }
-        });
-
+        slideView();
 
 
         langToggle.setOnClickListener(new View.OnClickListener() {
@@ -353,12 +326,37 @@ public class AirbusA350 extends AppCompatActivity {
 
 
 
+    /** SlideView **/
+
+    private void slideView() {
+
+        sliderView = findViewById(R.id.imageSlider);
+
+        adapter = new SliderAdapter(this);
+        sliderView.setSliderAdapter(adapter, false);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
+        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        sliderView.setIndicatorSelectedColor(Color.WHITE);
+        sliderView.setIndicatorUnselectedColor(Color.GRAY);
+        sliderView.setScrollTimeInSec(3);
+        sliderView.setAutoCycle(false);
+        renewItems(sliderView);
+
+
+        sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
+            @Override
+            public void onIndicatorClicked(int position) {
+                Log.i("GGG", "onIndicatorClicked: " + sliderView.getCurrentPagePosition());
+            }
+        });
+    }
+
     public void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
         //dummy data
         for (int i = 0; i < 5; i++) {
             SliderItem sliderItem = new SliderItem();
-            sliderItem.setDescription("Slider Item " + i);
             if (i % 2 == 0) {
                 sliderItem.setImageLocation(R.drawable.airbus_cover);
             } else {
@@ -375,10 +373,10 @@ public class AirbusA350 extends AppCompatActivity {
     }
 
     public void addNewItem(View view) {
-        SliderItem sliderItem = new SliderItem();
-        sliderItem.setDescription("Slider Item Added Manually");
-        //sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        SliderItem sliderItem = new SliderItem();//sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
         adapter.addItem(sliderItem);
     }
+
+    /** SlideView **/
 
 }
