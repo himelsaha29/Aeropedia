@@ -94,11 +94,11 @@
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fadeScrollbars="true"
                     android:fadingEdge="horizontal"
                     android:fadingEdgeLength="50dp"
-                    android:fadeScrollbars="true"
-                    android:requiresFadingEdge="horizontal"
-                    android:padding="10dp">
+                    android:padding="10dp"
+                    android:requiresFadingEdge="horizontal">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -113,29 +113,28 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="10dp"
                                 android:text="Type"
-                                android:paddingTop="10dp"
-                                android:paddingStart="10dp"
-                                android:textSize="18dp"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:paddingEnd="10dp"
-                                android:layout_gravity="center"
+                                android:textAlignment="center"
                                 android:textColor="#72A8E1"
-                                android:textAlignment="center"/>
+                                android:textSize="18dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
                                 android:text="Wide-body"
-                                android:paddingStart="10dp"
-                                android:textSize="15dp"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:paddingEnd="10dp"
+                                android:textAlignment="center"
                                 android:textColor="@color/black"
-                                android:layout_gravity="center"
-                                android:textAlignment="center"/>
+                                android:textSize="15dp" />
                         </LinearLayout>
-
 
 
                         <LinearLayout
@@ -146,27 +145,27 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="10dp"
                                 android:text="Engine"
-                                android:paddingTop="10dp"
-                                android:paddingStart="10dp"
-                                android:paddingEnd="10dp"
-                                android:textSize="18dp"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:layout_gravity="center"
+                                android:textAlignment="center"
                                 android:textColor="#72A8E1"
-                                android:textAlignment="center"/>
+                                android:textSize="18dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
                                 android:text="Rolls-Royce Trent XWB (2)"
-                                android:paddingStart="10dp"
-                                android:paddingEnd="10dp"
-                                android:textSize="15dp"
-                                android:fontFamily="@font/maven_pro_medium"
+                                android:textAlignment="center"
                                 android:textColor="@color/black"
-                                android:layout_gravity="center"
-                                android:textAlignment="center"/>
+                                android:textSize="15dp" />
                         </LinearLayout>
 
 
@@ -178,27 +177,27 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="10dp"
                                 android:text="First flight"
-                                android:paddingTop="10dp"
-                                android:paddingStart="10dp"
-                                android:textSize="18dp"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:paddingEnd="10dp"
-                                android:layout_gravity="center"
+                                android:textAlignment="center"
                                 android:textColor="#72A8E1"
-                                android:textAlignment="center"/>
+                                android:textSize="18dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
                                 android:text="14 June 2013"
-                                android:paddingStart="10dp"
-                                android:paddingEnd="10dp"
-                                android:textSize="15dp"
-                                android:fontFamily="@font/maven_pro_medium"
+                                android:textAlignment="center"
                                 android:textColor="@color/black"
-                                android:layout_gravity="center"
-                                android:textAlignment="center"/>
+                                android:textSize="15dp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -209,27 +208,27 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="10dp"
                                 android:text="Introduction"
-                                android:paddingTop="10dp"
-                                android:textSize="18dp"
-                                android:paddingStart="10dp"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:paddingEnd="10dp"
-                                android:layout_gravity="center"
+                                android:textAlignment="center"
                                 android:textColor="#72A8E1"
-                                android:textAlignment="center"/>
+                                android:textSize="18dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
                                 android:text="15 January 2015\nwith Qatar Airways"
-                                android:paddingStart="10dp"
-                                android:paddingEnd="10dp"
-                                android:textSize="15dp"
-                                android:fontFamily="@font/maven_pro_medium"
+                                android:textAlignment="center"
                                 android:textColor="@color/black"
-                                android:layout_gravity="center"
-                                android:textAlignment="center"/>
+                                android:textSize="15dp" />
                         </LinearLayout>
 
 
@@ -241,27 +240,27 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="10dp"
                                 android:text="Variants"
-                                android:paddingTop="10dp"
-                                android:paddingStart="10dp"
-                                android:textSize="18dp"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:paddingEnd="10dp"
-                                android:layout_gravity="center"
+                                android:textAlignment="center"
                                 android:textColor="#72A8E1"
-                                android:textAlignment="center"/>
+                                android:textSize="18dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="3"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:textSize="15dp"
-                                android:fontFamily="@font/maven_pro_medium"
+                                android:text="3"
+                                android:textAlignment="center"
                                 android:textColor="@color/black"
-                                android:layout_gravity="center"
-                                android:textAlignment="center"/>
+                                android:textSize="15dp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -272,27 +271,27 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Primary customer"
-                                android:paddingTop="10dp"
-                                android:textSize="18dp"
-                                android:paddingStart="10dp"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:paddingEnd="10dp"
                                 android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="Primary customer"
+                                android:textAlignment="center"
                                 android:textColor="#72A8E1"
-                                android:textAlignment="center"/>
+                                android:textSize="18dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Singapore Airlines"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:textSize="15dp"
-                                android:fontFamily="@font/maven_pro_medium"
+                                android:text="Singapore Airlines"
+                                android:textAlignment="center"
                                 android:textColor="@color/black"
-                                android:layout_gravity="center"
-                                android:textAlignment="center"/>
+                                android:textSize="15dp" />
                         </LinearLayout>
 
 
@@ -313,31 +312,45 @@
                     android:textSize="28sp" />
 
 
-                <androidx.cardview.widget.CardView
-                    app:cardCornerRadius="6dp"
-                    android:layout_margin="16dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
-                    <com.smarteist.autoimageslider.SliderView
-                        android:id="@+id/imageSlider"
+
+
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:layout_height="300dp"
-                        app:sliderAnimationDuration="600"
-                        app:sliderAutoCycleDirection="back_and_forth"
-                        app:sliderAutoCycleEnabled="true"
-                        app:sliderIndicatorAnimationDuration="600"
-                        app:sliderIndicatorGravity="center_horizontal|bottom"
-                        app:sliderIndicatorMargin="15dp"
-                        app:sliderIndicatorOrientation="horizontal"
-                        app:sliderIndicatorPadding="3dp"
-                        app:sliderIndicatorRadius="2dp"
-                        app:sliderIndicatorSelectedColor="#5A5A5A"
-                        app:sliderIndicatorUnselectedColor="#FFF"
-                        app:sliderScrollTimeInSec="1"
-                        app:sliderStartAutoCycle="true" />
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="6dp">
 
-                </androidx.cardview.widget.CardView>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <com.smarteist.autoimageslider.SliderView
+                            android:id="@+id/imageSlider"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintDimensionRatio="H,16:9"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:sliderAnimationDuration="600"
+                            app:sliderAutoCycleDirection="back_and_forth"
+                            app:sliderAutoCycleEnabled="true"
+                            app:sliderIndicatorAnimationDuration="600"
+                            app:sliderIndicatorGravity="center_horizontal|bottom"
+                            app:sliderIndicatorMargin="15dp"
+                            app:sliderIndicatorOrientation="horizontal"
+                            app:sliderIndicatorPadding="3dp"
+                            app:sliderIndicatorRadius="2dp"
+                            app:sliderIndicatorSelectedColor="#5A5A5A"
+                            app:sliderIndicatorUnselectedColor="#FFF"
+                            app:sliderScrollTimeInSec="1"
+                            app:sliderStartAutoCycle="false" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
 
             </LinearLayout>
 
@@ -396,7 +409,7 @@
                     android:fadeScrollbars="true"
                     android:fadingEdgeLength="150dp"
                     android:overScrollMode="always"
-                    android:requiresFadingEdge="vertical"/>
+                    android:requiresFadingEdge="vertical" />
 
 
             </LinearLayout>

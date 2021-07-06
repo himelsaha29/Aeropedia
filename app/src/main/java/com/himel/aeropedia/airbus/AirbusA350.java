@@ -89,16 +89,16 @@ public class AirbusA350 extends AppCompatActivity {
         sliderView = findViewById(R.id.imageSlider);
 
         adapter = new SliderAdapterExample(this);
-        sliderView.setSliderAdapter(adapter);
+        sliderView.setSliderAdapter(adapter, false);
         sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
         sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
         sliderView.setIndicatorSelectedColor(Color.WHITE);
         sliderView.setIndicatorUnselectedColor(Color.GRAY);
         sliderView.setScrollTimeInSec(3);
-        sliderView.setAutoCycle(true);
-        sliderView.startAutoCycle();
-        addNewItem(sliderView);
+        sliderView.setAutoCycle(false);
+        renewItems(sliderView);
+
 
 
         sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
