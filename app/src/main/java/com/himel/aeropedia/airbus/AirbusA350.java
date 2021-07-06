@@ -360,9 +360,9 @@ public class AirbusA350 extends AppCompatActivity {
             SliderItem sliderItem = new SliderItem();
             sliderItem.setDescription("Slider Item " + i);
             if (i % 2 == 0) {
-                sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+                sliderItem.setImageLocation(R.drawable.airbus_cover);
             } else {
-                sliderItem.setImageUrl("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+                sliderItem.setImageLocation(R.drawable.b787_cover);
             }
             sliderItemList.add(sliderItem);
         }
@@ -377,7 +377,7 @@ public class AirbusA350 extends AppCompatActivity {
     public void addNewItem(View view) {
         SliderItem sliderItem = new SliderItem();
         sliderItem.setDescription("Slider Item Added Manually");
-        sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        //sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
         adapter.addItem(sliderItem);
     }
 
