@@ -52,6 +52,7 @@ public class SliderAdapter extends
 
         Glide.with(viewHolder.itemView)
                 .load(sliderItem.getImageLocation())
+                .dontTransform()
                 .into(viewHolder.imageViewBackground);
 
 
