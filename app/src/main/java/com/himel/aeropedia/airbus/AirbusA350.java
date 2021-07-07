@@ -355,13 +355,18 @@ public class AirbusA350 extends AppCompatActivity {
     public void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
         //dummy data
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
-            if (i % 2 == 0) {
-                sliderItem.setImageLocation(R.drawable.airbus_cover);
-            } else {
-                sliderItem.setImageLocation(R.drawable.b787_cover);
+            if (i == 0) {
+                sliderItem.setImageLocation(R.drawable.airbus);
+            } else if (i == 1) {
+                sliderItem.setImageLocation(R.drawable.airliners);
+            } else if (i == 2) {
+                sliderItem.setImageLocation(R.drawable.airbus_);
+            } else if (i == 3) {
+                sliderItem.setImageLocation(R.drawable.airliners_a350);
             }
+
             sliderItemList.add(sliderItem);
         }
         adapter.renewItems(sliderItemList);

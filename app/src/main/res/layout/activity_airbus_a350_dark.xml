@@ -353,6 +353,7 @@
                     android:layout_height="wrap_content"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
+                    android:paddingBottom="12dp"
                     android:fontFamily="@font/maven_pro_medium"
                     android:text="@string/a350_desc2"
                     android:textColor="@color/white"
