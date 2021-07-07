@@ -17,8 +17,17 @@
     <string name="a220">A220</string>
     <string name="beluga">Beluga XL</string>
     <string name="language"><b>FR</b></string>
-    <string name="a350_desc1">The Airbus A350 is a long-range, wide-body jet airliner developed by Airbus. The first A350 design proposed by Airbus in 2004, in response to the Boeing 787 Dreamliner, would have been a development of the A330 with composite wings and new engines.</string>
-    <string name="a350_desc2">As market support was inadequate, in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB turbofan engines.</string>
+    <string name="a350_desc1">The Airbus A350 is a long-range, wide-body jet airliner.The first A350 design proposed by Airbus in 2004,
+        in response to Boeing\'s 787 Dreamliner, would have been a development of the A330 with composite wings and new engines. However,
+        market support was inadequate at the time and in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB
+        turbofan engines. The A350 is the first aircraft of the Airbus family that is largely made of carbon fibre reinforced polymer. It features a new fuselage designed around a
+        nine-abreast economy cross-section, up from the eight-abreast A330/A340. The A350 has been in production since 2010 and in total 425 A350s have been built as of
+        31 May 2021.</string>
+
+    <string name="a350_desc2">The A350 XWB airframe is made out of 53% composites: carbon fibre reinforced plastic for the outer and centre wing box (covers, stringers, spars),
+        fuselage (skin, frame, keel beam, and rear fuselage) and the empennage (horizontal and vertical tailplanes); 19% aluminium and aluminium–lithium alloy for ribs,
+        floor beams, and gear bays; 14% titanium for landing gears, pylons, and attachments; 6% steel; and 8% miscellaneous. For the wings, those mark a 31.9° sweep angle for a
+        Mach 0.85 cruise speed and has a maximum operating speed of Mach 0.89.</string>
 
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>
