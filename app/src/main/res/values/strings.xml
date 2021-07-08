@@ -38,8 +38,27 @@
         from outside with one positioned behind the nose wheel and the other in the vertical tail. The views from the cameras can be displayed in the A350 cockpit on displays
         and as well as on the passenger in-flight entertainment screens.\n\nThe Airbus A350 consumes 25% less fuel and emits 25% less emissions than previous generations and according to Airbus it is the quietest two aisle plane
         on the planet. Australia\'s Qantas chose A350 over Boeing\'s 787 Dreamliner for "Project Sunrise" – a codename for proposed nonstop flights between Australia
-        and several international destinations that include London, New York and Paris.
+        and several international destinations that include London, New York and Paris.\n
     </string>
+
+    <string name="a350_specs">Specifications</string>
+    <string name="cockpit_crew">Cockpit crew</string>
+    <string name="a350_wingspan">Wing span</string>
+    <string name="a350_wingspan_value">64.75 m</string>
+    <string name="a350_length">Length</string>
+    <string name="a350_length_value">66.8 m - 73.79 m</string>
+    <string name="a350_height">Height</string>
+    <string name="a350_height_value">17.05 m - 17.08 m</string>
+    <string name="a350_fuselage">Fuselage</string>
+    <string name="a350_fuselage_value">5.96 m (W) / 6.09 m (H)</string>
+    <string name="a350_mtow">MTOW</string>
+    <string name="a350_mtow_value">280 t - 316 t</string>
+    <string name="a350_cruise_speed">Cruise speed</string>
+    <string name="a350_cruise_speed_value">903 km/h (typical), 950 km/h (max.)</string>
+    <string name="a350_range">Range</string>
+    <string name="a350_range_value">8100 nmi - 8700 nmi</string>
+    <string name="a350_thrust">Thrust (2x)</string>
+    <string name="a350_thrust_value">374.5 kN - 431.5 kN</string>
 
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>

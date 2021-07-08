@@ -19,6 +19,25 @@
     <string name="language"><b>EN</b></string>
     <string name="a350_desc1">The Airbus A350 is a long-range, wide-body jet airliner developed by Airbus. The first A350 design proposed by Airbus in 2004, in response to the Boeing 787 Dreamliner, would have been a development of the A330 with composite wings and new engines.</string>
     <string name="a350_desc2">As marché support was inadequate, in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB turbofan engines.</string>
+    <string name="a350_specs">Specifications</string>
+    <string name="cockpit_crew">Cockpit crew</string>
+    <string name="a350_wingspan">Wing span</string>
+    <string name="a350_wingspan_value">64,75 m</string>
+    <string name="a350_length">Length</string>
+    <string name="a350_length_value">66,8 m - 73,79 m</string>
+    <string name="a350_height">Height</string>
+    <string name="a350_height_value">17,05 m - 17,08 m</string>
+    <string name="a350_fuselage">Fuselage</string>
+    <string name="a350_fuselage_value">5,96 m (width) / 6,09 m (height)</string>
+    <string name="a350_mtow">MTOW</string>
+    <string name="a350_mtow_value">280 t - 316 t</string>
+    <string name="a350_cruise_speed">Cruise speed</string>
+    <string name="a350_cruise_speed_value">903 km/h (typical), 950 km/h (max.)</string>
+    <string name="a350_range">Range</string>
+    <string name="a350_range_value">8100 nmi - 8700 nmi</string>
+    <string name="a350_thrust">Thrust (2x)</string>
+    <string name="a350_thrust_value">374,5 kN - 431,5 kN</string>
+
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>
     <string name="ic_access_time">&#xe001;</string>

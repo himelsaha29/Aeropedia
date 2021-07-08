@@ -22,8 +22,8 @@
             android:id="@+id/appbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:elevation="0dp"
-            android:fitsSystemWindows="true">
+            android:fitsSystemWindows="true"
+            app:elevation="0dp">
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:id="@+id/collapsing_bar"
@@ -104,8 +104,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingBottom="12dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:paddingBottom="12dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -305,9 +305,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:fontFamily="@font/maven_pro_medium"
                     android:text="@string/a350_desc1"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
@@ -350,15 +350,486 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:paddingBottom="12dp"
-                android:fontFamily="@font/maven_pro_medium"
-                android:text="@string/a350_desc2"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/maven_pro_medium"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/a350_desc2"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/maven_pro_medium"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/a350_specs"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="26sp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/cockpit_crew"
+                                    android:textColor="@color/black"
+                                    android:textSize="17sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="2"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_wingspan"
+                                    android:textColor="@color/black"
+                                    android:textSize="17sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_wingspan_value"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_length"
+                                    android:textColor="@color/black"
+                                    android:textSize="17sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_length_value"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_height"
+                                    android:textColor="@color/black"
+                                    android:textSize="17sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_height_value"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_fuselage"
+                                    android:textColor="@color/black"
+                                    android:textSize="17sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_fuselage_value"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_mtow"
+                                    android:textColor="@color/black"
+                                    android:textSize="17sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_mtow_value"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_cruise_speed"
+                                    android:textColor="@color/black"
+                                    android:textSize="17sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_cruise_speed_value"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_range"
+                                    android:textColor="@color/black"
+                                    android:textSize="17sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_range_value"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_thrust"
+                                    android:textColor="@color/black"
+                                    android:textSize="17sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="10dip">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:fontFamily="@font/maven_pro_medium"
+                                    android:gravity="center"
+                                    android:text="@string/a350_thrust_value"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
 
 
             </LinearLayout>
