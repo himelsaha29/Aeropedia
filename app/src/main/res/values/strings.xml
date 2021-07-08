@@ -54,11 +54,15 @@
     <string name="a350_mtow">MTOW</string>
     <string name="a350_mtow_value">280 t - 316 t</string>
     <string name="a350_cruise_speed">Cruise speed</string>
-    <string name="a350_cruise_speed_value">903 km/h (typical), 950 km/h (max.)</string>
+    <string name="a350_cruise_speed_value">903 km/h (typical),\n950 km/h (max.)</string>
     <string name="a350_range">Range</string>
     <string name="a350_range_value">8100 nmi - 8700 nmi</string>
     <string name="a350_thrust">Thrust (2x)</string>
     <string name="a350_thrust_value">374.5 kN - 431.5 kN</string>
+    <string name="a350_desc3">\nAirbus A350\'s variants include A350-800, A350-900, A350-ULR, ACJ350, A350 Regional, A350-950 F, A350-1000, although some of
+        these were discontinued or did not make it past the early stages.\n</string>
+    <string name="a350_identify">How to identify Airbus A350?</string>
+    <string name="a350_identify_ans">The unique 6-piece round-edged windscreen configuration with black border, distinctive nose, smoothly curved winglets.</string>
 
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>
