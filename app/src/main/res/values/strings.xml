@@ -48,7 +48,7 @@
         Mach 0.85 cruise speed and has a maximum operating speed of Mach 0.89, with the wingtip device curving upwards over the final 4.4 m (14 ft) - reducing air resistance and
         subsequently increasing the aircraft’s range whilst restricting fuel consumption to minimum.\n</string>
 
-    <string name="a350_desc2">For the deck and avionics design,
+    <string name="a350_desc2" formatted="false">For the deck and avionics design,
         the design strategy for Airbus\' own A380 was used as a base. The focus of the company was to evolve technology for A350 further than the advances already made
         by the A380. It is one of three aircraft to feature avionics manufacturer Honeywell\’s Aircraft Environmental Surveillance System (AESS) which integrates weather, traffic and
         terrain awareness capabilities reducing as many as eight avionics boxes down to just two. It also features On-Board Airport Navigation System (OANS) which first debuted with
@@ -95,6 +95,24 @@
     <string name="a380_intro_value">25 October 2007\nwith Singapore Airlines</string>
     <string name="a380_customer_value">Emirates</string>
     <string name="a380_variants_value">1 (active)</string>
+
+    <string name="a380_desc1" formatted="false">The Airbus A380 is the world\'s largest passenger airliner. Airbus studies started in 1988, and the project was announced in
+        1990 to challenge the dominance of the Boeing 747 in the long haul market. The then-designated A3XX project was presented in 1994. Airbus launched
+        the €9.5 billion ($10.7 billion) A380 programme on 19 December 2000. As of 31 December 2020, 246 A380s have been built, most of which went to
+        the fleet family of Emirates. The aircraft still remains in service for many airlines but is no longer in production on Airbus\' side.\n\nWhile most of
+        the fuselage is made of aluminium alloys, composite materials comprise more than 20% of the A380\'s airframe. Carbon-fibre reinforced plastic, glass-fibre
+        reinforced plastic and quartz-fibre reinforced plastic are used extensively in wings, fuselage sections (such as the undercarriage and rear end of fuselage),
+        tail surfaces, and doors. The A380 is the first commercial airliner to have a central wing box made of carbon–fibre reinforced plastic. It is
+        also the first to have a smoothly contoured wing cross–section. The wings of other commercial airliners are partitioned span-wise into sections. This flowing
+        continuous cross section reduces aerodynamic drag. Thermoplastics are used in the leading edges of the slats. The hybrid fibre metal laminate material GLARE
+        (glass laminate aluminium reinforced epoxy) is used in the upper fuselage and on the stabilisers\' leading edges. This aluminium-glass-fibre laminate is
+        lighter and has better corrosion and impact resistance than conventional aluminium alloys used in aviation. Unlike earlier composite materials, GLARE can be
+        repaired using conventional aluminium repair techniques.\n</string>
+
+
+    <string name="a380_desc2" formatted="false">Due to its modern engines and aerodynamic improvements, Lufthansa\'s A380s produce half the noise of the
+        Boeing 747-200 while carrying 160 more passengers. In 2012, the A380 received an award from the Noise Abatement Society.</string>
+
 
 
     <!--TREE VIEW REMOVE LATER -->

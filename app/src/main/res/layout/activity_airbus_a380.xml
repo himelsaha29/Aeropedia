@@ -308,7 +308,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a350_desc1"
+                    android:text="@string/a380_desc1"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -355,7 +355,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a350_desc2"
+                    android:text="@string/a380_desc2"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
