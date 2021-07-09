@@ -32,7 +32,7 @@
                 android:fitsSystemWindows="true"
                 app:contentScrim="@android:color/transparent"
                 app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-                app:title="@string/a350">
+                app:title="@string/a380">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
