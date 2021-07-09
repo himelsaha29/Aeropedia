@@ -17,6 +17,17 @@
     <string name="a220">A220</string>
     <string name="beluga">Beluga XL</string>
     <string name="language"><b>EN</b></string>
+
+
+
+    <string name="type">Type</string>
+    <string name="engine">Engine</string>
+    <string name="first_flight">First flight</string>
+    <string name="intro">Introduction</string>
+    <string name="customer">Primary customer</string>
+    <string name="variants">Variants</string>
+
+
     <string name="a350_desc1">The Airbus A350 is a long-range, wide-body jet airliner. The first A350 design proposed by Airbus in 2004,
         in response to Boeing\'s 787 Dreamliner, would have been a development of the A330 (hence A330-Lite) with composite wings and new engines. However,
         market support was inadequate at the time and in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB
@@ -62,6 +73,16 @@
         these were discontinued or did not make it past the early stages.\n</string>
     <string name="a350_identify">How to identify Airbus A350?</string>
     <string name="a350_identify_ans">The unique 6-piece round-edged windscreen configuration with black border, distinctive nose, smoothly curved winglets.</string>
+
+
+
+    <string name="a380_type_value">Wide-body</string>
+    <string name="a380_engine_value">Rolls-Royce Trent 900 (4)/\nEngine Alliance GP7000(4)</string>
+    <string name="a380_first_flight_value">27 April 2005</string>
+    <string name="a380_intro_value">25 October 2007\nwith Singapore Airlines</string>
+    <string name="a380_customer_value">Emirates</string>
+    <string name="a380_variants_value">1 (active)</string>
+
 
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>

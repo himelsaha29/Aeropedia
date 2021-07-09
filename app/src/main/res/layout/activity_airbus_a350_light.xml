@@ -120,7 +120,7 @@
                                 android:paddingStart="10dp"
                                 android:paddingTop="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="Type"
+                                android:text="@string/type"
                                 android:textAlignment="center"
                                 android:textColor="#72A8E1"
                                 android:textSize="18dp" />
@@ -152,7 +152,7 @@
                                 android:paddingStart="10dp"
                                 android:paddingTop="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="Engine"
+                                android:text="@string/engine"
                                 android:textAlignment="center"
                                 android:textColor="#72A8E1"
                                 android:textSize="18dp" />
@@ -184,7 +184,7 @@
                                 android:paddingStart="10dp"
                                 android:paddingTop="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="First flight"
+                                android:text="@string/first_flight"
                                 android:textAlignment="center"
                                 android:textColor="#72A8E1"
                                 android:textSize="18dp" />
@@ -215,7 +215,7 @@
                                 android:paddingStart="10dp"
                                 android:paddingTop="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="Introduction"
+                                android:text="@string/intro"
                                 android:textAlignment="center"
                                 android:textColor="#72A8E1"
                                 android:textSize="18dp" />
@@ -247,7 +247,7 @@
                                 android:paddingStart="10dp"
                                 android:paddingTop="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="Variants"
+                                android:text="@string/variants"
                                 android:textAlignment="center"
                                 android:textColor="#72A8E1"
                                 android:textSize="18dp" />
@@ -278,7 +278,7 @@
                                 android:paddingStart="10dp"
                                 android:paddingTop="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="Primary customer"
+                                android:text="@string/customer"
                                 android:textAlignment="center"
                                 android:textColor="#72A8E1"
                                 android:textSize="18dp" />
