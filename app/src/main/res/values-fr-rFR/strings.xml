@@ -28,6 +28,13 @@
     <string name="variants">Variants</string>
 
 
+    <string name="a350_type_value">Wide-body</string>
+    <string name="a350_engine_value">Rolls-Royce Trent XWB (2)</string>
+    <string name="a350_first_flight_value">14 June 2013</string>
+    <string name="a350_intro_value">15 January 2015\nwith Qatar Airways</string>
+    <string name="a350_customer_value">Singapore Airlines</string>
+    <string name="a350_variants_value">2 (active)</string>
+
     <string name="a350_desc1">The Airbus A350 is a long-range, wide-body jet airliner. The first A350 design proposed by Airbus in 2004,
         in response to Boeing\'s 787 Dreamliner, would have been a development of the A330 (hence A330-Lite) with composite wings and new engines. However,
         market support was inadequate at the time and in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB
