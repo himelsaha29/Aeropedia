@@ -17,8 +17,29 @@
     <string name="a220">A220</string>
     <string name="beluga">Beluga XL</string>
     <string name="language"><b>EN</b></string>
-    <string name="a350_desc1">The Airbus A350 is a long-range, wide-body jet airliner developed by Airbus. The first A350 design proposed by Airbus in 2004, in response to the Boeing 787 Dreamliner, would have been a development of the A330 with composite wings and new engines.</string>
-    <string name="a350_desc2">As market support was inadequate, in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB turbofan engines.</string>
+    <string name="a350_desc1">The Airbus A350 is a long-range, wide-body jet airliner. The first A350 design proposed by Airbus in 2004,
+        in response to Boeing\'s 787 Dreamliner, would have been a development of the A330 (hence A330-Lite) with composite wings and new engines. However,
+        market support was inadequate at the time and in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB
+        turbofan engines. The A350 is the first aircraft of the Airbus family that is largely made of carbon fibre reinforced polymer. It features a new fuselage designed around a
+        nine-abreast economy cross-section, up from the eight-abreast A330/A340. The A350 has been in production since 2010 and in total 425 A350s have been built as of
+        31 May 2021.\n\nThe A350 XWB airframe is made out of 53% composites: carbon fibre reinforced plastic for the outer and centre wing box (covers, stringers, spars),
+        fuselage (skin, frame, keel beam, and rear fuselage) and the empennage (horizontal and vertical tailplanes); 19% aluminium and aluminium–lithium alloy for ribs,
+        floor beams, and gear bays; 14% titanium for landing gears, pylons, and attachments; 6% steel; and 8% miscellaneous. For the wings, those mark a 31.9° sweep angle for a
+        Mach 0.85 cruise speed and has a maximum operating speed of Mach 0.89, with the wingtip device curving upwards over the final 4.4 m (14 ft) - reducing air resistance and
+        subsequently increasing the aircraft’s range whilst restricting fuel consumption to minimum.\n</string>
+
+    <string name="a350_desc2">For the deck and avionics design,
+    the design strategy for Airbus\' own A380 was used as a base. The focus of the company was to evolve technology for A350 further than the advances already made
+    by the A380. It is one of three aircraft to feature avionics manufacturer Honeywell\’s Aircraft Environmental Surveillance System (AESS) which integrates weather, traffic and
+    terrain awareness capabilities reducing as many as eight avionics boxes down to just two. It also features On-Board Airport Navigation System (OANS) which first debuted with
+    the A380. This system provides real-time directions around airports and improves navigation on the ground. The system is especially useful in poor visibility conditions
+    and helps to reduce errors in airport navigation by warning the pilots if they are going the wrong way. To help the pilots further, Airbus equipped the aircraft
+    with External and Taxiing Aid Camera System (ETACS) for better navigation and aircraft positioning on the ground. digital cameras provide the pilots with views
+    from outside with one positioned behind the nose wheel and the other in the vertical tail. The views from the cameras can be displayed in the A350 cockpit on displays
+    and as well as on the passenger in-flight entertainment screens.\n\nThe Airbus A350 consumes 25% less fuel and emits 25% less emissions than previous generations and according to Airbus it is the quietest two aisle plane
+    on the planet. Australia\'s Qantas chose A350 over Boeing\'s 787 Dreamliner for "Project Sunrise" – a codename for proposed nonstop flights between Australia
+    and several international destinations that include London, New York and Paris.\n
+    </string>
     <string name="a350_specs">Specifications</string>
     <string name="cockpit_crew">Cockpit crew</string>
     <string name="a350_wingspan">Wing span</string>
@@ -478,9 +499,6 @@
     <string name="ic_wifi_tethering">&#xe1af;</string>
     <string name="ic_work">&#xe1b0;</string>
     <string name="ic_alexa">&#xe900;</string>
-
-
-
 
 
     <string name="status_listening">"écoute"…</string>

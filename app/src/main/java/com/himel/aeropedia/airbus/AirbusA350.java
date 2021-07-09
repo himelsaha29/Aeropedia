@@ -156,7 +156,6 @@ public class AirbusA350 extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            //createTreeView();
         }
         else if (!locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
@@ -167,7 +166,6 @@ public class AirbusA350 extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            //createTreeView();
         }
 
         if(mDrawer.getDrawerState() == ElasticDrawer.STATE_OPEN) {
@@ -354,7 +352,6 @@ public class AirbusA350 extends AppCompatActivity {
 
     public void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
-        //dummy data
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {

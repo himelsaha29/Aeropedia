@@ -20,6 +20,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA350;
+import com.himel.aeropedia.airbus.AirbusA380;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
@@ -97,6 +98,16 @@ public class Airbus extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), AirbusA350.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
+        a380Card.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), AirbusA380.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
