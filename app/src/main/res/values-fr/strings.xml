@@ -99,6 +99,15 @@
         Boeing 747-200 while carrying 160 more passengers. In 2012, the A380 received an award from the Noise Abatement Society.</string>
 
 
+    <string name="a380_cockpit_value">2</string>
+    <string name="a380_wingspan_value">79.75 m</string>
+    <string name="a380_length_value">72.72 m</string>
+    <string name="a380_height_value">24.09 m</string>
+    <string name="a380_fuselage_value">24.09 update m</string>
+    <string name="a380_mtow_value">575 t</string>
+    <string name="a380_cruise_speed_value">903 km/h (typical),\n950 km/h (max.)</string>
+    <string name="a380_range_value">8,000 nmi</string>
+
 
 
     <!--TREE VIEW REMOVE LATER -->

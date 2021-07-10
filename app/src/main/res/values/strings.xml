@@ -100,7 +100,7 @@
         1990 to challenge the dominance of the Boeing 747 in the long haul market. The then-designated A3XX project was presented in 1994. Airbus launched
         the €9.5 billion ($10.7 billion) A380 programme on 19 December 2000. As of 31 December 2020, 246 A380s have been built, most of which went to
         the fleet family of Emirates. The aircraft still remains in service for many airlines but is no longer in production on Airbus\' side.\n\nThe A380\'s upper and
-        lower decks are connected by two stairways, one fore and one aft, with both being wide enough to accommodate two passengers side by side; this cabin arrangement
+        lower decks are connected by two stairways, one fore and one aft, with both being wide enough to accommodate two passengers side by side. This cabin arrangement
         allows multiple seat configurations. The maximum certified carrying capacity is 853 passengers in an all-economy-class layout, Airbus lists the "typical"
         three-class layout as accommodating 525 passengers, with 10 first, 76 business, and 439 economy class seats. Airline configurations range from Korean Air\'s
         407 passengers to Emirates\' two-class 615 seats and average around 480–490 seats.
@@ -123,7 +123,18 @@
         full-duplex, star-topology and based on 100baseTX fast-Ethernet. This reduces the amount of wiring required and minimises latency.\n\nThe Network Systems Server (NSS) is
         the heart of A380s paperless cockpit; it eliminates bulky manuals and traditional charts. The NSS has enough inbuilt robustness to eliminate onboard backup
         paper documents. The A380s network and server system stores data and offers electronic documentation, providing a required equipment list, navigation charts,
-        performance calculations, and an aircraft logbook.</string>
+        performance calculations, and an aircraft logbook.\n
+    </string>
+
+
+    <string name="a380_cockpit_value">2</string>
+    <string name="a380_wingspan_value">79.75 m</string>
+    <string name="a380_length_value">72.72 m</string>
+    <string name="a380_height_value">24.09 m</string>
+    <string name="a380_fuselage_value">24.09 update m</string>
+    <string name="a380_mtow_value">575 t</string>
+    <string name="a380_cruise_speed_value">903 km/h (typical),\n950 km/h (max.)</string>
+    <string name="a380_range_value">8,000 nmi</string>
 
 
 
