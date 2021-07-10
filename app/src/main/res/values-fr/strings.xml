@@ -27,6 +27,18 @@
     <string name="customer">Primary customer</string>
     <string name="variants">Variants</string>
 
+    <string name="specs">Specifications</string>
+    <string name="cockpit_crew">Cockpit crew</string>
+    <string name="wingspan">Wing span</string>
+    <string name="length">Length</string>
+    <string name="height">Height</string>
+    <string name="fuselage">Fuselage</string>
+    <string name="mtow">MTOW</string>
+    <string name="cruise_speed">Cruise speed</string>
+    <string name="range">Range</string>
+    <string name="thrust2">Thrust (2x)</string>
+    <string name="thrust4">Thrust (4x)</string>
+
 
     <string name="a350_type_value">Wide-body</string>
     <string name="a350_engine_value">Rolls-Royce Trent XWB (2)</string>
@@ -58,24 +70,18 @@
     on the planet. Australia\'s Qantas chose A350 over Boeing\'s 787 Dreamliner for "Project Sunrise" – a codename for proposed nonstop flights between Australia
     and several international destinations that include London, New York and Paris.\n
     </string>
-    <string name="a350_specs">Specifications</string>
-    <string name="cockpit_crew">Cockpit crew</string>
-    <string name="a350_wingspan">Wing span</string>
-    <string name="a350_wingspan_value">64,75 m</string>
-    <string name="a350_length">Length</string>
-    <string name="a350_length_value">66,8 m - 73,79 m</string>
-    <string name="a350_height">Height</string>
-    <string name="a350_height_value">17,05 m - 17,08 m</string>
-    <string name="a350_fuselage">Fuselage</string>
-    <string name="a350_fuselage_value">5,96 m (width) / 6,09 m (height)</string>
-    <string name="a350_mtow">MTOW</string>
+
+
+
+    <string name="a350_wingspan_value">64.75 m</string>
+    <string name="a350_length_value">66.8 m - 73.79 m</string>
+    <string name="a350_height_value">17.05 m - 17.08 m</string>
+    <string name="a350_fuselage_value">5.96 m (W) / 6.09 m (H)</string>
     <string name="a350_mtow_value">280 t - 316 t</string>
-    <string name="a350_cruise_speed">Cruise speed</string>
     <string name="a350_cruise_speed_value">903 km/h (typical),\n950 km/h (max.)</string>
-    <string name="a350_range">Range</string>
     <string name="a350_range_value">8100 nmi - 8700 nmi</string>
-    <string name="a350_thrust">Thrust (2x)</string>
-    <string name="a350_thrust_value">374,5 kN - 431,5 kN</string>
+    <string name="a350_thrust_value">374.5 kN - 431.5 kN</string>
+
     <string name="a350_desc3">\nAirbus A350\'s variants include A350-800, A350-900, A350-ULR, ACJ350, A350 Regional, A350-950 F, A350-1000, although some of
         these were discontinued or did not make it past the early stages.\n</string>
     <string name="a350_identify">How to identify Airbus A350?</string>
@@ -107,6 +113,7 @@
     <string name="a380_mtow_value">575 t</string>
     <string name="a380_cruise_speed_value">903 km/h (typical),\n950 km/h (max.)</string>
     <string name="a380_range_value">8,000 nmi</string>
+    <string name="a380_thrust_value">348 kN</string>
 
 
 

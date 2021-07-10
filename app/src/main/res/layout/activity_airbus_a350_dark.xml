@@ -365,7 +365,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a350_specs"
+                    android:text="@string/specs"
                     android:textColor="@color/colorPrimary"
                     android:textSize="26sp" />
 
@@ -452,7 +452,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_wingspan"
+                                    android:text="@string/wingspan"
                                     android:textColor="@color/white"
                                     android:textSize="17sp" />
 
@@ -501,7 +501,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_length"
+                                    android:text="@string/length"
                                     android:textColor="@color/white"
                                     android:textSize="17sp" />
 
@@ -549,7 +549,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_height"
+                                    android:text="@string/height"
                                     android:textColor="@color/white"
                                     android:textSize="17sp" />
 
@@ -598,7 +598,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_fuselage"
+                                    android:text="@string/fuselage"
                                     android:textColor="@color/white"
                                     android:textSize="17sp" />
 
@@ -647,7 +647,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_mtow"
+                                    android:text="@string/mtow"
                                     android:textColor="@color/white"
                                     android:textSize="17sp" />
 
@@ -696,7 +696,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_cruise_speed"
+                                    android:text="@string/cruise_speed"
                                     android:textColor="@color/white"
                                     android:textSize="17sp" />
 
@@ -744,7 +744,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_range"
+                                    android:text="@string/range"
                                     android:textColor="@color/white"
                                     android:textSize="17sp" />
 
@@ -793,7 +793,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_thrust"
+                                    android:text="@string/thrust2"
                                     android:textColor="@color/white"
                                     android:textSize="17sp" />
 

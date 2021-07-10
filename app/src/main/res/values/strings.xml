@@ -28,6 +28,19 @@
     <string name="variants">Variants</string>
 
 
+    <string name="specs">Specifications</string>
+    <string name="cockpit_crew">Cockpit crew</string>
+    <string name="wingspan">Wing span</string>
+    <string name="length">Length</string>
+    <string name="height">Height</string>
+    <string name="fuselage">Fuselage</string>
+    <string name="mtow">MTOW</string>
+    <string name="cruise_speed">Cruise speed</string>
+    <string name="range">Range</string>
+    <string name="thrust2">Thrust (2x)</string>
+    <string name="thrust4">Thrust (4x)</string>
+
+
 
     <string name="a350_type_value">Wide-body</string>
     <string name="a350_engine_value">Rolls-Royce Trent XWB (2)</string>
@@ -61,24 +74,18 @@
         and several international destinations that include London, New York and Paris.\n
     </string>
 
-    <string name="a350_specs">Specifications</string>
-    <string name="cockpit_crew">Cockpit crew</string>
-    <string name="a350_wingspan">Wing span</string>
+
+
+
     <string name="a350_wingspan_value">64.75 m</string>
-    <string name="a350_length">Length</string>
     <string name="a350_length_value">66.8 m - 73.79 m</string>
-    <string name="a350_height">Height</string>
     <string name="a350_height_value">17.05 m - 17.08 m</string>
-    <string name="a350_fuselage">Fuselage</string>
     <string name="a350_fuselage_value">5.96 m (W) / 6.09 m (H)</string>
-    <string name="a350_mtow">MTOW</string>
     <string name="a350_mtow_value">280 t - 316 t</string>
-    <string name="a350_cruise_speed">Cruise speed</string>
     <string name="a350_cruise_speed_value">903 km/h (typical),\n950 km/h (max.)</string>
-    <string name="a350_range">Range</string>
     <string name="a350_range_value">8100 nmi - 8700 nmi</string>
-    <string name="a350_thrust">Thrust (2x)</string>
     <string name="a350_thrust_value">374.5 kN - 431.5 kN</string>
+
     <string name="a350_desc3">\nAirbus A350\'s variants include A350-800, A350-900, A350-ULR, ACJ350, A350 Regional, A350-950 F, A350-1000, although some of
         these were discontinued or did not make it past the early stages.\n</string>
     <string name="a350_identify">How to identify Airbus A350?</string>
@@ -94,7 +101,7 @@
     <string name="a380_first_flight_value">27 April 2005</string>
     <string name="a380_intro_value">25 October 2007\nwith Singapore Airlines</string>
     <string name="a380_customer_value">Emirates</string>
-    <string name="a380_variants_value">1 (active)</string>
+    <string name="a380_variants_value">3 (active)</string>
 
     <string name="a380_desc1" formatted="false">The Airbus A380 is the world\'s largest passenger airliner. Airbus studies started in 1988, and the project was announced in
         1990 to challenge the dominance of the Boeing 747 in the long haul market. The then-designated A3XX project was presented in 1994. Airbus launched
@@ -131,10 +138,12 @@
     <string name="a380_wingspan_value">79.75 m</string>
     <string name="a380_length_value">72.72 m</string>
     <string name="a380_height_value">24.09 m</string>
-    <string name="a380_fuselage_value">24.09 update m</string>
+    <string name="a380_fuselage_value">7.1 m (W) / ~7 m (H)</string>
     <string name="a380_mtow_value">575 t</string>
-    <string name="a380_cruise_speed_value">903 km/h (typical),\n950 km/h (max.)</string>
+    <string name="a380_cruise_speed_value">903 km/h (typical),\n945 km/h (max.)</string>
     <string name="a380_range_value">8,000 nmi</string>
+    <string name="a380_thrust_value">348 kN</string>
+
 
 
 
