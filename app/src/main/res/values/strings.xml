@@ -99,10 +99,15 @@
     <string name="a380_desc1" formatted="false">The Airbus A380 is the world\'s largest passenger airliner. Airbus studies started in 1988, and the project was announced in
         1990 to challenge the dominance of the Boeing 747 in the long haul market. The then-designated A3XX project was presented in 1994. Airbus launched
         the €9.5 billion ($10.7 billion) A380 programme on 19 December 2000. As of 31 December 2020, 246 A380s have been built, most of which went to
-        the fleet family of Emirates. The aircraft still remains in service for many airlines but is no longer in production on Airbus\' side.\n\nWhile most of
+        the fleet family of Emirates. The aircraft still remains in service for many airlines but is no longer in production on Airbus\' side.\n\nThe A380\'s upper and
+        lower decks are connected by two stairways, one fore and one aft, with both being wide enough to accommodate two passengers side by side; this cabin arrangement
+        allows multiple seat configurations. The maximum certified carrying capacity is 853 passengers in an all-economy-class layout, Airbus lists the "typical"
+        three-class layout as accommodating 525 passengers, with 10 first, 76 business, and 439 economy class seats. Airline configurations range from Korean Air\'s
+        407 passengers to Emirates\' two-class 615 seats and average around 480–490 seats.
+        \n\nWhile most of
         the fuselage is made of aluminium alloys, composite materials comprise more than 20% of the A380\'s airframe. Carbon-fibre reinforced plastic, glass-fibre
         reinforced plastic and quartz-fibre reinforced plastic are used extensively in wings, fuselage sections (such as the undercarriage and rear end of fuselage),
-        tail surfaces, and doors. The A380 is the first commercial airliner to have a central wing box made of carbon–fibre reinforced plastic. It is
+        tail surfaces, and doors. The A380, often nicknamed the superjumbo, is the first commercial airliner to have a central wing box made of carbon–fibre reinforced plastic. It is
         also the first to have a smoothly contoured wing cross–section. The wings of other commercial airliners are partitioned span-wise into sections. This flowing
         continuous cross section reduces aerodynamic drag. Thermoplastics are used in the leading edges of the slats. The hybrid fibre metal laminate material GLARE
         (glass laminate aluminium reinforced epoxy) is used in the upper fuselage and on the stabilisers\' leading edges. This aluminium-glass-fibre laminate is
@@ -111,7 +116,14 @@
 
 
     <string name="a380_desc2" formatted="false">Due to its modern engines and aerodynamic improvements, Lufthansa\'s A380s produce half the noise of the
-        Boeing 747-200 while carrying 160 more passengers. In 2012, the A380 received an award from the Noise Abatement Society.</string>
+        Boeing 747-200 while carrying 160 more passengers. In 2012, the A380 received an award from the Noise Abatement Society.\nThe A380 employs an integrated
+        modular avionics (IMA) architecture, first used in advanced military aircraft, such as the Lockheed Martin F-22 Raptor, Lockheed Martin F-35 Lightning II,
+        and Dassault Rafale. Designed and developed by Airbus, Thales and Diehl Aerospace, the IMA suite was first used on the A380. The suite is a technological
+        innovation, with networked computing modules to support different applications.The data networks use Avionics Full-Duplex Switched Ethernet. These are switched,
+        full-duplex, star-topology and based on 100baseTX fast-Ethernet. This reduces the amount of wiring required and minimises latency.\n\nThe Network Systems Server (NSS) is
+        the heart of A380s paperless cockpit; it eliminates bulky manuals and traditional charts. The NSS has enough inbuilt robustness to eliminate onboard backup
+        paper documents. The A380s network and server system stores data and offers electronic documentation, providing a required equipment list, navigation charts,
+        performance calculations, and an aircraft logbook.</string>
 
 
 
