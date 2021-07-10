@@ -101,7 +101,7 @@
     <string name="a380_first_flight_value">27 April 2005</string>
     <string name="a380_intro_value">25 October 2007\nwith Singapore Airlines</string>
     <string name="a380_customer_value">Emirates</string>
-    <string name="a380_variants_value">3 (active)</string>
+    <string name="a380_variants_value">4 (active)</string>
 
     <string name="a380_desc1" formatted="false">The Airbus A380 is the world\'s largest passenger airliner. Airbus studies started in 1988, and the project was announced in
         1990 to challenge the dominance of the Boeing 747 in the long haul market. The then-designated A3XX project was presented in 1994. Airbus launched
@@ -128,11 +128,22 @@
         and Dassault Rafale. Designed and developed by Airbus, Thales and Diehl Aerospace, the IMA suite was first used on the A380. The suite is a technological
         innovation, with networked computing modules to support different applications.The data networks use Avionics Full-Duplex Switched Ethernet. These are switched,
         full-duplex, star-topology and based on 100baseTX fast-Ethernet. This reduces the amount of wiring required and minimises latency.\n\nThe Network Systems Server (NSS) is
-        the heart of A380s paperless cockpit; it eliminates bulky manuals and traditional charts. The NSS has enough inbuilt robustness to eliminate onboard backup
+        the heart of A380\'s paperless cockpit; it eliminates bulky manuals and traditional charts. The NSS has enough inbuilt robustness to eliminate onboard backup
         paper documents. The A380s network and server system stores data and offers electronic documentation, providing a required equipment list, navigation charts,
-        performance calculations, and an aircraft logbook.\n
+        performance calculations, and an aircraft logbook.\n\nIn February 2019, Airbus announced it would end A380 production by 2021, after its main customer,
+        Emirates, agreed to drop an order for 39 of the aircraft, replacing it with 40 A330-900s and 30 A350-900s. At the time of the announcement, Airbus had 17
+        more A380s on its order book to complete before closing the production line – 14 for Emirates and 3 for All Nippon Airways – taking the total number of
+        expected deliveries of the aircraft type to 251.\n
     </string>
 
+    <string name="a380_desc3">\nAirbus A380\'s active variants include A380-800, A380-841, A380-842, A380-861. Airbus also proposed a handful of new variants that included
+    a cargo variant of the A380, the A380F. The freighter would have been a rival for Boeing 747 and Antonov An-225 Mriya. A380F was postponed after 2005 and was
+        never built. Other proposed variants included A380plus, A380neo, A380 Stretch with improvements regarding efficiency, capacity, and engine tweaks.\n</string>
+
+
+    <string name="a380_identify">How to identify Airbus A380?</string>
+    <string name="a380_identify_ans">A380 is an aircraft that is easily recognizable. The characteristic ovoid fuselage, 4 engines, distinctive "bulbous" nose, and of course,
+        2 passenger decks stretching across the length of the fuselage.</string>
 
     <string name="a380_cockpit_value">2</string>
     <string name="a380_wingspan_value">79.75 m</string>
