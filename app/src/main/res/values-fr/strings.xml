@@ -110,6 +110,8 @@
     a cargo variant of the A380, the A380F. The freighter would have been a rival for Boeing 747 and Antonov An-225 Mriya. A380F was postponed after 2005 and was
         never built. Other proposed variants included A380plus, A380neo, A380 Stretch with improvements regarding efficiency, capacity, and engine tweaks.\n</string>
 
+    <string name="a380_specs_constraint">(A380-800, Trent engines)\n</string>
+
     <string name="a380_identify">How to identify Airbus A380?</string>
     <string name="a380_identify_ans">A380 is an aircraft that is easily recognizable. The characteristic ovoid fuselage, 4 engines, distinctive "bulbous" nose, and of course,
         2 passenger decks stretching across the length of the fuselage.</string>
