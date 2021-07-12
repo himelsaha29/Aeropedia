@@ -138,6 +138,23 @@
         main landing gear instead of two for a heavier 276 t (608,000 lb) MTOW. Both airliners have fly-by-wire controls, which was first introduced on the A320, as well
         as a similar glass cockpit.</string>
 
+    <string name="a340_desc2" formatted="false">The A340 uses a modified A320 glass cockpit, with side-stick controls instead of a conventional yoke. The main instrument
+        panel is dominated by six displays, cathode ray tube monitors initially then liquid crystal displays. Flight information is directed via the Electronic Flight
+        Instrument System (EFIS) and systems information through the Electronic Centralised Aircraft Monitor (ECAM). The aircraft monitors various sensors and
+        automatically alerts the crew to any parameters outside of their normal range; pilots can also inspect individual systems. Electronic manuals are used
+        instead of paper ones, with optional web-based updates. Maintenance difficulty and cost were reduced to half of that of the earlier and smaller Airbus A310.
+        Improved engine control and monitoring improved time on wing. The centralised maintenance computer can transmit real-time information to ground facilities via
+        the onboard satellite-based ACARS datalink. Heavy maintenance like structural changes remained unchanged, while cabin sophistications, like the in-flight
+        entertainment, were increased over preceding airliners.</string>
+
+    <string name="a340_desc3">\nAirbus A340\'s variants include A340-200, A340-300, A340-500, A340-600. The -600 variant is the longest in the A340 family. It is even
+        longer than most Boeing 747s and the A380.\n</string>
+
+    <string name="a340_identify">How to identify Airbus A340?</string>
+
+    <string name="a340_identify_ans">The A340 is one of the few quad-jets in the world. The single passenger deck stretching the length of the fuselage with
+        4 engines, centre-line wheel bogie should catch the eyes of most aviation enthusiasts.</string>
+
     <string name="a340_cockpit_value">2</string>
     <string name="a340_wingspan_value">60.3 m (-200 &amp; -300) /\n63.45 m (-500 &amp; -600)</string>
     <string name="a340_length_value">59.39 / 63.69 /\n67.93 / 75.36 m</string>
