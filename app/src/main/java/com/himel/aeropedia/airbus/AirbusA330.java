@@ -37,7 +37,7 @@ import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphImageButton;
 import soup.neumorphism.ShapeType;
 
-public class AirbusA340 extends AppCompatActivity {
+public class AirbusA330 extends AppCompatActivity {
 
     private NeumorphButton langToggle;
     private Locale locale;
@@ -58,9 +58,9 @@ public class AirbusA340 extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_airbus_a340_light);
+            setContentView(R.layout.activity_airbus_a330);
         } else {
-            setContentView(R.layout.activity_airbus_a340_dark);
+            setContentView(R.layout.activity_airbus_a350_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
@@ -265,12 +265,12 @@ public class AirbusA340 extends AppCompatActivity {
         TreeNode a321Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a321), "No", "a321", null));
 
         TreeNode a330Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_alexa, this.getString(R.string.a330), "No", "a330", null));
-        TreeNode a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "No", "a350", null));
-        TreeNode a340Node = null;
+        TreeNode a340Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a340), "No", "a340", null));
+        TreeNode a350Node = null;
         if (verifyDarkMode().equals("Yes")) {
-            a340Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a340), "HighlightLight", "a340", null));
+            a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "HighlightLight", "a350", null));
         } else {
-            a340Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a340), "HighlightDark", "a340", null));
+            a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "HighlightDark", "a350", null));
         }
         TreeNode a380Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a380), "No", "a380", null));
 
@@ -352,14 +352,16 @@ public class AirbusA340 extends AppCompatActivity {
 
     public void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.a340_slider1);
+                sliderItem.setImageLocation(R.drawable.a350_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a340_slider2);
+                sliderItem.setImageLocation(R.drawable.a350_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.a340_slider3);
+                sliderItem.setImageLocation(R.drawable.a350_slider3);
+            } else if (i == 3) {
+                sliderItem.setImageLocation(R.drawable.a350_slider4);
             }
 
             sliderItemList.add(sliderItem);

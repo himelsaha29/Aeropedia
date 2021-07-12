@@ -20,11 +20,12 @@
 
 
 
+    <!--BASICS-->
     <string name="type">Type</string>
     <string name="engine">Engine</string>
     <string name="first_flight">First flight</string>
     <string name="intro">Introduction</string>
-    <string name="customer">Primary customer</string>
+    <string name="customer">Largest operator</string>
     <string name="variants">Variants</string>
 
     <string name="specs">Specifications</string>
@@ -38,8 +39,9 @@
     <string name="range">Range</string>
     <string name="thrust2">Thrust (2x)</string>
     <string name="thrust4">Thrust (4x)</string>
+    <!--BASICS-->
 
-
+    <!--AIRBUS A350-->
     <string name="a350_type_value">Wide-body</string>
     <string name="a350_engine_value">Rolls-Royce Trent XWB (2)</string>
     <string name="a350_first_flight_value">14 June 2013</string>
@@ -47,7 +49,8 @@
     <string name="a350_customer_value">Singapore Airlines</string>
     <string name="a350_variants_value">2 (active)</string>
 
-    <string name="a350_desc1">The Airbus A350 is a long-range, wide-body jet airliner. The first A350 design proposed by Airbus in 2004,
+
+    <string name="a350_desc1">Le Airbus A350 est un long-range, wide-body jet airliner. The first A350 design proposed by Airbus in 2004,
         in response to Boeing\'s 787 Dreamliner, would have been a development of the A330 (hence A330-Lite) with composite wings and new engines. However,
         market support was inadequate at the time and in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB
         turbofan engines. The A350 is the first aircraft of the Airbus family that is largely made of carbon fibre reinforced polymer. It features a new fuselage designed around a
@@ -59,19 +62,22 @@
         subsequently increasing the aircraft’s range whilst restricting fuel consumption to minimum.\n</string>
 
     <string name="a350_desc2" formatted="false">For the deck and avionics design,
-    the design strategy for Airbus\' own A380 was used as a base. The focus of the company was to evolve technology for A350 further than the advances already made
-    by the A380. It is one of three aircraft to feature avionics manufacturer Honeywell\’s Aircraft Environmental Surveillance System (AESS) which integrates weather, traffic and
-    terrain awareness capabilities reducing as many as eight avionics boxes down to just two. It also features On-Board Airport Navigation System (OANS) which first debuted with
-    the A380. This system provides real-time directions around airports and improves navigation on the ground. The system is especially useful in poor visibility conditions
-    and helps to reduce errors in airport navigation by warning the pilots if they are going the wrong way. To help the pilots further, Airbus equipped the aircraft
-    with External and Taxiing Aid Camera System (ETACS) for better navigation and aircraft positioning on the ground. digital cameras provide the pilots with views
-    from outside with one positioned behind the nose wheel and the other in the vertical tail. The views from the cameras can be displayed in the A350 cockpit on displays
-    and as well as on the passenger in-flight entertainment screens.\n\nThe Airbus A350 consumes 25% less fuel and emits 25% less emissions than previous generations and according to Airbus it is the quietest two aisle plane
-    on the planet. Australia\'s Qantas chose A350 over Boeing\'s 787 Dreamliner for "Project Sunrise" – a codename for proposed nonstop flights between Australia
-    and several international destinations that include London, New York and Paris.\n
+        the design strategy for Airbus\' own A380 was used as a base. The focus of the company was to evolve technology for A350 further than the advances already made
+        by the A380. It is one of three aircraft to feature avionics manufacturer Honeywell\’s Aircraft Environmental Surveillance System (AESS) which integrates weather, traffic and
+        terrain awareness capabilities reducing as many as eight avionics boxes down to just two. It also features On-Board Airport Navigation System (OANS) which first debuted with
+        the A380. This system provides real-time directions around airports and improves navigation on the ground. The system is especially useful in poor visibility conditions
+        and helps to reduce errors in airport navigation by warning the pilots if they are going the wrong way. To help the pilots further, Airbus equipped the aircraft
+        with External and Taxiing Aid Camera System (ETACS) for better navigation and aircraft positioning on the ground. digital cameras provide the pilots with views
+        from outside with one positioned behind the nose wheel and the other in the vertical tail. The views from the cameras can be displayed in the A350 cockpit on displays
+        and as well as on the passenger in-flight entertainment screens.\n\nThe Airbus A350 consumes 25% less fuel and emits 25% less emissions than previous generations and according to Airbus it is the quietest two aisle plane
+        on the planet. Australia\'s Qantas chose A350 over Boeing\'s 787 Dreamliner for "Project Sunrise" – a codename for proposed nonstop flights between Australia
+        and several international destinations that include London, New York and Paris.\n
     </string>
 
+    <string name="a350_desc3">\nAirbus A350\'s variants include A350-800, A350-900, A350-ULR, ACJ350, A350 Regional, A350-950 F, A350-1000, although some of
+        these were discontinued or did not make it past the early stages.\n</string>
 
+    <string name="a350_specs_constraint">(-900 and -1000 variants compared in order)\n</string>
 
     <string name="a350_wingspan_value">64.75 m</string>
     <string name="a350_length_value">66.8 / 73.79 m</string>
@@ -82,30 +88,49 @@
     <string name="a350_range_value">8100 / 8700 nmi</string>
     <string name="a350_thrust_value">374.5 / 431.5 kN</string>
 
-    <string name="a350_specs_constraint">(-900 and -1000 variants compared in order)\n</string>
-
-
-    <string name="a350_desc3">\nAirbus A350\'s variants include A350-800, A350-900, A350-ULR, ACJ350, A350 Regional, A350-950 F, A350-1000, although some of
-        these were discontinued or did not make it past the early stages.\n</string>
     <string name="a350_identify">How to identify Airbus A350?</string>
     <string name="a350_identify_ans">The unique 6-piece round-edged windscreen configuration with black border, distinctive nose, smoothly curved winglets.</string>
+    <!--AIRBUS A350-->
 
-
-
+    <!--AIRBUS A380-->
     <string name="a380_type_value">Wide-body</string>
     <string name="a380_engine_value">Rolls-Royce Trent 900 (4)/\nEngine Alliance GP7000(4)</string>
     <string name="a380_first_flight_value">27 April 2005</string>
     <string name="a380_intro_value">25 October 2007\nwith Singapore Airlines</string>
     <string name="a380_customer_value">Emirates</string>
-    <string name="a380_variants_value">1 (active)</string>
+    <string name="a380_variants_value">4 (active)</string>
 
-
-    <string name="a380_desc1" formatted="false">The Airbus A380 is the world\'s largest passenger airliner. Airbus studies started in 1988, and the project was announced in
+    <string name="a380_desc1" formatted="false">L\'Airbus A380 est le world\'s largest passenger airliner. Airbus studies started in 1988, and the project was announced in
         1990 to challenge the dominance of the Boeing 747 in the long haul market. The then-designated A3XX project was presented in 1994. Airbus launched
-        the €9.5 billion ($10.7 billion) A380 programme on 19 December 2000.</string>
+        the €9.5 billion ($10.7 billion) A380 programme on 19 December 2000. As of 31 December 2020, 246 A380s have been built, most of which went to
+        the fleet family of Emirates. The aircraft still remains in service for many airlines but is no longer in production on Airbus\' side.\n\nThe A380\'s upper and
+        lower decks are connected by two stairways, one fore and one aft, with both being wide enough to accommodate two passengers side by side. This cabin arrangement
+        allows multiple seat configurations. The maximum certified carrying capacity is 853 passengers in an all-economy-class layout, Airbus lists the "typical"
+        three-class layout as accommodating 525 passengers, with 10 first, 76 business, and 439 economy class seats. Airline configurations range from Korean Air\'s
+        407 passengers to Emirates\' two-class 615 seats and average around 480–490 seats.
+        \n\nWhile most of
+        the fuselage is made of aluminium alloys, composite materials comprise more than 20% of the A380\'s airframe. Carbon-fibre reinforced plastic, glass-fibre
+        reinforced plastic and quartz-fibre reinforced plastic are used extensively in wings, fuselage sections (such as the undercarriage and rear end of fuselage),
+        tail surfaces, and doors. The A380, often nicknamed the superjumbo, is the first commercial airliner to have a central wing box made of carbon–fibre reinforced plastic. It is
+        also the first to have a smoothly contoured wing cross–section. The wings of other commercial airliners are partitioned span-wise into sections. This flowing
+        continuous cross section reduces aerodynamic drag. Thermoplastics are used in the leading edges of the slats. The hybrid fibre metal laminate material GLARE
+        (glass laminate aluminium reinforced epoxy) is used in the upper fuselage and on the stabilisers\' leading edges. This aluminium-glass-fibre laminate is
+        lighter and has better corrosion and impact resistance than conventional aluminium alloys used in aviation. Unlike earlier composite materials, GLARE can be
+        repaired using conventional aluminium repair techniques.\n</string>
 
     <string name="a380_desc2" formatted="false">Due to its modern engines and aerodynamic improvements, Lufthansa\'s A380s produce half the noise of the
-        Boeing 747-200 while carrying 160 more passengers. In 2012, the A380 received an award from the Noise Abatement Society.</string>
+        Boeing 747-200 while carrying 160 more passengers. In 2012, the A380 received an award from the Noise Abatement Society.\nThe A380 employs an integrated
+        modular avionics (IMA) architecture, first used in advanced military aircraft, such as the Lockheed Martin F-22 Raptor, Lockheed Martin F-35 Lightning II,
+        and Dassault Rafale. Designed and developed by Airbus, Thales and Diehl Aerospace, the IMA suite was first used on the A380. The suite is a technological
+        innovation, with networked computing modules to support different applications.The data networks use Avionics Full-Duplex Switched Ethernet. These are switched,
+        full-duplex, star-topology and based on 100baseTX fast-Ethernet. This reduces the amount of wiring required and minimises latency.\n\nThe Network Systems Server (NSS) is
+        the heart of A380\'s paperless cockpit; it eliminates bulky manuals and traditional charts. The NSS has enough inbuilt robustness to eliminate onboard backup
+        paper documents. The A380s network and server system stores data and offers electronic documentation, providing a required equipment list, navigation charts,
+        performance calculations, and an aircraft logbook.\n\nIn February 2019, Airbus announced it would end A380 production by 2021, after its main customer,
+        Emirates, agreed to drop an order for 39 of the aircraft, replacing it with 40 A330-900s and 30 A350-900s. At the time of the announcement, Airbus had 17
+        more A380s on its order book to complete before closing the production line – 14 for Emirates and 3 for All Nippon Airways – taking the total number of
+        expected deliveries of the aircraft type to 251.\n
+    </string>
 
     <string name="a380_desc3">\nAirbus A380\'s active variants include A380-800, A380-841, A380-842, A380-861. Airbus also proposed a handful of new variants that included
     a cargo variant of the A380, the A380F. The freighter would have been a rival for Boeing 747 and Antonov An-225 Mriya. A380F was postponed after 2005 and was
@@ -117,36 +142,39 @@
     <string name="a380_identify_ans">A380 is an aircraft that is easily recognizable. The characteristic ovoid fuselage, 4 engines, distinctive "bulbous" nose, and of course,
         2 passenger decks stretching across the length of the fuselage.</string>
 
-
     <string name="a380_cockpit_value">2</string>
     <string name="a380_wingspan_value">79.75 m</string>
     <string name="a380_length_value">72.72 m</string>
     <string name="a380_height_value">24.09 m</string>
-    <string name="a380_fuselage_value">24.09 update m</string>
+    <string name="a380_fuselage_value">7.1 m (W) / ~7 m (H)</string>
     <string name="a380_mtow_value">575 t</string>
-    <string name="a380_cruise_speed_value">903 km/h (typical),\n950 km/h (max.)</string>
+    <string name="a380_cruise_speed_value">903 km/h (typical),\n945 km/h (max.)</string>
     <string name="a380_range_value">8,000 nmi</string>
     <string name="a380_thrust_value">348 kN</string>
+    <!--AIRBUS A380-->
 
-
+    <!--AIRBUS A340-->
     <string name="a340_type_value">Wide-body</string>
-    <string name="a340_engine_value">CFM56-5C /\nRR Trent 553/556 (4)</string>
+    <string name="a340_engine_value">CFM56-5C/\nRR Trent 553/556 (4)</string>
     <string name="a340_first_flight_value">25 October 1991</string>
     <string name="a340_intro_value">15 March 1993 with\nLufthansa &amp; Air France</string>
     <string name="a340_customer_value">Lufthansa</string>
-    <string name="a340_variants_value">4 (active)</string>
+    <string name="a340_variants_value">4</string>
 
-
-    <string name="a340_desc1" formatted="false">In the mid-1970s, Airbus conceived several derivatives of the A300, its first airliner, and developed the A340 quadjet
+    <string name="a340_desc1" formatted="false">Dans the mid-1970s, Airbus conceived plusieurs de derivatives of the A300, its first airliner, and developed the A340 quadjet
         in parallel with the A330 twinjet. Keeping the eight-abreast economy cross-section of the A300, the early A340-200/300 has a similar airframe to the A330.
         Differences include four 151 kN (34,000 lbf) CFM56s instead of two high-thrust turbofans to bypass ETOPS restrictions on trans-oceanic routes, and a three-leg
         main landing gear instead of two for a heavier 276 t (608,000 lb) MTOW. Both airliners have fly-by-wire controls, which was first introduced on the A320, as well
-        as a similar glass cockpit. A total of 380 A340s have been built before its production ended 2011.\n\nIts features and improvements were usually shared with the A330.
+        as a similar glass cockpit. A total of 380 A340s have been built before its production ended in 2011.\n\nIts features and improvements were usually shared with the A330.
         The four engines configuration avoided the ETOPS constraints such as more frequent inspections. The A340 has a low cantilever wing; the A340-200/300 wing is virtually
         identical to that of the A330, with both engine pylons used while only the inboard one is used on the A330. The two engines for each wing provide a more distributed
         weight; and a more outboard engine weight for a lower wing root bending moment at equal TOW, allowing a higher wing limited MTOW for more range. The wings were
-        designed and manufactured by BAe, which developed a long slender wing with a high aspect ratio for a higher aerodynamic efficiency.</string>
-
+        designed and manufactured by BAe, which developed a long slender wing with a high aspect ratio for a higher aerodynamic efficiency. The wing is swept back at
+        30 degrees, allowing a maximum operating Mach number of 0.86. To reach a long span and high aspect ratio without a large weight penalty, the wing has
+        relatively high Thickness-to-chord ratio of 11.8% or 12.8%. Each wing also has a 2.74 m tall winglet instead of the wingtip fences found on earlier Airbus aircraft. The failure
+        of the ultra-high-bypass IAE SuperFan, promising around 15% better fuel burn, led to wing upgrades to compensate. Originally designed with a 56 m
+        span, the wing was later extended to 58.6 m and finally to 60.3 m. This wingspan is similar to that of the larger Boeing 747-200, but with
+        35% less wing area.\n</string>
 
     <string name="a340_desc2" formatted="false">The A340 uses a modified A320 glass cockpit, with side-stick controls instead of a conventional yoke. The main instrument
         panel is dominated by six displays, cathode ray tube monitors initially then liquid crystal displays. Flight information is directed via the Electronic Flight
@@ -155,7 +183,15 @@
         instead of paper ones, with optional web-based updates. Maintenance difficulty and cost were reduced to half of that of the earlier and smaller Airbus A310.
         Improved engine control and monitoring improved time on wing. The centralised maintenance computer can transmit real-time information to ground facilities via
         the onboard satellite-based ACARS datalink. Heavy maintenance like structural changes remained unchanged, while cabin sophistications, like the in-flight
-        entertainment, were increased over preceding airliners.</string>
+        entertainment, were increased over preceding airliners.\n\nOn 16 June 1993, an A340-200 dubbed the World Ranger flew from the Paris Air Show to Auckland,
+        New Zealand in 21 hours 32 minutes and back in 21 hours 46 minutes after a five-hour stop; this was the first non-stop flight between Europe and New Zealand
+        and the longest non-stop flight by an airliner at the time. The 19,277 km (10,409 nmi) flight from Paris to Auckland broke six world records with 22 persons
+        and five center tanks. Taking off at 11:58 local time, it arrived back in Paris 48 hours and 22 minutes later, at 12:20. This record held until
+        1997 when a Boeing 777-200ER flew 20,044 km (10,823 nmi) from Seattle to Kuala Lumpur. The McDonnell Douglas MD-11 and the Boeing 777 were
+        its main competitors. The A340 was coping up well with its competitors and in some cases, even better as Singapore Airlines cancelled its 20-aircraft MD-11
+        order on 2 August 1991, and ordered 20 A340-300s instead. However, as improving engine reliability allowed ETOPS operations for almost all routes,
+        more economical twin-jets have replaced quad-jets on many routes. On 10 November 2011, Airbus announced that the production reached its end, after 380
+        orders had been placed and 377 delivered from Toulouse, France. Later, the A350 XWB was announced its successor.\n</string>
 
     <string name="a340_desc3">\nAirbus A340\'s variants include A340-200, A340-300, A340-500, A340-600. The -600 variant is the longest in the A340 family. It is even
         longer than most Boeing 747s and the A380.\n</string>
@@ -171,12 +207,41 @@
     <string name="a340_length_value">59.39 / 63.69 /\n67.93 / 75.36 m</string>
     <string name="a340_height_value">17.03 / 16.99 /\n17.53 / 17.93 m</string>
     <string name="a340_fuselage_value">5.29 m (W) / ~5.5 m (H)</string>
-    <string name="a340_mtow_value">275 t (-200)/ 276.5 t (-300) / 380 t (-500 &amp; -600)</string>
+    <string name="a340_mtow_value">275 t (-200) / 276.5 t (-300) / 380 t (-500 &amp; -600)</string>
     <string name="a340_cruise_speed_value">871 km/h (typical),\n914 km/h (max.)</string>
     <string name="a340_range_value">6,700 / 7,300 / 9,000 / 7,800 nmi</string>
     <string name="a340_thrust_value">138.78–151.24 kN\n(-200 &amp; -300) /\n248.12–275.35 kN\n(-500 &amp; -600)</string>
+    <!--AIRBUS A340-->
 
+    <!--AIRBUS A330-->
+    <string name="a330_type_value">Wide-body</string>
+    <string name="a330_engine_value">GE CF6 /\nPratt &amp; Whitney PW4000/\nRR Trent 700 (2)</string>
+    <string name="a330_first_flight_value">2 November 1992 </string>
+    <string name="a330_intro_value">17 January 1994\nwith Air Inter</string>
+    <string name="a330_customer_value">Turkish Airlines</string>
+    <string name="a330_variants_value">TBD 8?</string>
 
+    <string name="a330_desc1" formatted="false">\n</string>
+
+    <string name="a330_desc2" formatted="false">\n</string>
+
+    <string name="a330_desc3">\n\n</string>
+
+    <string name="a330_specs_constraint">()\n</string>
+
+    <string name="a330_identify">How to identify Airbus A330?</string>
+    <string name="a330_identify_ans"></string>
+
+    <string name="a330_cockpit_value">2</string>
+    <string name="a330_wingspan_value">60.3 m</string>
+    <string name="a330_length_value">58.82 m (-200 &amp; -200F) / 63.67 m (-300) </string>
+    <string name="a330_height_value">17.39 / 16.9 / 16.79 m</string>
+    <string name="a330_fuselage_value">5.26 m (W) / ~5.6 m (H)</string>
+    <string name="a330_mtow_value">242 / 233 / 242 t</string>
+    <string name="a330_cruise_speed_value">871 km/h (typical),\n914 km/h (max.)</string>
+    <string name="a330_range_value">6,700 / 7,300 / 9,000 / 7,800 nmi</string>
+    <string name="a330_thrust_value">138.78–151.24 kN\n(-200 &amp; -300) /\n248.12–275.35 kN\n(-500 &amp; -600)</string>
+    <!--AIRBUS A330-->
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>
     <string name="ic_access_time">&#xe001;</string>

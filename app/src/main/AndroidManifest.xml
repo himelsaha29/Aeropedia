@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".airbus.AirbusA340"></activity>
+        <activity android:name=".airbus.AirbusA330"></activity>
+        <activity android:name=".airbus.AirbusA340" />
         <activity android:name=".airbus.AirbusA380" />
         <activity android:name=".firebase.Firebase" />
         <!--
