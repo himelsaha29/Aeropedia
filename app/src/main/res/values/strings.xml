@@ -19,12 +19,11 @@
     <string name="language"><b>FR</b></string>
 
 
-
     <string name="type">Type</string>
     <string name="engine">Engine</string>
     <string name="first_flight">First flight</string>
     <string name="intro">Introduction</string>
-    <string name="customer">Primary customer</string>
+    <string name="customer">Largest operator</string>
     <string name="variants">Variants</string>
 
 
@@ -39,7 +38,6 @@
     <string name="range">Range</string>
     <string name="thrust2">Thrust (2x)</string>
     <string name="thrust4">Thrust (4x)</string>
-
 
 
     <string name="a350_type_value">Wide-body</string>
@@ -75,25 +73,19 @@
     </string>
 
 
-
-
     <string name="a350_wingspan_value">64.75 m</string>
-    <string name="a350_length_value">66.8 m - 73.79 m</string>
-    <string name="a350_height_value">17.05 m - 17.08 m</string>
+    <string name="a350_length_value">66.8 / 73.79 m</string>
+    <string name="a350_height_value">17.05 / 17.08 m</string>
     <string name="a350_fuselage_value">5.96 m (W) / 6.09 m (H)</string>
-    <string name="a350_mtow_value">280 t - 316 t</string>
+    <string name="a350_mtow_value">280 / 316 t</string>
     <string name="a350_cruise_speed_value">903 km/h (typical),\n950 km/h (max.)</string>
-    <string name="a350_range_value">8100 nmi - 8700 nmi</string>
-    <string name="a350_thrust_value">374.5 kN - 431.5 kN</string>
+    <string name="a350_range_value">8100 / 8700 nmi</string>
+    <string name="a350_thrust_value">374.5 / 431.5 kN</string>
 
     <string name="a350_desc3">\nAirbus A350\'s variants include A350-800, A350-900, A350-ULR, ACJ350, A350 Regional, A350-950 F, A350-1000, although some of
         these were discontinued or did not make it past the early stages.\n</string>
     <string name="a350_identify">How to identify Airbus A350?</string>
     <string name="a350_identify_ans">The unique 6-piece round-edged windscreen configuration with black border, distinctive nose, smoothly curved winglets.</string>
-
-
-
-
 
 
     <string name="a380_type_value">Wide-body</string>
@@ -156,6 +148,31 @@
     <string name="a380_thrust_value">348 kN</string>
 
 
+
+    <string name="a340_type_value">Wide-body</string>
+    <string name="a340_engine_value">CFM56-5C/\nRR Trent 553/556 (4)</string>
+    <string name="a340_first_flight_value">25 October 1991</string>
+    <string name="a340_intro_value">15 March 1993 with\nLufthansa &amp; Air France</string>
+    <string name="a340_customer_value">Lufthansa</string>
+    <string name="a340_variants_value">4 (active)</string>
+
+
+    <string name="a340_desc1" formatted="false">In the mid-1970s, Airbus conceived several derivatives of the A300, its first airliner, and developed the A340 quadjet
+        in parallel with the A330 twinjet. Keeping the eight-abreast economy cross-section of the A300, the early A340-200/300 has a similar airframe to the A330.
+        Differences include four 151 kN (34,000 lbf) CFM56s instead of two high-thrust turbofans to bypass ETOPS restrictions on trans-oceanic routes, and a three-leg
+        main landing gear instead of two for a heavier 276 t (608,000 lb) MTOW. Both airliners have fly-by-wire controls, which was first introduced on the A320, as well
+        as a similar glass cockpit.</string>
+
+
+    <string name="a340_cockpit_value">2</string>
+    <string name="a340_wingspan_value">60.3 m (-200 &amp; -300) /\n63.45 m (-500 &amp; -600)</string>
+    <string name="a340_length_value">59.39 / 63.69 /\n67.93 / 75.36 m</string>
+    <string name="a340_height_value">17.03 / 16.99 /\n17.53 / 17.93 m</string>
+    <string name="a340_fuselage_value">5.29 m (W) / ~5.5 m (H)</string>
+    <string name="a340_mtow_value">275 t (-200) / 276.5 t (-300) / 380 t (-500 &amp; -600)</string>
+    <string name="a340_cruise_speed_value">871 km/h (typical),\n914 km/h (max.)</string>
+    <string name="a340_range_value">6,700 / 7,300 / 9,000 / 7,800 nmi</string>
+    <string name="a340_thrust_value">138.78–151.24 kN\n(-200 &amp; -300) /\n248.12–275.35 kN\n(-500 &amp; -600)</string>
 
 
     <!--TREE VIEW REMOVE LATER -->
