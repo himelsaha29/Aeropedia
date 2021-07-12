@@ -58,9 +58,9 @@ public class AirbusA340 extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_airbus_a340);
+            setContentView(R.layout.activity_airbus_a340_light);
         } else {
-            setContentView(R.layout.activity_airbus_a350_dark);
+            setContentView(R.layout.activity_airbus_a340_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
