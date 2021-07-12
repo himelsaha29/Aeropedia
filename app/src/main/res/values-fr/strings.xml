@@ -71,6 +71,8 @@
     and several international destinations that include London, New York and Paris.\n
     </string>
 
+    <string name="a350_specs_constraint">(-900 and -1000 variants compared in order)\n</string>
+
 
 
     <string name="a350_wingspan_value">64.75 m</string>
