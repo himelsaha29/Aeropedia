@@ -214,11 +214,11 @@
 
     <!--AIRBUS A330-->
     <string name="a330_type_value">Wide-body</string>
-    <string name="a330_engine_value">GE CF6 /\nPratt &amp; Whitney PW4000/\nRR Trent 700 (2)</string>
+    <string name="a330_engine_value">GE CF6 /\nPratt &amp; Whitney PW4000 /\nRR Trent 700 (2)</string>
     <string name="a330_first_flight_value">2 November 1992 </string>
     <string name="a330_intro_value">17 January 1994\nwith Air Inter</string>
     <string name="a330_customer_value">Turkish Airlines</string>
-    <string name="a330_variants_value">TBD 8?</string>
+    <string name="a330_variants_value">10 (active)</string>
 
     <string name="a330_desc1" formatted="false">Airbus began development on the A330 twin-jet in parallel with the A340 quad-jet and launched both designs with their first
         orders in June 1987. The A330 shares its airframe with the early A340 variants, having two main landing gear legs instead of three, lower weights, and slightly
@@ -242,21 +242,13 @@
         primary and two secondary flight control systems, as well as a flight envelope limit protection system which prevents maneuvers from exceeding the aircraft\'s
         aerodynamic and structural limits.\n</string>
 
-    <string name="a330_neo_ceo">A330neo &amp; A330ceo</string>
 
-    <string name="a330_desc3">The A330neo, \"neo\" for "New Engine Option", is a development comprising A330-800/900 from the initial A330 (-200/200F freighter/300/MRTT military tanker), now A330ceo — \"Current Engine Option\". A new
-        version with modern engines developed for the Boeing 787 was called for by owners of the current A330. It was launched in July 2014 at the Farnborough Airshow,
-        promising 14% better fuel economy per seat, thanks to the more efficient Trent 7000 turbofans and other aerodynamic improvements including sharklets. Its
-        two versions are based on the A330-200 and -300: the -800 should cover 8,150 nmi (15,090 km) with 257 passengers while the -900 should cover 7,200 nmi (13,330 km)
-        with 287 passengers. The -900 made its first flight on 19 October 2017, received its EASA type certificate on 26 September 2018, and was first delivered to TAP Air
-        Portugal on 26 November. The -800 made its first flight on 6 November 2018, aiming for a mid-2019 type certification and delivery in the first half of 2020.\n
-    </string>
-
-    <string name="a330_specs_constraint">()\n</string>
-
-    <string name="a330_desc4">\nAirbus A330\'s variants include A330ceo (A330-300, A330-300HGW, A330 Regional, A330-200, A330-200F, A330P2F), A330neo (A330-800,
-        A330-900), Beluga XL (large cargo freighter), ACJ330 (corporate jet), Airbus A330 MRTT and EADS/Northrop Grumman KC-45 (military jets). Many other variants
+    <string name="a330_desc3">\nAirbus A330\'s variants include A330-300, A330-300HGW, A330 Regional, A330-200, A330-200F, A330P2F, Beluga XL (large cargo freighter), ACJ330 (corporate jet), Airbus A330 MRTT and EADS/Northrop Grumman KC-45 (military jets). Many other variants
     such as A330-400/600, A330-100/-500, A330-200Lite were proposed. However, in the end these variants did not make it into the production phase.\n</string>
+
+    <string name="a330_specs_constraint">(-200, -200F, and -300 variants compared in order)\n</string>
+
+
 
     <string name="a330_identify">How to identify Airbus A330?</string>
     <string name="a330_identify_ans"></string>
@@ -265,11 +257,11 @@
     <string name="a330_wingspan_value">60.3 m</string>
     <string name="a330_length_value">58.82 m (-200 &amp; -200F) / 63.67 m (-300) </string>
     <string name="a330_height_value">17.39 / 16.9 / 16.79 m</string>
-    <string name="a330_fuselage_value">5.26 m (W) / ~5.6 m (H)</string>
+    <string name="a330_fuselage_value">5.64 m (W) / 5.64 m (H)</string>
     <string name="a330_mtow_value">242 / 233 / 242 t</string>
-    <string name="a330_cruise_speed_value">871 km/h (typical),\n914 km/h (max.)</string>
-    <string name="a330_range_value">6,700 / 7,300 / 9,000 / 7,800 nmi</string>
-    <string name="a330_thrust_value">138.78–151.24 kN\n(-200 &amp; -300) /\n248.12–275.35 kN\n(-500 &amp; -600)</string>
+    <string name="a330_cruise_speed_value">871 km/h (typical)</string>
+    <string name="a330_range_value">7,250 / 4,000 / 6,350 nmi</string>
+    <string name="a330_thrust_value">287–316 kN</string>
     <!--AIRBUS A330-->
 
     <!--TREE VIEW REMOVE LATER -->

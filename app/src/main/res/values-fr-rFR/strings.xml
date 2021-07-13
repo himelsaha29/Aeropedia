@@ -225,15 +225,13 @@
 
     <string name="a330_desc2" formatted="false">\n</string>
 
-    <string name="a330_neo_ceo">A330neo &amp; A330ceo</string>
 
-    <string name="a330_desc3">\n\n</string>
+    <string name="a330_desc3">\nAirbus A330\'s variants include A330ceo (A330-300, A330-300HGW, A330 Regional, A330-200, A330-200F, A330P2F), A330neo (A330-800,
+        A330-900), Beluga XL (large cargo freighter), ACJ330 (corporate jet), Airbus A330 MRTT and EADS/Northrop Grumman KC-45 (military jets). Many other variants
+    such as A330-400/600, A330-100/-500, A330-200Lite were proposed. However, in the end these variants did not make it into the production phase.\n</string>
 
     <string name="a330_specs_constraint">()\n</string>
 
-    <string name="a330_desc4">Airbus A330\'s variants include A330ceo (A330-300, A330-300HGW, A330 Regional, A330-200, A330-200F, A330P2F), A330neo (A330-800,
-        A330-900), Beluga XL (large cargo freighter), ACJ330 (corporate jet), Airbus A330 MRTT and EADS/Northrop Grumman KC-45 (military jets). Many other variants
-    such as A330-400/600, A330-100/-500, A330-200Lite were proposed. However, in the end these variants did not make it into the production phase.\n</string>
 
     <string name="a330_identify">How to identify Airbus A330?</string>
     <string name="a330_identify_ans"></string>
