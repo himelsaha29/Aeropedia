@@ -14,6 +14,7 @@
     <string name="a340">A340</string>
     <string name="a321">A321</string>
     <string name="a330">A330</string>
+    <string name="a330neo">A330neo</string>
     <string name="a220">A220</string>
     <string name="beluga">Beluga XL</string>
     <string name="language"><b>EN</b></string>
@@ -245,6 +246,59 @@
     <string name="a330_range_value">6,700 / 7,300 / 9,000 / 7,800 nmi</string>
     <string name="a330_thrust_value">138.78–151.24 kN\n(-200 &amp; -300) /\n248.12–275.35 kN\n(-500 &amp; -600)</string>
     <!--AIRBUS A330-->
+
+
+    <!--AIRBUS A330neo-->
+    <string name="a330neo_type_value">Wide-body</string>
+    <string name="a330neo_engine_value">GE CF6 /\nPratt &amp; Whitney PW4000 /\nRR Trent 700 (2)</string>
+    <string name="a330neo_first_flight_value">2 November 1992 </string>
+    <string name="a330neo_intro_value">17 January 1994\nwith Air Inter</string>
+    <string name="a330neo_customer_value">Turkish Airlines</string>
+    <string name="a330neo_variants_value">10 (active)</string>
+
+    <string name="a330neo_desc1" formatted="false">Airbus began development on the A330 (now known as A330ceo - \"ceo\" for \"Current Engine Option\" - after the introduction of A330neo - \"neo\" for "New Engine Option" in 2014) twin-jet in parallel with the A340 quad-jet and launched both designs with their first
+        orders in June 1987. The A330 shares its airframe with the early A340 variants, having two main landing gear legs instead of three, lower weights, and slightly
+        different lengths. Both airliners have fly-by-wire controls as well as a similar glass cockpit to increase the commonality. The A330 was Airbus\'s first
+        airliner to offer a choice of three engines: the General Electric CF6, Pratt &amp; Whitney PW4000, or the Rolls-Royce Trent 700. The A330 was the
+        first Airbus aircraft for which Rolls-Royce supplied engines. It is the third most delivered wide-body airliner after the Boeing 777 and Boeing 747. As of 30 June 2021,
+        1518 A330s have been built and this figure will continue to increase as the aircraft is still in production.\n\nThe A330 is a medium-size, wide-body aircraft,
+        with two engines suspended on pylons under the wings. A two-wheel nose undercarriage and two four-wheel bogie main legs built by Messier-Dowty support the
+        aeroplane on the ground. The airframe of the A330 features a low-wing lever monoplane with a wing virtually identical to that of the A340-200/300. On the
+        A330-300, one engine is installed at the inboard pylon while the outboard pylon position is not used; for the A340-300, both engine pylons are used, which
+        allows the A340-300 wing to sustain a higher (wing limited) MTOW. This is as the A340\'s two engines at each wing provide a more equal force distribution
+        (engine weight) over the wing, while also the total engine weight counteracting moment is located more outboard with more engine weight located further
+        outboard on the wing, hence the wing root bending moment with equal TOW is less on the A340-300 than on the A330-300. The wings were designed and manufactured
+        by BAe, which developed a long slender wing with a very high aspect ratio to provide high aerodynamic efficiency. The wing is swept back at 30 degrees and,
+        along with other design features, allows a maximum operating Mach number of 0.86.\n</string>
+
+    <string name="a330neo_desc2" formatted="false">The A330 shares the same glass cockpit flight deck layout as the A320 and the A340, featuring electronic instrument
+        displays rather than mechanical gauges. Instead of a conventional control yoke, the flight deck features side-stick controls, six main displays, and the
+        Electronic Flight Instrument System (EFIS), which covers navigation and flight displays, as well as the Electronic Centralised Aircraft Monitor (ECAM).
+        Apart from the flight deck, the A330 also has the fly-by-wire system common to the A320 family, the A340, the A350, and the A380. It also features three
+        primary and two secondary flight control systems, as well as a flight envelope limit protection system which prevents maneuvers from exceeding the aircraft\'s
+        aerodynamic and structural limits.\n</string>
+
+
+    <string name="a330neo_desc3">\nAirbus A330\'s variants include A330-300, A330-300HGW, A330 Regional, A330-200, A330-200F, A330P2F, Beluga XL (large cargo freighter), ACJ330 (corporate jet), Airbus A330 MRTT and EADS/Northrop Grumman KC-45 (military jets). Many other variants
+    such as A330-400/600, A330-100/-500, A330-200Lite were proposed. However, in the end these variants did not make it into the production phase.\n</string>
+
+    <string name="a330neo_specs_constraint">(-200, -200F, and -300 variants compared in order)\n</string>
+
+
+    <string name="a330neo_identify">How to identify Airbus A330?</string>
+    <string name="a330neo_identify_ans">Bulged central section of the lower fuselage, 2 engines attached to wings with straight, sharp-angled, short wingtips like A340\'s.</string>
+
+    <string name="a330neo_cockpit_value">2</string>
+    <string name="a330neo_wingspan_value">60.3 m</string>
+    <string name="a330neo_length_value">58.82 m (-200 &amp; -200F) / 63.67 m (-300) </string>
+    <string name="a330neo_height_value">17.39 / 16.9 / 16.79 m</string>
+    <string name="a330neo_fuselage_value">5.64 m (W) / 5.64 m (H)</string>
+    <string name="a330neo_mtow_value">242 / 233 / 242 t</string>
+    <string name="a330neo_cruise_speed_value">871 km/h (typical)</string>
+    <string name="a330neo_range_value">7,250 / 4,000 / 6,350 nmi</string>
+    <string name="a330neo_thrust_value">287–316 kN</string>
+    <!--AIRBUS A330neo-->
+
 
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>
