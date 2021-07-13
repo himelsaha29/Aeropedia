@@ -48,7 +48,7 @@ public class AirbusA380 extends AppCompatActivity {
     private BlurLayout blur;
     private AndroidTreeView tView;
     private CollapsingToolbarLayout collapsingToolbarLayout;
-    SliderView sliderView;
+    private SliderView sliderView;
     private SliderAdapter adapter;
 
     @Override
@@ -344,7 +344,7 @@ public class AirbusA380 extends AppCompatActivity {
         });
     }
 
-    public void renewItems(View view) {
+    private void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
@@ -363,12 +363,12 @@ public class AirbusA380 extends AppCompatActivity {
         adapter.renewItems(sliderItemList);
     }
 
-    public void removeLastItem(View view) {
+    private void removeLastItem(View view) {
         if (adapter.getCount() - 1 >= 0)
             adapter.deleteItem(adapter.getCount() - 1);
     }
 
-    public void addNewItem(View view) {
+    private void addNewItem(View view) {
         SliderItem sliderItem = new SliderItem();
         //sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
         adapter.addItem(sliderItem);
