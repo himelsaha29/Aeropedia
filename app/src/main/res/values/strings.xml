@@ -199,7 +199,7 @@
 
     <string name="a340_identify">How to identify Airbus A340?</string>
     <string name="a340_identify_ans">The A340 is one of the few quad-jets in the world. The single passenger deck stretching the length of the fuselage with
-        4 engines, centre-line wheel bogie should catch the eyes of most aviation enthusiasts.</string>
+        4 engines, centre-line wheel bogie, wings with straight, sharp-angled, short wingtips like A330\'s should catch the eyes of most aviation enthusiasts.</string>
 
     <string name="a340_cockpit_value">2</string>
     <string name="a340_wingspan_value">60.3 m (-200 &amp; -300) /\n63.45 m (-500 &amp; -600)</string>
@@ -220,7 +220,7 @@
     <string name="a330_customer_value">Turkish Airlines</string>
     <string name="a330_variants_value">10 (active)</string>
 
-    <string name="a330_desc1" formatted="false">Airbus began development on the A330 twin-jet in parallel with the A340 quad-jet and launched both designs with their first
+    <string name="a330_desc1" formatted="false">Airbus began development on the A330 (now known as A330ceo - \"ceo\" for \"Current Engine Option\" - after the introduction of A330neo - \"neo\" for "New Engine Option" in 2014) twin-jet in parallel with the A340 quad-jet and launched both designs with their first
         orders in June 1987. The A330 shares its airframe with the early A340 variants, having two main landing gear legs instead of three, lower weights, and slightly
         different lengths. Both airliners have fly-by-wire controls as well as a similar glass cockpit to increase the commonality. The A330 was Airbus\'s first
         airliner to offer a choice of three engines: the General Electric CF6, Pratt &amp; Whitney PW4000, or the Rolls-Royce Trent 700. The A330 was the
@@ -251,7 +251,7 @@
 
 
     <string name="a330_identify">How to identify Airbus A330?</string>
-    <string name="a330_identify_ans"></string>
+    <string name="a330_identify_ans">Bulged central section of the lower fuselage, 2 engines attached to wings with straight, sharp-angled, short wingtips like A340\'s.</string>
 
     <string name="a330_cockpit_value">2</string>
     <string name="a330_wingspan_value">60.3 m</string>

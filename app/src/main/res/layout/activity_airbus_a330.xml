@@ -866,7 +866,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="12dp"
-                    android:text="@string/a350_identify_ans"
+                    android:text="@string/a330_identify_ans"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
