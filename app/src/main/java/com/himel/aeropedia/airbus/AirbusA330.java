@@ -48,8 +48,10 @@ public class AirbusA330 extends AppCompatActivity {
     private BlurLayout blur;
     private AndroidTreeView tView;
     private CollapsingToolbarLayout collapsingToolbarLayout;
-    SliderView sliderView;
+    private SliderView sliderView;
     private SliderAdapter adapter;
+    private SliderView sliderViewTwo;
+    private SliderAdapter adapterTwo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -329,6 +331,7 @@ public class AirbusA330 extends AppCompatActivity {
     private void slideView() {
 
         sliderView = findViewById(R.id.imageSlider);
+        sliderViewTwo = findViewById(R.id.imageSliderTwo);
 
         adapter = new SliderAdapter(this);
         sliderView.setSliderAdapter(adapter, false);
@@ -342,6 +345,18 @@ public class AirbusA330 extends AppCompatActivity {
         renewItems(sliderView);
 
 
+        adapterTwo = new SliderAdapter(this);
+        sliderViewTwo.setSliderAdapter(adapter, false);
+        sliderViewTwo.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderViewTwo.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        sliderViewTwo.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        sliderViewTwo.setIndicatorSelectedColor(Color.WHITE);
+        sliderViewTwo.setIndicatorUnselectedColor(Color.GRAY);
+        sliderViewTwo.setScrollTimeInSec(3);
+        sliderViewTwo.setAutoCycle(false);
+        renewItemsTwo(sliderViewTwo);
+
+
         sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
             @Override
             public void onIndicatorClicked(int position) {
@@ -350,7 +365,7 @@ public class AirbusA330 extends AppCompatActivity {
         });
     }
 
-    public void renewItems(View view) {
+    private void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
@@ -367,12 +382,29 @@ public class AirbusA330 extends AppCompatActivity {
         adapter.renewItems(sliderItemList);
     }
 
-    public void removeLastItem(View view) {
+    public void renewItemsTwo(View view) {
+        List<SliderItem> sliderItemList = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            SliderItem sliderItem = new SliderItem();
+            if (i == 0) {
+                sliderItem.setImageLocation(R.drawable.a330_slider1);
+            } else if (i == 1) {
+                sliderItem.setImageLocation(R.drawable.a330_slider2);
+            } else if (i == 2) {
+                sliderItem.setImageLocation(R.drawable.a330_slider3);
+            }
+
+            sliderItemList.add(sliderItem);
+        }
+        adapter.renewItems(sliderItemList);
+    }
+
+    private void removeLastItem(View view) {
         if (adapter.getCount() - 1 >= 0)
             adapter.deleteItem(adapter.getCount() - 1);
     }
 
-    public void addNewItem(View view) {
+    private void addNewItem(View view) {
         SliderItem sliderItem = new SliderItem();
         //sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
         adapter.addItem(sliderItem);

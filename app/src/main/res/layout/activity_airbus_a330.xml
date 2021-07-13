@@ -375,9 +375,47 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
+                    android:paddingTop="10dp"
                     android:text="@string/a330_desc3"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="6dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.smarteist.autoimageslider.SliderView
+                            android:id="@+id/imageSliderTwo"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintDimensionRatio="H,16:9"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:sliderAnimationDuration="600"
+                            app:sliderAutoCycleDirection="back_and_forth"
+                            app:sliderAutoCycleEnabled="true"
+                            app:sliderIndicatorAnimationDuration="600"
+                            app:sliderIndicatorGravity="center_horizontal|bottom"
+                            app:sliderIndicatorMargin="15dp"
+                            app:sliderIndicatorOrientation="horizontal"
+                            app:sliderIndicatorPadding="3dp"
+                            app:sliderIndicatorRadius="2dp"
+                            app:sliderIndicatorSelectedColor="#5A5A5A"
+                            app:sliderIndicatorUnselectedColor="#FFF"
+                            app:sliderScrollTimeInSec="1"
+                            app:sliderStartAutoCycle="false" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -385,6 +423,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
+                    android:paddingTop="10dp"
                     android:text="@string/specs"
                     android:textColor="@color/colorPrimary"
                     android:textSize="26sp" />
@@ -863,7 +902,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a350_desc3"
+                    android:text="@string/a330_desc4"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -873,8 +912,8 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:paddingBottom="3dp"
-                    android:text="@string/a350_identify"
+                    android:paddingBottom="10dp"
+                    android:text="@string/a330_identify"
                     android:textColor="@color/colorPrimary"
                     android:textSize="26sp" />
 
