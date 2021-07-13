@@ -220,11 +220,33 @@
     <string name="a330_customer_value">Turkish Airlines</string>
     <string name="a330_variants_value">TBD 8?</string>
 
-    <string name="a330_desc1" formatted="false">\n</string>
+    <string name="a330_desc1" formatted="false">Airbus began development on the A330 twin-jet in parallel with the A340 quad-jet and launched both designs with their first
+        orders in June 1987. The A330 shares its airframe with the early A340 variants, having two main landing gear legs instead of three, lower weights, and slightly
+        different lengths. Both airliners have fly-by-wire controls as well as a similar glass cockpit to increase the commonality. The A330 was Airbus\'s first
+        airliner to offer a choice of three engines: the General Electric CF6, Pratt &amp; Whitney PW4000, or the Rolls-Royce Trent 700. The A330 was the
+        first Airbus aircraft for which Rolls-Royce supplied engines. It is the third most delivered wide-body airliner after the Boeing 777 and Boeing 747. As of 30 June 2021,
+        1518 A330s have been built and this figure will continue to increase as the aircraft is still in production.\n\nThe A330 is a medium-size, wide-body aircraft,
+        with two engines suspended on pylons under the wings. A two-wheel nose undercarriage and two four-wheel bogie main legs built by Messier-Dowty support the
+        aeroplane on the ground. The airframe of the A330 features a low-wing lever monoplane with a wing virtually identical to that of the A340-200/300. On the
+        A330-300, one engine is installed at the inboard pylon while the outboard pylon position is not used; for the A340-300, both engine pylons are used, which
+        allows the A340-300 wing to sustain a higher (wing limited) MTOW. This is as the A340\'s two engines at each wing provide a more equal force distribution
+        (engine weight) over the wing, while also the total engine weight counteracting moment is located more outboard with more engine weight located further
+        outboard on the wing, hence the wing root bending moment with equal TOW is less on the A340-300 than on the A330-300. The wings were designed and manufactured
+        by BAe, which developed a long slender wing with a very high aspect ratio to provide high aerodynamic efficiency. The wing is swept back at 30 degrees and,
+        along with other design features, allows a maximum operating Mach number of 0.86.\n</string>
 
-    <string name="a330_desc2" formatted="false">\n</string>
+    <string name="a330_desc2" formatted="false">The A330 shares the same glass cockpit flight deck layout as the A320 and the A340, featuring electronic instrument
+        displays rather than mechanical gauges. Instead of a conventional control yoke, the flight deck features side-stick controls, six main displays, and the
+        Electronic Flight Instrument System (EFIS), which covers navigation and flight displays, as well as the Electronic Centralised Aircraft Monitor (ECAM).
+        Apart from the flight deck, the A330 also has the fly-by-wire system common to the A320 family, the A340, the A350, and the A380. It also features three
+        primary and two secondary flight control systems, as well as a flight envelope limit protection system which prevents maneuvers from exceeding the aircraft\'s
+        aerodynamic and structural limits.\n</string>
 
-    <string name="a330_desc3">\n\n</string>
+    <string name="a330_neo_ceo">A330neo &amp; A330ceo\n</string>
+
+    <string name="a330_desc3">The A330neo, \"neo\" for "New Engine Option", is a development comprising A330-800/900 from the initial A330 (-200/200F/300), now A330ceo — \"Current Engine Option\". A new
+        version with modern engines developed for the Boeing 787 was called for by owners of the current A330. It was launched in July 2014 at the Farnborough Airshow,
+        promising 14% better fuel economy per seat, thanks to the more efficient Trent 7000 turbofans and other improvements including sharklets.\n</string>
 
     <string name="a330_specs_constraint">()\n</string>
 

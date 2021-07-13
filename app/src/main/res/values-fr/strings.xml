@@ -224,6 +224,8 @@
 
     <string name="a330_desc2" formatted="false">\n</string>
 
+    <string name="a330_neo_ceo">A330neo &amp; A330ceo</string>
+
     <string name="a330_desc3">\n\n</string>
 
     <string name="a330_specs_constraint">()\n</string>

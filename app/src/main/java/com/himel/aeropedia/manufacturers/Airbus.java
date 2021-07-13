@@ -19,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.airbus.AirbusA330;
 import com.himel.aeropedia.airbus.AirbusA340;
 import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.airbus.AirbusA380;
@@ -95,6 +96,16 @@ public class Airbus extends AppCompatActivity {
         }
 
         animateCards();
+
+        a330Card.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), AirbusA330.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
 
         a340Card.setOnClickListener(new View.OnClickListener() {
 
