@@ -20,6 +20,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA330;
+import com.himel.aeropedia.airbus.AirbusA330neo;
 import com.himel.aeropedia.airbus.AirbusA340;
 import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.airbus.AirbusA380;
@@ -83,6 +84,7 @@ public class Airbus extends AppCompatActivity {
 
 
         a350Card.getBackground().setAlpha(65);
+        a330Card.getBackground().setAlpha(65);
         a330neoCard.getBackground().setAlpha(65);
         a380Card.getBackground().setAlpha(65);
         a319Card.getBackground().setAlpha(65);
@@ -104,6 +106,16 @@ public class Airbus extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), AirbusA330.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
+        a330neoCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), AirbusA330neo.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
