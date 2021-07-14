@@ -357,7 +357,7 @@ public class AirbusA340 extends AppCompatActivity {
             if (i == 0) {
                 sliderItem.setImageLocation(R.drawable.a340_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a340_slider2);
+                sliderItem.setImageLocation(R.drawable.a340_slider2_5);
             } else if (i == 2) {
                 sliderItem.setImageLocation(R.drawable.a340_slider3);
             }
