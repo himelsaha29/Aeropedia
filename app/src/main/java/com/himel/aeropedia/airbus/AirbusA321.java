@@ -352,16 +352,14 @@ public class AirbusA321 extends AppCompatActivity {
 
     private void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.a350_slider1);
+                sliderItem.setImageLocation(R.drawable.a321_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a350_slider2);
+                sliderItem.setImageLocation(R.drawable.a321_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.a350_slider3);
-            } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.a350_slider4);
+                sliderItem.setImageLocation(R.drawable.a321_slider3);
             }
 
             sliderItemList.add(sliderItem);
