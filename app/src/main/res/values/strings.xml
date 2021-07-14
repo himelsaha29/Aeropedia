@@ -216,7 +216,7 @@
     <!--AIRBUS A330-->
     <string name="a330_type_value">Wide-body</string>
     <string name="a330_engine_value">GE CF6 /\nPratt &amp; Whitney PW4000 /\nRR Trent 700 (2)</string>
-    <string name="a330_first_flight_value">2 November 1992 </string>
+    <string name="a330_first_flight_value">2 November 1992</string>
     <string name="a330_intro_value">17 January 1994\nwith Air Inter</string>
     <string name="a330_customer_value">Turkish Airlines</string>
     <string name="a330_variants_value">10 (active)</string>
@@ -255,7 +255,7 @@
 
     <string name="a330_cockpit_value">2</string>
     <string name="a330_wingspan_value">60.3 m</string>
-    <string name="a330_length_value">58.82 m (-200 &amp; -200F) / 63.67 m (-300) </string>
+    <string name="a330_length_value">58.82 m (-200 &amp; -200F) / 63.67 m (-300)</string>
     <string name="a330_height_value">17.39 / 16.9 / 16.79 m</string>
     <string name="a330_fuselage_value">5.64 m (W) / 5.64 m (H)</string>
     <string name="a330_mtow_value">242 / 233 / 242 t</string>
@@ -268,53 +268,51 @@
 
     <!--AIRBUS A330neo-->
     <string name="a330neo_type_value">Wide-body</string>
-    <string name="a330neo_engine_value">GE CF6 /\nPratt &amp; Whitney PW4000 /\nRR Trent 700 (2)</string>
-    <string name="a330neo_first_flight_value">2 November 1992 </string>
-    <string name="a330neo_intro_value">17 January 1994\nwith Air Inter</string>
-    <string name="a330neo_customer_value">Turkish Airlines</string>
-    <string name="a330neo_variants_value">10 (active)</string>
+    <string name="a330neo_engine_value">Rolls-Royce Trent 7000</string>
+    <string name="a330neo_first_flight_value"> 19 October 2017</string>
+    <string name="a330neo_intro_value">15 December 2018\nwith TAP Air Portugal</string>
+    <string name="a330neo_customer_value">TAP Air Portugal</string>
+    <string name="a330neo_variants_value">2</string>
 
-    <string name="a330neo_desc1" formatted="false">Airbus began development on the A330 (now known as A330ceo - \"ceo\" for \"Current Engine Option\" - after the introduction of A330neo - \"neo\" for "New Engine Option" in 2014) twin-jet in parallel with the A340 quad-jet and launched both designs with their first
-        orders in June 1987. The A330 shares its airframe with the early A340 variants, having two main landing gear legs instead of three, lower weights, and slightly
-        different lengths. Both airliners have fly-by-wire controls as well as a similar glass cockpit to increase the commonality. The A330 was Airbus\'s first
-        airliner to offer a choice of three engines: the General Electric CF6, Pratt &amp; Whitney PW4000, or the Rolls-Royce Trent 700. The A330 was the
-        first Airbus aircraft for which Rolls-Royce supplied engines. It is the third most delivered wide-body airliner after the Boeing 777 and Boeing 747. As of 30 June 2021,
-        1518 A330s have been built and this figure will continue to increase as the aircraft is still in production.\n\nThe A330 is a medium-size, wide-body aircraft,
-        with two engines suspended on pylons under the wings. A two-wheel nose undercarriage and two four-wheel bogie main legs built by Messier-Dowty support the
-        aeroplane on the ground. The airframe of the A330 features a low-wing lever monoplane with a wing virtually identical to that of the A340-200/300. On the
-        A330-300, one engine is installed at the inboard pylon while the outboard pylon position is not used; for the A340-300, both engine pylons are used, which
-        allows the A340-300 wing to sustain a higher (wing limited) MTOW. This is as the A340\'s two engines at each wing provide a more equal force distribution
-        (engine weight) over the wing, while also the total engine weight counteracting moment is located more outboard with more engine weight located further
-        outboard on the wing, hence the wing root bending moment with equal TOW is less on the A340-300 than on the A330-300. The wings were designed and manufactured
-        by BAe, which developed a long slender wing with a very high aspect ratio to provide high aerodynamic efficiency. The wing is swept back at 30 degrees and,
-        along with other design features, allows a maximum operating Mach number of 0.86.\n</string>
+    <string name="a330neo_desc1" formatted="false">The A330neo, \"neo\" for "New Engine Option", is a development comprising A330-800/900 from the initial A330 (-200/200F freighter/300/MRTT military tanker), now A330ceo — \"Current Engine Option\". A new
+        version with modern engines developed for the Boeing 787 was called for by owners of the current A330. It was launched in July 2014 at the Farnborough Airshow,
+        promising 14% better fuel economy per seat, thanks to Airbus\' decision that lead to the aircraft being exclusively powered by the Rolls-Royce Trent 7000 (as opposed to Trent 700 of A330ceo) with double bypass ratio, as opposed to its predecessor and other aerodynamic improvements including
+        A350 inspired sharklets. Its two versions are based on the A330-200 and -300: Its two versions are based on the A330-200 and -300: the -800 has a range of 8,150 nmi
+        (15,090 km) with 257 passengers while the -900 covers 7,200 nmi (13,330 km) with 287 passengers. The -900 made its maiden flight on 19 October 2017 and received its EASA type certificate on 26 September 2018; it was first delivered to TAP
+        Air Portugal on 26 November 2018 and entered service on 15 December. The -800 made its first flight on 6 November 2018 and received EASA type certification on 13
+        February 2020; the first two -800s were delivered to Kuwait Airways on 29 October 2020. As of 30 June 2021, 63 A330neos have been built.\n</string>
 
-    <string name="a330neo_desc2" formatted="false">The A330 shares the same glass cockpit flight deck layout as the A320 and the A340, featuring electronic instrument
-        displays rather than mechanical gauges. Instead of a conventional control yoke, the flight deck features side-stick controls, six main displays, and the
-        Electronic Flight Instrument System (EFIS), which covers navigation and flight displays, as well as the Electronic Centralised Aircraft Monitor (ECAM).
-        Apart from the flight deck, the A330 also has the fly-by-wire system common to the A320 family, the A340, the A350, and the A380. It also features three
-        primary and two secondary flight control systems, as well as a flight envelope limit protection system which prevents maneuvers from exceeding the aircraft\'s
-        aerodynamic and structural limits.\n</string>
-
-
-    <string name="a330neo_desc3">\nAirbus A330\'s variants include A330-300, A330-300HGW, A330 Regional, A330-200, A330-200F, A330P2F, Beluga XL (large cargo freighter), ACJ330 (corporate jet), Airbus A330 MRTT and EADS/Northrop Grumman KC-45 (military jets). Many other variants
-    such as A330-400/600, A330-100/-500, A330-200Lite were proposed. However, in the end these variants did not make it into the production phase.\n</string>
-
-    <string name="a330neo_specs_constraint">(-200, -200F, and -300 variants compared in order)\n</string>
+    <string name="a330neo_desc2" formatted="false">The larger 112-inch Trent 7000 is 11% more efficient than the 97.5-inch Trent 700 engine, with a 2% loss due to
+        increased weight and 1% due to additional drag from the larger engine, but the sharklets and aero optimization regains 4% for a 12% fuel advantage per trip.
+        Furthermore, fuel consumption per seat is improved by 2% due to the rearranged cabin (Space-Flex and Smart-Lav) with increased seating, offering a 14% fuel
+        burn reduction per seat for the new −900 compared to the previous 235-tonne −300 version.\n\nThe A330neo offers a distinctive cockpit windscreen, similar to that on the A350, and a new interior concept focusing on
+        better passenger experience. Since the fan is enlarged from 97 to 112 in (250 to 280 cm), the nacelles are mounted higher, necessitating extensive
+        CFD analysis to avoid supersonic shock wave interference drag, as is the first slat\'s dog-tooth. The wing twist and belly fairings are tweaked to
+        approach the lowest drag elliptical span-wise pressure distribution changed by the larger sharklets, like the flap track fairings shape to lower form drag.\n\nAs
+        far the as the engine is concerned, the Rolls-Royce Trent 7000 is an electronic controlled bleed air variant of the Trent
+        1000 used on the Boeing 787-10. It has a 112 inch (284 cm) diameter fan and a 10:1 bypass ratio delivering a thrust of 68,000 to 72,000 pounds-force
+        (300 to 320 kN). The decision to offer the aircraft with only one engine option is not unique to Airbus; the Boeing 777X is also expected to come equipped
+        exclusively with General Electric GE9X engines.
+        \n</string>
 
 
-    <string name="a330neo_identify">How to identify Airbus A330?</string>
-    <string name="a330neo_identify_ans">Bulged central section of the lower fuselage, 2 engines attached to wings with straight, sharp-angled, short wingtips like A340\'s.</string>
+    <string name="a330neo_desc3">\n\n</string>
+
+    <string name="a330neo_specs_constraint">(-800 and -900 variants compared in order)\n</string>
+
+
+    <string name="a330neo_identify">How to identify Airbus A330neo?</string>
+    <string name="a330neo_identify_ans"></string>
 
     <string name="a330neo_cockpit_value">2</string>
-    <string name="a330neo_wingspan_value">60.3 m</string>
-    <string name="a330neo_length_value">58.82 m (-200 &amp; -200F) / 63.67 m (-300) </string>
-    <string name="a330neo_height_value">17.39 / 16.9 / 16.79 m</string>
-    <string name="a330neo_fuselage_value">5.64 m (W) / 5.64 m (H)</string>
-    <string name="a330neo_mtow_value">242 / 233 / 242 t</string>
-    <string name="a330neo_cruise_speed_value">871 km/h (typical)</string>
-    <string name="a330neo_range_value">7,250 / 4,000 / 6,350 nmi</string>
-    <string name="a330neo_thrust_value">287–316 kN</string>
+    <string name="a330neo_wingspan_value">64 m</string>
+    <string name="a330neo_length_value">58.82 / 63.66 m</string>
+    <string name="a330neo_height_value">17.39 / 16.79 m</string>
+    <string name="a330neo_fuselage_value">5.64 m (W) / ~5.6 m (H)</string>
+    <string name="a330neo_mtow_value">251 t</string>
+    <string name="a330neo_cruise_speed_value">918 km/h (max.)</string>
+    <string name="a330neo_range_value">8,150 / 7,200 nmi</string>
+    <string name="a330neo_thrust_value">324 kN</string>
     <!--AIRBUS A330neo-->
 
     <!--TREE VIEW REMOVE LATER -->
