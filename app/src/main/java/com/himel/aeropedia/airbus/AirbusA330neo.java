@@ -58,9 +58,9 @@ public class AirbusA330neo extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_airbus_a330neo);
+            setContentView(R.layout.activity_airbus_a330neo_light);
         } else {
-            setContentView(R.layout.activity_airbus_a350_dark);
+            setContentView(R.layout.activity_airbus_a330neo_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);

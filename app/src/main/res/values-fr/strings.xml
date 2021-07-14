@@ -300,6 +300,38 @@
     <!--AIRBUS A330neo-->
 
 
+    <!--AIRBUS A321-->
+    <string name="a321_type_value">Wide-body</string>
+    <string name="a321_engine_value">Rolls-Royce Trent 7000</string>
+    <string name="a321_first_flight_value"> 19 October 2017</string>
+    <string name="a321_intro_value">15 December 2018\nwith TAP Air Portugal</string>
+    <string name="a321_customer_value">TAP Air Portugal</string>
+    <string name="a321_variants_value">2</string>
+
+    <string name="a321_desc1" formatted="false">\n</string>
+
+    <string name="a321_desc2" formatted="false">\n</string>
+
+
+    <string name="a321_desc3">\n\n</string>
+
+    <string name="a321_specs_constraint">()\n</string>
+
+
+    <string name="a321_identify">How to identify Airbus A321?</string>
+    <string name="a321_identify_ans"></string>
+
+    <string name="a321_cockpit_value">2</string>
+    <string name="a321_wingspan_value">64 m</string>
+    <string name="a321_length_value">58.82 / 63.66 m</string>
+    <string name="a321_height_value">17.39 / 16.79 m</string>
+    <string name="a321_fuselage_value">5.64 m (W) / ~5.7 m (H)</string>
+    <string name="a321_mtow_value">251 t</string>
+    <string name="a321_cruise_speed_value">918 km/h (max.)</string>
+    <string name="a321_range_value">8,150 / 7,200 nmi</string>
+    <string name="a321_thrust_value">324 kN</string>
+    <!--AIRBUS A321-->
+
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>
     <string name="ic_access_time">&#xe001;</string>
