@@ -1,38 +1,35 @@
-package com.himel.aeropedia.manufacturers;
+package com.himel.aeropedia.airbus;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ScrollView;
-import android.widget.TextView;
+
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.himel.aeropedia.R;
-import com.himel.aeropedia.airbus.AirbusA320neoFamily;
-import com.himel.aeropedia.airbus.AirbusA321;
-import com.himel.aeropedia.airbus.AirbusA330;
-import com.himel.aeropedia.airbus.AirbusA330neo;
-import com.himel.aeropedia.airbus.AirbusA340;
-import com.himel.aeropedia.airbus.AirbusA350;
-import com.himel.aeropedia.airbus.AirbusA380;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
+import com.himel.aeropedia.util.SliderAdapter;
+import com.himel.aeropedia.util.SliderItem;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import io.alterac.blurkit.BlurLayout;
@@ -40,27 +37,19 @@ import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphImageButton;
 import soup.neumorphism.ShapeType;
 
-public class Airbus extends AppCompatActivity {
+public class AirbusA320neoFamily extends AppCompatActivity {
 
     private NeumorphButton langToggle;
-    private CardView a350Card;
-    private CardView a330Card;
-    private CardView a380Card;
-    private CardView a220Card;
-    private CardView a319Card;
-    private CardView a321Card;
-    private CardView a320neoFamilyCard;
-    private CardView a330neoCard;
-    private CardView a340Card;
-    private Animation translate = null;
-    private ScrollView scrollView;
+    private Locale locale;
     private NeumorphImageButton darkToggle;
     private String enableDark;
     private String enableDarkOnCreate;
-    private Locale locale;
     private FlowingDrawer mDrawer;
     private BlurLayout blur;
     private AndroidTreeView tView;
+    private CollapsingToolbarLayout collapsingToolbarLayout;
+    private SliderView sliderView;
+    private SliderAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,36 +58,14 @@ public class Airbus extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_airbus_light);
+            setContentView(R.layout.activity_airbus_a350_light);
         } else {
-            setContentView(R.layout.activity_airbus_dark);
+            setContentView(R.layout.activity_airbus_a350_dark);
         }
-        darkToggle = findViewById(R.id.dark_toggle);
-        scrollView = findViewById(R.id.main_scroll);
-        a350Card = findViewById(R.id.a350Card);
-        a380Card = findViewById(R.id.a380Card);
-        a330Card = findViewById(R.id.a330Card);
-        a320neoFamilyCard = findViewById(R.id.a320neoFamilyCard);
-        a330neoCard = findViewById(R.id.a330neoCard);
-        a319Card = findViewById(R.id.a319Card);
-        a321Card = findViewById(R.id.a321Card);
-        a220Card = findViewById(R.id.a220Card);
-        a340Card = findViewById(R.id.a340Card);
         langToggle = findViewById(R.id.lang_toggle);
+        darkToggle = findViewById(R.id.dark_toggle);
         mDrawer = findViewById(R.id.drawerlayout);
         blur = findViewById(R.id.blurLayout);
-
-
-        a350Card.getBackground().setAlpha(65);
-        a330Card.getBackground().setAlpha(65);
-        a320neoFamilyCard.getBackground().setAlpha(65);
-        a330neoCard.getBackground().setAlpha(65);
-        a380Card.getBackground().setAlpha(65);
-        a319Card.getBackground().setAlpha(65);
-        a321Card.getBackground().setAlpha(65);
-        a340Card.getBackground().setAlpha(65);
-        a220Card.getBackground().setAlpha(65);
-
 
         // setting NeumorphismButton shape based on state
         if (locale.toString().contains("en")) {
@@ -107,78 +74,13 @@ public class Airbus extends AppCompatActivity {
             langToggle.setShapeType(ShapeType.PRESSED);
         }
 
-        animateCards();
 
-        a320neoFamilyCard.setOnClickListener(new View.OnClickListener() {
+        Typeface tf = Typeface.createFromAsset(this.getAssets(), "fonts/maven_pro_medium.ttf");
+        collapsingToolbarLayout = findViewById(R.id.collapsing_bar);
+        collapsingToolbarLayout.setCollapsedTitleTypeface(tf);
+        collapsingToolbarLayout.setExpandedTitleTypeface(tf);
 
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AirbusA320neoFamily.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        a321Card.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AirbusA321.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        a330Card.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AirbusA330.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        a330neoCard.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AirbusA330neo.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        a340Card.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AirbusA340.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-
-        a350Card.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AirbusA350.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        a380Card.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AirbusA380.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
+        slideView();
 
 
         langToggle.setOnClickListener(new View.OnClickListener() {
@@ -220,7 +122,7 @@ public class Airbus extends AppCompatActivity {
         });
 
 
-        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_FULLSCREEN);
+        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
         mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
             @Override
             public void onDrawerStateChange(int oldState, int newState) {
@@ -243,14 +145,8 @@ public class Airbus extends AppCompatActivity {
         });
 
         createTreeView();
-
     }
 
-    @Override
-    public void finish() {
-        super.finish();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-    }
 
     @Override
     protected void onRestart() {
@@ -260,7 +156,6 @@ public class Airbus extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            //createTreeView();
         }
         else if (!locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
@@ -271,7 +166,6 @@ public class Airbus extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            //createTreeView();
         }
 
         if(mDrawer.getDrawerState() == ElasticDrawer.STATE_OPEN) {
@@ -279,24 +173,8 @@ public class Airbus extends AppCompatActivity {
             blur.setVisibility(View.GONE);
             blur.setAlpha(0f);
         }
-
-        scrollView = findViewById(R.id.main_scroll);
-        scrollView.scrollTo(0, scrollView.getTop());
-        animateCards();
     }
 
-
-    private void animateCards() {
-        translate = AnimationUtils.loadAnimation(this, R.anim.animation);
-        a320neoFamilyCard.setAnimation(translate);
-        a321Card.setAnimation(translate);
-        a330Card.setAnimation(translate);
-        a330neoCard.setAnimation(translate);
-        a350Card.setAnimation(translate);
-        a380Card.setAnimation(translate);
-        a220Card.setAnimation(translate);
-        a340Card.setAnimation(translate);
-    }
 
     /** Changing app language **/
 
@@ -323,6 +201,12 @@ public class Airbus extends AppCompatActivity {
     }
 
     /** Changing app language **/
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 
     /** Dark mode **/
 
@@ -368,18 +252,13 @@ public class Airbus extends AppCompatActivity {
 
 
         TreeNode root = TreeNode.root();
-        TreeNode manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Manufacturers", "No", "Manufacturers", ManufacturerMenu.class));
+        TreeNode manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Manufacturers", "No", "Manufacturers", null));
         TreeNode amazonRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.drawable.ic_amazon_alexa, "Amazon Alexa", "No", "Alexa", AlexaActivity.class));
         TreeNode firebaseRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_laptop, "Firebase", "No", "firebase", null));
 
 
 
-        TreeNode airbus = null;
-        if (verifyDarkMode().equals("Yes")) {
-            airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "HighlightLight", "airbus", null));
-        } else {
-            airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "HighlightDark", "airbus", null));
-        }
+        TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "No", "airbus", null));
         TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a220), "No", "a220", null));
         TreeNode a319Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a319), "No", "a319", null));
         TreeNode a320Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a320), "No", "a320", null));
@@ -387,7 +266,12 @@ public class Airbus extends AppCompatActivity {
 
         TreeNode a330Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_alexa, this.getString(R.string.a330), "No", "a330", null));
         TreeNode a340Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a340), "No", "a340", null));
-        TreeNode a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "No", "a350", AirbusA350.class));
+        TreeNode a350Node = null;
+        if (verifyDarkMode().equals("Yes")) {
+            a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "HighlightLight", "a350", null));
+        } else {
+            a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "HighlightDark", "a350", null));
+        }
         TreeNode a380Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a380), "No", "a380", null));
 
 
@@ -435,4 +319,64 @@ public class Airbus extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
+
+
+
+
+    /** SlideView **/
+
+    private void slideView() {
+
+        sliderView = findViewById(R.id.imageSlider);
+
+        adapter = new SliderAdapter(this);
+        sliderView.setSliderAdapter(adapter, false);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        sliderView.setIndicatorSelectedColor(Color.WHITE);
+        sliderView.setIndicatorUnselectedColor(Color.GRAY);
+        sliderView.setScrollTimeInSec(3);
+        sliderView.setAutoCycle(false);
+        renewItems(sliderView);
+
+
+        sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
+            @Override
+            public void onIndicatorClicked(int position) {
+                Log.i("GGG", "onIndicatorClicked: " + sliderView.getCurrentPagePosition());
+            }
+        });
+    }
+
+    private void renewItems(View view) {
+        List<SliderItem> sliderItemList = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            SliderItem sliderItem = new SliderItem();
+            if (i == 0) {
+                sliderItem.setImageLocation(R.drawable.a321neo_slider1);
+            } else if (i == 1) {
+                sliderItem.setImageLocation(R.drawable.a321neo_slider2);
+            } else if (i == 2) {
+                sliderItem.setImageLocation(R.drawable.a321neo_slider3);
+            }
+            sliderItemList.add(sliderItem);
+        }
+        adapter.renewItems(sliderItemList);
+    }
+
+    private void removeLastItem(View view) {
+        if (adapter.getCount() - 1 >= 0)
+            adapter.deleteItem(adapter.getCount() - 1);
+    }
+
+    private void addNewItem(View view) {
+        SliderItem sliderItem = new SliderItem();
+        //sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        adapter.addItem(sliderItem);
+    }
+
+    /** SlideView **/
+
 }
