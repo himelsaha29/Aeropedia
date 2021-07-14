@@ -19,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.airbus.AirbusA321;
 import com.himel.aeropedia.airbus.AirbusA330;
 import com.himel.aeropedia.airbus.AirbusA330neo;
 import com.himel.aeropedia.airbus.AirbusA340;
@@ -46,6 +47,7 @@ public class Airbus extends AppCompatActivity {
     private CardView a380Card;
     private CardView a220Card;
     private CardView a319Card;
+    private CardView a321Card;
     private CardView a330neoCard;
     private CardView a340Card;
     private Animation translate = null;
@@ -76,6 +78,7 @@ public class Airbus extends AppCompatActivity {
         a330Card = findViewById(R.id.a330Card);
         a330neoCard = findViewById(R.id.a330neoCard);
         a319Card = findViewById(R.id.a319Card);
+        a321Card = findViewById(R.id.a321Card);
         a220Card = findViewById(R.id.a220Card);
         a340Card = findViewById(R.id.a340Card);
         langToggle = findViewById(R.id.lang_toggle);
@@ -88,6 +91,7 @@ public class Airbus extends AppCompatActivity {
         a330neoCard.getBackground().setAlpha(65);
         a380Card.getBackground().setAlpha(65);
         a319Card.getBackground().setAlpha(65);
+        a321Card.getBackground().setAlpha(65);
         a340Card.getBackground().setAlpha(65);
         a220Card.getBackground().setAlpha(65);
 
@@ -100,6 +104,16 @@ public class Airbus extends AppCompatActivity {
         }
 
         animateCards();
+
+        a321Card.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), AirbusA321.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
 
         a330Card.setOnClickListener(new View.OnClickListener() {
 

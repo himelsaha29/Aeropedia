@@ -219,7 +219,7 @@
     <string name="a330_first_flight_value">2 November 1992</string>
     <string name="a330_intro_value">17 January 1994\nwith Air Inter</string>
     <string name="a330_customer_value">Turkish Airlines</string>
-    <string name="a330_variants_value">10 (active)</string>
+    <string name="a330_variants_value">11 (active)</string>
 
     <string name="a330_desc1" formatted="false">Airbus began development on the A330 (now known as A330ceo - \"ceo\" for \"Current Engine Option\" - after the introduction of A330neo - \"neo\" for "New Engine Option" in 2014) twin-jet in parallel with the A340 quad-jet and launched both designs with their first
         orders in June 1987. The A330 shares its airframe with the early A340 variants, having two main landing gear legs instead of three, lower weights, and slightly
@@ -248,7 +248,8 @@
         aerodynamic and structural limits.\n</string>
 
 
-    <string name="a330_desc3">\nAirbus A330\'s variants include A330-300, A330-300HGW, A330 Regional, A330-200, A330-200F, A330P2F, Beluga XL (large cargo freighter), ACJ330 (corporate jet), Airbus A330 MRTT and EADS/Northrop Grumman KC-45 (military jets). Many other variants
+    <string name="a330_desc3">\nAirbus A330\'s variants include A330-300, A330-300HGW, A330 Regional, A330-200, A330-200F, A330P2F, A330neo equipped with new engines, Beluga XL (large cargo freighter), ACJ330 (corporate jet),
+        Airbus A330 MRTT and EADS/Northrop Grumman KC-45 (military jets). Many other variants
     such as A330-400/600, A330-100/-500, A330-200Lite were proposed. However, in the end these variants did not make it into the production phase.\n</string>
 
     <string name="a330_specs_constraint">(-200, -200F, and -300 variants compared in order)\n</string>
@@ -326,7 +327,7 @@
     <string name="a321_first_flight_value">11 March 1993</string>
     <string name="a321_intro_value">1994 with\nLufthansa</string>
     <string name="a321_customer_value">American Airlines</string>
-    <string name="a321_variants_value">2</string>
+    <string name="a321_variants_value">3</string>
 
     <string name="a321_desc1" formatted="false">The Airbus A321 is a member of the Airbus A320 family of short to medium range, narrow-body, commercial passenger
         twin engine jet airliners. It has a stretched fuselage which was the first derivative of the baseline A320 and entered service in 1994 about six years after
@@ -343,7 +344,7 @@
         CFM International with its CFM56 and International Aero Engines with the V2500 engine, both in the thrust range of 133–147 kN (30,000–33,000 lbf). Over 30
         years since launch, the A321 Maximum takeoff weight (MTOW) grew by 20% from the 83t -100 until the 101t A321XLR, seating is 10% more dense with 244 seats,
         up by 24, and range doubled from 2,300 nmi to 4,700 nmi. By 2019, 4,200 have been ordered—one-quarter of all Airbus single-aisles—including 2,400 neos,
-        one-third of all A320neo orders.\n\nIt is a low-wing cantilever monoplane with a conventional tail unit having a single vertical stabilizer and rudder.
+        one-third of all A320neo orders.\n\nThe narrow-body (single-aisle) aircraft from Airbus is a low-wing cantilever monoplane with a conventional tail unit having a single vertical stabilizer and rudder.
         Changes from the A320 include a fuselage stretch and some modifications to the wing. The fuselage was lengthened by a 4.27 m plug ahead of the wing and a
         2.67 m plug behind it, so that the A321 is 6.94 metres longer than the A320. The length increase required the overwing window exits of the A320 to be
         converted into door exits and repositioned in front of and behind the wings. To maintain performance, double-slotted flaps and minor trailing edge
@@ -351,22 +352,22 @@
         reinforced to accommodate the increase in maximum takeoff weight of 9,600 kg (21,200 lb), taking it to 83,000 kg (183,000 lb).\n</string>
 
 
-    <string name="a321_desc3">\n\n</string>
+    <string name="a321_desc3">\nAirbus A321 variants include A321-100, A321-200 and A321neo equipped with new engines.\n</string>
 
-    <string name="a321_specs_constraint">()\n</string>
+    <string name="a321_specs_constraint">(-100 and -200 variants compared in order)\n</string>
 
 
     <string name="a321_identify">How to identify Airbus A321?</string>
-    <string name="a321_identify_ans"></string>
+    <string name="a321_identify_ans">\"Notched\" window design, 2 dual-wheel main landing gears, small triangular wingtips, similar to those on A380.</string>
 
     <string name="a321_cockpit_value">2</string>
     <string name="a321_wingspan_value">35.80 m</string>
     <string name="a321_length_value">44.51 m</string>
     <string name="a321_height_value">11.76 m</string>
     <string name="a321_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
-    <string name="a321_mtow_value">93.5 t</string>
+    <string name="a321_mtow_value">83 / 93.5 t</string>
     <string name="a321_cruise_speed_value">833 km/h (typical),\n876 km/h (max.)</string>
-    <string name="a321_range_value">3,200 nmi</string>
+    <string name="a321_range_value">2,350 / 3,200 nmi</string>
     <string name="a321_thrust_value">133–147 kN</string>
     <!--AIRBUS A321-->
 
