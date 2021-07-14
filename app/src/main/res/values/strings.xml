@@ -358,7 +358,7 @@
 
 
     <string name="a321_identify">How to identify Airbus A321?</string>
-    <string name="a321_identify_ans">\"Notched\" window design, 2 dual-wheel main landing gears, small triangular wingtips, similar to those on A380.</string>
+    <string name="a321_identify_ans">\"Notched\" window design, 2 dual-wheel main landing gears, no engine trailing extensions, small triangular wingtips, similar to those on A380.</string>
 
     <string name="a321_cockpit_value">2</string>
     <string name="a321_wingspan_value">35.80 m</string>
