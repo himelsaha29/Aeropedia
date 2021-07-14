@@ -309,7 +309,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:text="@string/a321_desc1"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
 

@@ -843,7 +843,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a350_desc3"
+                    android:text="@string/a330neo_desc3"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -865,7 +865,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="12dp"
-                    android:text="@string/a350_identify_ans"
+                    android:text="@string/a330neo_identify_ans"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
