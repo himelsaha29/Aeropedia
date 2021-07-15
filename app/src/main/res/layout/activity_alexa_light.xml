@@ -77,7 +77,7 @@
                     android:background="#f2f4f6"
                     app:neumorph_shadowColorLight="#fdfdfd"
                     app:neumorph_shadowColorDark="#eaeaea"
-                    android:src="@drawable/ic_amazon_alexa"
+                    android:src="@drawable/alexa"
                     app:layout_constrainedHeight="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
