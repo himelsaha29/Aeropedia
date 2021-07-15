@@ -58,7 +58,7 @@ public class AirbusA320neoFamily extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_airbus_a350_light);
+            setContentView(R.layout.activity_airbus_a320neo_family);
         } else {
             setContentView(R.layout.activity_airbus_a350_dark);
         }
@@ -355,11 +355,11 @@ public class AirbusA320neoFamily extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.a321neo_slider1);
+                sliderItem.setImageLocation(R.drawable.a320neofamily_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a321neo_slider2);
+                sliderItem.setImageLocation(R.drawable.a320neofamily_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.a321neo_slider3);
+                sliderItem.setImageLocation(R.drawable.a320neofamily_slider3);
             }
             sliderItemList.add(sliderItem);
         }
