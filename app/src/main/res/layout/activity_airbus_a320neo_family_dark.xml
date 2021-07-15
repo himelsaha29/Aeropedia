@@ -9,7 +9,7 @@
     android:clipChildren="false"
     android:clipToPadding="false"
     android:hapticFeedbackEnabled="true"
-    app:edMenuBackground="#72A8E1"
+    app:edMenuBackground="#1b1f1f"
     app:edMenuSize="260dp"
     app:edPosition="1">
 
@@ -61,7 +61,7 @@
                         android:layout_marginEnd="0dp"
                         android:layout_marginBottom="0dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/description_box_layout_light"
+                        android:src="@drawable/description_box_layout_dark"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintDimensionRatio="H, 16:9"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -84,7 +84,7 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#f2f4f6"
+            android:background="#1b1f1f"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
             <LinearLayout
@@ -132,9 +132,9 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a350_type_value"
+                                android:text="@string/a320neo_type_value"
                                 android:textAlignment="center"
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
                                 android:textSize="15dp" />
                         </LinearLayout>
 
@@ -164,9 +164,9 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a350_engine_value"
+                                android:text="@string/a320neo_engine_value"
                                 android:textAlignment="center"
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
                                 android:textSize="15dp" />
                         </LinearLayout>
 
@@ -196,9 +196,9 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a350_first_flight_value"
+                                android:text="@string/a320neo_first_flight_value"
                                 android:textAlignment="center"
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
                                 android:textSize="15dp" />
                         </LinearLayout>
 
@@ -227,9 +227,9 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a350_intro_value"
+                                android:text="@string/a320neo_intro_value"
                                 android:textAlignment="center"
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
                                 android:textSize="15dp" />
                         </LinearLayout>
 
@@ -259,9 +259,9 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a350_variants_value"
+                                android:text="@string/a320neo_variants_value"
                                 android:textAlignment="center"
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
                                 android:textSize="15dp" />
                         </LinearLayout>
 
@@ -290,9 +290,9 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a350_customer_value"
+                                android:text="@string/a320neo_customer_value"
                                 android:textAlignment="center"
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
                                 android:textSize="15dp" />
                         </LinearLayout>
 
@@ -308,8 +308,8 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a350_desc1"
-                    android:textColor="@color/black"
+                    android:text="@string/a320neo_desc1"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
 
@@ -355,8 +355,8 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a350_desc2"
-                    android:textColor="@color/black"
+                    android:text="@string/a320neo_desc2"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <TextView
@@ -376,7 +376,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a350_specs_constraint"
+                    android:text="@string/a320neo_specs_constraint"
                     android:textColor="@color/colorPrimary"
                     android:textSize="12sp" />
 
@@ -415,7 +415,7 @@
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
                                     android:text="@string/cockpit_crew"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/white"
                                     android:textSize="17sp" />
 
                             </LinearLayout>
@@ -434,8 +434,8 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="2"
-                                    android:textColor="@color/black"
+                                    android:text="@string/a320neo_cockpit_value"
+                                    android:textColor="@color/white"
                                     android:textSize="16sp" />
 
                             </LinearLayout>
@@ -464,7 +464,7 @@
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
                                     android:text="@string/wingspan"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/white"
                                     android:textSize="17sp" />
 
                             </LinearLayout>
@@ -483,8 +483,8 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_wingspan_value"
-                                    android:textColor="@color/black"
+                                    android:text="@string/a320neo_wingspan_value"
+                                    android:textColor="@color/white"
                                     android:textSize="16sp" />
 
                             </LinearLayout>
@@ -513,7 +513,7 @@
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
                                     android:text="@string/length"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/white"
                                     android:textSize="17sp" />
 
                             </LinearLayout>
@@ -532,8 +532,8 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_length_value"
-                                    android:textColor="@color/black"
+                                    android:text="@string/a320neo_length_value"
+                                    android:textColor="@color/white"
                                     android:textSize="16sp" />
 
                             </LinearLayout>
@@ -561,7 +561,7 @@
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
                                     android:text="@string/height"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/white"
                                     android:textSize="17sp" />
 
                             </LinearLayout>
@@ -580,8 +580,8 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_height_value"
-                                    android:textColor="@color/black"
+                                    android:text="@string/a320neo_height_value"
+                                    android:textColor="@color/white"
                                     android:textSize="16sp" />
 
                             </LinearLayout>
@@ -610,7 +610,7 @@
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
                                     android:text="@string/fuselage"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/white"
                                     android:textSize="17sp" />
 
                             </LinearLayout>
@@ -629,8 +629,8 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_fuselage_value"
-                                    android:textColor="@color/black"
+                                    android:text="@string/a320neo_fuselage_value"
+                                    android:textColor="@color/white"
                                     android:textSize="16sp" />
 
                             </LinearLayout>
@@ -659,7 +659,7 @@
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
                                     android:text="@string/mtow"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/white"
                                     android:textSize="17sp" />
 
                             </LinearLayout>
@@ -678,8 +678,8 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_mtow_value"
-                                    android:textColor="@color/black"
+                                    android:text="@string/a320neo_mtow_value"
+                                    android:textColor="@color/white"
                                     android:textSize="16sp" />
 
                             </LinearLayout>
@@ -708,7 +708,7 @@
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
                                     android:text="@string/cruise_speed"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/white"
                                     android:textSize="17sp" />
 
                             </LinearLayout>
@@ -727,8 +727,8 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_cruise_speed_value"
-                                    android:textColor="@color/black"
+                                    android:text="@string/a320neo_cruise_speed_value"
+                                    android:textColor="@color/white"
                                     android:textSize="16sp" />
 
                             </LinearLayout>
@@ -756,7 +756,7 @@
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
                                     android:text="@string/range"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/white"
                                     android:textSize="17sp" />
 
                             </LinearLayout>
@@ -775,8 +775,8 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_range_value"
-                                    android:textColor="@color/black"
+                                    android:text="@string/a320neo_range_value"
+                                    android:textColor="@color/white"
                                     android:textSize="16sp" />
 
                             </LinearLayout>
@@ -805,7 +805,7 @@
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
                                     android:text="@string/thrust2"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/white"
                                     android:textSize="17sp" />
 
                             </LinearLayout>
@@ -824,8 +824,8 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a350_thrust_value"
-                                    android:textColor="@color/black"
+                                    android:text="@string/a320neo_thrust_value"
+                                    android:textColor="@color/white"
                                     android:textSize="16sp" />
 
                             </LinearLayout>
@@ -843,8 +843,8 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a350_desc3"
-                    android:textColor="@color/black"
+                    android:text="@string/a320neo_desc3"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <TextView
@@ -854,7 +854,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="3dp"
-                    android:text="@string/a350_identify"
+                    android:text="@string/a320neo_identify"
                     android:textColor="@color/colorPrimary"
                     android:textSize="26sp" />
 
@@ -865,8 +865,8 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="12dp"
-                    android:text="@string/a350_identify_ans"
-                    android:textColor="@color/black"
+                    android:text="@string/a320neo_identify_ans"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -952,9 +952,9 @@
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
-                        app:neumorph_backgroundColor="#72A8E1"
-                        app:neumorph_shadowColorDark="#689ace"
-                        app:neumorph_shadowColorLight="#78afeb"
+                        app:neumorph_backgroundColor="#1b1f1f"
+                        app:neumorph_shadowColorLight="#222727"
+                        app:neumorph_shadowColorDark="#171a1a"
                         app:neumorph_shapeType="flat" />
 
 
@@ -965,13 +965,13 @@
                         android:layout_height="70dp"
                         android:background="@android:color/transparent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_bulb_black"
+                        android:src="@drawable/ic_bulb_black_lit"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
-                        app:neumorph_backgroundColor="#72A8E1"
-                        app:neumorph_shadowColorDark="#689ace"
-                        app:neumorph_shadowColorLight="#78afeb"
-                        app:neumorph_shapeType="pressed" />
+                        app:neumorph_backgroundColor="#1b1f1f"
+                        app:neumorph_shadowColorLight="#222727"
+                        app:neumorph_shadowColorDark="#171a1a"
+                        app:neumorph_shapeType="flat" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

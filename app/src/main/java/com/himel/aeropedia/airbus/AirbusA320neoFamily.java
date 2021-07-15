@@ -266,16 +266,17 @@ public class AirbusA320neoFamily extends AppCompatActivity {
 
         TreeNode a330Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_alexa, this.getString(R.string.a330), "No", "a330", null));
         TreeNode a340Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a340), "No", "a340", null));
-        TreeNode a350Node = null;
+        TreeNode a320NeoFamilyNode = null;
         if (verifyDarkMode().equals("Yes")) {
-            a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "HighlightLight", "a350", null));
+            a320NeoFamilyNode = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a320neofamily), "HighlightLight", "a320neo", null));
         } else {
-            a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "HighlightDark", "a350", null));
+            a320NeoFamilyNode = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a320neofamily), "HighlightDark", "a30neo", null));
         }
+        TreeNode a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "No", "a350", null));
         TreeNode a380Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a380), "No", "a380", null));
 
 
-        airbus.addChildren(a220Node, a319Node, a320Node, a321Node, a330Node, a340Node, a350Node, a380Node);
+        airbus.addChildren(a220Node, a319Node, a320Node, a321Node, a320NeoFamilyNode, a330Node, a340Node, a350Node, a380Node);
 
 
         TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_photo_library, this.getString(R.string.boeing), "No", "boeing", null));
