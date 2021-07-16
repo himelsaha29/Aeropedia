@@ -366,6 +366,39 @@
     <!--AIRBUS A320neo FAMILY-->
 
 
+    <!--AIRBUS A320-->
+    <string name="a320_type_value">Narrow-body</string>
+    <string name="a320_engine_value">CFM LEAP-1A /\nPratt &amp; Whitney PW1100G</string>
+    <string name="a320_first_flight_value">25 September 2014</string>
+    <string name="a320_intro_value">25 January 2016\nwith Lufthansa</string>
+    <string name="a320_customer_value">IndiGo</string>
+    <string name="a320_variants_value">6 (active)</string>
+
+    <string name="a320_desc1" formatted="false">\n</string>
+
+
+    <string name="a320_desc2" formatted="false">\n</string>
+
+    <string name="a320_desc3">\n \n</string>
+
+    <string name="a320_specs_constraint">()\n</string>
+
+
+    <string name="a320_identify">How to identify Airbus A320?</string>
+    <string name="a320_identify_ans"></string>
+
+    <string name="a320_cockpit_value">2</string>
+    <string name="a320_wingspan_value">35.80 m</string>
+    <string name="a320_length_value">33.84 / 37.57 / 44.51 m</string>
+    <string name="a320_height_value">11.76 m</string>
+    <string name="a320_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
+    <string name="a320_mtow_value">75.5 / 79 / 97 t</string>
+    <string name="a320_cruise_speed_value">833 km/h (typical),\n876 km/h (max.)</string>
+    <string name="a320_range_value">3,750 / 3,500 / 4,000 nmi</string>
+    <string name="a320_thrust_value">107 / 120.6 / 147.3 kN</string>
+    <!--AIRBUS A320-->
+
+
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>
     <string name="ic_access_time">&#xe001;</string>

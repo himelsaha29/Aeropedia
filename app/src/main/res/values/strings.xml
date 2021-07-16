@@ -360,7 +360,7 @@
 
     <string name="a321_identify">How to identify Airbus A321?</string>
     <string name="a321_identify_ans">\"Notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
-        four emergency exits spread evenly across the fuselage, and either small triangular wingtips (wingtip fence) similar to those on A380 or L-shaped large sharklets.</string>
+        4 emergency exits spread evenly across the fuselage, and either small triangular wingtips (wingtip fence) similar to those on A380 or large L-shaped sharklets.</string>
 
     <string name="a321_cockpit_value">2</string>
     <string name="a321_wingspan_value">35.80 m</string>
@@ -368,10 +368,64 @@
     <string name="a321_height_value">11.76 m</string>
     <string name="a321_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
     <string name="a321_mtow_value">83 / 93.5 t</string>
-    <string name="a321_cruise_speed_value">833 km/h (typical),\n876 km/h (max.)</string>
+    <string name="a321_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
     <string name="a321_range_value">2,350 / 3,200 nmi</string>
     <string name="a321_thrust_value">133–147 kN</string>
     <!--AIRBUS A321-->
+
+
+    <!--AIRBUS A320-->
+    <string name="a320_type_value">Narrow-body</string>
+    <string name="a320_engine_value">CFM56 /\nIAE V2500</string>
+    <string name="a320_first_flight_value">22 February 1987</string>
+    <string name="a320_intro_value">18 April 1988\Nwith Air France</string>
+    <string name="a320_customer_value">China Eastern Airlines</string>
+    <string name="a320_variants_value">2</string>
+
+    <string name="a320_desc1" formatted="false">The Airbus A321 is a member of the Airbus A320 family of short to medium range, narrow-body, commercial passenger
+        twin engine jet airliners. This Airbus A320 family was renamed to A320ceo, for \"current engine option\" after the introduction of A320neo (neo for new engine option) in 2014.
+        It is a narrow-body (single-aisle) aircraft with a retractable tricycle landing gear and are powered by two wing pylon-mounted turbofan engines. After the oil
+        price rises of the 1970s, Airbus needed to minimise the trip fuel costs of the A320. To that end, it adopted composite primary structures, centre-of-gravity
+        control using fuel, glass cockpit (EFIS) and a two-crew flight deck. Airbus claimed the 737-300 burns 35% more fuel and has a 16% higher operating cost per
+        seat than the V2500-powered A320. A 150-seat A320 burns 11,608 kg (25,591 lb) of jet fuel over 3,984 km (2,151 nmi) (between Los Angeles and New York City),
+        or 2.43 L/100 km (97 mpg‑US) per seat with a 0.8 kg/L fuel. Its wing is long and thin, offering better aerodynamic efficiency because of the higher aspect
+        ratio than the competing 737 and MD-80.\n\nThe A320 is a low-wing cantilever monoplane with a conventional empennage with a single vertical stabilizer and
+        rudder. Its wing sweep is 25 degrees. Compared to other airliners of the same class, the A320 features a wider single-aisle cabin of 3.95 metres (156 in)
+        outside diameter, compared to 3.8 m (148 in) of the Boeing 737 or 757, and larger overhead bins. The A320 airframe includes composite materials and aluminium
+        alloys to save weight and reduce the total number of parts to decrease the maintenance costs. Its tail assembly is made almost entirely of such composites by
+        CASA, who also builds the elevators, main landing gear doors, and rear fuselage parts. \n</string>
+
+    <string name="a320_desc2" formatted="false">It includes a full glass cockpit rather than the hybrid versions found in previous airliners. The A320\'s flight deck
+        is equipped with Electronic Flight Instrument System (EFIS) with side-stick controllers. The A320 features an Electronic Centralised Aircraft Monitor (ECAM)
+        which gives the flight crew information about all the systems of the aircraft. The only analogue instruments were the radio-magnetic indicator and brake
+        pressure indicator. Since 2003, the A320 features liquid crystal display (LCD) units in its flight deck instead of the original cathode ray tube (CRT)
+        displays. These include the main displays and the backup artificial horizon, which was previously an analog display. Airbus offers an avionics upgrade for
+        older A320 aircraft, the In-Service Enhancement Package, to keep them updated.\n\nThe A320 is the world's first airliner with digital fly-by-wire (FBW)
+        flight control system: input commands through the side-stick are interpreted by flight control computers and transmitted to flight control surfaces within
+        the flight envelope protection; in the 1980s the computer-controlled dynamic system of the Dassault Mirage 2000 fighter cross-fertilised the Airbus team
+        which tested FBW on an A300. At its introduction, fly-by-wire and flight envelope protection was a new experience for many pilots.\n</string>
+
+    <string name="a320_desc3">\nThe A320 series has two variants, the A320-100 and A320-200. Only 21 A320-100s were produced. The primary changes of the -200 over the
+        -100 are wingtip fences and increased fuel capacity for increased range.\n</string>
+
+    <string name="a320_specs_constraint">()\n</string>
+
+
+    <string name="a320_identify">How to identify Airbus A320?</string>
+    <string name="a320_identify_ans">\"Notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
+        2 emergency exits over the wing, and either small triangular wingtips (wingtip fence) similar to those on A380 or large L-shaped sharklets.</string>
+
+    <string name="a320_cockpit_value">2</string>
+    <string name="a320_wingspan_value">35.80 m</string>
+    <string name="a320_length_value">37.57 m</string>
+    <string name="a320_height_value">11.76 m</string>
+    <string name="a320_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
+    <string name="a320_mtow_value">78 t</string>
+    <string name="a320_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="a320_range_value">3,300 nmi</string>
+    <string name="a320_thrust_value">98–120 kN</string>
+    <!--AIRBUS A320-->
+
 
 
     <!--AIRBUS A320neo FAMILY-->
@@ -415,7 +469,7 @@
 
 
     <string name="a320neo_identify">How to identify Airbus A320neo family aircraft?</string>
-    <string name="a320neo_identify_ans">\"Notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with small top/bottom trailing extensions, L-shaped large sharklets.</string>
+    <string name="a320neo_identify_ans">\"Notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with small top/bottom trailing extensions, large L-shaped sharklets.</string>
 
     <string name="a320neo_cockpit_value">2</string>
     <string name="a320neo_wingspan_value">35.80 m</string>
