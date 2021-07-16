@@ -355,7 +355,7 @@
 
     <string name="a321_desc3">\nAirbus A321 variants include A321-100, A321-200 and A321neo equipped with new engines.\n</string>
 
-    <string name="a321_specs_constraint">(A319neo, A320neo, A321neo compared in order)\n</string>
+    <string name="a321_specs_constraint">(-100 and -200 variants compared in order)\n</string>
 
 
     <string name="a321_identify">How to identify Airbus A321?</string>
@@ -363,7 +363,7 @@
         four emergency exits spread evenly across the fuselage, and either small triangular wingtips (wingtip fence) similar to those on A380 or L-shaped large sharklets.</string>
 
     <string name="a321_cockpit_value">2</string>
-    <string name="a321_wingspan_value">33.84 / 37.57 / 44.51 m</string>
+    <string name="a321_wingspan_value">35.80 m</string>
     <string name="a321_length_value">44.51 m</string>
     <string name="a321_height_value">11.76 m</string>
     <string name="a321_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
@@ -411,7 +411,7 @@
         proposed but could be developed should demand arise. Other variants include A321LR, A321XLR (officially launched at the Paris Air Show on 17 June 2019,
         with deliveries expected from 2023), ACJ319neo and the ACJ320neo as the corporate variants.\n</string>
 
-    <string name="a320neo_specs_constraint">()\n</string>
+    <string name="a320neo_specs_constraint">(A319neo, A320neo, A321neo compared in order)\n</string>
 
 
     <string name="a320neo_identify">How to identify Airbus A320neo family aircraft?</string>
