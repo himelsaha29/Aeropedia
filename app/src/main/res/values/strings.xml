@@ -378,11 +378,11 @@
     <string name="a320_type_value">Narrow-body</string>
     <string name="a320_engine_value">CFM56 /\nIAE V2500</string>
     <string name="a320_first_flight_value">22 February 1987</string>
-    <string name="a320_intro_value">18 April 1988\Nwith Air France</string>
+    <string name="a320_intro_value">18 April 1988\nwith Air France</string>
     <string name="a320_customer_value">China Eastern Airlines</string>
     <string name="a320_variants_value">2</string>
 
-    <string name="a320_desc1" formatted="false">The Airbus A321 is a member of the Airbus A320 family of short to medium range, narrow-body, commercial passenger
+    <string name="a320_desc1" formatted="false">The Airbus A320 is a member of the Airbus A320 family of short to medium range, narrow-body, commercial passenger
         twin engine jet airliners. This Airbus A320 family was renamed to A320ceo, for \"current engine option\" after the introduction of A320neo (neo for new engine option) in 2014.
         It is a narrow-body (single-aisle) aircraft with a retractable tricycle landing gear and are powered by two wing pylon-mounted turbofan engines. After the oil
         price rises of the 1970s, Airbus needed to minimise the trip fuel costs of the A320. To that end, it adopted composite primary structures, centre-of-gravity
@@ -400,7 +400,7 @@
         which gives the flight crew information about all the systems of the aircraft. The only analogue instruments were the radio-magnetic indicator and brake
         pressure indicator. Since 2003, the A320 features liquid crystal display (LCD) units in its flight deck instead of the original cathode ray tube (CRT)
         displays. These include the main displays and the backup artificial horizon, which was previously an analog display. Airbus offers an avionics upgrade for
-        older A320 aircraft, the In-Service Enhancement Package, to keep them updated.\n\nThe A320 is the world's first airliner with digital fly-by-wire (FBW)
+        older A320 aircraft, the In-Service Enhancement Package, to keep them updated.\n\nThe A320 is the world\'s first airliner with digital fly-by-wire (FBW)
         flight control system: input commands through the side-stick are interpreted by flight control computers and transmitted to flight control surfaces within
         the flight envelope protection; in the 1980s the computer-controlled dynamic system of the Dassault Mirage 2000 fighter cross-fertilised the Airbus team
         which tested FBW on an A300. At its introduction, fly-by-wire and flight envelope protection was a new experience for many pilots.\n</string>
@@ -413,7 +413,7 @@
 
     <string name="a320_identify">How to identify Airbus A320?</string>
     <string name="a320_identify_ans">\"Notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
-        2 emergency exits over the wing, and either small triangular wingtips (wingtip fence) similar to those on A380 or large L-shaped sharklets.</string>
+        4 emergency exits - 2 over the wing and 2 near either ends of the fuselage, and either small triangular wingtips (wingtip fence) similar to those on A380 or large L-shaped sharklets.</string>
 
     <string name="a320_cockpit_value">2</string>
     <string name="a320_wingspan_value">35.80 m</string>
