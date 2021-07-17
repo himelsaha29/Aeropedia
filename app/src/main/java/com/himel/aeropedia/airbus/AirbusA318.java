@@ -58,9 +58,9 @@ public class AirbusA318 extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_airbus_a318);
+            setContentView(R.layout.activity_airbus_a318_light);
         } else {
-            setContentView(R.layout.activity_airbus_a319_dark);
+            setContentView(R.layout.activity_airbus_a318_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
@@ -260,17 +260,18 @@ public class AirbusA318 extends AppCompatActivity {
 
         TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "No", "airbus", null));
         TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a220), "No", "a220", null));
+        TreeNode a319Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a319), "No", "a319", null));
         TreeNode a320Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a320), "No", "a320", null));
         TreeNode a320NeoFamilyNode = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a320neofamily), "No", "a320neoFamily", null));
         TreeNode a321Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a321), "No", "a321", null));
 
         TreeNode a330Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_alexa, this.getString(R.string.a330), "No", "a330", null));
         TreeNode a340Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a340), "No", "a340", null));
-        TreeNode a319Node = null;
+        TreeNode a318Node = null;
         if (verifyDarkMode().equals("Yes")) {
-            a319Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a319), "HighlightLight", "a319", null));
+            a318Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a318), "HighlightLight", "a318", null));
         } else {
-            a319Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a319), "HighlightDark", "a319", null));
+            a318Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a318), "HighlightDark", "a318", null));
         }
         TreeNode a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "No", "a350", null));
         TreeNode a380Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a380), "No", "a380", null));
@@ -346,11 +347,11 @@ public class AirbusA318 extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.a319_slider01);
+                sliderItem.setImageLocation(R.drawable.a318_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a319_slider02);
+                sliderItem.setImageLocation(R.drawable.a318_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.a319_slider03);
+                sliderItem.setImageLocation(R.drawable.a318_slider3);
             }
 
             sliderItemList.add(sliderItem);
