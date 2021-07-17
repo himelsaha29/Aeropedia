@@ -316,6 +316,7 @@ public class Airbus extends AppCompatActivity {
         translate = AnimationUtils.loadAnimation(this, R.anim.animation);
         a320neoFamilyCard.setAnimation(translate);
         a321Card.setAnimation(translate);
+        a319Card.setAnimation(translate);
         a320Card.setAnimation(translate);
         a330Card.setAnimation(translate);
         a330neoCard.setAnimation(translate);

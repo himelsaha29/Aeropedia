@@ -360,7 +360,7 @@
 
     <string name="a321_identify">How to identify Airbus A321?</string>
     <string name="a321_identify_ans">\"Notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
-        4 emergency exits spread evenly across the fuselage, and either small triangular wingtips (wingtip fence) similar to those on A380 or large L-shaped sharklets.</string>
+        4 exits spread evenly across the fuselage, and either small triangular wingtips (wingtip fence) similar to those on A380 or large L-shaped sharklets.</string>
 
     <string name="a321_cockpit_value">2</string>
     <string name="a321_wingspan_value">35.80 m</string>
@@ -413,7 +413,7 @@
 
     <string name="a320_identify">How to identify Airbus A320?</string>
     <string name="a320_identify_ans">\"Notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
-        4 emergency exits - 2 over the wing and 2 near either ends of the fuselage, and either small triangular wingtips (wingtip fence) similar to those on A380 or large L-shaped sharklets.</string>
+        4 exits - 2 over the wing and 2 near either ends of the fuselage, and either small triangular wingtips (wingtip fence) similar to those on A380 or large L-shaped sharklets.</string>
 
     <string name="a320_cockpit_value">2</string>
     <string name="a320_wingspan_value">35.80 m</string>
@@ -462,7 +462,8 @@
 
 
     <string name="a319_identify">How to identify Airbus A319?</string>
-    <string name="a319_identify_ans"></string>
+    <string name="a319_identify_ans">\"Notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
+        3 exits - 1 over the wing and 2 near either ends of the fuselage, and either small triangular wingtips (wingtip fence) similar to those on A380 or large L-shaped sharklets.</string>
 
     <string name="a319_cockpit_value">2</string>
     <string name="a319_wingspan_value">35.80 m</string>
