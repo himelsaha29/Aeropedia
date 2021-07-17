@@ -110,6 +110,42 @@
 
                     </androidx.cardview.widget.CardView>
 
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/a319Card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="false">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/a319_cover" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="bottom"
+                            android:text="@string/a319"
+                            android:textColor="@color/white"
+                            android:textSize="38sp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/a320Card"
@@ -395,41 +431,6 @@
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/maven_pro_medium"
                             android:text="@string/beluga"
-                            android:textColor="@color/white"
-                            android:textSize="38dp" />
-
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/a319Card"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="1"
-                        android:layout_margin="12dp"
-                        android:backgroundTint="#72A8E1"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="0dp">
-
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:background="@drawable/ic_launcher_foreground" />
-
-                        <TextView
-                            android:id="@+id/a319text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="-131dp"
-                            android:layout_marginTop="12dp"
-                            android:fontFamily="@font/maven_pro_medium"
-                            android:text="@string/a319"
                             android:textColor="@color/white"
                             android:textSize="38dp" />
 

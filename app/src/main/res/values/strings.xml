@@ -453,7 +453,7 @@
         can take in reduced height LD3-45 containers. Minor software changes were made to accommodate the different handling characteristics; otherwise the aircraft
         is largely unchanged. Power is provided by the CFM56-5A or V2500-A5, derated to 98 kN (22,000 lbf), with option for 105 kN (24,000 lbf) thrust. With virtually
         the same fuel capacity as the A320-200 and fewer passengers, the range with 124 passengers in a two-class configuration extends to 6,650 km (3,590 nmi), or
-        6,850 km (3,700 nmi) with the "Sharklets". The A319's wingspan is wider than the aircraft's overall length.\n</string>
+        6,850 km (3,700 nmi) with the \"Sharklets\". The A319\'s wingspan is wider than the aircraft\'s overall length.\n</string>
 
     <string name="a319_desc3">\nThe A319 variants include the corporate jet version A319CJ (rebranded ACJ319), A319neo equipped with new engines,
         A319 MPA (Maritime Patrol Aircraft) - military derivative of the A319, and A319LR - the longer-range version of the A319.\n</string>

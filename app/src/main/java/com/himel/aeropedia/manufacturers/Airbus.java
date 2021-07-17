@@ -19,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.airbus.AirbusA319;
 import com.himel.aeropedia.airbus.AirbusA320;
 import com.himel.aeropedia.airbus.AirbusA320neoFamily;
 import com.himel.aeropedia.airbus.AirbusA321;
@@ -118,6 +119,16 @@ public class Airbus extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), AirbusA320neoFamily.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
+        a319Card.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), AirbusA319.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }

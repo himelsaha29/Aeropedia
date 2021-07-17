@@ -132,7 +132,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a340_type_value"
+                                android:text="@string/a319_type_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -164,7 +164,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a340_engine_value"
+                                android:text="@string/a319_engine_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -196,7 +196,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a340_first_flight_value"
+                                android:text="@string/a319_first_flight_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -227,7 +227,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a340_intro_value"
+                                android:text="@string/a319_intro_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -259,7 +259,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a340_variants_value"
+                                android:text="@string/a319_variants_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -290,7 +290,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a340_customer_value"
+                                android:text="@string/a319_customer_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -308,7 +308,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a340_desc1"
+                    android:text="@string/a319_desc1"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -355,7 +355,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a340_desc2"
+                    android:text="@string/a319_desc2"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -368,16 +368,6 @@
                     android:text="@string/specs"
                     android:textColor="@color/colorPrimary"
                     android:textSize="26sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/maven_pro_medium"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:text="@string/a340_specs_constraint"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="12sp" />
 
 
 
@@ -433,7 +423,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a340_cockpit_value"
+                                    android:text="@string/a319_cockpit_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -482,7 +472,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a340_wingspan_value"
+                                    android:text="@string/a319_wingspan_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -531,7 +521,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a340_length_value"
+                                    android:text="@string/a319_length_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -579,7 +569,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a340_height_value"
+                                    android:text="@string/a319_height_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -628,7 +618,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a340_fuselage_value"
+                                    android:text="@string/a319_fuselage_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -677,7 +667,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a340_mtow_value"
+                                    android:text="@string/a319_mtow_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -726,7 +716,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a340_cruise_speed_value"
+                                    android:text="@string/a319_cruise_speed_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -774,7 +764,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a340_range_value"
+                                    android:text="@string/a319_range_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -803,7 +793,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/thrust4"
+                                    android:text="@string/thrust2"
                                     android:textColor="@color/black"
                                     android:textSize="17sp" />
 
@@ -823,7 +813,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a340_thrust_value"
+                                    android:text="@string/a319_thrust_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -842,7 +832,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a340_desc3"
+                    android:text="@string/a319_desc3"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -853,7 +843,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="3dp"
-                    android:text="@string/a340_identify"
+                    android:text="@string/a319_identify"
                     android:textColor="@color/colorPrimary"
                     android:textSize="26sp" />
 
@@ -864,7 +854,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="12dp"
-                    android:text="@string/a340_identify_ans"
+                    android:text="@string/a319_identify_ans"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
