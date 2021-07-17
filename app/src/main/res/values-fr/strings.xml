@@ -11,6 +11,7 @@
     <string name="a380">A380</string>
     <string name="a320">A320</string>
     <string name="a319">A319</string>
+    <string name="a318">A318</string>
     <string name="a340">A340</string>
     <string name="a321">A321</string>
     <string name="a330">A330</string>
@@ -429,6 +430,39 @@
     <string name="a319_range_value">3,300 nmi</string>
     <string name="a319_thrust_value">98–120 kN</string>
     <!--AIRBUS A319-->
+
+
+
+    <!--AIRBUS A318-->
+    <string name="a318_type_value">Narrow-body</string>
+    <string name="a318_engine_value">CFM56 /\nIAE V2500</string>
+    <string name="a318_first_flight_value">25 August 1995</string>
+    <string name="a318_intro_value">1996 with\nSwissair</string>
+    <string name="a318_customer_value">American Airlines</string>
+    <string name="a318_variants_value">4</string>
+
+    <string name="a318_desc1" formatted="false">\n</string>
+
+    <string name="a318_desc2" formatted="false">\n</string>
+
+    <string name="a318_desc3">\n \n</string>
+
+    <string name="a318_specs_constraint">()\n</string>
+
+
+    <string name="a318_identify">How to identify Airbus A318?</string>
+    <string name="a318_identify_ans"></string>
+
+    <string name="a318_cockpit_value">2</string>
+    <string name="a318_wingspan_value">35.80 m</string>
+    <string name="a318_length_value">33.84 m</string>
+    <string name="a318_height_value">11.76 m</string>
+    <string name="a318_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
+    <string name="a318_mtow_value">75.5 t</string>
+    <string name="a318_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="a318_range_value">3,750 nmi</string>
+    <string name="a318_thrust_value">98–120 kN</string>
+    <!--AIRBUS A318-->
 
 
     <!--TREE VIEW REMOVE LATER -->

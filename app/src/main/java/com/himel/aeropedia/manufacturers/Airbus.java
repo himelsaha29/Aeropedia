@@ -19,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.airbus.AirbusA318;
 import com.himel.aeropedia.airbus.AirbusA319;
 import com.himel.aeropedia.airbus.AirbusA320;
 import com.himel.aeropedia.airbus.AirbusA320neoFamily;
@@ -49,6 +50,7 @@ public class Airbus extends AppCompatActivity {
     private CardView a330Card;
     private CardView a380Card;
     private CardView a220Card;
+    private CardView a318Card;
     private CardView a319Card;
     private CardView a320Card;
     private CardView a321Card;
@@ -83,6 +85,7 @@ public class Airbus extends AppCompatActivity {
         a330Card = findViewById(R.id.a330Card);
         a320neoFamilyCard = findViewById(R.id.a320neoFamilyCard);
         a330neoCard = findViewById(R.id.a330neoCard);
+        a318Card = findViewById(R.id.a318Card);
         a319Card = findViewById(R.id.a319Card);
         a320Card = findViewById(R.id.a320Card);
         a321Card = findViewById(R.id.a321Card);
@@ -98,6 +101,7 @@ public class Airbus extends AppCompatActivity {
         a320neoFamilyCard.getBackground().setAlpha(65);
         a330neoCard.getBackground().setAlpha(65);
         a380Card.getBackground().setAlpha(65);
+        a318Card.getBackground().setAlpha(65);
         a319Card.getBackground().setAlpha(65);
         a320Card.getBackground().setAlpha(65);
         a321Card.getBackground().setAlpha(65);
@@ -123,6 +127,18 @@ public class Airbus extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
+
+
+        a318Card.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), AirbusA318.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
 
         a319Card.setOnClickListener(new View.OnClickListener() {
 
@@ -316,6 +332,7 @@ public class Airbus extends AppCompatActivity {
         translate = AnimationUtils.loadAnimation(this, R.anim.animation);
         a320neoFamilyCard.setAnimation(translate);
         a321Card.setAnimation(translate);
+        a318Card.setAnimation(translate);
         a319Card.setAnimation(translate);
         a320Card.setAnimation(translate);
         a330Card.setAnimation(translate);
