@@ -277,7 +277,7 @@ public class AirbusA318 extends AppCompatActivity {
         TreeNode a380Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a380), "No", "a380", null));
 
 
-        airbus.addChildren(a220Node, a319Node, a320Node, a321Node, a320NeoFamilyNode, a330Node, a340Node, a350Node, a380Node);
+        airbus.addChildren(a220Node, a318Node, a319Node, a320Node, a321Node, a320NeoFamilyNode, a330Node, a340Node, a350Node, a380Node);
 
 
         TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_photo_library, this.getString(R.string.boeing), "No", "boeing", null));

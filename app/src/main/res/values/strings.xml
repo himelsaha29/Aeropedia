@@ -519,7 +519,7 @@
 
 
     <string name="a318_identify">How to identify Airbus A318?</string>
-    <string name="a318_identify_ans">Stubby, tall tail, \"Notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
+    <string name="a318_identify_ans">Stubby, tall tail, \"notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
         3 exits - 1 over the wing and 2 near either ends of the fuselage, 11 windows between fore cabin door and emergency exit over the wing, and small triangular wingtips (wingtip fence) similar to those on A380.</string>
 
     <string name="a318_cockpit_value">2</string>
