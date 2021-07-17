@@ -402,6 +402,37 @@
     <string name="a320_thrust_value">107 / 120.6 / 147.3 kN</string>
     <!--AIRBUS A320-->
 
+    <!--AIRBUS A319-->
+    <string name="a319_type_value">Narrow-body</string>
+    <string name="a319_engine_value">CFM56 /\nIAE V2500</string>
+    <string name="a319_first_flight_value">22 February 1987</string>
+    <string name="a319_intro_value">18 April 1988\nwith Air France</string>
+    <string name="a319_customer_value">China Eastern Airlines</string>
+    <string name="a319_variants_value">2</string>
+
+    <string name="a319_desc1" formatted="false">\n</string>
+
+    <string name="a319_desc2" formatted="false">\n</string>
+
+    <string name="a319_desc3">\n \n</string>
+
+    <string name="a319_specs_constraint">()\n</string>
+
+
+    <string name="a319_identify">How to identify Airbus A319?</string>
+    <string name="a319_identify_ans"></string>
+
+    <string name="a319_cockpit_value">2</string>
+    <string name="a319_wingspan_value">35.80 m</string>
+    <string name="a319_length_value">37.57 m</string>
+    <string name="a319_height_value">11.76 m</string>
+    <string name="a319_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
+    <string name="a319_mtow_value">78 t</string>
+    <string name="a319_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="a319_range_value">3,300 nmi</string>
+    <string name="a319_thrust_value">98–120 kN</string>
+    <!--AIRBUS A319-->
+
 
 
     <!--TREE VIEW REMOVE LATER -->

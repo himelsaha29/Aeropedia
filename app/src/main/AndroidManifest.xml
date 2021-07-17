@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".airbus.AirbusA320"></activity>
+        <activity android:name=".airbus.AirbusA319"></activity>
+        <activity android:name=".airbus.AirbusA320" />
         <activity android:name=".airbus.AirbusA320neoFamily" />
         <activity android:name=".airbus.AirbusA321" />
         <activity android:name=".airbus.AirbusA330neo" />

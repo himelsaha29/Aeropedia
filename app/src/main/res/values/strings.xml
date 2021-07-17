@@ -427,6 +427,54 @@
     <!--AIRBUS A320-->
 
 
+    <!--AIRBUS A319-->
+    <string name="a319_type_value">Narrow-body</string>
+    <string name="a319_engine_value">CFM56 /\nIAE V2500</string>
+    <string name="a319_first_flight_value">25 August 1995</string>
+    <string name="a319_intro_value">1996 with\nSwissair</string>
+    <string name="a319_customer_value">American Airlines</string>
+    <string name="a319_variants_value">4</string>
+
+    <string name="a319_desc1" formatted="false">The Airbus A319 is a member of the Airbus A320 family of short- to medium-range, narrow-body, commercial
+        passenger twin-engine jet airliners. This Airbus A320 family was renamed to A320ceo, for \"current engine option\" after the introduction of A320neo
+        (neo for new engine option) in 2014. It is a shortened-fuselage variant of the Airbus A320 and entered service in April 1996 with Swissair, around
+        two years after the stretched Airbus A321 and eight years after the original A320. The aircraft shares a common type rating with all other Airbus A320
+        family variants, allowing existing A320 family pilots to fly the aircraft without the need for further training. As of August 2019, a total of 1,480
+        Airbus A319 aircraft have been delivered, of which 1,436 are in service.\n\nThe first member of the A320 family was the A320 which was launched in March
+        1984 and first flew on 22 February 1987. The family was extended to include the stretched A321 (first delivered 1994), the shortened A319 (1996), and
+        the further shortened A318 (2003). The A320 family pioneered the use of digital fly-by-wire flight control systems, as well as side stick controls,
+        in commercial aircraft. The A319 was developed at the request of Steven Udvar-Hazy, the former president and CEO of ILFC according to The New York Times.\n</string>
+
+    <string name="a319_desc2" formatted="false">The A319 design is a shortened fuselage, minimum change derivative of the A320 with its origins in the 130- to 140-seat
+        SA1, part of the Single-Aisle studies. The SA1 was shelved as the consortium concentrated on its bigger siblings. After healthy sales of the A320/A321,
+        Airbus re-focused on what was then known as the A320M-7, meaning A320 minus seven fuselage frames. It would provide direct competition for the 737-300/-700.
+        The shrink was achieved through the removal of four fuselage frames fore and three aft the wing, cutting the overall length by 3.73 metres (12 ft 3 in).
+        Consequently, the number of overwing exits was reduced from four to two.\n\nHigh-density A319s, such as 156-seat aircraft used by easyJet, retain four overwing exits. The bulk-cargo door was replaced by an aft container door, which
+        can take in reduced height LD3-45 containers. Minor software changes were made to accommodate the different handling characteristics; otherwise the aircraft
+        is largely unchanged. Power is provided by the CFM56-5A or V2500-A5, derated to 98 kN (22,000 lbf), with option for 105 kN (24,000 lbf) thrust. With virtually
+        the same fuel capacity as the A320-200 and fewer passengers, the range with 124 passengers in a two-class configuration extends to 6,650 km (3,590 nmi), or
+        6,850 km (3,700 nmi) with the "Sharklets". The A319's wingspan is wider than the aircraft's overall length.\n</string>
+
+    <string name="a319_desc3">\nThe A319 variants include the corporate jet version A319CJ (rebranded ACJ319), A319neo equipped with new engines,
+        A319 MPA (Maritime Patrol Aircraft) - military derivative of the A319, and A319LR - the longer-range version of the A319.\n</string>
+
+    <string name="a319_specs_constraint">()\n</string>
+
+
+    <string name="a319_identify">How to identify Airbus A319?</string>
+    <string name="a319_identify_ans"></string>
+
+    <string name="a319_cockpit_value">2</string>
+    <string name="a319_wingspan_value">35.80 m</string>
+    <string name="a319_length_value">33.84 m</string>
+    <string name="a319_height_value">11.76 m</string>
+    <string name="a319_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
+    <string name="a319_mtow_value">75.5 t</string>
+    <string name="a319_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="a319_range_value">3,750 nmi</string>
+    <string name="a319_thrust_value">98–120 kN</string>
+    <!--AIRBUS A319-->
+
 
     <!--AIRBUS A320neo FAMILY-->
     <string name="a320neo_type_value">Narrow-body</string>
