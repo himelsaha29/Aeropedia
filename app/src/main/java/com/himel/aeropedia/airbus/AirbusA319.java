@@ -58,9 +58,9 @@ public class AirbusA319 extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_airbus_a319);
+            setContentView(R.layout.activity_airbus_a319_light);
         } else {
-            setContentView(R.layout.activity_airbus_a350_dark);
+            setContentView(R.layout.activity_airbus_a319_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
@@ -315,10 +315,6 @@ public class AirbusA319 extends AppCompatActivity {
         }
     }
 
-
-
-
-
     /** SlideView **/
 
     private void slideView() {
@@ -347,16 +343,14 @@ public class AirbusA319 extends AppCompatActivity {
 
     private void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.a350_slider1);
+                sliderItem.setImageLocation(R.drawable.a319_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a350_slider2);
+                sliderItem.setImageLocation(R.drawable.a319_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.a350_slider3);
-            } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.a350_slider4);
+                sliderItem.setImageLocation(R.drawable.a319_slider3);
             }
 
             sliderItemList.add(sliderItem);
