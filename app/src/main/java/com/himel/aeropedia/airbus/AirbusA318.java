@@ -347,11 +347,11 @@ public class AirbusA318 extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.a318_slider1);
+                sliderItem.setImageLocation(R.drawable.a318_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a318_slider2);
+                sliderItem.setImageLocation(R.drawable.a318_slider02);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.a318_slider3);
+                sliderItem.setImageLocation(R.drawable.a318_slider03);
             }
 
             sliderItemList.add(sliderItem);

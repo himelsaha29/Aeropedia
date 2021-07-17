@@ -130,7 +130,7 @@
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/a318_cover" />
+                            android:src="@drawable/a318_cover1" />
 
                         <TextView
                             android:layout_width="match_parent"
