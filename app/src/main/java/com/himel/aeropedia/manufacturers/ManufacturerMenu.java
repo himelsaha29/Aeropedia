@@ -7,10 +7,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ScrollView;
@@ -65,8 +69,18 @@ public class ManufacturerMenu extends AppCompatActivity {
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_manufacturer_menu_light);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                Window window = getWindow();
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                window.setStatusBarColor(Color.parseColor("#FF92B7D4"));
+            }
         } else {
             setContentView(R.layout.activity_manufacturer_menu_dark);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                Window window = getWindow();
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                window.setStatusBarColor(Color.parseColor("#FF060525"));
+            }
         }
         darkToggle = findViewById(R.id.dark_toggle);
         scrollView = findViewById(R.id.main_scroll);
