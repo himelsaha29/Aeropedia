@@ -577,7 +577,7 @@
 
 
     <string name="a310_identify">How to identify Airbus A310?</string>
-    <string name="a310_identify_ans"></string>
+    <string name="a310_identify_ans">Flat central section of the lower fuselage, \"notched\" window design, 3 exits - 1 overwing and 2 near either ends of the fuselage, with/without wingtip fences.</string>
 
     <string name="a310_cockpit_value">2</string>
     <string name="a310_wingspan_value">43.9 m</string>
