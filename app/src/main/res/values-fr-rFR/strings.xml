@@ -469,6 +469,37 @@
     <!--AIRBUS A318-->
 
 
+    <!--AIRBUS A310-->
+    <string name="a310_type_value">Narrow-body</string>
+    <string name="a310_engine_value">CFM56 /\nP&amp;W PW6000</string>
+    <string name="a310_first_flight_value">15 January 2002</string>
+    <string name="a310_intro_value">2003 with\nFrontier Airlines</string>
+    <string name="a310_customer_value">Air France</string>
+    <string name="a310_variants_value">1</string>
+
+    <string name="a310_desc1" formatted="false">\n</string>
+
+    <string name="a310_desc2" formatted="false">\n</string>
+
+    <string name="a310_desc3">\n \n</string>
+
+    <string name="a310_specs_constraint">()\n</string>
+
+
+    <string name="a310_identify">How to identify Airbus A318?</string>
+    <string name="a310_identify_ans"></string>
+
+    <string name="a310_cockpit_value">2</string>
+    <string name="a310_wingspan_value">34.10 m</string>
+    <string name="a310_length_value">31.44 m</string>
+    <string name="a310_height_value">12.56 m</string>
+    <string name="a310_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
+    <string name="a310_mtow_value">68 t</string>
+    <string name="a310_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="a310_range_value">3,100 nmi</string>
+    <string name="a310_thrust_value">96–106 kN</string>
+    <!--AIRBUS A310-->
+
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>
     <string name="ic_access_time">&#xe001;</string>
