@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:fadeScrollbars="true"
                     android:fadingEdge="horizontal"
-                    android:fadingEdgeLength="50dp"
+                    android:fadingEdgeLength="70dp"
                     android:padding="10dp"
                     android:requiresFadingEdge="horizontal">
 

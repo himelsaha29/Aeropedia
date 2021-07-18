@@ -71,6 +71,7 @@ public class ManufacturerMenu extends AppCompatActivity {
             setContentView(R.layout.activity_manufacturer_menu_light);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 Window window = getWindow();
+                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
                 window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
                 window.setStatusBarColor(Color.parseColor("#FF92B7D4"));
             }
@@ -78,6 +79,7 @@ public class ManufacturerMenu extends AppCompatActivity {
             setContentView(R.layout.activity_manufacturer_menu_dark);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 Window window = getWindow();
+                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
                 window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
                 window.setStatusBarColor(Color.parseColor("#FF060525"));
             }
