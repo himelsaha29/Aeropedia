@@ -58,7 +58,7 @@ public class AirbusA310 extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_airbus_a318_light);
+            setContentView(R.layout.activity_airbus_a310);
         } else {
             setContentView(R.layout.activity_airbus_a318_dark);
         }
@@ -260,6 +260,7 @@ public class AirbusA310 extends AppCompatActivity {
 
         TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, this.getString(R.string.airbus), "No", "airbus", null));
         TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a220), "No", "a220", null));
+        TreeNode a318Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a318), "No", "a318", null));
         TreeNode a319Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a319), "No", "a319", null));
         TreeNode a320Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a320), "No", "a320", null));
         TreeNode a320NeoFamilyNode = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a320neofamily), "No", "a320neoFamily", null));
@@ -268,17 +269,17 @@ public class AirbusA310 extends AppCompatActivity {
         TreeNode a330Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_alexa, this.getString(R.string.a330), "No", "a330", null));
         TreeNode a330neoNode = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_alexa, this.getString(R.string.a330neo), "No", "a330neo", null));
         TreeNode a340Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a340), "No", "a340", null));
-        TreeNode a318Node = null;
+        TreeNode a310Node = null;
         if (verifyDarkMode().equals("Yes")) {
-            a318Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a318), "HighlightLight", "a318", null));
+            a310Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a310), "HighlightLight", "a310", null));
         } else {
-            a318Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a318), "HighlightDark", "a318", null));
+            a310Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a310), "HighlightDark", "a310", null));
         }
         TreeNode a350Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a350), "No", "a350", null));
         TreeNode a380Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_drive_file, this.getString(R.string.a380), "No", "a380", null));
 
 
-        airbus.addChildren(a220Node, a318Node, a319Node, a320Node, a321Node, a320NeoFamilyNode, a330Node, a330neoNode, a340Node, a350Node, a380Node);
+        airbus.addChildren(a220Node, a310Node, a318Node, a319Node, a320Node, a321Node, a320NeoFamilyNode, a330Node, a330neoNode, a340Node, a350Node, a380Node);
 
 
         TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_photo_library, this.getString(R.string.boeing), "No", "boeing", null));
@@ -345,14 +346,16 @@ public class AirbusA310 extends AppCompatActivity {
 
     private void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.a318_slider01);
+                sliderItem.setImageLocation(R.drawable.a310_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a318_slider02);
+                sliderItem.setImageLocation(R.drawable.a310_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.a318_slider03);
+                sliderItem.setImageLocation(R.drawable.a310_slider3);
+            } else if (i == 3) {
+                sliderItem.setImageLocation(R.drawable.a310_slider4);
             }
 
             sliderItemList.add(sliderItem);

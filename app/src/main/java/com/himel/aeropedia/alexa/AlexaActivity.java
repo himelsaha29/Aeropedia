@@ -95,20 +95,95 @@ public class AlexaActivity extends CoreActivity {
             enableDarkOnCreate = verifyDarkMode();
             if(enableDark.equals("No")) {
                 setContentView(R.layout.activity_alexa_login_light);
+                Thread thread2 = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        loggedIn = checkLogin();
+                    }
+                });
+                thread2.start();
+
+                try {
+                    thread2.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                /**REFRESH**/
+                if (!loggedIn) {
+
+                    loadLocale();
+                    locale = Locale.getDefault();
+                    enableDarkOnCreate = verifyDarkMode();
+                    if(enableDark.equals("No")) {
+                        setContentView(R.layout.activity_alexa_login_light);
+                    } else {
+                        setContentView(R.layout.activity_alexa_login_dark);
+                    }
+
+                    login = findViewById(R.id.login);
+
+                    login.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            alexaManager.sendAudioRequest(requestBody, getRequestCallback());
+                        }
+                    });
+                    languageDarkToggle();
+                    loadDrawer();
+                }
+                else {
+                    loadAlexa();
+                    languageDarkToggle();
+                    loadDrawer();
+                }
+                /**REFRESH**/
+
             } else {
                 setContentView(R.layout.activity_alexa_login_dark);
+                Thread thread2 = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        loggedIn = checkLogin();
+                    }
+                });
+                thread2.start();
+
+                try {
+                    thread2.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                /**REFRESH**/
+                if (!loggedIn) {
+
+                    loadLocale();
+                    locale = Locale.getDefault();
+                    enableDarkOnCreate = verifyDarkMode();
+                    if(enableDark.equals("No")) {
+                        setContentView(R.layout.activity_alexa_login_light);
+                    } else {
+                        setContentView(R.layout.activity_alexa_login_dark);
+                    }
+
+                    login = findViewById(R.id.login);
+
+                    login.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            alexaManager.sendAudioRequest(requestBody, getRequestCallback());
+                        }
+                    });
+                    languageDarkToggle();
+                    loadDrawer();
+                }
+                else {
+                    loadAlexa();
+                    languageDarkToggle();
+                    loadDrawer();
+                }
+                /**REFRESH**/
             }
 
-            login = findViewById(R.id.login);
-
-            login.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    alexaManager.sendAudioRequest(requestBody, getRequestCallback());
-                }
-            });
-            languageDarkToggle();
-            loadDrawer();
         }
         else {
             loadAlexa();
@@ -493,13 +568,6 @@ public class AlexaActivity extends CoreActivity {
         tView.setDefaultViewHolder(IconTreeItemHolder.class);
 
         containerView.addView(tView.getView());
-
-//        if (savedInstanceState != null) {
-//            String state = savedInstanceState.getString("tState");
-//            if (!TextUtils.isEmpty(state)) {
-//                tView.restoreState(state);
-//            }
-//        }
 
     }
 
