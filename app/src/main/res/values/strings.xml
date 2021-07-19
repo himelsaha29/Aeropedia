@@ -12,6 +12,7 @@
     <string name="a320">A320</string>
     <string name="a319">A319</string>
     <string name="a318">A318</string>
+    <string name="a300">A300</string>
     <string name="a310">A310</string>
     <string name="a340">A340</string>
     <string name="a321">A321</string>
@@ -597,22 +598,22 @@
     <string name="a300_first_flight_value">28 October 1972</string>
     <string name="a300_intro_value">23 May 1974 with Air France</string>
     <string name="a300_customer_value">FedEx Express</string>
-    <string name="a300_variants_value">4</string>
+    <string name="a300_variants_value">6</string>
 
     <string name="a300_desc1" formatted="false">The Airbus A300 is a wide-body airliner developed and manufactured by Airbus. In September 1967, aircraft manufacturers
         in the United Kingdom, France, and West Germany signed a memorandum of understanding to develop a large airliner. West Germany and France reached an agreement
         on 29 May 1969 after the British withdrew from the project on 10 April 1969. European collaborative aerospace manufacturer Airbus Industrie was formally created
-        on 18 December 1970 to develop and produce it. The prototype first flew on 28 October 1972. The wide-body medium-to-long range airliner has the distinction of
+        on 18 December 1970 to develop and produce it. The prototype first flew on 28 October 1972. During its production phase from 1971 to 2007, a total of 561 A300s were built.\n\nThe wide-body medium-to-long range airliner has the distinction of
         being the first twin-engine wide-body aircraft in the world. In 1977, the A300 became the first Extended Range Twin Operations
-        (ETOPS)-compliant aircraft, due to its high performance and safety standards.0 Another world-first of the A300 is the use of composite materials on a
+        (ETOPS)-compliant aircraft, due to its high performance and safety standards. Another world-first of the A300 is the use of composite materials on a
         commercial aircraft, which was used on both secondary and later primary airframe structures, decreasing overall weight and improving cost-effectiveness. Other
         firsts included the pioneering use of center-of-gravity control, achieved by transferring fuel between various locations across the aircraft, and electrically
-        signaled secondary flight controls. During its production phase from 1971 to 2007, a total of 561 A300s were built.\n\nThe A300 is powered by a pair of underwing turbofan engines, either General Electric CF6 or Pratt &amp; Whitney JT9D
+        signaled secondary flight controls.\n\nThe A300 is powered by a pair of underwing turbofan engines, either General Electric CF6 or Pratt &amp; Whitney JT9D
         engines; the sole use of underwing engine pods allowed for any suitable turbofan engine to be more readily used. The lack of a third tail-mounted engine,
         as per the trijet configuration used by some competing airliners, allowed for the wings to be located further forwards and to reduce the size of the vertical
         stabilizer and elevator, which had the effect of increasing the aircraft\'s flight performance and fuel efficiency. Airbus partners had employed the latest
         technology, some of which having been derived from Concorde, on the A300. According to Airbus, new technologies adopted for the airliner were selected
-        principally for increased safety, operational capability, and profitability. Upon entry into service in 1974, the A300 was a very advanced plane, which
+        principally for increased safety, operational capability, and profitability.\n\nUpon entry into service in 1974, the A300 was a very advanced plane, which
         went on to influence later airliner designs. The technological highlights include advanced wings by de Havilland (later BAE Systems) with supercritical airfoil
         sections for economical performance and advanced aerodynamically efficient flight control surfaces. The 5.64 m (222 in) diameter circular fuselage section allows
         an eight-abreast passenger seating and is wide enough for 2 LD3 cargo containers side by side. Structures are made from metal billets, reducing weight. It is
@@ -624,7 +625,7 @@
         was a world-first for a wide-body aircraft. Glass cockpit flight instrumentation, which used cathode ray tube (CRT) monitors to display flight, navigation,
         and warning information, along with fully digital dual autopilots and digital flight control computers for controlling the spoilers, flaps, and leading-edge
         slats, were also adopted upon later-built models. Additional composites were also made use of, such as carbon-fiber-reinforced polymer (CFRP), as well
-        as their presence in an increasing proportion of the aircraft\'s components, including the spoilers, rudder, air brakes, and landing gear doors. Another
+        as their presence in an increasing proportion of the aircraft\'s components, including the spoilers, rudder, air brakes, and landing gear doors.\n\nAnother
         feature of later aircraft were the addition of wingtip fences, which generated greater aerodynamic performance (first introduced on the A310-300). In addition
         to passenger duties, the A300 became widely used by air freight operators; according to Airbus, it is the best selling freight aircraft of all time. Various
         variants of the A300 were built to meet customer demands, often for diverse roles such as aerial refueling tankers, freighter models (new-build and
@@ -635,7 +636,7 @@
     <string name="a300_desc3">\nAirbus A300 variants include A300B1, A300B2, A300B4, A300-600, A300B10 (A310), A300-600ST (often referred to as Airbus Beluga
         or Airbus Super Transporter)\n</string>
 
-    <string name="a300_specs_constraint">(-B4-200, -600R, and -600F compared in order)\n</string>
+    <string name="a300_specs_constraint">(-B4-200, -600R, and -600F variants compared in order)\n</string>
 
 
     <string name="a300_identify">How to identify Airbus A300?</string>
@@ -643,11 +644,11 @@
 
     <string name="a300_cockpit_value">3 / 2 / 2</string>
     <string name="a300_wingspan_value">44.84 m</string>
-    <string name="a300_length_value">53.61 m (-B4-200) /\n54.08 m (-600R / -600F)</string>
+    <string name="a300_length_value">53.61 m (-B4-200) /\n54.1 m (-600R / -600F)</string>
     <string name="a300_height_value">16.72 m (-B4-200) /\n16.66 m (-600R / -600F)</string>
     <string name="a300_fuselage_value">5.64 m (W) / ~6 m (H)</string>
     <string name="a300_mtow_value">165 / 171.7 / 170.5 t</string>
-    <string name="a300_cruise_speed_value">833 km/h (typical),\n89hihhi2 km/h (max.)</string>
+    <string name="a300_cruise_speed_value">833 km/h (typical),\n871 km/h (max.)</string>
     <string name="a300_range_value">2,900 nmi (-B4-200) /\n4,050 m (-600R / -600F)</string>
     <string name="a300_thrust_value">230 kN(-B4-200) /\n249–270 kN (-600R / -600F)</string>
     <!--AIRBUS A300-->
