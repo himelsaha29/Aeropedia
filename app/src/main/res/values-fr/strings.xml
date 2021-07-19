@@ -497,6 +497,39 @@
     <string name="a310_thrust_value">96–106 kN</string>
     <!--AIRBUS A310-->
 
+
+    <!--AIRBUS A300-->
+    <string name="a300_type_value">Wide-body</string>
+    <string name="a300_engine_value">GE CF6 /\nP&amp;W JT9D / PW4000</string>
+    <string name="a300_first_flight_value">28 October 1972</string>
+    <string name="a300_intro_value">23 May 1974 with Air France</string>
+    <string name="a300_customer_value">FedEx Express</string>
+    <string name="a300_variants_value">4</string>
+
+    <string name="a300_desc1" formatted="false">\n</string>
+
+    <string name="a300_desc2" formatted="false">\n</string>
+
+    <string name="a300_desc3">\n \n</string>
+
+    <string name="a300_specs_constraint">()\n</string>
+
+
+    <string name="a300_identify">How to identify Airbus A300?</string>
+    <string name="a300_identify_ans"></string>
+
+    <string name="a300_cockpit_value">3 / 2 / 2</string>
+    <string name="a300_wingspan_value">44.84 m</string>
+    <string name="a300_length_value">53.61 m (-B4-200) /\n54.08 m (-600R / -600F)</string>
+    <string name="a300_height_value">16.72 m (-B4-200) /\n16.66 m (-600R / -600F)</string>
+    <string name="a300_fuselage_value">5.64 m (W) / ~6 m (H)</string>
+    <string name="a300_mtow_value">165 / 171.7 / 170.5 t</string>
+    <string name="a300_cruise_speed_value">833 km/h (typical),\n89hihhi2 km/h (max.)</string>
+    <string name="a300_range_value">2,900 nmi (-B4-200) /\n4,050 m (-600R / -600F)</string>
+    <string name="a300_thrust_value">230 kN(-B4-200) /\n249–270 kN (-600R / -600F)</string>
+    <!--AIRBUS A30-->
+
+
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>
     <string name="ic_access_time">&#xe001;</string>
