@@ -528,8 +528,39 @@
     <string name="a300_cruise_speed_value">833 km/h (typical),\n89hihhi2 km/h (max.)</string>
     <string name="a300_range_value">2,900 nmi (-B4-200) /\n4,050 m (-600R / -600F)</string>
     <string name="a300_thrust_value">230 kN(-B4-200) /\n249–270 kN (-600R / -600F)</string>
-    <!--AIRBUS A30-->
+    <!--AIRBUS A300-->
 
+
+    <!--AIRBUS A220-->
+    <string name="a220_type_value">Wide-body</string>
+    <string name="a220_engine_value">GE CF6 / P&amp;W JT9D (-B4-200),\nGE CF6 / P&amp;W PW4158 (-600R/F)</string>
+    <string name="a220_first_flight_value">28 October 1972</string>
+    <string name="a220_intro_value">23 May 1974 with Air France</string>
+    <string name="a220_customer_value">FedEx Express</string>
+    <string name="a220_variants_value">6</string>
+
+    <string name="a220_desc1" formatted="false">\n</string>
+
+    <string name="a220_desc2" formatted="false">\n</string>
+
+    <string name="a220_desc3">\n \n</string>
+
+    <string name="a220_specs_constraint">()\n</string>
+
+
+    <string name="a220_identify">How to identify Airbus A220?</string>
+    <string name="a220_identify_ans"></string>
+
+    <string name="a220_cockpit_value">3 / 2 / 2</string>
+    <string name="a220_wingspan_value">44.84 m</string>
+    <string name="a220_length_value">53.61 m (-B4-200) /\n54.1 m (-600R / -600F)</string>
+    <string name="a220_height_value">16.72 m (-B4-200) /\n16.66 m (-600R / -600F)</string>
+    <string name="a220_fuselage_value">5.64 m (W) / ~6 m (H)</string>
+    <string name="a220_mtow_value">165 / 171.7 / 170.5 t</string>
+    <string name="a220_cruise_speed_value">833 km/h (typical),\n871 km/h (max.)</string>
+    <string name="a220_range_value">2,900 nmi (-B4-200) /\n4,050 m (-600R / -600F)</string>
+    <string name="a220_thrust_value">230 kN(-B4-200) /\n249–270 kN (-600R / -600F)</string>
+    <!--AIRBUS A220-->
 
     <!--TREE VIEW REMOVE LATER -->
     <string name="ic_access_alarms">&#xe000;</string>
