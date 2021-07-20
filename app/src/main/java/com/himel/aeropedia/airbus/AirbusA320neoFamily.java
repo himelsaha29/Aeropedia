@@ -356,11 +356,11 @@ public class AirbusA320neoFamily extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.a320neofamily_slider1);
+                sliderItem.setImageLocation(R.drawable.a320neofamily_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a320neofamily_slider2);
+                sliderItem.setImageLocation(R.drawable.a320neofamily_slider02);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.a320neofamily_slider3);
+                sliderItem.setImageLocation(R.drawable.a320neofamily_slider03);
             }
             sliderItemList.add(sliderItem);
         }

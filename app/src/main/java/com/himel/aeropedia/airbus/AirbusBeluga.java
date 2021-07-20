@@ -350,11 +350,11 @@ public class AirbusBeluga extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.airbus_beluga_slider1);
+                sliderItem.setImageLocation(R.drawable.airbus_beluga_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.airbus_beluga_slider2);
+                sliderItem.setImageLocation(R.drawable.airbus_beluga_slider02);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.airbus_beluga_slider3);
+                sliderItem.setImageLocation(R.drawable.airbus_beluga_slider03);
             }
 
             sliderItemList.add(sliderItem);

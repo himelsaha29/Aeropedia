@@ -202,7 +202,7 @@
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/a318_cover1" />
+                            android:src="@drawable/a318_cover" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -536,7 +536,7 @@
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/airbus_beluga_cover" />
+                            android:src="@drawable/airbus_beluga_cover1" />
 
                         <TextView
                             android:layout_width="match_parent"
