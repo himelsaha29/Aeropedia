@@ -20,7 +20,7 @@
     <string name="a330neo">A330neo</string>
     <string name="a320neofamily">A320neo Family</string>
     <string name="a220">A220</string>
-    <string name="beluga">Beluga XL</string>
+    <string name="beluga">Beluga</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -564,6 +564,37 @@
     <string name="a220_range_value">2,900 nmi (-B4-200) /\n4,050 m (-600R / -600F)</string>
     <string name="a220_thrust_value">230 kN(-B4-200) /\n249–270 kN (-600R / -600F)</string>
     <!--AIRBUS A220-->
+
+
+    <!--AIRBUS BELUGA-->
+    <string name="beluga_type_value">Narrow-body</string>
+    <string name="beluga_engine_value">Pratt &amp; Whitney\nPW1500G</string>
+    <string name="beluga_first_flight_value">16 September 2013</string>
+    <string name="beluga_intro_value">15 July 2016 with\nSwiss International Air Lines</string>
+    <string name="beluga_variants_value">3</string>
+
+    <string name="beluga_desc1" formatted="false">\n</string>
+
+    <string name="beluga_desc2" formatted="false">\n</string>
+
+    <string name="beluga_desc3">\n \n</string>
+
+    <string name="beluga_specs_constraint">()\n</string>
+
+
+    <string name="beluga_identify">How to identify Airbus Beluga / Beluga XL?</string>
+    <string name="beluga_identify_ans"></string>
+
+    <string name="beluga_cockpit_value">2</string>
+    <string name="beluga_wingspan_value">35.10 m</string>
+    <string name="beluga_length_value">35.0 / 38.70 m</string>
+    <string name="beluga_height_value">11.50 m</string>
+    <string name="beluga_fuselage_value">3.5 m (W) / ~3.7 m (H)</string>
+    <string name="beluga_mtow_value">63.1 / 70.9 t</string>
+    <string name="beluga_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="beluga_range_value">3,450 / 3,600 nmi</string>
+    <string name="beluga_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
+    <!--AIRBUS BELUGA-->
 
 
     <!--TREE VIEW REMOVE LATER -->

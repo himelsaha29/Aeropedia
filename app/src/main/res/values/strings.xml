@@ -20,7 +20,7 @@
     <string name="a330neo">A330neo</string>
     <string name="a320neofamily">A320neo Family</string>
     <string name="a220">A220</string>
-    <string name="beluga">Beluga XL</string>
+    <string name="beluga">Beluga</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -717,6 +717,37 @@
     <string name="a220_range_value">3,450 / 3,600 nmi</string>
     <string name="a220_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
     <!--AIRBUS A220-->
+
+
+    <!--AIRBUS BELUGA-->
+    <string name="beluga_type_value">Outsize cargo freight</string>
+    <string name="beluga_engine_value">General Electric CF6</string>
+    <string name="beluga_first_flight_value">13 September 1994</string>
+    <string name="beluga_intro_value">September 1995</string>
+    <string name="beluga_variants_value">TBD</string>
+
+    <string name="beluga_desc1" formatted="false">\n</string>
+
+    <string name="beluga_desc2" formatted="false">\n</string>
+
+    <string name="beluga_desc3">\n \n</string>
+
+    <string name="beluga_specs_constraint">()\n</string>
+
+
+    <string name="beluga_identify">How to identify Airbus Beluga?</string>
+    <string name="beluga_identify_ans"></string>
+
+    <string name="beluga_cockpit_value">2</string>
+    <string name="beluga_wingspan_value">44.84 m</string>
+    <string name="beluga_length_value">56.15 m</string>
+    <string name="beluga_height_value">17.24 m</string>
+    <string name="beluga_fuselage_value">7.31 m (W) / ~7.5 m (H)</string>
+    <string name="beluga_mtow_value">155 t</string>
+    <string name="beluga_cruise_speed_value">778 km/h (typical)</string>
+    <string name="beluga_range_value">1,501 nmi with 40 t payload /\n2,501 nmi with 26 t payload</string>
+    <string name="beluga_thrust_value">257 kN</string>
+    <!--AIRBUS BELUGA-->
 
 
     <!--AIRBUS A320neo FAMILY-->
