@@ -132,7 +132,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a220_type_value"
+                                android:text="@string/beluga_type_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -164,7 +164,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a220_engine_value"
+                                android:text="@string/beluga_engine_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -196,7 +196,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a220_first_flight_value"
+                                android:text="@string/beluga_first_flight_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -227,7 +227,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a220_intro_value"
+                                android:text="@string/beluga_intro_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -259,38 +259,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a220_variants_value"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="15dp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:paddingStart="10dp"
-                                android:paddingTop="10dp"
-                                android:paddingEnd="10dp"
-                                android:text="@string/customer"
-                                android:textAlignment="center"
-                                android:textColor="#72A8E1"
-                                android:textSize="18dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:paddingStart="10dp"
-                                android:paddingEnd="10dp"
-                                android:text="@string/a220_customer_value"
+                                android:text="@string/beluga_variants_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -308,7 +277,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a220_desc1"
+                    android:text="@string/beluga_desc1"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -355,7 +324,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a220_desc2"
+                    android:text="@string/beluga_desc2"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -376,7 +345,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a220_specs_constraint"
+                    android:text="@string/beluga_specs_constraint"
                     android:textColor="@color/colorPrimary"
                     android:textSize="12sp" />
 
@@ -434,7 +403,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_cockpit_value"
+                                    android:text="@string/beluga_cockpit_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -483,7 +452,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_wingspan_value"
+                                    android:text="@string/beluga_wingspan_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -532,7 +501,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_length_value"
+                                    android:text="@string/beluga_length_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -580,7 +549,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_height_value"
+                                    android:text="@string/beluga_height_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -629,7 +598,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_fuselage_value"
+                                    android:text="@string/beluga_fuselage_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -678,7 +647,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_mtow_value"
+                                    android:text="@string/beluga_mtow_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -727,7 +696,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_cruise_speed_value"
+                                    android:text="@string/beluga_cruise_speed_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -775,7 +744,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_range_value"
+                                    android:text="@string/beluga_range_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -824,7 +793,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_thrust_value"
+                                    android:text="@string/beluga_thrust_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -836,17 +805,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/maven_pro_medium"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:text="@string/a220_desc3"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -854,7 +812,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="3dp"
-                    android:text="@string/a220_identify"
+                    android:text="@string/beluga_identify"
                     android:textColor="@color/colorPrimary"
                     android:textSize="26sp" />
 
@@ -865,7 +823,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="12dp"
-                    android:text="@string/a220_identify_ans"
+                    android:text="@string/beluga_identify_ans"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 

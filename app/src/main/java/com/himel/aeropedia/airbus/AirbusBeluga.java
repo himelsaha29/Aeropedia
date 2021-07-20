@@ -58,9 +58,9 @@ public class AirbusBeluga extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_airbus_a220_light);
+            setContentView(R.layout.activity_airbus_beluga_light);
         } else {
-            setContentView(R.layout.activity_airbus_a220_dark);
+            setContentView(R.layout.activity_airbus_beluga_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
