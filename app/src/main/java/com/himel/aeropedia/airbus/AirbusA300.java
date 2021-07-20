@@ -347,16 +347,14 @@ public class AirbusA300 extends AppCompatActivity {
 
     private void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
                 sliderItem.setImageLocation(R.drawable.a300_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a300_slider02);
-            } else if (i == 2) {
                 sliderItem.setImageLocation(R.drawable.a300_slider03);
-            } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.a300_slider04);
+            } else if (i == 2) {
+                sliderItem.setImageLocation(R.drawable.a300_slider02);
             }
 
             sliderItemList.add(sliderItem);
