@@ -24,7 +24,6 @@ import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
-import com.himel.aeropedia.treeview.TreeView;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingMenuLayout;
@@ -131,7 +130,7 @@ public class ManufacturerMenu extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent showContent = new Intent(getApplicationContext(), TreeView.class);
+                Intent showContent = new Intent(getApplicationContext(), Antonov.class);
                 startActivity(showContent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
