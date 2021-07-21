@@ -8,31 +8,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ScrollView;
-import android.widget.TextView;
+
 import com.himel.aeropedia.R;
-import com.himel.aeropedia.airbus.AirbusA220;
-import com.himel.aeropedia.airbus.AirbusA300;
-import com.himel.aeropedia.airbus.AirbusA310;
-import com.himel.aeropedia.airbus.AirbusA318;
-import com.himel.aeropedia.airbus.AirbusA319;
-import com.himel.aeropedia.airbus.AirbusA320;
-import com.himel.aeropedia.airbus.AirbusA320neoFamily;
-import com.himel.aeropedia.airbus.AirbusA321;
-import com.himel.aeropedia.airbus.AirbusA330;
-import com.himel.aeropedia.airbus.AirbusA330neo;
-import com.himel.aeropedia.airbus.AirbusA340;
 import com.himel.aeropedia.airbus.AirbusA350;
-import com.himel.aeropedia.airbus.AirbusA380;
-import com.himel.aeropedia.airbus.AirbusBeluga;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.antonov.AntonovAn124Ruslan;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
@@ -70,9 +54,9 @@ public class Antonov extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_antonov);
+            setContentView(R.layout.activity_antonov_light);
         } else {
-            setContentView(R.layout.activity_airbus_dark);
+            setContentView(R.layout.activity_antonov_dark);
         }
         darkToggle = findViewById(R.id.dark_toggle);
         scrollView = findViewById(R.id.main_scroll);
