@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:iconText="@string/ic_keyboard_arrow_right"
+        app:iconText="@string/drawer_airplane"
         app:iconColor="#12558C"
         app:iconFont="fonts/trial.ttf"
         app:iconSize="20dp" />
@@ -29,7 +29,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:iconText="@string/ic_email"
+        app:iconText="@string/drawer_tail"
         app:iconColor="#12558C"
         app:iconFont="fonts/trial.ttf"
         app:iconSize="24dp" />
