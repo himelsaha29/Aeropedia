@@ -42,13 +42,11 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
         final PrintView iconView = (PrintView) view.findViewById(R.id.icon);
 
 
-        if(value.iconXML.equals("Alexa")) {
-            iconView.setIconFont(Typeface.createFromAsset(context.getAssets(), "fonts/icomoon.ttf"));
-            iconView.setIconText(context.getResources().getString(value.icon));
-        } else {
-            iconView.setIconFont(Typeface.createFromAsset(context.getAssets(), "fonts/icomoon.ttf"));
-            iconView.setIconText(context.getResources().getString(value.icon));
-        }
+
+
+        iconView.setIconFont(Typeface.createFromAsset(context.getAssets(), "fonts/trial.ttf"));
+        iconView.setIconText(context.getResources().getString(value.icon));
+
 
         arrowView = (PrintView) view.findViewById(R.id.arrow_icon);
 

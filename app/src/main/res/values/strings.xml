@@ -21,6 +21,7 @@
     <string name="a320neofamily">A320neo Family</string>
     <string name="a220">A220</string>
     <string name="beluga">Beluga</string>
+    <string name="an124">An-124 Ruslan</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -1327,5 +1328,15 @@
     <string name="ic_alxa">&#xe90c;</string>
     <string name="ic_tail">&#xe90d;</string>
 
+
+    <string name="trial_airplane">&#xe902;</string>
+    <string name="trial_radar">&#xe901;</string>
+    <string name="trial_alxa">&#xe904;</string>
+    <string name="trial_tail">&#xe900;</string>
+
+    <string name="trial_airbus">&#xe903;</string>
+    <string name="trial_boeing">&#xe905;</string>
+    <string name="trial_antonoc">&#xe973;</string>
+    <string name="trial_manu">&#xe907;</string>
 
 </resources>

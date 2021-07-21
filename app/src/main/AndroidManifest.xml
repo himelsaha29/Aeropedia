@@ -17,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".airbus.AirbusBeluga"></activity>
+        <activity android:name=".manufacturers.Antonov"></activity>
+        <activity android:name=".antonov.AntonovAn124Ruslan" />
+        <activity android:name=".airbus.AirbusBeluga" />
         <activity android:name=".airbus.AirbusA220" />
         <activity android:name=".airbus.AirbusA300" />
         <activity android:name=".airbus.AirbusA310" />
