@@ -635,6 +635,34 @@
     <!--ANTONOV AN-124 RUSLAN-->
 
 
+    <!--ANTONOV AN-72 CHEBURASHKA-->
+    <string name="an72_type_value">Heavy transport</string>
+    <string name="an72_engine_value">Progress D-18T</string>
+    <string name="an72_first_flight_value">24 December 1982</string>
+    <string name="an72_customer_value">Russian Air Force</string>
+    <string name="an72_variants_value">8 (active)</string>
+
+    <string name="an72_desc1" formatted="false">\n</string>
+
+    <string name="an72_desc2" formatted="false">\n</string>
+
+    <string name="an72_desc3">\n \n</string>
+
+    <string name="an72_specs_constraint">(-100M variant)\n</string>
+
+
+    <string name="an72_identify">How to identify Antonov An-124 Ruslan?</string>
+    <string name="an72_identify_ans"></string>
+
+    <string name="an72_cockpit_value">6</string>
+    <string name="an72_wingspan_value">73.3 m</string>
+    <string name="an72_length_value">69.1 m</string>
+    <string name="an72_height_value">21.08 m</string>
+    <string name="an72_gross_weight_value">214 t with max. fuel</string>
+    <string name="an72_cruise_speed_value">800–850 km/h (typical),\n865 km/h (max.)</string>
+    <string name="an72_range_value">2,000 nmi (max. payload) /\n6,200 nmi (40 t payload)</string>
+    <string name="an72_thrust_value">229 kN</string>
+    <!--ANTONOV AN-72 CHEBURASHKA-->
 
 
     <string name="status_listening">"écoute"…</string>
