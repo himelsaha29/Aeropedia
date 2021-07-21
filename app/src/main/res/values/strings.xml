@@ -26,6 +26,7 @@
     <string name="a220">A220</string>
     <string name="beluga">Beluga</string>
     <string name="an124">An-124 Ruslan</string>
+    <string name="an72">An-72 Cheburashka</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -910,7 +911,6 @@
     <string name="an124_range_value">2,000 nmi (max. payload) /\n6,200 nmi (40 t payload)</string>
     <string name="an124_thrust_value">229 kN</string>
     <!--ANTONOV AN-124 RUSLAN-->
-
 
 
     <string name="status_listening">LISTENING…</string>

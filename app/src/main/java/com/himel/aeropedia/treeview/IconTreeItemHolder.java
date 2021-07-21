@@ -66,7 +66,7 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
 
     @Override
     public void toggle(boolean active) {
-        arrowView.setIconText(context.getResources().getString(active ? R.string.ic_keyboard_arrow_down : R.string.ic_keyboard_arrow_right));
+        arrowView.setIconText(context.getResources().getString(active ? R.string.drawer_airplane : R.string.drawer_tail));
     }
 
     public static class IconTreeItem {

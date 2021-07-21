@@ -302,7 +302,7 @@ public class AirbusA220 extends AppCompatActivity {
         root.addChildren(flightTrackerRoot);
         root.addChildren(firebaseRoot);
         manufacturerRoot.setExpanded(true);
-        antonov.setExpanded(true);
+        airbus.setExpanded(true);
 
         tView = new AndroidTreeView(this, root);
         tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);
