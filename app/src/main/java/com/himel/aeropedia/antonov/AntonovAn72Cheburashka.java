@@ -32,7 +32,6 @@ import com.himel.aeropedia.airbus.AirbusBeluga;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
-import com.himel.aeropedia.manufacturers.ManufacturerMenu;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
 import com.himel.aeropedia.util.SliderAdapter;
 import com.himel.aeropedia.util.SliderItem;
@@ -75,9 +74,9 @@ public class AntonovAn72Cheburashka extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_antonov_an72_cheburashka);
+            setContentView(R.layout.activity_antonov_an72_cheburashka_light);
         } else {
-            setContentView(R.layout.activity_antonov_an124_ruslan_dark);
+            setContentView(R.layout.activity_antonov_an72_cheburashka_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
@@ -295,14 +294,15 @@ public class AntonovAn72Cheburashka extends AppCompatActivity {
 
         TreeNode antonov = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.antonov), "No", "antonov", null));
 
-        TreeNode an124Node = null;
+        TreeNode an124Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an124), "No", "an124", AntonovAn124Ruslan.class));
+        TreeNode an72Node = null;
         if (verifyDarkMode().equals("Yes")) {
-            an124Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an124), "HighlightLight", "an124", null));
+            an72Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an72), "HighlightLight", "an72", null));
         } else {
-            an124Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an124), "HighlightDark", "an124", null));
+            an72Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an72), "HighlightDark", "an72", null));
         }
 
-        antonov.addChild(an124Node);
+        antonov.addChildren(an72Node, an124Node);
 
         TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.boeing), "No", "boeing", null));
         TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "B777", "No", "b777", null));

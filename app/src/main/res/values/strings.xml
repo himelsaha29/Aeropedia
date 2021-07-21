@@ -915,7 +915,7 @@
 
     <!--ANTONOV AN-72 CHEBURASHKA-->
     <string name="an72_type_value">Medium-transport, STOL</string>
-    <string name="an72_engine_value">Ivchenko-Progress\nMotor SichLotarev D-36</string>
+    <string name="an72_engine_value">Ivchenko-Progress\nMotor Sich Lotarev D-36</string>
     <string name="an72_first_flight_value">31 August 1977</string>
     <string name="an72_customer_value">Russian Air Force</string>
     <string name="an72_variants_value">6</string>

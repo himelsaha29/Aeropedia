@@ -724,7 +724,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/thrust4"
+                                    android:text="@string/thrust2"
                                     android:textColor="@color/black"
                                     android:textSize="17sp" />
 
