@@ -40,6 +40,7 @@
     <string name="length">Length</string>
     <string name="height">Height</string>
     <string name="fuselage">Fuselage</string>
+    <string name="gross_weight">Gross weight</string>
     <string name="mtow">MTOW</string>
     <string name="cruise_speed">Cruise speed</string>
     <string name="range">Range</string>
@@ -595,6 +596,38 @@
     <string name="beluga_range_value">3,450 / 3,600 nmi</string>
     <string name="beluga_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
     <!--AIRBUS BELUGA-->
+
+
+    <!--ANTONOV AN-124 RUSLAN-->
+    <string name="an124_type_value">Heavy transport</string>
+    <string name="an124_engine_value">Progress D-18T</string>
+    <string name="an124_first_flight_value">24 December 1982</string>
+    <string name="an124_intro_value">1986</string>
+    <string name="an124_customer_value">Russian Air Force</string>
+    <string name="an124_variants_value">TBD</string>
+
+    <string name="an124_desc1" formatted="false">\n</string>
+
+    <string name="an124_desc2" formatted="false">\n</string>
+
+    <string name="an124_desc3">\n \n</string>
+
+    <string name="an124_specs_constraint">(-100M variant)\n</string>
+
+
+    <string name="an124_identify">How to identify Antonov An-124 Ruslan?</string>
+    <string name="an124_identify_ans"></string>
+
+    <string name="an124_cockpit_value">6</string>
+    <string name="an124_wingspan_value">73.3 m</string>
+    <string name="an124_length_value">69.1 m</string>
+    <string name="an124_height_value">21.08 m</string>
+    <string name="an124_gross_weight_value">214 t with max. fuel</string>
+    <string name="an124_mtow_value">402 t</string>
+    <string name="an124_cruise_speed_value">800–850 km/h (typical),\n865 km/h (max.)</string>
+    <string name="an124_range_value">2,000 nmi (max. payload) /\n6,200 nmi (40 t payload)</string>
+    <string name="an124_thrust_value">229 kN</string>
+    <!--ANTONOV AN-124 RUSLAN-->
 
 
     <!--TREE VIEW REMOVE LATER -->
