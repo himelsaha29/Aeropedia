@@ -68,7 +68,7 @@
                             android:gravity="bottom"
                             android:text="@string/an124"
                             android:textColor="@color/white"
-                            android:textSize="38sp" />
+                            android:textSize="35sp" />
 
 
                     </androidx.cardview.widget.CardView>
