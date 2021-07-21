@@ -70,7 +70,7 @@ public class Antonov extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_airbus_light);
+            setContentView(R.layout.activity_antonov);
         } else {
             setContentView(R.layout.activity_airbus_dark);
         }

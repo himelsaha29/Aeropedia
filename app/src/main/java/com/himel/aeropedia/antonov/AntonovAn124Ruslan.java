@@ -58,9 +58,9 @@ public class AntonovAn124Ruslan extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_antonov_an124_ruslan);
+            setContentView(R.layout.activity_antonov_an124_ruslan_light);
         } else {
-            setContentView(R.layout.activity_airbus_a220_dark);
+            setContentView(R.layout.activity_antonov_an124_ruslan_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
@@ -350,11 +350,11 @@ public class AntonovAn124Ruslan extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.a220_slider01);
+                sliderItem.setImageLocation(R.drawable.an_124_raslan_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a220_slider02);
+                sliderItem.setImageLocation(R.drawable.an_124_raslan_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.a220_slider03);
+                sliderItem.setImageLocation(R.drawable.an_124_raslan_slider4);
             }
 
             sliderItemList.add(sliderItem);
