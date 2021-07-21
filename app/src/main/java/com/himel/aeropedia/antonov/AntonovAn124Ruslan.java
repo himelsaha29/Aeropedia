@@ -348,11 +348,11 @@ public class AntonovAn124Ruslan extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.an_124_raslan_slider1);
+                sliderItem.setImageLocation(R.drawable.antonov_an124_ruslan_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.an_124_raslan_slider2);
+                sliderItem.setImageLocation(R.drawable.antonov_an124_ruslan_slider02);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.an_124_raslan_slider4);
+                sliderItem.setImageLocation(R.drawable.antonov_an124_ruslan_slider03);
             }
 
             sliderItemList.add(sliderItem);

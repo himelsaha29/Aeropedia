@@ -56,7 +56,7 @@
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/an_124_raslan_cover" />
+                            android:src="@drawable/antonov_an124_ruslan_cover" />
 
                         <TextView
                             android:layout_width="match_parent"
