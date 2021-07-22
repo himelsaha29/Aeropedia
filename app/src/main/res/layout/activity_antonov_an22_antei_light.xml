@@ -631,7 +631,7 @@
                                     android:gravity="center"
                                     android:text="@string/an22_propellers_value"
                                     android:textColor="@color/black"
-                                    android:textSize="16sp" />
+                                    android:textSize="14sp" />
 
                             </LinearLayout>
 

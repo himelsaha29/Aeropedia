@@ -74,9 +74,9 @@ public class AntonovAn22Antei extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_antonov_an22_antei);
+            setContentView(R.layout.activity_antonov_an22_antei_light);
         } else {
-            setContentView(R.layout.activity_antonov_an72_cheburashka_dark);
+            setContentView(R.layout.activity_antonov_an22_antei_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
