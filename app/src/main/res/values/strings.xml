@@ -712,7 +712,8 @@
 
 
     <string name="a220_identify">How to identify Airbus A220?</string>
-    <string name="a220_identify_ans"></string>
+    <string name="a220_identify_ans">Sleek pointed nose with 4-piece windshield, 2 dual-wheel main landing gear, swept wings with sharp-angled winglets, fore
+        and aft cabin doors with an emergency exit over the wing.</string>
 
     <string name="a220_cockpit_value">2</string>
     <string name="a220_wingspan_value">35.10 m</string>
@@ -858,7 +859,7 @@
     <string name="an124_customer_value">Russian Air Force</string>
     <string name="an124_variants_value">8 (active)</string>
 
-    <string name="an124_desc1" formatted="false">The Antonov An-124 Ruslan is a large, strategic airlift, four-engined aircraft that was designed in the 1980s by
+    <string name="an124_desc1" formatted="false">The Antonov An-124 Ruslan (NATO reporting name: Condor) is a large, strategic airlift, four-engined aircraft that was designed in the 1980s by
         the Antonov design bureau in the Ukrainian SSR, then part of the Soviet Union (USSR). Until the Boeing 747-8F, the An-124 was, for thirty years, the world\'s
         heaviest gross weight production cargo airplane and second heaviest operating cargo aircraft, behind the one-off Antonov An-225 Mriya (a greatly enlarged
         design based on the An-124). The An-124 remains the largest military transport aircraft in service. During development it was known as Izdeliye 400 (Product #400)
@@ -899,7 +900,7 @@
 
 
     <string name="an124_identify">How to identify Antonov An-124 Ruslan?</string>
-    <string name="an124_identify_ans"></string>
+    <string name="an124_identify_ans">4 engines, wings attached to top part of the fuselage, no wingtips, single vertical stabilizer arrangement.</string>
 
     <string name="an124_cockpit_value">6</string>
     <string name="an124_wingspan_value">73.3 m</string>
@@ -945,7 +946,9 @@
 
 
     <string name="an72_identify">How to identify Antonov An-72 Cheburashka?</string>
-    <string name="an72_identify_ans"></string>
+    <string name="an72_identify_ans">Large engine intake ducts, that resemble the oversized ears of the popular Soviet animated character Cheburashka, 2 engines
+        attached above the wings, pointed nose, no wingtips, horizontal stabilizers attached to the top part of the tail with a pointed extension attached
+        to the front section of the tail on the same axis as the horizontal stabilizers.</string>
 
     <string name="an72_cockpit_value">5</string>
     <string name="an72_wingspan_value">31.89 m</string>
