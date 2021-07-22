@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".antonov.AntonovAn72Cheburashka"></activity>
+        <activity android:name=".antonov.AntonovAn22Antei"></activity>
+        <activity android:name=".antonov.AntonovAn72Cheburashka" />
         <activity android:name=".manufacturers.Antonov" />
         <activity android:name=".antonov.AntonovAn124Ruslan" />
         <activity android:name=".airbus.AirbusBeluga" />

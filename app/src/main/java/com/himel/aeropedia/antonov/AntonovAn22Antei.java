@@ -1,20 +1,19 @@
-package com.himel.aeropedia.manufacturers;
+package com.himel.aeropedia.antonov;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ScrollView;
 
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA220;
 import com.himel.aeropedia.airbus.AirbusA300;
@@ -31,17 +30,22 @@ import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.airbus.AirbusA380;
 import com.himel.aeropedia.airbus.AirbusBeluga;
 import com.himel.aeropedia.alexa.AlexaActivity;
-import com.himel.aeropedia.antonov.AntonovAn124Ruslan;
-import com.himel.aeropedia.antonov.AntonovAn22Antei;
-import com.himel.aeropedia.antonov.AntonovAn72Cheburashka;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
+import com.himel.aeropedia.util.SliderAdapter;
+import com.himel.aeropedia.util.SliderItem;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import io.alterac.blurkit.BlurLayout;
@@ -49,22 +53,19 @@ import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphImageButton;
 import soup.neumorphism.ShapeType;
 
-public class Antonov extends AppCompatActivity {
+public class AntonovAn22Antei extends AppCompatActivity {
 
     private NeumorphButton langToggle;
-
-    private CardView an124Card;
-    private CardView an72Card;
-    private CardView an22Card;
-    private Animation translate = null;
-    private ScrollView scrollView;
+    private Locale locale;
     private NeumorphImageButton darkToggle;
     private String enableDark;
     private String enableDarkOnCreate;
-    private Locale locale;
     private FlowingDrawer mDrawer;
     private BlurLayout blur;
     private AndroidTreeView tView;
+    private CollapsingToolbarLayout collapsingToolbarLayout;
+    private SliderView sliderView;
+    private SliderAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,25 +74,14 @@ public class Antonov extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_antonov_light);
+            setContentView(R.layout.activity_antonov_an22_antei);
         } else {
-            setContentView(R.layout.activity_antonov_dark);
+            setContentView(R.layout.activity_antonov_an72_cheburashka_dark);
         }
-        darkToggle = findViewById(R.id.dark_toggle);
-        scrollView = findViewById(R.id.main_scroll);
-        an124Card = findViewById(R.id.an124Card);
-        an72Card = findViewById(R.id.an72Card);
-        an22Card = findViewById(R.id.an22Card);
         langToggle = findViewById(R.id.lang_toggle);
+        darkToggle = findViewById(R.id.dark_toggle);
         mDrawer = findViewById(R.id.drawerlayout);
         blur = findViewById(R.id.blurLayout);
-
-
-        an124Card.getBackground().setAlpha(65);
-        an72Card.getBackground().setAlpha(65);
-        an22Card.getBackground().setAlpha(65);
-
-
 
         // setting NeumorphismButton shape based on state
         if (locale.toString().contains("en")) {
@@ -100,36 +90,13 @@ public class Antonov extends AppCompatActivity {
             langToggle.setShapeType(ShapeType.PRESSED);
         }
 
-        animateCards();
 
-        an124Card.setOnClickListener(new View.OnClickListener() {
+        Typeface tf = Typeface.createFromAsset(this.getAssets(), "fonts/maven_pro_medium.ttf");
+        collapsingToolbarLayout = findViewById(R.id.collapsing_bar);
+        collapsingToolbarLayout.setCollapsedTitleTypeface(tf);
+        collapsingToolbarLayout.setExpandedTitleTypeface(tf);
 
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AntonovAn124Ruslan.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-        an72Card.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AntonovAn72Cheburashka.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-        an22Card.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AntonovAn22Antei.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
+        slideView();
 
 
         langToggle.setOnClickListener(new View.OnClickListener() {
@@ -171,7 +138,7 @@ public class Antonov extends AppCompatActivity {
         });
 
 
-        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_FULLSCREEN);
+        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
         mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
             @Override
             public void onDrawerStateChange(int oldState, int newState) {
@@ -194,14 +161,8 @@ public class Antonov extends AppCompatActivity {
         });
 
         createTreeView();
-
     }
 
-    @Override
-    public void finish() {
-        super.finish();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-    }
 
     @Override
     protected void onRestart() {
@@ -211,7 +172,6 @@ public class Antonov extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            //createTreeView();
         }
         else if (!locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
@@ -222,7 +182,6 @@ public class Antonov extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            //createTreeView();
         }
 
         if(mDrawer.getDrawerState() == ElasticDrawer.STATE_OPEN) {
@@ -230,19 +189,8 @@ public class Antonov extends AppCompatActivity {
             blur.setVisibility(View.GONE);
             blur.setAlpha(0f);
         }
-
-        scrollView = findViewById(R.id.main_scroll);
-        scrollView.scrollTo(0, scrollView.getTop());
-        animateCards();
     }
 
-
-    private void animateCards() {
-        translate = AnimationUtils.loadAnimation(this, R.anim.animation);
-        an124Card.setAnimation(translate);
-        an72Card.setAnimation(translate);
-        an22Card.setAnimation(translate);
-    }
 
     /** Changing app language **/
 
@@ -269,6 +217,12 @@ public class Antonov extends AppCompatActivity {
     }
 
     /** Changing app language **/
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 
     /** Dark mode **/
 
@@ -338,17 +292,15 @@ public class Antonov extends AppCompatActivity {
 
         airbus.addChildren(a220Node, a300Node, a310Node, a318Node, a319Node, a320Node, a321Node, a320neoNode, a330Node, a330neoNode, a340Node, a350Node, a380Node, belugaNode);
 
-        TreeNode antonov = null;
-        if (verifyDarkMode().equals("Yes")) {
-            antonov = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.antonov), "HighlightLight", "antonov", null));
-        } else {
-            antonov = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.antonov), "HighlightDark", "antonov", null));
-        }
-
+        TreeNode antonov = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.antonov), "No", "antonov", null));
 
         TreeNode an124Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an124), "No", "an124", AntonovAn124Ruslan.class));
-        TreeNode an72Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an72), "No", "an72", AntonovAn72Cheburashka.class));
-
+        TreeNode an72Node = null;
+        if (verifyDarkMode().equals("Yes")) {
+            an72Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an72), "HighlightLight", "an72", null));
+        } else {
+            an72Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an72), "HighlightDark", "an72", null));
+        }
 
         antonov.addChildren(an72Node, an124Node);
 
@@ -385,4 +337,63 @@ public class Antonov extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
+    /** SlideView **/
+
+    private void slideView() {
+
+        sliderView = findViewById(R.id.imageSlider);
+
+        adapter = new SliderAdapter(this);
+        sliderView.setSliderAdapter(adapter, false);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        sliderView.setIndicatorSelectedColor(Color.WHITE);
+        sliderView.setIndicatorUnselectedColor(Color.GRAY);
+        sliderView.setScrollTimeInSec(3);
+        sliderView.setAutoCycle(false);
+        renewItems(sliderView);
+
+
+        sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
+            @Override
+            public void onIndicatorClicked(int position) {
+                Log.i("GGG", "onIndicatorClicked: " + sliderView.getCurrentPagePosition());
+            }
+        });
+    }
+
+    private void renewItems(View view) {
+        List<SliderItem> sliderItemList = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            SliderItem sliderItem = new SliderItem();
+            if (i == 0) {
+                sliderItem.setImageLocation(R.drawable.antonov_an72_cheburashka_slider1);
+            } else if (i == 1) {
+                sliderItem.setImageLocation(R.drawable.antonov_an72_cheburashka_slider2);
+            } else if (i == 2) {
+                sliderItem.setImageLocation(R.drawable.antonov_an72_cheburashka_slider3);
+            } else if (i == 3) {
+                sliderItem.setImageLocation(R.drawable.antonov_an72_cheburashka_slider4);
+            }
+
+            sliderItemList.add(sliderItem);
+        }
+        adapter.renewItems(sliderItemList);
+    }
+
+    private void removeLastItem(View view) {
+        if (adapter.getCount() - 1 >= 0)
+            adapter.deleteItem(adapter.getCount() - 1);
+    }
+
+    private void addNewItem(View view) {
+        SliderItem sliderItem = new SliderItem();
+        //sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        adapter.addItem(sliderItem);
+    }
+
+    /** SlideView **/
+
 }
