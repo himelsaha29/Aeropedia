@@ -76,7 +76,7 @@ public class AntonovAn225Mriya extends AppCompatActivity {
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_antonov_an225_mriya_light);
         } else {
-            setContentView(R.layout.activity_antonov_an22_antei_dark);
+            setContentView(R.layout.activity_antonov_an225_mriya_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
