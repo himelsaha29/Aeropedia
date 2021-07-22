@@ -288,7 +288,7 @@
 
     <!--AIRBUS A330neo-->
     <string name="a330neo_type_value">Wide-body</string>
-    <string name="a330neo_engine_value">Rolls-Royce Trent 7000</string>
+    <string name="a330neo_engine_value">Rolls-Royce Trent 7000 (2)</string>
     <string name="a330neo_first_flight_value">19 October 2017</string>
     <string name="a330neo_intro_value">15 December 2018\nwith TAP Air Portugal</string>
     <string name="a330neo_customer_value">TAP Air Portugal</string>
@@ -339,7 +339,7 @@
 
     <!--AIRBUS A321-->
     <string name="a321_type_value">Narrow-body</string>
-    <string name="a321_engine_value">CFM56 /\nIAE V2500</string>
+    <string name="a321_engine_value">CFM56 /\nIAE V2500 (2)</string>
     <string name="a321_first_flight_value">11 March 1993</string>
     <string name="a321_intro_value">1994 with\nLufthansa</string>
     <string name="a321_customer_value">American Airlines</string>
@@ -391,7 +391,7 @@
 
     <!--AIRBUS A320-->
     <string name="a320_type_value">Narrow-body</string>
-    <string name="a320_engine_value">CFM56 /\nIAE V2500</string>
+    <string name="a320_engine_value">CFM56 /\nIAE V2500 (2)</string>
     <string name="a320_first_flight_value">22 February 1987</string>
     <string name="a320_intro_value">18 April 1988\nwith Air France</string>
     <string name="a320_customer_value">China Eastern Airlines</string>
@@ -444,7 +444,7 @@
 
     <!--AIRBUS A319-->
     <string name="a319_type_value">Narrow-body</string>
-    <string name="a319_engine_value">CFM56 /\nIAE V2500</string>
+    <string name="a319_engine_value">CFM56 /\nIAE V2500 (2)</string>
     <string name="a319_first_flight_value">25 August 1995</string>
     <string name="a319_intro_value">1996 with\nSwissair</string>
     <string name="a319_customer_value">American Airlines</string>
@@ -494,7 +494,7 @@
 
     <!--AIRBUS A318-->
     <string name="a318_type_value">Narrow-body</string>
-    <string name="a318_engine_value">CFM56 /\nP&amp;W PW6000</string>
+    <string name="a318_engine_value">CFM56 /\nP&amp;W PW6000 (2)</string>
     <string name="a318_first_flight_value">15 January 2002</string>
     <string name="a318_intro_value">2003 with\nFrontier Airlines</string>
     <string name="a318_customer_value">Air France</string>
@@ -549,7 +549,7 @@
 
     <!--AIRBUS A310-->
     <string name="a310_type_value">Wide-body</string>
-    <string name="a310_engine_value">GE CF6 /\nP&amp;W JT9D / PW4000</string>
+    <string name="a310_engine_value">GE CF6 /\nP&amp;W JT9D / PW4000 (2)</string>
     <string name="a310_first_flight_value">3 April 1982</string>
     <string name="a310_intro_value">April 1983\nwith Swissair</string>
     <string name="a310_customer_value">FedEx Express</string>
@@ -606,7 +606,7 @@
 
     <!--AIRBUS A300-->
     <string name="a300_type_value">Wide-body</string>
-    <string name="a300_engine_value">GE CF6 / P&amp;W JT9D (-B4-200),\nGE CF6 / P&amp;W PW4158 (-600R/F)</string>
+    <string name="a300_engine_value">GE CF6 / P&amp;W JT9D (-B4-200),\nGE CF6 / P&amp;W PW4158 (-600R/F) (2)</string>
     <string name="a300_first_flight_value">28 October 1972</string>
     <string name="a300_intro_value">23 May 1974 with Air France</string>
     <string name="a300_customer_value">FedEx Express</string>
@@ -668,7 +668,7 @@
 
     <!--AIRBUS A220-->
     <string name="a220_type_value">Narrow-body</string>
-    <string name="a220_engine_value">Pratt &amp; Whitney\nPW1500G</string>
+    <string name="a220_engine_value">Pratt &amp; Whitney\nPW1500G (2)</string>
     <string name="a220_first_flight_value">16 September 2013</string>
     <string name="a220_intro_value">15 July 2016 with\nSwiss International Air Lines</string>
     <string name="a220_customer_value">Delta Air Lines</string>
@@ -734,7 +734,7 @@
 
     <!--AIRBUS BELUGA-->
     <string name="beluga_type_value">Outsize cargo freight</string>
-    <string name="beluga_engine_value">General Electric CF6</string>
+    <string name="beluga_engine_value">General Electric CF6 (2)</string>
     <string name="beluga_first_flight_value">13 September 1994</string>
     <string name="beluga_intro_value">September 1995</string>
     <string name="beluga_variants_value">1</string>
@@ -803,7 +803,7 @@
 
     <!--AIRBUS A320neo FAMILY-->
     <string name="a320neo_type_value">Narrow-body</string>
-    <string name="a320neo_engine_value">CFM LEAP-1A /\nPratt &amp; Whitney PW1100G</string>
+    <string name="a320neo_engine_value">CFM LEAP-1A /\nPratt &amp; Whitney PW1100G (2)</string>
     <string name="a320neo_first_flight_value">25 September 2014</string>
     <string name="a320neo_intro_value">25 January 2016\nwith Lufthansa</string>
     <string name="a320neo_customer_value">IndiGo</string>
@@ -858,7 +858,7 @@
 
     <!--ANTONOV AN-124 RUSLAN-->
     <string name="an124_type_value">Heavy transport</string>
-    <string name="an124_engine_value">Motor Sich\nProgress D-18T</string>
+    <string name="an124_engine_value">Motor Sich\nProgress D-18T (4)</string>
     <string name="an124_first_flight_value">24 December 1982</string>
     <string name="an124_intro_value">1986</string>
     <string name="an124_customer_value">Russian Air Force</string>
@@ -921,7 +921,7 @@
 
     <!--ANTONOV AN-72 CHEBURASHKA-->
     <string name="an72_type_value">Medium-transport, STOL</string>
-    <string name="an72_engine_value">Ivchenko-Progress\nMotor Sich Lotarev D-36</string>
+    <string name="an72_engine_value">Ivchenko-Progress\nMotor Sich Lotarev D-36 (2)</string>
     <string name="an72_first_flight_value">31 August 1977</string>
     <string name="an72_customer_value">Russian Air Force</string>
     <string name="an72_variants_value">6</string>
@@ -968,7 +968,7 @@
 
     <!--ANTONOV AN-22 ANTEI-->
     <string name="an22_type_value">Strategic airlifter</string>
-    <string name="an22_engine_value">Kuznetsov NK-12MA\nturboprop</string>
+    <string name="an22_engine_value">Kuznetsov NK-12MA\nturboprop (4)</string>
     <string name="an22_first_flight_value">27 February 1965</string>
     <string name="an22_intro_value">1967</string>
     <string name="an22_customer_value">Soviet Air Force</string>
@@ -1025,7 +1025,7 @@
 
     <!--ANTONOV AN-225 MRIYA-->
     <string name="an225_type_value">Outsize cargo freight</string>
-    <string name="an225_engine_value">Motor Sich\nProgress D-18T</string>
+    <string name="an225_engine_value">Motor Sich\nProgress D-18T (6)</string>
     <string name="an225_first_flight_value">21 December 1988</string>
     <string name="an225_customer_value">Antonov Airlines</string>
     <string name="an225_variants_value">1</string>
@@ -1067,7 +1067,7 @@
         lighter, due to the materials used in its construction. In addition, the H-4 only flew once and for less than a minute, making the An-225 the largest
         aircraft in the world to fly multiple times.\n</string>
 
-    <string name="an225_desc3">\n \n</string>
+    <string name="an225_desc3">\n</string>
 
     <string name="an225_specs_constraint">()\n</string>
 
