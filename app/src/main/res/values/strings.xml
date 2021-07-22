@@ -52,6 +52,7 @@
     <string name="range">Range</string>
     <string name="thrust2">Thrust (2x)</string>
     <string name="thrust4">Thrust (4x)</string>
+    <string name="thrust6">Thrust (6x)</string>
     <string name="propellers">Propellers</string>
     <string name="shaft_horse_power">Shaft Horse Power</string>
     <!--BASICS-->
@@ -1020,6 +1021,70 @@
     <string name="an22_range_value">2,700 nmi with max. payload\n5,910 nmi with max. fuel, 45 t payload</string>
     <string name="an22_shaft_horse_power_value">15,000 shp</string>
     <!--ANTONOV AN-22 ANTEI-->
+
+
+    <!--ANTONOV AN-225 MRIYA-->
+    <string name="an225_type_value">Outsize cargo freight</string>
+    <string name="an225_engine_value">Motor Sich\nProgress D-18T</string>
+    <string name="an225_first_flight_value">21 December 1988</string>
+    <string name="an225_customer_value">Antonov Airlines</string>
+    <string name="an225_variants_value">1</string>
+
+    <string name="an225_desc1" formatted="false">The Antonov An-225 Mriya (NATO reporting name: Cossack) is a strategic airlift cargo aircraft that was designed by
+        the Antonov Design Bureau in the Ukrainian SSR within the Soviet Union during the 1980s. It is powered by six turbofan engines and is the heaviest aircraft
+        ever built, with a maximum takeoff weight of 640 tonnes (705 short tons). It also has the largest wingspan of any aircraft in operational service. The
+        single example built in 1985 has the Ukrainian civil registration UR-82060. A second airframe with a slightly different configuration was partially built. Its
+        construction was halted in 1994 because of lack of funding and interest, but revived briefly in 2009, bringing it to 60–70% completion. On 30 August 2016,
+        Antonov agreed to complete the second airframe for Airspace Industry Corporation of China (not Aviation Industry Corporation of China) as a
+        prelude to commencing series production.\n\nThe Antonov An-225 was designed to airlift the Energia rocket\'s boosters and the Buran-class orbiters for the
+        Soviet space program. It was developed as a replacement for the Myasishchev VM-T. The An-225\'s original mission and objectives are almost identical to that
+        of the United States\' Shuttle Carrier Aircraft. The lead designer of the An-225 (and the An-124) was Viktor Tolmachev. The An-225 first flew on 21 December
+        1988. It was on static display at the Paris Air Show in 1989, and it flew during the public days at the Farnborough Air Show in 1990. Two aircraft were
+        ordered, but only one An-225, (registration CCCP-82060, later UR-82060) was finished. It can carry ultra-heavy and oversized freight weighing up
+        to 250,000 kg (550,000 lb) internally or 200,000 kg (440,000 lb) on the upper fuselage. Cargo on the upper fuselage can be 70 m (230 ft) long. The second An-225
+        was partially built during the late 1980s for the Soviet space program. Following the collapse of the Soviet Union in 1991 and the cancellation of the
+        Buran program, the lone operational An-225 was placed in storage in 1994. The six Ivchenko-Progress engines were removed for use on An-124s, and the second
+        uncompleted An-225 airframe was also stored. In the 1990s, a cargoliner bigger than the An-124 was clearly needed. The first An-225 was restored
+        by 2001.\n\nBy 2000, the need for additional An-225 capacity had become apparent, so the decision was made in September 2006 to complete the second An-225. That
+        second airframe was scheduled for completion around 2008, then delayed. By August 2009, the aircraft had not been completed and work had been abandoned. In May
+        2011, the Antonov CEO reportedly said that the completion of a second An-225 Mriya transport aircraft with a carrying capacity of 250 tons requires at least
+        $300 million, but if the financing is provided, its completion could be achieved in three years. According to different sources, the second aircraft
+        is 60–70% complete.\n</string>
+
+    <string name="an225_desc2" formatted="false">Based on Antonov\'s earlier An-124, the An-225 has fuselage barrel extensions added fore and aft of the wings. The
+        wings also received root extensions to increase span. The wings are anhedral. The flight control surfaces are controlled via fly-by-wire and triple-redundant
+        hydraulics. Two more Progress D-18T turbofan engines were added to the new wing roots, bringing the total to six. An increased-capacity landing gear system
+        with 32 wheels was designed, some of which are steerable, enabling the aircraft to turn within a 60-metre-wide (200 ft) runway. Like its An-124 predecessor, the
+        An-225 has nose gear designed to "kneel" so cargo can be more easily loaded and unloaded. Unlike the An-124, which has a rear cargo door and ramp, the
+        An-225 design left these off to save weight, and the empennage design was changed from a single vertical stabilizer to a twin tail with an oversized, swept-back
+        horizontal stabilizer. The twin tail was essential to enable the plane to carry large, heavy external loads that would disturb the airflow around a conventional
+        tail. Unlike the An-124, the An-225 was not intended for tactical airlifting and is not designed for short-field operation.\n\nInitially, the An-225 had a
+        maximum gross weight of 600 t (660 short tons; 590 long tons), but from 2000 to 2001, the aircraft underwent modifications at a cost of US$20M such as
+        the addition of a reinforced floor, which increased the maximum gross weight to 640 t (710 short tons; 630 long tons). Both the earlier and later takeoff
+        weights establish the An-225 as the world\'s heaviest aircraft, being heavier than the double-deck Airbus A380. It is surpassed in other size-related
+        categories, but Airbus claims to have improved upon the An-225\'s maximum landing weight by landing an A380 at 591.7 tonnes (1,304,000 lb) during tests, and
+        the Hughes H-4 Hercules, known as the Spruce Goose, has a greater wingspan and a greater overall height, but the Spruce Goose is 20% shorter and overall
+        lighter, due to the materials used in its construction. In addition, the H-4 only flew once and for less than a minute, making the An-225 the largest
+        aircraft in the world to fly multiple times.\n</string>
+
+    <string name="an225_desc3">\n \n</string>
+
+    <string name="an225_specs_constraint">()\n</string>
+
+
+    <string name="an225_identify">How to identify Antonov An-225 Mriya?</string>
+    <string name="an225_identify_ans">The world’s largest cargo aircraft with 6 engines, twin tails, massive fuselage and no wingtips doesn\'t need anything
+        extra to be recognized.</string>
+
+    <string name="an225_cockpit_value">6</string>
+    <string name="an225_wingspan_value">88.4 m</string>
+    <string name="an225_length_value">84.0 m</string>
+    <string name="an225_height_value">18.1 m</string>
+    <string name="an225_mtow_value">640 t</string>
+    <string name="an225_cruise_speed_value">800 km/h (typical),\n850 km/h (max.)</string>
+    <string name="an225_range_value">8,300 nmi with maximum fuel</string>
+    <string name="an225_thrust_value">229.5 kN</string>
+    <!--ANTONOV AN-225 MRIYA-->
 
 
     <string name="status_listening">LISTENING…</string>

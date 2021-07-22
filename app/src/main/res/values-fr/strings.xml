@@ -52,6 +52,7 @@
     <string name="range">Range</string>
     <string name="thrust2">Thrust (2x)</string>
     <string name="thrust4">Thrust (4x)</string>
+    <string name="thrust6">Thrust (6x)</string>
     <string name="propellers">Propellers</string>
     <string name="shaft_horse_power">Shaft Horse Power</string>
     <!--BASICS-->
@@ -697,6 +698,35 @@
     <string name="an22_shaft_horse_power_value">15,000 shp</string>
     <!--ANTONOV AN-22 ANTEI-->
 
+
+    <!--ANTONOV AN-225 MRIYA-->
+    <string name="an225_type_value">Narrow-body</string>
+    <string name="an225_engine_value">Pratt &amp; Whitney\nPW1500G</string>
+    <string name="an225_first_flight_value">16 September 2013</string>
+    <string name="an225_customer_value">Delta Air Lines</string>
+    <string name="an225_variants_value">3</string>
+
+    <string name="an225_desc1" formatted="false">\n</string>
+
+    <string name="an225_desc2" formatted="false">\n</string>
+
+    <string name="an225_desc3">\n \n</string>
+
+    <string name="an225_specs_constraint">()\n</string>
+
+
+    <string name="an225_identify">How to identify Antonov An-225 Mriya?</string>
+    <string name="an225_identify_ans"></string>
+
+    <string name="an225_cockpit_value">2</string>
+    <string name="an225_wingspan_value">35.10 m</string>
+    <string name="an225_length_value">35.0 / 38.70 m</string>
+    <string name="an225_height_value">11.50 m</string>
+    <string name="an225_mtow_value">63.1 / 70.9 t</string>
+    <string name="an225_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="an225_range_value">3,450 / 3,600 nmi</string>
+    <string name="an225_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
+    <!--ANTONOV AN-225 MRIYA-->
 
 
     <string name="status_listening">"écoute"…</string>
