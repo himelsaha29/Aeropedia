@@ -32,7 +32,7 @@
                 android:fitsSystemWindows="true"
                 app:contentScrim="@android:color/transparent"
                 app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-                app:title="@string/a220">
+                app:title="@string/an22">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -45,7 +45,7 @@
                         android:layout_marginStart="0dp"
                         android:layout_marginTop="0dp"
                         android:layout_marginEnd="0dp"
-                        android:background="@drawable/a220_main"
+                        android:background="@drawable/antonov_an22_antei_main"
                         android:scaleType="centerCrop"
                         app:layout_collapseMode="parallax"
                         app:layout_constraintDimensionRatio="H, 16:9"
@@ -132,7 +132,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a220_type_value"
+                                android:text="@string/an22_type_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -164,7 +164,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a220_engine_value"
+                                android:text="@string/an22_engine_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -196,7 +196,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a220_first_flight_value"
+                                android:text="@string/an22_first_flight_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -227,7 +227,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a220_intro_value"
+                                android:text="@string/an22_intro_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -259,7 +259,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a220_variants_value"
+                                android:text="@string/an22_variants_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -290,7 +290,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/a220_customer_value"
+                                android:text="@string/an22_customer_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -308,7 +308,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a220_desc1"
+                    android:text="@string/an22_desc1"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -355,7 +355,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a220_desc2"
+                    android:text="@string/an22_desc2"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -376,7 +376,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a220_specs_constraint"
+                    android:text="@string/an22_specs_constraint"
                     android:textColor="@color/colorPrimary"
                     android:textSize="12sp" />
 
@@ -434,7 +434,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_cockpit_value"
+                                    android:text="@string/an22_cockpit_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -483,7 +483,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_wingspan_value"
+                                    android:text="@string/an22_wingspan_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -532,7 +532,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_length_value"
+                                    android:text="@string/an22_length_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -580,7 +580,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_height_value"
+                                    android:text="@string/an22_height_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -609,7 +609,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/fuselage"
+                                    android:text="@string/propellers"
                                     android:textColor="@color/black"
                                     android:textSize="17sp" />
 
@@ -629,7 +629,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_fuselage_value"
+                                    android:text="@string/an22_propellers_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -678,7 +678,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_mtow_value"
+                                    android:text="@string/an22_mtow_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -727,7 +727,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_cruise_speed_value"
+                                    android:text="@string/an22_cruise_speed_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -775,7 +775,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_range_value"
+                                    android:text="@string/an22_range_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -804,7 +804,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/thrust2"
+                                    android:text="@string/shaft_horse_power"
                                     android:textColor="@color/black"
                                     android:textSize="17sp" />
 
@@ -824,7 +824,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/a220_thrust_value"
+                                    android:text="@string/an22_shaft_horse_power_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -843,7 +843,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/a220_desc3"
+                    android:text="@string/an22_desc3"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -854,7 +854,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="3dp"
-                    android:text="@string/a220_identify"
+                    android:text="@string/an22_identify"
                     android:textColor="@color/colorPrimary"
                     android:textSize="26sp" />
 
@@ -865,7 +865,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="12dp"
-                    android:text="@string/a220_identify_ans"
+                    android:text="@string/an22_identify_ans"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 

@@ -51,6 +51,8 @@
     <string name="range">Range</string>
     <string name="thrust2">Thrust (2x)</string>
     <string name="thrust4">Thrust (4x)</string>
+    <string name="propellers">Propellers</string>
+    <string name="shaft_horse_power">Shaft Horse Power</string>
     <!--BASICS-->
 
     <!--AIRBUS A350-->
@@ -661,6 +663,38 @@
     <string name="an72_range_value">2,000 nmi (max. payload) /\n6,200 nmi (40 t payload)</string>
     <string name="an72_thrust_value">229 kN</string>
     <!--ANTONOV AN-72 CHEBURASHKA-->
+
+
+    <!--ANTONOV AN-22 ANTEI-->
+    <string name="an22_type_value">Strategic airlifter</string>
+    <string name="an22_engine_value">Kuznetsov NK-12MA\nturboprop</string>
+    <string name="an22_first_flight_value">27 February 1965</string>
+    <string name="an22_intro_value">1967</string>
+    <string name="an22_customer_value">Soviet Air Force</string>
+    <string name="an22_variants_value">TBD</string>
+
+    <string name="an22_desc1" formatted="false">\n</string>
+
+    <string name="an22_desc2" formatted="false">\n</string>
+
+    <string name="an22_desc3">\n \n</string>
+
+    <string name="an22_specs_constraint">()\n</string>
+
+
+    <string name="an22_identify">How to identify Antonov An-22 Antei?</string>
+    <string name="an22_identify_ans"></string>
+
+    <string name="an22_cockpit_value">5-6</string>
+    <string name="an22_wingspan_value">64.4 m</string>
+    <string name="an22_length_value">57.92 m approx.\n(dependent on nose config.)</string>
+    <string name="an22_height_value">12.53 m</string>
+    <string name="an22_propellers_value">8-bladed contra-rotating constant-\nspeed reversible-pitch propeller</string>
+    <string name="an22_mtow_value">250 t</string>
+    <string name="an22_cruise_speed_value">580 km/h (typical),\n740 km/h (max.)</string>
+    <string name="an22_range_value">2,700 nmi with max. payload\n5,910 nmi with max. fuel, 45 t payload</string>
+    <string name="an22_shaft_horse_power_value">15,000 shp</string>
+    <!--ANTONOV AN-22 ANTEI-->
 
 
 

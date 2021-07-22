@@ -51,6 +51,8 @@
     <string name="range">Range</string>
     <string name="thrust2">Thrust (2x)</string>
     <string name="thrust4">Thrust (4x)</string>
+    <string name="propellers">Propellers</string>
+    <string name="shaft_horse_power">Shaft Horse Power</string>
     <!--BASICS-->
 
     <!--AIRBUS A350-->
@@ -960,6 +962,63 @@
     <string name="an72_range_value">2,336 nmi</string>
     <string name="an72_thrust_value">62.75 kN</string>
     <!--ANTONOV AN-72 CHEBURASHKA-->
+
+
+    <!--ANTONOV AN-22 ANTEI-->
+    <string name="an22_type_value">Strategic airlifter</string>
+    <string name="an22_engine_value">Kuznetsov NK-12MA\nturboprop</string>
+    <string name="an22_first_flight_value">27 February 1965</string>
+    <string name="an22_intro_value">1967</string>
+    <string name="an22_customer_value">Soviet Air Force</string>
+    <string name="an22_variants_value">4 (active)</string>
+
+    <string name="an22_desc1" formatted="false">The Antonov An-22 Antei (NATO reporting name: Cock) is a heavy military transport aircraft designed by the
+        Antonov Design Bureau in the Soviet Union. Powered by four turboprop engines each driving a pair of contra-rotating propellers, the design was the first
+        wide-body transport aircraft and remains the world\'s largest turboprop-powered aircraft to date. The An-22 first appeared publicly outside the Soviet Union
+        at the 1965 Paris Air Show. Thereafter, the model saw extensive use in major military and humanitarian airlifts for the Soviet Union, and is still in service
+        with the Russian Air Force. During its production phase from 1966 to 1976, a total of 68 An-22s were built.\n\nIn the late 1950s, the Soviet Union required a
+        large military transport aircraft to supplement the Antonov An-8 and An-12s then entering service. Originally known as the An-20, the model is a conventional
+        multi-engined high-wing design. In the early 1960s, the Antonov bureau produced a wooden mock up at its Kyiv, Ukraine, workshops of what was designated the
+        Model 100. The prototype, now designated the An-22, was rolled out on 18 August 1964 and first flew on 27 February 1965. The prototype was given the name
+        Antaeus (sometimes misspelled Antheus) and, after four-months of test flying, was displayed at the 1965 Paris Air Show. All aircraft were built at the
+        Tashkent State Aircraft Factory and the first military delivery was made to the Air Transport Wing at Ivanovo Airbase in 1969. The aircraft was designed as a
+        strategic airlifter, designed specifically to expand the Soviet Airborne Troops\' capability to land with their then-new BMD-1 armoured vehicles. The An-22
+        cargo hold can accommodate four BMD-1s compared to only one in the An-12. \n</string>
+
+    <string name="an22_desc2" formatted="false">It has the capability to takeoff from austere, unpaved, and short airstrips, allowing airborne troops to perform
+        air-landing operations. This is achieved by four pairs of contra-rotating propellers, similar to those on the Tupolev Tu-114. The propellers and exhaust
+        from the engines produce a slipstream over the wings and large double-slotted flaps. The landing gear is ruggedized for rough airstrips. In early versions
+        tire pressures could be adjusted in flight for optimum landing performance. That feature was removed in later models. The An-22 follows traditional cargo
+        transport design with a high-mounted wing allowing a large cargo space of 33 m in length and a usable volume of 639 m³. The forward fuselage is fully
+        pressurized and provides space for 5 to 8 crew and up to 28 passengers, but the cargo space is pressurized to only 3.55 PSI / 0.245 bar allowing for a
+        lighter airframe. A door equipped with pressure bulkhead is located at frame 14, separating the cargo attendant\'s compartment from the main cargo compartment. This
+        allows the rear cargo doors to be opened during flight for paratroops and equipment drop. Like the An-12, the aircraft has a circular fuselage section. The
+        An-22 has set a number of payload and payload-to-height world records.\n\nThe An-22 has the general appearance of an enlarged version of the earlier Antonov
+        An-12 except that it is fitted with a twin tail. This gives the An-22 better engine-out performance, and reduces height restrictions for hangars. Also of
+        note are large anti-flutter masses on the top of each tail. Only one production variant was built, the standard An-22. Prototypes, such as the one first
+        featured at the 1965 Paris Air Show had fully glazed noses that lacked the nose-mounted radar of production models. Those aircraft had the radar mounted below
+        the right wheel well fairing, forward of the wheels. Antonov designated a variant with a modified electrical system and an additional augmented flight control
+        system the An-22A but the designation was not used by the military.\n</string>
+
+    <string name="an22_desc3">\nAntonov An-22 variants include An-22 (the original prototype), another An-22 with external start system, Amphibious An-22 - an amphibian
+        version of the An-22 that did not progress past the scale model phase, An-22A, and An-22PZ.\n</string>
+
+    <string name="an22_specs_constraint">(-22)\n</string>
+
+
+    <string name="an22_identify">How to identify Antonov An-22 Antei?</string>
+    <string name="an22_identify_ans"></string>
+
+    <string name="an22_cockpit_value">5-6</string>
+    <string name="an22_wingspan_value">64.4 m</string>
+    <string name="an22_length_value">57.92 m approx.\n(dependent on nose config.)</string>
+    <string name="an22_height_value">12.53 m</string>
+    <string name="an22_propellers_value">8-bladed contra-rotating constant-\nspeed reversible-pitch propeller</string>
+    <string name="an22_mtow_value">250 t</string>
+    <string name="an22_cruise_speed_value">580 km/h (typical),\n740 km/h (max.)</string>
+    <string name="an22_range_value">2,700 nmi with max. payload\n5,910 nmi with max. fuel, 45 t payload</string>
+    <string name="an22_shaft_horse_power_value">15,000 shp</string>
+    <!--ANTONOV AN-22 ANTEI-->
 
 
     <string name="status_listening">LISTENING…</string>

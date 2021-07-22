@@ -295,14 +295,15 @@ public class AntonovAn22Antei extends AppCompatActivity {
         TreeNode antonov = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.antonov), "No", "antonov", null));
 
         TreeNode an124Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an124), "No", "an124", AntonovAn124Ruslan.class));
-        TreeNode an72Node = null;
+        TreeNode an72Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an72), "No", "an72", AntonovAn72Cheburashka.class));
+        TreeNode an22Node = null;
         if (verifyDarkMode().equals("Yes")) {
-            an72Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an72), "HighlightLight", "an72", null));
+            an22Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an22), "HighlightLight", "an22", null));
         } else {
-            an72Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an72), "HighlightDark", "an72", null));
+            an22Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an22), "HighlightDark", "an22", null));
         }
 
-        antonov.addChildren(an72Node, an124Node);
+        antonov.addChildren(an22Node, an72Node, an124Node);
 
         TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.boeing), "No", "boeing", null));
         TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "B777", "No", "b777", null));
@@ -369,13 +370,13 @@ public class AntonovAn22Antei extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.antonov_an72_cheburashka_slider1);
+                sliderItem.setImageLocation(R.drawable.antonov_an22_antei_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.antonov_an72_cheburashka_slider2);
+                sliderItem.setImageLocation(R.drawable.antonov_an22_antei_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.antonov_an72_cheburashka_slider3);
+                sliderItem.setImageLocation(R.drawable.antonov_an22_antei_slider3);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.antonov_an72_cheburashka_slider4);
+                sliderItem.setImageLocation(R.drawable.antonov_an22_antei_slider4);
             }
 
             sliderItemList.add(sliderItem);
