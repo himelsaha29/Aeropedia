@@ -972,7 +972,7 @@
     <string name="an22_customer_value">Soviet Air Force</string>
     <string name="an22_variants_value">4 (active)</string>
 
-    <string name="an22_desc1" formatted="false">The Antonov An-22 Antei (NATO reporting name: Cock) is a heavy military transport aircraft designed by the
+    <string name="an22_desc1" formatted="false">The Antonov An-22 Antei (NATO reporting name: Cock),the world’s largest turboprop aircraft, is a heavy military transport aircraft designed by the
         Antonov Design Bureau in the Soviet Union. Powered by four turboprop engines each driving a pair of contra-rotating propellers, the design was the first
         wide-body transport aircraft and remains the world\'s largest turboprop-powered aircraft to date. The An-22 first appeared publicly outside the Soviet Union
         at the 1965 Paris Air Show. Thereafter, the model saw extensive use in major military and humanitarian airlifts for the Soviet Union, and is still in service
@@ -1007,7 +1007,7 @@
 
 
     <string name="an22_identify">How to identify Antonov An-22 Antei?</string>
-    <string name="an22_identify_ans"></string>
+    <string name="an22_identify_ans">4 turboprop engines, glass nose, no wingtips, twin tails with pointed extensions at the top, wings attached to the top part of fuselage.</string>
 
     <string name="an22_cockpit_value">5-6</string>
     <string name="an22_wingspan_value">64.4 m</string>
