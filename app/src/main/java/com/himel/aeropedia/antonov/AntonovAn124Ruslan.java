@@ -30,6 +30,7 @@ import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.airbus.AirbusA380;
 import com.himel.aeropedia.airbus.AirbusBeluga;
 import com.himel.aeropedia.alexa.AlexaActivity;
+import com.himel.aeropedia.boeing.Boeing737;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.manufacturers.ManufacturerMenu;
@@ -310,7 +311,8 @@ public class AntonovAn124Ruslan extends AppCompatActivity {
         TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.boeing), "No", "boeing", null));
         TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "B777", "No", "b777", null));
         TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "B787", "No", "b787", null));
-        boeing.addChildren(b777, b787);
+        TreeNode b737 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b737), "No", "b737", Boeing737.class));
+        boeing.addChildren(b737, b777, b787);
 
         manufacturerRoot.addChildren(airbus, boeing, antonov);
 

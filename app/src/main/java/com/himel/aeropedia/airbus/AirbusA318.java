@@ -20,6 +20,7 @@ import com.himel.aeropedia.antonov.AntonovAn124Ruslan;
 import com.himel.aeropedia.antonov.AntonovAn225Mriya;
 import com.himel.aeropedia.antonov.AntonovAn22Antei;
 import com.himel.aeropedia.antonov.AntonovAn72Cheburashka;
+import com.himel.aeropedia.boeing.Boeing737;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
@@ -299,8 +300,8 @@ public class AirbusA318 extends AppCompatActivity {
         TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.boeing), "No", "boeing", null));
         TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "B777", "No", "b777", null));
         TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "B787", "No", "b787", null));
-        boeing.addChildren(b777, b787);
-
+        TreeNode b737 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b737), "No", "b737", Boeing737.class));
+        boeing.addChildren(b737, b777, b787);
         manufacturerRoot.addChildren(airbus, boeing, antonov);
 
         root.addChildren(manufacturerRoot);

@@ -31,6 +31,7 @@ import com.himel.aeropedia.airbus.AirbusA380;
 import com.himel.aeropedia.airbus.AirbusBeluga;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.antonov.AntonovAn124Ruslan;
+import com.himel.aeropedia.antonov.AntonovAn225Mriya;
 import com.himel.aeropedia.antonov.AntonovAn22Antei;
 import com.himel.aeropedia.antonov.AntonovAn72Cheburashka;
 import com.himel.aeropedia.firebase.Firebase;
@@ -300,19 +301,20 @@ public class Boeing737 extends AppCompatActivity {
         TreeNode an124Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an124), "No", "an124", AntonovAn124Ruslan.class));
         TreeNode an72Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an72), "No", "an72", AntonovAn72Cheburashka.class));
         TreeNode an22Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an22), "No", "an22", AntonovAn22Antei.class));
-        TreeNode an225Node = null;
-        if (verifyDarkMode().equals("Yes")) {
-            an225Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an225), "HighlightLight", "an225", null));
-        } else {
-            an225Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an225), "HighlightDark", "an225", null));
-        }
+        TreeNode an225Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an225), "No", "an225", AntonovAn225Mriya.class));
 
         antonov.addChildren(an22Node, an72Node, an124Node,an225Node);
 
         TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.boeing), "No", "boeing", null));
         TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "B777", "No", "b777", null));
         TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "B787", "No", "b787", null));
-        boeing.addChildren(b777, b787);
+        TreeNode b737 = null;
+        if (verifyDarkMode().equals("Yes")) {
+            b737 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b737), "HighlightLight", "b737", null));
+        } else {
+            b737 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b737), "HighlightDark", "b737", null));
+        }
+        boeing.addChildren(b737, b777, b787);
 
         manufacturerRoot.addChildren(airbus, boeing, antonov);
 
@@ -321,7 +323,7 @@ public class Boeing737 extends AppCompatActivity {
         root.addChildren(flightTrackerRoot);
         root.addChildren(firebaseRoot);
         manufacturerRoot.setExpanded(true);
-        antonov.setExpanded(true);
+        boeing.setExpanded(true);
 
         tView = new AndroidTreeView(this, root);
         tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);
