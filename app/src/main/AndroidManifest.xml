@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".antonov.AntonovAn225Mriya"></activity>
+        <activity android:name=".manufacturers.Boeing"></activity>
+        <activity android:name=".antonov.AntonovAn225Mriya" />
         <activity android:name=".antonov.AntonovAn22Antei" />
         <activity android:name=".antonov.AntonovAn72Cheburashka" />
         <activity android:name=".manufacturers.Antonov" />

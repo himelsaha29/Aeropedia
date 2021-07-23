@@ -9,7 +9,7 @@
     android:clipToPadding="false"
     android:hapticFeedbackEnabled="true"
     app:edMenuBackground="#1b1f1f"
-    app:edMenuSize="260dp"
+    app:edMenuSize="265dp"
     app:edPosition="1">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
