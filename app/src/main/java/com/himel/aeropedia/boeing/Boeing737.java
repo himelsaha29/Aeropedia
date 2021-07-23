@@ -374,13 +374,13 @@ public class Boeing737 extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.antonov_an225_mriya_slider01);
+                sliderItem.setImageLocation(R.drawable.boeing_737_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.antonov_an225_mriya_slider02);
+                sliderItem.setImageLocation(R.drawable.boeing_737_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.antonov_an225_mriya_slider03);
+                sliderItem.setImageLocation(R.drawable.boeing_737_slider3);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.antonov_an225_mriya_slider04);
+                sliderItem.setImageLocation(R.drawable.boeing_737_slider4);
             }
 
             sliderItemList.add(sliderItem);

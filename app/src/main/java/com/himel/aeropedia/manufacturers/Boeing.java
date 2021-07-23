@@ -38,6 +38,7 @@ import com.himel.aeropedia.antonov.AntonovAn124Ruslan;
 import com.himel.aeropedia.antonov.AntonovAn225Mriya;
 import com.himel.aeropedia.antonov.AntonovAn22Antei;
 import com.himel.aeropedia.antonov.AntonovAn72Cheburashka;
+import com.himel.aeropedia.boeing.Boeing737;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
@@ -57,6 +58,7 @@ public class Boeing extends AppCompatActivity {
 
     private NeumorphButton langToggle;
     private CardView b787Card;
+    private CardView b737Card;
     private Animation translate = null;
     private ScrollView scrollView;
     private NeumorphImageButton darkToggle;
@@ -82,12 +84,14 @@ public class Boeing extends AppCompatActivity {
         scrollView = findViewById(R.id.main_scroll);
 
         b787Card = findViewById(R.id.b787Card);
+        b737Card = findViewById(R.id.b737Card);
 
         langToggle = findViewById(R.id.lang_toggle);
         mDrawer = findViewById(R.id.drawerlayout);
         blur = findViewById(R.id.blurLayout);
 
         b787Card.getBackground().setAlpha(65);
+        b737Card.getBackground().setAlpha(65);
 
         // setting NeumorphismButton shape based on state
         if (locale.toString().contains("en")) {
@@ -98,6 +102,16 @@ public class Boeing extends AppCompatActivity {
 
         animateCards();
 
+
+        b737Card.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), Boeing737.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
 
         langToggle.setOnClickListener(new View.OnClickListener() {
 
@@ -206,6 +220,7 @@ public class Boeing extends AppCompatActivity {
 
     private void animateCards() {
         translate = AnimationUtils.loadAnimation(this, R.anim.animation);
+        b737Card.setAnimation(translate);
         b787Card.setAnimation(translate);
     }
 
