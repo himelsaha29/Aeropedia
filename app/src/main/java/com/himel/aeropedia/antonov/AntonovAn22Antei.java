@@ -371,13 +371,13 @@ public class AntonovAn22Antei extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.antonov_an22_antei_slider1);
+                sliderItem.setImageLocation(R.drawable.antonov_an22_antei_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.antonov_an22_antei_slider2);
+                sliderItem.setImageLocation(R.drawable.antonov_an22_antei_slider02);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.antonov_an22_antei_slider3);
+                sliderItem.setImageLocation(R.drawable.antonov_an22_antei_slider03);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.antonov_an22_antei_slider4);
+                sliderItem.setImageLocation(R.drawable.antonov_an22_antei_slider04);
             }
 
             sliderItemList.add(sliderItem);

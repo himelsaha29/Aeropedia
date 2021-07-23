@@ -754,7 +754,7 @@
                     android:paddingEnd="15dp"
                     android:text="@string/an225_desc3"
                     android:textColor="@color/white"
-                    android:textSize="12sp" />
+                    android:textSize="6sp" />
 
                 <TextView
                     android:layout_width="match_parent"
