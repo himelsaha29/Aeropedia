@@ -1161,15 +1161,15 @@
 
     <string name="b737_identify">How to identify Boeing 737?</string>
     <string name="b737_identify_ans">\"Pointed\" nose, triangular dorsal-fin section in front of the tail, retracted main landing gear not enclosed in the
-        fuselage, winglets: none/large L-shaped/\">\" shaped with upward and downward aerofoils (split winglets), cowling design engines / ovoid \"hamster pouch\" inlet / 787-derived engine chevrons.</string>
+        fuselage, winglets: none / large L-shaped / \">\" shaped with upward and downward aerofoils (split winglets), cowling design engines / ovoid \"hamster pouch\" inlet / 787-derived engine chevrons.</string>
 
     <string name="b737_cockpit_value">2</string>
-    <string name="b737_wingspan_value">28 m (-100, -200) / 28.88 / 34.32 / 35.92 m</string>
+    <string name="b737_wingspan_value">28 m (Original) / 28.88 / 34.32 / 35.92 m</string>
     <string name="b737_length_value">29 / 30.53 / 31–37 / 31–42 / 35.56–43.8 m</string>
-    <string name="b737_height_value">11 m (-100, -200) / 11.13  / 12  / 12.29 m</string>
+    <string name="b737_height_value">11 m (Original) / 11.13  / 12  / 12.29 m</string>
     <string name="b737_fuselage_value">3.8 m (W) / ~4.0 m (H)</string>
     <string name="b737_mtow_value">50 / 58.1 / 60.6-68 / 65.5-85.1 / 80.3-88.3 t</string>
-    <string name="b737_cruise_speed_value">796 km/h (typical),\n876 km/h (max.)\n(-100/-200/-300/-400/-500) / 838 km/h (-600/700/-800/-900/MAX-7/-8/-9/-10)</string>
+    <string name="b737_cruise_speed_value">796 km/h (typical),\n876 km/h (max.)\n(Original &amp; Classic) /\n838 km/h (NG &amp; MAX)</string>
     <string name="b737_range_value">1,540 / 2,600 / 2,060–2,375 / 2,935–3,010 / 3,300–3,850 nmi</string>
     <string name="b737_thrust_value">62 / 64–73 / 89–105 / 89–120 / 130 kN</string>
     <!--BOEING 737-->
