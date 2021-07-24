@@ -309,13 +309,14 @@ public class Boeing747 extends AppCompatActivity {
         TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "B777", "No", "b777", null));
         TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "B787", "No", "b787", null));
         TreeNode b737 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b737), "No", "b737", Boeing737.class));
-        TreeNode b757 = null;
+        TreeNode b757 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b757), "No", "b757", Boeing757.class));
+        TreeNode b747 = null;
         if (verifyDarkMode().equals("Yes")) {
-            b757 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b757), "HighlightLight", "b757", null));
+            b747 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b757), "HighlightLight", "b747", null));
         } else {
-            b757 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b757), "HighlightDark", "b757", null));
+            b747 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b757), "HighlightDark", "b747", null));
         }
-        boeing.addChildren(b737, b757, b777, b787);
+        boeing.addChildren(b737, b747, b757, b777, b787);
 
         manufacturerRoot.addChildren(airbus, boeing, antonov);
 

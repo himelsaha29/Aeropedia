@@ -31,6 +31,7 @@ import com.himel.aeropedia.airbus.AirbusA380;
 import com.himel.aeropedia.airbus.AirbusBeluga;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.boeing.Boeing737;
+import com.himel.aeropedia.boeing.Boeing747;
 import com.himel.aeropedia.boeing.Boeing757;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
@@ -313,7 +314,8 @@ public class AntonovAn72Cheburashka extends AppCompatActivity {
         TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "B787", "No", "b787", null));
         TreeNode b737 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b737), "No", "b737", Boeing737.class));
         TreeNode b757 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b757), "No", "b757", Boeing757.class));
-        boeing.addChildren(b737, b757, b777, b787);
+        TreeNode b747 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b747), "No", "b747", Boeing747.class));
+        boeing.addChildren(b737, b747, b757, b777, b787);
 
         manufacturerRoot.addChildren(airbus, boeing, antonov);
 

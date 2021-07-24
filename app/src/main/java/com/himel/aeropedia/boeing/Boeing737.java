@@ -315,7 +315,8 @@ public class Boeing737 extends AppCompatActivity {
             b737 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b737), "HighlightDark", "b737", null));
         }
         TreeNode b757 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b757), "No", "b757", Boeing757.class));
-        boeing.addChildren(b737, b757, b777, b787);
+        TreeNode b747 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b747), "No", "b747", Boeing747.class));
+        boeing.addChildren(b737, b747, b757, b777, b787);
 
         manufacturerRoot.addChildren(airbus, boeing, antonov);
 
