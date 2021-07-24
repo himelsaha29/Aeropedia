@@ -132,7 +132,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/b757_type_value"
+                                android:text="@string/b747_type_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -164,7 +164,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/b757_engine_value"
+                                android:text="@string/b747_engine_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -196,7 +196,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/b757_first_flight_value"
+                                android:text="@string/b747_first_flight_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -227,7 +227,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/b757_intro_value"
+                                android:text="@string/b747_intro_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -259,7 +259,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/b757_variants_value"
+                                android:text="@string/b747_variants_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -290,7 +290,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/b757_customer_value"
+                                android:text="@string/b747_customer_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15dp" />
@@ -308,7 +308,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/b757_desc1"
+                    android:text="@string/b747_desc1"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -355,7 +355,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/b757_desc2"
+                    android:text="@string/b747_desc2"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -376,7 +376,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/b757_specs_constraint"
+                    android:text="@string/b747_specs_constraint"
                     android:textColor="@color/colorPrimary"
                     android:textSize="12sp" />
 
@@ -434,7 +434,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/b757_cockpit_value"
+                                    android:text="@string/b747_cockpit_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -483,7 +483,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/b757_wingspan_value"
+                                    android:text="@string/b747_wingspan_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -532,7 +532,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/b757_length_value"
+                                    android:text="@string/b747_length_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -580,7 +580,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/b757_height_value"
+                                    android:text="@string/b747_height_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -629,7 +629,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/b757_fuselage_value"
+                                    android:text="@string/b747_fuselage_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -678,7 +678,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/b757_mtow_value"
+                                    android:text="@string/b747_mtow_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -727,7 +727,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/b757_cruise_speed_value"
+                                    android:text="@string/b747_cruise_speed_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -775,7 +775,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/b757_range_value"
+                                    android:text="@string/b747_range_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -804,7 +804,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/thrust2"
+                                    android:text="@string/thrust4"
                                     android:textColor="@color/black"
                                     android:textSize="17sp" />
 
@@ -824,7 +824,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/b757_thrust_value"
+                                    android:text="@string/b747_thrust_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -843,7 +843,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/b757_desc3"
+                    android:text="@string/b747_desc3"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -854,7 +854,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="3dp"
-                    android:text="@string/b757_identify"
+                    android:text="@string/b747_identify"
                     android:textColor="@color/colorPrimary"
                     android:textSize="26sp" />
 
@@ -865,7 +865,7 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="12dp"
-                    android:text="@string/b757_identify_ans"
+                    android:text="@string/b747_identify_ans"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
