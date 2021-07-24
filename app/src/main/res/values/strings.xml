@@ -1207,6 +1207,7 @@
         stretched models. In 1982, the 757-200 became the first subsonic jetliner to offer longer lasting carbon brakes as a factory option, supplied by Dunlop. The
         stretched 757-300 features a retractable tailskid on its aft fuselage to prevent damage if the tail section contacts the runway surface during takeoff.\n</string>
 
+
     <string name="b757_desc2" formatted="false">The 757\'s flight deck uses six Rockwell Collins CRT screens to display flight instrumentation, as well as an
         electronic flight instrument system (EFIS) and an engine indication and crew alerting system (EICAS). These systems allow the pilots to handle monitoring
         tasks previously performed by the flight engineer. An enhanced flight management system, improved over versions used on early 747s, automates navigation
@@ -1216,7 +1217,7 @@
         by each engine, and the third using electric pumps. A ram air turbine is fitted to provide power for essential controls in the event of an emergency. A basic
         form of fly-by-wire facilitates spoiler operation, utilizing electric signaling instead of traditional control cables. The fly-by-wire system, shared with the
         767, reduces weight and provides for the independent operation of individual spoilers. When equipped for extended-range operations, the 757 features a backup
-        hydraulic motor generator and an additional cooling fan in the aircraft's electronics bay. The 757 interior allows seat arrangements of up to six per row with a
+        hydraulic motor generator and an additional cooling fan in the aircraft\'s electronics bay. The 757 interior allows seat arrangements of up to six per row with a
         single center aisle. Originally optimized for flights averaging two hours, the 757 features interior lighting and cabin architecture designs aimed at a more
         spacious impression. As on the 767, garment-bag-length overhead bins and a rear economy-class galley are standard equipment. The bins have twice the capacity
         as those on the preceding 727. To save weight, honeycomb sandwich is used for interior paneling and bins. Unlike previous evacuation slide designs which are not
