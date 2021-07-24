@@ -1179,7 +1179,7 @@
 
     <!--BOEING 747-->
     <string name="b747_type_value">Wide-body</string>
-    <string name="b747_engine_value">P &amp; W JT9D/PW4000 /\nRR RB211 / GE CF6/GEnx-2B67 (4)</string>
+    <string name="b747_engine_value">P&amp;W JT9D/PW4000 /\nRR RB211 / GE CF6/GEnx-2B67 (4)</string>
     <string name="b747_first_flight_value">9 February 1969</string>
     <string name="b747_intro_value">22 January 1970\nwith Pan Am</string>
     <string name="b747_customer_value">Atlas Air</string>
@@ -1193,15 +1193,14 @@
         that it would eventually be superseded by supersonic transports. As of May 2021, 1,564 747s have been built.\n\nThe original design included a full-length double-deck
         fuselage with eight-across seating and two aisles on the lower deck and seven-across seating and two aisles on the upper deck. However, concern over evacuation
         routes and limited cargo-carrying capability caused this idea to be scrapped in early 1966 in favor of a wider single deck design. The cockpit was, therefore,
-        placed on a shortened upper deck so that a freight-loading door could be included in the nose cone; this design feature produced the 747\'s distinctive \
-        "hump\". In early models it was not clear what to do with the small space in the pod behind the cockpit, and this was initially specified as a \"lounge\" area
-        with no permanent seating. A different configuration that had been considered in order to keep the flight deck out of the way for freight loading had the pilots
+        placed on a shortened upper deck so that a freight-loading door could be included in the nose cone; this design feature produced the 747\'s distinctive \"hump\". In early
+        models it was not clear what to do with the small space in the pod behind the cockpit, and this was initially specified as a \"lounge\" area with no permanent seating. A different configuration that had been considered in order to keep the flight deck out of the way for freight loading had the pilots
         below the passengers, and was dubbed the \"anteater\". One of the principal technologies that enabled an aircraft as large as the 747 to be drawn up was the
         high-bypass turbofan engine. The engine technology was thought to be capable of delivering double the power of the earlier turbojets while consuming one-third
         less fuel. General Electric had pioneered the concept but was committed to developing the engine for the C-5 Galaxy and did not enter the commercial market
         until later. Pratt &amp; Whitney was also working on the same principle and, by late 1966, Boeing, Pan Am and Pratt &amp; Whitney agreed to develop a new engine,
         designated the JT9D to power the 747.\n\nThe project was designed with a new methodology called fault tree analysis, which allowed the effects of a failure of a
-        single part to be studied to determine its impact on other systems. To address concerns about safety and flyability, the 747's design included structural
+        single part to be studied to determine its impact on other systems. To address concerns about safety and flyability, the 747\'s design included structural
         redundancy, redundant hydraulic systems, quadruple main landing gear and dual control surfaces. Additionally, some of the most advanced high-lift devices
         used in the industry were included in the new design, to allow it to operate from existing airports. These included Krueger flaps running almost the entire
         length of the wings leading edge, as well as complex three-part slotted flaps along the trailing edge of the wing. The wing\'s complex three-part flaps increase
@@ -1231,7 +1230,7 @@
         Observatory for Infrared Astronomy (SOFIA), VIP transports. Undeveloped variants include 747 trijet, 747-500, 747 ASB, 747-500X, -600X, and -700X, 747X
         and 747X Stretch, 747-400XQLR.\n</string>
 
-    <string name="b747_specs_constraint">(SP, -100, -200B, -300, -400, -8 compared in order)\n</string>
+    <string name="b747_specs_constraint">(SP, -100, -200B, -300, -400, and -8 compared in order)\n</string>
 
 
     <string name="b747_identify">How to identify Boeing 747?</string>
