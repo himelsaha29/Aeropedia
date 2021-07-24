@@ -374,14 +374,16 @@ public class Boeing757 extends AppCompatActivity {
 
     private void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.boeing_757_slider1);
+                sliderItem.setImageLocation(R.drawable.boeing_757_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.boeing_757_slider2);
+                sliderItem.setImageLocation(R.drawable.boeing_757_slider02);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.boeing_757_slider3);
+                sliderItem.setImageLocation(R.drawable.boeing_757_slider03);
+            } else if (i == 3) {
+                sliderItem.setImageLocation(R.drawable.boeing_757_slider04);
             }
 
             sliderItemList.add(sliderItem);

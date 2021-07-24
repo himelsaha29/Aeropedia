@@ -1161,8 +1161,8 @@
 
 
     <string name="b737_identify">How to identify Boeing 737?</string>
-    <string name="b737_identify_ans">\"Pointed\" nose, triangular dorsal-fin section in front of the tail,\"V\" shaped side windshield, retracted main landing gear not enclosed in the
-        fuselage, winglets: none / large L-shaped / \">\" shaped with upward and downward aerofoils (split winglets), cowling design engines / ovoid \"hamster pouch\" inlet / 787-derived engine chevrons.</string>
+    <string name="b737_identify_ans">\"Pointed\" nose, triangular dorsal-fin section in front of the tail, \"V\" shaped side windshield, retracted main landing gear not enclosed in the
+        fuselage, winglets: none / large L-shaped / \">\" shaped with upward and downward aerofoils (split winglets); cowling design engines / ovoid \"hamster pouch\" inlet / 787-derived engine chevrons.</string>
 
     <string name="b737_cockpit_value">2</string>
     <string name="b737_wingspan_value">28 m (Original) / 28.88 / 34.32 / 35.92 m</string>
@@ -1179,7 +1179,7 @@
 
     <!--BOEING 757-->
     <string name="b757_type_value">Narrow-body</string>
-    <string name="b757_engine_value">Pratt &amp; Whitney PW2000 /\nRolls-Royce RB211(2)</string>
+    <string name="b757_engine_value">Pratt &amp; Whitney PW2000 /\nRolls-Royce RB211 (2)</string>
     <string name="b757_first_flight_value">19 February 1982</string>
     <string name="b757_intro_value">1 January 1983 with\nEastern Air Lines</string>
     <string name="b757_customer_value">Delta Air Lines</string>
@@ -1196,10 +1196,10 @@
         preceding aircraft. Lighter materials and new wings were also expected to improve efficiency. The maximum take-off weight (MTOW) was set at 99,800 kg, which
         was 4,540 kg more than the 727. The 757\'s higher thrust-to-weight ratio allowed it to take off from short runways and serve airports in hot and high
         conditions with higher ambient temperatures and thinner air, offering better takeoff performance than that offered by competing aircraft. Competitors needed
-        longer takeoff runs for these hot and high conditions. Boeing also offered options for higher payload capability.\n\nThe 757 is a low-wing cantilever monoplane
+        longer takeoff runs for these hot and high conditions. Boeing also offered options for higher payload capability.\n\nBoeing 757 is a low-wing cantilever monoplane
         with a conventional tail unit featuring a single fin and rudder. Each wing features a supercritical cross-section and is equipped with five-panel leading edge
         slats, single- and double-slotted flaps, an outboard aileron, and six spoilers. The wings are largely identical across all 757 variants, swept at 25
-        degrees, and optimized for a cruising speed of Mach 0.8 (533 mph or 858 km/h). The reduced wing sweep eliminates the need for inboard ailerons, yet incurs
+        degrees. The reduced wing sweep eliminates the need for inboard ailerons, yet incurs
         little drag penalty on short and medium length routes, during which most of the flight is spent climbing or descending. The airframe further incorporates
         carbon-fiber reinforced plastic wing surfaces, Kevlar fairings and access panels, plus improved aluminum alloys, which together reduce overall weight
         by 950 kg. To distribute the aircraft\'s weight on the ground, the 757 has a retractable tricycle landing gear with four wheels on each main gear and two
@@ -1208,7 +1208,7 @@
         stretched 757-300 features a retractable tailskid on its aft fuselage to prevent damage if the tail section contacts the runway surface during takeoff.\n</string>
 
 
-    <string name="b757_desc2" formatted="false">The 757\'s flight deck uses six Rockwell Collins CRT screens to display flight instrumentation, as well as an
+    <string name="b757_desc2" formatted="false">The longest narrow-body airliner\'s flight deck uses six Rockwell Collins CRT screens to display flight instrumentation, as well as an
         electronic flight instrument system (EFIS) and an engine indication and crew alerting system (EICAS). These systems allow the pilots to handle monitoring
         tasks previously performed by the flight engineer. An enhanced flight management system, improved over versions used on early 747s, automates navigation
         and other functions, while an automatic landing system facilitates CAT IIIb instrument landings in 150 m low visibility conditions. The inertial
@@ -1242,7 +1242,7 @@
     <string name="b757_length_value">47.3 m (-200 / -200F) / 54.4 m</string>
     <string name="b757_height_value">13.6 m</string>
     <string name="b757_fuselage_value">3.76 m (W) / ~3.8 m (H)</string>
-    <string name="b757_mtow_value">115.66 t (-200 / -200F) /\n123.83 t</string>
+    <string name="b757_mtow_value">115.66 t (-200/-200F) /\n123.83 t</string>
     <string name="b757_cruise_speed_value">854 km/h (typical),\n918 km/h (max.)</string>
     <string name="b757_range_value">3,915 / 2,935 / 3,400 nmi</string>
     <string name="b757_thrust_value">179–193 kN (RR RB211) /\n163–189 kN (P &amp; W PW2000)</string>
