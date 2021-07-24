@@ -1161,7 +1161,7 @@
 
 
     <string name="b737_identify">How to identify Boeing 737?</string>
-    <string name="b737_identify_ans">\"Pointed\" nose, triangular dorsal-fin section in front of the tail, retracted main landing gear not enclosed in the
+    <string name="b737_identify_ans">\"Pointed\" nose, triangular dorsal-fin section in front of the tail,\"V\" shaped side windshield, retracted main landing gear not enclosed in the
         fuselage, winglets: none / large L-shaped / \">\" shaped with upward and downward aerofoils (split winglets), cowling design engines / ovoid \"hamster pouch\" inlet / 787-derived engine chevrons.</string>
 
     <string name="b737_cockpit_value">2</string>
@@ -1183,24 +1183,58 @@
     <string name="b757_first_flight_value">19 February 1982</string>
     <string name="b757_intro_value">1 January 1983 with\nEastern Air Lines</string>
     <string name="b757_customer_value">Delta Air Lines</string>
-    <string name="b757_variants_value">TBD</string>
+    <string name="b757_variants_value">12 (active)</string>
 
     <string name="b757_desc1" formatted="false">The Boeing 757 is an American narrow-body airliner that was designed and built by Boeing Commercial Airplanes. The
         then-named 7N7, a twinjet successor for the 727 (a trijet), received its first orders in August 1978. The prototype completed its maiden flight on February
         19, 1982 and it was FAA certified on December 21, 1982. Eastern Air Lines placed the original 757-200 in commercial service on January 1, 1983. A package
         freighter (PF) variant entered service in September 1987 and a combi model in September 1988. The stretched 757-300 was launched in September 1996 and began
         service in March 1999. After 1,050 had been built for 54 customers, production ended in October 2004, while Boeing offered the largest 737 NG variants as
-        a successor. During its production phase from 1981 to 2004, a total of 1,050 757s were built.\n</string>
+        a successor. During its production phase from 1981 to 2004, a total of 1,050 757s were built.\n\nThe 757 was intended to be more capable and more efficient
+        than the preceding 727. The focus on fuel efficiency reflected airline concerns over operating costs, which had grown amid rising oil prices during the Yom
+        Kippur War of 1973. Design targets included a 20 percent reduction in fuel consumption from new engines, plus 10 percent from aerodynamic improvements, versus
+        preceding aircraft. Lighter materials and new wings were also expected to improve efficiency. The maximum take-off weight (MTOW) was set at 99,800 kg, which
+        was 4,540 kg more than the 727. The 757\'s higher thrust-to-weight ratio allowed it to take off from short runways and serve airports in hot and high
+        conditions with higher ambient temperatures and thinner air, offering better takeoff performance than that offered by competing aircraft. Competitors needed
+        longer takeoff runs for these hot and high conditions. Boeing also offered options for higher payload capability.\n\nThe 757 is a low-wing cantilever monoplane
+        with a conventional tail unit featuring a single fin and rudder. Each wing features a supercritical cross-section and is equipped with five-panel leading edge
+        slats, single- and double-slotted flaps, an outboard aileron, and six spoilers. The wings are largely identical across all 757 variants, swept at 25
+        degrees, and optimized for a cruising speed of Mach 0.8 (533 mph or 858 km/h). The reduced wing sweep eliminates the need for inboard ailerons, yet incurs
+        little drag penalty on short and medium length routes, during which most of the flight is spent climbing or descending. The airframe further incorporates
+        carbon-fiber reinforced plastic wing surfaces, Kevlar fairings and access panels, plus improved aluminum alloys, which together reduce overall weight
+        by 950 kg. To distribute the aircraft\'s weight on the ground, the 757 has a retractable tricycle landing gear with four wheels on each main gear and two
+        for the nose gear. The landing gear was purposely designed to be taller than the company\'s previous narrow-body aircraft to provide ground clearance for
+        stretched models. In 1982, the 757-200 became the first subsonic jetliner to offer longer lasting carbon brakes as a factory option, supplied by Dunlop. The
+        stretched 757-300 features a retractable tailskid on its aft fuselage to prevent damage if the tail section contacts the runway surface during takeoff.\n</string>
 
-    <string name="b757_desc2" formatted="false">\n</string>
+    <string name="b757_desc2" formatted="false">The 757\'s flight deck uses six Rockwell Collins CRT screens to display flight instrumentation, as well as an
+        electronic flight instrument system (EFIS) and an engine indication and crew alerting system (EICAS). These systems allow the pilots to handle monitoring
+        tasks previously performed by the flight engineer. An enhanced flight management system, improved over versions used on early 747s, automates navigation
+        and other functions, while an automatic landing system facilitates CAT IIIb instrument landings in 150 m low visibility conditions. The inertial
+        reference system (IRS) which debuted with the 757-200 was the first to feature laser-light gyros. On the 757-300, the upgraded flight deck features a Honeywell
+        Pegasus flight management computer, enhanced EICAS, and updated software systems.\n\nThree independent hydraulic systems are installed on the 757, one powered
+        by each engine, and the third using electric pumps. A ram air turbine is fitted to provide power for essential controls in the event of an emergency. A basic
+        form of fly-by-wire facilitates spoiler operation, utilizing electric signaling instead of traditional control cables. The fly-by-wire system, shared with the
+        767, reduces weight and provides for the independent operation of individual spoilers. When equipped for extended-range operations, the 757 features a backup
+        hydraulic motor generator and an additional cooling fan in the aircraft's electronics bay. The 757 interior allows seat arrangements of up to six per row with a
+        single center aisle. Originally optimized for flights averaging two hours, the 757 features interior lighting and cabin architecture designs aimed at a more
+        spacious impression. As on the 767, garment-bag-length overhead bins and a rear economy-class galley are standard equipment. The bins have twice the capacity
+        as those on the preceding 727. To save weight, honeycomb sandwich is used for interior paneling and bins. Unlike previous evacuation slide designs which are not
+        equipped for water landings, the 757\'s main exits feature combination slide rafts similar to those found on the 747. In the 1980s, Boeing altered the interior
+        designs of its other narrow-body aircraft to be similar to that of the 757.\n</string>
 
-    <string name="b757_desc3">\n \n</string>
+    <string name="b757_desc3">\nThe Boeing 757 variants include 757-100 (dropped), 757-200, 757-200PF, 757-200M, 757-200 SF/PCF, 757-300, Airborne Research Integrated Experiments
+        System (ARIES) for air safety and operational research, C-32 - The United States Air Force (USAF) operates four VIP-configured 757-200s under
+        the designation C-32A for missions including transporting the President of the United States and/or the Vice President of the United States, F-22 Flying
+        Testbed, one for Krueger flap and Natural Laminar Flow Insect Mitigation Test Program, one for Active Flow Control System, Royal New Zealand Air Force 757 Combi, and
+        VIP Transports\n</string>
 
     <string name="b757_specs_constraint">(-200, -200F, -300 compared in order)\n</string>
 
 
     <string name="b757_identify">How to identify Boeing 757?</string>
-    <string name="b757_identify_ans"></string>
+    <string name="b757_identify_ans">Pointed \"dolphin\" nose, tall landing gears, \"V\" shaped side windshield, 3 cabin doors and either 1 emergency exit aft of wing
+        or 2 over-wing exits (-200) / 4 cabin doors and 2 over-wing emergency exits (-300), winglets: none (-200), blended large L-shaped (-300).</string>
 
     <string name="b757_cockpit_value">2</string>
     <string name="b757_wingspan_value">38.0 m</string>
