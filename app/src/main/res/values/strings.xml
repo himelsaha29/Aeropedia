@@ -32,6 +32,7 @@
     <string name="b787">787</string>
     <string name="b737">737</string>
     <string name="b757">757</string>
+    <string name="b747">747</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -1175,6 +1176,38 @@
     <string name="b737_thrust_value">62 / 64–73 / 89–105 / 89–120 / 130 kN</string>
     <!--BOEING 737-->
 
+
+    <!--BOEING 747-->
+    <string name="b747_type_value">Narrow-body</string>
+    <string name="b747_engine_value">Pratt &amp; Whitney PW2000 /\nRolls-Royce RB211 (2)</string>
+    <string name="b747_first_flight_value">19 February 1982</string>
+    <string name="b747_intro_value">1 January 1983 with\nEastern Air Lines</string>
+    <string name="b747_customer_value">Delta Air Lines</string>
+    <string name="b747_variants_value">12 (active)</string>
+
+    <string name="b747_desc1" formatted="false">\n</string>
+
+
+    <string name="b747_desc2" formatted="false">\n</string>
+
+    <string name="b747_desc3">\n \n</string>
+
+    <string name="b747_specs_constraint">()\n</string>
+
+
+    <string name="b747_identify">How to identify Boeing 747?</string>
+    <string name="b747_identify_ans"></string>
+
+    <string name="b747_cockpit_value">2</string>
+    <string name="b747_wingspan_value">38.0 m</string>
+    <string name="b747_length_value">47.3 m (-200 / -200F) / 54.4 m</string>
+    <string name="b747_height_value">13.6 m</string>
+    <string name="b747_fuselage_value">3.76 m (W) / ~3.8 m (H)</string>
+    <string name="b747_mtow_value">115.66 t (-200/-200F) /\n123.83 t</string>
+    <string name="b747_cruise_speed_value">854 km/h (typical),\n918 km/h (max.)</string>
+    <string name="b747_range_value">3,915 / 2,935 / 3,400 nmi</string>
+    <string name="b747_thrust_value">179–193 kN (RR RB211) /\n163–189 kN (P &amp; W PW2000)</string>
+    <!--BOEING 747-->
 
 
     <!--BOEING 757-->

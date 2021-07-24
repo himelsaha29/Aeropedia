@@ -32,6 +32,7 @@
     <string name="b787">787</string>
     <string name="b737">737</string>
     <string name="b757">757</string>
+    <string name="b747">747</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -764,6 +765,78 @@
     <string name="b737_range_value">3,450 / 3,600 nmi</string>
     <string name="b737_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
     <!--BOEING 737-->
+
+
+    <!--BOEING 747-->
+    <string name="b747_type_value">Wide-body</string>
+    <string name="b747_engine_value">P &amp; W JT9D/PW4000 /\nRR RB211 / GE CF6/GEnx-2B67 (4)</string>
+    <string name="b747_first_flight_value">9 February 1969</string>
+    <string name="b747_intro_value">22 January 1970\nwith Pan Am</string>
+    <string name="b747_customer_value">Atlas Air</string>
+    <string name="b747_variants_value">22 (active)</string>
+
+    <string name="b747_desc1" formatted="false">The Boeing 747 is a large, long-range wide-body airliner manufactured by Boeing Commercial Airplanes in the
+        United States. The 747 is a quadjet, initially powered by JT9D turbofan engines, then GE CF6 and Rolls-Royce RB211 engines for the original variants. With a
+        ten-abreast economy seating, it typically accommodates 366 passengers in three travel classes. It has a pronounced 37.5° wing sweep, allowing a Mach
+        0.85 (490 kn; 900 km/h) cruise speed, and its heavy weight is supported by four main landing gear legs with four-wheel bogies each. The partial double-deck
+        aircraft was designed with a raised cockpit so it could be converted to a freighter airplane by installing a front cargo door, as it was initially thought
+        that it would eventually be superseded by supersonic transports. As of May 2021, 1,564 747s have been built.\n\nThe original design included a full-length double-deck
+        fuselage with eight-across seating and two aisles on the lower deck and seven-across seating and two aisles on the upper deck. However, concern over evacuation
+        routes and limited cargo-carrying capability caused this idea to be scrapped in early 1966 in favor of a wider single deck design. The cockpit was, therefore,
+        placed on a shortened upper deck so that a freight-loading door could be included in the nose cone; this design feature produced the 747\'s distinctive \
+        "hump\". In early models it was not clear what to do with the small space in the pod behind the cockpit, and this was initially specified as a \"lounge\" area
+        with no permanent seating. A different configuration that had been considered in order to keep the flight deck out of the way for freight loading had the pilots
+        below the passengers, and was dubbed the \"anteater\". One of the principal technologies that enabled an aircraft as large as the 747 to be drawn up was the
+        high-bypass turbofan engine. The engine technology was thought to be capable of delivering double the power of the earlier turbojets while consuming one-third
+        less fuel. General Electric had pioneered the concept but was committed to developing the engine for the C-5 Galaxy and did not enter the commercial market
+        until later. Pratt &amp; Whitney was also working on the same principle and, by late 1966, Boeing, Pan Am and Pratt &amp; Whitney agreed to develop a new engine,
+        designated the JT9D to power the 747.\n\nThe project was designed with a new methodology called fault tree analysis, which allowed the effects of a failure of a
+        single part to be studied to determine its impact on other systems. To address concerns about safety and flyability, the 747's design included structural
+        redundancy, redundant hydraulic systems, quadruple main landing gear and dual control surfaces. Additionally, some of the most advanced high-lift devices
+        used in the industry were included in the new design, to allow it to operate from existing airports. These included Krueger flaps running almost the entire
+        length of the wings leading edge, as well as complex three-part slotted flaps along the trailing edge of the wing. The wing\'s complex three-part flaps increase
+        wing area by 21 percent and lift by 90 percent when fully deployed compared to their non-deployed configuration.\n</string>
+
+
+    <string name="b747_desc2" formatted="false">The 747 is a large, wide-body (two-aisle) airliner with four wing-mounted engines. Its wings have a high sweep angle of
+        37.5 degrees for a fast, efficient cruise speed of Mach 0.84 to 0.88, depending on the variant. The sweep also reduces the wingspan, allowing the 747 to use
+        existing hangars. Its seating capacity is over 366 with a 3–4–3 seat arrangement (a cross section of 3 seats, an aisle, 4 seats, another aisle, and 3 seats) in
+        economy class and a 2–3–2 layout in first class on the main deck. The upper deck has a 3–3 seat arrangement in economy class and a 2–2 layout in
+        first class. Raised above the main deck, the cockpit creates the hump. This raised cockpit allows front loading of cargo on freight variants. The upper deck behind
+        the cockpit provides space for a lounge and/or extra seating. The \"stretched upper deck\" became available as an alternative on the 747-100B variant and
+        later as standard beginning on the 747-300. The upper deck was stretched more on the 747-8. The 747 cockpit roof section also has an escape hatch from which
+        crew can exit during the events of an emergency if they cannot do so through the cabin.\n\nThe 747 has redundant structures along with four redundant hydraulic
+        systems and four main landing gears each with four wheels; these provide a good spread of support on the ground and safety in case of tire blow-outs. The main
+        gear are redundant so that landing can be performed on two opposing landing gears if the others are not functioning properly. The 747 also has split control
+        surfaces and was designed with sophisticated triple-slotted flaps that minimize landing speeds and allow the 747 to use standard-length runways. For transportation
+        of spare engines, the 747 can accommodate a non-functioning fifth-pod engine under the aircraft's port wing between the inner functioning engine and the
+        fuselage. This fifth engine mount point is also used by Virgin Orbit\'s LauncherOne program. Virgin Orbit\'s 747-400, dubbed Cosmic Girl, carries the
+        orbital-class rocket to cruise altitude, where the rocket is deployed and then carries its small satellite payload the rest of the way to orbit.\n\nIt
+        is this 747 that carried over 1000 people during the Operation Solomon evacuation, beating Quantas' 747 evacuation record of 674. During the
+        flight, 2 babies were born on the 747. It can also be stated that the 747 has flown more than 3.5 billion people by now, which is almost half the
+        planet\'s population.\n</string>
+
+    <string name="b747_desc3">\nBoeing 747 variants include 747-100, 747SR, 7474-100B, 747SP, 747-200, 747-300, 747-400, 747 LCF Dreamlifter, 747-8. Its
+        Government, military, and other variants are C-19, VC-25, E-4B, YAL-1, C-33, KC-33A, 747-100 Tanker, 747 CMCA, 747 AAC, Evergreen 747 Supertanker, Stratospheric
+        Observatory for Infrared Astronomy (SOFIA), VIP transports. Undeveloped variants include 747 trijet, 747-500, 747 ASB, 747-500X, -600X, and -700X, 747X
+        and 747X Stretch, 747-400XQLR.\n</string>
+
+    <string name="b747_specs_constraint">(SP, -100, -200B, -300, -400, -8 compared in order)\n</string>
+
+
+    <string name="b747_identify">How to identify Boeing 747?</string>
+    <string name="b747_identify_ans">There is nothing quite like it with 4 engines and the \"hump\".</string>
+
+    <string name="b747_cockpit_value">3 / 2 (-400/-8)</string>
+    <string name="b747_wingspan_value">59.6 m / 64.4 m (-400) /\n68.4 m (-8)</string>
+    <string name="b747_length_value">56.3 m (SP) / 70.66 m /\n76.25 m (-8)</string>
+    <string name="b747_height_value">19.9 m (SP) / 19.3 m /\n19.4 m (-400/-8)</string>
+    <string name="b747_fuselage_value">~6.0  (W) / ~6.08 m (H)</string>
+    <string name="b747_mtow_value">317.5 / 333.4 / 377.8 (-200B/-300) /\n412.8 / 447.7 t</string>
+    <string name="b747_cruise_speed_value">907 km/h (typical),\n939 km/h (max.)</string>
+    <string name="b747_range_value">5,830 / 4,620 / 6,560 /\n6,330 / 7,670 / 7,730</string>
+    <string name="b747_thrust_value">206–253 / 193–230 / 206–243.5 /\n206–253 / 276–282 / 296 kN</string>
+    <!--BOEING 747-->
 
 
     <!--BOEING 757-->
