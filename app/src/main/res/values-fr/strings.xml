@@ -31,6 +31,7 @@
     <string name="an225">An-225 Mriya</string>
     <string name="b787">787</string>
     <string name="b737">737</string>
+    <string name="b757">757</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -761,6 +762,42 @@
     <string name="b737_range_value">3,450 / 3,600 nmi</string>
     <string name="b737_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
     <!--BOEING 737-->
+
+
+    <!--BOEING 757-->
+    <string name="b757_type_value">Narrow-body</string>
+    <string name="b757_engine_value">Pratt &amp; Whitney JT8D /\nCFM56 / CFM LEAP-1B (2)</string>
+    <string name="b757_first_flight_value">9 April 1967</string>
+    <string name="b757_intro_value">10 February 1968\nwith Lufthansa</string>
+    <string name="b757_customer_value">Southwest Airlines</string>
+    <string name="b757_variants_value">13</string>
+
+    <string name="b757_desc1" formatted="false">The Bhe aircraft is inspected by maintenance
+        personnel for damage and then returned to service if none is found.\n</string>
+
+    <string name="b757_desc2" formatted="false">Enpen Winglet that is produced by Boeing. The Boeing AT Winglet resembles a
+        cross between the Blended Winglet and the Split Scimitar Winglet.\n</string>
+
+    <string name="b757_desc3">\nBoeing 737 variants include 737 Original (first generation) - 737-100, 737-200, 737 Classic (second generation) - 737-300, 737-400,
+        737-500, 737 NG (third generation) - 737-600, 737-700, 737-800, 737-900, and 737 MAX (fourth generation) - 737 MAX-7, 737 MAX-8, 737 MAX-9, 737 MAX-10.\n</string>
+
+    <string name="b757_specs_constraint">(-100, -200, -300/-400/-500, -600/-700/-800/-900, MAX-7/-8/-9/-10 compared in order)\n</string>
+
+
+    <string name="b757_identify">How to identify Boeing 737?</string>
+    <string name="b757_identify_ans">\"Pointed\" nose, triangular dorsal-fin section in front of the tail, retracted main landing gear not enclosed in the
+        fuselage, winglets: none / large L-shaped / \">\" shaped with upward and downward aerofoils (split winglets), cowling design engines / ovoid \"hamster pouch\" inlet / 787-derived engine chevrons.</string>
+
+    <string name="b757_cockpit_value">2</string>
+    <string name="b757_wingspan_value">28 m (Original) / 28.88 / 34.32 / 35.92 m</string>
+    <string name="b757_length_value">29 / 30.53 / 31–37 / 31–42 / 35.56–43.8 m</string>
+    <string name="b757_height_value">11 m (Original) / 11.13  / 12  / 12.29 m</string>
+    <string name="b757_fuselage_value">3.8 m (W) / ~4.0 m (H)</string>
+    <string name="b757_mtow_value">50 / 58.1 / 60.6-68 / 65.5-85.1 / 80.3-88.3 t</string>
+    <string name="b757_cruise_speed_value">796 km/h (typical),\n876 km/h (max.)\n(Original &amp; Classic) /\n838 km/h (NG &amp; MAX)</string>
+    <string name="b757_range_value">1,540 / 2,600 / 2,060–2,375 / 2,935–3,010 / 3,300–3,850 nmi</string>
+    <string name="b757_thrust_value">62 / 64–73 / 89–105 / 89–120 / 130 kN</string>
+    <!--BOEING 757-->
 
 
 

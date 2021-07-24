@@ -31,6 +31,7 @@
     <string name="an225">An-225 Mriya</string>
     <string name="b787">787</string>
     <string name="b737">737</string>
+    <string name="b757">757</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -1173,6 +1174,44 @@
     <string name="b737_range_value">1,540 / 2,600 / 2,060–2,375 / 2,935–3,010 / 3,300–3,850 nmi</string>
     <string name="b737_thrust_value">62 / 64–73 / 89–105 / 89–120 / 130 kN</string>
     <!--BOEING 737-->
+
+
+
+    <!--BOEING 757-->
+    <string name="b757_type_value">Narrow-body</string>
+    <string name="b757_engine_value">Pratt &amp; Whitney PW2000 /\nRolls-Royce RB211(2)</string>
+    <string name="b757_first_flight_value">19 February 1982</string>
+    <string name="b757_intro_value">1 January 1983 with\nEastern Air Lines</string>
+    <string name="b757_customer_value">Delta Air Lines</string>
+    <string name="b757_variants_value">TBD</string>
+
+    <string name="b757_desc1" formatted="false">The Boeing 757 is an American narrow-body airliner that was designed and built by Boeing Commercial Airplanes. The
+        then-named 7N7, a twinjet successor for the 727 (a trijet), received its first orders in August 1978. The prototype completed its maiden flight on February
+        19, 1982 and it was FAA certified on December 21, 1982. Eastern Air Lines placed the original 757-200 in commercial service on January 1, 1983. A package
+        freighter (PF) variant entered service in September 1987 and a combi model in September 1988. The stretched 757-300 was launched in September 1996 and began
+        service in March 1999. After 1,050 had been built for 54 customers, production ended in October 2004, while Boeing offered the largest 737 NG variants as
+        a successor. During its production phase from 1981 to 2004, a total of 1,050 757s were built.\n</string>
+
+    <string name="b757_desc2" formatted="false">\n</string>
+
+    <string name="b757_desc3">\n \n</string>
+
+    <string name="b757_specs_constraint">(-200, -200F, -300 compared in order)\n</string>
+
+
+    <string name="b757_identify">How to identify Boeing 757?</string>
+    <string name="b757_identify_ans"></string>
+
+    <string name="b757_cockpit_value">2</string>
+    <string name="b757_wingspan_value">38.0 m</string>
+    <string name="b757_length_value">47.3 m (-200 / -200F) / 54.4 m</string>
+    <string name="b757_height_value">13.6 m</string>
+    <string name="b757_fuselage_value">3.76 m (W) / ~3.8 m (H)</string>
+    <string name="b757_mtow_value">115.66 t (-200 / -200F) /\n123.83 t</string>
+    <string name="b757_cruise_speed_value">854 km/h (typical),\n918 km/h (max.)</string>
+    <string name="b757_range_value">3,915 / 2,935 / 3,400 nmi</string>
+    <string name="b757_thrust_value">179–193 kN (RR RB211) /\n163–189 kN (P &amp; W PW2000)</string>
+    <!--BOEING 757-->
 
 
     <string name="status_listening">LISTENING…</string>
