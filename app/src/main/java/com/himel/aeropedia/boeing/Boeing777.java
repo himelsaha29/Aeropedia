@@ -78,9 +78,9 @@ public class Boeing777 extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_boeing_767_light);
+            setContentView(R.layout.activity_boeing_777_light);
         } else {
-            setContentView(R.layout.activity_boeing_767_dark);
+            setContentView(R.layout.activity_boeing_777_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
