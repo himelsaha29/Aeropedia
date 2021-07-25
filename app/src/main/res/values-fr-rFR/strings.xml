@@ -910,6 +910,39 @@
     <!--BOEING 767-->
 
 
+    <!--BOEING 777-->
+    <string name="b777_type_value">Wide-body</string>
+    <string name="b777_engine_value">P&amp;W JT9D / PW4000 /\nGE CF6 / RR RB211 (2)</string>
+    <string name="b777_first_flight_value">26 September 1981</string>
+    <string name="b777_intro_value">8 September 1982\nwith United Airlines</string>
+    <string name="b777_customer_value">Delta Air Lines</string>
+    <string name="b777_variants_value">14 (active)</string>
+
+    <string name="b777_desc1" formatted="false">\n</string>
+
+
+    <string name="b777_desc2" formatted="false">\n</string>
+
+    <string name="b777_desc3">\n \n</string>
+
+    <string name="b777_specs_constraint">()\n</string>
+
+
+    <string name="b777_identify">How to identify Boeing 777?</string>
+    <string name="b777_identify_ans"></string>
+
+    <string name="b777_cockpit_value">2</string>
+    <string name="b777_wingspan_value">47.57 m / 51.92 m (-400ER)</string>
+    <string name="b777_length_value">48.51 m (-200/ER) / 54.94 m (-300/ER) /\n61.37 m</string>
+    <string name="b777_height_value">15.85 m / 16.87 m (-400ER)</string>
+    <string name="b777_fuselage_value">5.03 m (W) / 5.41 m (H)</string>
+    <string name="b777_mtow_value">142.9 / 179.2 / 158.8 /\n 186.9 / 204.1 t</string>
+    <string name="b777_cruise_speed_value">850 km/h (typical),\n900 km/h (max.)</string>
+    <string name="b777_range_value">3,900 / 6,590 / 3,900 /\n5,980 / 5,625 nmi</string>
+    <string name="b777_thrust_value">214–234 / 214–270 / 214–270 /\n252–274 / 270 kN</string>
+    <!--BOEING 777-->
+
+
     <string name="status_listening">"écoute"…</string>
     <string name="status_processing">PROCESSING…</string>
     <string name="status_speaking">parle…</string>

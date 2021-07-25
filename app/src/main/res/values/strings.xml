@@ -1397,6 +1397,40 @@
     <!--BOEING 767-->
 
 
+    <!--BOEING 777-->
+    <string name="b777_type_value">Wide-body</string>
+    <string name="b777_engine_value">P&amp;W PW4000 / GE GE90 /\nRR Trent 800 (2)</string>
+    <string name="b777_first_flight_value">12 June 1994 </string>
+    <string name="b777_intro_value">7 June 1995 with\nUnited Airlines</string>
+    <string name="b777_customer_value">Emirates</string>
+    <string name="b777_variants_value">TBD</string>
+
+    <string name="b777_desc1" formatted="false">\n</string>
+
+
+    <string name="b777_desc2" formatted="false">\n</string>
+
+    <string name="b777_desc3">\n \n</string>
+
+    <string name="b777_specs_constraint">(-200/200ER, -300, -300ER, -200LR/777F compared in order)\n</string>
+
+
+    <string name="b777_identify">How to identify Boeing 777?</string>
+    <string name="b777_identify_ans"></string>
+
+    <string name="b777_cockpit_value">2</string>
+    <string name="b777_wingspan_value">60.93 m (-200/200ER/-300) /\n64.80 m</string>
+    <string name="b777_length_value">63.73 m / 73.86 m (-300/-300ER) /\n63.73 m</string>
+    <string name="b777_height_value">18.5 / 18.5 / 18.6 m</string>
+    <string name="b777_fuselage_value">6.20 m (W) / ~6.30 m (H)</string>
+    <string name="b777_mtow_value">247.2 - 297.55 / 299.37 /\n351.53 / 347,45 - 347.82 t</string>
+    <string name="b777_cruise_speed_value">892 km/h (typical),\n924–945 km/h (max.)</string>
+    <string name="b777_range_value">5,240 - 7,065 / 6,030 /\n4,650 - 7,370 / 4,980 - 10,450 nmi</string>
+    <string name="b777_thrust_value">343 - 417 / 440 / 513 / 489–513 kN</string>
+    <!--BOEING 777-->
+
+
+
     <string name="status_listening">LISTENING…</string>
     <string name="status_processing">PROCESSING…</string>
     <string name="status_speaking">SPEAKING…</string>
