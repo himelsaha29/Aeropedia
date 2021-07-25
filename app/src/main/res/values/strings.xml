@@ -1330,12 +1330,52 @@
     <string name="b767_customer_value">Delta Air Lines</string>
     <string name="b767_variants_value">TBD</string>
 
-    <string name="b767_desc1" formatted="false">\n</string>
+    <string name="b767_desc1" formatted="false">Boeing 767 was launched as the 7X7 project on July 14, 1978, the prototype first flew on September 26, 1981, and it was
+        certified on July 30, 1982. The original 767-200 entered service on September 8, 1982 with United Airlines, and the extended-range 767-200ER in 1984. It was
+        stretched into the 767-300 in October 1986, followed by the 767-300ER in 1988, the most popular variant. The 767-300F, a production freighter version, debuted
+        in October 1995. It was stretched again into the 767-400ER from September 2000. In the late 1970s, operating cost replaced capacity as the primary factor in
+        airliner purchases. As a result, the 767\'s design process emphasized fuel efficiency from the outset. Boeing targeted a 20 to 30 percent cost saving over
+        earlier aircraft, mainly through new engine and wing technology. As development progressed, engineers used computer-aided design for over a third of the
+        767\'s design drawings, and performed 26,000 hours of wind tunnel tests. Design work occurred concurrently with the 757 twinjet, leading Boeing to treat both as
+        almost one program to reduce risk and cost. Both aircraft would ultimately receive shared design features, including avionics, flight management systems,
+        instruments, and handling characteristics. Combined development costs were estimated at $3.5 to $4 billion. As of June 202q, a total of 1219 767s have been
+        built.\n\nThe 767 was the first Boeing wide-body to be designed with a two-crew digital glass cockpit. Cathode ray tube (CRT) color displays and new
+        electronics replaced the role of the flight engineer by enabling the pilot and co-pilot to monitor aircraft systems directly. Despite the promise of reduced
+        crew costs, United Airlines initially demanded a conventional three-person cockpit, citing concerns about the risks associated with introducing a new
+        aircraft. The carrier maintained this position until July 1981, when a US presidential task force determined that a crew of two was safe for operating
+        wide-body jets. A three-crew cockpit remained as an option and was fitted to the first production models. Ansett Australia ordered 767s with three-crew cockpits
+        due to union demands; it was the only airline to operate 767s so configured. The 767\'s two-crew cockpit was also applied to the 757, allowing pilots to operate
+        both aircraft after a short conversion course, and adding incentive for airlines to purchase both types.\n</string>
 
 
-    <string name="b767_desc2" formatted="false">\n</string>
+    <string name="b767_desc2" formatted="false">The 767 is a low-wing cantilever monoplane with a conventional tail unit featuring a single fin and rudder. The wings
+        are swept at 31.5 degrees and optimized for a cruising speed of Mach 0.8 (858 km/h). Each wing features a supercritical airfoil cross-section and is equipped
+        with six-panel leading edge slats, single- and double-slotted flaps, inboard and outboard ailerons, and six spoilers. The airframe further incorporates
+        Carbon-fiber-reinforced polymer composite material wing surfaces, Kevlar fairings and access panels, plus improved aluminum alloys, which together reduce
+        overall weight by 860 kg versus preceding aircraft. To distribute the aircraft\'s weight on the ground, the 767 has a retractable tricycle landing gear with
+        four wheels on each main gear and two for the nose gear. The original wing and gear design accommodated the stretched 767-300 without major changes. The
+        767-400ER features a larger, more widely spaced main gear with 777 wheels, tires, and brakes. To prevent damage if the tail section contacts the runway surface
+        during takeoff, 767-300 and 767-400ER models are fitted with a retractable tailskid.\n\nIn addition to shared avionics and computer technology, the 767 uses the same auxiliary power unit, electric power systems, and hydraulic parts as
+        the 757. A raised cockpit floor and the same forward cockpit windows result in similar pilot viewing angles. Related design and functionality allows 767
+        pilots to obtain a common type rating to operate the 757 and share the same seniority roster with pilots of either aircraft. The original 767 flight deck uses
+        six Rockwell Collins CRT screens to display Electronic flight instrument system (EFIS) and engine indication and crew alerting system (EICAS) information,
+        allowing pilots to handle monitoring tasks previously performed by the flight engineer. The CRTs replace conventional electromechanical instruments found on
+        earlier aircraft. An enhanced flight management system, improved over versions used on early 747s, automates navigation and other functions, while
+        an automatic landing system facilitates CAT IIIb instrument landings in low visibility situations. The 767 became the first aircraft to receive CAT IIIb
+        certification from the FAA for landings with 300 m minimum visibility in 1984. On the 767-400ER, the cockpit layout is simplified further with six Rockwell
+        Collins liquid crystal display (LCD) screens, and adapted for similarities with the 777 and the Next Generation 737.\n\nTo retain operational commonality, the
+        LCD screens can be programmed to display information in the same manner as earlier 767s. In 2012, Boeing and Rockwell Collins launched a further 787-based cockpit
+        upgrade for the 767, featuring three landscape-format LCD screens that can display two windows each. The 767 is equipped with three redundant hydraulic systems
+        for operation of control surfaces, landing gear, and utility actuation systems. Each engine powers a separate hydraulic system, and the third system uses
+        electric pumps. A ram air turbine provides power for basic controls in the event of an emergency. An early form of fly-by-wire is employed for spoiler operation,
+        utilizing electric signaling instead of traditional control cables. The fly-by-wire system reduces weight and allows independent operation of
+        individual spoilers.\n</string>
 
-    <string name="b767_desc3">\n \n</string>
+    <string name="b767_desc3">\n767 variants include 767-200, 767-2C, 767-200ER, 767-300, 767-300ER, 767-300F, 767-400ER. Military and government variants are comprised
+        of Airborne Surveillance Testbed, E-767, KC-767 Tanker Transport, KC-767 Advanced Tanker, KC-46, 767 MMTT, E-10 MC2A. Other variants once considered by
+        Boeing that did not make into the production phase include 767-X and 767-400ERX. Boeing is also studying a re-engined 767-XF for around 2025, based on the
+        767-400ER with an extended landing gear to accommodate larger General Electric GEnx turbofan engines. The cargo market is the main target, but a passenger
+        version could be a cheaper alternative to the proposed New Midsize Airplane.\n</string>
 
     <string name="b767_specs_constraint">(-200, -200ER, -300, -300ER/F, -400ER compared in order)\n</string>
 
