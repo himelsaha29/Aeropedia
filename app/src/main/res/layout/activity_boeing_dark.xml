@@ -166,7 +166,7 @@
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/boeing_767_cover1" />
+                            android:src="@drawable/boeing_767_cover" />
 
                         <TextView
                             android:layout_width="match_parent"
