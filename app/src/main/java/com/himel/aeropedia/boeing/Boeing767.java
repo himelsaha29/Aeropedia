@@ -78,9 +78,9 @@ public class Boeing767 extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_boeing_747_light);
+            setContentView(R.layout.activity_boeing_767_light);
         } else {
-            setContentView(R.layout.activity_boeing_747_dark);
+            setContentView(R.layout.activity_boeing_767_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
@@ -378,13 +378,13 @@ public class Boeing767 extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.boeing_747_slider1);
+                sliderItem.setImageLocation(R.drawable.boeing_767_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.boeing_747_slider2);
+                sliderItem.setImageLocation(R.drawable.boeing_767_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.boeing_747_slider3);
+                sliderItem.setImageLocation(R.drawable.boeing_767_slider3);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.boeing_747_slider4);
+                sliderItem.setImageLocation(R.drawable.boeing_767_slider4);
             }
 
             sliderItemList.add(sliderItem);

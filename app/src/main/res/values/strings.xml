@@ -1328,7 +1328,7 @@
     <string name="b767_first_flight_value">26 September 1981</string>
     <string name="b767_intro_value">8 September 1982\nwith United Airlines</string>
     <string name="b767_customer_value">Delta Air Lines</string>
-    <string name="b767_variants_value">TBD</string>
+    <string name="b767_variants_value">14 (active)</string>
 
     <string name="b767_desc1" formatted="false">Boeing 767 was launched as the 7X7 project on July 14, 1978, the prototype first flew on September 26, 1981, and it was
         certified on July 30, 1982. The original 767-200 entered service on September 8, 1982 with United Airlines, and the extended-range 767-200ER in 1984. It was
@@ -1338,7 +1338,7 @@
         earlier aircraft, mainly through new engine and wing technology. As development progressed, engineers used computer-aided design for over a third of the
         767\'s design drawings, and performed 26,000 hours of wind tunnel tests. Design work occurred concurrently with the 757 twinjet, leading Boeing to treat both as
         almost one program to reduce risk and cost. Both aircraft would ultimately receive shared design features, including avionics, flight management systems,
-        instruments, and handling characteristics. Combined development costs were estimated at $3.5 to $4 billion. As of June 202q, a total of 1219 767s have been
+        instruments, and handling characteristics. Combined development costs were estimated at $3.5 to $4 billion. As of June 2021, a total of 1219 767s have been
         built.\n\nThe 767 was the first Boeing wide-body to be designed with a two-crew digital glass cockpit. Cathode ray tube (CRT) color displays and new
         electronics replaced the role of the flight engineer by enabling the pilot and co-pilot to monitor aircraft systems directly. Despite the promise of reduced
         crew costs, United Airlines initially demanded a conventional three-person cockpit, citing concerns about the risks associated with introducing a new
@@ -1381,7 +1381,9 @@
 
 
     <string name="b767_identify">How to identify Boeing 767?</string>
-    <string name="b767_identify_ans"></string>
+    <string name="b767_identify_ans">\"V\" shaped side windshield, The 767-300 and -400 have emergency exit doors before the wing and after the wing. The -200
+        has one emergency exit above the wing. The 767-300 and -400 each come with a retractable tailskid added to protect the tail of
+        these longer versions from damaging tail strikes on takeoff. Added bonus for -400, it has blended large L-shaped wingtips, while other variants don\'t.</string>
 
     <string name="b767_cockpit_value">2</string>
     <string name="b767_wingspan_value">47.57 m / 51.92 m (-400ER)</string>
