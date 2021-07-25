@@ -42,6 +42,7 @@ import com.himel.aeropedia.boeing.Boeing737;
 import com.himel.aeropedia.boeing.Boeing747;
 import com.himel.aeropedia.boeing.Boeing757;
 import com.himel.aeropedia.boeing.Boeing767;
+import com.himel.aeropedia.boeing.Boeing777;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
@@ -65,6 +66,7 @@ public class Boeing extends AppCompatActivity {
     private CardView b757Card;
     private CardView b747Card;
     private CardView b767Card;
+    private CardView b777Card;
     private Animation translate = null;
     private ScrollView scrollView;
     private NeumorphImageButton darkToggle;
@@ -94,6 +96,7 @@ public class Boeing extends AppCompatActivity {
         b747Card = findViewById(R.id.b747Card);
         b757Card = findViewById(R.id.b757Card);
         b767Card = findViewById(R.id.b767Card);
+        b777Card = findViewById(R.id.b777Card);
 
         langToggle = findViewById(R.id.lang_toggle);
         mDrawer = findViewById(R.id.drawerlayout);
@@ -104,6 +107,7 @@ public class Boeing extends AppCompatActivity {
         b747Card.getBackground().setAlpha(65);
         b757Card.getBackground().setAlpha(65);
         b767Card.getBackground().setAlpha(65);
+        b777Card.getBackground().setAlpha(65);
 
         // setting NeumorphismButton shape based on state
         if (locale.toString().contains("en")) {
@@ -150,6 +154,16 @@ public class Boeing extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), Boeing767.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
+        b777Card.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), Boeing777.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
@@ -267,6 +281,7 @@ public class Boeing extends AppCompatActivity {
         b787Card.setAnimation(translate);
         b757Card.setAnimation(translate);
         b767Card.setAnimation(translate);
+        b777Card.setAnimation(translate);
     }
 
     /** Changing app language **/

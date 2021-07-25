@@ -1381,7 +1381,7 @@
 
 
     <string name="b767_identify">How to identify Boeing 767?</string>
-    <string name="b767_identify_ans">\"V\" shaped side windshield, The 767-300 and -400 have emergency exit doors before the wing and after the wing. The -200
+    <string name="b767_identify_ans">\"V\" shaped side windshield, The 767-300 and -400 have emergency exit doors before the wing and after the wing, 4-wheel main landing gear. The -200
         has one emergency exit above the wing. The 767-300 and -400 each come with a retractable tailskid added to protect the tail of
         these longer versions from damaging tail strikes on takeoff. Added bonus for -400, it has blended large L-shaped wingtips, while other variants don\'t.</string>
 
@@ -1400,23 +1400,66 @@
     <!--BOEING 777-->
     <string name="b777_type_value">Wide-body</string>
     <string name="b777_engine_value">P&amp;W PW4000 / GE GE90 /\nRR Trent 800 (2)</string>
-    <string name="b777_first_flight_value">12 June 1994 </string>
+    <string name="b777_first_flight_value">12 June 1994</string>
     <string name="b777_intro_value">7 June 1995 with\nUnited Airlines</string>
     <string name="b777_customer_value">Emirates</string>
-    <string name="b777_variants_value">TBD</string>
+    <string name="b777_variants_value">9 (active)</string>
 
-    <string name="b777_desc1" formatted="false">\n</string>
+    <string name="b777_desc1" formatted="false">The Boeing 777, commonly referred to as the Triple Seven, is an American wide-body airliner developed and manufactured by
+        Boeing Commercial Airplanes. It is the world\'s largest twinjet. The 777 was designed to bridge the gap between Boeing\'s 767 and 747, and to replace older
+        DC-10s and L-1011s. Developed in consultation with eight major airlines, with a first meeting in January 1990, the program was launched on October 14, 1990, with
+        an order from United Airlines. The prototype was rolled out on April 9, 1994, and first flew on June 12, 1994. The 777 entered service with the launch
+        customer, United Airlines, on June 7, 1995. Longer range variants were launched on February 29, 2000, and were first delivered on April 29, 2004. As of June
+        2021, a total of 1,667 777s have been built.\n\nIn the early 1970s, the Boeing 747, McDonnell Douglas DC-10, and the Lockheed L-1011 TriStar became the first
+        generation of wide-body passenger airliners to enter service. In 1978, Boeing unveiled three new models: the twin-engine Boeing 757 to replace its 727, the
+        twin-engine 767 to challenge the Airbus A300, and a trijet 777 concept to compete with the DC-10 and L-1011. The mid-size 757 and 767 launched to market success,
+        due in part to 1980s\' extended-range twin-engine operational performance standards (ETOPS) regulations governing transoceanic twinjet operations. These
+        regulations allowed twin-engine airliners to make ocean crossings at up to three hours\' distance from emergency diversionary airports. Under ETOPS rules,
+        airlines began operating the 767 on long-distance overseas routes that did not require the capacity of larger airliners. The trijet 777 was later dropped,
+        following marketing studies that favored the 757 and 767 variants. Boeing was left with a size and range gap in its product line between the 767-300ER and
+        the 747-400. Airline customers were uninterested in the 767-X proposals, and instead wanted an even wider fuselage cross-section, fully flexible interior
+        configurations, short- to intercontinental-range capability, and an operating cost lower than that of any 767 stretch. Airline planners\' requirements for
+        larger aircraft had become increasingly specific, adding to the heightened competition among aircraft manufacturers. By 1988, Boeing realized that the only
+        answer was a new clean-sheet design, which became the 777 twin-jet. The company opted for the twin-engine configuration given past design successes, projected
+        engine developments, and reduced-cost benefits. On December 8, 1989, Boeing began issuing offers to airlines for the 777.\n</string>
 
 
-    <string name="b777_desc2" formatted="false">\n</string>
+    <string name="b777_desc2" formatted="false">Boeing introduced a number of advanced technologies with the 777 design, including fully digital fly-by-wire controls,
+        fully software-configurable avionics, Honeywell LCD glass cockpit flight displays, and the first use of a fiber optic avionics network on a commercial
+        airliner. Boeing made use of work done on the cancelled Boeing 7J7 regional jet, which utilized similar versions of the chosen technologies. In 2003, Boeing
+        began offering the option of cockpit electronic flight bag computer displays. In 2013, Boeing announced that the upgraded 777X models would incorporate
+        airframe, systems, and interior technologies from the 787. In designing the 777 as its first fly-by-wire commercial aircraft, Boeing decided to retain
+        conventional control yokes rather than change to sidestick controllers as used in many fly-by-wire fighter aircraft and in many Airbus airliners. Along with
+        traditional yoke and rudder controls, the cockpit features a simplified layout that retains similarities to previous Boeing models. The fly-by-wire system
+        also incorporates flight envelope protection, a system that guides pilot inputs within a computer-calculated framework of operating parameters, acting to
+        prevent stalls, overspeeds, and excessively stressful maneuvers. This system can be overridden by the pilot if deemed necessary. The fly-by-wire system is
+        supplemented by mechanical backup.\n\nThe wings on the 777 feature a supercritical airfoil design that is swept back at 31.6 degrees and optimized for cruising
+        at Mach 0.83 (revised after flight tests up to Mach 0.84). The wings are designed with increased thickness and a longer span than previous airliners, resulting
+        in greater payload and range, improved takeoff performance, and a higher cruising altitude. The wings also serve as fuel storage, with longer-range models able
+        to carry up to 181,300 L of fuel. This capacity allows the 777-200LR to operate ultra-long-distance, trans-polar routes such as Toronto to Hong Kong. In 2013, a
+        new wing made of composite materials was introduced for the upgraded 777X, with a wider span and design features based on the 787's wings. Unlike smaller
+        airliners like the Boeing 737, no current 777 wings have winglets; instead, the exceptionally long raked wings of the 777 serve the same drag-reducing function.
+        Large folding wingtips, 6.40 m long, were offered when the 777 was first launched, to appeal to airlines who might use gates made to accommodate smaller
+        aircraft, but no airline purchased this option. Folding wingtips reemerged as a design feature at the announcement of the upgraded 777X in 2013. Smaller
+        folding wingtips of 3.35 m in length will allow 777X models to use the same airport gates and taxiways as earlier 777s. These smaller folding wingtips are less
+        complex than those proposed for earlier 777s, and internally only affect the wiring needed for wingtip lights.\n\nThe airframe incorporates the use of composite
+        materials, which comprise nine percent of its original structural weight (all models outside the 777-8 and 777-9). Elements made from composite material include
+        the cabin floor and rudder. The main fuselage cross-section is circular and tapers rearward into a blade-shaped tail cone with a port-facing auxiliary power
+        unit. The aircraft also features the largest landing gear and the biggest tires ever used in a commercial jetliner. The six-wheel bogies are designed to spread
+        the load of the aircraft over a wide area without requiring an additional centerline gear. This helps reduce weight and simplifies the aircraft\'s braking and
+        hydraulic systems. Each tire of a 777-300ER six-wheel main landing gear can carry a load of 26,980 kg, which is heavier than other wide-bodies such as the
+        747-400. The aircraft has triple redundant hydraulic systems with only one system required for landing. A ram air turbine—a small retractable device which can
+        provide emergency power—is also fitted in the wing root fairing.\n</string>
 
-    <string name="b777_desc3">\n \n</string>
+    <string name="b777_desc3">\nBoeing 777 variants include 777-200, 777-200ER, 777-200LR, 777-300, 777-300ER, 777 Freighter, 777-300ER Special Freighter (SF), the
+        upcoming 777X, 777 Business Jet (777 VIP), and 777 Tanker (KC-777).\n</string>
 
     <string name="b777_specs_constraint">(-200/200ER, -300, -300ER, -200LR/777F compared in order)\n</string>
 
 
     <string name="b777_identify">How to identify Boeing 777?</string>
-    <string name="b777_identify_ans"></string>
+    <string name="b777_identify_ans">\"V\" shaped side windshield, slightly flattened top \"slant\" of the fuselage, flat APU exhaust, no wingtips, 6-wheel main
+        landing gear, 4-5 exit doors across the length of the fuselage.</string>
 
     <string name="b777_cockpit_value">2</string>
     <string name="b777_wingspan_value">60.93 m (-200/200ER/-300) /\n64.80 m</string>
