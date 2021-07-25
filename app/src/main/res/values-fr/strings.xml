@@ -33,6 +33,8 @@
     <string name="b737">737</string>
     <string name="b757">757</string>
     <string name="b747">747</string>
+    <string name="b767">767</string>
+    <string name="b777">777</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -832,6 +834,39 @@
     <string name="b757_range_value">1,540 / 2,600 / 2,060–2,375 / 2,935–3,010 / 3,300–3,850 nmi</string>
     <string name="b757_thrust_value">62 / 64–73 / 89–105 / 89–120 / 130 kN</string>
     <!--BOEING 757-->
+
+
+    <!--BOEING 767-->
+    <string name="b767_type_value">Narrow-body</string>
+    <string name="b767_engine_value">Pratt &amp; Whitney PW2000 /\nRolls-Royce RB211 (2)</string>
+    <string name="b767_first_flight_value">19 February 1982</string>
+    <string name="b767_intro_value">1 January 1983 with\nEastern Air Lines</string>
+    <string name="b767_customer_value">Delta Air Lines</string>
+    <string name="b767_variants_value">12 (active)</string>
+
+    <string name="b767_desc1" formatted="false">\n</string>
+
+
+    <string name="b767_desc2" formatted="false">\n</string>
+
+    <string name="b767_desc3">\n \n</string>
+
+    <string name="b767_specs_constraint">()\n</string>
+
+
+    <string name="b767_identify">How to identify Boeing 747?</string>
+    <string name="b767_identify_ans"></string>
+
+    <string name="b767_cockpit_value">2</string>
+    <string name="b767_wingspan_value">38.0 m</string>
+    <string name="b767_length_value">47.3 m (-200 / -200F) / 54.4 m</string>
+    <string name="b767_height_value">13.6 m</string>
+    <string name="b767_fuselage_value">3.76 m (W) / ~3.8 m (H)</string>
+    <string name="b767_mtow_value">115.66 t (-200/-200F) /\n123.83 t</string>
+    <string name="b767_cruise_speed_value">854 km/h (typical),\n918 km/h (max.)</string>
+    <string name="b767_range_value">3,915 / 2,935 / 3,400 nmi</string>
+    <string name="b767_thrust_value">179–193 kN (RR RB211) /\n163–189 kN (P &amp; W PW2000)</string>
+    <!--BOEING 767-->
 
 
 

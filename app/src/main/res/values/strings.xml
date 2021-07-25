@@ -33,6 +33,8 @@
     <string name="b737">737</string>
     <string name="b757">757</string>
     <string name="b747">747</string>
+    <string name="b767">767</string>
+    <string name="b777">777</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -1299,7 +1301,7 @@
         System (ARIES) for air safety and operational research, C-32 - The United States Air Force (USAF) operates four VIP-configured 757-200s under
         the designation C-32A for missions including transporting the President of the United States and/or the Vice President of the United States, F-22 Flying
         Testbed, one for Krueger flap and Natural Laminar Flow Insect Mitigation Test Program, one for Active Flow Control System, Royal New Zealand Air Force 757 Combi, and
-        VIP Transports\n</string>
+        VIP Transports.\n</string>
 
     <string name="b757_specs_constraint">(-200, -200F, -300 compared in order)\n</string>
 
@@ -1318,6 +1320,39 @@
     <string name="b757_range_value">3,915 / 2,935 / 3,400 nmi</string>
     <string name="b757_thrust_value">179–193 kN (RR RB211) /\n163–189 kN (P &amp; W PW2000)</string>
     <!--BOEING 757-->
+
+
+    <!--BOEING 767-->
+    <string name="b767_type_value">Wide-body</string>
+    <string name="b767_engine_value">P&amp;W JT9D / PW4000 /\nGE CF6 / RR RB211 (2)</string>
+    <string name="b767_first_flight_value">26 September 1981</string>
+    <string name="b767_intro_value">8 September 1982\nwith United Airlines</string>
+    <string name="b767_customer_value">Delta Air Lines</string>
+    <string name="b767_variants_value">TBD</string>
+
+    <string name="b767_desc1" formatted="false">\n</string>
+
+
+    <string name="b767_desc2" formatted="false">\n</string>
+
+    <string name="b767_desc3">\n \n</string>
+
+    <string name="b767_specs_constraint">(-200, -200ER, -300, -300ER/F, -400ER compared in order)\n</string>
+
+
+    <string name="b767_identify">How to identify Boeing 767?</string>
+    <string name="b767_identify_ans"></string>
+
+    <string name="b767_cockpit_value">2</string>
+    <string name="b767_wingspan_value">47.57 m / 51.92 m (-400ER)</string>
+    <string name="b767_length_value">48.51 m (-200/ER) / 54.94 m (-300/ER) /\n61.37 m</string>
+    <string name="b767_height_value">15.85 m / 16.87 m (-400ER)</string>
+    <string name="b767_fuselage_value">5.03 m (W) / 5.41 m (H)</string>
+    <string name="b767_mtow_value">142.9 / 179.2 / 158.8 /\n 186.9 / 204.1 t</string>
+    <string name="b767_cruise_speed_value">850 km/h (typical),\n900 km/h (max.)</string>
+    <string name="b767_range_value">3,900 / 6,590 / 3,900 /\n5,980 / 5,625 nmi</string>
+    <string name="b767_thrust_value">214–234 / 214–270 / 214–270 /\n252–274 / 270 kN</string>
+    <!--BOEING 767-->
 
 
     <string name="status_listening">LISTENING…</string>
