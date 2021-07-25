@@ -99,7 +99,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private TextView verticalRateTV;
     private TextView trackTV;
     private TextView squawkTV;
-    private TextView spiTV;
     private TextView positionSourceTV;
 
     private BitmapDescriptor markerPlaneBlack;
@@ -209,7 +208,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         verticalRateTV = findViewById(R.id.vertical_rate);
         trackTV = findViewById(R.id.track);
         squawkTV = findViewById(R.id.squawk);
-        spiTV = findViewById(R.id.spi);
         positionSourceTV = findViewById(R.id.position_source);
 
 
@@ -336,7 +334,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 storeInMap[7] = squawk;
 
                 String tempSpi = String.valueOf(spi);
-                storeInMap[8] = tempSpi.substring(0, 1).toUpperCase() + tempSpi.substring(1, tempSpi.trim().length());
+                storeInMap[8] = tempSpi;
                 if(positionSource == 0) {
                     storeInMap[9] = "ADS-B";
                 } else if (positionSource == 1) {
@@ -423,7 +421,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 velocityTV.setText(R.string.loading);
                 verticalRateTV.setText(R.string.loading);
                 squawkTV.setText(R.string.loading);
-                spiTV.setText(R.string.loading);
                 positionSourceTV.setText(R.string.loading);
                 // =========================
 
@@ -477,12 +474,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 verticalRateTV.setText(markerInfo[6]);
                 trackTV.setText(String.valueOf(marker.getRotation()) + "°");
                 squawkTV.setText(markerInfo[7]);
-                if(markerInfo[8].equalsIgnoreCase("true")) {
-                    spiTV.setText(R.string._true);
-                }
-                else {
-                    spiTV.setText(R.string.not_true);
-                }
+
                 positionSourceTV.setText(markerInfo[9]);
 
                 if(!flightRoute[1].equalsIgnoreCase("N/A")) {
@@ -887,7 +879,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 storeInMap[7] = squawk;
 
                 String tempSpi = String.valueOf(spi);
-                storeInMap[8] = tempSpi.substring(0, 1).toUpperCase() + tempSpi.substring(1, tempSpi.trim().length());
+                storeInMap[8] = tempSpi;
                 if(positionSource == 0) {
                     storeInMap[9] = "ADS-B";
                 } else if (positionSource == 1) {
