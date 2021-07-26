@@ -348,6 +348,8 @@ public class Bombardier extends AppCompatActivity {
             bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "HighlightDark", "bombardier", null));
         }
 
+        TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "b767", Learjet75.class));
+        bombardier.addChildren(learjet75);
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
 

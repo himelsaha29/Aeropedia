@@ -38,6 +38,7 @@ import com.himel.aeropedia.boeing.Boeing737;
 import com.himel.aeropedia.boeing.Boeing747;
 import com.himel.aeropedia.boeing.Boeing757;
 import com.himel.aeropedia.boeing.Boeing777;
+import com.himel.aeropedia.boeing.Boeing787;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
@@ -315,15 +316,20 @@ public class Learjet75 extends AppCompatActivity {
         TreeNode b747 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b747), "No", "b747", Boeing747.class));
         TreeNode b767 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b767), "No", "b767", Boeing777.class));
         TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b777), "No", "b777", Boeing777.class));
-        TreeNode b787 = null;
-        if (verifyDarkMode().equals("Yes")) {
-            b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b787), "HighlightLight", "b787", null));
-        } else {
-            b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b787), "HighlightDark", "b787", null));
-        }
+        TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b787), "No", "b787", Boeing787.class));
+
         boeing.addChildren(b737, b747, b757, b767, b777, b787);
 
         TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
+        TreeNode learjet75 = null;
+        if (verifyDarkMode().equals("Yes")) {
+            learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "HighlightLight", "learjet75", null));
+        } else {
+            learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "HighlightDark", "learjet75", null));
+        }
+
+        bombardier.addChildren(learjet75);
+
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
 
