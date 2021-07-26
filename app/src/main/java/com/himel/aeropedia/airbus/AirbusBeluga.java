@@ -311,8 +311,9 @@ public class AirbusBeluga extends AppCompatActivity {
         TreeNode b747 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b747), "No", "b747", Boeing747.class));
         TreeNode b767 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b767), "No", "b767", Boeing767.class));
         boeing.addChildren(b737, b747, b757, b767, b777, b787);
+        TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
 
-        manufacturerRoot.addChildren(airbus, boeing, antonov);
+        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
 
         root.addChildren(manufacturerRoot);
         root.addChildren(alexaRoot);

@@ -170,6 +170,16 @@ public class ManufacturerMenu extends AppCompatActivity {
             }
         });
 
+        bombardierCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent showContent = new Intent(getApplicationContext(), Bombardier.class);
+                startActivity(showContent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
 
         langToggle.setOnClickListener(new View.OnClickListener() {
 
@@ -414,7 +424,9 @@ public class ManufacturerMenu extends AppCompatActivity {
         TreeNode b767 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b767), "No", "b767", Boeing767.class));
         boeing.addChildren(b737, b747, b757, b767, b777, b787);
 
-        manufacturerRoot.addChildren(airbus, boeing, antonov);
+        TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
+
+        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
 
         root.addChildren(manufacturerRoot);
         root.addChildren(alexaRoot);
