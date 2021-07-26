@@ -62,6 +62,7 @@
     <string name="thrust4">Thrust (4x)</string>
     <string name="thrust6">Thrust (6x)</string>
     <string name="propellers">Propellers</string>
+    <string name="numbers">Numbers built</string>
     <string name="shaft_horse_power">Shaft Horse Power</string>
     <!--BASICS-->
 
@@ -975,6 +976,37 @@
     <string name="b787_thrust_value">343 - 417 / 440 / 513 / 489–513 kN</string>
     <!--BOEING 787-->
 
+
+    <!--LEARJET 75-->
+    <string name="learjet75_type_value">Wide-body</string>
+    <string name="learjet75_engine_value">General Electric GEnx-1B /\nRolls-Royce Trent 1000 (2)</string>
+    <string name="learjet75_customer_value">All Nippon Airways</string>
+    <string name="learjet75_variants_value">2</string>
+    <string name="learjet75_numbers_value">Zenith Aviation</string>
+
+    <string name="learjet75_desc1" formatted="false">\n</string>
+
+
+    <string name="learjet75_desc2" formatted="false">\n</string>
+
+    <string name="learjet75_desc3">\n \n</string>
+
+    <string name="learjet75_specs_constraint">(-8, -9, -10 compared in order)\n</string>
+
+
+    <string name="learjet75_identify">How to identify Learjet 75?</string>
+    <string name="learjet75_identify_ans"></string>
+
+    <string name="learjet75_cockpit_value">2</string>
+    <string name="learjet75_wingspan_value">60.12 m</string>
+    <string name="learjet75_length_value">56.72 / 62.81 / 68.28 m</string>
+    <string name="learjet75_height_value">16.92 m / 17.02 m (-9/-10)</string>
+    <string name="learjet75_fuselage_value">5.77 m (W) / ~5.94 m (H)</string>
+    <string name="learjet75_mtow_value">227.93 t / 254.01 t (-9/-10)</string>
+    <string name="learjet75_cruise_speed_value">903 km/h (typical),\n956 km/h (max.)</string>
+    <string name="learjet75_range_value">7,355 / 7,635 / 6,430 nmi</string>
+    <string name="learjet75_thrust_value">280 / 320 / 340 kN</string>
+    <!--LEARJET 75-->
 
 
 

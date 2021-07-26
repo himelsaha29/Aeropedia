@@ -61,6 +61,7 @@
     <string name="thrust4">Thrust (4x)</string>
     <string name="thrust6">Thrust (6x)</string>
     <string name="propellers">Propellers</string>
+    <string name="numbers">Numbers built</string>
     <string name="shaft_horse_power">Shaft Horse Power</string>
     <!--BASICS-->
 
@@ -371,7 +372,7 @@
         Changes from the A320 include a fuselage stretch and some modifications to the wing. The fuselage was lengthened by a 4.27 m plug ahead of the wing and a
         2.67 m plug behind it, so that the A321 is 6.94 metres longer than the A320. The length increase required the overwing window exits of the A320 to be
         converted into door exits and repositioned in front of and behind the wings. To maintain performance, double-slotted flaps and minor trailing edge
-        modifications were included, increasing the wing area from 124 m<sup><small><small>2</small></small></sup> (1,330 sq ft) to 128 m<sup><small><small>2</small></small></sup> (1,380 sq ft). The centre fuselage and undercarriage were
+        modifications were included, increasing the wing area from 124 m<sup><small><small>2</small></small></sup> to 128 m<sup><small><small>2</small></small></sup>. The centre fuselage and undercarriage were
         reinforced to accommodate the increase in maximum takeoff weight of 9,600 kg (21,200 lb), taking it to 83,000 kg (183,000 lb).\n</string>
 
 
@@ -1551,6 +1552,57 @@
     <string name="b787_range_value">7,355 / 7,635 / 6,430 nmi</string>
     <string name="b787_thrust_value">280 / 320 / 340 kN</string>
     <!--BOEING 787-->
+
+
+    <!--LEARJET 75-->
+    <string name="learjet75_type_value">Business jet</string>
+    <string name="learjet75_engine_value">Honeywell TFE731-40BR\n(2)</string>
+    <string name="learjet75_customer_value">Zenith Aviation</string>
+    <string name="learjet75_variants_value">2</string>
+    <string name="learjet75_numbers_value">145 by end of 2019</string>
+
+    <string name="learjet75_desc1" formatted="false">The Learjet 75 is a mid-sized business jet airplane manufactured by the Learjet division of Canadian aircraft
+        manufacturer Bombardier Aerospace. With the end of production in 2021 it will be the last LearJet model. These models feature new avionics, winglets, and
+        powerful engines that use less fuel. It has been updated with touchscreen-controlled Garmin G5000 avionics and a modern interior. The combination
+        of aerodynamic improvements, which lowered the design\'s drag by 2%, and 200 lbs less weight in the nose section resulted in an increased range of 4%. The
+        canted winglet design was incorporated from the Bombardier Global 7500/8000. It is powered by 17.1 kN Honeywell TFE731-40BR turbofans with thrust
+        reversers, have a MTOW of 9,800 kg and a fuel capacity of 2,750 kg for a maximum range of 2,050 nmi with four passengers. Typical cruise is Mach .76 and high-speed cruise
+        is Mach .79, the ceiling is FL510 where the cabin altitude is 2,400 m. Their flat-floor cabin width is 1.50m by 1.55 m high, the Learjet 70\'s seven-seat cabin
+        length is 5.38 and 6.05 m for the nine-seat, double-club Learjet 75. The forward galley facing the entry door is isolated by a pocket door from the seating
+        area with a Lufthansa Technik cabin management, and the aft lavatory has a belted seat. The 1.4 m<sup><small><small>3</small></small></sup> external baggage
+        hold is heated but not pressurized.\n</string>
+
+
+    <string name="learjet75_desc2" formatted="false">At FL410, ISA + 3 °C (5 °F) and Mach .78 for 462 kn (856 km/h), its hourly fuel burn is 450 kg and 640 kg at
+        Mach .80. Certified to the stricter FAR Part 25, the $13.8 million Learjet 75 competes with the Embraer Phenom 300 and the Citation CJ4, beating them in
+        cabin volume, with 10.3 m<sup><small><small>3</small></small></sup> against 9.3 and 8.4 m<sup><small><small>3</small></small></sup> respectively, the Phenom
+        having the same cross-section, larger than the 1.45 by 1.47 m CJ4. The Mach .81 capable Learjet is faster than the Mach .78 Phenom and the Mach .77
+        CJ4, and the Phenom can fly 1,971 nmi (3,650 km) while the CJ4 can fly 2,165 nmi (4,010 km). The Learjet 75 received its type certificate from the FAA on 14
+        November 2013. Deliveries began shortly thereafter. This delay in certification caused order cancellations, and Bombardier\'s overall deliveries fell below
+        expectations. By 2016, production of Learjet 70 has been temporarily discontinued due to lack of orders (with Learjet 75 still being produced). The 100th
+        Learjet 75 was delivered in June 2017. By January 2019, Bombardier has delivered 132 Learjet 40/40XRs, 454 45/45XRs, and nearly 130 70/75s, including 24 in
+        2016 and 14 in 2017. In June, Bombardier launched the sub-$10 million Learjet 75 Liberty to compete with the Cessna CitationJet and Embraer Phenom 300 from
+        2020, with six seats down from eight, no standard APU or lavatory sink, but still Part 25 and not FAR Part 23 certified, with a maximum payload of 1,320 kg
+        and a range of 2,080 nmi (3,850 km). Bombardier announced the end of the production of Learjet aircraft by the end of 2021.\n</string>
+
+    <string name="learjet75_desc3">\nThe business jet comes in 2 variants, the Learjet 75 and the Learjet 75 Liberty.\n</string>
+
+    <string name="learjet75_specs_constraint">(Learjet 75)\n</string>
+
+
+    <string name="learjet75_identify">How to identify Learjet 75?</string>
+    <string name="learjet75_identify_ans"></string>
+
+    <string name="learjet75_cockpit_value">2</string>
+    <string name="learjet75_wingspan_value">15.5 m</string>
+    <string name="learjet75_length_value">17.7 m</string>
+    <string name="learjet75_height_value">4.31 m</string>
+    <string name="learjet75_fuselage_value">1.56 m (W) /  1.50 m (H)</string>
+    <string name="learjet75_mtow_value">9.75 t</string>
+    <string name="learjet75_cruise_speed_value">861 km/h (typical)</string>
+    <string name="learjet75_range_value">2,040 nmi</string>
+    <string name="learjet75_thrust_value">17.1 kN</string>
+    <!--LEARJET 75-->
 
 
     <string name="status_listening">LISTENING…</string>
