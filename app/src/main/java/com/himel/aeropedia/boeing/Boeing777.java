@@ -379,13 +379,13 @@ public class Boeing777 extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.boeing_777_slider1);
+                sliderItem.setImageLocation(R.drawable.boeing_777_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.boeing_777_slider2);
+                sliderItem.setImageLocation(R.drawable.boeing_777_slider02);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.boeing_777_slider3);
+                sliderItem.setImageLocation(R.drawable.boeing_777_slider03);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.boeing_777_slider4);
+                sliderItem.setImageLocation(R.drawable.boeing_777_slider04);
             }
 
             sliderItemList.add(sliderItem);
