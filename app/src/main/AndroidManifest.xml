@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".boeing.Boeing777"></activity>
+        <activity android:name=".boeing.Boeing787"></activity>
+        <activity android:name=".boeing.Boeing777" />
         <activity android:name=".boeing.Boeing767" />
         <activity android:name=".boeing.Boeing747" />
         <activity android:name=".boeing.Boeing757" />

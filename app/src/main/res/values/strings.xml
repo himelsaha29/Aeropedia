@@ -1473,6 +1473,84 @@
     <!--BOEING 777-->
 
 
+    <!--BOEING 787-->
+    <string name="b787_type_value">Wide-body</string>
+    <string name="b787_engine_value">General Electric GEnx-1B /\nRolls-Royce Trent 1000 (2)</string>
+    <string name="b787_first_flight_value">15 December 2009</string>
+    <string name="b787_intro_value">26 October 2011\nwith All Nippon Airways</string>
+    <string name="b787_customer_value">All Nippon Airways</string>
+    <string name="b787_variants_value">4 (active)</string>
+
+    <string name="b787_desc1" formatted="false">The Boeing 787 Dreamliner is an American wide-body jet airliner manufactured by Boeing Commercial Airplanes. After
+        dropping its Sonic Cruiser project, Boeing announced the conventional 7E7 on January 29, 2003, focused on efficiency. The program was launched on April 26,
+        2004, with an order for 50 from All Nippon Airways (ANA), targeting a 2008 introduction. On July 8, 2007, the prototype was rolled out without major systems, and
+        experienced multiple delays until its maiden flight on December 15, 2009. Type certification was received in August 2011 and the first 787-8 was delivered
+        in September 2011 before entering commercial service on October 26, 2011, with ANA. As of June 2021, a total of 1,006 787s have been built.\n\nThe Boeing 787
+        Dreamliner is a long-haul, widebody, twin-engine jetliner, which features light-weight construction. The aircraft is 80% composite by volume; Boeing lists its
+        materials by weight as 50% composite, 20% aluminum, 15% titanium, 10% steel, and 5% other. Aluminum has been used throughout the wing and tail leading edges,
+        titanium is predominantly present within the elements of the engines and fasteners, while various individual components are composed of steel. External
+        features include a smooth nose contour, raked wingtips and engine nacelles with noise-reducing serrated edges (chevrons). The longest-range 787 variant can
+        fly up to 7,635 nmi , or the even longer Qantas QF 9 flight between Perth Airport and London–Heathrow, over 7,828 nmi. The aircraft has a design life
+        of 44,000 flight cycles. Among 787 flight systems, a key change from traditional airliners is the electrical architecture. The architecture is bleedless and
+        replaces bleed air with electrically powered compressors and four of six hydraulic power sources with electrically driven pumps, while completely eliminating
+        pneumatics and hydraulics from some subsystems, e.g. engine starters and brakes. Boeing says that this system extracts 35% less power from the engines, allowing
+        increased thrust and improved fuel efficiency. The total available on-board electrical power is 1.45 megawatts, which is five times the power available on
+        conventional pneumatic airliners; the most notable electrically powered systems include engine start, cabin pressurization, horizontal-stabilizer trim, and
+        wheel brakes. Wing ice protection is another new system; it uses electro-thermal heater mats on the wing slats instead of traditional hot bleed air. An active
+        gust alleviation system, similar to the system used on the B-2 bomber, improves ride quality during turbulence.\n\nThe 787 has a \"fly-by-wire\" control system
+        similar in architecture to that of the Boeing 777. The flight deck features multi-function LCDs, which use an industry-standard graphical user interface
+        widget toolkit (Cockpit Display System Interfaces to User Systems / ARINC 661). The 787 flight deck includes two head-up displays (HUDs) as a standard
+        feature. Like other Boeing airliners, the 787 uses a yoke (as opposed to a side-stick). Under consideration is future integration of forward-looking infrared
+        into the HUD for thermal sensing, allowing pilots to \"see\" through clouds. Lockheed Martin\'s Orion spacecraft will use a glass cockpit derived from
+        Honeywell International\'s 787 flight deck systems. In 2016, Rolls-Royce began flight testing its new Trent 1000 TEN engine. It has a new compressor system
+        based on the compressor in Rolls-Royce Trent XWB engine and a new turbine design for extra thrust, up to 350 kN. Rolls-Royce plans to offer the TEN on the 787-8,
+        -9 and -10. In early 2020, of 1484 orders, 905 selected GE (61.0%), 476 selected RR (32.1%) and 103 were undecided (6.90%).\n</string>
+
+
+    <string name="b787_desc2" formatted="false">The 787 is the first major commercial airplane to have a composite fuselage, composite wings, and use composites in
+        most other airframe components. Each 787 contains approximately 35 metric tons of carbon fiber reinforced polymer (CFRP), made with 23 t of carbon fiber. Carbon
+        fiber composites have a higher strength-to-weight ratio than conventional aircraft materials, and help make the 787 a lighter aircraft. Composites are used on
+        fuselage, wings, tail, doors, and interior. Boeing had built and tested the first commercial aircraft composite section while studying the proposed Sonic Cruiser
+        in the early 2000s. The first carbon/epoxy primary structure was put into service on the Boeing 737 Classic horizontal tail in 1984, and the largest use of
+        composite structures is 60 percent in the Boeing–Sikorsky RAH-66 Comanche.\n\nCarbon fiber, unlike metal, does not visibly show cracks and fatigue, prompting
+        concerns about the safety risks of widespread use of the material; the rival Airbus A350 XWB uses composite panels on a frame, a more conventional approach,
+        which its contractors regarded as less risky. Although fired in 2006, Boeing engineer Vince Weldon complained to management, and later to the public: the
+        composite fuselage was unsafe compared to conventional aluminum designs, and in a crash, was more likely to \"shatter too easily and burn with toxic fumes\". In
+        addition, a potential issue is the porous nature of composite materials: collected moisture expanding with altitude can cause delamination. Boeing responded that
+        composites have been used on wings and other passenger aircraft parts for many years without incident, and special defect detection procedures will be instituted
+        for the 787 to detect any potential hidden damage.\n\nThe 787 is powered by two engines; these engines use all-electrical bleedless systems, eliminating the
+        superheated air conduits normally used for aircraft power, de-icing, and other functions. As part of its \"Quiet Technology Demonstrator 2\" project, Boeing
+        adopted several engine noise-reducing technologies for the 787. These include an air inlet containing sound-absorbing materials and exhaust duct cover with a
+        chevron-toothed pattern on the rim for a quieter mixing of exhaust and outside air. Boeing expects these developments to make the 787 significantly quieter
+        both inside and out. The noise-reducing measures prevent sounds above 85 decibels from leaving airport boundaries. The two different engine models compatible
+        with the 787 use a standard electrical interface to allow an aircraft to be fitted with either Rolls-Royce Trent 1000 or General Electric GEnx-1B engines. This
+        interchangeability aims to save time and cost when changing engine types; while previous aircraft could exchange engines for those of a different manufacturer,
+        the high cost and time required made it rare. In 2006, Boeing addressed reports of an extended change period by stating that the 787 engine swap was intended to
+        take 24 hours.\n</string>
+
+    <string name="b787_desc3">\nBoeing 787 Dreamliner variants include 787-8, 787-9, 787-10, BBJ 787 (Boeing Business Jets). On top of these, Boeing expects to build, possibly
+        in the 2018–2023 timeframe, a 787 freighter version, Boeing 787-3. Boeing also reportedly considered a 787 variant as a candidate to replace the 747-based
+        Boeing VC-25 presidential transport in 2009. In 2018, two Boeing 747-8 aircraft were ordered to replace the two older 747-200-based VC-25A Air Force
+        One aircraft.</string>
+
+    <string name="b787_specs_constraint">(-8, -9, -10 compared in order)\n</string>
+
+
+    <string name="b787_identify">How to identify Boeing 787?</string>
+    <string name="b787_identify_ans">Distinctive sleek, \"pointed\" nose with 4-piece windshield, raked wingtips, chevron-toothed pattern on the rim of the nacelles
+        of both the engines, much curved wings tha most aircraft.</string>
+
+    <string name="b787_cockpit_value">2</string>
+    <string name="b787_wingspan_value">60.12 m</string>
+    <string name="b787_length_value">56.72 / 62.81 / 68.28 m</string>
+    <string name="b787_height_value">16.92 m / 17.02 m (-9/-10)</string>
+    <string name="b787_fuselage_value">5.77 m (W) / ~5.94 m (H)</string>
+    <string name="b787_mtow_value">227.93 t / 254.01 t (-9/-10)</string>
+    <string name="b787_cruise_speed_value">903 km/h (typical),\n956 km/h (max.)</string>
+    <string name="b787_range_value">7,355 / 7,635 / 6,430 nmi</string>
+    <string name="b787_thrust_value">280 / 320 / 340 kN</string>
+    <!--BOEING 787-->
+
 
     <string name="status_listening">LISTENING…</string>
     <string name="status_processing">PROCESSING…</string>

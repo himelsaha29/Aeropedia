@@ -902,6 +902,39 @@
     <!--BOEING 777-->
 
 
+    <!--BOEING 787-->
+    <string name="b787_type_value">Wide-body</string>
+    <string name="b787_engine_value">P&amp;W PW4000 / GE GE90 /\nRR Trent 800 (2)</string>
+    <string name="b787_first_flight_value">12 June 1994</string>
+    <string name="b787_intro_value">7 June 1995 with\nUnited Airlines</string>
+    <string name="b787_customer_value">Emirates</string>
+    <string name="b787_variants_value">9 (active)</string>
+
+    <string name="b787_desc1" formatted="false">\n</string>
+
+
+    <string name="b787_desc2" formatted="false">\n</string>
+
+    <string name="b787_desc3">\n \n</string>
+
+    <string name="b787_specs_constraint">()\n</string>
+
+
+    <string name="b787_identify">How to identify Boeing 787?</string>
+    <string name="b787_identify_ans"></string>
+
+    <string name="b787_cockpit_value">2</string>
+    <string name="b787_wingspan_value">60.93 m (-200/200ER/-300) /\n64.80 m</string>
+    <string name="b787_length_value">63.73 m / 73.86 m (-300/-300ER) /\n63.73 m</string>
+    <string name="b787_height_value">18.5 / 18.5 / 18.6 m</string>
+    <string name="b787_fuselage_value">6.20 m (W) / ~6.30 m (H)</string>
+    <string name="b787_mtow_value">247.2 - 297.55 / 299.37 /\n351.53 / 347,45 - 347.82 t</string>
+    <string name="b787_cruise_speed_value">892 km/h (typical),\n924–945 km/h (max.)</string>
+    <string name="b787_range_value">5,240 - 7,065 / 6,030 /\n4,650 - 7,370 / 4,980 - 10,450 nmi</string>
+    <string name="b787_thrust_value">343 - 417 / 440 / 513 / 489–513 kN</string>
+    <!--BOEING 787-->
+
+
     <string name="status_listening">"écoute"…</string>
     <string name="status_processing">PROCESSING…</string>
     <string name="status_speaking">parle…</string>
