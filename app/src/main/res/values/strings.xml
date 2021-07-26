@@ -1507,7 +1507,7 @@
         -9 and -10. In early 2020, of 1484 orders, 905 selected GE (61.0%), 476 selected RR (32.1%) and 103 were undecided (6.90%).\n</string>
 
 
-    <string name="b787_desc2" formatted="false">The 787 is the first major commercial airplane to have a composite fuselage, composite wings, and use composites in
+    <string name="b787_desc2" formatted="false">787 Dreamliner is the first major commercial airplane to have a composite fuselage, composite wings, and use composites in
         most other airframe components. Each 787 contains approximately 35 metric tons of carbon fiber reinforced polymer (CFRP), made with 23 t of carbon fiber. Carbon
         fiber composites have a higher strength-to-weight ratio than conventional aircraft materials, and help make the 787 a lighter aircraft. Composites are used on
         fuselage, wings, tail, doors, and interior. Boeing had built and tested the first commercial aircraft composite section while studying the proposed Sonic Cruiser
@@ -1518,7 +1518,7 @@
         composite fuselage was unsafe compared to conventional aluminum designs, and in a crash, was more likely to \"shatter too easily and burn with toxic fumes\". In
         addition, a potential issue is the porous nature of composite materials: collected moisture expanding with altitude can cause delamination. Boeing responded that
         composites have been used on wings and other passenger aircraft parts for many years without incident, and special defect detection procedures will be instituted
-        for the 787 to detect any potential hidden damage.\n\nThe 787 is powered by two engines; these engines use all-electrical bleedless systems, eliminating the
+        for the 787 to detect any potential hidden damage.\n\nBoeing 787 is powered by two engines; these engines use all-electrical bleedless systems, eliminating the
         superheated air conduits normally used for aircraft power, de-icing, and other functions. As part of its \"Quiet Technology Demonstrator 2\" project, Boeing
         adopted several engine noise-reducing technologies for the 787. These include an air inlet containing sound-absorbing materials and exhaust duct cover with a
         chevron-toothed pattern on the rim for a quieter mixing of exhaust and outside air. Boeing expects these developments to make the 787 significantly quieter
@@ -1531,7 +1531,7 @@
     <string name="b787_desc3">\nBoeing 787 Dreamliner variants include 787-8, 787-9, 787-10, BBJ 787 (Boeing Business Jets). On top of these, Boeing expects to build, possibly
         in the 2018–2023 timeframe, a 787 freighter version, Boeing 787-3. Boeing also reportedly considered a 787 variant as a candidate to replace the 747-based
         Boeing VC-25 presidential transport in 2009. In 2018, two Boeing 747-8 aircraft were ordered to replace the two older 747-200-based VC-25A Air Force
-        One aircraft.</string>
+        One aircraft.\n</string>
 
     <string name="b787_specs_constraint">(-8, -9, -10 compared in order)\n</string>
 
