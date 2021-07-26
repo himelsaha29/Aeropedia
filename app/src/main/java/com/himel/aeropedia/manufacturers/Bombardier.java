@@ -81,9 +81,9 @@ public class Bombardier extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_boeing_light);
+            setContentView(R.layout.activity_bombardier_light);
         } else {
-            setContentView(R.layout.activity_boeing_dark);
+            setContentView(R.layout.activity_bombardier_dark);
         }
         darkToggle = findViewById(R.id.dark_toggle);
         scrollView = findViewById(R.id.main_scroll);

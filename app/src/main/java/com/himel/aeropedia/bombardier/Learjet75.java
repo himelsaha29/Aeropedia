@@ -82,9 +82,9 @@ public class Learjet75 extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_learjet_75);
+            setContentView(R.layout.activity_bombardier_learjet_75_light);
         } else {
-            setContentView(R.layout.activity_boeing_787_dark);
+            setContentView(R.layout.activity_bombardier_learjet75_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
