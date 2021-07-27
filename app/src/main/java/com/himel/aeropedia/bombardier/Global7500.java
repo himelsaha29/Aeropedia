@@ -85,7 +85,7 @@ public class Global7500 extends AppCompatActivity {
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_bombardier_global_7500_light);
         } else {
-            setContentView(R.layout.activity_bombardier_challenger_650_dark);
+            setContentView(R.layout.activity_bombardier_global_7500_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
@@ -392,13 +392,13 @@ public class Global7500 extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.bombardier_challenger_650_slider1);
+                sliderItem.setImageLocation(R.drawable.bombardier_global_7500_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.bombardier_challenger_650_slider2);
+                sliderItem.setImageLocation(R.drawable.bombardier_global_7500_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.bombardier_challenger_650_slider3);
+                sliderItem.setImageLocation(R.drawable.bombardier_global_7500_slider3);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.bombardier_challenger_650_slider4);
+                sliderItem.setImageLocation(R.drawable.bombardier_global_7500_slider4);
             }
 
             sliderItemList.add(sliderItem);

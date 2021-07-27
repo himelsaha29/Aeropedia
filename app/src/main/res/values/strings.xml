@@ -1677,7 +1677,7 @@
     <string name="global7500_first_flight_value">4 November 2016</string>
     <string name="global7500_intro_value">20 December 2018</string>
     <string name="global7500_numbers_value">50 as of March 2021</string>
-    <string name="global7500_variants_value">TBD</string>
+    <string name="global7500_variants_value">1</string>
 
     <string name="global7500_desc1" formatted="false">The Bombardier Global 7500 are ultra long-range business jets developed by Bombardier Aviation (formerly
         Bombardier Aerospace). Announced in October 2010, the program was delayed by two years by a wing redesign. The 7500, originally named the 7000, made its first
@@ -1719,7 +1719,7 @@
         0.85/484 kn (896 km/h) TAS, 780 kg at Mach 0.9/515 kn (954 km/h) TAS and 1,100 kg at Mach 0.925/523 kn (969 km/h) TAS, around 34,000 kg and ISA conditions. An
         even longer range variant could reach 1,000 nmi (1,900 km) more with another 3,600 kg of fuel.\n</string>
 
-    <string name="global7500_desc3">\n \n</string>
+    <string name="global7500_desc3">\n</string>
 
     <string name="global7500_specs_constraint">()\n</string>
 
