@@ -83,7 +83,7 @@ public class Challenger650 extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_bombardier_challenger_650);
+            setContentView(R.layout.activity_bombardier_challenger_650_light);
         } else {
             setContentView(R.layout.activity_bombardier_learjet75_dark);
         }

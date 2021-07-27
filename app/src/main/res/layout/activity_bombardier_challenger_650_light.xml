@@ -32,7 +32,7 @@
                 android:fitsSystemWindows="true"
                 app:contentScrim="@android:color/transparent"
                 app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-                app:title="@string/learjet75">
+                app:title="@string/challenger650">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -45,7 +45,7 @@
                         android:layout_marginStart="0dp"
                         android:layout_marginTop="0dp"
                         android:layout_marginEnd="0dp"
-                        android:background="@drawable/bombardier_learjet75_main"
+                        android:background="@drawable/bombardier_challenger_650_main"
                         android:scaleType="centerCrop"
                         app:layout_collapseMode="parallax"
                         app:layout_constraintDimensionRatio="H, 16:9"
