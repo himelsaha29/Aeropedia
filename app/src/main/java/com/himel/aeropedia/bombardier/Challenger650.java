@@ -397,7 +397,7 @@ public class Challenger650 extends AppCompatActivity {
                 sliderItem.setImageLocation(R.drawable.bombardier_challenger_650_slider2);
             } else if (i == 2) {
                 sliderItem.setImageLocation(R.drawable.bombardier_challenger_650_slider3);
-            } else if (i == 2) {
+            } else if (i == 3) {
                 sliderItem.setImageLocation(R.drawable.bombardier_challenger_650_slider4);
             }
 

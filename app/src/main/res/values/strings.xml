@@ -37,6 +37,7 @@
     <string name="b777">777</string>
     <string name="learjet75">Learjet 75</string>
     <string name="challenger650">Challenger 650</string>
+    <string name="global7500">Global 7500</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -1608,7 +1609,7 @@
 
     <!--CHALLENGER 650-->
     <string name="challenger650_type_value">Business jet</string>
-    <string name="challenger650_engine_value">General Electric GEnx-1B /\nRolls-Royce Trent 1000 (2)</string>
+    <string name="challenger650_engine_value">General Electric CF34-3B (2)</string>
     <string name="challenger650_first_flight_value">8 November 1978</string>
     <string name="challenger650_numbers_value">1066 as of\nOctober 2018</string>
     <string name="challenger650_variants_value">1</string>
@@ -1668,6 +1669,74 @@
     <string name="challenger650_range_value">4,000 nmi</string>
     <string name="challenger650_thrust_value">41 kN</string>
     <!--CHALLENGER 650-->
+
+
+    <!--GLOBAL 7500-->
+    <string name="global7500_type_value">Business jet</string>
+    <string name="global7500_engine_value">General Electric Passport (2)</string>
+    <string name="global7500_first_flight_value">4 November 2016</string>
+    <string name="global7500_intro_value">20 December 2018</string>
+    <string name="global7500_numbers_value">50 as of March 2021</string>
+    <string name="global7500_variants_value">TBD</string>
+
+    <string name="global7500_desc1" formatted="false">The Bombardier Global 7500 are ultra long-range business jets developed by Bombardier Aviation (formerly
+        Bombardier Aerospace). Announced in October 2010, the program was delayed by two years by a wing redesign. The 7500, originally named the 7000, made its first
+        flight on November 4, 2016, was type certified by Transport Canada on September 28, 2018, and entered service on 20 December 2018. The Global 8000 schedule has
+        not yet been determined. Based on the Global 6000 with a new transonic wing, the longer, four-zone cabin 7500 has a range of 7,700 nmi, while the shorter
+        three-zone 8000 was to reach 7,900 nmi.\n\nThe first test aircraft underwent taxi testing in October 2016. Dedicated to testing basic system functionality and
+        assessing the handling and flying qualities of the aircraft, its maiden flight was performed on November 4, 2016, climbing to 6,096 m and reaching 240 knots
+        during the 2 h 27 min flight. The production wing was in final design in February 2017. FTV2 flew on March 6, 2017, \"The Powerhouse\" is designed to test
+        aircraft systems, including propulsion, electrical and mechanical systems. FTV1 is used to open the performance envelope and reached Mach 0.995 on March
+        29, 2017. FTV3 flew on May 10, 2017, "The Navigator" will be used to test the avionics and electrical system performance. By the end of May 2017, the three
+        prototypes flew a combined 250 hours. The fourth prototype, used for cabin interior validation, is called \"The Architect\" and the fifth and final, for the
+        entry-into-service, is called \"The Masterpiece\". The fifth has a slightly lighter production wing supplied by the Triumph Group, after a dispute over the
+        wing weight was resolved.\n\nBy mid-July 2017, the three flight-test aircraft had accumulated 500 hours. On 15 August 2017, after \"high vibration and high
+        inter-turbine temperature readings\", the second prototype\'s right GE Passport had an in-flight flameout at FL410 and the aircraft went back to Wichita
+        Airport 156 nmi away for a single engine landing. By October 2017, the four flight-test aircraft had flown 900 hours. In April 2018, the flight test campaign
+        surpassed 1,800 hours and confirmed a range increase from 7,400 to 7,700 nmi, greater than the competing Gulfstream G650ER\'s 7,500 nmi, but still overshadowed
+        by the smaller Global 8000\'s range of 7,900 nmi, 200 nmi more than the Global 7500. As the original Global Express is developed into the Global 5500 and
+        6500, it is renamed Global 7500 to reflect this range increase. By the end of May 2018, the five flight-test aircraft had amassed about 2,000 hours towards
+        the type\'s planned entry-into-service at year-end. By June 2018, 2,300 flight test hours had been completed by the test fleet towards certification. The
+        first production aircraft entered the completion centre in May 2018.\n</string>
+
+    <string name="global7500_desc2" formatted="false">The 7500 is a stretched derivative of the Global 6000 with a new transonic wing. It is powered by the new General
+        Electric Passport 73 kN thrust engine with reduced NOx emissions and 8% better fuel efficiency than the Global Express XRS, allowing a Mach 0.90 high-speed
+        cruise. As part of its effort to make the long-range aircraft comfortable for the passengers, Bombardier developed a new ergonomic passenger seat, called the
+        Nuage. The seat design took seven years to complete. Airbus-owned Stelia supplies the main fuselage. The new, larger and lower-drag wing is optimized for Mach
+        0.85 with a 35.3° quarter chord wing sweep, a thinner thickness-to-chord ratio, leaner flap track fairings, improved lift-to-drag performance, more efficient
+        winglets and up to 30% better low-speed lift due to double-slotted, inboard Fowler flaps. The new fly-by-wire flight controls with active load alleviation and
+        the flexible, relatively highly loaded wing damps turbulence. The metal airframe uses aluminium–lithium alloys to save weight. It shares the same fuselage
+        diameter with older Global models, but has thinner frames, which increase the cabin width and height by 25 mm. Additionally the 19 dm<sup><small><small>2</small></small></sup>
+        cabin windows are 80% larger, the nose cowl is recontoured, and the aft fuselage and empennage are both new designs. The basic inspection intervals are 850
+        hours or 36 months, with C checks are every 12 years or 8,500 cycles and a limit of 17,000 cycles before life extension through intensive maintenance is
+        required.\n\nOfficially designated as the BD-700-2A12, the design is marketed as the Global 7500. It is stretched by 3.43 m from the original Global. It is
+        planned to have a four-zone 74.67 m<sup><small><small>3</small></small></sup> cabin, 20% more than the previous. It was originally designed to cover a 7,300 nmi
+        range at Mach 0.85 with 10 passengers. Its cabin is one-third longer than competing models, providing a fourth seating section up from three, can sleep
+        eight passengers and offers an optional shower and a sleeping crew rest area. Bombardier marketing focused on ultra-high-net-worth individuals and the Global
+        7500 is the largest, longest range, roomiest and most luxurious purpose-built business aircraft yet built. Despite the wing area being smaller than the
+        Gulfstream G650ER and a 11% higher MTOW, it has lower V speeds and better runway performance due to the high-lift system with leading-edge slats and
+        double-slotted flaps for a similar power loading. Hourly fuel flow per engine is 230 kg at idle, 2,830 kg at takeoff, 580 to 620 kg in cruise at Mach
+        0.85/484 kn (896 km/h) TAS, 780 kg at Mach 0.9/515 kn (954 km/h) TAS and 1,100 kg at Mach 0.925/523 kn (969 km/h) TAS, around 34,000 kg and ISA conditions. An
+        even longer range variant could reach 1,000 nmi (1,900 km) more with another 3,600 kg of fuel.\n</string>
+
+    <string name="global7500_desc3">\n \n</string>
+
+    <string name="global7500_specs_constraint">()\n</string>
+
+
+    <string name="global7500_identify">How to identify Global 7500</string>
+    <string name="global7500_identify_ans"></string>
+
+    <string name="global7500_cockpit_value">4</string>
+    <string name="global7500_wingspan_value">31.7 m</string>
+    <string name="global7500_length_value">33.88 m</string>
+    <string name="global7500_height_value">8.2 m</string>
+    <string name="global7500_fuselage_value">2.44 m (W) / 1.88 m (H)</string>
+    <string name="global7500_mtow_value">52.1 t</string>
+    <string name="global7500_cruise_speed_value">902 km/h (typical),\n955 km/h (max.)</string>
+    <string name="global7500_range_value">7,700 nmi</string>
+    <string name="global7500_thrust_value">84.2 kN</string>
+    <!--GLOBAL 7500-->
 
 
     <string name="status_listening">LISTENING…</string>

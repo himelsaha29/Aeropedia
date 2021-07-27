@@ -37,6 +37,7 @@
     <string name="b777">777</string>
     <string name="learjet75">Learjet 75</string>
     <string name="challenger650">Challenger 650</string>
+    <string name="global7500">Global 7500</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -1000,6 +1001,39 @@
     <string name="challenger650_range_value">7,355 / 7,635 / 6,430 nmi</string>
     <string name="challenger650_thrust_value">280 / 320 / 340 kN</string>
     <!--CHALLENGER 650-->
+
+
+    <!--GLOBAL 7500-->
+    <string name="global7500_type_value">Narrow-body</string>
+    <string name="global7500_engine_value">Pratt &amp; Whitney\nPW1500G (2)</string>
+    <string name="global7500_first_flight_value">16 September 2013</string>
+    <string name="global7500_intro_value">15 July 2016 with\nSwiss International Air Lines</string>
+    <string name="global7500_numbers_value">50 as of March 2021</string>
+    <string name="global7500_variants_value">3</string>
+
+    <string name="global7500_desc1" formatted="false">\n</string>
+
+    <string name="global7500_desc2" formatted="false">\n</string>
+
+    <string name="global7500_desc3">\n \n</string>
+
+    <string name="global7500_specs_constraint">()\n</string>
+
+
+    <string name="global7500_identify">How to identify Global 7500</string>
+    <string name="global7500_identify_ans"></string>
+
+    <string name="global7500_cockpit_value">2</string>
+    <string name="global7500_wingspan_value">35.10 m</string>
+    <string name="global7500_length_value">35.0 / 38.70 m</string>
+    <string name="global7500_height_value">11.50 m</string>
+    <string name="global7500_fuselage_value">3.5 m (W) / ~3.7 m (H)</string>
+    <string name="global7500_mtow_value">63.1 / 70.9 t</string>
+    <string name="global7500_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="global7500_range_value">3,450 / 3,600 nmi</string>
+    <string name="global7500_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
+    <!--GLOBAL 7500-->
+
 
 
     <string name="status_listening">"écoute"…</string>

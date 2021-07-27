@@ -339,18 +339,6 @@
                     android:textSize="26sp" />
 
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/maven_pro_medium"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:text="@string/challenger650_specs_constraint"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="12sp" />
-
-
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

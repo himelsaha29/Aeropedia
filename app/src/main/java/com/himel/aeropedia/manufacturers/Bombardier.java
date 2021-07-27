@@ -45,6 +45,7 @@ import com.himel.aeropedia.boeing.Boeing767;
 import com.himel.aeropedia.boeing.Boeing777;
 import com.himel.aeropedia.boeing.Boeing787;
 import com.himel.aeropedia.bombardier.Challenger650;
+import com.himel.aeropedia.bombardier.Global7500;
 import com.himel.aeropedia.bombardier.Learjet75;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
@@ -67,6 +68,8 @@ public class Bombardier extends AppCompatActivity {
     private Animation translate = null;
     private ScrollView scrollView;
     private CardView learjet75Card;
+    private CardView challenger650Card;
+    private CardView global7500Card;
     private NeumorphImageButton darkToggle;
     private String enableDark;
     private String enableDarkOnCreate;
@@ -90,12 +93,16 @@ public class Bombardier extends AppCompatActivity {
         scrollView = findViewById(R.id.main_scroll);
 
         learjet75Card = findViewById(R.id.learjet75Card);
+        challenger650Card = findViewById(R.id.challenger650Card);
+        global7500Card = findViewById(R.id.global7500Card);
 
         langToggle = findViewById(R.id.lang_toggle);
         mDrawer = findViewById(R.id.drawerlayout);
         blur = findViewById(R.id.blurLayout);
 
         learjet75Card.getBackground().setAlpha(65);
+        challenger650Card.getBackground().setAlpha(65);
+        global7500Card.getBackground().setAlpha(65);
 
         // setting NeumorphismButton shape based on state
         if (locale.toString().contains("en")) {
@@ -111,6 +118,26 @@ public class Bombardier extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), Learjet75.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
+        challenger650Card.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), Challenger650.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
+        global7500Card.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), Global7500.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
@@ -224,6 +251,8 @@ public class Bombardier extends AppCompatActivity {
     private void animateCards() {
         translate = AnimationUtils.loadAnimation(this, R.anim.animation);
         learjet75Card.setAnimation(translate);
+        challenger650Card.setAnimation(translate);
+        global7500Card.setAnimation(translate);
     }
 
     /** Changing app language **/
