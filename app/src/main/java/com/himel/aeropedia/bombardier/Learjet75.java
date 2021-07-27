@@ -328,11 +328,10 @@ public class Learjet75 extends AppCompatActivity {
             learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "HighlightDark", "learjet75", null));
         }
 
-        TreeNode challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.challenger650), "No", "challenger650", Challenger650.class));
+        TreeNode challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "No", "challenger650", Challenger650.class));
+        TreeNode global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "No", "global7500", Global7500.class));
 
-        bombardier.addChildren(challenger650, learjet75);
-
-
+        bombardier.addChildren(challenger650, learjet75, global7500);
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
 
         root.addChildren(manufacturerRoot);

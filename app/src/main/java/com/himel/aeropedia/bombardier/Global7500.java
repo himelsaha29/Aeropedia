@@ -322,14 +322,15 @@ public class Global7500 extends AppCompatActivity {
 
         TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
         TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "learjet75", Learjet75.class));
-        TreeNode challenger650 = null;
+        TreeNode challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "No", "challenger650", Challenger650.class));
+        TreeNode global7500 = null;
         if (verifyDarkMode().equals("Yes")) {
-            challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "HighlightLight", "challenger650", null));
+            global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "HighlightLight", "global7500", null));
         } else {
-            challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "HighlightDark", "challenger650", null));
+            global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "HighlightDark", "global7500", null));
         }
 
-        bombardier.addChildren(challenger650, learjet75);
+        bombardier.addChildren(challenger650, learjet75, global7500);
 
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);

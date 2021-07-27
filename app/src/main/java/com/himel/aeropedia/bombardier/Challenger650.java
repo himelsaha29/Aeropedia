@@ -329,7 +329,9 @@ public class Challenger650 extends AppCompatActivity {
             challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "HighlightDark", "challenger650", null));
         }
 
-        bombardier.addChildren(challenger650, learjet75);
+        TreeNode global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "No", "global7500", Global7500.class));
+
+        bombardier.addChildren(challenger650, learjet75, global7500);
 
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
