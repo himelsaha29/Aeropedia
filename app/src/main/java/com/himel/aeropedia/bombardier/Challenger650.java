@@ -62,7 +62,7 @@ import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphImageButton;
 import soup.neumorphism.ShapeType;
 
-public class Learjet75 extends AppCompatActivity {
+public class Challenger650 extends AppCompatActivity {
 
     private NeumorphButton langToggle;
     private Locale locale;
@@ -83,7 +83,7 @@ public class Learjet75 extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_bombardier_learjet_75_light);
+            setContentView(R.layout.activity_bombardier_challenger_650);
         } else {
             setContentView(R.layout.activity_bombardier_learjet75_dark);
         }

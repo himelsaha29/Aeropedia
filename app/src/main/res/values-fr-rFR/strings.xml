@@ -36,6 +36,7 @@
     <string name="b767">767</string>
     <string name="b777">777</string>
     <string name="learjet75">Learjet 75</string>
+    <string name="challenger650">Challenger 650</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -1008,6 +1009,37 @@
     <string name="learjet75_thrust_value">280 / 320 / 340 kN</string>
     <!--LEARJET 75-->
 
+
+    <!--CHALLENGER 650-->
+    <string name="challenger650_type_value">Wide-body</string>
+    <string name="challenger650_engine_value">General Electric GEnx-1B /\nRolls-Royce Trent 1000 (2)</string>
+    <string name="challenger650_first_flight_value">15 December 2009</string>
+    <string name="challenger650_numbers_value">1066 as of\nOctober 2018</string>
+    <string name="challenger650_variants_value">4 (active)</string>
+
+    <string name="challenger650_desc1" formatted="false">\n</string>
+
+
+    <string name="challenger650_desc2" formatted="false">\n</string>
+
+    <string name="challenger650_desc3">\n \n</string>
+
+    <string name="challenger650_specs_constraint">(-8, -9, -10 compared in order)\n</string>
+
+
+    <string name="challenger650_identify">How to identify Boeing 787?</string>
+    <string name="challenger650_identify_ans"></string>
+
+    <string name="challenger650_cockpit_value">2</string>
+    <string name="challenger650_wingspan_value">60.12 m</string>
+    <string name="challenger650_length_value">56.72 / 62.81 / 68.28 m</string>
+    <string name="challenger650_height_value">16.92 m / 17.02 m (-9/-10)</string>
+    <string name="challenger650_fuselage_value">5.77 m (W) / ~5.94 m (H)</string>
+    <string name="challenger650_mtow_value">227.93 t / 254.01 t (-9/-10)</string>
+    <string name="challenger650_cruise_speed_value">903 km/h (typical),\n956 km/h (max.)</string>
+    <string name="challenger650_range_value">7,355 / 7,635 / 6,430 nmi</string>
+    <string name="challenger650_thrust_value">280 / 320 / 340 kN</string>
+    <!--CHALLENGER 650-->
 
 
     <string name="status_listening">"écoute"…</string>

@@ -36,6 +36,7 @@
     <string name="b767">767</string>
     <string name="b777">777</string>
     <string name="learjet75">Learjet 75</string>
+    <string name="challenger650">Challenger 650</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -1603,6 +1604,70 @@
     <string name="learjet75_range_value">2,040 nmi</string>
     <string name="learjet75_thrust_value">17.1 kN</string>
     <!--LEARJET 75-->
+
+
+    <!--CHALLENGER 650-->
+    <string name="challenger650_type_value">Business jet</string>
+    <string name="challenger650_engine_value">General Electric GEnx-1B /\nRolls-Royce Trent 1000 (2)</string>
+    <string name="challenger650_first_flight_value">8 November 1978</string>
+    <string name="challenger650_numbers_value">1066 as of\nOctober 2018</string>
+    <string name="challenger650_variants_value">1</string>
+
+    <string name="challenger650_desc1" formatted="false">The Challenger 650 is a member of the Bombardier Challenger 600 series, family of business jets developed by Canadair after a Bill Lear
+        concept, and then produced from 1986 by its new owner, Bombardier Aerospace. At the end of 1975, Canadair began funding the development of LearStar 600, and
+        then bought the design for a wide-cabin business jet in April 1976. On 29 October, the programme was launched, backed by the Canadian federal government, and
+        designed to comply with new FAR part 25 standards. The Challenger is a twin-engined business jet, described by Flight International as being \"miniturised
+        twinjet airliner in every respect\". While the Challenger is generally similar in configuration to previous aircraft of its type, some of its features stand
+        out; for example, the use of a widened fuselage that allows a \"walk-about cabin\". The Challenger was also one of the first business jets to be designed with a
+        supercritical wing. The wing was referred by Canadair as being one of the aircraft\'s most advanced features. In 2021, its price is estimated to be $32.4M.\n\nIt is also capable of performing short takeoffs
+        while maintaining the speed and comfort levels normally associated with larger jetliners. The Challenger\'s wing has been referred to as being a modified
+        NACA symmetrical aerofoil. Akin to other supercritical wings, it features a rounded leading edge, an inverted camber, a blunt trailing edge and scalloping of
+        the underside. The twin-spar wing box structure spans the entire length of the wing and is compartmentalised to form five internal fuel tanks; these tanks can
+        accommodate up to 14,661 lb of fuel, nearly half the aircraft\'s empty weight. The skins of the wings are produced via large milling machines, which in 1978 were
+        claimed to be in excess of anything else in North America. Many elements, such as the flaps, ailerons and leading edge feature conventional construction; however,
+        several parts, including the wing/fuselage fairing, flap shrouds and wingtips are molded out of Kevlar, as are other elements of the aircraft.\n</string>
+
+
+    <string name="challenger650_desc2" formatted="false">The original CL-600 Challenger was powered by a pair of Lycoming ALF 502L turbofan engines, which was developed
+        specifically for the Challenger. Subsequent models would adopt other powerplants, including the General Electric CF34 engine. The engines are mounted on the rear
+        fuselage close to the aircraft\'s tail, providing smooth airflow to the engines even when flown at high angles of attack, although this was in a lower position
+        than the original Learstar concept had placed them to mitigate against unfavourable pitch control characteristics. The engines are fitted with thrust reversers
+        to decrease landing distances. An auxiliary power unit is also present for starting the engines and providing air conditioning within the cabin while on the
+        ground. The fuselage comprises three sections – the nose, centre, and tail – which are manufactured separately in their own jigs and joined late on in the
+        production process. It has been designed to be pressurised at a maximum differential of 9.3 lb per square inch. Various cutouts are present across the fuselage
+        to accommodate various features, such as a large main door on the port side of the aircraft forward of the wing, multiple regulation-compliant emergency exits, a
+        baggage hatch on the port side aft of the wing, and numerous windows. The fuselage\'s diameter was designed to accommodate an unobstructed cabin floor, a cabin
+        height of 6 ft 1inch in the centre section, as well as space for the wing box, underfloor integral fuel tanks, air ducts, and various control cabling. It was also
+        designed to easily accommodate Canadair\'s early plans to stretch the fuselage, for which equal-length plugs are installed fore and after of the centre section to
+        vastly increase the Challenger\'s capacity.\n\nVarious avionics are present upon the Challenger. As standard, the CL-600 is furnished with a dual-channel Sperry
+        SPZ-600 automatic flight control system, incorporating a flight director and air data computers; more typical to larger commercial aircraft, this system is
+        certifiable for conducting category 3A automatic landings. The flight control system features significant redundancy, including three individual hydraulic
+        systems; even with complete failure and the loss of one actuator, a viable level of assisted control over the key flight surfaces remains present. Weather
+        radar and Marconi-built solid-state instrument displays are supplied as standard, as well as a Collins-built radio set; optional long range radio-based
+        equipment, such as a HF radio set and VHF navigational aids can be installed. In a standard executive aircraft configuration, the cabin is divided between the
+        forward galley, and two seating sections, which are typically fitted with a four-chair club section followed by either a conference grouping area or divans,
+        along with a lavatory at the aft end. The chairs are fully reclining and can swivel, while the divans can serve as sleeping accommodation. Early examples feature
+        luxuries such as telephones, lighting controls, and stereo systems; foldaway tables attached to the cabin walls were also installed, along with a pair of
+        wardrobes, one fore and one aft, for storing hand luggage and other small items.\n</string>
+
+    <string name="challenger650_desc3">\nThe Challenger 650 comes in only one variant, the CL-650.\n</string>
+
+    <string name="challenger650_specs_constraint">()\n</string>
+
+
+    <string name="challenger650_identify">How to identify Challenger 650?</string>
+    <string name="challenger650_identify_ans"></string>
+
+    <string name="challenger650_cockpit_value">2</string>
+    <string name="challenger650_wingspan_value">19.6 m</string>
+    <string name="challenger650_length_value">20.9 m</string>
+    <string name="challenger650_height_value">6.3 m</string>
+    <string name="challenger650_fuselage_value">2.41 m (W) / 1.83 m (H)</string>
+    <string name="challenger650_mtow_value">21.86 t</string>
+    <string name="challenger650_cruise_speed_value">854 km/h (typical)</string>
+    <string name="challenger650_range_value">4,000 nmi</string>
+    <string name="challenger650_thrust_value">41 kN</string>
+    <!--CHALLENGER 650-->
 
 
     <string name="status_listening">LISTENING…</string>

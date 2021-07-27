@@ -32,7 +32,7 @@
                 android:fitsSystemWindows="true"
                 app:contentScrim="@android:color/transparent"
                 app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-                app:title="@string/challenger650">
+                app:title="@string/learjet75">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -45,7 +45,7 @@
                         android:layout_marginStart="0dp"
                         android:layout_marginTop="0dp"
                         android:layout_marginEnd="0dp"
-                        android:background="@drawable/bombardier_challenger_650_main"
+                        android:background="@drawable/bombardier_learjet75_main"
                         android:scaleType="centerCrop"
                         app:layout_collapseMode="parallax"
                         app:layout_constraintDimensionRatio="H, 16:9"
@@ -132,7 +132,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/learjet75_type_value"
+                                android:text="@string/challenger650_type_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
@@ -164,7 +164,39 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/learjet75_engine_value"
+                                android:text="@string/challenger650_engine_value"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="@string/first_flight"
+                                android:textAlignment="center"
+                                android:textColor="#72A8E1"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="@string/challenger650_first_flight_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
@@ -196,7 +228,7 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/learjet75_numbers_value"
+                                android:text="@string/challenger650_numbers_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
@@ -228,43 +260,11 @@
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:paddingStart="10dp"
                                 android:paddingEnd="10dp"
-                                android:text="@string/learjet75_variants_value"
+                                android:text="@string/challenger650_variants_value"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
                         </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:paddingStart="10dp"
-                                android:paddingTop="10dp"
-                                android:paddingEnd="10dp"
-                                android:text="@string/customer"
-                                android:textAlignment="center"
-                                android:textColor="#72A8E1"
-                                android:textSize="18sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:paddingStart="10dp"
-                                android:paddingEnd="10dp"
-                                android:text="@string/learjet75_customer_value"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="15sp" />
-                        </LinearLayout>
-
 
                     </LinearLayout>
 
@@ -277,7 +277,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/learjet75_desc1"
+                    android:text="@string/challenger650_desc1"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -324,7 +324,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/learjet75_desc2"
+                    android:text="@string/challenger650_desc2"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -345,7 +345,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/learjet75_specs_constraint"
+                    android:text="@string/challenger650_specs_constraint"
                     android:textColor="@color/colorPrimary"
                     android:textSize="12sp" />
 
@@ -403,7 +403,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/learjet75_cockpit_value"
+                                    android:text="@string/challenger650_cockpit_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -452,7 +452,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/learjet75_wingspan_value"
+                                    android:text="@string/challenger650_wingspan_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -501,7 +501,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/learjet75_length_value"
+                                    android:text="@string/challenger650_length_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -549,7 +549,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/learjet75_height_value"
+                                    android:text="@string/challenger650_height_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -598,7 +598,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/learjet75_fuselage_value"
+                                    android:text="@string/challenger650_fuselage_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -647,7 +647,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/learjet75_mtow_value"
+                                    android:text="@string/challenger650_mtow_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -696,7 +696,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/learjet75_cruise_speed_value"
+                                    android:text="@string/challenger650_cruise_speed_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -744,7 +744,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/learjet75_range_value"
+                                    android:text="@string/challenger650_range_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -793,7 +793,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/learjet75_thrust_value"
+                                    android:text="@string/challenger650_thrust_value"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -812,7 +812,7 @@
                     android:fontFamily="@font/maven_pro_medium"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:text="@string/learjet75_desc3"
+                    android:text="@string/challenger650_desc3"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
