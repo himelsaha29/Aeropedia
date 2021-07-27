@@ -34,6 +34,7 @@ import com.himel.aeropedia.antonov.AntonovAn124Ruslan;
 import com.himel.aeropedia.antonov.AntonovAn225Mriya;
 import com.himel.aeropedia.antonov.AntonovAn22Antei;
 import com.himel.aeropedia.antonov.AntonovAn72Cheburashka;
+import com.himel.aeropedia.bombardier.Challenger650;
 import com.himel.aeropedia.bombardier.Learjet75;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
@@ -322,7 +323,9 @@ public class Boeing767 extends AppCompatActivity {
 
         TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
         TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "b767", Learjet75.class));
-        bombardier.addChildren(learjet75);
+        TreeNode challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.challenger650), "No", "challenger650", Challenger650.class));
+
+        bombardier.addChildren(challenger650, learjet75);
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
 
         root.addChildren(manufacturerRoot);

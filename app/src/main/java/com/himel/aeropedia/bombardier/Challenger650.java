@@ -85,7 +85,7 @@ public class Challenger650 extends AppCompatActivity {
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_bombardier_challenger_650_light);
         } else {
-            setContentView(R.layout.activity_bombardier_learjet75_dark);
+            setContentView(R.layout.activity_bombardier_challenger_650_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
@@ -321,14 +321,15 @@ public class Challenger650 extends AppCompatActivity {
         boeing.addChildren(b737, b747, b757, b767, b777, b787);
 
         TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
-        TreeNode learjet75 = null;
+        TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "learjet75", Learjet75.class));
+        TreeNode challenger650 = null;
         if (verifyDarkMode().equals("Yes")) {
-            learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "HighlightLight", "learjet75", null));
+            challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "HighlightLight", "challenger650", null));
         } else {
-            learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "HighlightDark", "learjet75", null));
+            challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "HighlightDark", "challenger650", null));
         }
 
-        bombardier.addChildren(learjet75);
+        bombardier.addChildren(challenger650, learjet75);
 
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
@@ -388,14 +389,16 @@ public class Challenger650 extends AppCompatActivity {
 
     private void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.bombardier_learjet75_slider1);
+                sliderItem.setImageLocation(R.drawable.bombardier_challenger_650_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.bombardier_learjet75_slider2);
+                sliderItem.setImageLocation(R.drawable.bombardier_challenger_650_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.bombardier_learjet75_slider3);
+                sliderItem.setImageLocation(R.drawable.bombardier_challenger_650_slider3);
+            } else if (i == 2) {
+                sliderItem.setImageLocation(R.drawable.bombardier_challenger_650_slider4);
             }
 
             sliderItemList.add(sliderItem);
