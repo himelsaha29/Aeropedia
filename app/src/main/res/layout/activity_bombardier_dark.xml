@@ -167,7 +167,7 @@
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/bombardier_global_7500_cover1" />
+                            android:src="@drawable/bombardier_global_7500_cover" />
 
                         <TextView
                             android:layout_width="match_parent"

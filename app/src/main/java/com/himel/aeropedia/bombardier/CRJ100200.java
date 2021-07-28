@@ -85,7 +85,7 @@ public class CRJ100200 extends AppCompatActivity {
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_bombardier_crj_100_200_light);
         } else {
-            setContentView(R.layout.activity_bombardier_global_7500_dark);
+            setContentView(R.layout.activity_bombardier_crj_100_200_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
@@ -323,14 +323,15 @@ public class CRJ100200 extends AppCompatActivity {
         TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
         TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "learjet75", Learjet75.class));
         TreeNode challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "No", "challenger650", Challenger650.class));
-        TreeNode global7500 = null;
+        TreeNode global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "No", "global7500", Global7500.class));
+        TreeNode crj100200 = null;
         if (verifyDarkMode().equals("Yes")) {
-            global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "HighlightLight", "global7500", null));
+            crj100200 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.crj_100_200), "HighlightLight", "crj100200", null));
         } else {
-            global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "HighlightDark", "global7500", null));
+            crj100200 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.crj_100_200), "HighlightDark", "crj100200", null));
         }
 
-        bombardier.addChildren(challenger650, learjet75, global7500);
+        bombardier.addChildren(challenger650, crj100200, learjet75, global7500);
 
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
@@ -393,13 +394,13 @@ public class CRJ100200 extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.bombardier_crj_100_200_slider1);
+                sliderItem.setImageLocation(R.drawable.bombardier_crj_100_200_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.bombardier_crj_100_200_slider2);
+                sliderItem.setImageLocation(R.drawable.bombardier_crj_100_200_slider02);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.bombardier_crj_100_200_slider3);
+                sliderItem.setImageLocation(R.drawable.bombardier_crj_100_200_slider03);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.bombardier_crj_100_200_slider4);
+                sliderItem.setImageLocation(R.drawable.bombardier_crj_100_200_slider04);
             }
 
             sliderItemList.add(sliderItem);
