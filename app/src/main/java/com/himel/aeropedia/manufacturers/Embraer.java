@@ -48,6 +48,7 @@ import com.himel.aeropedia.bombardier.CRJ100200;
 import com.himel.aeropedia.bombardier.Challenger650;
 import com.himel.aeropedia.bombardier.Global7500;
 import com.himel.aeropedia.bombardier.Learjet75;
+import com.himel.aeropedia.embraer.ERJFamily;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
@@ -112,7 +113,7 @@ public class Embraer extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), CRJ100200.class);
+                Intent intent = new Intent(getBaseContext(), ERJFamily.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
