@@ -86,9 +86,9 @@ public class ERJFamily extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_erj_family_light);
+            setContentView(R.layout.activity_embraer_erj_family_light);
         } else {
-            setContentView(R.layout.activity_bombardier_crj_100_200_dark);
+            setContentView(R.layout.activity_embraer_erj_family_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);

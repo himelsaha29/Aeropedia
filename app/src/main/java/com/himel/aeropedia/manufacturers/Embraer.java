@@ -85,9 +85,9 @@ public class Embraer extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_bombardier_light);
+            setContentView(R.layout.activity_embraer_light);
         } else {
-            setContentView(R.layout.activity_bombardier_dark);
+            setContentView(R.layout.activity_embraer_dark);
         }
         darkToggle = findViewById(R.id.dark_toggle);
         scrollView = findViewById(R.id.main_scroll);

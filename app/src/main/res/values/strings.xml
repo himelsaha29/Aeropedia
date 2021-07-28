@@ -1832,7 +1832,7 @@
         in development. The 45–48 seat EMB145 was launched at the Paris Air Show in 1989 as an 5.5 m stretch of the EMB 120 Brasilia developed for $150M plus $50M for
         training and marketing, one third the cost of the cancelled Short Brothers FJX project. Its $11M unit cost would have been $3M less than the Canadair CRJ. The
         400 kn (740 km/h) jet would be powered by GE/Garrett CFE738s, Lycoming ALF 502s or Rolls-Royce plc/Allison Engine AB580s turbofans, to be selected in the summer
-        of 1989. It was targeted for a late 1992 introduction with six produced then ramping to 60 per year in 1995. It aimed for half of a market for 1000 with
+        of 1989.\n\nIt was targeted for a late 1992 introduction with six produced then ramping to 60 per year in 1995. It aimed for half of a market for 1000 with
         break-even after twelve years with 400 sold. Keeping 75% of the Brasilia parts and systems, the EMB145 Amazon aimed for a 1991 first flight. The stretch resulted
         from two 3.4 m plugs of the 2.29 m diameter fuselage in the front and behind the redesigned 538 sq ft (50.0 m<sup><small><small>2</small></small></sup>) wing. Its supercritical airfoil with a 14% root
         thickness had its chord extended at the leading edge with a slight sweepback, increased aspect ratio and winglets. The overwing podded engines generated
@@ -1862,7 +1862,8 @@
         upgraded DUs also have added functionality.\n</string>
 
     <string name="erj_family_desc3">\nERJ Family variants include ERJ135ER, ERJ135LR, ERJ135KL, ERJ140ER, ERJ140LR, ERJ145STD, ERJ145EU, ERJ145ER, ERJ145EP, ERJ145LR, ERJ145LU, ERJ145MK,
-        ERJ145XR, Legacy 600 (EMB135BJ), Legacy 650 (EMB145BJ), Harbin Embraer ERJ145, C-99A, EMB 145SA (R-99A), EMB 145RS (R-99B), EMB 145MP/ASW (P-99), EMB 145H, EMB 145I.\n</string>
+        ERJ145XR, Legacy 600 (EMB135BJ), Legacy 650 (EMB145BJ), Harbin Embraer ERJ145, C-99A, EMB 145SA (R-99A), EMB 145RS (R-99B), EMB 145MP/ASW (P-99), EMB 145H (Hellenic Air Force),
+        EMB 145I (Indian Air Force).\n</string>
 
     <string name="erj_family_specs_constraint">(ERJ135LR, ERJ140LR, ERJ145XR compared in order)\n</string>
 
