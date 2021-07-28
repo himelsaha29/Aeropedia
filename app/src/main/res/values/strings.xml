@@ -602,7 +602,7 @@
 
 
     <string name="a310_identify">How to identify Airbus A310?</string>
-    <string name="a310_identify_ans">Flat central section of the lower fuselage, \"notched\" window design, 3 exits - 1 overwing and 2 near either ends of the fuselage, with/without wingtip fences.</string>
+    <string name="a310_identify_ans">Smooth central section of the lower fuselage (curved fuselage with no prominent wing flaring), \"notched\" window design, twin ram air intakes on the curved belly of the aircraft, 2 cabin doors and 1 overwing exit, with/without wingtip fences.</string>
 
     <string name="a310_cockpit_value">2</string>
     <string name="a310_wingspan_value">43.9 m</string>
@@ -664,7 +664,7 @@
 
 
     <string name="a300_identify">How to identify Airbus A300?</string>
-    <string name="a300_identify_ans"></string>
+    <string name="a300_identify_ans">Smooth central section of the lower fuselage (curved fuselage with no prominent wing flaring), \"notched\" window design, twin ram air intakes on the curved belly of the aircraft, 3 cabin doors and 1 exit along the length of the fuselage, short wingtip fences.</string>
 
     <string name="a300_cockpit_value">3 / 2 / 2</string>
     <string name="a300_wingspan_value">44.84 m</string>
