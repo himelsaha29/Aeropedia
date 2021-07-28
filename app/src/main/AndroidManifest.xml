@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".bombardier.CRJ100200"></activity>
+        <activity android:name=".manufacturers.Embraer"></activity>
+        <activity android:name=".bombardier.CRJ100200" />
         <activity android:name=".bombardier.Global7500" />
         <activity android:name=".bombardier.Challenger650" />
         <activity android:name=".manufacturers.Bombardier" />
