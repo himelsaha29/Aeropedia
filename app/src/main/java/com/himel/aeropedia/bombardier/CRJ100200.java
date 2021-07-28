@@ -1,23 +1,19 @@
-package com.himel.aeropedia.manufacturers;
+package com.himel.aeropedia.bombardier;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ScrollView;
-import android.widget.TextView;
+
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA220;
 import com.himel.aeropedia.airbus.AirbusA300;
@@ -41,21 +37,24 @@ import com.himel.aeropedia.antonov.AntonovAn72Cheburashka;
 import com.himel.aeropedia.boeing.Boeing737;
 import com.himel.aeropedia.boeing.Boeing747;
 import com.himel.aeropedia.boeing.Boeing757;
-import com.himel.aeropedia.boeing.Boeing767;
 import com.himel.aeropedia.boeing.Boeing777;
 import com.himel.aeropedia.boeing.Boeing787;
-import com.himel.aeropedia.bombardier.CRJ100200;
-import com.himel.aeropedia.bombardier.Challenger650;
-import com.himel.aeropedia.bombardier.Global7500;
-import com.himel.aeropedia.bombardier.Learjet75;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
+import com.himel.aeropedia.util.SliderAdapter;
+import com.himel.aeropedia.util.SliderItem;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import io.alterac.blurkit.BlurLayout;
@@ -63,22 +62,19 @@ import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphImageButton;
 import soup.neumorphism.ShapeType;
 
-public class Bombardier extends AppCompatActivity {
+public class CRJ100200 extends AppCompatActivity {
 
     private NeumorphButton langToggle;
-    private Animation translate = null;
-    private ScrollView scrollView;
-    private CardView learjet75Card;
-    private CardView challenger650Card;
-    private CardView global7500Card;
-    private CardView crj100200Card;
+    private Locale locale;
     private NeumorphImageButton darkToggle;
     private String enableDark;
     private String enableDarkOnCreate;
-    private Locale locale;
     private FlowingDrawer mDrawer;
     private BlurLayout blur;
     private AndroidTreeView tView;
+    private CollapsingToolbarLayout collapsingToolbarLayout;
+    private SliderView sliderView;
+    private SliderAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,26 +83,14 @@ public class Bombardier extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_bombardier_light);
+            setContentView(R.layout.activity_bombardier_crj_100_200_light);
         } else {
-            setContentView(R.layout.activity_bombardier_dark);
+            setContentView(R.layout.activity_bombardier_global_7500_dark);
         }
-        darkToggle = findViewById(R.id.dark_toggle);
-        scrollView = findViewById(R.id.main_scroll);
-
-        learjet75Card = findViewById(R.id.learjet75Card);
-        challenger650Card = findViewById(R.id.challenger650Card);
-        global7500Card = findViewById(R.id.global7500Card);
-        crj100200Card = findViewById(R.id.crj100200Card);
-
         langToggle = findViewById(R.id.lang_toggle);
+        darkToggle = findViewById(R.id.dark_toggle);
         mDrawer = findViewById(R.id.drawerlayout);
         blur = findViewById(R.id.blurLayout);
-
-        learjet75Card.getBackground().setAlpha(65);
-        challenger650Card.getBackground().setAlpha(65);
-        global7500Card.getBackground().setAlpha(65);
-        crj100200Card.getBackground().setAlpha(65);
 
         // setting NeumorphismButton shape based on state
         if (locale.toString().contains("en")) {
@@ -115,47 +99,14 @@ public class Bombardier extends AppCompatActivity {
             langToggle.setShapeType(ShapeType.PRESSED);
         }
 
-        animateCards();
 
-        learjet75Card.setOnClickListener(new View.OnClickListener() {
+        Typeface tf = Typeface.createFromAsset(this.getAssets(), "fonts/maven_pro_medium.ttf");
+        collapsingToolbarLayout = findViewById(R.id.collapsing_bar);
+        collapsingToolbarLayout.setCollapsedTitleTypeface(tf);
+        collapsingToolbarLayout.setExpandedTitleTypeface(tf);
 
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Learjet75.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
+        slideView();
 
-        challenger650Card.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Challenger650.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        global7500Card.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Global7500.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        crj100200Card.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), CRJ100200.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
 
         langToggle.setOnClickListener(new View.OnClickListener() {
 
@@ -196,7 +147,7 @@ public class Bombardier extends AppCompatActivity {
         });
 
 
-        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_FULLSCREEN);
+        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
         mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
             @Override
             public void onDrawerStateChange(int oldState, int newState) {
@@ -219,14 +170,8 @@ public class Bombardier extends AppCompatActivity {
         });
 
         createTreeView();
-
     }
 
-    @Override
-    public void finish() {
-        super.finish();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-    }
 
     @Override
     protected void onRestart() {
@@ -236,7 +181,6 @@ public class Bombardier extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            //createTreeView();
         }
         else if (!locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
@@ -247,7 +191,6 @@ public class Bombardier extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            //createTreeView();
         }
 
         if(mDrawer.getDrawerState() == ElasticDrawer.STATE_OPEN) {
@@ -255,20 +198,8 @@ public class Bombardier extends AppCompatActivity {
             blur.setVisibility(View.GONE);
             blur.setAlpha(0f);
         }
-
-        scrollView = findViewById(R.id.main_scroll);
-        scrollView.scrollTo(0, scrollView.getTop());
-        animateCards();
     }
 
-
-    private void animateCards() {
-        translate = AnimationUtils.loadAnimation(this, R.anim.animation);
-        learjet75Card.setAnimation(translate);
-        challenger650Card.setAnimation(translate);
-        global7500Card.setAnimation(translate);
-        crj100200Card.setAnimation(translate);
-    }
 
     /** Changing app language **/
 
@@ -295,6 +226,12 @@ public class Bombardier extends AppCompatActivity {
     }
 
     /** Changing app language **/
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 
     /** Dark mode **/
 
@@ -347,7 +284,6 @@ public class Bombardier extends AppCompatActivity {
 
 
         TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.airbus), "No", "airbus", null));
-
         TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a220), "No", "a220", AirbusA220.class));
         TreeNode a300Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a300), "No", "a300", AirbusA300.class));
         TreeNode a310Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a310), "No", "a310", AirbusA310.class));
@@ -370,34 +306,32 @@ public class Bombardier extends AppCompatActivity {
         TreeNode an124Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an124), "No", "an124", AntonovAn124Ruslan.class));
         TreeNode an72Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an72), "No", "an72", AntonovAn72Cheburashka.class));
         TreeNode an22Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an22), "No", "an22", AntonovAn22Antei.class));
-        TreeNode an225Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an225), "No", "an22", AntonovAn225Mriya.class));
+        TreeNode an225Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an225), "No", "an225", AntonovAn225Mriya.class));
 
-
-        antonov.addChildren(an22Node, an72Node, an124Node, an225Node);
+        antonov.addChildren(an22Node, an72Node, an124Node,an225Node);
 
         TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.boeing), "No", "boeing", null));
-
-
-        TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "777", "No", "b777", Boeing777.class));
-        TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "787", "No", "b787", Boeing787.class));
         TreeNode b737 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b737), "No", "b737", Boeing737.class));
         TreeNode b757 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b757), "No", "b757", Boeing757.class));
         TreeNode b747 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b747), "No", "b747", Boeing747.class));
-        TreeNode b767 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b767), "No", "b767", Boeing767.class));
+        TreeNode b767 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b767), "No", "b767", Boeing777.class));
+        TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b777), "No", "b777", Boeing777.class));
+        TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b787), "No", "b787", Boeing787.class));
+
         boeing.addChildren(b737, b747, b757, b767, b777, b787);
 
-        TreeNode bombardier = null;
+        TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
+        TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "learjet75", Learjet75.class));
+        TreeNode challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "No", "challenger650", Challenger650.class));
+        TreeNode global7500 = null;
         if (verifyDarkMode().equals("Yes")) {
-            bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "HighlightLight", "bombardier", null));
+            global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "HighlightLight", "global7500", null));
         } else {
-            bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "HighlightDark", "bombardier", null));
+            global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "HighlightDark", "global7500", null));
         }
 
-        TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "b767", Learjet75.class));
-        TreeNode challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "No", "challenger650", Challenger650.class));
-        TreeNode global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "No", "global7500", Global7500.class));
-
         bombardier.addChildren(challenger650, learjet75, global7500);
+
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
 
@@ -427,4 +361,63 @@ public class Bombardier extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
+    /** SlideView **/
+
+    private void slideView() {
+
+        sliderView = findViewById(R.id.imageSlider);
+
+        adapter = new SliderAdapter(this);
+        sliderView.setSliderAdapter(adapter, false);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        sliderView.setIndicatorSelectedColor(Color.WHITE);
+        sliderView.setIndicatorUnselectedColor(Color.GRAY);
+        sliderView.setScrollTimeInSec(3);
+        sliderView.setAutoCycle(false);
+        renewItems(sliderView);
+
+
+        sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
+            @Override
+            public void onIndicatorClicked(int position) {
+                Log.i("GGG", "onIndicatorClicked: " + sliderView.getCurrentPagePosition());
+            }
+        });
+    }
+
+    private void renewItems(View view) {
+        List<SliderItem> sliderItemList = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            SliderItem sliderItem = new SliderItem();
+            if (i == 0) {
+                sliderItem.setImageLocation(R.drawable.bombardier_crj_100_200_slider1);
+            } else if (i == 1) {
+                sliderItem.setImageLocation(R.drawable.bombardier_crj_100_200_slider2);
+            } else if (i == 2) {
+                sliderItem.setImageLocation(R.drawable.bombardier_crj_100_200_slider3);
+            } else if (i == 3) {
+                sliderItem.setImageLocation(R.drawable.bombardier_crj_100_200_slider4);
+            }
+
+            sliderItemList.add(sliderItem);
+        }
+        adapter.renewItems(sliderItemList);
+    }
+
+    private void removeLastItem(View view) {
+        if (adapter.getCount() - 1 >= 0)
+            adapter.deleteItem(adapter.getCount() - 1);
+    }
+
+    private void addNewItem(View view) {
+        SliderItem sliderItem = new SliderItem();
+        //sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        adapter.addItem(sliderItem);
+    }
+
+    /** SlideView **/
+
 }

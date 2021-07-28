@@ -38,6 +38,7 @@
     <string name="learjet75">Learjet 75</string>
     <string name="challenger650">Challenger 650</string>
     <string name="global7500">Global 7500</string>
+    <string name="crj_100_200">CRJ100/200</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -1727,7 +1728,7 @@
     <string name="global7500_identify">How to identify Global 7500</string>
     <string name="global7500_identify_ans"></string>
 
-    <string name="global7500_cockpit_value">4</string>
+    <string name="global7500_cockpit_value">2</string>
     <string name="global7500_wingspan_value">31.7 m</string>
     <string name="global7500_length_value">33.88 m</string>
     <string name="global7500_height_value">8.2 m</string>
@@ -1737,6 +1738,78 @@
     <string name="global7500_range_value">7,700 nmi</string>
     <string name="global7500_thrust_value">84.2 kN</string>
     <!--GLOBAL 7500-->
+
+
+    <!--CRJ 100/200-->
+    <string name="crj_100_200_type_value"> Regional/Business jet</string>
+    <string name="crj_100_200_engine_value">General Electric\nCF34-3A1/3B1 (2)</string>
+    <string name="crj_100_200_first_flight_value">10 May 1991</string>
+    <string name="crj_100_200_intro_value">19 October 1992\nwith Lufthansa CityLine</string>
+    <string name="crj_100_200_customer_value">SkyWest Airlines</string>
+    <string name="crj_100_200_variants_value">9</string>
+
+    <string name="crj_100_200_desc1" formatted="false">The Bombardier CRJ100 and CRJ200 (previously Canadair CRJ100 and CRJ200) is a regional jet designed and
+        manufactured by Bombardier Aerospace between 1991 and 2006, the first of the Bombardier CRJ family. An initial effort to enlarge the Bombardier Challenger
+        600 business jet to 36 seats, the Challenger 610E, ended in 1981. A stretched derivative was studied again after Canadair\'s sale to Bombardier in 1986. The
+        Canadair Regional Jet program was launched in early 1989. The first CRJ100 prototype made its maiden flight on 10 May 1991. Canada\'s first jet airliner to enter
+        commercial service was introduced by launch customer Lufthansa in 1992. The 50 seat aircraft is powered by two GE CF34 turbofans, mounted on the rear
+        fuselage. The CRJ200 has more efficient turbofan engines for lower fuel consumption, increased cruise altitude and speed. During the late 1990s, it was stretched
+        into the CRJ700 series. During its production phase from 1991 to 2006, a total of 1021 CRJ100/200s were built.\n\nThe CRJ family has its origins in the design
+        of the earlier Canadair Challenger business jet. During the late 1970s, the relatively wide fuselage of the Challenger, which could seat a pair of passengers
+        on each side of a central aisle, was observed by some Canadair officials to suggest that it would be somewhat straightforward to produce a stretch of the
+        aircraft for the purpose of accommodating more seats. Accordingly, in 1980, the company publicised its proposal for an expanded model of the aircraft, designated
+        as the Challenger 610E, which would have had seating for an additional 24 passengers. However, such a lengthening did not occur as a result of work on the
+        program being terminated during the following year. Despite the cancellation of the 610E, neither the concept or general interest in the development of an
+        enlarged derivative had disappeared. During 1987, the year following Canadair\'s sale to Bombardier, design studies commenced into options for producing a
+        substantially more ambitious stretched configuration of the Challenger. In July 1988, Canadair targeted a $13-14 million unit price, for a demand of over 1,000
+        by 1999. The 48-seat jet would be stretched over the Challenger by a 128 in (3.3 m) forward plug and a 112 in (2.8 m) aft plug. Over 300 mi (480 km) routes, the
+        faster climb and cruise gave it a one third time advantage to 50 min compared to similarly sized turboprops. The higher cost per seat of the RJ, of $270,000 each
+        compared to $186,600, would be balanced by its higher productivity.\n</string>
+
+    <string name="crj_100_200_desc2" formatted="false">On 10 May 1991, the first of three development aircraft for the initial CRJ100 variant performed its first flight
+        from Montréal–Pierre Elliott Trudeau International Airport, starting a 1,000h flight test program with three prototypes. During the following year, the type was
+        awarded airworthiness certification; on 29 October 1992, initial deliveries to customers occurred later on that year. On 26 July 1993, the first prototype
+        (C-FCRJ) was lost in a spin mishap near the Bombardier test center in Wichita, Kansas. The initial model was followed by the CRJ100 ER subvariant, featuring 20
+        per cent greater range, and the CRJ100 LR subvariant, which possessed 40 per cent more range than the standard CRJ100. This sub-variant was developed with
+        the purpose of more closely conforming with the requirements of both corporate and executive operators. A cargo door retrofit has been developed for the
+        installation of former passenger-configured aircraft to extend the useful life of early-built CRJ100s. The CRJ200 is almost identical to the earlier CRJ100 model,
+        except for the adoption of more efficient engines; these new engines have been attributed as having provided the CRJ200 with several improvements in
+        performance, such as lower fuel consumption, as well as an increase in cruise altitude and cruise speed. Bombardier had specifically designed the new model to
+        provide better performance and efficiencies than any of its nearest competitors at that time. There is also a CRJ200 freighter version, designated as the
+        CRJ200 PF (Package Freighter), which was developed in cooperation with Cascade Aerospace on the request of Scandinavian operator West Air Sweden.\n\nThe Bombardier
+        CRJ100 and CRJ200 are a family of jet-propelled regional airliners, based upon the design of the Challenger CL-600 business jet. Roughly, the CL-600 was stretched
+        5.92 metres, which was achieved using fuselage plugs fore and aft of the wing, and was matched with the adoption of a reinforced and modified wing, an expanded
+        fuel capacity, improved landing gear to handle the higher weights, and an additional pair of emergency exit doors. When installed in a typical seating
+        configuration, the CRJ100 would accommodate 50 passengers; while in a maximum configuration, 52 passengers could be accommodated. It was powered by a pair of
+        General Electric CF34-3A1 turbofan engines, each of which was capable of generating up to 41.0 kN of thrust. The CRJ100 featured a Collins-built ProLine 4
+        avionics suite, including a weather radar.\n\nGerman airline Lufthansa CityLine, a subsidiary of the nations flag carrier operator Lufthansa, served as the
+        launch customer for the CRJ100. Throughout the type\'s production life, it continued to be a major customer of the CRJ series. During 2001, following
+        Lufthansa\'s acquisition of 25 per cent of regional airliner Eurowings, the airline ordered 15 CRJ200s with options for 30 more as part of a strategic move
+        towards fleet commonality with Lufthansa Skyline. During the airliner\'s first 100 days of operational service, the CRJ100 performed a total of 1,237 flights,
+        during which it reportedly achieved a 99% dispatch reliability while its fuel economy was reportedly 8% superior to the originally projected figure. According
+        to aviation author Dean Roberts, the CRJ100 had benefitted greatly from an industry-wide shift towards hub-and-spoke networks in the United States, which had
+        resulted from the Airline Deregulation Act of 1978. Considerable demand across the North American market was experienced by both the CRJ100 and the CRJ200. The
+        smaller size of the regional jets meant than, unlike traditional narrowbody jets, they could be used at the majority of secondary airports and avoid traditional
+        hubs.\n</string>
+
+    <string name="crj_100_200_desc3">\nCRJ100/200 variants include CRJ100, CRJ100SF, CRJ100LR, CRJ100SE, CRJ200, CRJ200PF, CRJ200LR, CRJ200SF, Challenger 800/850.\n</string>
+
+    <string name="crj_100_200_specs_constraint">(CRJ100 and CRJ200 compared in order)\n</string>
+
+
+    <string name="crj_100_200_identify">How to identify CRJ 100/200?</string>
+    <string name="crj_100_200_identify_ans"></string>
+
+    <string name="crj_100_200_cockpit_value">2</string>
+    <string name="crj_100_200_wingspan_value">21.21 m </string>
+    <string name="crj_100_200_length_value">26.77 m</string>
+    <string name="crj_100_200_height_value">6.22 m</string>
+    <string name="crj_100_200_fuselage_value">2.69 m  (W) / ~2.69 m (H)</string>
+    <string name="crj_100_200_mtow_value">24.04 t (LR)</string>
+    <string name="crj_100_200_cruise_speed_value">785 km/h (typical),\n860 km/h (max.)</string>
+    <string name="crj_100_200_range_value">1,650 (LR) /\n1,700 nmi (LR)</string>
+    <string name="crj_100_200_thrust_value">38.84 kN</string>
+    <!--CRJ 100/200 -->
 
 
     <string name="status_listening">LISTENING…</string>

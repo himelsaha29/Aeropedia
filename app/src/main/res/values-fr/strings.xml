@@ -38,6 +38,7 @@
     <string name="learjet75">Learjet 75</string>
     <string name="challenger650">Challenger 650</string>
     <string name="global7500">Global 7500</string>
+    <string name="crj_100_200">CRJ 100/200</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -1034,6 +1035,37 @@
     <string name="global7500_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
     <!--GLOBAL 7500-->
 
+
+    <!--CRJ 100/200-->
+    <string name="crj_100_200_type_value">Narrow-body</string>
+    <string name="crj_100_200_engine_value">Pratt &amp; Whitney\nPW1500G (2)</string>
+    <string name="crj_100_200_first_flight_value">16 September 2013</string>
+    <string name="crj_100_200_intro_value">15 July 2016 with\nSwiss International Air Lines</string>
+    <string name="crj_100_200_customer_value">Delta Air Lines</string>
+    <string name="crj_100_200_variants_value">3</string>
+
+    <string name="crj_100_200_desc1" formatted="false">\n</string>
+
+    <string name="crj_100_200_desc2" formatted="false">\n</string>
+
+    <string name="crj_100_200_desc3">\n \n</string>
+
+    <string name="crj_100_200_specs_constraint">()\n</string>
+
+
+    <string name="crj_100_200_identify">How to identify Airbus A220?</string>
+    <string name="crj_100_200_identify_ans"></string>
+
+    <string name="crj_100_200_cockpit_value">2</string>
+    <string name="crj_100_200_wingspan_value">35.10 m</string>
+    <string name="crj_100_200_length_value">35.0 / 38.70 m</string>
+    <string name="crj_100_200_height_value">11.50 m</string>
+    <string name="crj_100_200_fuselage_value">3.5 m (W) / ~3.7 m (H)</string>
+    <string name="crj_100_200_mtow_value">63.1 / 70.9 t</string>
+    <string name="crj_100_200_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="crj_100_200_range_value">3,450 / 3,600 nmi</string>
+    <string name="crj_100_200_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
+    <!--CRJ 100/200 -->
 
 
     <string name="status_listening">"écoute"…</string>
