@@ -39,6 +39,7 @@ import com.himel.aeropedia.bombardier.CRJ100200;
 import com.himel.aeropedia.bombardier.Challenger650;
 import com.himel.aeropedia.bombardier.Global7500;
 import com.himel.aeropedia.bombardier.Learjet75;
+import com.himel.aeropedia.embraer.ERJFamily;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.manufacturers.ManufacturerMenu;
@@ -330,7 +331,12 @@ public class AntonovAn124Ruslan extends AppCompatActivity {
         TreeNode crj100200 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.crj_100_200), "No", "crj100200", CRJ100200.class));
 
         bombardier.addChildren(challenger650, crj100200, learjet75, global7500);
-        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
+        TreeNode embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.embraer), "No", "embraer", null));
+        TreeNode erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "No", "erjfamily", ERJFamily.class));
+
+        embraer.addChildren(erjFamily);
+
+        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
 
         root.addChildren(manufacturerRoot);
         root.addChildren(alexaRoot);
