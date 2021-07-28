@@ -359,14 +359,25 @@ public class Embraer extends AppCompatActivity {
 
         bombardier.addChildren(challenger650, crj100200, learjet75, global7500);
 
-        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
+        TreeNode embraer = null;
+
+        TreeNode erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "No", "erjFamily", ERJFamily.class));
+        if (verifyDarkMode().equals("Yes")) {
+            embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.embraer), "HighlightLight", "embraer", null));
+        } else {
+            embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.embraer), "HighlightDark", "embraer", null));
+        }
+
+        embraer.addChildren(erjFamily);
+
+        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
 
         root.addChildren(manufacturerRoot);
         root.addChildren(alexaRoot);
         root.addChildren(flightTrackerRoot);
         root.addChildren(firebaseRoot);
         manufacturerRoot.setExpanded(true);
-        bombardier.setExpanded(true);
+        embraer.setExpanded(true);
 
         tView = new AndroidTreeView(this, root);
         tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);

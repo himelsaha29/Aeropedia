@@ -39,6 +39,7 @@ import com.himel.aeropedia.boeing.Boeing747;
 import com.himel.aeropedia.boeing.Boeing757;
 import com.himel.aeropedia.boeing.Boeing777;
 import com.himel.aeropedia.boeing.Boeing787;
+import com.himel.aeropedia.embraer.ERJFamily;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
@@ -333,8 +334,12 @@ public class CRJ100200 extends AppCompatActivity {
 
         bombardier.addChildren(challenger650, crj100200, learjet75, global7500);
 
+        TreeNode embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.embraer), "No", "embraer", null));
+        TreeNode erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "No", "erjfamily", ERJFamily.class));
 
-        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier);
+        embraer.addChildren(erjFamily);
+
+        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
 
         root.addChildren(manufacturerRoot);
         root.addChildren(alexaRoot);
