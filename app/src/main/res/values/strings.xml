@@ -820,7 +820,7 @@
     <string name="a320neo_first_flight_value">25 September 2014</string>
     <string name="a320neo_intro_value">25 January 2016\nwith Lufthansa</string>
     <string name="a320neo_customer_value">IndiGo</string>
-    <string name="a320neo_variants_value">6 (active)</string>
+    <string name="a320neo_variants_value">7 (active)</string>
 
     <string name="a320neo_desc1" formatted="false">The Airbus A320neo family (neo for new engine option) is a development of the A320 family of narrow-body airliners.
         The A320neo family is based on the previous A319, A320 and A321, which was renamed to A320ceo, for \"current engine option\". Re-engined with CFM LEAP-1A or
@@ -1891,9 +1891,9 @@
     <string name="ejet_e2_first_flight_value">23 May 2016</string>
     <string name="ejet_e2_intro_value">24 April 2018\nwith Widerøe</string>
     <string name="ejet_e2_customer_value">Azul Brazilian Airlines</string>
-    <string name="ejet_e2_variants_value">TBD</string>
+    <string name="ejet_e2_variants_value">3</string>
 
-    <string name="ejet_e2_desc1" formatted="false">The Embraer E-Jet E2 family, comprised of E175-E2 / E190-E2 / E195-E2, are medium-range jet airliners developed by Embraer, succeeding the original E-Jet. The
+    <string name="ejet_e2_desc1" formatted="false">The Embraer E-Jet E2 family, comprised of E175-E2, E190-E2, E195-E2, are medium-range jet airliners developed by Embraer, succeeding the original E-Jet. The
         program was launched at the Paris Air Show in 2013. The first variant, the E190-E2, took its first flight on 23 May 2016 and was certified on 28 February 2018
         before entering service with Widerøe on 24 April. The three twinjet variants share the same four-abreast narrow-body fuselage with different lengths and
         three different new wings, Pratt &amp; Whitney PW1000G turbofans in two sizes, fly-by-wire controls with new avionics, and an updated cabin. As of 6 November 2020, 1 E175-E2, 19 E190-E2s and 10 E195-E2s
@@ -1902,11 +1902,42 @@
         Embraer continued to focus on large regional jets, and launched an extensive revamp of the E-Jet family at the November 2011 Dubai Air Show. The new variants
         would be better positioned to compete with the CSeries and would be powered by new engines with larger diameter fans that would offer improvements in specific
         fuel consumption, as well as slightly taller landing gear and possibly a new aluminum or carbon fiber-based wing. Embraer named this new development \"the E-jets
-        second generation\". The $1.7 billion program was launched at the Paris Air Show in 2013.\n</string>
+        second generation\". The $1.7 billion program was launched at the Paris Air Show in 2013.\n\nThe first E-Jet E2, an E190-E2, was rolled out on 25 February
+        2016 and made its maiden flight on 23 May in São José dos Campos. It flew for three hours and twenty minutes to Mach 0.82, climbed to 41,000 feet, retracted the
+        landing gear and flaps, and engaged the fly-by-wire in normal mode. It flew earlier than the previously anticipated second half of 2016. The program had fewer
+        challenges than expected and introduction was then planned in the first quarter of 2018. The airplane was slightly below expected weight and the other two E190-E2
+        prototypes should fly within a year. The second prototype made its maiden flight on 8 July 2016. The flight lasted 2 hr 55 min without any incidents. The first
+        E-Jet E2 flew from Brazil to Farnborough Airshow just 45 days after its maiden flight, demonstrating maturity and confidence in the design. In April 2017, as
+        650 hr of flight tests have been completed and the program is on schedule, Embraer wants to guarantee a 99% schedule reliability in the first year of service. Half
+        of the flight testing was done by June 2017, the aerodynamics were better than predicted and the E190-E2 hot and high performance was better than expected.
+        The E195-E2\'s MTOW is increased to 61,500 kg and its range to 2,600 nmi (4,800 km). In June 2017, the four E190-E2s and the single E195-E2 - which is presented
+        at the 2017 Paris Air Show - have made more than 900 flight-test hours, mostly by the E190-E2s.\n\nIn July 2017, the five aircraft have flown 1,000 flight-test
+        hours while the E190-E2 has accomplished 55% of its test campaign. In January 2018, 98% of the test campaign was done with 2,000 flight hours. Fuel burn is
+        17.3% lower than for the E190 up from 16% predicted, range increased by 750 nmi (1,390 km) from hot-and-high or short runways: 1,600 or 2,200 nmi (3,000 or
+        4,100 km) from Mexico City or London City, and noise margin to Stage 4 is 3 EPNdB better than specification at 20 EPNdB. The E190-E2 received its type certificate
+        from the ANAC, FAA and EASA on 28 February 2018. The first production engines for the larger variant were delivered in February 2019 and should deliver a 24%
+        reduction in per-seat fuel burn compared with the E195. The E195-E2 obtained its type certification in April 2019.\n</string>
 
-    <string name="ejet_e2_desc2" formatted="false">\n</string>
+    <string name="ejet_e2_desc2" formatted="false">Embraer targets 16 to 24% lower fuel burn and 15–25% lower maintenance cost per seat. In the E190-E2, of the 17.3%
+        better fuel burn, 11% comes from the geared turbofan, 4.8% from the improved aerodynamics of the new high aspect ratio wing and 1.5% from the fly-by-wire\'s
+        15% smaller tail surfaces. Over a 600 nmi (1,100 km) trip and with a US$72 fuel barrel, Embraer estimates a 97-seat E190-E2 trip cost is 7% lower for a 1% higher
+        seat cost than a 106-seat A220-100, a 120-seat E195-E2 has a 2% higher trip cost but a 10% lower seat cost and 10% lower trip cost and 3% lower seat cost than
+        a 129-seat A220-300; and while a 97-seat E190 had an 18% higher seat cost than a 150-seat A320 and a 23% lower trip cost, an E190-E2 has a 30% lower trip cost for
+        an 8% higher seat cost than a 150-seat A320neo, while an E195-E2 has the same seat cost but 20% lower trip cost. By October, Embraer raised its E190/E195-E2 seat
+        or trip costs claim to roughly 10% better than the A220.\n\nBuilt on the first generation E-Jet, its wing is redesigned, and it introduces new pylons, landing
+        gear, horizontal stabilizers, cabin, cabin air system, air cycle machine, bleed air system, and a new fly-by-wire system. The switch to a composite wing was not
+        yet justified economically for a similar shape, the less draggy flaps are single-slotted instead of the more complex double-slotted on the E1, and the engine
+        pylon is shorter. The raised, 11:1 aspect ratio gull-wing partially accommodate the 2.01m diameter GTF (Geared Turbofan), larger than the CF34 by 66 cm, while the trailing arm
+        landing gear is taller for 23–25 cm higher door sills, giving a 5 cm lower nacelles than the E1. GE Aviation, Pratt &amp; Whitney, and Rolls-Royce were all
+        possible engine suppliers. In January 2013, Embraer selected the Pratt &amp; Whitney PW1000G Geared Turbofan engine as the exclusive powerplant. Honeywell Primus
+        Epic 2 was selected as the avionics package. In 2014, Alta Precision was selected to produce main landing gear components for the E190/E195 E2.\n\nMoog Inc was
+        selected to supply the Primary Flight Control System. The E2 features a closed loop fly-by-wire control which reduces weight, increases fuel efficiency,
+        enhances control and increases safety by full envelope protection in all flight phases compared to the first E-Jet. The fuel savings of the now closed loop
+        fly-by-wire control come from the enhanced flight stability and the resulting increased lift (lower tail downward force) and weight savings and drag reductions
+        related to the 26% reduction in the horizontal tail (tailplane) size. The wing structure was lightened by 200 kg thanks to FBW ailerons, also used when
+        braking, avoiding larger wheels and brakes. A 250 ft<sup><small><small>2</small></small></sup> horizontal stabilizer is sufficient from 280 ft<sup><small><small>2</small></small></sup> on the E190/195.\n</string>
 
-    <string name="ejet_e2_desc3">\n \n</string>
+    <string name="ejet_e2_desc3">\nE-Jet E2 family variants include E175-E2, E190-E2, E195-E2.\n</string>
 
     <string name="ejet_e2_specs_constraint">(E175-E2, E190-E2, E195-E2 compared in order)\n</string>
 
