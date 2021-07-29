@@ -89,7 +89,7 @@ public class EJetE2 extends AppCompatActivity {
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_embraer_e_jet_e2_light);
         } else {
-            setContentView(R.layout.activity_embraer_erj_family_dark);
+            setContentView(R.layout.activity_embraer_e_jet_e2_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
