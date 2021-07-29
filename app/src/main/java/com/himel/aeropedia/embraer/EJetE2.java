@@ -335,14 +335,15 @@ public class EJetE2 extends AppCompatActivity {
 
         TreeNode embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.embraer), "No", "embraer", null));
 
-        TreeNode erjFamily = null;
+        TreeNode erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "No", "erjFamily", ERJFamily.class));
+        TreeNode ejete2Family = null;
         if (verifyDarkMode().equals("Yes")) {
-            erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "HighlightLight", "erjFamily", null));
+            ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "HighlightLight", "ejete2Family", null));
         } else {
-            erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "HighlightDark", "erjFamily", null));
+            ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "HighlightDark", "ejete2Family", null));
         }
 
-        embraer.addChildren(erjFamily);
+        embraer.addChildren(erjFamily, ejete2Family);
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
 

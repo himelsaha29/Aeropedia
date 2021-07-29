@@ -342,7 +342,9 @@ public class ERJFamily extends AppCompatActivity {
             erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "HighlightDark", "erjFamily", null));
         }
 
-        embraer.addChildren(erjFamily);
+        TreeNode ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "No", "ejete2Family", EJetE2.class));
+
+        embraer.addChildren(erjFamily, ejete2Family);
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
 
