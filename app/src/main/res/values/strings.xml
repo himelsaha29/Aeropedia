@@ -40,6 +40,7 @@
     <string name="global7500">Global 7500</string>
     <string name="crj_100_200">CRJ100/200</string>
     <string name="erj_family">ERJ Family</string>
+    <string name="ejet_e2_family">E-Jet E2 Family</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -1171,7 +1172,8 @@
 
     <string name="b737_identify">How to identify Boeing 737?</string>
     <string name="b737_identify_ans">\"Pointed\" nose, triangular dorsal-fin section in front of the tail, \"V\" shaped side windshield, retracted main landing gear not enclosed in the
-        fuselage, winglets: none / large L-shaped / \">\" shaped with upward and downward aerofoils (split winglets); cowling design engines / ovoid \"hamster pouch\" inlet / 787-derived engine chevrons.</string>
+        fuselage, winglets: none / large L-shaped / \">\" shaped with upward and downward aerofoils (split winglets); cowling design engines / ovoid \"hamster pouch\" inlet / 787-derived engine chevron-toothed pattern on the rim of the nacelles
+        of both the engines of MAX variants.</string>
 
     <string name="b737_cockpit_value">2</string>
     <string name="b737_wingspan_value">28 m (Original) / 28.88 / 34.32 / 35.92 m</string>
@@ -1544,7 +1546,7 @@
 
     <string name="b787_identify">How to identify Boeing 787?</string>
     <string name="b787_identify_ans">Distinctive sleek, \"pointed\" nose with 4-piece windshield, raked wingtips, chevron-toothed pattern on the rim of the nacelles
-        of both the engines, much curved wings tha most aircraft.</string>
+        of both the engines, much curved wings than most aircraft.</string>
 
     <string name="b787_cockpit_value">2</string>
     <string name="b787_wingspan_value">60.12 m</string>
@@ -1882,6 +1884,46 @@
     <string name="erj_family_thrust_value">33.71 kN / 39.67 kN (145XR)</string>
     <!--ERJ FAMILY-->
 
+
+    <!--EMBRAER E-JET E2-->
+    <string name="ejet_e2_type_value">Narrow-body</string>
+    <string name="ejet_e2_engine_value">Pratt &amp; Whitney PW1715G /\n PW1919G/21G/22G/23G (2)</string>
+    <string name="ejet_e2_first_flight_value">23 May 2016</string>
+    <string name="ejet_e2_intro_value">24 April 2018\nwith Widerøe</string>
+    <string name="ejet_e2_customer_value">Azul Brazilian Airlines</string>
+    <string name="ejet_e2_variants_value">TBD</string>
+
+    <string name="ejet_e2_desc1" formatted="false">The Embraer E-Jet E2 family, comprised of E175-E2 / E190-E2 / E195-E2, are medium-range jet airliners developed by Embraer, succeeding the original E-Jet. The
+        program was launched at the Paris Air Show in 2013. The first variant, the E190-E2, took its first flight on 23 May 2016 and was certified on 28 February 2018
+        before entering service with Widerøe on 24 April. The three twinjet variants share the same four-abreast narrow-body fuselage with different lengths and
+        three different new wings, Pratt &amp; Whitney PW1000G turbofans in two sizes, fly-by-wire controls with new avionics, and an updated cabin. As of 6 November 2020, 1 E175-E2, 19 E190-E2s and 10 E195-E2s
+        have been built.\n\nIn 2010, it appeared possible that Embraer could directly challenge the Bombardier CSeries (now A220) with a clean-sheet five-abreast design for 100 to 150 passengers. However,
+        Airbus launched the A320neo in December 2010, including the 124-seat A319neo, and Boeing launched the re-engined 737 MAX the following year. Accordingly,
+        Embraer continued to focus on large regional jets, and launched an extensive revamp of the E-Jet family at the November 2011 Dubai Air Show. The new variants
+        would be better positioned to compete with the CSeries and would be powered by new engines with larger diameter fans that would offer improvements in specific
+        fuel consumption, as well as slightly taller landing gear and possibly a new aluminum or carbon fiber-based wing. Embraer named this new development \"the E-jets
+        second generation\". The $1.7 billion program was launched at the Paris Air Show in 2013.\n</string>
+
+    <string name="ejet_e2_desc2" formatted="false">\n</string>
+
+    <string name="ejet_e2_desc3">\n \n</string>
+
+    <string name="ejet_e2_specs_constraint">(E175-E2, E190-E2, E195-E2 compared in order)\n</string>
+
+
+    <string name="ejet_e2_identify">How to identify Embraer E-Jet E2?</string>
+    <string name="ejet_e2_identify_ans"></string>
+
+    <string name="ejet_e2_cockpit_value">2</string>
+    <string name="ejet_e2_wingspan_value">31.0 / 33.72 / 35.12 m</string>
+    <string name="ejet_e2_length_value">32.4 / 36.24 / 41.5 m</string>
+    <string name="ejet_e2_height_value">9.98 / 10.95 / 10.9 m</string>
+    <string name="ejet_e2_fuselage_value">3.01 m (W) / ~3.1 m (H)</string>
+    <string name="ejet_e2_mtow_value">44.8 / 56.4 /	61.5 t</string>
+    <string name="ejet_e2_cruise_speed_value">833 km/h (typical),\n876 km/h (max.)</string>
+    <string name="ejet_e2_range_value">2,017 / 2,850 / 2,655 nmi</string>
+    <string name="ejet_e2_thrust_value">67 kN (E175) / 85–102 kN</string>
+    <!--EMBRAER E-JET E2-->
 
     <string name="status_listening">LISTENING…</string>
     <string name="status_processing">PROCESSING…</string>

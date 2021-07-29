@@ -1,4 +1,4 @@
-package com.himel.aeropedia.airbus;
+package com.himel.aeropedia.embraer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +15,20 @@ import android.view.ViewGroup;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.airbus.AirbusA220;
+import com.himel.aeropedia.airbus.AirbusA300;
+import com.himel.aeropedia.airbus.AirbusA310;
+import com.himel.aeropedia.airbus.AirbusA318;
+import com.himel.aeropedia.airbus.AirbusA319;
+import com.himel.aeropedia.airbus.AirbusA320;
+import com.himel.aeropedia.airbus.AirbusA320neoFamily;
+import com.himel.aeropedia.airbus.AirbusA321;
+import com.himel.aeropedia.airbus.AirbusA330;
+import com.himel.aeropedia.airbus.AirbusA330neo;
+import com.himel.aeropedia.airbus.AirbusA340;
+import com.himel.aeropedia.airbus.AirbusA350;
+import com.himel.aeropedia.airbus.AirbusA380;
+import com.himel.aeropedia.airbus.AirbusBeluga;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.antonov.AntonovAn124Ruslan;
 import com.himel.aeropedia.antonov.AntonovAn225Mriya;
@@ -23,14 +37,12 @@ import com.himel.aeropedia.antonov.AntonovAn72Cheburashka;
 import com.himel.aeropedia.boeing.Boeing737;
 import com.himel.aeropedia.boeing.Boeing747;
 import com.himel.aeropedia.boeing.Boeing757;
-import com.himel.aeropedia.boeing.Boeing767;
 import com.himel.aeropedia.boeing.Boeing777;
 import com.himel.aeropedia.boeing.Boeing787;
 import com.himel.aeropedia.bombardier.CRJ100200;
 import com.himel.aeropedia.bombardier.Challenger650;
 import com.himel.aeropedia.bombardier.Global7500;
 import com.himel.aeropedia.bombardier.Learjet75;
-import com.himel.aeropedia.embraer.ERJFamily;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
@@ -54,7 +66,7 @@ import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphImageButton;
 import soup.neumorphism.ShapeType;
 
-public class AirbusA321 extends AppCompatActivity {
+public class EJetE2 extends AppCompatActivity {
 
     private NeumorphButton langToggle;
     private Locale locale;
@@ -75,9 +87,9 @@ public class AirbusA321 extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_airbus_a321_light);
+            setContentView(R.layout.activity_embraer_e_jet_e2_light);
         } else {
-            setContentView(R.layout.activity_airbus_a321_dark);
+            setContentView(R.layout.activity_embraer_erj_family_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
@@ -282,12 +294,7 @@ public class AirbusA321 extends AppCompatActivity {
         TreeNode a318Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a318), "No", "a318", AirbusA318.class));
         TreeNode a319Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a319), "No", "a319", AirbusA319.class));
         TreeNode a320Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a320), "No", "a320", AirbusA320.class));
-        TreeNode a321Node = null;
-        if (verifyDarkMode().equals("Yes")) {
-            a321Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a321), "HighlightLight", "a321", null));
-        } else {
-            a321Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a321), "HighlightDark", "a321", null));
-        }
+        TreeNode a321Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a321), "No", "a321", AirbusA321.class));
         TreeNode a320neoNode = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a320neofamily), "No", "a320neofamily", AirbusA320neoFamily.class));
         TreeNode a330Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a330), "No", "a330", AirbusA330.class));
         TreeNode a330neoNode = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a330neo), "No", "a330neo", AirbusA330neo.class));
@@ -303,27 +310,37 @@ public class AirbusA321 extends AppCompatActivity {
         TreeNode an124Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an124), "No", "an124", AntonovAn124Ruslan.class));
         TreeNode an72Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an72), "No", "an72", AntonovAn72Cheburashka.class));
         TreeNode an22Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an22), "No", "an22", AntonovAn22Antei.class));
-        TreeNode an225Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an225), "No", "an22", AntonovAn225Mriya.class));
+        TreeNode an225Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an225), "No", "an225", AntonovAn225Mriya.class));
 
+        antonov.addChildren(an22Node, an72Node, an124Node,an225Node);
 
-        antonov.addChildren(an22Node, an72Node, an124Node, an225Node);
         TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.boeing), "No", "boeing", null));
-        TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "777", "No", "b777", Boeing777.class));
-        TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "787", "No", "b787", Boeing787.class));
         TreeNode b737 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b737), "No", "b737", Boeing737.class));
         TreeNode b757 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b757), "No", "b757", Boeing757.class));
         TreeNode b747 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b747), "No", "b747", Boeing747.class));
-        TreeNode b767 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b767), "No", "b767", Boeing767.class));
+        TreeNode b767 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b767), "No", "b767", Boeing777.class));
+        TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b777), "No", "b777", Boeing777.class));
+        TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b787), "No", "b787", Boeing787.class));
+
         boeing.addChildren(b737, b747, b757, b767, b777, b787);
+
         TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
-        TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "b767", Learjet75.class));
+        TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "learjet75", Learjet75.class));
         TreeNode challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "No", "challenger650", Challenger650.class));
         TreeNode global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "No", "global7500", Global7500.class));
         TreeNode crj100200 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.crj_100_200), "No", "crj100200", CRJ100200.class));
 
         bombardier.addChildren(challenger650, crj100200, learjet75, global7500);
+
+
         TreeNode embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.embraer), "No", "embraer", null));
-        TreeNode erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "No", "erjfamily", ERJFamily.class));
+
+        TreeNode erjFamily = null;
+        if (verifyDarkMode().equals("Yes")) {
+            erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "HighlightLight", "erjFamily", null));
+        } else {
+            erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "HighlightDark", "erjFamily", null));
+        }
 
         embraer.addChildren(erjFamily);
 
@@ -334,7 +351,7 @@ public class AirbusA321 extends AppCompatActivity {
         root.addChildren(flightTrackerRoot);
         root.addChildren(firebaseRoot);
         manufacturerRoot.setExpanded(true);
-        airbus.setExpanded(true);
+        embraer.setExpanded(true);
 
         tView = new AndroidTreeView(this, root);
         tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);
@@ -355,10 +372,6 @@ public class AirbusA321 extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-
-
-
-
 
     /** SlideView **/
 
@@ -391,11 +404,11 @@ public class AirbusA321 extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.a321_slider1);
+                sliderItem.setImageLocation(R.drawable.embraer_e_jet_e2_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a321_slider02);
+                sliderItem.setImageLocation(R.drawable.embraer_e_jet_e2_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.a321_slider3);
+                sliderItem.setImageLocation(R.drawable.embraer_e_jet_e2_slider3);
             }
 
             sliderItemList.add(sliderItem);

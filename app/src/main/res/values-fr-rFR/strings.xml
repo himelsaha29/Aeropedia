@@ -40,6 +40,7 @@
     <string name="global7500">Global 7500</string>
     <string name="crj_100_200">CRJ 100/200</string>
     <string name="erj_family">ERJ Family</string>
+    <string name="ejet_e2_family">E-Jet E2 Family</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -1138,6 +1139,39 @@
     <string name="erj_family_range_value">3,450 / 3,600 nmi</string>
     <string name="erj_family_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
     <!--ERJ FAMILY-->
+
+
+    <!--EMBRAER E-JET E2-->
+    <string name="ejet_e2_type_value">Narrow-body</string>
+    <string name="ejet_e2_engine_value">Pratt &amp; Whitney\nPW1500G (2)</string>
+    <string name="ejet_e2_first_flight_value">16 September 2013</string>
+    <string name="ejet_e2_intro_value">15 July 2016 with\nSwiss International Air Lines</string>
+    <string name="ejet_e2_customer_value">Delta Air Lines</string>
+    <string name="ejet_e2_variants_value">3</string>
+
+    <string name="ejet_e2_desc1" formatted="false">\n</string>
+
+    <string name="ejet_e2_desc2" formatted="false">\n</string>
+
+    <string name="ejet_e2_desc3">\n \n</string>
+
+    <string name="ejet_e2_specs_constraint">()\n</string>
+
+
+    <string name="ejet_e2_identify">How to identify Embraer E-Jet E2?</string>
+    <string name="ejet_e2_identify_ans"></string>
+
+    <string name="ejet_e2_cockpit_value">2</string>
+    <string name="ejet_e2_wingspan_value">35.10 m</string>
+    <string name="ejet_e2_length_value">35.0 / 38.70 m</string>
+    <string name="ejet_e2_height_value">11.50 m</string>
+    <string name="ejet_e2_fuselage_value">3.5 m (W) / ~3.7 m (H)</string>
+    <string name="ejet_e2_mtow_value">63.1 / 70.9 t</string>
+    <string name="ejet_e2_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="ejet_e2_range_value">3,450 / 3,600 nmi</string>
+    <string name="ejet_e2_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
+    <!--EMBRAER E-JET E2-->
+
 
     <string name="status_listening">"écoute"…</string>
     <string name="status_processing">PROCESSING…</string>

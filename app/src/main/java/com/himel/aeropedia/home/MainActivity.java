@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         models.add(new Model(R.drawable.aircraft_gallery_cover, "Aircraft Gallery"));
         models.add(new Model(R.drawable.alexa_cover, "Ask Alexa"));
         models.add(new Model(R.drawable.real_time_flight_tracker_cover, "Real time flight tracker"));
-        models.add(new Model(R.drawable.airliners_, "BOEING"));
+        models.add(new Model(R.drawable.airliners_photoshop, "BOEING"));
 
         adapter = new Adapter(models, this);
 

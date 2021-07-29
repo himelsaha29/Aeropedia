@@ -48,6 +48,7 @@ import com.himel.aeropedia.bombardier.CRJ100200;
 import com.himel.aeropedia.bombardier.Challenger650;
 import com.himel.aeropedia.bombardier.Global7500;
 import com.himel.aeropedia.bombardier.Learjet75;
+import com.himel.aeropedia.embraer.EJetE2;
 import com.himel.aeropedia.embraer.ERJFamily;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
@@ -70,6 +71,7 @@ public class Embraer extends AppCompatActivity {
     private Animation translate = null;
     private ScrollView scrollView;
     private CardView erjFamilyCard;
+    private CardView ejete2FamilyCard;
     private NeumorphImageButton darkToggle;
     private String enableDark;
     private String enableDarkOnCreate;
@@ -93,12 +95,14 @@ public class Embraer extends AppCompatActivity {
         scrollView = findViewById(R.id.main_scroll);
 
         erjFamilyCard = findViewById(R.id.erjFamilyCard);
+        ejete2FamilyCard = findViewById(R.id.ejet_e2FamilyCard);
 
         langToggle = findViewById(R.id.lang_toggle);
         mDrawer = findViewById(R.id.drawerlayout);
         blur = findViewById(R.id.blurLayout);
 
         erjFamilyCard.getBackground().setAlpha(65);
+        ejete2FamilyCard.getBackground().setAlpha(65);
 
         // setting NeumorphismButton shape based on state
         if (locale.toString().contains("en")) {
@@ -114,6 +118,16 @@ public class Embraer extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), ERJFamily.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
+        ejete2FamilyCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), EJetE2.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
@@ -227,6 +241,7 @@ public class Embraer extends AppCompatActivity {
     private void animateCards() {
         translate = AnimationUtils.loadAnimation(this, R.anim.animation);
         erjFamilyCard.setAnimation(translate);
+        ejete2FamilyCard.setAnimation(translate);
     }
 
     /** Changing app language **/
