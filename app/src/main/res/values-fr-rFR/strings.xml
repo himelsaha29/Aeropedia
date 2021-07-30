@@ -42,6 +42,7 @@
     <string name="erj_family">ERJ Family</string>
     <string name="ejet_e2_family">E-Jet E2 Family</string>
     <string name="lineage1000">Lineage 1000</string>
+    <string name="phenom300">Phenom 300</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -1204,6 +1205,38 @@
     <string name="lineage_1000_range_value">3,450 / 3,600 nmi</string>
     <string name="lineage_1000_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
     <!--LINEAGE 1000-->
+
+
+    <!--PHENOM 300-->
+    <string name="phenom_300_type_value">Narrow-body</string>
+    <string name="phenom_300_engine_value">Pratt &amp; Whitney\nPW1500G (2)</string>
+    <string name="phenom_300_first_flight_value">16 September 2013</string>
+    <string name="phenom_300_intro_value">15 July 2016 with\nSwiss International Air Lines</string>
+    <string name="phenom_300_numbers_value">600 (May 2021)</string>
+    <string name="phenom_300_variants_value">3</string>
+
+    <string name="phenom_300_desc1" formatted="false">\n</string>
+
+    <string name="phenom_300_desc2" formatted="false">\n</string>
+
+    <string name="phenom_300_desc3">\n \n</string>
+
+    <string name="phenom_300_specs_constraint">()\n</string>
+
+
+    <string name="phenom_300_identify">How to identify Airbus A220?</string>
+    <string name="phenom_300_identify_ans"></string>
+
+    <string name="phenom_300_cockpit_value">2</string>
+    <string name="phenom_300_wingspan_value">35.10 m</string>
+    <string name="phenom_300_length_value">35.0 / 38.70 m</string>
+    <string name="phenom_300_height_value">11.50 m</string>
+    <string name="phenom_300_fuselage_value">3.5 m (W) / ~3.7 m (H)</string>
+    <string name="phenom_300_mtow_value">63.1 / 70.9 t</string>
+    <string name="phenom_300_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="phenom_300_range_value">3,450 / 3,600 nmi</string>
+    <string name="phenom_300_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
+    <!--PHENOM 300-->
 
 
 

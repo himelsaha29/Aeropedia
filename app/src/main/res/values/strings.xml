@@ -42,6 +42,7 @@
     <string name="erj_family">ERJ Family</string>
     <string name="ejet_e2_family">E-Jet E2 Family</string>
     <string name="lineage1000">Lineage 1000</string>
+    <string name="phenom300">Phenom 300</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -2000,6 +2001,54 @@
     <string name="lineage_1000_range_value">4,600 nmi</string>
     <string name="lineage_1000_thrust_value">82 kN</string>
     <!--LINEAGE 1000-->
+
+
+    <!--PHENOM 300-->
+    <string name="phenom_300_type_value">Light business jet</string>
+    <string name="phenom_300_engine_value">Pratt &amp; Whitney Canada\nPW535E1 (2)</string>
+    <string name="phenom_300_first_flight_value">2008</string>
+    <string name="phenom_300_intro_value">2009</string>
+    <string name="phenom_300_numbers_value">600 (May 2021)</string>
+    <string name="phenom_300_variants_value">4</string>
+
+    <string name="phenom_300_desc1" formatted="false">The Embraer EMB-505 Phenom 300 is a single pilot certified light business jet developed by the Brazilian aerospace
+        manufacturer Embraer. It can carry up to 11 occupants. Embraer began designing the Phenom 300 after finding that potential customers of the Phenom 100 would also
+        like a bigger aircraft. It was a new design with the aim of allowing operation to smaller airports such as London City and Telluride Regional Airport. It first
+        flew on 29 April 2008, and received its type certification on 3 December 2009. On 29 December 2009 Embraer delivered the first Phenom 300 to Executive Flight
+        Services at the company\'s headquarters at São José dos Campos, Brazil. On 31 January 2020, Embraer announced significant upgrades to the Phenom 300, with
+        maximum speed increased from Mach 0.78 to 0.80 (446 to 464 kn, 826 to 859 km/h), and range increased from 1,992 to 2,010 nmi (3,689 to 3,723 km). Rated engine
+        thrust was increased from 3,360 to 3,478 lbf (14.95 to 15.47 kN) on upgraded PW535E1 turbofans. In 2021, its equipped price was $9.65M.\n</string>
+
+    <string name="phenom_300_desc2" formatted="false">The Phenom 300 is a twin-engined cantilever monoplane with low-positioned, swept wings. It has a horizontal
+        stabiliser in a T-tail configuration and a retractable tricycle landing gear. It has two rear-pylon-mounted Pratt &amp; Whitney Canada PW535E turbofan engines. The
+        flight deck is based on Garmin G1000 (G3000 on the later variants). The enclosed cabin has room for nine passengers and a two-pilot crew; during single-pilot operation an additional passenger can be carried. Access to the cockpit and
+        cabin is via an airstair on the left-hand side. Its structural life is 28,000 flight cycles or 35,000 hours. It is built of 18% composite materials; it has
+        winglets, but not thrust reversers. The Phenom 300 has single-point refueling and an externally serviced private rear lavatory.\n\nThe Phenom 300 became the most
+        delivered business jet with 60 units in 2013. This was also the case in 2014 and 2015. All Phenom assembly was moved to the Melbourne, Florida line after July
+        2016, with a capability of assembling 96 Phenoms and 72 Embraer Legacy 450/Embraer Legacy 500 annually. More than 170 Phenom jets had been produced at the site
+        by June 2016, mainly for the US market. In March 2019, Embraer delivered the 500th Phenom 300, claiming more than half of the light jet market share since
+        2012. It was being used in over 30 countries and had carried 2.5 million passengers in 600,000 flights and 800,000 hours. The 600th unit was delivered in
+        May 2021.\n</string>
+
+    <string name="phenom_300_desc3">\nThe light business jet comes in 4 variants - Phenom 300, Phenom 300E, 2020 Phenom 300E, 2020 Phenom 300MED.\n</string>
+
+    <string name="phenom_300_specs_constraint">(2020 Phenom 300E)\n</string>
+
+
+    <string name="phenom_300_identify">How to identify Phenom 300?</string>
+    <string name="phenom_300_identify_ans"></string>
+
+    <string name="phenom_300_cockpit_value">1 / 2</string>
+    <string name="phenom_300_wingspan_value">16.20 m</string>
+    <string name="phenom_300_length_value">15.90 m</string>
+    <string name="phenom_300_height_value">5 m</string>
+    <string name="phenom_300_fuselage_value">1.55 m (W) / 1.49 m (H)</string>
+    <string name="phenom_300_mtow_value">8.15 t</string>
+    <string name="phenom_300_cruise_speed_value">834 km/h (max.)</string>
+    <string name="phenom_300_range_value">2,010 nmi with IFR reserves,\n5 occupants</string>
+    <string name="phenom_300_thrust_value">15.47 kN</string>
+    <!--PHENOM 300-->
+
 
     <string name="status_listening">LISTENING…</string>
     <string name="status_processing">PROCESSING…</string>

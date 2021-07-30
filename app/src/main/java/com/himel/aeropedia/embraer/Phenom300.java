@@ -1,23 +1,19 @@
-package com.himel.aeropedia.manufacturers;
+package com.himel.aeropedia.embraer;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ScrollView;
-import android.widget.TextView;
+
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA220;
 import com.himel.aeropedia.airbus.AirbusA300;
@@ -41,25 +37,28 @@ import com.himel.aeropedia.antonov.AntonovAn72Cheburashka;
 import com.himel.aeropedia.boeing.Boeing737;
 import com.himel.aeropedia.boeing.Boeing747;
 import com.himel.aeropedia.boeing.Boeing757;
-import com.himel.aeropedia.boeing.Boeing767;
 import com.himel.aeropedia.boeing.Boeing777;
 import com.himel.aeropedia.boeing.Boeing787;
 import com.himel.aeropedia.bombardier.CRJ100200;
 import com.himel.aeropedia.bombardier.Challenger650;
 import com.himel.aeropedia.bombardier.Global7500;
 import com.himel.aeropedia.bombardier.Learjet75;
-import com.himel.aeropedia.embraer.EJetE2;
-import com.himel.aeropedia.embraer.ERJFamily;
-import com.himel.aeropedia.embraer.Lineage1000;
-import com.himel.aeropedia.embraer.Phenom300;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
+import com.himel.aeropedia.util.SliderAdapter;
+import com.himel.aeropedia.util.SliderItem;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import io.alterac.blurkit.BlurLayout;
@@ -67,22 +66,19 @@ import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphImageButton;
 import soup.neumorphism.ShapeType;
 
-public class Embraer extends AppCompatActivity {
+public class Phenom300 extends AppCompatActivity {
 
     private NeumorphButton langToggle;
-    private Animation translate = null;
-    private ScrollView scrollView;
-    private CardView erjFamilyCard;
-    private CardView ejete2FamilyCard;
-    private CardView lineage1000Card;
-    private CardView phenom300Card;
+    private Locale locale;
     private NeumorphImageButton darkToggle;
     private String enableDark;
     private String enableDarkOnCreate;
-    private Locale locale;
     private FlowingDrawer mDrawer;
     private BlurLayout blur;
     private AndroidTreeView tView;
+    private CollapsingToolbarLayout collapsingToolbarLayout;
+    private SliderView sliderView;
+    private SliderAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,26 +87,14 @@ public class Embraer extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_embraer_light);
+            setContentView(R.layout.activity_embraer_phenom_300_light);
         } else {
-            setContentView(R.layout.activity_embraer_dark);
+            setContentView(R.layout.activity_embraer_e_jet_e2_dark);
         }
-        darkToggle = findViewById(R.id.dark_toggle);
-        scrollView = findViewById(R.id.main_scroll);
-
-        erjFamilyCard = findViewById(R.id.erjFamilyCard);
-        ejete2FamilyCard = findViewById(R.id.ejet_e2FamilyCard);
-        lineage1000Card = findViewById(R.id.lineage1000Card);
-        phenom300Card = findViewById(R.id.phenom300Card);
-
         langToggle = findViewById(R.id.lang_toggle);
+        darkToggle = findViewById(R.id.dark_toggle);
         mDrawer = findViewById(R.id.drawerlayout);
         blur = findViewById(R.id.blurLayout);
-
-        erjFamilyCard.getBackground().setAlpha(65);
-        ejete2FamilyCard.getBackground().setAlpha(65);
-        lineage1000Card.getBackground().setAlpha(65);
-        phenom300Card.getBackground().setAlpha(65);
 
         // setting NeumorphismButton shape based on state
         if (locale.toString().contains("en")) {
@@ -119,47 +103,14 @@ public class Embraer extends AppCompatActivity {
             langToggle.setShapeType(ShapeType.PRESSED);
         }
 
-        animateCards();
 
-        erjFamilyCard.setOnClickListener(new View.OnClickListener() {
+        Typeface tf = Typeface.createFromAsset(this.getAssets(), "fonts/maven_pro_medium.ttf");
+        collapsingToolbarLayout = findViewById(R.id.collapsing_bar);
+        collapsingToolbarLayout.setCollapsedTitleTypeface(tf);
+        collapsingToolbarLayout.setExpandedTitleTypeface(tf);
 
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), ERJFamily.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
+        slideView();
 
-        ejete2FamilyCard.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), EJetE2.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        lineage1000Card.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Lineage1000.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        phenom300Card.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Phenom300.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
 
         langToggle.setOnClickListener(new View.OnClickListener() {
 
@@ -200,7 +151,7 @@ public class Embraer extends AppCompatActivity {
         });
 
 
-        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_FULLSCREEN);
+        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
         mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
             @Override
             public void onDrawerStateChange(int oldState, int newState) {
@@ -223,14 +174,8 @@ public class Embraer extends AppCompatActivity {
         });
 
         createTreeView();
-
     }
 
-    @Override
-    public void finish() {
-        super.finish();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-    }
 
     @Override
     protected void onRestart() {
@@ -240,7 +185,6 @@ public class Embraer extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            //createTreeView();
         }
         else if (!locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
@@ -251,7 +195,6 @@ public class Embraer extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-            //createTreeView();
         }
 
         if(mDrawer.getDrawerState() == ElasticDrawer.STATE_OPEN) {
@@ -259,20 +202,8 @@ public class Embraer extends AppCompatActivity {
             blur.setVisibility(View.GONE);
             blur.setAlpha(0f);
         }
-
-        scrollView = findViewById(R.id.main_scroll);
-        scrollView.scrollTo(0, scrollView.getTop());
-        animateCards();
     }
 
-
-    private void animateCards() {
-        translate = AnimationUtils.loadAnimation(this, R.anim.animation);
-        erjFamilyCard.setAnimation(translate);
-        ejete2FamilyCard.setAnimation(translate);
-        lineage1000Card.setAnimation(translate);
-        phenom300Card.setAnimation(translate);
-    }
 
     /** Changing app language **/
 
@@ -299,6 +230,12 @@ public class Embraer extends AppCompatActivity {
     }
 
     /** Changing app language **/
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 
     /** Dark mode **/
 
@@ -351,7 +288,6 @@ public class Embraer extends AppCompatActivity {
 
 
         TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.airbus), "No", "airbus", null));
-
         TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a220), "No", "a220", AirbusA220.class));
         TreeNode a300Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a300), "No", "a300", AirbusA300.class));
         TreeNode a310Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a310), "No", "a310", AirbusA310.class));
@@ -374,41 +310,38 @@ public class Embraer extends AppCompatActivity {
         TreeNode an124Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an124), "No", "an124", AntonovAn124Ruslan.class));
         TreeNode an72Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an72), "No", "an72", AntonovAn72Cheburashka.class));
         TreeNode an22Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an22), "No", "an22", AntonovAn22Antei.class));
-        TreeNode an225Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an225), "No", "an22", AntonovAn225Mriya.class));
+        TreeNode an225Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.an225), "No", "an225", AntonovAn225Mriya.class));
 
-
-        antonov.addChildren(an22Node, an72Node, an124Node, an225Node);
+        antonov.addChildren(an22Node, an72Node, an124Node,an225Node);
 
         TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.boeing), "No", "boeing", null));
-
-
-        TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "777", "No", "b777", Boeing777.class));
-        TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "787", "No", "b787", Boeing787.class));
         TreeNode b737 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b737), "No", "b737", Boeing737.class));
         TreeNode b757 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b757), "No", "b757", Boeing757.class));
         TreeNode b747 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b747), "No", "b747", Boeing747.class));
-        TreeNode b767 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b767), "No", "b767", Boeing767.class));
+        TreeNode b767 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b767), "No", "b767", Boeing777.class));
+        TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b777), "No", "b777", Boeing777.class));
+        TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b787), "No", "b787", Boeing787.class));
+
         boeing.addChildren(b737, b747, b757, b767, b777, b787);
 
         TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
-
-        TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "b767", Learjet75.class));
+        TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "learjet75", Learjet75.class));
         TreeNode challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "No", "challenger650", Challenger650.class));
         TreeNode global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "No", "global7500", Global7500.class));
         TreeNode crj100200 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.crj_100_200), "No", "crj100200", CRJ100200.class));
 
         bombardier.addChildren(challenger650, crj100200, learjet75, global7500);
 
-        TreeNode embraer = null;
+
+        TreeNode embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.embraer), "No", "embraer", null));
 
         TreeNode erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "No", "erjFamily", ERJFamily.class));
+        TreeNode ejete2Family = null;
         if (verifyDarkMode().equals("Yes")) {
-            embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.embraer), "HighlightLight", "embraer", null));
+            ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "HighlightLight", "ejete2Family", null));
         } else {
-            embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.embraer), "HighlightDark", "embraer", null));
+            ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "HighlightDark", "ejete2Family", null));
         }
-
-        TreeNode ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "No", "ejete2Family", EJetE2.class));
         TreeNode lineage1000 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.lineage1000), "No", "lineage1000", Lineage1000.class));
 
         embraer.addChildren(erjFamily, ejete2Family, lineage1000);
@@ -441,4 +374,63 @@ public class Embraer extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
+    /** SlideView **/
+
+    private void slideView() {
+
+        sliderView = findViewById(R.id.imageSlider);
+
+        adapter = new SliderAdapter(this);
+        sliderView.setSliderAdapter(adapter, false);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        sliderView.setIndicatorSelectedColor(Color.WHITE);
+        sliderView.setIndicatorUnselectedColor(Color.GRAY);
+        sliderView.setScrollTimeInSec(3);
+        sliderView.setAutoCycle(false);
+        renewItems(sliderView);
+
+
+        sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
+            @Override
+            public void onIndicatorClicked(int position) {
+                Log.i("GGG", "onIndicatorClicked: " + sliderView.getCurrentPagePosition());
+            }
+        });
+    }
+
+    private void renewItems(View view) {
+        List<SliderItem> sliderItemList = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            SliderItem sliderItem = new SliderItem();
+            if (i == 0) {
+                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider1);
+            } else if (i == 1) {
+                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider2);
+            } else if (i == 2) {
+                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider3);
+            } else if (i == 3) {
+                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider4);
+            }
+
+            sliderItemList.add(sliderItem);
+        }
+        adapter.renewItems(sliderItemList);
+    }
+
+    private void removeLastItem(View view) {
+        if (adapter.getCount() - 1 >= 0)
+            adapter.deleteItem(adapter.getCount() - 1);
+    }
+
+    private void addNewItem(View view) {
+        SliderItem sliderItem = new SliderItem();
+        //sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        adapter.addItem(sliderItem);
+    }
+
+    /** SlideView **/
+
 }
