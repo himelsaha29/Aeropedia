@@ -406,13 +406,13 @@ public class Lineage1000 extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.embraer_lineage_1000_slider1);
+                sliderItem.setImageLocation(R.drawable.embraer_lineage_1000_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.embraer_lineage_1000_slider2);
+                sliderItem.setImageLocation(R.drawable.embraer_lineage_1000_slider03);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.embraer_lineage_1000_slider3);
+                sliderItem.setImageLocation(R.drawable.embraer_lineage_1000_slider02);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.embraer_lineage_1000_slider4);
+                sliderItem.setImageLocation(R.drawable.embraer_lineage_1000_slider04);
             }
 
             sliderItemList.add(sliderItem);

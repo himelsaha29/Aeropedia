@@ -406,11 +406,11 @@ public class EJetE2 extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.embraer_e_jet_e2_slider1);
+                sliderItem.setImageLocation(R.drawable.embraer_ejet_e2_family_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.embraer_e_jet_e2_slider2);
+                sliderItem.setImageLocation(R.drawable.embraer_ejet_e2_family_slider02);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.embraer_e_jet_e2_slider3);
+                sliderItem.setImageLocation(R.drawable.embraer_ejet_e2_family_slider03);
             }
 
             sliderItemList.add(sliderItem);

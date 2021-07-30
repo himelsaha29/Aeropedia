@@ -92,7 +92,7 @@
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/embraer_e_jet_e2_cover" />
+                            android:src="@drawable/embraer_ejet_e2_family_cover" />
 
                         <TextView
                             android:layout_width="match_parent"
