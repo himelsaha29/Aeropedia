@@ -42,6 +42,7 @@ import com.himel.aeropedia.boeing.Boeing787;
 import com.himel.aeropedia.embraer.EJetE2;
 import com.himel.aeropedia.embraer.ERJFamily;
 import com.himel.aeropedia.embraer.Lineage1000;
+import com.himel.aeropedia.embraer.Phenom300;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
@@ -341,8 +342,9 @@ public class Global7500 extends AppCompatActivity {
 
         TreeNode ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "No", "ejete2Family", EJetE2.class));
         TreeNode lineage1000 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.lineage1000), "No", "lineage1000", Lineage1000.class));
+        TreeNode phenom300 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.phenom300), "No", "phenom300", Phenom300.class));
 
-        embraer.addChildren(erjFamily, ejete2Family, lineage1000);
+        embraer.addChildren(erjFamily, ejete2Family, lineage1000, phenom300);
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
 

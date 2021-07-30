@@ -344,7 +344,8 @@ public class Lineage1000 extends AppCompatActivity {
             lineage1000 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.lineage1000), "HighlightDark", "lineage1000", null));
         }
 
-        embraer.addChildren(erjFamily, ejete2Family, lineage1000);
+        TreeNode phenom300 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.phenom300), "No", "phenom300", Phenom300.class));
+        embraer.addChildren(erjFamily, ejete2Family, lineage1000, phenom300);
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
 

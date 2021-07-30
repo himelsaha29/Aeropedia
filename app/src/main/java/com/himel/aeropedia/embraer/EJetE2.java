@@ -343,8 +343,9 @@ public class EJetE2 extends AppCompatActivity {
             ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "HighlightDark", "ejete2Family", null));
         }
         TreeNode lineage1000 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.lineage1000), "No", "lineage1000", Lineage1000.class));
+        TreeNode phenom300 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.phenom300), "No", "phenom300", Phenom300.class));
 
-        embraer.addChildren(erjFamily, ejete2Family, lineage1000);
+        embraer.addChildren(erjFamily, ejete2Family, lineage1000, phenom300);
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
 

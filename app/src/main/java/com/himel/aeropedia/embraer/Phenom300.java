@@ -336,15 +336,16 @@ public class Phenom300 extends AppCompatActivity {
         TreeNode embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.embraer), "No", "embraer", null));
 
         TreeNode erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "No", "erjFamily", ERJFamily.class));
-        TreeNode ejete2Family = null;
+        TreeNode ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "No", "ejete2Family", EJetE2.class));
+        TreeNode phenom300 = null;
         if (verifyDarkMode().equals("Yes")) {
-            ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "HighlightLight", "ejete2Family", null));
+            phenom300 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.phenom300), "HighlightLight", "phenom300", null));
         } else {
-            ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "HighlightDark", "ejete2Family", null));
+            phenom300 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.phenom300), "HighlightDark", "phenom300", null));
         }
         TreeNode lineage1000 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.lineage1000), "No", "lineage1000", Lineage1000.class));
 
-        embraer.addChildren(erjFamily, ejete2Family, lineage1000);
+        embraer.addChildren(erjFamily, ejete2Family, lineage1000, phenom300);
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
 
@@ -406,9 +407,9 @@ public class Phenom300 extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider1);
-            } else if (i == 1) {
                 sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider2);
+            } else if (i == 1) {
+                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider1);
             } else if (i == 2) {
                 sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider3);
             } else if (i == 3) {
