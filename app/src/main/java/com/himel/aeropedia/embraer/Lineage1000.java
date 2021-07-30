@@ -336,14 +336,15 @@ public class Lineage1000 extends AppCompatActivity {
         TreeNode embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.embraer), "No", "embraer", null));
 
         TreeNode erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "No", "erjFamily", ERJFamily.class));
-        TreeNode ejete2Family = null;
+        TreeNode ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "No", "ejete2Family", EJetE2.class));
+        TreeNode lineage1000 = null;
         if (verifyDarkMode().equals("Yes")) {
-            ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "HighlightLight", "ejete2Family", null));
+            lineage1000 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.lineage1000), "HighlightLight", "lineage1000", null));
         } else {
-            ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "HighlightDark", "ejete2Family", null));
+            lineage1000 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.lineage1000), "HighlightDark", "lineage1000", null));
         }
 
-        embraer.addChildren(erjFamily, ejete2Family);
+        embraer.addChildren(erjFamily, ejete2Family, lineage1000);
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
 

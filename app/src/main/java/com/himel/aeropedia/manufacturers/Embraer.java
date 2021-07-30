@@ -394,8 +394,9 @@ public class Embraer extends AppCompatActivity {
         }
 
         TreeNode ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "No", "ejete2Family", EJetE2.class));
+        TreeNode lineage1000 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.lineage1000), "No", "lineage1000", Lineage1000.class));
 
-        embraer.addChildren(erjFamily, ejete2Family);
+        embraer.addChildren(erjFamily, ejete2Family, lineage1000);
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
 
