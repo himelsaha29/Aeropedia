@@ -41,6 +41,7 @@
     <string name="crj_100_200">CRJ100/200</string>
     <string name="erj_family">ERJ Family</string>
     <string name="ejet_e2_family">E-Jet E2 Family</string>
+    <string name="lineage1000">Lineage 1000</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -1955,6 +1956,50 @@
     <string name="ejet_e2_range_value">2,017 / 2,850 / 2,655 nmi</string>
     <string name="ejet_e2_thrust_value">67 kN (E175) / 85–102 kN</string>
     <!--EMBRAER E-JET E2-->
+
+
+    <!--LINEAGE 1000-->
+    <string name="lineage_1000_type_value">Business jet</string>
+    <string name="lineage_1000_engine_value">General Electric\nCF34-10E (2)</string>
+    <string name="lineage_1000_first_flight_value">26 October 2007</string>
+    <string name="lineage_1000_intro_value">7 May 2009 with HE Aamer\nAbdul Jalil Al Fahim</string>
+    <string name="lineage_1000_customer_value">AirX Charter</string>
+    <string name="lineage_1000_variants_value">2</string>
+
+    <string name="lineage_1000_desc1" formatted="false">The Embraer Lineage 1000 is a variant of the Embraer 190 regional jet airliner, launched as a private jet on May
+        2, 2006. Manufactured by the Brazilian aerospace firm Embraer, the Lineage is advertised as an \"ultra-large\" business jet with comfortable seating
+        for 19. The Lineage 1000 received its certification from Brazil\'s ANAC and from EASA in December 2008. It was certified by the USA Federal Aviation
+        Administration on 7 January 2009. The first Lineage 1000 was delivered to Aamer Abdul Jalil Al Fahim on May 7, 2009. As of 31 December 2018, only 28 Lineage
+        1000s have been built.\n\nIn October 2013, Embraer introduced the Lineage 1000E, which delivers greater range - 4,600 nm (8,519 km). In addition, the new Lineage
+        1000E features new in-flight entertainment and cockpit options. In August 2020 Embraer announced that it was stopping sales of the Lineage 1000.\n</string>
+
+    <string name="lineage_1000_desc2" formatted="false">On 6 October 2020, the Pakistan Navy announced the selection of the Lineage 1000 to replace its P-3C Orion in
+        the maritime patrol role, with 10 converted commercial jets, the first of which has been ordered. It was unclear whether the aircraft is being acquired directly
+        from the manufacturer or another party. In-service aircraft may not be available due to low production numbers, while existing operators may be selling their
+        aircraft due to COVID restrictions on air travel.\n\nThe Lineage 1000 is based on the Embraer 190 airliner, with added fuel tanks in the lower deck cargo hold
+        space, nearly doubling the jet\'s range. It boasts a lavish interior, divided into up to 5 sections including an optional bedroom, washroom with running water,
+        and a walk-in cargo area at the rear. Its fuselage cross-section is larger than similarly priced business jets like the $50.4M Global 5000, $53.8M Falcon 7X or
+        $54.5M Gulfstream G600, but smaller than other airliner conversions : the Sukhoi Superjet 100, B737-based $71.4M Boeing Business Jet-1 or A320-based $87.0M Airbus
+        Corporate Jets.\n</string>
+
+    <string name="lineage_1000_desc3">\nThe Lineage 1000 comes in 2 variants - Lineage 1000 and Lineage 1000E.\n</string>
+
+    <string name="lineage_1000_specs_constraint">()\n</string>
+
+
+    <string name="lineage_1000_identify">How to identify Lineage 1000?</string>
+    <string name="lineage_1000_identify_ans"></string>
+
+    <string name="lineage_1000_cockpit_value">2</string>
+    <string name="lineage_1000_wingspan_value">28.72 m</string>
+    <string name="lineage_1000_length_value">36.24 m</string>
+    <string name="lineage_1000_height_value">10.57 m</string>
+    <string name="lineage_1000_fuselage_value">2.67 m (W) / ~2.2 m (H)</string>
+    <string name="lineage_1000_mtow_value">54.5 t</string>
+    <string name="lineage_1000_cruise_speed_value">850 km/h (typical),\n874 km/h (max.)</string>
+    <string name="lineage_1000_range_value">4,600 nmi</string>
+    <string name="lineage_1000_thrust_value">82 kN</string>
+    <!--LINEAGE 1000-->
 
     <string name="status_listening">LISTENING…</string>
     <string name="status_processing">PROCESSING…</string>
