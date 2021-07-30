@@ -89,7 +89,7 @@ public class Phenom300 extends AppCompatActivity {
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_embraer_phenom_300_light);
         } else {
-            setContentView(R.layout.activity_embraer_e_jet_e2_dark);
+            setContentView(R.layout.activity_embraer_phenom_300_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
