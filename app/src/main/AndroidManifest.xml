@@ -17,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".embraer.Phenom300"></activity>
+        <activity android:name=".manufacturers.Cessna"></activity>
+        <activity android:name=".cessna.CitationLongitude" />
+        <activity android:name=".embraer.Phenom300" />
         <activity android:name=".embraer.Lineage1000" />
         <activity android:name=".embraer.EJetE2" />
         <activity android:name=".embraer.ERJFamily" />

@@ -7,18 +7,18 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
-
+import android.widget.TextView;
+import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA220;
 import com.himel.aeropedia.airbus.AirbusA300;
 import com.himel.aeropedia.airbus.AirbusA310;
@@ -30,8 +30,10 @@ import com.himel.aeropedia.airbus.AirbusA321;
 import com.himel.aeropedia.airbus.AirbusA330;
 import com.himel.aeropedia.airbus.AirbusA330neo;
 import com.himel.aeropedia.airbus.AirbusA340;
+import com.himel.aeropedia.airbus.AirbusA350;
 import com.himel.aeropedia.airbus.AirbusA380;
 import com.himel.aeropedia.airbus.AirbusBeluga;
+import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.antonov.AntonovAn124Ruslan;
 import com.himel.aeropedia.antonov.AntonovAn225Mriya;
 import com.himel.aeropedia.antonov.AntonovAn22Antei;
@@ -46,19 +48,16 @@ import com.himel.aeropedia.bombardier.CRJ100200;
 import com.himel.aeropedia.bombardier.Challenger650;
 import com.himel.aeropedia.bombardier.Global7500;
 import com.himel.aeropedia.bombardier.Learjet75;
+import com.himel.aeropedia.cessna.CitationLongitude;
 import com.himel.aeropedia.embraer.EJetE2;
 import com.himel.aeropedia.embraer.ERJFamily;
 import com.himel.aeropedia.embraer.Lineage1000;
 import com.himel.aeropedia.embraer.Phenom300;
 import com.himel.aeropedia.firebase.Firebase;
-import com.himel.aeropedia.R;
-import com.himel.aeropedia.airbus.AirbusA350;
-import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
-import com.mxn.soul.flowingdrawer_core.FlowingMenuLayout;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 
@@ -69,28 +68,19 @@ import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphImageButton;
 import soup.neumorphism.ShapeType;
 
-public class ManufacturerMenu extends AppCompatActivity {
+public class Cessna extends AppCompatActivity {
 
-    private CardView airbusCard;
-    private CardView boeingCard;
-    private CardView bombardierCard;
-    private CardView antonovCard;
-    private CardView embraerCard;
-    private CardView cessnaCard;
-    private CardView gulfstreamCard;
-    private boolean flag = false;
+    private NeumorphButton langToggle;
     private Animation translate = null;
     private ScrollView scrollView;
-    private Locale locale;
-    private NeumorphButton langToggle;
+    private CardView citationLongitudeCard;
     private NeumorphImageButton darkToggle;
     private String enableDark;
     private String enableDarkOnCreate;
+    private Locale locale;
     private FlowingDrawer mDrawer;
-    private FlowingMenuLayout flowingMenuLayout;
     private BlurLayout blur;
     private AndroidTreeView tView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,46 +89,20 @@ public class ManufacturerMenu extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_manufacturer_menu_light);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                Window window = getWindow();
-                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(Color.parseColor("#FF92B7D4"));
-            }
+            setContentView(R.layout.activity_cessna_light);
         } else {
-            setContentView(R.layout.activity_manufacturer_menu_dark);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                Window window = getWindow();
-                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(Color.parseColor("#FF060525"));
-            }
+            setContentView(R.layout.activity_cessna_dark);
         }
         darkToggle = findViewById(R.id.dark_toggle);
         scrollView = findViewById(R.id.main_scroll);
-        airbusCard = findViewById(R.id.airbusCard);
-        boeingCard = findViewById(R.id.boeingCard);
-        bombardierCard = findViewById(R.id.bombardierCard);
-        embraerCard = findViewById(R.id.embraerCard);
-        antonovCard = findViewById(R.id.antonovCard);
-        cessnaCard = findViewById(R.id.cessnaCard);
-        gulfstreamCard = findViewById(R.id.gulfstreamCard);
+
+        citationLongitudeCard = findViewById(R.id.citationLongitudeCard);
+
         langToggle = findViewById(R.id.lang_toggle);
         mDrawer = findViewById(R.id.drawerlayout);
-        flowingMenuLayout = findViewById(R.id.menulayout);
         blur = findViewById(R.id.blurLayout);
 
-
-        airbusCard.getBackground().setAlpha(65);
-        boeingCard.getBackground().setAlpha(65);
-        bombardierCard.getBackground().setAlpha(65);
-        embraerCard.getBackground().setAlpha(65);
-        antonovCard.getBackground().setAlpha(65);
-        cessnaCard.getBackground().setAlpha(65);
-        gulfstreamCard.getBackground().setAlpha(65);
-
-
+        citationLongitudeCard.getBackground().setAlpha(65);
         // setting NeumorphismButton shape based on state
         if (locale.toString().contains("en")) {
             langToggle.setShapeType(ShapeType.FLAT);
@@ -148,62 +112,12 @@ public class ManufacturerMenu extends AppCompatActivity {
 
         animateCards();
 
-        airbusCard.setOnClickListener(new View.OnClickListener() {
+        citationLongitudeCard.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Airbus.class);
+                Intent intent = new Intent(getBaseContext(), CitationLongitude.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        antonovCard.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent showContent = new Intent(getApplicationContext(), Antonov.class);
-                startActivity(showContent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        boeingCard.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent showContent = new Intent(getApplicationContext(), Boeing.class);
-                startActivity(showContent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        bombardierCard.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent showContent = new Intent(getApplicationContext(), Bombardier.class);
-                startActivity(showContent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        embraerCard.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent showContent = new Intent(getApplicationContext(), Embraer.class);
-                startActivity(showContent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
-
-        cessnaCard.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent showContent = new Intent(getApplicationContext(), Cessna.class);
-                startActivity(showContent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
@@ -213,7 +127,7 @@ public class ManufacturerMenu extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if (getResources().getConfiguration().locale.toString().contains("fr")) {
+                if(getResources().getConfiguration().locale.toString().contains("fr")) {
                     setLocale("en");
                     Intent intent = getIntent();
                     finish();
@@ -256,35 +170,28 @@ public class ManufacturerMenu extends AppCompatActivity {
                     Log.i("MainActivity", "Drawer STATE_CLOSED");
                     blur.setVisibility(View.GONE);
                     blur.setAlpha(0f);
-                }
-                else if (newState == ElasticDrawer.STATE_OPENING) {
+                } else if (newState == ElasticDrawer.STATE_OPENING) {
                     blur.invalidate();
                     blur.setAlpha(0.0f);
                     blur.setVisibility(View.VISIBLE);
                     blur.animate().alpha(1.0f).setDuration(1400);
                 }
-
             }
 
             @Override
             public void onDrawerSlide(float openRatio, int offsetPixels) {
                 Log.i("MainActivity", "openRatio=" + openRatio + " ,offsetPixels=" + offsetPixels);
             }
-
         });
-
-        // resizing drawer
-//        int width = (int) (getResources().getDisplayMetrics().widthPixels/1.42);
-//        FlowingMenuLayout.LayoutParams params = (FlowingMenuLayout.LayoutParams) flowingMenuLayout.getLayoutParams();
-//        params.width = width;
-//        params.leftMargin = -10;
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-//            params.setMarginStart(-10);
-//        }
-//        flowingMenuLayout.setLayoutParams(params);
 
         createTreeView();
 
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
     @Override
@@ -320,21 +227,13 @@ public class ManufacturerMenu extends AppCompatActivity {
         animateCards();
     }
 
+
     private void animateCards() {
         translate = AnimationUtils.loadAnimation(this, R.anim.animation);
-        airbusCard.setAnimation(translate);
-        boeingCard.setAnimation(translate);
-        bombardierCard.setAnimation(translate);
-        embraerCard.setAnimation(translate);
-        antonovCard.setAnimation(translate);
-        cessnaCard.setAnimation(translate);
-        gulfstreamCard.setAnimation(translate);
+        citationLongitudeCard.setAnimation(translate);
     }
 
-
-    /**
-     * Changing app language
-     **/
+    /** Changing app language **/
 
     private void setLocale(String language) {
         Locale locale = new Locale(language);
@@ -359,7 +258,6 @@ public class ManufacturerMenu extends AppCompatActivity {
     }
 
     /** Changing app language **/
-
 
     /** Dark mode **/
 
@@ -405,18 +303,14 @@ public class ManufacturerMenu extends AppCompatActivity {
 
 
         TreeNode root = TreeNode.root();
-        TreeNode manufacturerRoot = null;
-        if (verifyDarkMode().equals("Yes")) {
-            manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_manufacturer, this.getString(R.string.manufacturers), "HighlightLight", "manufacturers", null));
-        } else {
-            manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_manufacturer, this.getString(R.string.manufacturers), "HighlightDark", "manufacturers", null));
-        }
+        TreeNode manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_manufacturer, this.getString(R.string.manufacturers), "No", "Manufacturers", null));
         TreeNode alexaRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_alexa, this.getString(R.string.ask_alexa), "No", "Alexa", AlexaActivity.class));
         TreeNode flightTrackerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_radar, this.getString(R.string.flight_tracker), "No", "flightTracker", FlightMap.class));
         TreeNode firebaseRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_firebase, this.getString(R.string.firebase), "No", "firebase", Firebase.class));
 
 
         TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.airbus), "No", "airbus", null));
+
         TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a220), "No", "a220", AirbusA220.class));
         TreeNode a300Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a300), "No", "a300", AirbusA300.class));
         TreeNode a310Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a310), "No", "a310", AirbusA310.class));
@@ -443,7 +337,10 @@ public class ManufacturerMenu extends AppCompatActivity {
 
 
         antonov.addChildren(an22Node, an72Node, an124Node, an225Node);
+
         TreeNode boeing = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.boeing), "No", "boeing", null));
+
+
         TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "777", "No", "b777", Boeing777.class));
         TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "787", "No", "b787", Boeing787.class));
         TreeNode b737 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b737), "No", "b737", Boeing737.class));
@@ -453,6 +350,7 @@ public class ManufacturerMenu extends AppCompatActivity {
         boeing.addChildren(b737, b747, b757, b767, b777, b787);
 
         TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
+
         TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "b767", Learjet75.class));
         TreeNode challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "No", "challenger650", Challenger650.class));
         TreeNode global7500 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.global7500), "No", "global7500", Global7500.class));
@@ -460,8 +358,14 @@ public class ManufacturerMenu extends AppCompatActivity {
 
         bombardier.addChildren(challenger650, crj100200, learjet75, global7500);
 
-        TreeNode embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.embraer), "No", "embraer", null));
-        TreeNode erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "No", "erjfamily", ERJFamily.class));
+        TreeNode embraer = null;
+
+        TreeNode erjFamily = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.erj_family), "No", "erjFamily", ERJFamily.class));
+        if (verifyDarkMode().equals("Yes")) {
+            embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.embraer), "HighlightLight", "embraer", null));
+        } else {
+            embraer = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.embraer), "HighlightDark", "embraer", null));
+        }
 
         TreeNode ejete2Family = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.ejet_e2_family), "No", "ejete2Family", EJetE2.class));
         TreeNode lineage1000 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.lineage1000), "No", "lineage1000", Lineage1000.class));
@@ -476,6 +380,7 @@ public class ManufacturerMenu extends AppCompatActivity {
         root.addChildren(flightTrackerRoot);
         root.addChildren(firebaseRoot);
         manufacturerRoot.setExpanded(true);
+        embraer.setExpanded(true);
 
         tView = new AndroidTreeView(this, root);
         tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);
@@ -495,11 +400,5 @@ public class ManufacturerMenu extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
-    }
-
-    @Override
-    public void finish() {
-        super.finish();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }
