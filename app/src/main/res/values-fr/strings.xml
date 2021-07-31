@@ -67,6 +67,7 @@
     <string name="mtow">MTOW</string>
     <string name="cruise_speed">Cruise speed</string>
     <string name="range">Range</string>
+    <string name="thrust1">Thrust (1x)</string>
     <string name="thrust2">Thrust (2x)</string>
     <string name="thrust4">Thrust (4x)</string>
     <string name="thrust6">Thrust (6x)</string>

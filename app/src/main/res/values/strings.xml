@@ -67,6 +67,7 @@
     <string name="mtow">MTOW</string>
     <string name="cruise_speed">Cruise speed</string>
     <string name="range">Range</string>
+    <string name="thrust1">Thrust (1x)</string>
     <string name="thrust2">Thrust (2x)</string>
     <string name="thrust4">Thrust (4x)</string>
     <string name="thrust6">Thrust (6x)</string>
@@ -2173,17 +2174,49 @@
     <string name="caravan_customer_value">FedEx</string>
     <string name="caravan_variants_value">TBD</string>
 
-    <string name="caravan_desc1" formatted="false">\n</string>
+    <string name="caravan_desc1" formatted="false">The project was commenced on November 20, 1981, and the prototype first flew on December 9, 1982. The production model
+        was certified by the FAA in October 1984 and its Cargomaster freighter variant was developed for FedEx. The 1.2 m longer 208B Super Cargomaster first flew in
+        1986 and was developed into the passenger 208B Grand Caravan. The strutted, high wing 208 typically seats nine passengers in its unpressurized cabin, is powered
+        by a single Pratt &amp; Whitney Canada PT6A tractor turboprop and has a fixed tricycle landing gear, floats or skis. By November 2017, 2,600 have been delivered
+        and 20 million flight hours logged. Caravans are used for flight training, commuter airlines, VIP transport, air cargo and humanitarian missions. As
+        of November 2007, a total of 2,600 Caravans have been built.\n\nOn November 20, 1981, the project was given a go-ahead by Cessna for its Pawnee engineering
+        facility. John Berwick, chief engineer at Pawnee, came with a concept of a single engine, high-wing airplane with a large payload. Berwick had originally
+        approached VP Bill Boettger with the idea and once Dwane Wallace approved it, Berwick told Russ Meyer he would design it. The prototype first flew on December
+        9, 1982. The production model was certified by the Federal Aviation Administration (FAA) in October 1984. A freighter variant without cabin windows was developed
+        at the request of Federal Express as the Cargomaster. Another cargo variant for Federal Express, with a longer fuselage and a cargo pod under the belly, was
+        developed as the 208B Super Cargomaster and flew for the first time in 1986. FedEx was initially planning to build twin-engine piston-powered airplanes with
+        Piper Aircraft, but picked the Caravan after surveying it and having flown the prototype, becoming its standard carrier. A passenger model, the 208B Grand Caravan,
+        was derived from the Super Cargomaster. Since then, the Caravan has undergone a number of design evolutions, including upgrading the avionics in 2008 to provide
+        a glass cockpit with the Garmin G1000 system. In January 2013 a higher-powered (867 shp from P&amp;WC PT6A-140) version, the Grand Caravan EX, received FAA
+        certification.\n</string>
 
-    <string name="caravan_desc2" formatted="false">\n</string>
+    <string name="caravan_desc2" formatted="false">In August 2016, Textron announced that it would move the Cessna 208 production line from its Wichita headquarters to
+        its Independence, Kansas production facility, for manufacture alongside along the piston-powered 172, 182, 206 and TTx; and the Citation M2 light jet. The move
+        was made to make room for production of the Citation Longitude and Denali in Wichita. In 2021, the 208 Caravan unit cost was US$2.45 million and US$2.845
+        million for the 208B Grand Caravan EX.\n\nThe Cessna 208 is a high-wing braced cabin monoplane powered by a single Pratt &amp; Whitney Canada PT6A turboprop in
+        tractor configuration. The cabin has room for nine passengers and two crew when used as a passenger aircraft with four doors: one for each crew member, an
+        airstair door on the right side of the cabin and a cargo door on the left. The aircraft can be optionally fitted with an underslung cargo pod. The basic 208
+        airframe has a fixed tricycle landing gear but can also be fitted with various types of landing gear, allowing it to operate in a wide variety of environments. Some
+        common adaptations include floats with retractable landing gear on the Caravan Amphibian model, and skis. The Caravan interior can be outfitted with seats or as a
+        cargo compartment. The standard high-density airline configuration has four rows of 1-2 seating behind the two seats in the cockpit. This variant is capable of
+        holding up to thirteen passengers, although it is marketed as being able to make a profit carrying just four. The cabin can be configured in a low density
+        passenger configuration, with 1-1 seating, as a combination of passengers and cargo, or as a strictly cargo aircraft.\n\nMany variants include an underbelly cargo
+        pod, which can be used for additional freight capacity, or for passenger baggage. A number of Caravans are operated as skydiving aircraft with the left-side cargo
+        hatch converted to a roll-up door. The airplane typically seats nine passengers with a single pilot, although with a FAR Part 23 waiver it can seat up to fourteen
+        passengers. The aircraft is also used for cargo operations. The short-fuselage Caravan burns 180 L of fuel per hour at 170 kn (310 km/h) for 200 nmi (370 km)
+        stages.\n</string>
 
-    <string name="caravan_desc3">\n \n</string>
+    <string name="caravan_desc3">\nThe Cessna aircraft variants include 208 Caravan, 208 Caravan 675, 208A Cargomaster, 208B Grand Caravan, 208B Grand Caravan
+        EX, 208B Super Cargomaster, Caravan Amphibian. Aftermarket variants are comprised of Soloy Pathfinder 21, 850 Caravan, 950 Grand Caravan, Blackhawk
+        Caravan, Supervan 900, XP42A Upgrade; experimentals include the all electric eCaravan and military variants include U-27A, C-16, C-98, AC-208 Combat
+        Caravan, MC-208 Guardian.\n</string>
 
     <string name="caravan_specs_constraint">(208 Caravan)\n</string>
 
 
     <string name="caravan_identify">How to identify 208 Caravan?</string>
-    <string name="caravan_identify_ans"></string>
+    <string name="caravan_identify_ans">The standard Cessna Caravan has unequally sized air intakes on each side of the prop spinner and a large exhaust on the right
+        side.</string>
 
     <string name="caravan_cockpit_value">1 / 2</string>
     <string name="caravan_wingspan_value">15.87 m</string>

@@ -92,7 +92,7 @@ public class Caravan extends AppCompatActivity {
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_cessna_caravan_light);
         } else {
-            setContentView(R.layout.activity_cessna_citation_latitude_dark);
+            setContentView(R.layout.activity_cessna_caravan_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
