@@ -39,6 +39,9 @@ import com.himel.aeropedia.boeing.Boeing747;
 import com.himel.aeropedia.boeing.Boeing757;
 import com.himel.aeropedia.boeing.Boeing777;
 import com.himel.aeropedia.boeing.Boeing787;
+import com.himel.aeropedia.cessna.Caravan;
+import com.himel.aeropedia.cessna.CitationLatitude;
+import com.himel.aeropedia.cessna.CitationLongitude;
 import com.himel.aeropedia.embraer.EJetE2;
 import com.himel.aeropedia.embraer.ERJFamily;
 import com.himel.aeropedia.embraer.Lineage1000;
@@ -346,7 +349,14 @@ public class Learjet75 extends AppCompatActivity {
 
         embraer.addChildren(erjFamily, ejete2Family, lineage1000, phenom300);
 
-        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
+        TreeNode cessna = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.cessna), "No", "cessna", null));
+        TreeNode latitude = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.citation_latitude), "No", "latitude", CitationLatitude.class));
+        TreeNode longitude = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.citation_longitude), "No", "longitude", CitationLongitude.class));
+        TreeNode caravan = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.caravan), "No", "caravan", Caravan.class));
+
+        cessna.addChildren(caravan, latitude, longitude);
+
+        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, cessna, embraer);
 
         root.addChildren(manufacturerRoot);
         root.addChildren(alexaRoot);

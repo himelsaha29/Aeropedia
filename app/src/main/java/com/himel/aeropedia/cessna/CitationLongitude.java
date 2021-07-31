@@ -350,14 +350,26 @@ public class CitationLongitude extends AppCompatActivity {
 
         embraer.addChildren(erjFamily, ejete2Family, lineage1000, phenom300);
 
-        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, embraer);
+        TreeNode cessna = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.cessna), "No", "cessna", null));
+        TreeNode latitude = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.citation_latitude), "No", "latitude", CitationLatitude.class));
+        TreeNode longitude = null;
+        TreeNode caravan = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.caravan), "No", "caravan", Caravan.class));
+        if (verifyDarkMode().equals("Yes")) {
+            longitude = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.citation_longitude), "HighlightLight", "longitude", null));
+        } else {
+            longitude = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.citation_longitude), "HighlightDark", "longitude", null));
+        }
+
+        cessna.addChildren(caravan, latitude, longitude);
+
+        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, cessna, embraer);
 
         root.addChildren(manufacturerRoot);
         root.addChildren(alexaRoot);
         root.addChildren(flightTrackerRoot);
         root.addChildren(firebaseRoot);
         manufacturerRoot.setExpanded(true);
-        embraer.setExpanded(true);
+        cessna.setExpanded(true);
 
         tView = new AndroidTreeView(this, root);
         tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);
