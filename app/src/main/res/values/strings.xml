@@ -45,6 +45,7 @@
     <string name="phenom300">Phenom 300</string>
     <string name="citation_longitude">Citation Longtitude</string>
     <string name="citation_latitude">Citation Latitude</string>
+    <string name="caravan">208 Caravan</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -2162,6 +2163,38 @@
     <string name="citation_latitude_range_value">2,700 nmi with 4\npassengers</string>
     <string name="citation_latitude_thrust_value">26.28 kN</string>
     <!--CITATION LATITUDE-->
+
+
+    <!--CESSNA CARAVAN-->
+    <string name="caravan_type_value">Utility aircraft</string>
+    <string name="caravan_engine_value">Pratt &amp; Whitney\nCanada PT6A-114A (2)</string>
+    <string name="caravan_first_flight_value">9 December 1982</string>
+    <string name="caravan_intro_value">1984</string>
+    <string name="caravan_customer_value">FedEx</string>
+    <string name="caravan_variants_value">TBD</string>
+
+    <string name="caravan_desc1" formatted="false">\n</string>
+
+    <string name="caravan_desc2" formatted="false">\n</string>
+
+    <string name="caravan_desc3">\n \n</string>
+
+    <string name="caravan_specs_constraint">(208 Caravan)\n</string>
+
+
+    <string name="caravan_identify">How to identify 208 Caravan?</string>
+    <string name="caravan_identify_ans"></string>
+
+    <string name="caravan_cockpit_value">1 / 2</string>
+    <string name="caravan_wingspan_value">15.87 m</string>
+    <string name="caravan_length_value">11.46 m</string>
+    <string name="caravan_height_value">4.53 m</string>
+    <string name="caravan_fuselage_value">1.63 m (W) / 1.37 m (H)</string>
+    <string name="caravan_mtow_value">3.63 t</string>
+    <string name="caravan_cruise_speed_value">344 km/h (max.)</string>
+    <string name="caravan_range_value">1,070 nmi</string>
+    <string name="caravan_thrust_value">675 shp (503 kW)</string>
+    <!--CESSNA CARAVAN-->
 
 
     <string name="status_listening">LISTENING…</string>

@@ -4,7 +4,7 @@
     <string name="ask_alexa">Ask Alexa</string>
     <string name="flight_tracker">Flight Tracker</string>
     <string name="firebase">My Aircraft</string>
-    <string name="airbus">àirbus</string>
+    <string name="airbus">pàirbus</string>
     <string name="boeing">Boeing</string>
     <string name="embraer">Embraer</string>
     <string name="bombardier">Bombardier</string>
@@ -45,6 +45,7 @@
     <string name="phenom300">Phenom 300</string>
     <string name="citation_longitude">Citation Longtitude</string>
     <string name="citation_latitude">Citation Latitude</string>
+    <string name="caravan">208 Caravan</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -1302,6 +1303,38 @@
     <string name="citation_latitude_range_value">2,700 nmi with 4\npassengers</string>
     <string name="citation_latitude_thrust_value">26.28 kN</string>
     <!--CITATION LATITUDE-->
+
+
+    <!--CESSNA CARAVAN-->
+    <string name="caravan_type_value">Narrow-body</string>
+    <string name="caravan_engine_value">Pratt &amp; Whitney\nPW1500G (2)</string>
+    <string name="caravan_first_flight_value">16 September 2013</string>
+    <string name="caravan_intro_value">15 July 2016 with\nSwiss International Air Lines</string>
+    <string name="caravan_customer_value">Delta Air Lines</string>
+    <string name="caravan_variants_value">3</string>
+
+    <string name="caravan_desc1" formatted="false">The Ambarkation of passengers.\n</string>
+
+    <string name="caravan_desc2" formatted="false">ed to develop the Montreal manufacturing site to accommodate the aircraft production.\n</string>
+
+    <string name="caravan_desc3">\n \n</string>
+
+    <string name="caravan_specs_constraint">(-100 and -300 variants compared in order)\n</string>
+
+
+    <string name="caravan_identify">How to identify Airbus A220?</string>
+    <string name="caravan_identify_ans"></string>
+
+    <string name="caravan_cockpit_value">2</string>
+    <string name="caravan_wingspan_value">35.10 m</string>
+    <string name="caravan_length_value">35.0 / 38.70 m</string>
+    <string name="caravan_height_value">11.50 m</string>
+    <string name="caravan_fuselage_value">3.5 m (W) / ~3.7 m (H)</string>
+    <string name="caravan_mtow_value">63.1 / 70.9 t</string>
+    <string name="caravan_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="caravan_range_value">3,450 / 3,600 nmi</string>
+    <string name="caravan_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
+    <!--CESSNA CARAVAN-->
 
 
     <string name="status_listening">"écoute"…</string>
