@@ -2097,7 +2097,7 @@
         kg per hour at a 451 kn (835 km/h) true airspeed for a 17,237 kg aircraft, and 963 kg per hour at its M0.84 MMO - 477 kn (883 km/h) TAS. For the
         Avionics, Garmin G5000 was chosen for the Citation Longitude.\n</string>
 
-    <string name="citation_longitude_desc3">\n \n</string>
+    <string name="citation_longitude_desc3">\n</string>
 
     <string name="citation_longitude_specs_constraint">()\n</string>
 
@@ -2144,7 +2144,7 @@
         25 firm orders and 125 options in 2012 and received 44 aircraft for its U.S. operations and 10 for Europe by June 2018, flying theirs over 1,000 hours per
         year. By mid-September, the 136 delivered have logged 115,000 flight hours, and Textron claims it outsells the competition by four to one.\n</string>
 
-    <string name="citation_latitude_desc3">\n \n</string>
+    <string name="citation_latitude_desc3">\n</string>
 
     <string name="citation_latitude_specs_constraint">()\n</string>
 

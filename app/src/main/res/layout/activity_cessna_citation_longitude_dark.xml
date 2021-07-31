@@ -825,8 +825,17 @@
                     </LinearLayout>
                 </LinearLayout>
 
-            </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/maven_pro_medium"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:text="@string/citation_longitude_desc3"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
 
+            </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
 

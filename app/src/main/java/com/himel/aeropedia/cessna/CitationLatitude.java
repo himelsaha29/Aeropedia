@@ -92,7 +92,7 @@ public class CitationLatitude extends AppCompatActivity {
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_cessna_citation_latitude_light);
         } else {
-            setContentView(R.layout.activity_cessna_citation_longitude_dark);
+            setContentView(R.layout.activity_cessna_citation_latitude_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);

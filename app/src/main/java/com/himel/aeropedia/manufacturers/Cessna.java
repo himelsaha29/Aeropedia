@@ -247,6 +247,7 @@ public class Cessna extends AppCompatActivity {
     private void animateCards() {
         translate = AnimationUtils.loadAnimation(this, R.anim.animation);
         citationLongitudeCard.setAnimation(translate);
+        citationLatitudeCard.setAnimation(translate);
     }
 
     /** Changing app language **/
