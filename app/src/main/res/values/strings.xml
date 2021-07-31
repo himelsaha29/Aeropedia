@@ -44,6 +44,7 @@
     <string name="lineage1000">Lineage 1000</string>
     <string name="phenom300">Phenom 300</string>
     <string name="citation_longitude">Citation Longtitude</string>
+    <string name="citation_latitude">Citation Latitude</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -2068,7 +2069,7 @@
         Wichita, Kansas facility. Less than eight months after the first flight and after more than 200 missions for nearly 400 hours, on track for certification later
         in 2017, the fourth prototype joined the flight-test program on May 6, fully outfitted for interior, environmental control system, pressurization and cabin
         technologies evaluation. The first production unit was rolled out on June 13, 2017 as the four test aircraft have flown 550 hours and a fifth aircraft will join
-        in summer 2017. In October 2017, test aircraft have completed more than 1,200 flight hours over 600 flights, for a certification expected by the end of 2017 or
+        in summer 2017.\n\nIn October 2017, test aircraft have completed more than 1,200 flight hours over 600 flights, for a certification expected by the end of 2017 or
         in early 2018. In February 2018, as the five aircraft accumulated over 1,000 flights and 2,000 hours, US approval and customer deliveries of the US$27 million
         jet were expected before the end of the second quarter before European validation six months later. After 3,000 hours on five aircraft, flight testing will
         conclude by early June 2018, and 200,000 pages of documentation will be completed after a month. As testing has doubled for certification, expanding related
@@ -2114,6 +2115,53 @@
     <string name="citation_longitude_range_value">3,500 nmi</string>
     <string name="citation_longitude_thrust_value">34.10 kN</string>
     <!--CITATION LONGITUDE-->
+
+
+    <!--CITATION LATITUDE-->
+    <string name="citation_latitude_type_value">Corporate Jet</string>
+    <string name="citation_latitude_engine_value">Pratt &amp; Whitney Canada\nPW306D1 (2)</string>
+    <string name="citation_latitude_first_flight_value">18 February 2014</string>
+    <string name="citation_latitude_numbers_value">200 (April 2019)</string>
+    <string name="citation_latitude_variants_value">1</string>
+
+    <string name="citation_latitude_desc1" formatted="false">The Model 680A was announced at the 2011 NBAA convention, the prototype first flew on 18 February 2014, it
+        achieved FAA certification on June 5, 2015, and first deliveries began on August 27. It keeps the Model 680 Sovereign wing, twin P&amp;WC PW306D turbofans and
+        cruciform tail for a 2,700 nmi (5,000 km) range. Its new stand-up circular fuselage has a flat floor and was kept in the later Cessna Citation Longitude.\n\nThe
+        $14.9 million Citation Latitude was announced by Cessna at the annual NBAA convention in October 2011, between the $12.6 million Citation XLS+ and the $17.5
+        million Citation Sovereign. The prototype first flew on 18 February 2014 in Wichita, Kansas. Cessna announced on June 5, 2015, that it had achieved FAA
+        certification for the type. On August 27, 2015, Cessna announced the first deliveries had begun. In 2021, its equipped price was $19.1M.\n</string>
+
+    <string name="citation_latitude_desc2" formatted="false">It keeps the Citation Sovereign wing, twin Pratt &amp; Whitney Canada PW306D turbofans and cruciform tail. For the
+        Avionics, Garmin G5000 was chosen for the Citation Latitude. Its newly-designed all-metal stand-up circular fuselage has a flat floor and seats nine. Typical missions are 2.0–2.7 hours and with 400 kn (740 km/h) block speeds
+        and most operators can fly 5–6 hours at Mach 0.72–0.76 for a 2,000–2,400 nmi range, with short takeoff requirements and good hot and high performance. A first
+        hour fuel burn of 910–1,130 kg followed by 730–860 kg the second hour and fuel burn can reach 1,500 kg for a 2-hour trip with favorable conditions. It lists for
+        $17.5–18 million typically equipped, the same as the Embraer Legacy 450 with a similar flat floor cabin for club four plus two chairs and over 200 miles more
+        range, 25–30 kn (46–56 km/h) higher cruise and fly-by-wire controls. Embraer is firm on list price while Textron discounts the Latitude by up to 20% for
+        $13.5–14 million to sell three times as many aircraft.\n\nDeliveries to customers began in the third quarter of 2015 and sixteen had been handed over by the end
+        of the year. By May 2018, almost three years since introduction, 124 were delivered and logged 80,000 flight hours. In June 2018, of 129 delivered, 104 were
+        in the US, three in Mexico, two each are based in China, France and Turkey, and there was one in Chile, Paraguay, the Philippines, Poland, Scotland and
+        Switzerland. It is used by medium-size corporations, typically flying 200–300 hours per year, and large fleet operators, the largest being NetJets which booked
+        25 firm orders and 125 options in 2012 and received 44 aircraft for its U.S. operations and 10 for Europe by June 2018, flying theirs over 1,000 hours per
+        year. By mid-September, the 136 delivered have logged 115,000 flight hours, and Textron claims it outsells the competition by four to one.\n</string>
+
+    <string name="citation_latitude_desc3">\n \n</string>
+
+    <string name="citation_latitude_specs_constraint">()\n</string>
+
+
+    <string name="citation_latitude_identify">How to identify Citation Latitude?</string>
+    <string name="citation_latitude_identify_ans"></string>
+
+    <string name="citation_latitude_cockpit_value">2</string>
+    <string name="citation_latitude_wingspan_value">22.05 m</string>
+    <string name="citation_latitude_length_value">18.97 m</string>
+    <string name="citation_latitude_height_value">6.38 m</string>
+    <string name="citation_latitude_fuselage_value">1.96 m (W) / 1.83 m (H)</string>
+    <string name="citation_latitude_mtow_value">13.97 t</string>
+    <string name="citation_latitude_cruise_speed_value">826 km/h (max.)</string>
+    <string name="citation_latitude_range_value">2,700 nmi with 4\npassengers</string>
+    <string name="citation_latitude_thrust_value">26.28 kN</string>
+    <!--CITATION LATITUDE-->
 
 
     <string name="status_listening">LISTENING…</string>

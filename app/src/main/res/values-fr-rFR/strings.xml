@@ -44,6 +44,7 @@
     <string name="lineage1000">Lineage 1000</string>
     <string name="phenom300">Phenom 300</string>
     <string name="citation_longitude">Citation Longtitude</string>
+    <string name="citation_latitude">Citation Latitude</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -1271,6 +1272,36 @@
     <string name="citation_longitude_thrust_value">34.10 kN</string>
     <!--CITATION LONGITUDE-->
 
+
+    <!--CITATION LATITUDE-->
+    <string name="citation_latitude_type_value">Corporate Jet</string>
+    <string name="citation_latitude_engine_value">Pratt &amp; Whitney Canada\nPW306D1 (2)</string>
+    <string name="citation_latitude_first_flight_value">18 February 2014</string>
+    <string name="citation_latitude_numbers_value">200 (April 2019)</string>
+    <string name="citation_latitude_variants_value">TBD</string>
+
+    <string name="citation_latitude_desc1" formatted="false">\n</string>
+
+    <string name="citation_latitude_desc2" formatted="false">\n</string>
+
+    <string name="citation_latitude_desc3">\n \n</string>
+
+    <string name="citation_latitude_specs_constraint">()\n</string>
+
+
+    <string name="citation_latitude_identify">How to identify Citation Latitude?</string>
+    <string name="citation_latitude_identify_ans"></string>
+
+    <string name="citation_latitude_cockpit_value">2</string>
+    <string name="citation_latitude_wingspan_value">22.05 m</string>
+    <string name="citation_latitude_length_value">18.97 m</string>
+    <string name="citation_latitude_height_value">6.38 m</string>
+    <string name="citation_latitude_fuselage_value">1.96 m (W) / 1.83 m (H)</string>
+    <string name="citation_latitude_mtow_value">13.97 t</string>
+    <string name="citation_latitude_cruise_speed_value">826 km/h (max.)</string>
+    <string name="citation_latitude_range_value">2,700 nmi with 4\npassengers</string>
+    <string name="citation_latitude_thrust_value">26.28 kN</string>
+    <!--CITATION LATITUDE-->
 
 
     <string name="status_listening">"écoute"…</string>
