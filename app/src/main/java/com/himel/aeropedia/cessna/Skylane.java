@@ -349,14 +349,15 @@ public class Skylane extends AppCompatActivity {
         TreeNode cessna = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.cessna), "No", "cessna", null));
         TreeNode latitude = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.citation_latitude), "No", "citationLatitude", CitationLatitude.class));
         TreeNode longitude = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.citation_longitude), "No", "citationLongitude", CitationLongitude.class));
-        TreeNode caravan = null;
+        TreeNode caravan = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.caravan), "No", "caravan", Caravan.class));
+        TreeNode skylane = null;
         if (verifyDarkMode().equals("Yes")) {
-            caravan = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.caravan), "HighlightLight", "caravan", null));
+            skylane = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.skylane), "HighlightLight", "skylane", null));
         } else {
-            caravan = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.caravan), "HighlightDark", "caravan", null));
+            skylane = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.skylane), "HighlightDark", "skylane", null));
         }
 
-        cessna.addChildren(caravan, latitude, longitude);
+        cessna.addChildren(skylane, caravan, latitude, longitude);
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, cessna, embraer);
 

@@ -359,8 +359,9 @@ public class CitationLongitude extends AppCompatActivity {
         } else {
             longitude = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.citation_longitude), "HighlightDark", "longitude", null));
         }
+        TreeNode skylane = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.skylane), "No", "skylane", Skylane.class));
 
-        cessna.addChildren(caravan, latitude, longitude);
+        cessna.addChildren(skylane, caravan, latitude, longitude);
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, cessna, embraer);
 
