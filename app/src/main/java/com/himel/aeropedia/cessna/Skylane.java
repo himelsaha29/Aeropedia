@@ -93,7 +93,7 @@ public class Skylane extends AppCompatActivity {
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_cessna_skylane_light);
         } else {
-            setContentView(R.layout.activity_cessna_caravan_dark);
+            setContentView(R.layout.activity_cessna_skylane_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
