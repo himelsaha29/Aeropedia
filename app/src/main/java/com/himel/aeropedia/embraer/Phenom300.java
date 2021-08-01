@@ -417,13 +417,13 @@ public class Phenom300 extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider2);
+                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider1);
+                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider02);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider3);
+                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider03);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider4);
+                sliderItem.setImageLocation(R.drawable.embraer_phenom_300_slider04);
             }
 
             sliderItemList.add(sliderItem);
