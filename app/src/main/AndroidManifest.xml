@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".cessna.Caravan"></activity>
+        <activity android:name=".cessna.Skylane"></activity>
+        <activity android:name=".cessna.Caravan" />
         <activity android:name=".cessna.CitationLatitude" />
         <activity android:name=".manufacturers.Cessna" />
         <activity android:name=".cessna.CitationLongitude" />
