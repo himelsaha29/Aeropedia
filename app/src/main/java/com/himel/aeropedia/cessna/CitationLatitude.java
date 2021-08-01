@@ -419,13 +419,13 @@ public class CitationLatitude extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.cessna_citation_latitude_slider1);
+                sliderItem.setImageLocation(R.drawable.cessna_citation_latitude_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.cessna_citation_latitude_slider2);
+                sliderItem.setImageLocation(R.drawable.cessna_citation_latitude_slider02);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.cessna_citation_latitude_slider3);
+                sliderItem.setImageLocation(R.drawable.cessna_citation_latitude_slider03);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.cessna_citation_latitude_slider4);
+                sliderItem.setImageLocation(R.drawable.cessna_citation_latitude_slider04);
             }
 
             sliderItemList.add(sliderItem);

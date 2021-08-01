@@ -45,7 +45,7 @@
                         android:layout_marginStart="0dp"
                         android:layout_marginTop="0dp"
                         android:layout_marginEnd="0dp"
-                        android:background="@drawable/cessna_citation_longtidude_main"
+                        android:background="@drawable/cessna_citation_longitude_main"
                         android:scaleType="centerCrop"
                         app:layout_collapseMode="parallax"
                         app:layout_constraintDimensionRatio="H, 16:9"
