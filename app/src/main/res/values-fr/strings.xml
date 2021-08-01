@@ -48,6 +48,7 @@
     <string name="caravan">208 Caravan</string>
     <string name="skylane">182 Skylane</string>
     <string name="g650">G650</string>
+    <string name="g280">G280</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -1358,6 +1359,36 @@
     <string name="gulfstream_g650_range_value">3,450 / 3,600 nmi</string>
     <string name="gulfstream_g650_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
     <!--GULFSTREAM G650-->
+
+    <!--GULFSTREAM G280-->
+    <string name="gulfstream_g280_type_value">Narrow-body</string>
+    <string name="gulfstream_g280_engine_value">Pratt &amp; Whitney\nPW1500G (2)</string>
+    <string name="gulfstream_g280_first_flight_value">16 September 2013</string>
+    <string name="gulfstream_g280_numbers_value">~200 (May 2020)</string>
+    <string name="gulfstream_g280_variants_value">3</string>
+
+    <string name="gulfstream_g280_desc1" formatted="false">\n</string>
+
+    <string name="gulfstream_g280_desc2" formatted="false">\n</string>
+
+    <string name="gulfstream_g280_desc3">\n \n</string>
+
+    <string name="gulfstream_g280_specs_constraint">(-100 and -300 variants compared in order)\n</string>
+
+
+    <string name="gulfstream_g280_identify">How to identify Gulfstream G280?</string>
+    <string name="gulfstream_g280_identify_ans"></string>
+
+    <string name="gulfstream_g280_cockpit_value">2</string>
+    <string name="gulfstream_g280_wingspan_value">35.10 m</string>
+    <string name="gulfstream_g280_length_value">35.0 / 38.70 m</string>
+    <string name="gulfstream_g280_height_value">11.50 m</string>
+    <string name="gulfstream_g280_fuselage_value">3.5 m (W) / ~3.7 m (H)</string>
+    <string name="gulfstream_g280_mtow_value">63.1 / 70.9 t</string>
+    <string name="gulfstream_g280_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="gulfstream_g280_range_value">3,450 / 3,600 nmi</string>
+    <string name="gulfstream_g280_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
+    <!--GULFSTREAM G280-->
 
 
     <string name="status_listening">"écoute"…</string>

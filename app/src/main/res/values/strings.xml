@@ -48,6 +48,7 @@
     <string name="caravan">208 Caravan</string>
     <string name="skylane">182 Skylane</string>
     <string name="g650">G650</string>
+    <string name="g280">G280</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -2351,6 +2352,53 @@
     <string name="gulfstream_g650_range_value">7,000 nmi (G650) / 7,500 nmi</string>
     <string name="gulfstream_g650_thrust_value">75.2 kN / 81.2 kN (G700)</string>
     <!--GULFSTREAM G650-->
+
+
+    <!--GULFSTREAM G280-->
+    <string name="gulfstream_g280_type_value">Business jet</string>
+    <string name="gulfstream_g280_engine_value">Honeywell HTF7250G (2)</string>
+    <string name="gulfstream_g280_first_flight_value">11 December 2009</string>
+    <string name="gulfstream_g280_numbers_value">~200 (May 2020)</string>
+    <string name="gulfstream_g280_variants_value">1</string>
+
+    <string name="gulfstream_g280_desc1" formatted="false">The Gulfstream G280 is a twin-engine business jet built by Israel Aerospace Industries (IAI) for Gulfstream
+        Aerospace. In 2005, Gulfstream and IAI began designing a follow-on aircraft to the Gulfstream G200. The new model, named G250, was launched in 2008. Planned
+        improvements included new glass cockpit and engines, larger wing, and heated leading edges. The G250 took its maiden flight on December 11, 2009 in Tel Aviv,
+        Israel. In July 2011, the G250 was renamed G280, as the company had \"determined that G280 is a more amenable number sequence [than G250] in certain cultures.\"
+        In Mandarin, the number 250 can be translated as \"stupid\" or \"idiotic\".\n\nAfter the flight test program, the G280 demonstrated a range of 3,600 nmi (6,667 km)
+        at Mach 0.80 with four passengers and NBAA IFR reserves in 2011. It can fly from London to New York or Singapore to Dubai. Its balanced field length has been
+        reduced to 1,448 m from the G200\'s 1,512 m. The G280 was provisionally certified in December 2011 by Israel. In July 2012, the US FAA released a report with
+        conditions to ensure no security gaps in the G280\'s electronic systems. It received full certification from Israel and the US on September 4, 2012. In 2021, its
+        equipped price was $24.5M.\n</string>
+
+    <string name="gulfstream_g280_desc2" formatted="false">The aerodynamic design of its wing and empennage, and design of the interior were performed by Gulfstream;
+        detailed design was performed by IAI to Gulfstream\'s requirements. It is a Gulfstream designed aircraft under a new type certificate. The aircraft has several
+        improvements, among them increased cabin length (external fuselage dimensions remain unchanged; the rear fuselage fuel tank was eliminated to add 43 cm of usable
+        interior area). It has a new HTF7250G engine, new T-tail (with larger horizontal and vertical stabilizers), wing anti-ice provided by engine bleed air, cabin
+        with four more windows and access from the cabin to the baggage compartment.\n\nIt competes against the Bombardier Challenger 300 and the Cessna Citation X+. The
+        fuselage, empennage and landing gear are manufactured by IAI, the wing by Spirit AeroSystems (now by Triumph Group), and the aircraft is assembled in Israel. It
+        is then ferried to Dallas, Texas, for interior finishing and painting. Its wing is a new design, using the Gulfstream G550 airfoil, and has a larger area of
+        495 ft<sup><small><small>2</small></small></sup> vs. 369 ft<sup><small><small>2</small></small></sup> of the G200. This allows the business jet to climb directly to 13,000 m. Design cruise for the new airfoil is Mach 0.80, vs. Mach 0.75 for the G200
+        wing. Flying at an altitude of 12,000 m and Mach 0.82 (467 kn or 865 km/h), each engine burns 410 kg of fuel per hour.\n</string>
+
+    <string name="gulfstream_g280_desc3">\n</string>
+
+    <string name="gulfstream_g280_specs_constraint">()\n</string>
+
+
+    <string name="gulfstream_g280_identify">How to identify Gulfstream G280?</string>
+    <string name="gulfstream_g280_identify_ans"></string>
+
+    <string name="gulfstream_g280_cockpit_value">2</string>
+    <string name="gulfstream_g280_wingspan_value">19.2 m</string>
+    <string name="gulfstream_g280_length_value">20.3 m</string>
+    <string name="gulfstream_g280_height_value">6.5 m</string>
+    <string name="gulfstream_g280_fuselage_value">2.11 m (W) / 1.85 m (H)</string>
+    <string name="gulfstream_g280_mtow_value">17.96 t</string>
+    <string name="gulfstream_g280_cruise_speed_value">850 km/h (typical),\n~871 km/h (max.)</string>
+    <string name="gulfstream_g280_range_value">3,600 nmi with\n4 passengers</string>
+    <string name="gulfstream_g280_thrust_value">33.91 kN</string>
+    <!--GULFSTREAM G280-->
 
 
     <string name="status_listening">LISTENING…</string>
