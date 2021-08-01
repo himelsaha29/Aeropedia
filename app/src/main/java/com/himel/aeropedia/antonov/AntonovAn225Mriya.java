@@ -42,6 +42,7 @@ import com.himel.aeropedia.bombardier.Learjet75;
 import com.himel.aeropedia.cessna.Caravan;
 import com.himel.aeropedia.cessna.CitationLatitude;
 import com.himel.aeropedia.cessna.CitationLongitude;
+import com.himel.aeropedia.cessna.Skylane;
 import com.himel.aeropedia.embraer.EJetE2;
 import com.himel.aeropedia.embraer.ERJFamily;
 import com.himel.aeropedia.embraer.Lineage1000;
@@ -349,8 +350,9 @@ public class AntonovAn225Mriya extends AppCompatActivity {
         TreeNode latitude = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.citation_latitude), "No", "latitude", CitationLatitude.class));
         TreeNode longitude = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.citation_longitude), "No", "longitude", CitationLongitude.class));
         TreeNode caravan = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.caravan), "No", "caravan", Caravan.class));
+        TreeNode skylane = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.skylane), "No", "skylane", Skylane.class));
 
-        cessna.addChildren(caravan, latitude, longitude);
+        cessna.addChildren(skylane, caravan, latitude, longitude);
 
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, cessna, embraer);
 
