@@ -60,6 +60,7 @@ import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
 import com.himel.aeropedia.gulfstream.G280;
 import com.himel.aeropedia.gulfstream.G650;
+import com.himel.aeropedia.gulfstream.GulfstreamIV;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
@@ -80,6 +81,7 @@ public class Gulfstream extends AppCompatActivity {
     private ScrollView scrollView;
     private CardView g650Card;
     private CardView g280Card;
+    private CardView gulfstreamIVCard;
     private NeumorphImageButton darkToggle;
     private String enableDark;
     private String enableDarkOnCreate;
@@ -104,6 +106,7 @@ public class Gulfstream extends AppCompatActivity {
 
         g650Card = findViewById(R.id.g650Card);
         g280Card = findViewById(R.id.g280Card);
+        gulfstreamIVCard = findViewById(R.id.gulfstreamIVCard);
 
         langToggle = findViewById(R.id.lang_toggle);
         mDrawer = findViewById(R.id.drawerlayout);
@@ -111,6 +114,7 @@ public class Gulfstream extends AppCompatActivity {
 
         g650Card.getBackground().setAlpha(65);
         g280Card.getBackground().setAlpha(65);
+        gulfstreamIVCard.getBackground().setAlpha(65);
 
 
         // setting NeumorphismButton shape based on state
@@ -137,6 +141,16 @@ public class Gulfstream extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), G280.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
+        gulfstreamIVCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), GulfstreamIV.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
@@ -252,6 +266,7 @@ public class Gulfstream extends AppCompatActivity {
         translate = AnimationUtils.loadAnimation(this, R.anim.animation);
         g650Card.setAnimation(translate);
         g280Card.setAnimation(translate);
+        gulfstreamIVCard.setAnimation(translate);
     }
 
     /** Changing app language **/

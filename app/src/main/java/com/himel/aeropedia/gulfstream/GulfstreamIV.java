@@ -96,7 +96,7 @@ public class GulfstreamIV extends AppCompatActivity {
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_gulfstream_iv_light);
         } else {
-            setContentView(R.layout.activity_gulfstream_g280_dark);
+            setContentView(R.layout.activity_gulfstream_iv_dark);
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
