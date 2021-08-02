@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".gulfstream.G280"></activity>
+        <activity android:name=".gulfstream.GulfstreamIV"></activity>
+        <activity android:name=".gulfstream.G280" />
         <activity android:name=".manufacturers.Gulfstream" />
         <activity android:name=".gulfstream.G650" />
         <activity android:name=".cessna.Skylane" />

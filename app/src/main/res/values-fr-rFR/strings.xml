@@ -49,6 +49,7 @@
     <string name="skylane">182 Skylane</string>
     <string name="g650">G650</string>
     <string name="g280">G280</string>
+    <string name="gulfstream_iv">G-IV</string>
     <string name="language"><b>EN</b></string>
 
 
@@ -1430,6 +1431,35 @@
     <string name="gulfstream_g280_range_value">3,450 / 3,600 nmi</string>
     <string name="gulfstream_g280_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
     <!--GULFSTREAM G280-->
+
+    <!--GULFSTREAM IV-->
+    <string name="gulfstream_iv_type_value">Narrow-body</string>
+    <string name="gulfstream_iv_engine_value">Pratt &amp; Whitney\nPW1500G (2)</string>
+    <string name="gulfstream_iv_first_flight_value">16 September 2013</string>
+    <string name="gulfstream_iv_customer_value">Delta Air Lines</string>
+    <string name="gulfstream_iv_variants_value">3</string>
+
+    <string name="gulfstream_iv_desc1" formatted="false">\n</string>
+
+    <string name="gulfstream_iv_desc2" formatted="false">\n</string>
+
+    <string name="gulfstream_iv_desc3">\n \n</string>
+
+    <string name="gulfstream_iv_specs_constraint">(-100 and -300 variants compared in order)\n</string>
+
+
+    <string name="gulfstream_iv_identify">How to identify Gulfstream IV?</string>
+    <string name="gulfstream_iv_identify_ans"></string>
+
+    <string name="gulfstream_iv_cockpit_value">2</string>
+    <string name="gulfstream_iv_wingspan_value">35.10 m</string>
+    <string name="gulfstream_iv_length_value">35.0 / 38.70 m</string>
+    <string name="gulfstream_iv_height_value">11.50 m</string>
+    <string name="gulfstream_iv_mtow_value">63.1 / 70.9 t</string>
+    <string name="gulfstream_iv_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="gulfstream_iv_range_value">3,450 / 3,600 nmi</string>
+    <string name="gulfstream_iv_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
+    <!--GULFSTREAM IV-->
 
 
     <string name="status_listening">"écoute"…</string>

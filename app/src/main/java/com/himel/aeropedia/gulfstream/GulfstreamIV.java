@@ -73,7 +73,7 @@ import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphImageButton;
 import soup.neumorphism.ShapeType;
 
-public class G280 extends AppCompatActivity {
+public class GulfstreamIV extends AppCompatActivity {
 
     private NeumorphButton langToggle;
     private Locale locale;
@@ -94,7 +94,7 @@ public class G280 extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_gulfstream_g280_light);
+            setContentView(R.layout.activity_gulfstream_iv_light);
         } else {
             setContentView(R.layout.activity_gulfstream_g280_dark);
         }

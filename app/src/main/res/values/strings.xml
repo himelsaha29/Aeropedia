@@ -49,6 +49,7 @@
     <string name="skylane">182 Skylane</string>
     <string name="g650">G650</string>
     <string name="g280">G280</string>
+    <string name="gulfstream_iv">G-IV</string>
     <string name="language"><b>FR</b></string>
 
 
@@ -2400,6 +2401,66 @@
     <string name="gulfstream_g280_thrust_value">33.91 kN</string>
     <!--GULFSTREAM G280-->
 
+
+    <!--GULFSTREAM IV-->
+    <string name="gulfstream_iv_type_value">Business jet</string>
+    <string name="gulfstream_iv_engine_value">Rolls-Royce Tay 611-8 /\nTay 611-8C (2)</string>
+    <string name="gulfstream_iv_first_flight_value">19 September 1985</string>
+    <string name="gulfstream_iv_customer_value">United States Air Force</string>
+    <string name="gulfstream_iv_variants_value">7</string>
+
+    <string name="gulfstream_iv_desc1" formatted="false">The Gulfstream IV (or G-IV or GIV) and derivatives are a family of twinjet aircraft, mainly for private or business
+        use. They were designed and built by Gulfstream Aerospace, a General Dynamics company based in Savannah, Georgia, United States, from 1985 until 2018. Aircraft
+        power is provided by two Rolls-Royce RB.183 Tay turbofans. Upon delivery of the last G450, over 900 GIV/GIV-SP/G450 units had been produced. The last G450 was
+        delivered on 19 January 2018 after 365 deliveries over 12 years, ending a 30-year production run, to be replaced by the G500. During its production phase from 1985
+        to 2018, more than 900 G-IVs have been built.\n\nGulfstream, in collaboration with Grumman, began work on the Gulfstream IV in March 1983 as a re-engined,
+        stretched fuselage derivative of the Gulfstream III. The first GIV made its maiden flight on September 19, 1985. The model received type certification from the
+        FAA on April 22, 1987. The G-IV entered into service with serial number 1000 in 1987 and was upgraded to the special purpose GIV-SP version at serial number 1214
+        in 1993. It was later redesignated G400 at serial number 1500. A shorter range variant was created based on the GIV and given the G300 designation in 2002. In
+        2001, Gulfstream began work on an improved version of the GIV-SP, originally designated GIV-X. It was later renamed G450. The G450 is lengthened 0.305 m over the
+        G400 and shares the forward fuselage and larger cockpit of the G550. Production of the G450 began in October 2004, replacing the G400. The G450 has better
+        performance and comes with the PlaneView cockpit with four 14-inch (355 mm) liquid crystal displays and a Head up display (HUD). The shorter range G350 version
+        of the G450 was developed and received certification in 2004.\n</string>
+
+    <string name="gulfstream_iv_desc2" formatted="false">By 2018, 1990 to 1992 GIVs were for sale at $1.6-4.4 million, 1992 to 1999 GIVSPs were listed for $1.25-5.2
+        million, 15-year-old G300s and G400s were available for $4.5-7 million and 2006 to 2016 G450s at $9.95-23.75 million.\n\nCompared to the Gulfstream III, a decision
+        to redesign the wing structure for weight reduction presented an opportunity for an aerodynamic redesign of the wing to reduce cruise drag and increase range. Wing
+        contour modifications had to be restricted to the forward 65% of wing chord so that no redesign of the control surfaces would be necessary. Modification of the
+        inboard wing would have entailed a redesign of the fuselage floor structure, consequently this region of the wing was not modified. Outboard wing modifications
+        were aimed at reducing the peak subcritical pressure coefficient and moving it aft in an effort to reduce shock strength and increase shock sweep.\n\nThe
+        Gulfstream IV wing has a weaker, more swept outboard shock resulting in a lower cruise drag. Other benefits arising from this design are a lower root bending
+        moment due to the more inboard center of pressure, a lower stall speed due to washout and a larger fuel volume due to increased chord. These aerodynamic
+        improvements result in an increase in range of over 300 nautical miles. In addition to the wing redesign, the Gulfstream IV also became the first business jet
+        to have an entire glass cockpit. The G400 has a large cabin, long range of 4,350 nautical miles (8,060 km) and the same comfort and design that characterize the
+        G series. Maximum cruise height and speed are 45,000 ft and Mach 0.77. Earlier models were fitted with Honeywell\'s SPZ 8000 Avionics package. The SPZ 8400
+        Avionics Package was an option, becoming standard on later models. Its second-hand price was below $15 million in 2009.\n\nThe National Oceanic and Atmospheric
+        Administration (NOAA) operates a GIV-SP (N49RF) modified to fly scientists and crew members at 45,000 feet around tropical cyclones. The aircraft was modified to
+        drop instruments called \"dropsondes\" to measure windspeed, barometric pressure, humidity, and temperature as they fall to the surface of the ocean. By sampling the
+        cyclone with these dropsondes over a 4,000 mile track around the storm, the forecasters at NOAA\'s National Hurricane Center and Hurricane Research Division can
+        better predict where the hurricane will be \"steered\" by the upper level winds. They also predict wind shear that will either increase or decrease a hurricane\'s
+        strength. The GIV-SP is suited for this mission since it is fast, and can fly long distances with ample cabin space for the crew and instruments. In 2009, the
+        NOAA GIV-SP was further modified by the addition of a side-scanning Doppler radar to the rear fuselage. This radar is used for storm cloud profiling. In June
+        1987 a Gulfstream IV set 22 world records in its class in flying west around the world in 45 hr 25 min. The next year another GIV set 11 world records flying east
+        around the world. In 1990, Gulfstream CEO Allen Paulson and a Gulfstream flight crew set 35 international records for around-the-world flight in a GIV.\n</string>
+
+    <string name="gulfstream_iv_desc3">\nG-IV variants include G-IV, C-20F/G/H/J military aircraft, G350/G450 - a designation for the model GIV-X, approved by the FAA on August 12, 2004, as is the G350, which has a reduced
+        fuel capacity.\n</string>
+
+    <string name="gulfstream_iv_specs_constraint">(GIV, GIV-SP, G350, G450 compared in order)\n</string>
+
+
+    <string name="gulfstream_iv_identify">How to identify Gulfstream IV?</string>
+    <string name="gulfstream_iv_identify_ans"></string>
+
+    <string name="gulfstream_iv_cockpit_value">2</string>
+    <string name="gulfstream_iv_wingspan_value">23.72m</string>
+    <string name="gulfstream_iv_length_value">26.92 m / 27.23 m (G350 / G450)</string>
+    <string name="gulfstream_iv_height_value">7.45 m / 7.67 m (G350 / G450)</string>
+    <string name="gulfstream_iv_mtow_value">33.2 / 33.8 / 32.2 / 33.8 t</string>
+    <string name="gulfstream_iv_cruise_speed_value">850–903 km/h (typical),\n935 km/h (max.)</string>
+    <string name="gulfstream_iv_range_value">4,220 nmi / 3,800 nmi (G350) /\n4,350 nmi (G450)</string>
+    <string name="gulfstream_iv_thrust_value">61.6 kN</string>
+    <!--GULFSTREAM IV-->
 
     <string name="status_listening">LISTENING…</string>
     <string name="status_processing">PROCESSING…</string>
