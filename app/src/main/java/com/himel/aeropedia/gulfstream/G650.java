@@ -46,6 +46,7 @@ import com.himel.aeropedia.bombardier.Learjet75;
 import com.himel.aeropedia.cessna.Caravan;
 import com.himel.aeropedia.cessna.CitationLatitude;
 import com.himel.aeropedia.cessna.CitationLongitude;
+import com.himel.aeropedia.cessna.Skylane;
 import com.himel.aeropedia.embraer.EJetE2;
 import com.himel.aeropedia.embraer.ERJFamily;
 import com.himel.aeropedia.embraer.Lineage1000;
@@ -353,23 +354,31 @@ public class G650 extends AppCompatActivity {
         TreeNode latitude = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.citation_latitude), "No", "citationLatitude", CitationLatitude.class));
         TreeNode longitude = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.citation_longitude), "No", "citationLongitude", CitationLongitude.class));
         TreeNode caravan = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.caravan), "No", "caravan", Caravan.class));
-        TreeNode skylane = null;
-        if (verifyDarkMode().equals("Yes")) {
-            skylane = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.skylane), "HighlightLight", "skylane", null));
-        } else {
-            skylane = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.skylane), "HighlightDark", "skylane", null));
-        }
+        TreeNode skylane = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.skylane), "No", "skylane", Skylane.class));
 
         cessna.addChildren(skylane, caravan, latitude, longitude);
 
-        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, cessna, embraer);
+
+        TreeNode gulfstream = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.gulfstream), "No", "gulfstream", null));
+        TreeNode g280 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.g280), "No", "g280", G280.class));
+        TreeNode gulfstreamIV = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.gulfstream_iv), "No", "gulfstreamIV", GulfstreamIV.class));
+        TreeNode g650 = null;
+        if (verifyDarkMode().equals("Yes")) {
+            g650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.g650), "HighlightLight", "g650", null));
+        } else {
+            g650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.g650), "HighlightDark", "g650", null));
+        }
+
+        gulfstream.addChildren(g280, g650, gulfstreamIV);
+
+        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, cessna, embraer, gulfstream);
 
         root.addChildren(manufacturerRoot);
         root.addChildren(alexaRoot);
         root.addChildren(flightTrackerRoot);
         root.addChildren(firebaseRoot);
         manufacturerRoot.setExpanded(true);
-        cessna.setExpanded(true);
+        gulfstream.setExpanded(true);
 
         tView = new AndroidTreeView(this, root);
         tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);

@@ -58,6 +58,9 @@ import com.himel.aeropedia.embraer.Lineage1000;
 import com.himel.aeropedia.embraer.Phenom300;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
+import com.himel.aeropedia.gulfstream.G280;
+import com.himel.aeropedia.gulfstream.G650;
+import com.himel.aeropedia.gulfstream.GulfstreamIV;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
@@ -426,7 +429,13 @@ public class Embraer extends AppCompatActivity {
 
         cessna.addChildren(skylane, caravan, latitude, longitude);
 
-        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, cessna, embraer);
+        TreeNode gulfstream = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.gulfstream), "No", "gulfstream", null));
+        TreeNode g280 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.g280), "No", "g280", G280.class));
+        TreeNode gulfstreamIV = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.gulfstream_iv), "No", "gulfstreamIV", GulfstreamIV.class));
+        TreeNode g650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.g650), "No", "g650", G650.class));
+        gulfstream.addChildren(g280, g650, gulfstreamIV);
+
+        manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, cessna, embraer, gulfstream);
 
         root.addChildren(manufacturerRoot);
         root.addChildren(alexaRoot);
