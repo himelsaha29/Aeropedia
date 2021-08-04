@@ -430,13 +430,13 @@ public class G280 extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.gulfstream_g280_slider1);
+                sliderItem.setImageLocation(R.drawable.gulfstream_g280_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.gulfstream_g280_slider2);
+                sliderItem.setImageLocation(R.drawable.gulfstream_g280_slider02);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.gulfstream_g280_slider3);
+                sliderItem.setImageLocation(R.drawable.gulfstream_g280_slider03);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.gulfstream_g280_slider4);
+                sliderItem.setImageLocation(R.drawable.gulfstream_g280_slider04);
             }
 
             sliderItemList.add(sliderItem);
