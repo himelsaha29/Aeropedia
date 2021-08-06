@@ -68,7 +68,7 @@
     <string name="height">Height</string>
     <string name="fuselage">Fuselage</string>
     <string name="gross_weight">Gross weight</string>
-    <string name="mtow">MTOW</string>
+    <string name="mtow">Max. take-off weight</string>
     <string name="cruise_speed">Cruise speed</string>
     <string name="range">Range</string>
     <string name="thrust1">Thrust (1x)</string>
@@ -81,7 +81,7 @@
     <!--BASICS-->
 
     <!--AIRBUS A350-->
-    <string name="a350_type_value">Wide-body</string>
+    <string name="a350_type_value">Wide-body\nairliner</string>
     <string name="a350_engine_value">Rolls-Royce Trent XWB (2)</string>
     <string name="a350_first_flight_value">14 June 2013</string>
     <string name="a350_intro_value">15 January 2015\nwith Qatar Airways</string>
@@ -132,7 +132,7 @@
     <!--AIRBUS A350-->
 
     <!--AIRBUS A380-->
-    <string name="a380_type_value">Wide-body</string>
+    <string name="a380_type_value">Wide-body\nairliner</string>
     <string name="a380_engine_value">Rolls-Royce Trent 900 (4)/\nEngine Alliance GP7000(4)</string>
     <string name="a380_first_flight_value">27 April 2005</string>
     <string name="a380_intro_value">25 October 2007\nwith Singapore Airlines</string>
@@ -193,7 +193,7 @@
     <!--AIRBUS A380-->
 
     <!--AIRBUS A340-->
-    <string name="a340_type_value">Wide-body</string>
+    <string name="a340_type_value">Wide-body\nairliner</string>
     <string name="a340_engine_value">CFM56-5C/\nRR Trent 553/556 (4)</string>
     <string name="a340_first_flight_value">25 October 1991</string>
     <string name="a340_intro_value">15 March 1993 with\nLufthansa &amp; Air France</string>
@@ -253,7 +253,7 @@
     <!--AIRBUS A340-->
 
     <!--AIRBUS A330-->
-    <string name="a330_type_value">Wide-body</string>
+    <string name="a330_type_value">Wide-body\nairliner</string>
     <string name="a330_engine_value">GE CF6 /\nPratt &amp; Whitney PW4000 /\nRR Trent 700 (2)</string>
     <string name="a330_first_flight_value">2 November 1992</string>
     <string name="a330_intro_value">17 January 1994\nwith Air Inter</string>
@@ -310,7 +310,7 @@
 
 
     <!--AIRBUS A330neo-->
-    <string name="a330neo_type_value">Wide-body</string>
+    <string name="a330neo_type_value">Wide-body\nairliner</string>
     <string name="a330neo_engine_value">Rolls-Royce Trent 7000 (2)</string>
     <string name="a330neo_first_flight_value">19 October 2017</string>
     <string name="a330neo_intro_value">15 December 2018\nwith TAP Air Portugal</string>
@@ -361,7 +361,7 @@
 
 
     <!--AIRBUS A321-->
-    <string name="a321_type_value">Narrow-body</string>
+    <string name="a321_type_value">Narrow-body\nairliner</string>
     <string name="a321_engine_value">CFM56 /\nIAE V2500 (2)</string>
     <string name="a321_first_flight_value">11 March 1993</string>
     <string name="a321_intro_value">1994 with\nLufthansa</string>
@@ -413,7 +413,7 @@
 
 
     <!--AIRBUS A320-->
-    <string name="a320_type_value">Narrow-body</string>
+    <string name="a320_type_value">Narrow-body\nairliner</string>
     <string name="a320_engine_value">CFM56 /\nIAE V2500 (2)</string>
     <string name="a320_first_flight_value">22 February 1987</string>
     <string name="a320_intro_value">18 April 1988\nwith Air France</string>
@@ -466,7 +466,7 @@
 
 
     <!--AIRBUS A319-->
-    <string name="a319_type_value">Narrow-body</string>
+    <string name="a319_type_value">Narrow-body\nairliner</string>
     <string name="a319_engine_value">CFM56 /\nIAE V2500 (2)</string>
     <string name="a319_first_flight_value">25 August 1995</string>
     <string name="a319_intro_value">1996 with\nSwissair</string>
@@ -516,7 +516,7 @@
 
 
     <!--AIRBUS A318-->
-    <string name="a318_type_value">Narrow-body</string>
+    <string name="a318_type_value">Narrow-body\nairliner</string>
     <string name="a318_engine_value">CFM56 /\nP&amp;W PW6000 (2)</string>
     <string name="a318_first_flight_value">15 January 2002</string>
     <string name="a318_intro_value">2003 with\nFrontier Airlines</string>
@@ -571,7 +571,7 @@
     <!--AIRBUS A318-->
 
     <!--AIRBUS A310-->
-    <string name="a310_type_value">Wide-body</string>
+    <string name="a310_type_value">Wide-body\nairliner</string>
     <string name="a310_engine_value">GE CF6 /\nP&amp;W JT9D / PW4000 (2)</string>
     <string name="a310_first_flight_value">3 April 1982</string>
     <string name="a310_intro_value">April 1983\nwith Swissair</string>
@@ -628,7 +628,7 @@
 
 
     <!--AIRBUS A300-->
-    <string name="a300_type_value">Wide-body</string>
+    <string name="a300_type_value">Wide-body\nairliner</string>
     <string name="a300_engine_value">GE CF6 / P&amp;W JT9D (-B4-200),\nGE CF6 / P&amp;W PW4158 (-600R/F) (2)</string>
     <string name="a300_first_flight_value">28 October 1972</string>
     <string name="a300_intro_value">23 May 1974 with Air France</string>
@@ -690,7 +690,7 @@
 
 
     <!--AIRBUS A220-->
-    <string name="a220_type_value">Narrow-body</string>
+    <string name="a220_type_value">Narrow-body\nairliner</string>
     <string name="a220_engine_value">Pratt &amp; Whitney\nPW1500G (2)</string>
     <string name="a220_first_flight_value">16 September 2013</string>
     <string name="a220_intro_value">15 July 2016 with\nSwiss International Air Lines</string>
@@ -825,7 +825,7 @@
 
 
     <!--AIRBUS A320neo FAMILY-->
-    <string name="a320neo_type_value">Narrow-body</string>
+    <string name="a320neo_type_value">Narrow-body\nairliner</string>
     <string name="a320neo_engine_value">CFM LEAP-1A /\nPratt &amp; Whitney PW1100G (2)</string>
     <string name="a320neo_first_flight_value">25 September 2014</string>
     <string name="a320neo_intro_value">25 January 2016\nwith Lufthansa</string>
@@ -1111,7 +1111,7 @@
 
 
     <!--BOEING 737-->
-    <string name="b737_type_value">Narrow-body</string>
+    <string name="b737_type_value">Narrow-body\nairliner</string>
     <string name="b737_engine_value">Pratt &amp; Whitney JT8D /\nCFM56 / CFM LEAP-1B (2)</string>
     <string name="b737_first_flight_value">9 April 1967</string>
     <string name="b737_intro_value">10 February 1968\nwith Lufthansa</string>
@@ -1198,7 +1198,7 @@
 
 
     <!--BOEING 747-->
-    <string name="b747_type_value">Wide-body</string>
+    <string name="b747_type_value">Wide-body\nairliner</string>
     <string name="b747_engine_value">P&amp;W JT9D/PW4000 /\nRR RB211 / GE CF6/GEnx-2B67 (4)</string>
     <string name="b747_first_flight_value">9 February 1969</string>
     <string name="b747_intro_value">22 January 1970\nwith Pan Am</string>
@@ -1269,7 +1269,7 @@
 
 
     <!--BOEING 757-->
-    <string name="b757_type_value">Narrow-body</string>
+    <string name="b757_type_value">Narrow-body\nairliner</string>
     <string name="b757_engine_value">Pratt &amp; Whitney PW2000 /\nRolls-Royce RB211 (2)</string>
     <string name="b757_first_flight_value">19 February 1982</string>
     <string name="b757_intro_value">1 January 1983 with\nEastern Air Lines</string>
@@ -1341,7 +1341,7 @@
 
 
     <!--BOEING 767-->
-    <string name="b767_type_value">Wide-body</string>
+    <string name="b767_type_value">Wide-body\nairliner</string>
     <string name="b767_engine_value">P&amp;W JT9D / PW4000 /\nGE CF6 / RR RB211 (2)</string>
     <string name="b767_first_flight_value">26 September 1981</string>
     <string name="b767_intro_value">8 September 1982\nwith United Airlines</string>
@@ -1416,7 +1416,7 @@
 
 
     <!--BOEING 777-->
-    <string name="b777_type_value">Wide-body</string>
+    <string name="b777_type_value">Wide-body\nairliner</string>
     <string name="b777_engine_value">P&amp;W PW4000 / GE GE90 /\nRR Trent 800 (2)</string>
     <string name="b777_first_flight_value">12 June 1994</string>
     <string name="b777_intro_value">7 June 1995 with\nUnited Airlines</string>
@@ -1492,7 +1492,7 @@
 
 
     <!--BOEING 787-->
-    <string name="b787_type_value">Wide-body</string>
+    <string name="b787_type_value">Wide-body\nairliner</string>
     <string name="b787_engine_value">General Electric GEnx-1B /\nRolls-Royce Trent 1000 (2)</string>
     <string name="b787_first_flight_value">15 December 2009</string>
     <string name="b787_intro_value">26 October 2011\nwith All Nippon Airways</string>
@@ -1896,7 +1896,7 @@
 
 
     <!--EMBRAER E-JET E2-->
-    <string name="ejet_e2_type_value">Narrow-body</string>
+    <string name="ejet_e2_type_value">Narrow-body\nairliner</string>
     <string name="ejet_e2_engine_value">Pratt &amp; Whitney PW1715G /\n PW1919G/21G/22G/23G (2)</string>
     <string name="ejet_e2_first_flight_value">23 May 2016</string>
     <string name="ejet_e2_intro_value">24 April 2018\nwith Widerøe</string>
@@ -2504,11 +2504,11 @@
     <string name="_true">True</string>
 
 
-    <string name="drawer_airplane">&#xe902;</string>
-    <string name="drawer_radar">&#xe901;</string>
-    <string name="drawer_alexa">&#xe904;</string>
-    <string name="drawer_tail">&#xe900;</string>
-    <string name="drawer_manufacturer">&#xe907;</string>
+    <string name="drawer_airplane">&#xe900;</string>
+    <string name="drawer_radar">&#xe902;</string>
+    <string name="drawer_alexa">&#xe903;</string>
+    <string name="drawer_tail">&#xe901;</string>
+    <string name="drawer_manufacturer">&#xe904;</string>
     <string name="drawer_firebase">&#xe907;</string>
 
 </resources>

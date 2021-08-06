@@ -129,7 +129,7 @@
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/gulfstream_g280_cover" />
+                            android:src="@drawable/gulfstream_giv_cover" />
 
                         <TextView
                             android:layout_width="match_parent"
