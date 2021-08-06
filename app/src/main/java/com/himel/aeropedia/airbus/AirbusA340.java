@@ -8,10 +8,13 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.himel.aeropedia.R;
@@ -88,6 +91,12 @@ public class AirbusA340 extends AppCompatActivity {
             setContentView(R.layout.activity_airbus_a340_light);
         } else {
             setContentView(R.layout.activity_airbus_a340_dark);
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#ff83899f"));
         }
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
@@ -405,13 +414,6 @@ public class AirbusA340 extends AppCompatActivity {
         sliderView.setAutoCycle(false);
         renewItems(sliderView);
 
-
-        sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
-            @Override
-            public void onIndicatorClicked(int position) {
-                Log.i("GGG", "onIndicatorClicked: " + sliderView.getCurrentPagePosition());
-            }
-        });
     }
 
     private void renewItems(View view) {
@@ -429,17 +431,6 @@ public class AirbusA340 extends AppCompatActivity {
             sliderItemList.add(sliderItem);
         }
         adapter.renewItems(sliderItemList);
-    }
-
-    private void removeLastItem(View view) {
-        if (adapter.getCount() - 1 >= 0)
-            adapter.deleteItem(adapter.getCount() - 1);
-    }
-
-    private void addNewItem(View view) {
-        SliderItem sliderItem = new SliderItem();
-        //sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-        adapter.addItem(sliderItem);
     }
 
     /** SlideView **/
