@@ -83,8 +83,8 @@
     <!--AIRBUS A350-->
     <string name="a350_type_value">Avion de ligne à\nfuselage large</string>
     <string name="a350_engine_value">Rolls-Royce Trent XWB (2)</string>
-    <string name="a350_first_flight_value">14 Juin 2013</string>
-    <string name="a350_intro_value">15 Janvier 2015\navec Qatar Airways</string>
+    <string name="a350_first_flight_value">14 juin 2013</string>
+    <string name="a350_intro_value">15 janvier 2015\navec Qatar Airways</string>
     <string name="a350_customer_value">Singapore Airlines</string>
     <string name="a350_variants_value">2 (actifs)</string>
 
@@ -137,8 +137,8 @@
     <!--AIRBUS A380-->
     <string name="a380_type_value">Avion de ligne à\nfuselage large</string>
     <string name="a380_engine_value">Rolls-Royce Trent 900 (4) /\nEngine Alliance GP7000(4)</string>
-    <string name="a380_first_flight_value">27 Avril 2005</string>
-    <string name="a380_intro_value">25 Octobre 2007\navec Singapore Airlines</string>
+    <string name="a380_first_flight_value">27 avril 2005</string>
+    <string name="a380_intro_value">25 octobre 2007\navec Singapore Airlines</string>
     <string name="a380_customer_value">Emirates</string>
     <string name="a380_variants_value">4 (actifs)</string>
 
@@ -197,63 +197,64 @@
     <!--AIRBUS A380-->
 
     <!--AIRBUS A340-->
-    <string name="a340_type_value">Wide-body\nairliner</string>
-    <string name="a340_engine_value">CFM56-5C/\nRR Trent 553/556 (4)</string>
-    <string name="a340_first_flight_value">25 October 1991</string>
-    <string name="a340_intro_value">15 March 1993 with\nLufthansa &amp; Air France</string>
+    <string name="a340_type_value">Avion de ligne à\nfuselage large</string>
+    <string name="a340_engine_value">CFM56-5C /\nRR Trent 553/556 (4)</string>
+    <string name="a340_first_flight_value">25 octobre 1991</string>
+    <string name="a340_intro_value">15 mars 1993 avec\nLufthansa et Air France</string>
     <string name="a340_customer_value">Lufthansa</string>
     <string name="a340_variants_value">4</string>
 
-    <string name="a340_desc1" formatted="false">In the mid-1970s, Airbus conceived several derivatives of the A300, its first airliner, and developed the A340 quadjet
-        in parallel with the A330 twinjet. Keeping the eight-abreast economy cross-section of the A300, the early A340-200/300 has a similar airframe to the A330.
-        Differences include four 151 kN (34,000 lbf) CFM56s instead of two high-thrust turbofans to bypass ETOPS restrictions on trans-oceanic routes, and a three-leg
-        main landing gear instead of two for a heavier 276 t (608,000 lb) MTOW. Both airliners have fly-by-wire controls, which was first introduced on the A320, as well
-        as a similar glass cockpit. A total of 380 A340s have been built before its production ended in 2011.\n\nIts features and improvements were usually shared with the A330.
-        The four engines configuration avoided the ETOPS constraints such as more frequent inspections. The A340 has a low cantilever wing; the A340-200/300 wing is virtually
-        identical to that of the A330, with both engine pylons used while only the inboard one is used on the A330. The two engines for each wing provide a more distributed
-        weight; and a more outboard engine weight for a lower wing root bending moment at equal TOW, allowing a higher wing limited MTOW for more range. The wings were
-        designed and manufactured by BAe, which developed a long slender wing with a high aspect ratio for a higher aerodynamic efficiency. The wing is swept back at
-        30 degrees, allowing a maximum operating Mach number of 0.86. To reach a long span and high aspect ratio without a large weight penalty, the wing has
-        relatively high Thickness-to-chord ratio of 11.8% or 12.8%. Each wing also has a 2.74 m tall winglet instead of the wingtip fences found on earlier Airbus aircraft. The failure
-        of the ultra-high-bypass IAE SuperFan, promising around 15% better fuel burn, led to wing upgrades to compensate. Originally designed with a 56 m
-        span, the wing was later extended to 58.6 m and finally to 60.3 m. This wingspan is similar to that of the larger Boeing 747-200, but with
-        35% less wing area.\n</string>
+    <string name="a340_desc1" formatted="false">Au milieu des années 1970, Airbus conçoit plusieurs dérivés de l\'A300, son premier avion de ligne, et développe le quadriréacteur A340
+        en parallèle avec le biréacteur A330. Gardant la section transversale économique de huit de front de l\'A300, les premiers A340-200/300 ont une cellule similaire à celle de l\'A330.
+        Les différences comprennent quatre CFM56 de 151 kN au lieu de deux turboréacteurs à double flux pour contourner les restrictions ETOPS sur les routes transocéaniques, et un triple
+        train d\'atterrissage principal au lieu de deux pour une MTOW plus lourde de 276 t. Les deux avions de ligne ont des commandes de vol électriques, qui ont été introduites pour la première fois sur l\'A320, ainsi que
+        comme un cockpit en verre similaire. Au total, 380 A340 ont été construits avant la fin de sa production en 2011.\n\nSes caractéristiques et améliorations étaient généralement partagées avec l\'A330.
+        La configuration à quatre moteurs a évité les contraintes ETOPS telles que des inspections plus fréquentes. L\'A340 a une aile basse en porte-à-faux ; l\'aile A340-200/300 est pratiquement
+        identique à celui de l\'A330, avec les deux pylônes moteurs utilisés alors que seul l\'inboard est utilisé sur l\'A330. Les deux moteurs de chaque aile offrent une meilleure répartition
+        poids; et un poids de moteur plus extérieur pour un moment de flexion d\'emplanture d\'aile inférieur à TOW égal, permettant une MTOW limitée d\'aile plus élevée pour une plus grande portée. Les ailes étaient
+        conçu et fabriqué par BAe, qui a développé une aile longue et élancée avec un allongement élevé pour une efficacité aérodynamique plus élevée. L\'aile est ramenée à
+        30 degrés, permettant un nombre de Mach de fonctionnement maximal de 0,86. Pour atteindre une longue envergure et un allongement élevé sans une pénalité de poids importante, l\'aile a
+        rapport épaisseur/corde relativement élevé de 11,8% ou 12,8%. Chaque aile a également un winglet de 2,74 m de haut au lieu des barrières de bout d\'aile trouvées sur les avions Airbus précédents. L\'échec
+        du SuperFan IAE à ultra-haute dérivation, promettant environ 15 % de consommation de carburant en plus, a conduit à des améliorations des ailes pour compenser. Conçu à l\'origine avec un 56 m
+        d\'envergure, l\'aile a ensuite été étendue à 58,6 m et enfin à 60,3 m. Cette envergure est similaire à celle du plus gros Boeing 747-200, mais avec
+        35% de surface alaire en moins.\n</string>
 
-    <string name="a340_desc2" formatted="false">The A340 uses a modified A320 glass cockpit, with side-stick controls instead of a conventional yoke. The main instrument
-        panel is dominated by six displays, cathode ray tube monitors initially then liquid crystal displays. Flight information is directed via the Electronic Flight
-        Instrument System (EFIS) and systems information through the Electronic Centralised Aircraft Monitor (ECAM). The aircraft monitors various sensors and
-        automatically alerts the crew to any parameters outside of their normal range; pilots can also inspect individual systems. Electronic manuals are used
-        instead of paper ones, with optional web-based updates. Maintenance difficulty and cost were reduced to half of that of the earlier and smaller Airbus A310.
-        Improved engine control and monitoring improved time on wing. The centralised maintenance computer can transmit real-time information to ground facilities via
-        the onboard satellite-based ACARS datalink. Heavy maintenance like structural changes remained unchanged, while cabin sophistications, like the in-flight
-        entertainment, were increased over preceding airliners.\n\nOn 16 June 1993, an A340-200 dubbed the World Ranger flew from the Paris Air Show to Auckland,
-        New Zealand in 21 hours 32 minutes and back in 21 hours 46 minutes after a five-hour stop; this was the first non-stop flight between Europe and New Zealand
-        and the longest non-stop flight by an airliner at the time. The 19,277 km (10,409 nmi) flight from Paris to Auckland broke six world records with 22 persons
-        and five center tanks. Taking off at 11:58 local time, it arrived back in Paris 48 hours and 22 minutes later, at 12:20. This record held until
-        1997 when a Boeing 777-200ER flew 20,044 km (10,823 nmi) from Seattle to Kuala Lumpur. The McDonnell Douglas MD-11 and the Boeing 777 were
-        its main competitors. The A340 was coping up well with its competitors and in some cases, even better as Singapore Airlines cancelled its 20-aircraft MD-11
-        order on 2 August 1991, and ordered 20 A340-300s instead. However, as improving engine reliability allowed ETOPS operations for almost all routes,
-        more economical twin-jets have replaced quad-jets on many routes. On 10 November 2011, Airbus announced that the production reached its end, after 380
-        orders had been placed and 377 delivered from Toulouse, France. Later, the A350 XWB was announced its successor.\n</string>
+    <string name="a340_desc2" formatted="false">L\'A340 utilise un cockpit en verre A320 modifié, avec des commandes au manche latéral au lieu d\'un joug conventionnel. L\'instrument principal
+        Le panneau est dominé par six écrans, des moniteurs à tube cathodique dans un premier temps, puis des écrans à cristaux liquides. Les informations de vol sont dirigées via le Vol électronique
+        Système d\'instruments (EFIS, en anglais) et informations sur les systèmes via le moniteur électronique centralisé d\'aéronef (ECAM, en anglais). L\'avion surveille divers capteurs et
+        alerte automatiquement l\'équipage de tous les paramètres en dehors de leur plage normale ; les pilotes peuvent également inspecter des systèmes individuels. Des manuels électroniques sont utilisés
+        au lieu de papier, avec des mises à jour Web facultatives. Les difficultés et les coûts de maintenance ont été réduits à la moitié de ceux de l\'ancien et plus petit Airbus A310.
+        Amélioration du contrôle et de la surveillance du moteur et amélioration du temps sur l\'aile. L\'ordinateur de maintenance centralisé peut transmettre des informations en temps réel aux installations au sol via
+        la liaison de données ACARS embarquée par satellite. La maintenance lourde comme les changements structurels est restée inchangée, tandis que les sophistications de la cabine, comme le
+        divertissement, ont été augmentés par rapport aux avions de ligne précédents.\n\nLe 16 juin 1993, un A340-200 baptisé World Ranger vole du spectacle aérien de Paris à Auckland,
+        Nouvelle-Zélande en 21 heures 32 minutes et retour en 21 heures 46 minutes après un arrêt de cinq heures ; c\'était le premier vol sans escale entre l\'Europe et la Nouvelle-Zélande
+        et le plus long vol sans escale effectué par un avion de ligne à l\'époque. Le vol de 19 277 km (10 409 nmi) de Paris à Auckland a battu six records du monde avec 22 personnes
+        et cinq réservoirs centraux. Décollant à 11h58 heure locale, il est revenu à Paris 48 heures et 22 minutes plus tard, à 12h20. Ce record détenu jusqu\'à
+        1997, lorsqu\'un Boeing 777-200ER a parcouru 20 044 km (10 823 milles nautiques) de Seattle à Kuala Lumpur. Le McDonnell Douglas MD-11 et le Boeing 777 ont été
+        ses principaux concurrents. L\'A340 se débrouillait bien avec ses concurrents et dans certains cas, encore mieux puisque Singapore Airlines a annulé son MD-11 de 20 avions.
+        le 2 août 1991 et a commandé 20 A340-300 à la place. Cependant, comme l\'amélioration de la fiabilité du moteur a permis des opérations ETOPS pour presque tous les itinéraires,
+        des biréacteurs plus économiques ont remplacé les quadriréacteurs sur de nombreux itinéraires. Le 10 novembre 2011, Airbus a annoncé que la production était arrivée à son terme, après 380
+        commandes avaient été passées et 377 livrées depuis Toulouse, France. Plus tard, l\'A350 XWB a été annoncé comme son successeur.\n</string>
 
-    <string name="a340_desc3">\nAirbus A340\'s variants include A340-200, A340-300, A340-500, A340-600. The -600 variant is the longest in the A340 family. It is even
-        longer than most Boeing 747s and the A380.\n</string>
+    <string name="a340_desc3">\nLes variantes de l\'Airbus A340 comprennent l\'A340-200, l\'A340-300, l\'A340-500, l\'A340-600. La variante -600 est la plus longue de la famille A340. C\'est même
+        plus long que la plupart des Boeing 747 et de l\'A380.\n</string>
 
-    <string name="a340_specs_constraint">(-200, -300, -500, -600 variants compared in order)\n</string>
+    <string name="a340_specs_constraint">(comparaison ordonnée des variantes -200, -300, -500, -600)\n</string>
 
-    <string name="a340_identify">How to identify Airbus A340?</string>
-    <string name="a340_identify_ans">The A340 is one of the few quad-jets in the world. The single passenger deck stretching the length of the fuselage with
-        4 engines, centre-line wheel bogie, wings with straight, sharp-angled, short wingtips like A330\'s should catch the eyes of most aviation enthusiasts.</string>
+    <string name="a340_identify">Comment identifier l\'Airbus A340?</string>
+    <string name="a340_identify_ans">L\'A340 est l\'un des rares quadriréacteurs au monde. Le pont à passagers unique s\'étendant sur toute la longueur du fuselage
+        avec 4 moteurs, un bogie de roue à ligne médiane, des ailes à bouts d\'ailes droits, à angles vifs et courts comme ceux de l\'A330 devraient attirer l\'attention
+        de la plupart des passionnés d\'aviation.</string>
 
     <string name="a340_cockpit_value">2</string>
-    <string name="a340_wingspan_value">60.3 m (-200 &amp; -300) /\n63.45 m (-500 &amp; -600)</string>
+    <string name="a340_wingspan_value">60.3 m (-200 et -300) /\n63.45 m (-500 et -600)</string>
     <string name="a340_length_value">59.39 / 63.69 /\n67.93 / 75.36 m</string>
     <string name="a340_height_value">17.03 / 16.99 /\n17.53 / 17.93 m</string>
-    <string name="a340_fuselage_value">5.29 m (W) / ~5.5 m (H)</string>
-    <string name="a340_mtow_value">275 t (-200) / 276.5 t (-300) / 380 t (-500 &amp; -600)</string>
-    <string name="a340_cruise_speed_value">871 km/h (typical),\n914 km/h (max.)</string>
+    <string name="a340_fuselage_value">5.29 m (L) / ~5.5 m (H)</string>
+    <string name="a340_mtow_value">275 t (-200) / 276.5 t (-300) / 380 t (-500 et -600)</string>
+    <string name="a340_cruise_speed_value">871 km/h (typique),\n914 km/h (max.)</string>
     <string name="a340_range_value">6,700 / 7,300 / 9,000 / 7,800 nmi</string>
-    <string name="a340_thrust_value">138.78–151.24 kN\n(-200 &amp; -300) /\n248.12–275.35 kN\n(-500 &amp; -600)</string>
+    <string name="a340_thrust_value">138.78–151.24 kN\n(-200 et -300) /\n248.12–275.35 kN\n(-500 et -600)</string>
     <!--AIRBUS A340-->
 
     <!--AIRBUS A330-->

@@ -194,7 +194,7 @@
 
     <!--AIRBUS A340-->
     <string name="a340_type_value">Wide-body\nairliner</string>
-    <string name="a340_engine_value">CFM56-5C/\nRR Trent 553/556 (4)</string>
+    <string name="a340_engine_value">CFM56-5C /\nRR Trent 553/556 (4)</string>
     <string name="a340_first_flight_value">25 October 1991</string>
     <string name="a340_intro_value">15 March 1993 with\nLufthansa &amp; Air France</string>
     <string name="a340_customer_value">Lufthansa</string>
@@ -202,8 +202,8 @@
 
     <string name="a340_desc1" formatted="false">In the mid-1970s, Airbus conceived several derivatives of the A300, its first airliner, and developed the A340 quadjet
         in parallel with the A330 twinjet. Keeping the eight-abreast economy cross-section of the A300, the early A340-200/300 has a similar airframe to the A330.
-        Differences include four 151 kN (34,000 lbf) CFM56s instead of two high-thrust turbofans to bypass ETOPS restrictions on trans-oceanic routes, and a three-leg
-        main landing gear instead of two for a heavier 276 t (608,000 lb) MTOW. Both airliners have fly-by-wire controls, which was first introduced on the A320, as well
+        Differences include four 151 kN CFM56s instead of two high-thrust turbofans to bypass ETOPS restrictions on trans-oceanic routes, and a three-leg
+        main landing gear instead of two for a heavier 276 t MTOW. Both airliners have fly-by-wire controls, which was first introduced on the A320, as well
         as a similar glass cockpit. A total of 380 A340s have been built before its production ended in 2011.\n\nIts features and improvements were usually shared with the A330.
         The four engines configuration avoided the ETOPS constraints such as more frequent inspections. The A340 has a low cantilever wing; the A340-200/300 wing is virtually
         identical to that of the A330, with both engine pylons used while only the inboard one is used on the A330. The two engines for each wing provide a more distributed
