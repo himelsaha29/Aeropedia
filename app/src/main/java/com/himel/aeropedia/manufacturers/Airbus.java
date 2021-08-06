@@ -418,9 +418,6 @@ public class Airbus extends AppCompatActivity {
             blur.setAlpha(0f);
         }
 
-        scrollView = findViewById(R.id.main_scroll);
-        scrollView.scrollTo(0, scrollView.getTop());
-        animateCards();
     }
 
 
