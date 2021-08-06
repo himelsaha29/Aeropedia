@@ -4,14 +4,14 @@
     <string name="ask_alexa">Ask Alexa</string>
     <string name="flight_tracker">Flight Tracker</string>
     <string name="firebase">My Aircraft</string>
-    <string name="airbus">àirbus</string>
+    <string name="airbus">Airbus</string>
     <string name="boeing">Boeing</string>
     <string name="embraer">Embraer</string>
     <string name="bombardier">Bombardier</string>
     <string name="cessna">Cessna</string>
     <string name="gulfstream">Gulfstream</string>
     <string name="antonov">Antonov</string>
-    <string name="a350">à350</string>
+    <string name="a350">A350</string>
     <string name="a380">A380</string>
     <string name="a320">A320</string>
     <string name="a319">A319</string>
@@ -89,14 +89,14 @@
     <string name="a350_variants_value">2 (actifs)</string>
 
 
-    <string name="a350_desc1">L\'Airbus A350 est un avion de ligne long-courrier à fuselage large. Le premier design de l\'A350 proposé par Airbus en 2004, en réponse
+    <string name="a350_desc1" formatted="false">L\'Airbus A350 est un avion de ligne long-courrier à fuselage large. Le premier design de l\'A350 proposé par Airbus en 2004, en réponse
         au 787 Dreamliner de Boeing, aurait été un développement de l\'A330 (d\'où l\'A330-Lite) avec des ailes composites et de nouveaux moteurs. Cependant, le soutien
         du marché était insuffisant à l\'époque et en 2006, Airbus est passé à une conception XWB (eXtra Wide Body) à feuilles propres, propulsée par des turboréacteurs
         Rolls-Royce Trent XWB. L\'A350 est le premier avion de la famille Airbus composé en grande partie de polymère renforcé de fibres de carbone. Il présente un nouveau
         fuselage conçu autour d\'une section économique à neuf de front, contre huit de front pour l\'A330 / l\'A340. L\'A350 est en production depuis 2010 et au total
         425 A350 ont été construits au 31 mai 2021.\n\nLa cellule de l\'A350 XWB est composée à 53 % de composites : plastique renforcé de fibres de carbone pour les
         caissons de voilure extérieur et central (capots, longerons, espars), le fuselage (peau, cadre, poutre de quille et fuselage arrière) et l\'empennage (empennages
-        horizontaux et verticaux); 19 % d'aluminium et d\'aluminium – alliage de lithium pour les nervures, les poutres de plancher et les baies d\'engrenage ; 14 % de
+        horizontaux et verticaux); 19 % d\'aluminium et d\'aluminium – alliage de lithium pour les nervures, les poutres de plancher et les baies d\'engrenage ; 14 % de
         titane pour les trains d\'atterrissage, les pylônes et les accessoires ; 6% d\'acier ; et 8% divers. Pour les ailes, celles-ci marquent un angle de balayage de
         31,9° pour une vitesse de croisière de Mach 0,85 et une vitesse de fonctionnement maximale de Mach 0,89, le dispositif de bout d\'aile se courbant vers le haut
         sur les 4,4 m (14 pi) finaux - réduisant la résistance de l\'air et augmentant par la suite le l\'autonomie de l\'avion tout en limitant la consommation de
@@ -112,9 +112,8 @@
         de l\'extérieur avec un placé derrière la roue avant et l\'autre dans la queue verticale. Les vues des caméras peuvent être affichées dans le cockpit de l\'A350 sur des écrans ainsi que sur
         les écrans de divertissement en vol des passagers.\n\nL\'Airbus A350 consomme 25 % de carburant en moins et émet 25 % d\'émissions en moins que les générations
         précédentes et selon Airbus, c\'est l\'avion à deux couloirs le plus silencieux de la planète. L\'Australien Qantas a choisi l\'A350 plutôt que le 787 Dreamliner
-        de Boeing pour \"Project Sunrise\" - un nom de code pour les vols sans escale proposés entre l\'Australie et plusieurs destinations internationales dont
-        Londres, New York et Paris.\n
-    </string>
+        de Boeing pour «Project Sunrise» - un nom de code pour les vols sans escale proposés entre l\'Australie et plusieurs destinations internationales dont
+        Londres, New York et Paris.\n</string>
 
     <string name="a350_desc3">\nLes variantes de l\'Airbus A350 comprennent l\'A350-800, l\'A350-900, l\'A350-ULR, l\'ACJ350, l\'A350 Regional, l\'A350-950 F, l\'A350-1000,
         bien que certaines d\'entre elles aient été abandonnées ou n\'aient pas dépassé les premiers stades de développement.\n</string>
@@ -136,62 +135,63 @@
     <!--AIRBUS A350-->
 
     <!--AIRBUS A380-->
-    <string name="a380_type_value">Wide-body\nairliner</string>
-    <string name="a380_engine_value">Rolls-Royce Trent 900 (4)/\nEngine Alliance GP7000(4)</string>
-    <string name="a380_first_flight_value">27 April 2005</string>
-    <string name="a380_intro_value">25 October 2007\nwith Singapore Airlines</string>
+    <string name="a380_type_value">Avion de ligne à\nfuselage large</string>
+    <string name="a380_engine_value">Rolls-Royce Trent 900 (4) /\nEngine Alliance GP7000(4)</string>
+    <string name="a380_first_flight_value">27 Avril 2005</string>
+    <string name="a380_intro_value">25 Octobre 2007\navec Singapore Airlines</string>
     <string name="a380_customer_value">Emirates</string>
-    <string name="a380_variants_value">4 (active)</string>
+    <string name="a380_variants_value">4 (actifs)</string>
 
-    <string name="a380_desc1" formatted="false">The Airbus A380 is the world\'s largest passenger airliner. Airbus studies started in 1988, and the project was announced in
-        1990 to challenge the dominance of the Boeing 747 in the long haul market. The then-designated A3XX project was presented in 1994. Airbus launched
-        the €9.5 billion ($10.7 billion) A380 programme on 19 December 2000. As of 31 December 2020, 246 A380s have been built, most of which went to
-        the fleet family of Emirates. The aircraft still remains in service for many airlines but is no longer in production on Airbus\' side.\n\nThe A380\'s upper and
-        lower decks are connected by two stairways, one fore and one aft, with both being wide enough to accommodate two passengers side by side. This cabin arrangement
-        allows multiple seat configurations. The maximum certified carrying capacity is 853 passengers in an all-economy-class layout, Airbus lists the "typical"
-        three-class layout as accommodating 525 passengers, with 10 first, 76 business, and 439 economy class seats. Airline configurations range from Korean Air\'s
-        407 passengers to Emirates\' two-class 615 seats and average around 480–490 seats.
-        \n\nWhile most of
-        the fuselage is made of aluminium alloys, composite materials comprise more than 20% of the A380\'s airframe. Carbon-fibre reinforced plastic, glass-fibre
-        reinforced plastic and quartz-fibre reinforced plastic are used extensively in wings, fuselage sections (such as the undercarriage and rear end of fuselage),
-        tail surfaces, and doors. The A380, often nicknamed the superjumbo, is the first commercial airliner to have a central wing box made of carbon–fibre reinforced plastic. It is
-        also the first to have a smoothly contoured wing cross–section. The wings of other commercial airliners are partitioned span-wise into sections. This flowing
-        continuous cross section reduces aerodynamic drag. Thermoplastics are used in the leading edges of the slats. The hybrid fibre metal laminate material GLARE
-        (glass laminate aluminium reinforced epoxy) is used in the upper fuselage and on the stabilisers\' leading edges. This aluminium-glass-fibre laminate is
-        lighter and has better corrosion and impact resistance than conventional aluminium alloys used in aviation. Unlike earlier composite materials, GLARE can be
-        repaired using conventional aluminium repair techniques.\n</string>
+    <string name="a380_desc1" formatted="false">L\'Airbus A380 est le plus grand avion de ligne au monde. Les études d\'Airbus ont commencé en 1988, et le projet a été
+        annoncé en 1990 pour contester la domination du Boeing 747 sur le marché long-courrier. Le projet A3XX alors désigné a été présenté en 1994. Airbus a lancé le
+        programme A380 de 9,5 milliards d\'euros (10,7 milliards de dollars) le 19 décembre 2000. Au 31 décembre 2020, 246 A380 ont été construits, dont la plupart sont
+        destinés à la famille de la flotte d\'Emirates. L\'avion reste toujours en service pour de nombreuses compagnies aériennes mais n\'est plus en production du côté
+        d\'Airbus.\n\nLes ponts supérieur et inférieur de l\'A380 sont reliés par deux escaliers, un à l\'avant et un à l\'arrière, tous deux suffisamment larges pour
+        accueillir deux passagers côte à côte. Cet aménagement de cabine permet plusieurs configurations de siège. La capacité de transport maximale certifiée est de 853
+        passagers dans une configuration tout en classe économique, Airbus répertorie la configuration «typique» à trois classes comme pouvant accueillir 525 passagers,
+        avec 10 premières, 76 affaires et 439 sièges en classe économique. Les configurations des compagnies aériennes vont des 407 passagers de Korean Air aux 615
+        sièges en deux classes d\'Emirates et en moyenne entre 480 et 490 sièges.\n\nAlors que la majeure partie du fuselage est constituée d\'alliages d\'aluminium, les
+        matériaux composites constituent plus de 20 % de la cellule de l\'A380. Le plastique renforcé de fibres de carbone, le plastique renforcé de fibres de verre et le
+        plastique renforcé de fibres de quartz sont largement utilisés dans les ailes, les sections de fuselage (telles que le train d\'atterrissage et l\'extrémité
+        arrière du fuselage), les surfaces de queue et les portes. L\'A380, souvent surnommé le superjumbo, est le premier avion de ligne commercial à avoir un caisson
+        central de voilure en plastique renforcé de fibres de carbone. C\'est aussi le premier à avoir une section transversale d\'aile aux contours lisses. Les ailes
+        des autres avions de ligne commerciaux sont divisées en sections dans le sens de l\'envergure. Cette section transversale continue et fluide réduit la traînée
+        aérodynamique. Des thermoplastiques sont utilisés dans les bords d\'attaque des lattes. Le matériau stratifié hybride fibre métallique GLARE (en anglais, glass laminate aluminium reinforced epoxy) est utilisé dans la partie supérieure du fuselage et sur les bords d\'attaque des stabilisateurs. Ce stratifié aluminium-fibre de verre
+        est plus léger et possède une meilleure résistance à la corrosion et aux chocs que les alliages d\'aluminium conventionnels utilisés dans l\'aviation. Contrairement
+        aux matériaux composites antérieurs, GLARE peut être réparé en utilisant les techniques de réparation conventionnelles de l\'aluminium.\n</string>
 
-    <string name="a380_desc2" formatted="false">Due to its modern engines and aerodynamic improvements, Lufthansa\'s A380s produce half the noise of the
-        Boeing 747-200 while carrying 160 more passengers. In 2012, the A380 received an award from the Noise Abatement Society.\nThe A380 employs an integrated
-        modular avionics (IMA) architecture, first used in advanced military aircraft, such as the Lockheed Martin F-22 Raptor, Lockheed Martin F-35 Lightning II,
-        and Dassault Rafale. Designed and developed by Airbus, Thales and Diehl Aerospace, the IMA suite was first used on the A380. The suite is a technological
-        innovation, with networked computing modules to support different applications.The data networks use Avionics Full-Duplex Switched Ethernet. These are switched,
-        full-duplex, star-topology and based on 100baseTX fast-Ethernet. This reduces the amount of wiring required and minimises latency.\n\nThe Network Systems Server (NSS) is
-        the heart of A380\'s paperless cockpit; it eliminates bulky manuals and traditional charts. The NSS has enough inbuilt robustness to eliminate onboard backup
-        paper documents. The A380s network and server system stores data and offers electronic documentation, providing a required equipment list, navigation charts,
-        performance calculations, and an aircraft logbook.\n\nIn February 2019, Airbus announced it would end A380 production by 2021, after its main customer,
-        Emirates, agreed to drop an order for 39 of the aircraft, replacing it with 40 A330-900s and 30 A350-900s. At the time of the announcement, Airbus had 17
-        more A380s on its order book to complete before closing the production line – 14 for Emirates and 3 for All Nippon Airways – taking the total number of
-        expected deliveries of the aircraft type to 251.\n
-    </string>
+    <string name="a380_desc2" formatted="false">En raison de ses moteurs modernes et de ses améliorations aérodynamiques, les A380 de Lufthansa produisent deux fois moins
+        de bruit que le Boeing 747-200 tout en transportant 160 passagers supplémentaires. En 2012, l\'A380 a reçu un prix de la Noise Abatement Society. L\'A380 utilise
+        une architecture d\'avionique modulaire intégrée (IMA), utilisée pour la première fois dans des avions militaires de pointe, tels que le Lockheed Martin F-22
+        Raptor, le Lockheed Martin F-35 Lightning II, et Dassault Rafale. Conçue et développée par Airbus, Thales et Diehl Aerospace, la suite IMA a été utilisée pour
+        la première fois sur l\'A380. La suite est une innovation technologique, avec des modules informatiques en réseau pour prendre en charge différentes applications.
+        Les réseaux de données utilisent Avionics Full-Duplex Switched Ethernet. Ceux-ci sont commutés, en duplex intégral, en topologie en étoile et basés sur un
+        Ethernet rapide 100baseTX. Cela réduit la quantité de câblage nécessaire et minimise la latence.\n\nLe Network Systems Server (NSS) est le cœur du cockpit sans
+        papier de l\'A380 ; il élimine les manuels volumineux et les graphiques traditionnels. Le NSS a suffisamment de robustesse intégrée pour éliminer la sauvegarde
+        à bord documents papier. Le système réseau et serveur de l\'A380 stocke les données et propose une documentation électronique, fournissant une liste d\'équipements
+        requis, des cartes de navigation, des calculs de performances et un journal de bord de l\'avion.\n\nEn février 2019, Airbus a annoncé qu\'il mettrait fin à la
+        production de l\'A380 d\'ici 2021, après que son principal client, Emirates a accepté d\'abandonner une commande de 39 de ces avions, en les remplaçant par 40 A330-900
+        et 30 A350-900. Au moment de l\'annonce, Airbus disposait de 17 plus d\'A380 sur son carnet de commandes à terminer avant de fermer la chaîne de production – 14
+        pour Emirates et 3 pour All Nippon Airways – portant le nombre total de livraisons attendues du type d\'avion à 251.\n</string>
 
-    <string name="a380_desc3">\nAirbus A380\'s active variants include A380-800, A380-841, A380-842, A380-861. Airbus also proposed a handful of new variants that included
-    a cargo variant of the A380, the A380F. The freighter would have been a rival for Boeing 747 and Antonov An-225 Mriya. A380F was postponed after 2005 and was
-        never built. Other proposed variants included A380plus, A380neo, A380 Stretch with improvements regarding efficiency, capacity, and engine tweaks.\n</string>
+    <string name="a380_desc3">\nLes variantes actives de l\'Airbus A380 comprennent l\'A380-800, l\'A380-841, l\'A380-842, l\'A380-861. Airbus a également proposé des
+        nouvelles variantes qui comprenaient une variante cargo de l\'A380, l\'A380F. Le cargo aurait été un rival du Boeing 747 et de l\'Antonov An-225 Mriya. L\'A380F a
+        été reporté après 2005 et n\'a jamais été construit. Les autres variantes proposées comprenaient l\'A380plus, l\'A380neo, l\'A380 Stretch avec des améliorations
+        concernant l\'efficacité, la capacité et les réglages du moteur.\n</string>
 
-    <string name="a380_specs_constraint">(-800, Trent engines)\n</string>
+    <string name="a380_specs_constraint">(-800, moteurs Trent)\n</string>
 
-    <string name="a380_identify">How to identify Airbus A380?</string>
-    <string name="a380_identify_ans">A380 is an aircraft that is easily recognizable. The characteristic ovoid fuselage, 4 engines, distinctive "bulbous" nose, and of course,
-        2 passenger decks stretching across the length of the fuselage.</string>
+    <string name="a380_identify">Comment identifier l\'Airbus A380?</string>
+    <string name="a380_identify_ans">L\'A380 est un avion facilement reconnaissable. Le fuselage ovoïde caractéristique, 4 moteurs, le nez «bulbeux» distinctif, et bien sûr,
+        2 ponts passagers s\'étendant sur toute la longueur du fuselage.</string>
 
     <string name="a380_cockpit_value">2</string>
     <string name="a380_wingspan_value">79.75 m</string>
     <string name="a380_length_value">72.72 m</string>
     <string name="a380_height_value">24.09 m</string>
-    <string name="a380_fuselage_value">7.1 m (W) / ~7 m (H)</string>
+    <string name="a380_fuselage_value">7.1 m (L) / ~7.3 m (H)</string>
     <string name="a380_mtow_value">575 t</string>
-    <string name="a380_cruise_speed_value">903 km/h (typical),\n945 km/h (max.)</string>
+    <string name="a380_cruise_speed_value">903 km/h (typique),\n945 km/h (max.)</string>
     <string name="a380_range_value">8,000 nmi</string>
     <string name="a380_thrust_value">348 kN</string>
     <!--AIRBUS A380-->

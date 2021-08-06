@@ -89,7 +89,7 @@
     <string name="a350_variants_value">2 (active)</string>
 
 
-    <string name="a350_desc1">The Airbus A350 is a long-range, wide-body jet airliner. The first A350 design proposed by Airbus in 2004,
+    <string name="a350_desc1" formatted="false">The Airbus A350 is a long-range, wide-body jet airliner. The first A350 design proposed by Airbus in 2004,
         in response to Boeing\'s 787 Dreamliner, would have been a development of the A330 (hence A330-Lite) with composite wings and new engines. However,
         market support was inadequate at the time and in 2006, Airbus switched to a clean-sheet XWB (eXtra Wide Body) design, powered by Rolls-Royce Trent XWB
         turbofan engines. The A350 is the first aircraft of the Airbus family that is largely made of carbon fibre reinforced polymer. It features a new fuselage designed around a
@@ -109,7 +109,7 @@
         with External and Taxiing Aid Camera System (ETACS) for better navigation and aircraft positioning on the ground. digital cameras provide the pilots with views
         from outside with one positioned behind the nose wheel and the other in the vertical tail. The views from the cameras can be displayed in the A350 cockpit on displays
         and as well as on the passenger in-flight entertainment screens.\n\nThe Airbus A350 consumes 25% less fuel and emits 25% less emissions than previous generations and according to Airbus it is the quietest two aisle plane
-        on the planet. Australia\'s Qantas chose A350 over Boeing\'s 787 Dreamliner for "Project Sunrise" – a codename for proposed nonstop flights between Australia
+        on the planet. Australia\'s Qantas chose A350 over Boeing\'s 787 Dreamliner for \"Project Sunrise\" – a codename for proposed nonstop flights between Australia
         and several international destinations that include London, New York and Paris.\n
     </string>
 
@@ -133,7 +133,7 @@
 
     <!--AIRBUS A380-->
     <string name="a380_type_value">Wide-body\nairliner</string>
-    <string name="a380_engine_value">Rolls-Royce Trent 900 (4)/\nEngine Alliance GP7000(4)</string>
+    <string name="a380_engine_value">Rolls-Royce Trent 900 (4) /\nEngine Alliance GP7000(4)</string>
     <string name="a380_first_flight_value">27 April 2005</string>
     <string name="a380_intro_value">25 October 2007\nwith Singapore Airlines</string>
     <string name="a380_customer_value">Emirates</string>
@@ -144,7 +144,7 @@
         the €9.5 billion ($10.7 billion) A380 programme on 19 December 2000. As of 31 December 2020, 246 A380s have been built, most of which went to
         the fleet family of Emirates. The aircraft still remains in service for many airlines but is no longer in production on Airbus\' side.\n\nThe A380\'s upper and
         lower decks are connected by two stairways, one fore and one aft, with both being wide enough to accommodate two passengers side by side. This cabin arrangement
-        allows multiple seat configurations. The maximum certified carrying capacity is 853 passengers in an all-economy-class layout, Airbus lists the "typical"
+        allows multiple seat configurations. The maximum certified carrying capacity is 853 passengers in an all-economy-class layout, Airbus lists the \"typical\"
         three-class layout as accommodating 525 passengers, with 10 first, 76 business, and 439 economy class seats. Airline configurations range from Korean Air\'s
         407 passengers to Emirates\' two-class 615 seats and average around 480–490 seats.
         \n\nWhile most of
@@ -158,7 +158,7 @@
         repaired using conventional aluminium repair techniques.\n</string>
 
     <string name="a380_desc2" formatted="false">Due to its modern engines and aerodynamic improvements, Lufthansa\'s A380s produce half the noise of the
-        Boeing 747-200 while carrying 160 more passengers. In 2012, the A380 received an award from the Noise Abatement Society.\nThe A380 employs an integrated
+        Boeing 747-200 while carrying 160 more passengers. In 2012, the A380 received an award from the Noise Abatement Society.The A380 employs an integrated
         modular avionics (IMA) architecture, first used in advanced military aircraft, such as the Lockheed Martin F-22 Raptor, Lockheed Martin F-35 Lightning II,
         and Dassault Rafale. Designed and developed by Airbus, Thales and Diehl Aerospace, the IMA suite was first used on the A380. The suite is a technological
         innovation, with networked computing modules to support different applications.The data networks use Avionics Full-Duplex Switched Ethernet. These are switched,
@@ -185,7 +185,7 @@
     <string name="a380_wingspan_value">79.75 m</string>
     <string name="a380_length_value">72.72 m</string>
     <string name="a380_height_value">24.09 m</string>
-    <string name="a380_fuselage_value">7.1 m (W) / ~7 m (H)</string>
+    <string name="a380_fuselage_value">7.1 m (W) / ~7.3 m (H)</string>
     <string name="a380_mtow_value">575 t</string>
     <string name="a380_cruise_speed_value">903 km/h (typical),\n945 km/h (max.)</string>
     <string name="a380_range_value">8,000 nmi</string>
