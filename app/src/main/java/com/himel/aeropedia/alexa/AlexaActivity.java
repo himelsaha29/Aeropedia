@@ -11,6 +11,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -181,7 +182,17 @@ public class AlexaActivity extends CoreActivity {
                     speaking.setVisibility(View.GONE);
                     listening.setVisibility(View.GONE);
                 } else if (recorder == null) {
-                    startListening();
+                    if (ContextCompat.checkSelfPermission(AlexaActivity.this,
+                            Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
+                        startListening();
+                    } else {
+                        if (!ActivityCompat.shouldShowRequestPermissionRationale(AlexaActivity.this,
+                                Manifest.permission.RECORD_AUDIO)) {
+                            ActivityCompat.requestPermissions(AlexaActivity.this,
+                                    new String[]{Manifest.permission.RECORD_AUDIO},
+                                    MY_PERMISSIONS_REQUEST_RECORD_AUDIO);
+                        }
+                    }
                 } else {
                     stopListening();
                     listening.setVisibility(View.GONE);
@@ -279,8 +290,6 @@ public class AlexaActivity extends CoreActivity {
                         recorderView.post(new Runnable() {
                             @Override
                             public void run() {
-                                //recorderView.setRmsdbLevel(rmsdb);
-                                //listening.setVisibility(View.VISIBLE);
                             }
                         });
                     }
@@ -471,7 +480,6 @@ public class AlexaActivity extends CoreActivity {
             }
         });
 
-        System.out.println("logged in method ======= " + loggedIn[0]);
         return loggedIn[0];
 
     }
