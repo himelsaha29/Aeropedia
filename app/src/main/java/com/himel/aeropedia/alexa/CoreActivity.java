@@ -211,7 +211,7 @@ public abstract class CoreActivity extends AppCompatActivity implements AVSListe
                 @Override
                 public void run() {
                     long totalTime = System.currentTimeMillis() - startTime;
-                    Toast.makeText(CoreActivity.this, "Total request time: "+totalTime+" miliseconds", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(CoreActivity.this, "Total request time: "+totalTime+" miliseconds", Toast.LENGTH_LONG).show();
 
                 }
             });
@@ -260,7 +260,7 @@ public abstract class CoreActivity extends AppCompatActivity implements AVSListe
                 @Override
                 public void run() {
                     long totalTime = System.currentTimeMillis() - startTime;
-                    Toast.makeText(CoreActivity.this, "Total interaction time: "+totalTime+" miliseconds", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(CoreActivity.this, "Total interaction time: "+totalTime+" miliseconds", Toast.LENGTH_LONG).show();
 
                 }
             });
@@ -376,9 +376,9 @@ public abstract class CoreActivity extends AppCompatActivity implements AVSListe
             @Override
             public void run() {
                 if(adjust) {
-                    Toast.makeText(CoreActivity.this, "Volume adjusted.", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(CoreActivity.this, "Volume adjusted.", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(CoreActivity.this, "Volume set to: " + (volume / 10), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(CoreActivity.this, "Volume set to: " + (volume / 10), Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -393,7 +393,7 @@ public abstract class CoreActivity extends AppCompatActivity implements AVSListe
         new Handler(Looper.getMainLooper()).post(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(CoreActivity.this, "Volume " + (isMute ? "muted" : "unmuted"), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(CoreActivity.this, "Volume " + (isMute ? "muted" : "unmuted"), Toast.LENGTH_SHORT).show();
             }
         });
     }
