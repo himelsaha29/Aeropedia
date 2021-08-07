@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -18,6 +20,8 @@ import androidx.core.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -136,8 +140,20 @@ public class AlexaActivity extends CoreActivity {
             enableDarkOnCreate = verifyDarkMode();
             if(enableDark.equals("No")) {
                 setContentView(R.layout.activity_alexa_login_light);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    Window window = getWindow();
+                    window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                    window.setStatusBarColor(Color.parseColor("#E6f2f4f6"));
+                }
             } else {
                 setContentView(R.layout.activity_alexa_login_dark);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    Window window = getWindow();
+                    window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                    window.setStatusBarColor(Color.parseColor("#ff141635"));
+                }
             }
 
             login = findViewById(R.id.login);
@@ -165,8 +181,20 @@ public class AlexaActivity extends CoreActivity {
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_alexa_light);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                Window window = getWindow();
+                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                window.setStatusBarColor(Color.parseColor("#E6f2f4f6"));
+            }
         } else {
             setContentView(R.layout.activity_alexa_dark);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                Window window = getWindow();
+                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                window.setStatusBarColor(Color.parseColor("#ff141635"));
+            }
         }
 
 
@@ -496,9 +524,9 @@ public class AlexaActivity extends CoreActivity {
         TreeNode manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_manufacturer, this.getString(R.string.manufacturers), "No", "manufacturers", null));
         TreeNode alexaRoot = null;
         if (verifyDarkMode().equals("Yes")) {
-            alexaRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_manufacturer, this.getString(R.string.ask_alexa), "HighlightLight", "ask_alexa", null));
+            alexaRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_alexa, this.getString(R.string.ask_alexa), "HighlightLight", "ask_alexa", null));
         } else {
-            alexaRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_manufacturer, this.getString(R.string.ask_alexa), "HighlightDark", "ask_alexa", null));
+            alexaRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_alexa, this.getString(R.string.ask_alexa), "HighlightDark", "ask_alexa", null));
         }
         TreeNode flightTrackerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_radar, this.getString(R.string.flight_tracker), "No", "flightTracker", FlightMap.class));
         TreeNode firebaseRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_firebase, this.getString(R.string.firebase), "No", "firebase", Firebase.class));
