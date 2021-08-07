@@ -128,7 +128,6 @@ public class AlexaActivity extends CoreActivity {
             e.printStackTrace();
         }
 
-
         if (!loggedIn) {
 
             loadLocale();
@@ -136,94 +135,20 @@ public class AlexaActivity extends CoreActivity {
             enableDarkOnCreate = verifyDarkMode();
             if(enableDark.equals("No")) {
                 setContentView(R.layout.activity_alexa_login_light);
-                Thread thread2 = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        loggedIn = checkLogin();
-                    }
-                });
-                thread2.start();
-
-                try {
-                    thread2.join();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                /**REFRESH**/
-                if (!loggedIn) {
-
-                    loadLocale();
-                    locale = Locale.getDefault();
-                    enableDarkOnCreate = verifyDarkMode();
-                    if(enableDark.equals("No")) {
-                        setContentView(R.layout.activity_alexa_login_light);
-                    } else {
-                        setContentView(R.layout.activity_alexa_login_dark);
-                    }
-
-                    login = findViewById(R.id.login);
-
-                    login.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            alexaManager.sendAudioRequest(requestBody, getRequestCallback());
-                        }
-                    });
-                    languageDarkToggle();
-                    loadDrawer();
-                }
-                else {
-                    loadAlexa();
-                    languageDarkToggle();
-                    loadDrawer();
-                }
-                /**REFRESH**/
-
             } else {
                 setContentView(R.layout.activity_alexa_login_dark);
-                Thread thread2 = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        loggedIn = checkLogin();
-                    }
-                });
-                thread2.start();
-
-                try {
-                    thread2.join();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                /**REFRESH**/
-                if (!loggedIn) {
-
-                    loadLocale();
-                    locale = Locale.getDefault();
-                    enableDarkOnCreate = verifyDarkMode();
-                    if(enableDark.equals("No")) {
-                        setContentView(R.layout.activity_alexa_login_light);
-                    } else {
-                        setContentView(R.layout.activity_alexa_login_dark);
-                    }
-
-                    login = findViewById(R.id.login);
-
-                    login.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            alexaManager.sendAudioRequest(requestBody, getRequestCallback());
-                        }
-                    });
-                    languageDarkToggle();
-                    loadDrawer();
-                }
-                else {
-                    loadAlexa();
-                    languageDarkToggle();
-                    loadDrawer();
-                }
-                /**REFRESH**/
             }
+
+            login = findViewById(R.id.login);
+
+            login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    alexaManager.sendAudioRequest(requestBody, getRequestCallback());
+                }
+            });
+            languageDarkToggle();
+            loadDrawer();
 
         }
         else {
@@ -231,9 +156,6 @@ public class AlexaActivity extends CoreActivity {
             languageDarkToggle();
             loadDrawer();
         }
-
-
-
     }
 
     private void loadAlexa() {
@@ -410,7 +332,6 @@ public class AlexaActivity extends CoreActivity {
             if (status != null) {
                 status.setText(R.string.status_listening);
                 loading.setVisibility(View.GONE);
-                //statusBar.animate().alpha(1);
                 speak = false;
             }
             listening.setVisibility(View.VISIBLE);
@@ -422,7 +343,6 @@ public class AlexaActivity extends CoreActivity {
             if (status != null) {
                 status.setText(R.string.status_processing);
                 loading.setVisibility(View.VISIBLE);
-                //statusBar.animate().alpha(1);
             }
             speak = false;
         }
@@ -446,7 +366,6 @@ public class AlexaActivity extends CoreActivity {
             if (status != null) {
                 status.setText("");
                 loading.setVisibility(View.VISIBLE);
-                //statusBar.animate().alpha(1);
             }
         }
     }
@@ -459,6 +378,7 @@ public class AlexaActivity extends CoreActivity {
                 speak = false;
             }
             loading.setVisibility(View.GONE);
+            listening.setVisibility(View.GONE);
             speaking.setVisibility(View.GONE);
         }
     }
