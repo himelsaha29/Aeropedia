@@ -120,14 +120,14 @@
 
     <string name="a350_specs_constraint">(comparaison ordonnée des variantes -900 et -1000)\n</string>
 
-    <string name="a350_wingspan_value">64.75 m</string>
-    <string name="a350_length_value">66.8 / 73.79 m</string>
-    <string name="a350_height_value">17.05 / 17.08 m</string>
-    <string name="a350_fuselage_value">5.96 m (L) / 6.09 m (H)</string>
+    <string name="a350_wingspan_value">64,75 m</string>
+    <string name="a350_length_value">66,8 / 73,79 m</string>
+    <string name="a350_height_value">17,05 / 17,08 m</string>
+    <string name="a350_fuselage_value">5,96 m (L) / 6,09 m (H)</string>
     <string name="a350_mtow_value">280 / 316 t</string>
     <string name="a350_cruise_speed_value">903 km/h (typique),\n950 km/h (max.)</string>
     <string name="a350_range_value">8100 / 8700 nmi</string>
-    <string name="a350_thrust_value">374.5 / 431.5 kN</string>
+    <string name="a350_thrust_value">374,5 / 431,5 kN</string>
 
     <string name="a350_identify">Comment identifier l\'Airbus A350?</string>
     <string name="a350_identify_ans">La configuration unique du pare-brise à bords arrondis en 6 pièces avec bordure noire, nez distinctif, sharklets doucement incurvés comme ceux
@@ -186,13 +186,13 @@
         2 ponts passagers s\'étendant sur toute la longueur du fuselage.</string>
 
     <string name="a380_cockpit_value">2</string>
-    <string name="a380_wingspan_value">79.75 m</string>
-    <string name="a380_length_value">72.72 m</string>
-    <string name="a380_height_value">24.09 m</string>
-    <string name="a380_fuselage_value">7.1 m (L) / ~7.3 m (H)</string>
+    <string name="a380_wingspan_value">79,75 m</string>
+    <string name="a380_length_value">72,72 m</string>
+    <string name="a380_height_value">24,09 m</string>
+    <string name="a380_fuselage_value">7,1 m (L) / ~7,3 m (H)</string>
     <string name="a380_mtow_value">575 t</string>
     <string name="a380_cruise_speed_value">903 km/h (typique),\n945 km/h (max.)</string>
-    <string name="a380_range_value">8,000 nmi</string>
+    <string name="a380_range_value">8000 nmi</string>
     <string name="a380_thrust_value">348 kN</string>
     <!--AIRBUS A380-->
 
@@ -247,14 +247,14 @@
         de la plupart des passionnés d\'aviation.</string>
 
     <string name="a340_cockpit_value">2</string>
-    <string name="a340_wingspan_value">60.3 m (-200 &amp; -300) /\n63.45 m (-500 &amp; -600)</string>
-    <string name="a340_length_value">59.39 / 63.69 /\n67.93 / 75.36 m</string>
-    <string name="a340_height_value">17.03 / 16.99 /\n17.53 / 17.93 m</string>
-    <string name="a340_fuselage_value">5.29 m (L) / ~5.5 m (H)</string>
-    <string name="a340_mtow_value">275 t (-200) / 276.5 t (-300) / 380 t (-500 &amp; -600)</string>
+    <string name="a340_wingspan_value">60,3 m (-200 &amp; -300) /\n63,45 m (-500 &amp; -600)</string>
+    <string name="a340_length_value">59,39 / 63,69 /\n67,93 / 75,36 m</string>
+    <string name="a340_height_value">17,03 / 16,99 /\n17,53 / 17,93 m</string>
+    <string name="a340_fuselage_value">5,29 m (L) / ~5,5 m (H)</string>
+    <string name="a340_mtow_value">275 t (-200) / 276,5 t (-300) / 380 t (-500 &amp; -600)</string>
     <string name="a340_cruise_speed_value">871 km/h (typique),\n914 km/h (max.)</string>
-    <string name="a340_range_value">6,700 / 7,300 / 9,000 / 7,800 nmi</string>
-    <string name="a340_thrust_value">138.78–151.24 kN\n(-200 &amp; -300) /\n248.12–275.35 kN\n(-500 &amp; -600)</string>
+    <string name="a340_range_value">6700 / 7300 / 9000 / 7800 nmi</string>
+    <string name="a340_thrust_value">138,78–151,24 kN\n(-200 &amp; -300) /\n248,12–275,35 kN\n(-500 &amp; -600)</string>
     <!--AIRBUS A340-->
 
     <!--AIRBUS A330-->
@@ -304,13 +304,13 @@
         de l\'A340.</string>
 
     <string name="a330_cockpit_value">2</string>
-    <string name="a330_wingspan_value">60.3 m</string>
-    <string name="a330_length_value">58.82 m (-200 &amp; -200F) / 63.67 m (-300)</string>
-    <string name="a330_height_value">17.39 / 16.9 / 16.79 m</string>
-    <string name="a330_fuselage_value">5.64 m (L) / 5.64 m (H)</string>
+    <string name="a330_wingspan_value">60,3 m</string>
+    <string name="a330_length_value">58,82 m (-200 &amp; -200F) / 63,67 m (-300)</string>
+    <string name="a330_height_value">17,39 / 16,9 / 16,79 m</string>
+    <string name="a330_fuselage_value">5,64 m (L) / 5,64 m (H)</string>
     <string name="a330_mtow_value">242 / 233 / 242 t</string>
     <string name="a330_cruise_speed_value">871 km/h (typique)</string>
-    <string name="a330_range_value">7,250 / 4,000 / 6,350 nmi</string>
+    <string name="a330_range_value">7250 / 4000 / 6350 nmi</string>
     <string name="a330_thrust_value">287–316 kN</string>
     <!--AIRBUS A330-->
 
