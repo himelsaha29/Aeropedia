@@ -2513,4 +2513,6 @@
     <string name="drawer_manufacturer">&#xe907;</string>
     <string name="drawer_firebase">&#xe907;</string>
 
+    <string name="snackbar">Pas de connexion internet</string>
+
 </resources>

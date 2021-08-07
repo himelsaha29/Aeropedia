@@ -3,17 +3,21 @@ package com.himel.aeropedia.alexa;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -25,6 +29,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA220;
 import com.himel.aeropedia.airbus.AirbusA300;
@@ -114,10 +119,14 @@ public class AlexaActivity extends CoreActivity {
     private String enableDarkOnCreate;
     private Locale locale;
     private MediaPlayer mp;
+    private boolean isNetworkAvailable = false;
+    private CoordinatorLayout mainLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        isNetworkAvailable = isNetworkAvailable();
 
         Thread thread = new Thread(new Runnable() {
             @Override
@@ -134,26 +143,15 @@ public class AlexaActivity extends CoreActivity {
         }
 
         if (!loggedIn) {
-
             loadLocale();
             locale = Locale.getDefault();
             enableDarkOnCreate = verifyDarkMode();
             if(enableDark.equals("No")) {
                 setContentView(R.layout.activity_alexa_login_light);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    Window window = getWindow();
-                    window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-                    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                    window.setStatusBarColor(Color.parseColor("#E6f2f4f6"));
-                }
+                lightStatus();
             } else {
                 setContentView(R.layout.activity_alexa_login_dark);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    Window window = getWindow();
-                    window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-                    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                    window.setStatusBarColor(Color.parseColor("#ff141635"));
-                }
+                darkStatus();
             }
 
             login = findViewById(R.id.login);
@@ -173,6 +171,21 @@ public class AlexaActivity extends CoreActivity {
             languageDarkToggle();
             loadDrawer();
         }
+
+        if(!isNetworkAvailable) {
+            mainLayout = findViewById(R.id.mainLayout);
+            Snackbar snackbar = Snackbar
+                    .make(mainLayout, R.string.snackbar, Snackbar.LENGTH_LONG);
+            if(enableDark.equals("No")) {
+                snackbar.setBackgroundTint(Color.parseColor("#72A8E1"));
+                snackbar.setTextColor(Color.BLACK);
+            } else {
+                snackbar.setBackgroundTint(Color.parseColor("#1b1f1f"));
+                snackbar.setTextColor(Color.WHITE);
+            }
+            snackbar.show();
+        }
+
     }
 
     private void loadAlexa() {
@@ -181,20 +194,11 @@ public class AlexaActivity extends CoreActivity {
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_alexa_light);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                Window window = getWindow();
-                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(Color.parseColor("#E6f2f4f6"));
-            }
+            lightStatus();
+
         } else {
             setContentView(R.layout.activity_alexa_dark);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                Window window = getWindow();
-                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(Color.parseColor("#ff141635"));
-            }
+            darkStatus();
         }
 
 
@@ -725,5 +729,31 @@ public class AlexaActivity extends CoreActivity {
     }
 
     /** Dark mode **/
+
+    private void darkStatus() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#ff141635"));
+        }
+    }
+
+    private void lightStatus() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#E6f2f4f6"));
+        }
+    }
+
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 
 }
