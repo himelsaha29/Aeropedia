@@ -36,17 +36,17 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="top"
-                    android:background="#f2f4f6"
                     android:scaleType="fitCenter"
+                    android:background="#f2f4f6"
+                    app:neumorph_shapeType="flat"
+                    app:neumorph_shadowColorLight="#fdfdfd"
+                    app:neumorph_shadowColorDark="#eaeaea"
                     android:src="@drawable/ic_information_light"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="H, 1:1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:neumorph_shadowColorDark="#eaeaea"
-                    app:neumorph_shadowColorLight="#fdfdfd"
-                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-                    app:neumorph_shapeType="flat">
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance" >
 
 
                 </soup.neumorphism.NeumorphImageButton>
@@ -65,182 +65,59 @@
                 android:padding="5dp"
                 app:layout_constrainedHeight="true">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+
+                <soup.neumorphism.NeumorphImageButton
+                    android:id="@+id/recorder"
+                    style="@style/Widget.Neumorph.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:background="#f2f4f6"
+                    app:neumorph_shadowColorLight="#fdfdfd"
+                    app:neumorph_shadowColorDark="#eaeaea"
+                    android:src="@drawable/ic_amazon_alexa"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:neumorph_shadowElevation="6dp"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                    app:neumorph_shapeType="flat" />
 
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/first_vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="0.3"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="5dp"
-                        app:layout_constrainedHeight="true"
-                        app:layout_constraintBottom_toTopOf="@id/second_vertical"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                <ProgressBar
+                    android:id="@+id/loading"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/second_vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="0.4"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="5dp"
-                        app:layout_constrainedHeight="true"
-                        app:layout_constraintBottom_toTopOf="@id/third_vertical"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/first_vertical">
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:id="@+id/first_horizontal"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="0.15"
-                                android:gravity="center"
-                                android:orientation="horizontal"
-                                android:padding="5dp"
-                                app:layout_constrainedHeight="true"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="@id/second_horizontal"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent">
-
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:id="@+id/second_horizontal"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="0.7"
-                                android:gravity="center"
-                                android:orientation="horizontal"
-                                android:padding="5dp"
-                                app:layout_constrainedHeight="true"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="@id/third_horizontal"
-                                app:layout_constraintStart_toStartOf="@id/first_horizontal"
-                                app:layout_constraintTop_toTopOf="parent">
-
-                                <soup.neumorphism.NeumorphImageButton
-                                    android:id="@+id/recorder"
-                                    style="@style/Widget.Neumorph.ImageButton"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center"
-                                    android:background="#f2f4f6"
-                                    android:padding="22dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/alexa"
-                                    app:layout_constrainedHeight="true"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:neumorph_shadowColorDark="#eaeaea"
-                                    app:neumorph_shadowColorLight="#fdfdfd"
-                                    app:neumorph_shadowElevation="6dp"
-                                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-                                    app:neumorph_shapeType="flat" />
-
-
-                                <ProgressBar
-                                    android:id="@+id/loading"
-                                    style="?android:attr/progressBarStyleLarge"
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_gravity="center"
-                                    android:layout_marginStart="0dp"
-                                    android:layout_marginLeft="0dp"
-                                    android:layout_marginEnd="20dp"
-                                    android:layout_marginRight="20dp"
-                                    android:visibility="gone"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                                <TextView
-                                    android:id="@+id/status"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:gravity="center"
-                                    android:text="@string/status_listening"
-                                    android:textAppearance="?android:textAppearanceLarge"
-                                    android:textColor="@color/black"
-                                    android:visibility="gone"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:id="@+id/third_horizontal"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="0.15"
-                                android:gravity="center"
-                                android:orientation="horizontal"
-                                android:padding="5dp"
-                                app:layout_constrainedHeight="true"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="@id/second_horizontal"
-                                app:layout_constraintTop_toTopOf="parent">
-
-
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        </LinearLayout>
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/third_vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="0.3"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="5dp"
-                        app:layout_constrainedHeight="true"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/second_vertical">
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/status_listening"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -338,7 +215,7 @@
                     android:fadeScrollbars="true"
                     android:fadingEdgeLength="150dp"
                     android:overScrollMode="always"
-                    android:requiresFadingEdge="vertical" />
+                    android:requiresFadingEdge="vertical"/>
 
 
             </LinearLayout>
