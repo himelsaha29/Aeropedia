@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/flight_map_bottom_sheet_background_dark"
         app:behavior_hideable="false"
-        app:behavior_peekHeight="0dp"
+        app:behavior_peekHeight="700dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
         <soup.neumorphism.NeumorphTextView
@@ -74,7 +74,6 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:paddingBottom="20dp"
                             android:text="@string/loading"
                             android:textColor="@color/white"
                             android:textSize="20sp" />
@@ -93,8 +92,7 @@
                             android:layout_gravity="center"
                             android:adjustViewBounds="true"
                             android:gravity="center"
-                            android:src="@drawable/bottom_sheet_plane_icon"
-                            android:paddingBottom="20dp"/>
+                            android:src="@drawable/bottom_sheet_plane_icon"/>
 
 
 
@@ -115,7 +113,6 @@
                             android:adjustViewBounds="true"
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
-                            android:paddingBottom="20dp"
                             android:text="@string/loading"
                             android:textColor="@color/white"
                             android:textSize="20sp" />
@@ -123,6 +120,69 @@
 
                     </LinearLayout>
                 </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/origin_airport_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:paddingBottom="12dp"
+                            android:text="Montreal"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:orientation="vertical"
+                        android:padding="9dip">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="8dip">
+
+                        <TextView
+                            android:id="@+id/destination_airport_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:gravity="center"
+                            android:paddingBottom="12dp"
+                            android:text="Los Angeles"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="fill_parent"
