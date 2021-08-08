@@ -365,53 +365,54 @@
 
 
     <!--AIRBUS A321-->
-    <string name="a321_type_value">Narrow-body\nairliner</string>
+    <string name="a321_type_value">Avion de ligne à\nfuselage étroit</string>
     <string name="a321_engine_value">CFM56 /\nIAE V2500 (2)</string>
-    <string name="a321_first_flight_value">11 March 1993</string>
-    <string name="a321_intro_value">1994 with\nLufthansa</string>
+    <string name="a321_first_flight_value">11 mars 1993</string>
+    <string name="a321_intro_value">1994 avec\nLufthansa</string>
     <string name="a321_customer_value">American Airlines</string>
     <string name="a321_variants_value">3</string>
 
-    <string name="a321_desc1" formatted="false">The Airbus A321 is a member of the Airbus A320 family of short to medium range, narrow-body, commercial passenger
-        twin engine jet airliners. This Airbus A320 family was renamed to A320ceo, for \"current engine option\" after the introduction of A320neo (neo for new engine option) in 2014. It has a stretched fuselage which was the first derivative of the baseline A320 and entered service in 1994 about six years after
-        the original A320. The aircraft shares a common type rating with all other Airbus A320-family variants, allowing previous A320-family pilots to fly the aircraft
-        without the need for further training. As of 30 June 2021, 2,340 A321s have been built.\n\nThe Airbus A321 was the first derivative of the A320, also known
-        as the Stretched A320, A320-500 and A325. Its launch came on 24 November 1988, around the same time as the A320 entered service, after commitments for 183
-        aircraft from 10 customers were secured. The maiden flight of the Airbus A321 came on 11 March 1993, when the prototype, registration F-WWIA, flew with IAE
-        V2500 engines; the second prototype, equipped with CFM56-5B turbofans, flew in May 1993. Lufthansa and Alitalia were the first to order the stretched
-        Airbuses, with 20 and 40 aircraft requested, respectively. The first of Lufthansa\'s V2500-A5-powered A321s arrived on 27 January 1994, while Alitalia
-        received its first CFM56-5B-powered aircraft on 22 March 1994. The A321-100 entered service in January 1994 with Lufthansa.\n</string>
+    <string name="a321_desc1" formatted="false">L\'Airbus A321 est un membre de la famille Airbus A320 de passagers commerciaux à courte et moyenne portée, à fuselage étroit
+        avions de ligne à réaction bimoteur. Cette famille Airbus A320 a été renommée A320ceo, pour «current engine option» après l\'introduction de l\'A320neo (neo pour new engine option) en 2014. Il a un fuselage étiré qui était le premier dérivé de l\'A320 de base et est entré en service en 1994 environ six ans après
+        l\'A320 d\'origine. L\'avion partage une qualification de type commune avec toutes les autres variantes de la famille A320 d\'Airbus, permettant aux précédents pilotes de la famille A320 de piloter l\'avion
+        sans avoir besoin de formation supplémentaire. Au 30 juin 2021, 2340 A321 ont été construits.\n\nL\'Airbus A321 était le premier dérivé de l\'A320, également connu
+        comme l\'A320 allongé, l\'A320-500 et l\'A325. Son lancement a eu lieu le 24 novembre 1988, à peu près au moment de la mise en service de l\'A320, après des engagements de 183
+        avions de 10 clients ont été sécurisés. Le vol inaugural de l\'Airbus A321 a eu lieu le 11 mars 1993, lorsque le prototype, immatriculé F-WWIA, a volé avec l\'IAE
+        moteurs V2500 ; le deuxième prototype, équipé de turboréacteurs CFM56-5B, a volé en mai 1993. Lufthansa et Alitalia ont été les premiers à commander le
+        Airbus, avec respectivement 20 et 40 appareils demandés. Le premier A321 à moteur V2500-A5 de Lufthansa est arrivé le 27 janvier 1994, tandis qu\'Alitalia
+        a reçu son premier avion propulsé par CFM56-5B le 22 mars 1994. L\'A321-100 est entré en service en janvier 1994 chez Lufthansa.\n</string>
 
-    <string name="a321_desc2" formatted="false">The A321 is the largest variant of the A320 family. The A321-200\'s length exceeds 44.5m, increasing maximum takeoff
-        weight to 93,000 kg (205,000 lb). Wingspan remained unchanged, supplementing various wingtip devices. Two suppliers provided turbofan engines for the A321:
-        CFM International with its CFM56 and International Aero Engines with the V2500 engine, both in the thrust range of 133–147 kN (30,000–33,000 lbf). Over 30
-        years since launch, the A321 Maximum takeoff weight (MTOW) grew by 20% from the 83t -100 until the 101t A321XLR, seating is 10% more dense with 244 seats,
-        up by 24, and range doubled from 2,300 nmi to 4,700 nmi. By 2019, 4,200 have been ordered—one-quarter of all Airbus single-aisles—including 2,400 neos,
-        one-third of all A320neo orders.\n\nThe narrow-body (single-aisle) aircraft from Airbus is a low-wing cantilever monoplane with a conventional tail unit having a single vertical stabilizer and rudder.
-        Changes from the A320 include a fuselage stretch and some modifications to the wing. The fuselage was lengthened by a 4.27 m plug ahead of the wing and a
-        2.67 m plug behind it, so that the A321 is 6.94 metres longer than the A320. The length increase required the overwing window exits of the A320 to be
-        converted into door exits and repositioned in front of and behind the wings. To maintain performance, double-slotted flaps and minor trailing edge
-        modifications were included, increasing the wing area from 124 m<sup><small><small>2</small></small></sup> to 128 m<sup><small><small>2</small></small></sup>. The centre fuselage and undercarriage were
-        reinforced to accommodate the increase in maximum takeoff weight of 9,600 kg (21,200 lb), taking it to 83,000 kg (183,000 lb).\n</string>
-
-
-    <string name="a321_desc3">\nAirbus A321 variants include A321-100, A321-200 and A321neo equipped with new engines.\n</string>
-
-    <string name="a321_specs_constraint">(-100 and -200 variants compared in order)\n</string>
+    <string name="a321_desc2" formatted="false">L\'A321 est la plus grande variante de la famille A320. La longueur de l\'A321-200 dépasse 44,5 m, augmentant le décollage maximal
+        poids à 93 000 kg. L\'envergure est restée inchangée, complétant divers dispositifs de bout d\'aile. Deux fournisseurs ont fourni des turboréacteurs pour l\'A321 :
+        CFM International avec ses moteurs CFM56 et International Aero avec le moteur V2500, tous deux dans la plage de poussée de 133 à 147 kN. Plus de 30
+        ans après son lancement, la masse maximale au décollage (MTOW, en anglais) de l\'A321 a augmenté de 20% du 83t -100 jusqu\'au 101t A321XLR, les sièges sont 10% plus denses avec 244 sièges,
+        jusqu\'à 24, et la portée a doublé de 2 300 nmi à 4 700 nmi. En 2019, 4 200 ont été commandées, soit un quart de tous les monocouloirs d\'Airbus, dont 2400 neo,
+        un tiers de toutes les commandes d\'A320neo.\n\nL\'avion à fuselage étroit (monocouloir) d\'Airbus est un monoplan en porte-à-faux à aile basse avec un empennage conventionnel doté d\'un seul stabilisateur vertical et d\'un gouvernail.
+        Les changements par rapport à l\'A320 incluent un tronçon de fuselage et quelques modifications de l\'aile. Le fuselage était allongé par un bouchon de 4,27 m en avant de l\'aile et un
+        2,67 m de prise derrière, de sorte que l\'A321 mesure 6,94 mètres de plus que l\'A320. L\'augmentation de la longueur a nécessité que les sorties des hublots de l\'A320 soient
+        convertis en sorties de portes et repositionnés devant et derrière les ailes. Pour maintenir les performances, volets à double fente et bord de fuite mineur
+        des modifications ont été incluses, augmentant la surface de l\'aile de 124 m<sup><small><small>2</small></small></sup> à 128 m<sup><small><small>2</small></small></sup>. Le fuselage central et le train d\'atterrissage ont été
+        renforcé pour s\'adapter à l\'augmentation de la masse maximale au décollage de 9600 kg, la portant à 83 000 kg.\n</string>
 
 
-    <string name="a321_identify">How to identify Airbus A321?</string>
-    <string name="a321_identify_ans">\"Notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
-        4 exits spread evenly across the fuselage, and either small triangular wingtips (wingtip fence) similar to those on A380 or large L-shaped sharklets.</string>
+    <string name="a321_desc3">\nLes variantes de l\'Airbus A321 comprennent l\'A321-100, l\'A321-200 et l\'A321neo équipés de nouveaux moteurs.\n</string>
+
+    <string name="a321_specs_constraint">(comparaison ordonnée des variantes -100 and -200)\n</string>
+
+
+    <string name="a321_identify">Comment identifier l\'Airbus A321?</string>
+    <string name="a321_identify_ans">Conception de fenêtre «crantée», nez «bulbeux», 2 trains d\'atterrissage principaux à deux roues, nacelle moteur sans extensions arrière,
+        4 sorties réparties uniformément sur le fuselage, et soit de petits bouts d\'aile triangulaires (clôture de bout d\'aile) similaires à ceux de l\'A380 ou de grands sharklets
+        en forme de L.</string>
 
     <string name="a321_cockpit_value">2</string>
-    <string name="a321_wingspan_value">35.80 m</string>
-    <string name="a321_length_value">44.51 m</string>
-    <string name="a321_height_value">11.76 m</string>
-    <string name="a321_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
-    <string name="a321_mtow_value">83 / 93.5 t</string>
-    <string name="a321_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
-    <string name="a321_range_value">2,350 / 3,200 nmi</string>
+    <string name="a321_wingspan_value">35,80 m</string>
+    <string name="a321_length_value">44,51 m</string>
+    <string name="a321_height_value">11,76 m</string>
+    <string name="a321_fuselage_value">3,95 m (L) / 4,14 m (H)</string>
+    <string name="a321_mtow_value">83 / 93,5 t</string>
+    <string name="a321_cruise_speed_value">829 km/h (typique),\n871 km/h (max.)</string>
+    <string name="a321_range_value">2350 / 3200 nmi</string>
     <string name="a321_thrust_value">133–147 kN</string>
     <!--AIRBUS A321-->
 

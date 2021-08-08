@@ -65,7 +65,7 @@ import soup.neumorphism.NeumorphButton;
 
 public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
-    private static final String BASE_URL = "https://opensky-network.org/api";
+    private final String BASE_URL = Global.BASE_URL;
 
 
     private List<PatternItem> pattern = Arrays.asList(
@@ -446,16 +446,16 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 markerSelected = marker;
                 marker.setIcon(markerPlaneRed);
 
+                //plugging in text views values
+
                 icaoTV.setText(marker.getSnippet());
                 origin.setText(flightRoute[0]);
                 destination.setText(flightRoute[1]);
-
                 if((flightRoute[2] + " " + flightRoute[3]).contains("N/A")) {
                     aircraft.setText("N/A");
                 } else {
                     aircraft.setText(flightRoute[2] + " " + flightRoute[3]);
                 }
-
                 callsignTV.setText(markerInfo[0]);
                 country.setText(markerInfo[1]);
                 lamitude.setText(String.valueOf(marker.getPosition().latitude));
@@ -474,7 +474,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 verticalRateTV.setText(markerInfo[6]);
                 trackTV.setText(String.valueOf(marker.getRotation()) + "°");
                 squawkTV.setText(markerInfo[7]);
-
                 positionSourceTV.setText(markerInfo[9]);
 
                 if(!flightRoute[1].equalsIgnoreCase("N/A")) {

@@ -376,9 +376,9 @@
         Airbuses, with 20 and 40 aircraft requested, respectively. The first of Lufthansa\'s V2500-A5-powered A321s arrived on 27 January 1994, while Alitalia
         received its first CFM56-5B-powered aircraft on 22 March 1994. The A321-100 entered service in January 1994 with Lufthansa.\n</string>
 
-    <string name="a321_desc2" formatted="false">The A321 is the largest variant of the A320 family. The A321-200\'s length exceeds 44.5m, increasing maximum takeoff
-        weight to 93,000 kg (205,000 lb). Wingspan remained unchanged, supplementing various wingtip devices. Two suppliers provided turbofan engines for the A321:
-        CFM International with its CFM56 and International Aero Engines with the V2500 engine, both in the thrust range of 133–147 kN (30,000–33,000 lbf). Over 30
+    <string name="a321_desc2" formatted="false">A321 is the largest variant of the A320 family. The A321-200\'s length exceeds 44.5m, increasing maximum takeoff
+        weight to 93,000 kg. Wingspan remained unchanged, supplementing various wingtip devices. Two suppliers provided turbofan engines for the A321:
+        CFM International with its CFM56 and International Aero Engines with the V2500 engine, both in the thrust range of 133–147 kN. Over 30
         years since launch, the A321 Maximum takeoff weight (MTOW) grew by 20% from the 83t -100 until the 101t A321XLR, seating is 10% more dense with 244 seats,
         up by 24, and range doubled from 2,300 nmi to 4,700 nmi. By 2019, 4,200 have been ordered—one-quarter of all Airbus single-aisles—including 2,400 neos,
         one-third of all A320neo orders.\n\nThe narrow-body (single-aisle) aircraft from Airbus is a low-wing cantilever monoplane with a conventional tail unit having a single vertical stabilizer and rudder.
@@ -386,7 +386,7 @@
         2.67 m plug behind it, so that the A321 is 6.94 metres longer than the A320. The length increase required the overwing window exits of the A320 to be
         converted into door exits and repositioned in front of and behind the wings. To maintain performance, double-slotted flaps and minor trailing edge
         modifications were included, increasing the wing area from 124 m<sup><small><small>2</small></small></sup> to 128 m<sup><small><small>2</small></small></sup>. The centre fuselage and undercarriage were
-        reinforced to accommodate the increase in maximum takeoff weight of 9,600 kg (21,200 lb), taking it to 83,000 kg (183,000 lb).\n</string>
+        reinforced to accommodate the increase in maximum takeoff weight of 9,600 kg, taking it to 83,000 kg.\n</string>
 
 
     <string name="a321_desc3">\nAirbus A321 variants include A321-100, A321-200 and A321neo equipped with new engines.\n</string>
