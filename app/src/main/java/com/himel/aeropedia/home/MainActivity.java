@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
     private boolean flag = false;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        modifyAlexaRestart();
+
     }
 
     @Override
@@ -120,5 +123,17 @@ public class MainActivity extends AppCompatActivity {
             //this.finishAffinity();
             super.onBackPressed();
         }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        modifyAlexaRestart();
+    }
+
+    private void modifyAlexaRestart() {
+        editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("AlexaRestart", "Yes");
+        editor.apply();
     }
 }

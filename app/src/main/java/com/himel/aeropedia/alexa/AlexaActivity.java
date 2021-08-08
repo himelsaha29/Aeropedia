@@ -165,6 +165,18 @@ public class AlexaActivity extends CoreActivity {
             languageDarkToggle();
             loadDrawer();
 
+            SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+            String restart = prefs.getString("AlexaRestart", "No");
+
+            if(restart.equalsIgnoreCase("Yes")) {
+                SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+                editor.putString("AlexaRestart", "No");
+                editor.apply();
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
+            }
+
         }
         else {
             loadAlexa();
