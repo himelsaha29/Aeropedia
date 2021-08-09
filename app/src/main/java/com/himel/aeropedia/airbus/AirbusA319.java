@@ -3,6 +3,7 @@ package com.himel.aeropedia.airbus;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -10,6 +11,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -148,6 +150,8 @@ public class AirbusA319 extends AppCompatActivity {
             }
         });
 
+        Display display = ((android.view.WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+        mDrawer.setMenuSize((int)(display.getWidth()*0.635));
 
         mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
         mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
@@ -400,14 +404,6 @@ public class AirbusA319 extends AppCompatActivity {
         sliderView.setScrollTimeInSec(3);
         sliderView.setAutoCycle(false);
         renewItems(sliderView);
-
-
-        sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
-            @Override
-            public void onIndicatorClicked(int position) {
-                Log.i("GGG", "onIndicatorClicked: " + sliderView.getCurrentPagePosition());
-            }
-        });
     }
 
     private void renewItems(View view) {
@@ -425,17 +421,6 @@ public class AirbusA319 extends AppCompatActivity {
             sliderItemList.add(sliderItem);
         }
         adapter.renewItems(sliderItemList);
-    }
-
-    private void removeLastItem(View view) {
-        if (adapter.getCount() - 1 >= 0)
-            adapter.deleteItem(adapter.getCount() - 1);
-    }
-
-    private void addNewItem(View view) {
-        SliderItem sliderItem = new SliderItem();
-        //sliderItem.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-        adapter.addItem(sliderItem);
     }
 
     /** SlideView **/
