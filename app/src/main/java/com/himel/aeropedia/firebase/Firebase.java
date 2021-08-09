@@ -308,7 +308,12 @@ public class Firebase extends AppCompatActivity {
 
     private void switchLayout() {
         setContentView(R.layout.activity_firebase_results);
+    }
 
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
 }
