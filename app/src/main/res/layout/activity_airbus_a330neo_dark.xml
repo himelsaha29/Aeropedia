@@ -9,7 +9,7 @@
     android:clipChildren="false"
     android:clipToPadding="false"
     android:hapticFeedbackEnabled="true"
-    app:edMenuBackground="#72A8E1"
+    app:edMenuBackground="#1b1f1f"
     app:edMenuSize="260dp"
     app:edPosition="1">
 
