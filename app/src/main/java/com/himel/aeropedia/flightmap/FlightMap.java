@@ -619,6 +619,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                             }
 
                         }
+                        System.out.println("RESPONSE : " + response);
 
                     }
                 });

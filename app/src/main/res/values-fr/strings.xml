@@ -373,7 +373,7 @@
     <string name="a321_variants_value">3</string>
 
     <string name="a321_desc1" formatted="false">L\'Airbus A321 est un membre de la famille Airbus A320 de passagers commerciaux à courte et moyenne portée, à fuselage étroit
-        avions de ligne à réaction bimoteur. Cette famille Airbus A320 a été renommée A320ceo, pour «current engine option» après l\'introduction de l\'A320neo (neo pour new engine option) en 2014. Il a un fuselage étiré qui était le premier dérivé de l\'A320 de base et est entré en service en 1994 environ six ans après
+        avions de ligne à réaction bimoteur. Cette famille Airbus A320 a été renommée A320ceo, pour «current engine option» après l\'introduction de l\'A320neo (neo pour new engine option en anglais) en 2014. Il a un fuselage étiré qui était le premier dérivé de l\'A320 de base et est entré en service en 1994 environ six ans après
         l\'A320 d\'origine. L\'avion partage une qualification de type commune avec toutes les autres variantes de la famille A320 d\'Airbus, permettant aux précédents pilotes de la famille A320 de piloter l\'avion
         sans avoir besoin de formation supplémentaire. Au 30 juin 2021, 2340 A321 ont été construits.\n\nL\'Airbus A321 était le premier dérivé de l\'A320, également connu
         comme l\'A320 allongé, l\'A320-500 et l\'A325. Son lancement a eu lieu le 24 novembre 1988, à peu près au moment de la mise en service de l\'A320, après des engagements de 183
@@ -426,7 +426,7 @@
     <string name="a320_variants_value">2</string>
 
     <string name="a320_desc1" formatted="false">L\'Airbus A320 est un membre de la famille Airbus A320 de passagers commerciaux à courte et moyenne portée, à fuselage étroit
-        avions de ligne à réaction bimoteur. Cette famille Airbus A320 a été renommée A320ceo, pour «current engine option» après l\'introduction de l\'A320neo (neo for new engine option) en 2014.
+        avions de ligne à réaction bimoteur. Cette famille Airbus A320 a été renommée A320ceo, «ceo» pour «current engine option» en anglais après l\'introduction de l\'A320neo (neo pour new engine option en anglais) en 2014.
         Il s\'agit d\'un avion à fuselage étroit (monocouloir) doté d\'un train d\'atterrissage tricycle rétractable et propulsé par deux turboréacteurs à double flux montés sur pylône d\'aile. Après l\'huile
         les hausses de prix des années 1970, Airbus avait besoin de minimiser les coûts de carburant de voyage de l\'A320. Pour cela, il a adopté des structures primaires composites, centre de gravité
         contrôle à l\'aide de carburant, d\'un cockpit vitré (Electronic Flight Instrument System, EFIS, en anglais) et d\'un poste de pilotage à deux équipages. Airbus a affirmé que le 737-300 consomme 35% de carburant en plus et a un coût d\'exploitation 16% plus élevé par
@@ -472,51 +472,52 @@
 
 
     <!--AIRBUS A319-->
-    <string name="a319_type_value">Narrow-body\nairliner</string>
+    <string name="a319_type_value">Avion de ligne à\nfuselage étroit</string>
     <string name="a319_engine_value">CFM56 /\nIAE V2500 (2)</string>
-    <string name="a319_first_flight_value">25 August 1995</string>
-    <string name="a319_intro_value">1996 with\nSwissair</string>
+    <string name="a319_first_flight_value">25 août 1995</string>
+    <string name="a319_intro_value">1996 avec\nSwissair</string>
     <string name="a319_customer_value">American Airlines</string>
     <string name="a319_variants_value">4</string>
 
-    <string name="a319_desc1" formatted="false">The Airbus A319 is a member of the Airbus A320 family of short- to medium-range, narrow-body, commercial
-        passenger twin-engine jet airliners. This Airbus A320 family was renamed to A320ceo, for \"current engine option\" after the introduction of A320neo
-        (neo for new engine option) in 2014. It is a shortened-fuselage variant of the Airbus A320 and entered service in April 1996 with Swissair, around
-        two years after the stretched Airbus A321 and eight years after the original A320. The aircraft shares a common type rating with all other Airbus A320
-        family variants, allowing existing A320 family pilots to fly the aircraft without the need for further training. As of August 2019, a total of 1,480
-        Airbus A319 aircraft have been delivered, of which 1,436 are in service.\n\nThe first member of the A320 family was the A320 which was launched in March
-        1984 and first flew on 22 February 1987. The family was extended to include the stretched A321 (first delivered 1994), the shortened A319 (1996), and
-        the further shortened A318 (2003). The A320 family pioneered the use of digital fly-by-wire flight control systems, as well as side stick controls,
-        in commercial aircraft. The A319 was developed at the request of Steven Udvar-Hazy, the former president and CEO of ILFC according to The New York Times.\n</string>
+    <string name="a319_desc1" formatted="false">L\'Airbus A319 est un membre de la famille Airbus A320 de courte et moyenne portée, à fuselage étroit, commercial
+        avions de ligne à réaction bimoteurs de passagers. Cette famille Airbus A320 a été rebaptisée A320ceo, «ceo» pour «current engine option» en anglais après l\'introduction de l\'A320neo
+        (neo pour new engine option en anglais) en 2014. C\'est une variante à fuselage raccourci de l\'Airbus A320 et est entré en service en avril 1996 chez Swissair, vers
+        deux ans après l\'Airbus A321 allongé et huit ans après l\'A320 d\'origine. L\'avion partage une qualification de type commune avec tous les autres Airbus A320
+        variantes de la famille, permettant aux pilotes de la famille A320 existants de piloter l\'avion sans avoir besoin de formation supplémentaire. En août 2019, un total de 1 480
+        Des Airbus A319 ont été livrés, dont 1 436 sont en service.\n\nLe premier membre de la famille A320 était l\'A320 qui a été lancé en mars
+        1984 et premier vol le 22 février 1987. La famille a été élargie pour inclure l\'A321 allongé (première livraison en 1994), l'\A319 raccourci (1996) et
+        l\'A318 (2003) plus abrégé. La famille A320 a été pionnière dans l\'utilisation de systèmes de commandes de vol numériques à commande électrique, ainsi que de commandes de manche latéral,
+        dans les avions commerciaux. L\'A319 a été développé à la demande de Steven Udvar-Hazy, l\'ancien président-directeur général d\'ILFC selon le New York Times.\n</string>
 
-    <string name="a319_desc2" formatted="false">The A319 design is a shortened fuselage, minimum change derivative of the A320 with its origins in the 130- to 140-seat
-        SA1, part of the Single-Aisle studies. The SA1 was shelved as the consortium concentrated on its bigger siblings. After healthy sales of the A320/A321,
-        Airbus re-focused on what was then known as the A320M-7, meaning A320 minus seven fuselage frames. It would provide direct competition for the 737-300/-700.
-        The shrink was achieved through the removal of four fuselage frames fore and three aft the wing, cutting the overall length by 3.73 metres (12 ft 3 in).
-        Consequently, the number of overwing exits was reduced from four to two.\n\nHigh-density A319s, such as 156-seat aircraft used by easyJet, retain four overwing exits. The bulk-cargo door was replaced by an aft container door, which
-        can take in reduced height LD3-45 containers. Minor software changes were made to accommodate the different handling characteristics; otherwise the aircraft
-        is largely unchanged. Power is provided by the CFM56-5A or V2500-A5, derated to 98 kN (22,000 lbf), with option for 105 kN (24,000 lbf) thrust. With virtually
-        the same fuel capacity as the A320-200 and fewer passengers, the range with 124 passengers in a two-class configuration extends to 6,650 km (3,590 nmi), or
-        6,850 km (3,700 nmi) with the \"Sharklets\". The A319\'s wingspan is wider than the aircraft\'s overall length.\n</string>
+    <string name="a319_desc2" formatted="false">La conception de l\'A319 est un fuselage raccourci, dérivé à changement minimum de l\'A320 avec ses origines dans les 130 à 140 sièges
+        SA1, partie des études Monocouloir. Le SA1 a été mis de côté car le consortium s\'est concentré sur ses grands frères et sœurs. Après de bonnes ventes de l\'A320/A321,
+        Airbus s\'est recentré sur ce qui était alors connu sous le nom d\'A320M-7, c\'est-à-dire A320 moins sept cadres de fuselage. Il fournirait une concurrence directe pour les 737-300/-700.
+        Le rétrécissement a été obtenu grâce à la suppression de quatre cadres de fuselage à l\'avant et trois à l\'arrière de l\'aile, réduisant la longueur totale de 3,73 mètres.
+        Par conséquent, le nombre de sorties au-dessus des ailes a été réduit de quatre à deux.\n\nLes A319 à haute densité, tels que les avions de 156 places utilisés par easyJet, conservent quatre sorties d\'aile. La porte du vrac a été remplacée par une porte arrière du conteneur, qui
+        peut accueillir des conteneurs LD3-45 de hauteur réduite. Des modifications logicielles mineures ont été apportées pour tenir compte des différentes caractéristiques de manipulation ; sinon l\'avion
+        est en grande partie inchangé. La puissance est fournie par le CFM56-5A ou le V2500-A5, déclassé à 98 kN, avec une option pour une poussée de 105 kN. Avec pratiquement
+        la même capacité de carburant que l\'A320-200 et moins de passagers, l\'autonomie avec 124 passagers dans une configuration à deux classes s\'étend à 6 650 km (3 590 nmi), ou
+        6 850 km (3 700 nmi) avec les «sharklets». L\'envergure de l\'A319 est plus large que la longueur totale de l\'avion.\n</string>
 
-    <string name="a319_desc3">\nThe A319 variants include the corporate jet version A319CJ (rebranded ACJ319), A319neo equipped with new engines,
-        A319 MPA (Maritime Patrol Aircraft) - military derivative of the A319, and A319LR - the longer-range version of the A319.\n</string>
+    <string name="a319_desc3">\nLes variantes de l\'A319 comprennent la version jet d\'affaires A319CJ (rebaptisée ACJ319), l\'A319neo équipé de nouveaux moteurs,
+        A319 MPA (Maritime Patrol Aircraft, en anglais) - dérivé militaire de l\'A319, et A319LR - la version plus longue portée de l'A319.\n</string>
 
     <string name="a319_specs_constraint">()\n</string>
 
 
-    <string name="a319_identify">How to identify Airbus A319?</string>
-    <string name="a319_identify_ans">\"Notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
-        3 exits - 1 over the wing and 2 near either ends of the fuselage, and either small triangular wingtips (wingtip fence) similar to those on A380 or large L-shaped sharklets.</string>
+    <string name="a319_identify">Comment identifier l\'Airbus A319?</string>
+    <string name="a319_identify_ans">Conception de fenêtre «crantée», nez «bulbeux», 2 trains d\'atterrissage principaux à deux roues, nacelle moteur sans extensions de fuite,
+        3 sorties - 1 au-dessus de l\'aile et 2 près de chaque extrémité du fuselage, et soit de petits bouts d\'aile triangulaires (clôture de bout d\'aile) similaires à ceux de l\'A380 ou de grande taille
+        sharklets en forme de L.</string>
 
     <string name="a319_cockpit_value">2</string>
-    <string name="a319_wingspan_value">35.80 m</string>
-    <string name="a319_length_value">33.84 m</string>
-    <string name="a319_height_value">11.76 m</string>
-    <string name="a319_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
-    <string name="a319_mtow_value">75.5 t</string>
-    <string name="a319_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
-    <string name="a319_range_value">3,750 nmi</string>
+    <string name="a319_wingspan_value">35,80 m</string>
+    <string name="a319_length_value">33,84 m</string>
+    <string name="a319_height_value">11,76 m</string>
+    <string name="a319_fuselage_value">3,95 m (L) / 4,14 m (H)</string>
+    <string name="a319_mtow_value">75,5 t</string>
+    <string name="a319_cruise_speed_value">829 km/h (typique),\n871 km/h (max.)</string>
+    <string name="a319_range_value">3750 nmi</string>
     <string name="a319_thrust_value">98–120 kN</string>
     <!--AIRBUS A319-->
 

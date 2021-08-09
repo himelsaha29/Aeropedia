@@ -484,12 +484,12 @@
     <string name="a319_desc2" formatted="false">The A319 design is a shortened fuselage, minimum change derivative of the A320 with its origins in the 130- to 140-seat
         SA1, part of the Single-Aisle studies. The SA1 was shelved as the consortium concentrated on its bigger siblings. After healthy sales of the A320/A321,
         Airbus re-focused on what was then known as the A320M-7, meaning A320 minus seven fuselage frames. It would provide direct competition for the 737-300/-700.
-        The shrink was achieved through the removal of four fuselage frames fore and three aft the wing, cutting the overall length by 3.73 metres (12 ft 3 in).
+        The shrink was achieved through the removal of four fuselage frames fore and three aft the wing, cutting the overall length by 3.73 metres.
         Consequently, the number of overwing exits was reduced from four to two.\n\nHigh-density A319s, such as 156-seat aircraft used by easyJet, retain four overwing exits. The bulk-cargo door was replaced by an aft container door, which
         can take in reduced height LD3-45 containers. Minor software changes were made to accommodate the different handling characteristics; otherwise the aircraft
-        is largely unchanged. Power is provided by the CFM56-5A or V2500-A5, derated to 98 kN (22,000 lbf), with option for 105 kN (24,000 lbf) thrust. With virtually
+        is largely unchanged. Power is provided by the CFM56-5A or V2500-A5, derated to 98 kN, with option for 105 kN thrust. With virtually
         the same fuel capacity as the A320-200 and fewer passengers, the range with 124 passengers in a two-class configuration extends to 6,650 km (3,590 nmi), or
-        6,850 km (3,700 nmi) with the \"Sharklets\". The A319\'s wingspan is wider than the aircraft\'s overall length.\n</string>
+        6,850 km (3,700 nmi) with the \"sharklets\". The A319\'s wingspan is wider than the aircraft\'s overall length.\n</string>
 
     <string name="a319_desc3">\nThe A319 variants include the corporate jet version A319CJ (rebranded ACJ319), A319neo equipped with new engines,
         A319 MPA (Maritime Patrol Aircraft) - military derivative of the A319, and A319LR - the longer-range version of the A319.\n</string>

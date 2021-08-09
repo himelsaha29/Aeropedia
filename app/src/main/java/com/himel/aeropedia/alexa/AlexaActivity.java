@@ -172,7 +172,7 @@ public class AlexaActivity extends CoreActivity {
                 SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
                 editor.putString("AlexaRestart", "No");
                 editor.apply();
-                Intent intent = getIntent();
+                Intent intent = new Intent(this, AlexaActivity.class);
                 finish();
                 startActivity(intent);
             }
