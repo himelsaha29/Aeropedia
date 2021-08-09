@@ -419,7 +419,7 @@ public class AirbusA380 extends AppCompatActivity {
 
     private void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
                 sliderItem.setImageLocation(R.drawable.a380_slider1);
@@ -428,7 +428,7 @@ public class AirbusA380 extends AppCompatActivity {
             } else if (i == 2) {
                 sliderItem.setImageLocation(R.drawable.a380_slider3);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.a350_slider4);
+                sliderItem.setImageLocation(R.drawable.a380_slider4);
             }
 
             sliderItemList.add(sliderItem);

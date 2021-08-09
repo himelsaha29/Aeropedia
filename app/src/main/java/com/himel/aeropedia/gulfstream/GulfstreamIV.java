@@ -430,13 +430,13 @@ public class GulfstreamIV extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.gulfstream_giv_slider1);
+                sliderItem.setImageLocation(R.drawable.gulfstream_giv_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.gulfstream_giv_slider2);
+                sliderItem.setImageLocation(R.drawable.gulfstream_giv_slider03);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.gulfstream_giv_slider3);
+                sliderItem.setImageLocation(R.drawable.gulfstream_giv_slider02);
             } else if (i == 3) {
-                sliderItem.setImageLocation(R.drawable.gulfstream_giv_slider4);
+                sliderItem.setImageLocation(R.drawable.gulfstream_giv_slider04);
             }
 
             sliderItemList.add(sliderItem);
