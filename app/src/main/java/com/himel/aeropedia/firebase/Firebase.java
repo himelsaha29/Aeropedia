@@ -5,15 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -45,6 +48,7 @@ public class Firebase extends AppCompatActivity {
     private Animation translate = null;
     private TextView text;
     private ConstraintLayout layout;
+    private ScrollView scroll;
 
     Button a350Button, a340Button, a380Button, b787Button, cessnaButton, havillandButton, save, show;
 
@@ -64,6 +68,9 @@ public class Firebase extends AppCompatActivity {
         show = findViewById(R.id.show);
         text = findViewById(R.id.text);
         layout = findViewById(R.id.buttonContainer);
+        scroll = findViewById(R.id.firebaseScroll);
+        Display display = ((android.view.WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+        scroll.setFadingEdgeLength((int) (display.getHeight() *0.12));
         DatabaseReference firebase = FirebaseDatabase.getInstance().getReference().child("Aircraft Preference");
 
         animate();

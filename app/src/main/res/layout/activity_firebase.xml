@@ -34,13 +34,22 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:fadeScrollbars="true"
+        android:fadingEdgeLength="150dp"
+        android:overScrollMode="always"
+        android:requiresFadingEdge="vertical"
         android:id="@+id/buttonContainer"
         android:layout_weight="0.6">
 
 
         <ScrollView
+            android:id="@+id/firebaseScroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fadeScrollbars="true"
+            android:fadingEdgeLength="150dp"
+            android:overScrollMode="always"
+            android:requiresFadingEdge="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
