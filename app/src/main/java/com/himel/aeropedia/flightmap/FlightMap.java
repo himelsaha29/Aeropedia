@@ -464,46 +464,42 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                 positionSourceTV.setText(markerInfo[9]);
 
 
+                                // getting flight track
                                 if (!flightRoute[1].equalsIgnoreCase("N/A")) {
-
 
                                     Thread threadTrack = new Thread(new Runnable() {
                                         @Override
                                         public void run() {
                                             flightTrack = route.getTrack(flightRoute[1]);
+                                            if (flightTrack[0].equalsIgnoreCase("true")) {
+                                                Float destinationAirportLat = Float.valueOf(flightTrack[1]);
+                                                Float destinationAirportLong = Float.valueOf(flightTrack[2]);
+
+                                                FlightMap.this.runOnUiThread(new Runnable() {
+                                                    @Override
+                                                    public void run() {
+                                                        if (enableDarkOnCreate.equals("No")) {
+                                                            polyline = mMap.addPolyline(new PolylineOptions()
+                                                                    .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
+                                                                    .width(7)
+                                                                    .pattern(pattern)
+                                                                    .color(Color.BLUE)
+                                                                    .geodesic(true));
+                                                        } else {
+                                                            polyline = mMap.addPolyline(new PolylineOptions()
+                                                                    .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
+                                                                    .width(7)
+                                                                    .pattern(pattern)
+                                                                    .color(Color.YELLOW)
+                                                                    .geodesic(true));
+                                                        }
+                                                    }
+                                                });
+                                            }
                                         }
                                     });
 
                                     threadTrack.start();
-
-                                    // wait until the thread is done, then join with main thread
-                                    try {
-                                        threadTrack.join();
-                                    } catch (InterruptedException e) {
-                                        e.printStackTrace();
-                                    }
-
-
-                                    if (flightTrack[0].equalsIgnoreCase("true")) {
-                                        Float destinationAirportLat = Float.valueOf(flightTrack[1]);
-                                        Float destinationAirportLong = Float.valueOf(flightTrack[2]);
-
-                                        if (enableDarkOnCreate.equals("No")) {
-                                            polyline = mMap.addPolyline(new PolylineOptions()
-                                                    .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
-                                                    .width(7)
-                                                    .pattern(pattern)
-                                                    .color(Color.BLUE)
-                                                    .geodesic(true));
-                                        } else {
-                                            polyline = mMap.addPolyline(new PolylineOptions()
-                                                    .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
-                                                    .width(7)
-                                                    .pattern(pattern)
-                                                    .color(Color.YELLOW)
-                                                    .geodesic(true));
-                                        }
-                                    }
                                 }
 
                             }
@@ -513,14 +509,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 });
 
                 threadRoute.start();
-
-                // wait until the thread is done, then join with main thread
-//                try {
-//                    threadRoute.join();
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-
 
                 markerSelected = marker;
                 marker.setIcon(markerPlaneRed);
