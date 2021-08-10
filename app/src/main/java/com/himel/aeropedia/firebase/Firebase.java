@@ -50,7 +50,7 @@ public class Firebase extends AppCompatActivity {
     private ConstraintLayout layout;
     private ScrollView scroll;
 
-    Button a350Button, a340Button, a380Button, b787Button, cessnaButton, havillandButton, save, show;
+    Button a350Button, a340Button, a380Button, b787Button, cessnaButton, havillandButton, save;
 
     boolean a350, a340, a380, b787, citation, de_havilland;
 
@@ -65,7 +65,6 @@ public class Firebase extends AppCompatActivity {
         cessnaButton = findViewById(R.id.citation);
         havillandButton = findViewById(R.id.havilland);
         save = findViewById(R.id.save);
-        show = findViewById(R.id.show);
         text = findViewById(R.id.text);
         layout = findViewById(R.id.buttonContainer);
         scroll = findViewById(R.id.firebaseScroll);
@@ -76,7 +75,7 @@ public class Firebase extends AppCompatActivity {
         animate();
         assignButtons();
 
-        show.setOnClickListener(new View.OnClickListener() {
+        text.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {

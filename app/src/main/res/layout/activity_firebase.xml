@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25">
+        android:layout_weight="0.2">
 
         <TextView
             android:id="@+id/text"
@@ -39,7 +39,7 @@
         android:overScrollMode="always"
         android:requiresFadingEdge="vertical"
         android:id="@+id/buttonContainer"
-        android:layout_weight="0.6">
+        android:layout_weight="0.65">
 
 
         <ScrollView
@@ -533,7 +533,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25">
+        android:layout_weight="0.10"
+        android:padding="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -556,8 +557,7 @@
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:padding="10dip">
+                        android:orientation="vertical">
 
                         <soup.neumorphism.NeumorphButton
                             android:id="@+id/save"
@@ -580,43 +580,6 @@
 
 
                 </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:padding="10dip">
-
-                        <soup.neumorphism.NeumorphButton
-                            android:id="@+id/show"
-                            style="@style/Widget.Neumorph.Button"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/maven_pro_medium"
-                            android:padding="5dp"
-                            android:text="Show"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            app:neumorph_backgroundColor="#f2f4f6"
-                            app:neumorph_shadowColorDark="#eaeaea"
-                            app:neumorph_shadowColorLight="#fdfdfd"
-                            app:neumorph_strokeColor="#f2f4f6"
-                            app:neumorph_strokeWidth="5dp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
 
             </LinearLayout>
 
