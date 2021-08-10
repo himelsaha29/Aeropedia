@@ -92,7 +92,7 @@ public class Firebase extends AppCompatActivity {
                         SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
                         Set<String> aircraftsChosen = prefs.getStringSet("ChosenAircrafts", null);
 
-                        System.out.println(dataSnapshot.getChildrenCount());
+                        System.out.println("Children count : " + dataSnapshot.getChildrenCount());
 
                         for (DataSnapshot ds : dataSnapshot.getChildren()) {
                             if (!map.containsKey(ds.child("preferredAircraft").getValue().toString())) {
@@ -113,6 +113,76 @@ public class Firebase extends AppCompatActivity {
                                 int width = displayMetrics.widthPixels;
 
                                 for (String s : map.keySet()) {
+
+                                    if (s.equalsIgnoreCase("Airbus A220")) {
+                                        NeumorphButton button = findViewById(R.id.a220);
+                                        TextView status = findViewById(R.id.a220status);
+                                        status.setText("Airbus A220 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Airbus A220")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+                                    if (s.equalsIgnoreCase("Airbus A300")) {
+                                        NeumorphButton button = findViewById(R.id.a300);
+                                        TextView status = findViewById(R.id.a300status);
+                                        status.setText("Airbus A300 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Airbus A300")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+                                    if (s.equalsIgnoreCase("Airbus A310")) {
+                                        NeumorphButton button = findViewById(R.id.a310);
+                                        TextView status = findViewById(R.id.a310status);
+                                        status.setText("Airbus A310 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Airbus A310")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+                                    if (s.equalsIgnoreCase("Airbus A318")) {
+                                        NeumorphButton button = findViewById(R.id.a318);
+                                        TextView status = findViewById(R.id.a318status);
+                                        status.setText("Airbus A318 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Airbus A318")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+
+
+
+
+
 
                                     if (s.equalsIgnoreCase("Airbus A350")) {
                                         NeumorphButton button = findViewById(R.id.a350);
