@@ -537,14 +537,14 @@
     <string name="a318_desc2" formatted="false">Orders for the A318 have been relatively slow, but slightly better than for its direct competitor the Boeing 737-600. By
         30 September 2017, Airbus had received 80 orders for this model compared to 69 for the 737-600. The sales pace has been influenced by the strong sales of
         the Bombardier CRJ900 and Embraer E-Jets series.\n\nThe narrow-body (single-aisle) aircraft is a low-wing cantilever monoplane with a conventional tail unit
-        having a single vertical stabilizer and rudder. Overall, the A318 is over six metres shorter and around 3 t (6,600 lb) lighter than the A320. To compensate
+        having a single vertical stabilizer and rudder. Overall, the A318 is over six metres shorter and around 3 t lighter than the A320. To compensate
         for the reduced moment arm, it has a larger vertical stabiliser. While initial concepts depicted the aircraft with a Boeing 737-300-style dorsal fin extension,
-        the final design incorporated a fin tip extension, making it 75 centimetres (30 in) taller than the other A320 variants. Pilots who are trained on the other
+        the final design incorporated a fin tip extension, making it 75 centimetres taller than the other A320 variants. Pilots who are trained on the other
         variants may fly the A318 with no further certification, since it features a common flight deck and the same type rating as its sister aircraft.\n\nIn March 2006, the European Aviation Safety Agency (EASA) certified a modified control software enhancement to the Airbus A318 designed to allow the aircraft
         to perform steep approaches. The aircraft is the largest commercial aircraft certified by EASA for steep approach operations. The software modifies the
         control laws of the aircraft when the steep approach function is selected by the crew, by automatically deploying some of the spoiler panels to provide
         additional drag when the aircraft is in the landing configuration. It also provides alternative aural alerts to the crew and modifies spoiler deployment
-        automatically below 120 feet (37 m) on landing. The A318 steep approach procedure allows the aircraft to perform approaches at descent angles of up to
+        automatically below 37 m on landing. The A318 steep approach procedure allows the aircraft to perform approaches at descent angles of up to
         5.5°, as opposed to the standard 3° for a normal approach.\n</string>
 
     <string name="a318_desc3">\nThe A318 comes in only one variant, A318-100. Unlike the other aircraft in the family (A319, A320, A321), A318 does not
@@ -554,7 +554,7 @@
 
 
     <string name="a318_identify">How to identify Airbus A318?</string>
-    <string name="a318_identify_ans">Stubby, tall tail, \"notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
+    <string name="a318_identify_ans">Stubby fuselage, tall tail, \"notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
         3 exits - 1 over the wing and 2 near either ends of the fuselage, 11 windows between fore cabin door and emergency exit over the wing, and small triangular wingtips (wingtip fence) similar to those on A380.</string>
 
     <string name="a318_cockpit_value">2</string>

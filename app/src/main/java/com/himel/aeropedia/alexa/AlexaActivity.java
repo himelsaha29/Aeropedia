@@ -154,7 +154,7 @@ public class AlexaActivity extends CoreActivity {
 //                Intent intent = new Intent(this, AlexaActivity.class);
 //                finish();
 //                startActivity(intent);
-                onCreate(savedInstanceState);
+                onCreate(null);
             }
 
             loadLocale();

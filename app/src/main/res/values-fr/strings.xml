@@ -523,57 +523,59 @@
 
 
     <!--AIRBUS A318-->
-    <string name="a318_type_value">Narrow-body\nairliner</string>
+    <string name="a318_type_value">Avion de ligne à\nfuselage étroit</string>
     <string name="a318_engine_value">CFM56 /\nP&amp;W PW6000 (2)</string>
-    <string name="a318_first_flight_value">15 January 2002</string>
-    <string name="a318_intro_value">2003 with\nFrontier Airlines</string>
+    <string name="a318_first_flight_value">15 janvier 2002</string>
+    <string name="a318_intro_value">2003 avec\nFrontier Airlines</string>
     <string name="a318_customer_value">Air France</string>
     <string name="a318_variants_value">1</string>
 
-    <string name="a318_desc1" formatted="false">The Airbus A318 is the smallest and least numerous variant airliner of the Airbus A320 family. The A318 carries
-        107 to 132 passengers and has a maximum range of 5,700 km (3,100 nmi). It is intended primarily for short-range service. The aircraft shares a common type rating
-        with all other Airbus A320 family variants, allowing existing A320 family pilots to fly the aircraft without the need for further training. It is the largest
-        commercial aircraft certified by the European Aviation Safety Agency for steep approach operations, allowing flights at airports such as London City. A total of 80
-        A318s were been built during its production phase from 2001 to 2013.\n\nDuring the design process, the A318 encountered several problems. The first one was the
-        decline in demand for new aircraft following the September 11 attacks.
-        Another was the new Pratt &amp; Whitney turbofan engines, which burned more fuel than expected. By the time CFM International (CFM) had a more efficient engine
-        ready for market, many A318 customers had already backed out, including Air China and British Airways. America West Airlines, which had selected the Pratt &amp;
-        Whitney engines, amended its A318 orders, opting instead for A319 or A320 aircraft. Trans World Airlines cancelled a significant order for fifty A318s after being
-        acquired by American Airlines, which did not operate any A320 family aircraft at the time (although neither did TWA when the order was originally placed).
-        While Airbus was hoping to market the A318 as a regional jet alternative, laws in both the U.S. and Europe have kept it in the same class as larger aircraft
-        for calculating charges such as landing fees, limiting the type\'s market potential.\n</string>
+    <string name="a318_desc1" formatted="false">L\'Airbus A318 est la variante d\'avion de ligne la plus petite et la moins nombreuse de la famille Airbus A320. L\'A318 porte
+        107 à 132 passagers et a une autonomie maximale de 5 700 km (3 100 nmi). Il est principalement destiné au service à courte distance. L\'avion partage une qualification de type commune
+        avec toutes les autres variantes de la famille Airbus A320, permettant aux pilotes existants de la famille A320 de piloter l\'avion sans avoir besoin de formation supplémentaire. C\'est le plus grand
+        avion commercial certifié par l\'Agence européenne de la sécurité aérienne pour les opérations d\'approche abrupte, permettant des vols dans des aéroports tels que London City. Un total de 80
+        Les A318 ont été construits pendant sa phase de production de 2001 à 2013.\n\nAu cours du processus de conception, l\'A318 a rencontré plusieurs problèmes. Le premier était le
+        baisse de la demande d\'avions neufs à la suite des attentats du 11 septembre.
+        Un autre était le nouveau Pratt &amp; Les turboréacteurs Whitney, qui consommaient plus de carburant que prévu. Au moment où CFM International (CFM) avait un moteur plus efficace
+        prêt pour le marché, de nombreux clients de l\'A318 s\'étaient déjà retirés, notamment Air China et British Airways. America West Airlines, qui avait sélectionné le Pratt &amp;
+        Whitney moteurs, a modifié ses commandes d\'A318, optant plutôt pour des avions A319 ou A320. Trans World Airlines a annulé une importante commande de cinquante A318 après avoir été
+        acquis par American Airlines, qui n\exploitait aucun avion de la famille A320 à l\'époque (bien que TWA non plus lors de la commande initiale).
+        Alors qu\'Airbus espérait commercialiser l\'A318 en tant qu\'alternative aux avions régionaux, les lois aux États-Unis et en Europe l\'ont maintenu dans la même classe que les avions plus gros.
+        pour le calcul des redevances telles que les redevances d\'atterrissage, limitant le potentiel de marché du type.\n</string>
 
-    <string name="a318_desc2" formatted="false">Orders for the A318 have been relatively slow, but slightly better than for its direct competitor the Boeing 737-600. By
-        30 September 2017, Airbus had received 80 orders for this model compared to 69 for the 737-600. The sales pace has been influenced by the strong sales of
-        the Bombardier CRJ900 and Embraer E-Jets series.\n\nThe narrow-body (single-aisle) aircraft is a low-wing cantilever monoplane with a conventional tail unit
-        having a single vertical stabilizer and rudder. Overall, the A318 is over six metres shorter and around 3 t (6,600 lb) lighter than the A320. To compensate
-        for the reduced moment arm, it has a larger vertical stabiliser. While initial concepts depicted the aircraft with a Boeing 737-300-style dorsal fin extension,
-        the final design incorporated a fin tip extension, making it 75 centimetres (30 in) taller than the other A320 variants. Pilots who are trained on the other
-        variants may fly the A318 with no further certification, since it features a common flight deck and the same type rating as its sister aircraft.\n\nIn March 2006, the European Aviation Safety Agency (EASA) certified a modified control software enhancement to the Airbus A318 designed to allow the aircraft
-        to perform steep approaches. The aircraft is the largest commercial aircraft certified by EASA for steep approach operations. The software modifies the
-        control laws of the aircraft when the steep approach function is selected by the crew, by automatically deploying some of the spoiler panels to provide
-        additional drag when the aircraft is in the landing configuration. It also provides alternative aural alerts to the crew and modifies spoiler deployment
-        automatically below 120 feet (37 m) on landing. The A318 steep approach procedure allows the aircraft to perform approaches at descent angles of up to
-        5.5°, as opposed to the standard 3° for a normal approach.\n</string>
+    <string name="a318_desc2" formatted="false">Les commandes d\'A318 ont été relativement lentes, mais légèrement meilleures que pour son concurrent direct le Boeing 737-600. Par
+        Au 30 septembre 2017, Airbus avait reçu 80 commandes pour ce modèle contre 69 pour le 737-600. Le rythme des ventes a été influencé par les fortes ventes de
+        les séries Bombardier CRJ900 et Embraer E-Jets.\n\nL\'avion à fuselage étroit (à couloir unique) est un monoplan en porte-à-faux à aile basse avec un empennage conventionnel
+        ayant un seul stabilisateur vertical et un seul gouvernail. Dans l\'ensemble, l\'A318 est plus court de plus de six mètres et environ 3 tonnes plus léger que l\'A320. Pour compenser
+        pour le bras de levier réduit, il a un stabilisateur vertical plus grand. Alors que les concepts initiaux représentaient l\'avion avec une extension de nageoire dorsale de style Boeing 737-300,
+        la conception finale comportait une extension de pointe d\'aileron, ce qui la rend 75 centimètres plus haute que les autres variantes de l\'A320. Pilotes formés de l\'autre
+        les variantes peuvent piloter l\'A318 sans autre certification, car il dispose d\'un poste de pilotage commun et de la même qualification de type que son avion jumeau.\n\nEn mars 2006,
+        L\'Agence européenne de la sécurité aérienne (EASA, en anglais) a certifié une amélioration logicielle de contrôle modifiée de l\'Airbus A318 conçue pour permettre à l\'avion
+        pour effectuer des approches raides. L\'avion est le plus gros avion commercial certifié par l\'EASA pour les opérations d\'approche abrupte. Le logiciel modifie le
+        lois de commande de l\'avion lorsque la fonction d\'approche abrupte est sélectionnée par l\'équipage, en déployant automatiquement certains des panneaux de spoiler pour fournir
+        traînée supplémentaire lorsque l\'avion est en configuration d\'atterrissage. Il fournit également des alertes sonores alternatives à l\'équipage et modifie le déploiement du spoiler
+        automatiquement en dessous de 37 m à l\'atterrissage. La procédure d\'approche abrupte de l\'A318 permet à l\'avion d\'effectuer des approches à des angles de descente allant jusqu\'à
+        5,5°, contre 3° standard pour une approche normale.\n</string>
 
-    <string name="a318_desc3">\nThe A318 comes in only one variant, A318-100. Unlike the other aircraft in the family (A319, A320, A321), A318 does not
-        have A318neo variant. Thus, it is not included in the Airbus A320neo family.\n</string>
+    <string name="a318_desc3">\nL\'A318 n\'est disponible qu\'en une seule variante, l\'A318-100. Contrairement aux autres appareils de la famille (A319, A320, A321), l\'A318 ne
+        avoir la variante A318neo. Ainsi, il ne fait pas partie de la famille Airbus A320neo.\n</string>
 
     <string name="a318_specs_constraint">()\n</string>
 
 
-    <string name="a318_identify">How to identify Airbus A318?</string>
-    <string name="a318_identify_ans">Stubby, tall tail, \"notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with no trailing extensions,
-        3 exits - 1 over the wing and 2 near either ends of the fuselage, 11 windows between fore cabin door and emergency exit over the wing, and small triangular wingtips (wingtip fence) similar to those on A380.</string>
+    <string name="a318_identify">Comment identifier l\'Airbus A318?</string>
+    <string name="a318_identify_ans">Fuselage court, queue haute, conception de fenêtre «encochée», nez «bulbeux», 2 trains d\'atterrissage principaux à deux roues, nacelle de moteur sans extensions de fuite,
+        3 sorties - 1 au-dessus de l\'aile et 2 près de chaque extrémité du fuselage, 11 fenêtres entre la porte de cabine avant et la sortie de secours au-dessus de l\'aile, et petite triangulaire
+        bouts d\'aile (clôture de bout d\'aile) similaires à ceux de l\'A380.</string>
 
     <string name="a318_cockpit_value">2</string>
-    <string name="a318_wingspan_value">34.10 m</string>
-    <string name="a318_length_value">31.44 m</string>
-    <string name="a318_height_value">12.56 m</string>
-    <string name="a318_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
+    <string name="a318_wingspan_value">34,10 m</string>
+    <string name="a318_length_value">31,44 m</string>
+    <string name="a318_height_value">12,56 m</string>
+    <string name="a318_fuselage_value">3,95 m (L) / 4,14 m (H)</string>
     <string name="a318_mtow_value">68 t</string>
-    <string name="a318_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
-    <string name="a318_range_value">3,100 nmi</string>
+    <string name="a318_cruise_speed_value">829 km/h (typique),\n871 km/h (max.)</string>
+    <string name="a318_range_value">3100 nmi</string>
     <string name="a318_thrust_value">96–106 kN</string>
     <!--AIRBUS A318-->
 
