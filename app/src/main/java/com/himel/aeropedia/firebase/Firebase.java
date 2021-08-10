@@ -2,6 +2,7 @@ package com.himel.aeropedia.firebase;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Activity;
@@ -46,7 +47,7 @@ public class Firebase extends AppCompatActivity {
     private DecimalFormat df = new DecimalFormat("###.##");
     private Set<String> chosenAircrafts = new HashSet<String>();;
     private Animation translate = null;
-    private TextView text;
+    private CardView textCard;
     private ConstraintLayout layout;
     private ScrollView scroll;
 
@@ -65,7 +66,7 @@ public class Firebase extends AppCompatActivity {
         cessnaButton = findViewById(R.id.citation);
         havillandButton = findViewById(R.id.havilland);
         save = findViewById(R.id.save);
-        text = findViewById(R.id.text);
+        textCard = findViewById(R.id.textCard);
         layout = findViewById(R.id.buttonContainer);
         scroll = findViewById(R.id.firebaseScroll);
         Display display = ((android.view.WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
@@ -75,7 +76,7 @@ public class Firebase extends AppCompatActivity {
         animate();
         assignButtons();
 
-        text.setOnClickListener(new View.OnClickListener() {
+        textCard.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -332,7 +333,7 @@ public class Firebase extends AppCompatActivity {
 
     private void animate() {
         translate = AnimationUtils.loadAnimation(this, R.anim.animation);
-        text.setAnimation(translate);
+        textCard.setAnimation(translate);
         layout.setAnimation(translate);
     }
 
