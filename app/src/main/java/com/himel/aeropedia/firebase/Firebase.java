@@ -51,14 +51,19 @@ public class Firebase extends AppCompatActivity {
     private ConstraintLayout layout;
     private ScrollView scroll;
 
-    Button a350Button, a340Button, a380Button, b787Button, cessnaButton, havillandButton, save;
+    Button a220Button, a300Button, a310Button, a318Button, a350Button, a340Button, a380Button, b787Button, cessnaButton, havillandButton, save;
 
-    boolean a350, a340, a380, b787, citation, de_havilland;
+    boolean a220, a300, a310, a318, a350, a340, a380, b787, citation, de_havilland;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firebase);
+        a220Button = findViewById(R.id.a220);
+        a300Button = findViewById(R.id.a300);
+        a310Button = findViewById(R.id.a310);
+        a318Button = findViewById(R.id.a318);
+
         a350Button = findViewById(R.id.a350);
         a340Button = findViewById(R.id.a340);
         a380Button = findViewById(R.id.a380);
@@ -224,6 +229,78 @@ public class Firebase extends AppCompatActivity {
 
 
     private void assignButtons() {
+
+        a220Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!a220) {
+                    a220Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) a220Button.getText());
+                    a220 = true;
+                } else {
+                    a220Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) a220Button.getText());
+                    a220 = false;
+                }
+            }
+        });
+
+        a300Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!a300) {
+                    a300Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) a300Button.getText());
+                    a300 = true;
+                } else {
+                    a300Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) a300Button.getText());
+                    a300 = false;
+                }
+            }
+        });
+
+        a310Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!a310) {
+                    a310Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) a310Button.getText());
+                    a310 = true;
+                } else {
+                    a310Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) a310Button.getText());
+                    a310 = false;
+                }
+            }
+        });
+
+        a318Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!a318) {
+                    a318Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) a318Button.getText());
+                    a318 = true;
+                } else {
+                    a318Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) a318Button.getText());
+                    a318 = false;
+                }
+            }
+        });
+
+
+
+
+
+
+
+
         a350Button.setOnClickListener(new View.OnClickListener() {
 
             @Override
