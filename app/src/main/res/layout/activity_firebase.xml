@@ -13,15 +13,20 @@
         android:layout_height="wrap_content">
 
 
-        <androidx.cardview.widget.CardView
+        <soup.neumorphism.NeumorphCardView
             android:id="@+id/textCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="12dp"
-            android:backgroundTint='#f2f4f6'
+            android:layout_margin="8dp"
             app:cardElevation="0dp"
+            style="@style/Widget.Neumorph.CardView"
+            app:neumorph_backgroundColor="#f2f4f6"
+            app:neumorph_shadowColorDark="#eaeaea"
+            app:neumorph_shadowColorLight="#fdfdfd"
+            app:neumorph_strokeColor="#f2f4f6"
+            app:neumorph_strokeWidth="5dp"
             app:cardPreventCornerOverlap="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,12 +41,13 @@
                 android:text="Select your preferred aircraft and share with the aviation community"
                 android:textColor="@color/black"
                 android:textSize="26sp"
+                android:padding="7dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.cardview.widget.CardView>
+        </soup.neumorphism.NeumorphCardView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

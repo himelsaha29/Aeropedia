@@ -37,6 +37,7 @@ import java.util.Map;
 import java.util.Set;
 
 import soup.neumorphism.NeumorphButton;
+import soup.neumorphism.NeumorphCardView;
 
 public class Firebase extends AppCompatActivity {
     private Button button;
@@ -47,7 +48,7 @@ public class Firebase extends AppCompatActivity {
     private DecimalFormat df = new DecimalFormat("###.##");
     private Set<String> chosenAircrafts = new HashSet<String>();;
     private Animation translate = null;
-    private CardView textCard;
+    private NeumorphCardView textCard;
     private ConstraintLayout layout;
     private ScrollView scroll;
 
