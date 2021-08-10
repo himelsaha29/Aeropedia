@@ -2,6 +2,7 @@ package com.himel.aeropedia.firebase;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -10,6 +11,8 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -39,6 +42,9 @@ public class Firebase extends AppCompatActivity {
     private int childCount = 0;
     private DecimalFormat df = new DecimalFormat("###.##");
     private Set<String> chosenAircrafts = new HashSet<String>();;
+    private Animation translate = null;
+    private TextView text;
+    private ConstraintLayout layout;
 
     Button a350Button, a340Button, a380Button, b787Button, cessnaButton, havillandButton, save, show;
 
@@ -56,9 +62,11 @@ public class Firebase extends AppCompatActivity {
         havillandButton = findViewById(R.id.havilland);
         save = findViewById(R.id.save);
         show = findViewById(R.id.show);
+        text = findViewById(R.id.text);
+        layout = findViewById(R.id.buttonContainer);
         DatabaseReference firebase = FirebaseDatabase.getInstance().getReference().child("Aircraft Preference");
 
-
+        animate();
         assignButtons();
 
         show.setOnClickListener(new View.OnClickListener() {
@@ -314,6 +322,12 @@ public class Firebase extends AppCompatActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    private void animate() {
+        translate = AnimationUtils.loadAnimation(this, R.anim.animation);
+        text.setAnimation(translate);
+        layout.setAnimation(translate);
     }
 
 }

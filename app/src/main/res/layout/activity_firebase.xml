@@ -14,6 +14,7 @@
         android:layout_weight="0.25">
 
         <TextView
+            android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -33,6 +34,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:id="@+id/buttonContainer"
         android:layout_weight="0.6">
 
 
