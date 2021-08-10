@@ -580,59 +580,60 @@
     <!--AIRBUS A318-->
 
     <!--AIRBUS A310-->
-    <string name="a310_type_value">Wide-body\nairliner</string>
+    <string name="a310_type_value">Avion de ligne à\nfuselage large</string>
     <string name="a310_engine_value">GE CF6 /\nP&amp;W JT9D / PW4000 (2)</string>
-    <string name="a310_first_flight_value">3 April 1982</string>
-    <string name="a310_intro_value">April 1983\nwith Swissair</string>
+    <string name="a310_first_flight_value">3 avril 1982</string>
+    <string name="a310_intro_value">avril 1983\navec Swissair</string>
     <string name="a310_customer_value">FedEx Express</string>
     <string name="a310_variants_value">4</string>
 
-    <string name="a310_desc1" formatted="false">Airbus had demand for an aircraft smaller than the A300, the first twin-jet wide-body. On 7 July 1978, the A310
-        (initially the A300B10) was launched with orders from Swissair and Lufthansa. On 3 April 1982, the first prototype conducted its maiden flight, and it
-        received its type certification on 11 March 1983. Keeping the same eight-abreast cross-section, the A310 is 6.95 m (22.8 ft) shorter than the initial A300
-        variants, and has a smaller wing, down from 260 to 219 m<sup><small><small>2</small></small></sup> (2,800 to 2,360 sq ft). The A310 introduced a two-crew glass cockpit, later adopted for the A300-600
-        with a common type rating. It was powered by the same General Electric CF6-80 or Pratt &amp; Whitney JT9D then PW4000 turbofan jet engines. During its production phase
-        from 1981 to 1998, a total of 255 A310s were built.\n\nIn April 1983, the aircraft entered revenue service with Swissair, and competed with the Boeing 767-200,
-        introduced six months before. Its longer range and ETOPS regulations allowed it to be operated on transatlantic flights. Until the last delivery in June 1998,
-        255 aircraft were produced, as it was succeeded by the larger Airbus A330-200. It was available as a cargo aircraft version, and was also developed into a
-        military variant, the A310 MRTT multi-role transport, then tanker.\n</string>
+    <string name="a310_desc1" formatted="false">Airbus avait une demande pour un avion plus petit que l\'A300, le premier gros-porteur biréacteur. Le 7 juillet 1978, l\'A310
+        (initialement l\'A300B10) a été lancé avec des commandes de Swissair et Lufthansa. Le 3 avril 1982, le premier prototype effectua son vol inaugural, et il
+        a reçu sa certification de type le 11 mars 1983. Gardant la même section transversale de huit de front, l\'A310 est 6,95 m plus court que l\'A300 initial
+        variantes, et a une aile plus petite, passant de 260 à 219 m<sup><small><small>2</small></small></sup>. L\'A310 a introduit un cockpit en verre à deux équipages, adopté plus tard pour l\'A300-600
+        avec une qualification de type commune. Il était propulsé par les mêmes turboréacteurs à double flux General Electric CF6-80 ou Pratt &amp; Whitney JT9D puis PW4000. Pendant sa phase de production
+        de 1981 à 1998, un total de 255 A310 ont été construits.\n\nEn avril 1983, l\'avion est entré en service commercial avec Swissair et a concurrencé le Boeing 767-200,
+        introduit six mois auparavant. Son rayon d\'action plus long et sa réglementation ETOPS (en anglais) lui permettaient d\'être exploité sur des vols transatlantiques. Jusqu\'à la dernière livraison en juin 1998,
+        255 appareils ont été produits, et le plus gros Airbus A330-200 lui a succédé. Il était disponible en version avion cargo et a également été développé en un
+        variante militaire, le transport multirôle A310 MRTT, ravitailleur de l\'époque.\n</string>
 
-    <string name="a310_desc2" formatted="false">The Airbus A310 was a medium- to long-range twin-engined wide-body jet airliner. Initially a derivative of the A300,
-        the aircraft had originally been designated the A300B10. It was essentially a shortened variant of the A300; however, there were considerable differences
-        between the two aircraft. Specifically, the fuselage possessed the same cross-section, but being shorter than the A300, it provided capacity for a typical
-        maximum of 200 passengers. The rear fuselage was heavily re-designed, featuring altered tapering, while involved a move aft of the rear bulkhead to create
-        additional capacity; this same design change was later transferred back to later variants of the A300, such as the A300-600 and A330/A340 fuselages.\n\nThe
-        wing of the A310 was redesigned, possessing a reduced span and wing area, and incorporating simpler single-slotted Fowler flaps designed by British Aerospace
-        shortly following its decision to join the Airbus consortium. Other changes to the wing included the elimination of the outer ailerons, which were occasionally
-        referred to by the manufacturer as being \"low speed ailerons\", and the addition of electrically actuated spoilers. The wing also featured common pylons,
-        which were able to support all types of engines that were offered to customers to power the airliner. From 1985 onwards, later-built production A310s were
-        equipped with wingtip fences for the purpose of reducing lift-induced drag. A limited number of alternations were also performed to the airliner\'s tail unit,
-        such as the adoption of smaller horizontal tail surfaces. The A310 was furnished with a two-crew glass cockpit configuration as standard, removing the
-        requirement for a flight engineer; Airbus referred to this concept as the Forward-Facing Crew Cockpit. The A310 was equipped with a modified undercarriage,
-        derived from the A300; the landing gear were outfitted with carbon brakes, which were fitted as standard. The structure of the airliner featured a high
-        level of composite materials throughout both primary and secondary structures, increased beyond that of the earlier A300. The A310 is outfitted with integrated
-        drive electrical generators along with auxiliary power unit, which were improved versions of those used on the A300.\n</string>
+    <string name="a310_desc2" formatted="false">L\'Airbus A310 était un avion de ligne bimoteur à large fuselage de moyenne à longue portée. Initialement dérivé de l\'A300,
+        l\'avion avait été initialement désigné A300B10. C\'était essentiellement une variante raccourcie de l\'A300; cependant, il y avait des différences considérables
+        entre les deux avions. Plus précisément, le fuselage possédait la même section transversale, mais étant plus court que l\'A300, il offrait une capacité pour un
+        200 passagers maximum. Le fuselage arrière a été fortement repensé, avec une conicité modifiée, tout en impliquant un mouvement à l\'arrière de la cloison arrière pour créer
+        capacité supplémentaire; ce même changement de conception a ensuite été transféré à des variantes ultérieures de l\'A300, telles que les fuselages A300-600 et A330/A340.\n\nLe
+        l\'aile de l\'A310 a été redessinée, possédant une envergure et une surface d\'aile réduites, et incorporant des volets Fowler à fente unique plus simples conçus par British Aerospace
+        peu après sa décision de rejoindre le consortium Airbus. D\'autres modifications apportées à l\'aile comprenaient l\'élimination des ailerons extérieurs, qui étaient parfois
+        désignés par le constructeur comme étant des «ailerons basse vitesse», et l\'ajout de spoilers à commande électrique. L\'aile comportait également des pylônes communs,
+        capables de prendre en charge tous les types de moteurs proposés aux clients pour propulser l\'avion de ligne. À partir de 1985, les A310 de production plus récents ont été
+        équipé de clôtures en bout d\'aile dans le but de réduire la traînée induite par la portance. Un nombre limité d\'alternances ont également été effectuées sur l\'empennage de l\'avion de ligne,
+        comme l\'adoption de surfaces de queue horizontales plus petites. L\'A310 était équipé de série d\'un cockpit vitré à deux équipages, supprimant le
+        besoin d\'un mécanicien navigant ; Airbus a appelé ce concept le cockpit d\'équipage orienté vers l\'avant. L\'A310 était équipé d\'un train d\'atterrissage modifié,
+        dérivé de l\'A300 ; les trains d\'atterrissage étaient équipés de freins en carbone, qui étaient montés de série. La structure de l\'avion de ligne comportait une haute
+        niveau de matériaux composites dans les structures primaires et secondaires, a augmenté au-delà de celui de l\'A300 plus tôt. L\'A310 est équipé d\'un
+        entraîner des générateurs électriques ainsi qu\'une unité de puissance auxiliaire, qui étaient des versions améliorées de celles utilisées sur l\'A300.\n</string>
 
-    <string name="a310_desc3">\nThe A310 is available in two basic versions, the medium range −200 and the longer range −300. The first version of the aircraft to be
-        developed was the −200, but this was later joined by the −300, which then became the standard production version of the aircraft. The short range −100 variant
-        was never developed due to low demand. Other variants include A310 MRT/MRTT (Multi-Role Tanker Transport), A310 Zero G, the reduced-gravity aircraft used to
-        realise parabolas, allowing performance of twenty-two seconds of weightlessness.\n</string>
+    <string name="a310_desc3">\nL\'A310 est disponible en deux versions de base, la moyenne portée -200 et la longue portée -300. La première version de l\'avion à être
+        développé était le -200, mais il a ensuite été rejoint par le -300, qui est ensuite devenu la version de production standard de l\'avion. La variante à courte portée -100
+        n\'a jamais été développé en raison de la faible demande. D\'autres variantes incluent l\'A310 MRT/MRTT (Multi-Role Tanker Transport, en anglais), l\'A310 Zero G, l\'avion à gravité réduite utilisé pour
+        réaliser des paraboles, permettant des performances de vingt-deux secondes d\'apesanteur.\n</string>
 
-    <string name="a310_specs_constraint">(-200 and -300 variants compared in order)\n</string>
+    <string name="a310_specs_constraint">(comparaison ordonnée des variantes -200 and -300)\n</string>
 
 
-    <string name="a310_identify">How to identify Airbus A310?</string>
-    <string name="a310_identify_ans">Smooth central section of the lower fuselage (curved fuselage with no prominent wing flaring), \"notched\" window design, twin ram air intakes on the curved belly of the aircraft, 2 cabin doors and 1 overwing exit, with/without wingtip fences.</string>
+    <string name="a310_identify">Comment identifier l\'Airbus A310?</string> «Project Sunrise»
+    <string name="a310_identify_ans">Section centrale lisse du fuselage inférieur (fuselage incurvé sans évasement d\'aile proéminent), conception de fenêtre «encochée», vérin double
+        entrées d\'air sur le ventre incurvé de l\'avion, 2 portes de cabine et 1 sortie d\'aile, avec/sans clôtures en bout d\'aile.</string>
 
     <string name="a310_cockpit_value">2</string>
-    <string name="a310_wingspan_value">43.9 m</string>
-    <string name="a310_length_value">46.66 m</string>
-    <string name="a310_height_value">15.8 m</string>
-    <string name="a310_fuselage_value">5.64 m (W) / ~6 m (H)</string>
+    <string name="a310_wingspan_value">43,9 m</string>
+    <string name="a310_length_value">46,66 m</string>
+    <string name="a310_height_value">15,8 m</string>
+    <string name="a310_fuselage_value">5,64 m (L) / ~6 m (H)</string>
     <string name="a310_mtow_value">144 / 164 t</string>
-    <string name="a310_cruise_speed_value">850 km/h (typical),\n892 km/h (max.)</string>
-    <string name="a310_range_value">3,500 / 5,150 nmi</string>
-    <string name="a310_thrust_value">203.8–257.4 kN</string>
+    <string name="a310_cruise_speed_value">850 km/h (typique),\n892 km/h (max.)</string>
+    <string name="a310_range_value">3500 / 5150 nmi</string>
+    <string name="a310_thrust_value">203,8–257,4 kN</string>
     <!--AIRBUS A310-->
 
 
