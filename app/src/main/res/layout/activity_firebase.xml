@@ -24,9 +24,8 @@
             style="@style/Widget.Neumorph.CardView"
             app:neumorph_backgroundColor="#f2f4f6"
             app:neumorph_shadowColorDark="#eaeaea"
+            android:clickable="false"
             app:neumorph_shadowColorLight="#fdfdfd"
-            app:neumorph_strokeColor="#f2f4f6"
-            app:neumorph_strokeWidth="5dp"
             app:cardPreventCornerOverlap="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -695,15 +694,13 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:fontFamily="@font/maven_pro_medium"
-            android:text="Save"
+            android:text="Submit"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="15sp"
             app:neumorph_backgroundColor="#f2f4f6"
             app:neumorph_shadowColorDark="#eaeaea"
-            app:neumorph_shadowColorLight="#fdfdfd"
-            app:neumorph_strokeColor="#f2f4f6"
-            app:neumorph_strokeWidth="5dp" />
+            app:neumorph_shadowColorLight="#fdfdfd"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
