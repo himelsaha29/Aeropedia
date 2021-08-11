@@ -629,7 +629,7 @@
     <string name="a310_wingspan_value">43,9 m</string>
     <string name="a310_length_value">46,66 m</string>
     <string name="a310_height_value">15,8 m</string>
-    <string name="a310_fuselage_value">5,64 m (L) / ~6 m (H)</string>
+    <string name="a310_fuselage_value">5,64 m (L) / ~5,9 m (H)</string>
     <string name="a310_mtow_value">144 / 164 t</string>
     <string name="a310_cruise_speed_value">850 km/h (typique),\n892 km/h (max.)</string>
     <string name="a310_range_value">3500 / 5150 nmi</string>
@@ -692,7 +692,7 @@
     <string name="a300_wingspan_value">44,84 m</string>
     <string name="a300_length_value">53,61 m (-B4-200) /\n54,1 m (-600R / -600F)</string>
     <string name="a300_height_value">16,72 m (-B4-200) /\n16,66 m (-600R / -600F)</string>
-    <string name="a300_fuselage_value">5,64 m (L) / ~6 m (H)</string>
+    <string name="a300_fuselage_value">5,64 m (L) / ~5,9 m (H)</string>
     <string name="a300_mtow_value">165 / 171,7 / 170,5 t</string>
     <string name="a300_cruise_speed_value">833 km/h (typique),\n871 km/h (max.)</string>
     <string name="a300_range_value">2900 nmi (-B4-200) /\n4050 m (-600R / -600F)</string>
