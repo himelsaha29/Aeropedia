@@ -7,6 +7,10 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+    aaptOptions {
+        noCompress "ThirdInjectedAndFirstModified_final.json"
+    }
+
     defaultConfig {
         applicationId "com.himel.aeropedia"
         minSdkVersion 21
@@ -74,6 +78,7 @@ dependencies {
     implementation 'com.github.smarteist:autoimageslider:1.4.0-appcompat'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
 
 
 }

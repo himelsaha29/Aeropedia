@@ -93,7 +93,6 @@ public class AuthorizationManager {
      * <action android:name="android.intent.action.VIEW" />
      * <category android:name="android.intent.category.DEFAULT" />
      * <category android:name="android.intent.category.BROWSABLE" />
-     * <!-- host should be our application package e.g.: com.example.yourapp.whee //-->
      * <data
      * android:host="APPLICATION.PACKAGE"
      * android:scheme="amzn" />

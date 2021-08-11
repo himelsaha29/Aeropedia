@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.AssetFileDescriptor;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -19,6 +20,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.gson.JsonParser;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.AlexaActivity;
 import com.himel.aeropedia.antonov.AntonovAn124Ruslan;
@@ -60,6 +62,9 @@ import com.smarteist.autoimageslider.SliderView;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 
+import org.json.JSONObject;
+
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -110,6 +115,19 @@ public class AirbusA300 extends AppCompatActivity {
             langToggle.setShapeType(ShapeType.FLAT);
         } else if (locale.toString().contains("fr")) {
             langToggle.setShapeType(ShapeType.PRESSED);
+        }
+
+        JsonParser jsonParser = new JsonParser();
+
+        try {
+            AssetFileDescriptor descriptor = getAssets().openFd("ThirdInjectedAndFirstModified_final.json");
+            FileReader reader = new FileReader(descriptor.getFileDescriptor());
+            //Read JSON file
+            Object obj = jsonParser.parse(reader);
+            JSONObject airportCity = (JSONObject) obj;
+            System.out.println(airportCity.get("LAX"));
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
 

@@ -706,7 +706,7 @@
     <string name="a220_first_flight_value">16 septembre 2013</string>
     <string name="a220_intro_value">15 juillet 2016 avec\nSwiss International Air Lines</string>
     <string name="a220_customer_value">Delta Air Lines</string>
-    <string name="a220_variants_value">3</string>  «encochée»
+    <string name="a220_variants_value">3</string>
 
     <string name="a220_desc1" formatted="false">L\'Airbus A220 est une famille d\'avions de ligne à fuselage étroit conçu par Bombardier Aéronautique sous le nom de Bombardier CSeries. Dans
         Juillet 2018, l\'avion a été rebaptisé A220 après qu\'Airbus a acquis 50,01% du programme par le biais d\'une coentreprise avec Bombardier, qui a ensuite été rebaptisé Airbus Canada
@@ -769,70 +769,71 @@
 
 
     <!--AIRBUS BELUGA-->
-    <string name="beluga_type_value">Outsize cargo freight</string>
+    <string name="beluga_type_value">Avion-cargo</string>
     <string name="beluga_engine_value">General Electric CF6 (2)</string>
-    <string name="beluga_first_flight_value">13 September 1994</string>
-    <string name="beluga_intro_value">September 1995</string>
-    <string name="beluga_variants_value">1</string>
+    <string name="beluga_first_flight_value">13 septembre 1994</string>
+    <string name="beluga_intro_value">septembre 1995</string>
+    <string name="beluga_variants_value">1</string> «encochée»
 
-    <string name="beluga_desc1" formatted="false">The Airbus A300-600ST (Super Transporter), or Beluga, is a version of the standard A300-600 wide-body airliner
-        modified to carry aircraft parts and outsize cargo. It received the official name of Super Transporter early on; however, the name Beluga, a whale it
-        resembles, gained popularity and has since been officially adopted. During its production phase from 1992 to 1998, only 5 Belugas were built in order to meet demands for transportation. Several major aircraft manufacturers are multinational, and it is not unusual for them to
-        have plants in widely separated locations. Airbus is unique in that although it is today a standalone multinational corporation, it was originally a consortium
-        formed by the major British, French, German, and Spanish aerospace companies. The geographic location of Airbus manufacturing is not only influenced by cost
-        and convenience; it is also a matter of aviation history and national interest.\n\nHistorically, each of the Airbus partners makes an entire aircraft section,
-        which would then be transported to a central location for final assembly; even after the integration of Airbus into a single firm, the arrangement remained
-        largely the same, with Airbus partners becoming subsidiaries or contractors of the multinational pan-European company. The details vary from one model to
-        another, but the general arrangement is for the wings and landing gear to be made in the UK, the tail and doors in Spain, the fuselage in Germany, and the
-        nose and centre-section in France, with final assembly in either Toulouse, France; Hamburg, Germany; or Seville, Spain.\n\nWhen Airbus started in 1970, road vehicles were initially used for the movement of components and sections; however, growth in production volume soon
-        necessitated a switch to air transport. From 1972 onwards, a fleet of four highly modified \"Super Guppies\" took over. These were former Boeing Stratocruisers
-        from the 1940s that had been converted with custom fuselages and the adoption of turbine engines to carry large volume loads for NASA\'s space program in the
-        1960s. Airbus\' use of the Super Guppies led to the jest that \"every Airbus is delivered on the wings of a Boeing\". As time went on, the Super Guppies grew
-        increasingly unsatisfactory for Airbus\'s ferrying needs: their age meant that operating expenses were high and ever-increasing, and growing Airbus production
-        required greater capacity than could be provided by the existing fleet.\n\nVarious options were studied to serve as a replacement transport medium for the Super
-        Guppies, including methods of surface transportation by road, rail, and sea; these alternatives were discarded in favor of a principally air-based solution
-        as they were considered to have reliability concerns and were time-consuming in operation; in addition, the assembly line in Toulouse was not conveniently
-        accessible by any of the surface methods.[6] A key requirement of the new air transporter was the need to accommodate every major component being manufactured
-        by Airbus, including the then-heaviest planned part, that being the wing of the larger variants of the Airbus A340.\n\nSeveral different types of aircraft were examined for potential use, including the Antonov An-124, Antonov An-225, Ilyushin Il-86, Boeing 747, Boeing 767,
-        Lockheed C-5 Galaxy, and McDonnell Douglas C-17 Globemaster III; the use of any existing aircraft was eventually discounted due to a lack of internal space
-        to accommodate the desired components, the use of a piggyback arrangement was also dismissed as impractical. Boeing made their own offer to convert several
-        Boeing 767s for the requirement, but this was viewed as inferior to developing a purpose-built aircraft using Airbus\' existing wide-body twin-engined Airbus
-        A300-600R instead. In August 1991, Aérospatiale and DASA, two of the major Airbus partners, formed a 50/50 joint venture company, Super Airbus Transport International (SATIC),
-        based in Toulouse, France, to develop a new-build replacement for the Super Guppy fleet which eventually led to the development of the Airbus Beluga.\n</string>
+    <string name="beluga_desc1" formatted="false">L\'Airbus A300-600ST (Super Transporter, en anglais), ou Beluga, est une version du gros-porteur standard A300-600
+        modifié pour transporter des pièces d\'avion et une cargaison hors normes. Il a reçu très tôt le nom officiel de Super Transporter; cependant, le nom Beluga, une baleine qu\'il
+        ressemble, a gagné en popularité et a depuis été officiellement adopté. Au cours de sa phase de production de 1992 à 1998, seulement 5 Belugas ont été construits afin de répondre aux demandes de transport. Plusieurs grands avionneurs sont multinationaux et il n\'est pas rare qu\'ils
+        avoir des usines dans des endroits très éloignés les uns des autres. Airbus est unique en ce sens qu\'il s\'agit aujourd\'hui d\'une société multinationale autonome, mais à l\'origine d\'un consortium
+        formé par les grandes entreprises aérospatiales britanniques, françaises, allemandes et espagnoles. L\'emplacement géographique de la fabrication d\'Airbus n\'est pas seulement influencé par le coût
+        et commodité; c\'est aussi une question d\'histoire de l\'aviation et d\'intérêt national.\n\nHistoriquement, chacun des partenaires d\'Airbus réalise une tranche entière d\'avions,
+        qui serait ensuite transporté vers un emplacement central pour l\'assemblage final ; même après l\'intégration d\'Airbus en une seule entreprise, l\'accord est resté
+        en grande partie les mêmes, les partenaires d\'Airbus devenant des filiales ou des sous-traitants de la société multinationale paneuropéenne. Les détails varient d\'un modèle à
+        un autre, mais l\'arrangement général est que les ailes et le train d\'atterrissage soient fabriqués au Royaume-Uni, la queue et les portes en Espagne, le fuselage en Allemagne et le
+        nez et section centrale en France, avec assemblage final à Toulouse, France, Hambourg, Allemagne, ou Séville, Espagne.\n\nLorsque Airbus a démarré en 1970, les véhicules routiers étaient initialement utilisés pour le mouvement des composants et des sections ; cependant, la croissance du volume de production bientôt
+        nécessité de passer au transport aérien. A partir de 1972, une flotte de quatre «Super Guppies» très modifiés prend le relais. C\'étaient d\'anciens Boeing Stratocruisers
+        des années 1940 qui avaient été convertis avec des fuselages personnalisés et l\'adoption de moteurs à turbine pour transporter de grandes charges de volume pour le programme spatial de la NASA dans le
+        années 1960. L\'utilisation par Airbus des Super Guppies a conduit à la plaisanterie que «chaque Airbus est livré sur les ailes d\'un Boeing». Au fil du temps, les Super Guppies ont grandi
+        de plus en plus insatisfaisante pour les besoins de convoyage d\'Airbus: leur âge signifiait que les dépenses d\'exploitation étaient élevées et en constante augmentation, et la production d\'Airbus en croissance
+        nécessitait une capacité supérieure à celle que pouvait fournir la flotte existante.\n\nDifférentes options ont été étudiées pour servir de support de transport de remplacement pour le Super
+        Guppies, y compris les méthodes de transport terrestre par route, rail et mer; ces alternatives ont été écartées au profit d\'une solution principalement aérienne
+        car ils étaient considérés comme présentant des problèmes de fiabilité et leur exploitation prenait beaucoup de temps; de plus, la chaîne de montage de Toulouse n\'était pas commodément
+        accessible par l\'une des méthodes de surface. Une exigence clé du nouveau transporteur aérien était la nécessité d\'accueillir chaque composant majeur en cours de fabrication
+        par Airbus, y compris la partie alors la plus lourde prévue, à savoir l\'aile des plus grandes variantes de l'Airbus A340.\n\nPlusieurs types d\'avions différents ont été examinés pour une utilisation potentielle, notamment l\'Antonov An-124, l\'Antonov An-225, l\'Ilyushin Il-86, le Boeing 747, le Boeing 767,
+        Lockheed C-5 Galaxy et McDonnell Douglas C-17 Globemaster III; l\'utilisation de tout avion existant a finalement été réduite en raison d\'un manque d\'espace interne
+        pour accueillir les composants souhaités, l\'utilisation d\'un dispositif de ferroutage a également été rejetée comme peu pratique. Boeing a fait sa propre offre pour convertir plusieurs
+        Boeing 767 pour l\'exigence, mais cela a été considéré comme inférieur au développement d\'un avion spécialement conçu à l\'aide d\'Airbus bimoteur à large fuselage existant d\'Airbus
+        A300-600R à la place. En août 1991, Aérospatiale et DASA, deux des principaux partenaires d\'Airbus, ont formé une joint-venture à 50/50, Super Airbus Transport International (SATIC),
+        basé à Toulouse, en France, pour développer un nouveau remplacement de la flotte Super Guppy qui a finalement conduit au développement de l\'Airbus Beluga.\n</string>
 
-    <string name="beluga_desc2" formatted="false">The A300-600ST Beluga shares many design similarities, although substantially differing in appearance, to the Airbus
-        A300 upon which it was based. The wings, engines, landing gear, and the lower part of the fuselage remain identical to those used on the conventional A300,
-        while the upper part of the fuselage forms an enormous horseshoe-shaped structure 7.7 m in diameter. In comparison with the Super Guppy, the
-        payload was more than doubled and the volume increased by more than 30% The General Electric CF6-80C2 turbofan engines used are slightly uprated from
-        those used on the standard A300 as well. The vertical stabilizer uses a modified Airbus A340 fin with a 1.12 m base extension while the tailplane was
-        strengthened and fitted with auxiliary fins to maintain directional stability. The tailplane trim tank was also deleted.\n\nTo provide access to the cargo area
-        from the front without having to disconnect all electrical, hydraulic and flight control connections (and also avoiding the lengthy recalibrations before
-        each flight that reconnection entailed), the standard A300 cockpit was relocated down below the cargo-floor level. By relocating the cockpit in this
-        manner, loading times were reportedly halved from those encountered using the Super Guppy, which had needed to disconnect and reconnect such systems. Another
-        reason for faster loading times was the adoption of a roll-on/roll-off loading system, as well as the ability to unload the aircraft in
-        winds of up to 40 knots.\n\nThe cockpit of the Beluga is pressurized but the cargo deck is not, making it inaccessible during flight and unsuitable for cargoes that require a
-        pressurized environment, such as live animals. However, the cargo deck is fitted with a heating module to keep the cargo within an appropriate temperature
-        range. On at least one occasion, a pressurized container has been used for cargo. The aircraft is operated by a crew of three – two
-        pilots and a loadmaster. The main deck cargo volume of the Beluga is greater than that of the C-5 Galaxy or the Antonov An-124 but still smaller
-        than Antonov An-225. However, it is restricted by cargo-weight capacity of 47 tonnes, compared to 122.5 tonnes for the C-5 Galaxy and 150 tonnes for
-        the An-124. Despite this width, the Beluga cannot carry most fuselage parts of the Airbus A380, which are instead normally transported by ship and road. The
-        Beluga has been used to transport some A380 components.\n</string>
+    <string name="beluga_desc2" formatted="false">L\'A300-600ST Beluga partage de nombreuses similitudes de conception, bien que sensiblement différentes en apparence, avec l\'Airbus
+        A300 sur lequel il était basé. Les ailes, les moteurs, le train d\'atterrissage et la partie inférieure du fuselage restent identiques à ceux utilisés sur l\'A300 classique,
+        tandis que la partie supérieure du fuselage forme une énorme structure en fer à cheval de 7,7 m de diamètre. En comparaison avec le Super Guppy, le
+        la charge utile a plus que doublé et le volume augmenté de plus de 30% Les turboréacteurs General Electric CF6-80C2 utilisés sont légèrement surclassés par rapport à
+        ceux utilisés sur l\'A300 standard également. Le stabilisateur vertical utilise un aileron Airbus A340 modifié avec une extension de base de 1,12 m tandis que l\'empennage était
+        renforcé et équipé d\'ailettes auxiliaires pour maintenir la stabilité directionnelle. Le réservoir de garniture d\'empennage a également été supprimé.\n\nPour donner accès à la zone de chargement
+        par l\'avant sans avoir à déconnecter toutes les connexions électriques, hydrauliques et commandes de vol (et aussi en évitant les longs recalibrages avant
+        chaque vol que la reconnexion impliquait), le cockpit standard de l\'A300 a été déplacé en dessous du niveau du plancher de la cargaison. En déplaçant le cockpit dans ce
+        Ainsi, les temps de chargement auraient été divisés par deux par rapport à ceux rencontrés avec le Super Guppy, qui avait dû déconnecter et reconnecter de tels systèmes. Un autre
+        l\'adoption d\'un système de chargement par roulage, ainsi que la possibilité de décharger l\'avion dans
+        des vents allant jusqu\'à 40 nœuds.\n\nLe cockpit du Beluga est pressurisé mais pas le pont cargo, ce qui le rend inaccessible pendant le vol et inadapté aux cargaisons nécessitant un
+        environnement sous pression, comme les animaux vivants. Cependant, le pont de cargaison est équipé d\'un module de chauffage pour maintenir la cargaison à une température appropriée
+        gamme. À au moins une occasion, un conteneur pressurisé a été utilisé pour le fret. L\'avion est exploité par un équipage de trois à deux
+        pilotes et un arrimeur. Le volume de chargement du pont principal du Beluga est supérieur à celui du C-5 Galaxy ou de l\'Antonov An-124 mais toujours plus petit
+        qu\'Antonov An-225. Cependant, il est limité par une capacité de charge de 47 tonnes, contre 122,5 tonnes pour le C-5 Galaxy et 150 tonnes pour le
+        l\'An-124. Malgré cette largeur, le Beluga ne peut pas transporter la plupart des pièces de fuselage de l\'Airbus A380, qui sont plutôt normalement transportées par bateau et par route. Le
+        Beluga a été utilisé pour transporter certains composants de l\'A380.\n</string>
 
 
     <string name="beluga_specs_constraint">(A300-600ST)\n</string>
 
 
-    <string name="beluga_identify">How to identify Airbus Beluga?</string>
-    <string name="beluga_identify_ans">The Beluga does not need bells and whistles to get attention, it is one of its kind. The Airbus livery gives it away too.</string>
+    <string name="beluga_identify">Comment identifier l\'Airbus Beluga?</string>
+    <string name="beluga_identify_ans">Le Beluga n\'a pas besoin de fonctionnalités sophistiquées pour attirer l\'attention, il est unique en son genre. La livrée Airbus
+        s\'identifie elle aussi.</string>
 
     <string name="beluga_cockpit_value">2</string>
-    <string name="beluga_wingspan_value">44.84 m</string>
-    <string name="beluga_length_value">56.15 m</string>
-    <string name="beluga_height_value">17.24 m</string>
-    <string name="beluga_fuselage_value">7.31 m (W) / ~7.5 m (H)</string>
+    <string name="beluga_wingspan_value">44,84 m</string>
+    <string name="beluga_length_value">56,15 m</string>
+    <string name="beluga_height_value">17,24 m</string>
+    <string name="beluga_fuselage_value">7,31 m (L) / ~7,5 m (H)</string>
     <string name="beluga_mtow_value">155 t</string>
-    <string name="beluga_cruise_speed_value">778 km/h (typical)</string>
-    <string name="beluga_range_value">1,501 nmi with 40 t payload /\n2,501 nmi with 26 t payload</string>
+    <string name="beluga_cruise_speed_value">778 km/h (typique)</string>
+    <string name="beluga_range_value">1501 nmi with 40 t payload /\n2501 nmi with 26 t payload</string>
     <string name="beluga_thrust_value">257 kN</string>
     <!--AIRBUS BELUGA-->
 
