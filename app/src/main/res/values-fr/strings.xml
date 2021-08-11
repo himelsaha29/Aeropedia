@@ -643,7 +643,7 @@
     <string name="a300_first_flight_value">28 octobre 1972</string>
     <string name="a300_intro_value">23 mai 1974\navec Air France</string>
     <string name="a300_customer_value">FedEx Express</string>
-    <string name="a300_variants_value">6</string> «encochée»
+    <string name="a300_variants_value">6</string>
 
     <string name="a300_desc1" formatted="false">L\'Airbus A300 est un avion de ligne à fuselage large développé et fabriqué par Airbus. En septembre 1967, les avionneurs
         au Royaume-Uni, la France et l\'Allemagne de l\'Ouest ont signé un protocole d\'accord pour développer un grand avion de ligne. L\'Allemagne de l\'Ouest et la France ont conclu un accord
@@ -701,68 +701,70 @@
 
 
     <!--AIRBUS A220-->
-    <string name="a220_type_value">Narrow-body\nairliner</string>
+    <string name="a220_type_value">Avion de ligne à\nfuselage étroit</string>
     <string name="a220_engine_value">Pratt &amp; Whitney\nPW1500G (2)</string>
-    <string name="a220_first_flight_value">16 September 2013</string>
-    <string name="a220_intro_value">15 July 2016 with\nSwiss International Air Lines</string>
+    <string name="a220_first_flight_value">16 septembre 2013</string>
+    <string name="a220_intro_value">15 juillet 2016 avec\nSwiss International Air Lines</string>
     <string name="a220_customer_value">Delta Air Lines</string>
-    <string name="a220_variants_value">3</string>
+    <string name="a220_variants_value">3</string>  «encochée»
 
-    <string name="a220_desc1" formatted="false">The Airbus A220 is a family of narrow-body airliner designed by Bombardier Aerospace as the Bombardier CSeries. In
-        July 2018, the aircraft was rebranded as the A220 after Airbus acquired 50.01% of the program through a joint venture with Bombardier, which was later renamed Airbus Canada
-        Limited Partnership. The Bombardier CSeries was meant to be a game-changing aircraft. Produced by the Canadian aircraft manufacturer Bombardier, it was its first foray in
-        the 100-to-150-seat market. Though initially successful with sales to major airlines, the program was turned upside following a trade dispute with Boeing. The
-        aircraft program was taken over by Airbus as a result, with the aircraft renamed. Bombardier pulled out of the venture entirely, leaving it
-        to Airbus. Thus, in February 2020, Airbus increased its share to 75%, while the provincial government\'s Investissement Québec held the 25% balance. Powered by Pratt
-        &amp; Whitney PW1500G geared turbofans, the twinjet has fly-by-wire flight controls, a carbon composite wing and an aluminium-lithium fuselage. Early operators,
-        Swiss and airBaltic, recorded better-than-expected fuel burn and dispatch reliability, as well as positive feedback from passengers and crew. Delta Air Lines is
-        currently the largest operator with 50 airplanes in its fleet. As of June 2021, a total of 648 aircraft had been ordered of which 164 had been delivered. The
-        A220 family complements the A319neo in the Airbus range and competes with the largest variants of the Embraer E-Jet E2 family and the smaller Boeing 737 MAX-7
-        variant. As of 30 June 2021, a total of 164 A220s have been built.\n\nThe Airbus A220 family of narrow-body aircraft was originally designed by Bombardier
-        under the CSeries programme. The high efficient engines and extensive use of composite materials, like the wide-body Boeing 787 Dreamliner and Airbus A350 XWB,
-        contribute together to the 12–15% better cash operating costs. Bombardier claimed at the time that the engine and the wings would save up to 20% fuel,
-        a 25% reduction in maintenance costs and four-fold reduction in the noise footprint compared with the Airbus A320neo and the Boeing 737NG with which it competed.
-        The larger CS300 (now A220-300), was 6 tonnes lighter than the Airbus A319neo and nearly 8 tons lighter than the Boeing 737 MAX 7, helping it to achieve up
-        to 12% operating costs savings and 15% with the current models. The cabin cross section of the aircraft family was designed to give enhanced seating comfort
-        for passengers, with features like broader seats and armrests for the middle passenger and larger windows at every seat to give every passenger the physical
-        and psychological advantages of ample natural light. The cabin featured large, rotating overhead storage bins, allowing each passenger to stow a sizeable
-        carry-on bag overhead. Bombardier claimed that compared to the cabins of current in-service narrow-body aircraft, the aircraft family would provide airlines
-        with the highest overhead bin volume per passenger and a wider aisle that allows for faster boarding and disembarkation of passengers.\n</string>
+    <string name="a220_desc1" formatted="false">L\'Airbus A220 est une famille d\'avions de ligne à fuselage étroit conçu par Bombardier Aéronautique sous le nom de Bombardier CSeries. Dans
+        Juillet 2018, l\'avion a été rebaptisé A220 après qu\'Airbus a acquis 50,01% du programme par le biais d\'une coentreprise avec Bombardier, qui a ensuite été rebaptisé Airbus Canada
+        Partenariat limite. Le Bombardier CSeries était censé être un avion révolutionnaire. Produit par l\'avionneur canadien Bombardier, il s\'agissait de sa première incursion en
+        le marché de 100 à 150 places. Bien qu\'initialement réussi avec des ventes aux grandes compagnies aériennes, le programme a été bouleversé à la suite d\'un différend commercial avec Boeing. Le
+        En conséquence, le programme d\'avions a été repris par Airbus et l\'avion a été renommé. Bombardier s\'est complètement retiré de l\'entreprise, la laissant
+        à Airbus. Ainsi, en février 2020, Airbus a augmenté sa part à 75%, tandis que le gouvernement provincial Investissement Québec détenait le solde de 25%. Propulsé par Pratt
+        &amp; Whitney PW1500G à turboréacteurs à double flux, le biréacteur est doté de commandes de vol électriques, d\'une aile en composite de carbone et d\'un fuselage en aluminium-lithium. Les premiers opérateurs,
+        Swiss et airBaltic, ont enregistré une consommation de carburant et une fiabilité de répartition meilleures que prévu, ainsi que des commentaires positifs de la part des passagers et de l\'équipage. Delta Air Lines est
+        actuellement le plus grand opérateur avec 50 avions dans sa flotte. En juin 2021, un total de 648 avions avait été commandé dont 164 avaient été livrés. Le
+        La famille A220 complète l\'A319neo de la gamme Airbus et rivalise avec les plus grandes variantes de la famille Embraer E-Jet E2 et le plus petit Boeing 737 MAX-7
+        une variante. Au 30 juin 2021, un total de 164 A220 ont été construits.\n\nLa famille d\'avions à fuselage étroit Airbus A220 a été conçue à l\'origine par Bombardier
+        dans le cadre du programme CSeries. Les moteurs à haut rendement et l\'utilisation intensive de matériaux composites, comme le Boeing 787 Dreamliner à fuselage large et l\'Airbus A350 XWB,
+        contribuer ensemble à l\'amélioration des coûts d\'exploitation de 12 à 15%. Bombardier a affirmé à l\'époque que le moteur et les ailes permettraient d\'économiser jusqu\'à 20% de carburant,
+        une réduction de 25% des coûts de maintenance et une réduction par quatre de l\'empreinte sonore par rapport à l\'Airbus A320neo et au Boeing 737NG avec lesquels il était en concurrence.
+        Le plus grand CS300 (maintenant A220-300), était 6 tonnes plus léger que l\'Airbus A319neo et près de 8 tonnes plus léger que le Boeing 737 MAX 7, l\'aidant à atteindre jusqu\'à
+        à 12% d\'économies sur les coûts d\'exploitation et 15% avec les modèles actuels. La section transversale de la cabine de la famille d\'avions a été conçue pour offrir un confort d\'assise amélioré
+        pour les passagers, avec des caractéristiques telles que des sièges et des accoudoirs plus larges pour le passager du milieu et des fenêtres plus grandes à chaque siège pour donner à chaque passager le physique
+        et les avantages psychologiques d\'une lumière naturelle abondante. La cabine comportait de grands bacs de rangement supérieurs rotatifs, permettant à chaque passager de ranger un
+        bagage à main au-dessus de la tête. Bombardier a affirmé que, comparativement aux cabines des avions à fuselage étroit actuellement en service, la famille d\'avions fournirait aux compagnies aériennes
+        avec le volume de coffre supérieur le plus élevé par passager et un couloir plus large qui permet un embarquement et un débarquement plus rapides des passagers.\n</string>
 
-    <string name="a220_desc2" formatted="false">The cockpit features the Rockwell Collins Pro Line Fusion avionics suite, which incorporates 15 in (380 mm) displays
-        along with comprehensive navigation, communications, surveillance, engine-indicating and crew-alerting system (EICAS), and aircraft maintenance systems.
-        Other elements of the avionics and other subsystems include Parker Hannifin\'s flight control, fuel and hydraulics systems; Liebherr Aerospace\'s air
-        management system; and United Technologies Corporation\'s air data system, flap and slat actuation systems. The centre fuselage of the A220-300 is 3.4
-        meter longer than the -100 and structurally reinforced for higher loads. The fuselage and many components incorporate a high proportion of composite
-        materials. The overall aircraft consists of 70% advanced lightweight materials, comprising 46% composite materials and 24% aluminium–lithium. Bombardier
-        has claimed that the type can achieve an overall 15% lower seat-mile cost, 20% lower fuel burn and a CO<sub><small><small>2</small></small></sub> emissions advantage.
-        The new Pratt &amp; Whitney PW1000G engine yields 12% better fuel economy than existing jets while being quieter, with further efficiency stemming from
-        enhanced aerodynamics and advanced lightweight materials.\n\nThe composite wings were manufactured and assembled at a purpose built factory at the Bombardier Aerostructures
-        and Engineering Services (BAES) site in Belfast, Northern Ireland. Meanwhile, the aft fuselage and cockpit were built in Bombardier\'s Manufacturing Centre in
-        Saint-Laurent, Quebec, with final assembly occurring at Mirabel, Quebec. While several major elements of the aircraft, such as the centre wing box and doors,
-        were manufactured internally, many other components have been contracted out, namely: Liebherr for the landing gear and pneumatics; UTC Aerospace for the
-        electrical system and lighting; Goodrich for the nacelle; Meggitt for the wheels and brakes, Michelin for the tires; Spirit for the pylons; Honeywell
-        for the APU; and PPG supplies the windows. In 2010, Ghafari Associates was retained to develop the Montreal manufacturing site to accommodate the aircraft production.\n</string>
+    <string name="a220_desc2" formatted="false">Le cockpit comprend la suite avionique Rockwell Collins Pro Line Fusion, qui intègre des écrans de 380 mm
+        ainsi que des systèmes complets de navigation, de communication, de surveillance, d\'indication des moteurs et d\'alerte de l\'équipage (EICAS, en anglais) et des systèmes de maintenance des aéronefs.
+        Les autres éléments de l\'avionique et d\'autres sous-systèmes comprennent les systèmes de commande de vol, de carburant et hydraulique de Parker Hannifin, le
+        système de gestion de l\'air de Liebherr Aerospace et le système de données aérodynamiques, les systèmes d\'actionnement des volets et des becs de United
+        Technologies Corporation. Le fuselage central de l\'A220-300 est de 3,4
+        mètre plus long que le -100 et structurellement renforcé pour des charges plus élevées. Le fuselage et de nombreux composants intègrent une forte proportion de composite
+        matériaux. L\'ensemble de l\'avion est composé à 70 % de matériaux légers avancés, dont 46% de matériaux composites et 24% d\'aluminium-lithium. Bombardier
+        a affirmé que le type peut atteindre un coût global de siège-kilomètre inférieur de 15%, une consommation de carburant inférieure de 20% et un avantage en matière d\'émissions de
+        CO<sub><small><small>2</small></small></sub>.
+        Le nouveau moteur Pratt &amp; Whitney PW1000G permet une économie de carburant 12 % supérieure à celle des jets existants tout en étant plus silencieux, avec une efficacité accrue grâce à
+        aérodynamisme amélioré et matériaux légers avancés.\n\nLes ailes composites ont été fabriquées et assemblées dans une usine spécialement construite à Bombardier Aérostructures
+        et le site des services d\'ingénierie (BAES, en anglais) à Belfast, en Irlande du Nord. Pendant ce temps, le fuselage arrière et le poste de pilotage ont été construits au centre de fabrication de Bombardier à
+        Saint-Laurent, Québec, avec assemblage final à Mirabel, Québec. Alors que plusieurs éléments majeurs de l\'avion, tels que le caisson central de voilure et les portes,
+        ont été fabriqués en interne, de nombreux autres composants ont été sous-traités, à savoir: Liebherr pour le train d\'atterrissage et la pneumatique; UTC Aerospace pour le
+        système électrique et éclairage; Goodrich pour la nacelle; Meggitt pour les roues et les freins, Michelin pour les pneus; Esprit pour les pylônes; Honeywell
+        pour l\'APU ; et PPG fournit les fenêtres. En 2010, Ghafari Associates a été retenu pour développer le site de fabrication de Montréal afin d\'accueillir la production d\'avions.\n</string>
 
-    <string name="a220_desc3">\nAirbus A220 variants include A220-100, A220-300, and ACJ TwoTwenty business jet. Their commonality over 99% allows a common spare part
-        inventory, reducing investment and maintenance costs.\n</string>
+    <string name="a220_desc3">\nLes variantes de l\'Airbus A220 comprennent l\'A220-100, l\'A220-300 et l\'avion d\'affaires ACJ TwoTwenty. Leur communauté de plus de 99% permet une pièce de rechange commune
+        inventaire, réduisant les coûts d\'investissement et de maintenance.\n</string>
 
-    <string name="a220_specs_constraint">(-100 and -300 variants compared in order)\n</string>
+    <string name="a220_specs_constraint">(comparaison ordonnée des variantes -100 and -300)\n</string>
 
 
-    <string name="a220_identify">How to identify Airbus A220?</string>
-    <string name="a220_identify_ans">Sleek pointed nose with 4-piece windshield, 2 dual-wheel main landing gear, swept wings with sharp-angled winglets, fore
-        and aft cabin doors with an emergency exit over the wing.</string>
+    <string name="a220_identify">Comment identifier l\'Airbus A220?</string>
+    <string name="a220_identify_ans">Nez pointu et élégant avec pare-brise en 4 pièces, 2 trains d\'atterrissage principaux à deux roues, ailes en flèche avec ailettes à angle aigu, à l\'avant
+        et des portes de cabine arrière avec une sortie de secours au-dessus de l\'aile.</string>
 
     <string name="a220_cockpit_value">2</string>
-    <string name="a220_wingspan_value">35.10 m</string>
-    <string name="a220_length_value">35.0 / 38.70 m</string>
-    <string name="a220_height_value">11.50 m</string>
-    <string name="a220_fuselage_value">3.5 m (W) / ~3.7 m (H)</string>
-    <string name="a220_mtow_value">63.1 / 70.9 t</string>
-    <string name="a220_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
-    <string name="a220_range_value">3,450 / 3,600 nmi</string>
-    <string name="a220_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
+    <string name="a220_wingspan_value">35,10 m</string>
+    <string name="a220_length_value">35,0 / 38,70 m</string>
+    <string name="a220_height_value">11,50 m</string>
+    <string name="a220_fuselage_value">3,5 m (L) / ~3,7 m (H)</string>
+    <string name="a220_mtow_value">63,1 / 70,9 t</string>
+    <string name="a220_cruise_speed_value">829 km/h (typique),\n871 km/h (max.)</string>
+    <string name="a220_range_value">3450 / 3600 nmi</string>
+    <string name="a220_thrust_value">84,1–103,6 kN /\n93,4–103,6 kN</string>
     <!--AIRBUS A220-->
 
 
