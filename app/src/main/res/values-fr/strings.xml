@@ -773,7 +773,7 @@
     <string name="beluga_engine_value">General Electric CF6 (2)</string>
     <string name="beluga_first_flight_value">13 septembre 1994</string>
     <string name="beluga_intro_value">septembre 1995</string>
-    <string name="beluga_variants_value">1</string> «encochée»
+    <string name="beluga_variants_value">1</string>
 
     <string name="beluga_desc1" formatted="false">L\'Airbus A300-600ST (Super Transporter, en anglais), ou Beluga, est une version du gros-porteur standard A300-600
         modifié pour transporter des pièces d\'avion et une cargaison hors normes. Il a reçu très tôt le nom officiel de Super Transporter; cependant, le nom Beluga, une baleine qu\'il
@@ -793,7 +793,7 @@
         Guppies, y compris les méthodes de transport terrestre par route, rail et mer; ces alternatives ont été écartées au profit d\'une solution principalement aérienne
         car ils étaient considérés comme présentant des problèmes de fiabilité et leur exploitation prenait beaucoup de temps; de plus, la chaîne de montage de Toulouse n\'était pas commodément
         accessible par l\'une des méthodes de surface. Une exigence clé du nouveau transporteur aérien était la nécessité d\'accueillir chaque composant majeur en cours de fabrication
-        par Airbus, y compris la partie alors la plus lourde prévue, à savoir l\'aile des plus grandes variantes de l'Airbus A340.\n\nPlusieurs types d\'avions différents ont été examinés pour une utilisation potentielle, notamment l\'Antonov An-124, l\'Antonov An-225, l\'Ilyushin Il-86, le Boeing 747, le Boeing 767,
+        par Airbus, y compris la partie alors la plus lourde prévue, à savoir l\'aile des plus grandes variantes de l\'Airbus A340.\n\nPlusieurs types d\'avions différents ont été examinés pour une utilisation potentielle, notamment l\'Antonov An-124, l\'Antonov An-225, l\'Ilyushin Il-86, le Boeing 747, le Boeing 767,
         Lockheed C-5 Galaxy et McDonnell Douglas C-17 Globemaster III; l\'utilisation de tout avion existant a finalement été réduite en raison d\'un manque d\'espace interne
         pour accueillir les composants souhaités, l\'utilisation d\'un dispositif de ferroutage a également été rejetée comme peu pratique. Boeing a fait sa propre offre pour convertir plusieurs
         Boeing 767 pour l\'exigence, mais cela a été considéré comme inférieur au développement d\'un avion spécialement conçu à l\'aide d\'Airbus bimoteur à large fuselage existant d\'Airbus
@@ -830,7 +830,7 @@
     <string name="beluga_wingspan_value">44,84 m</string>
     <string name="beluga_length_value">56,15 m</string>
     <string name="beluga_height_value">17,24 m</string>
-    <string name="beluga_fuselage_value">7,31 m (L) / ~7,5 m (H)</string>
+    <string name="beluga_fuselage_value">7,31 m (L) / ~7,45 m (H)</string>
     <string name="beluga_mtow_value">155 t</string>
     <string name="beluga_cruise_speed_value">778 km/h (typique)</string>
     <string name="beluga_range_value">1501 nmi with 40 t payload /\n2501 nmi with 26 t payload</string>

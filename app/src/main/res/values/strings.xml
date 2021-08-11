@@ -814,7 +814,7 @@
     <string name="beluga_wingspan_value">44.84 m</string>
     <string name="beluga_length_value">56.15 m</string>
     <string name="beluga_height_value">17.24 m</string>
-    <string name="beluga_fuselage_value">7.31 m (W) / ~7.5 m (H)</string>
+    <string name="beluga_fuselage_value">7.31 m (W) / ~7.45 m (H)</string>
     <string name="beluga_mtow_value">155 t</string>
     <string name="beluga_cruise_speed_value">778 km/h (typical)</string>
     <string name="beluga_range_value">1,501 nmi with 40 t payload /\n2,501 nmi with 26 t payload</string>
