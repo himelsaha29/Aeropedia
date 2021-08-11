@@ -52,10 +52,10 @@ public class Firebase extends AppCompatActivity {
     private ConstraintLayout layout;
     private ScrollView scroll;
 
-    Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a350Button, a340Button, a380Button, b787Button,
-            cessnaButton, havillandButton, save;
+    Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
+            a350Button, a340Button, a380Button, b787Button, cessnaButton, havillandButton, save;
 
-    boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a350, a340, a380, b787, citation, de_havilland;
+    boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a350, a340, a380, b787, citation, de_havilland;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +69,10 @@ public class Firebase extends AppCompatActivity {
         a320Button = findViewById(R.id.a320);
         a321Button = findViewById(R.id.a321);
         a319neoButton = findViewById(R.id.a319neo);
+        a320neoButton = findViewById(R.id.a320neo);
+        a321neoButton = findViewById(R.id.a321neo);
+        a330Button = findViewById(R.id.a330);
+        a330neoButton = findViewById(R.id.a330neo);
 
         a350Button = findViewById(R.id.a350);
         a340Button = findViewById(R.id.a340);
@@ -494,6 +498,70 @@ public class Firebase extends AppCompatActivity {
                     a319neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) a319neoButton.getText());
                     a319neo = false;
+                }
+            }
+        });
+
+        a320neoButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!a320neo) {
+                    a320neoButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) a320neoButton.getText());
+                    a320neo = true;
+                } else {
+                    a320neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) a320neoButton.getText());
+                    a320neo = false;
+                }
+            }
+        });
+
+        a321neoButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!a321neo) {
+                    a321neoButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) a321neoButton.getText());
+                    a321neo = true;
+                } else {
+                    a321neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) a321neoButton.getText());
+                    a321neo = false;
+                }
+            }
+        });
+
+        a330Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!a330) {
+                    a330Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) a330Button.getText());
+                    a330 = true;
+                } else {
+                    a321neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) a330Button.getText());
+                    a330 = false;
+                }
+            }
+        });
+
+        a330neoButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!a330neo) {
+                    a330neoButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) a330neoButton.getText());
+                    a330neo = true;
+                } else {
+                    a330neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) a330neoButton.getText());
+                    a330neo = false;
                 }
             }
         });
