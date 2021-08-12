@@ -52,10 +52,10 @@ public class Firebase extends AppCompatActivity {
     private ConstraintLayout layout;
     private ScrollView scroll;
 
-    Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
-            a340Button, a350Button, a380Button, belugaButton, cessnaButton, havillandButton, save;
+    private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
+            a340Button, a350Button, a380Button, belugaButton, an22Button, an72Button, an124Button, an225Button, cessnaButton, havillandButton, save;
 
-    boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, citation, de_havilland;
+    boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, an22, an72, an124, an225, citation, de_havilland;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +77,12 @@ public class Firebase extends AppCompatActivity {
         a350Button = findViewById(R.id.a350);
         a380Button = findViewById(R.id.a380);
         belugaButton = findViewById(R.id.beluga);
+        an22Button = findViewById(R.id.an_22);
+        an72Button = findViewById(R.id.an_72);
+        an124Button = findViewById(R.id.an_124);
+        an225Button = findViewById(R.id.an_225);
+
+
         cessnaButton = findViewById(R.id.citation);
         havillandButton = findViewById(R.id.havilland);
         save = findViewById(R.id.save);
@@ -683,6 +689,74 @@ public class Firebase extends AppCompatActivity {
                 }
             }
         });
+
+        an22Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!an22) {
+                    an22Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) an22Button.getText());
+                    an22 = true;
+                } else {
+                    an22Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) an22Button.getText());
+                    an22 = false;
+                }
+            }
+        });
+
+        an72Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!an72) {
+                    an72Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) an72Button.getText());
+                    an72 = true;
+                } else {
+                    an72Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) an72Button.getText());
+                    an72 = false;
+                }
+            }
+        });
+
+        an124Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!an124) {
+                    an124Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) an124Button.getText());
+                    an124 = true;
+                } else {
+                    an124Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) an124Button.getText());
+                    an124 = false;
+                }
+            }
+        });
+
+        an225Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!an225) {
+                    an225Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) an225Button.getText());
+                    an225 = true;
+                } else {
+                    an225Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) an225Button.getText());
+                    an225 = false;
+                }
+            }
+        });
+
+
+
+
 
         cessnaButton.setOnClickListener(new View.OnClickListener() {
 
