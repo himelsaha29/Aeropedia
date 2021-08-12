@@ -453,17 +453,6 @@
 
                     </LinearLayout>
 
-
-
-
-
-
-
-
-
-
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -478,14 +467,14 @@
                             android:padding="10dip">
 
                             <soup.neumorphism.NeumorphButton
-                                android:id="@+id/a350"
+                                android:id="@+id/a340"
                                 style="@style/Widget.Neumorph.Button"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:padding="5dp"
-                                android:text="Airbus A350"
+                                android:text="Airbus A340"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="15sp"
@@ -504,14 +493,14 @@
                             android:padding="10dip">
 
                             <soup.neumorphism.NeumorphButton
-                                android:id="@+id/a380"
+                                android:id="@+id/a350"
                                 style="@style/Widget.Neumorph.Button"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:padding="5dp"
-                                android:text="Airbus A380"
+                                android:text="Airbus A350"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="15sp"
@@ -538,14 +527,14 @@
                             android:padding="10dip">
 
                             <soup.neumorphism.NeumorphButton
-                                android:id="@+id/a340"
+                                android:id="@+id/a380"
                                 style="@style/Widget.Neumorph.Button"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:padding="5dp"
-                                android:text="Airbus A340"
+                                android:text="Airbus A380"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="15dp"
@@ -564,17 +553,17 @@
                             android:padding="10dip">
 
                             <soup.neumorphism.NeumorphButton
-                                android:id="@+id/b787"
+                                android:id="@+id/beluga"
                                 style="@style/Widget.Neumorph.Button"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:padding="5dp"
-                                android:text="Boeing 787"
+                                android:text="Airbus Beluga"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
-                                android:textSize="15sp"
+                                android:textSize="14sp"
                                 app:neumorph_backgroundColor="#f2f4f6"
                                 app:neumorph_shadowColorDark="#eaeaea"
                                 app:neumorph_shadowColorLight="#fdfdfd"
@@ -583,6 +572,14 @@
                         </LinearLayout>
 
                     </LinearLayout>
+
+
+
+
+
+
+
+
 
 
                     <LinearLayout

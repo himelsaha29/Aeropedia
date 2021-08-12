@@ -53,9 +53,9 @@ public class Firebase extends AppCompatActivity {
     private ScrollView scroll;
 
     Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
-            a350Button, a340Button, a380Button, b787Button, cessnaButton, havillandButton, save;
+            a340Button, a350Button, a380Button, belugaButton, cessnaButton, havillandButton, save;
 
-    boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a350, a340, a380, b787, citation, de_havilland;
+    boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, citation, de_havilland;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,11 +73,10 @@ public class Firebase extends AppCompatActivity {
         a321neoButton = findViewById(R.id.a321neo);
         a330Button = findViewById(R.id.a330);
         a330neoButton = findViewById(R.id.a330neo);
-
-        a350Button = findViewById(R.id.a350);
         a340Button = findViewById(R.id.a340);
+        a350Button = findViewById(R.id.a350);
         a380Button = findViewById(R.id.a380);
-        b787Button = findViewById(R.id.b787);
+        belugaButton = findViewById(R.id.beluga);
         cessnaButton = findViewById(R.id.citation);
         havillandButton = findViewById(R.id.havilland);
         save = findViewById(R.id.save);
@@ -633,12 +632,21 @@ public class Firebase extends AppCompatActivity {
             }
         });
 
+        a340Button.setOnClickListener(new View.OnClickListener() {
 
-
-
-
-
-
+            @Override
+            public void onClick(View v) {
+                if (!a340) {
+                    a340Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) a340Button.getText());
+                    a340 = true;
+                } else {
+                    a340Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) a340Button.getText());
+                    a340 = false;
+                }
+            }
+        });
 
         a350Button.setOnClickListener(new View.OnClickListener() {
 
@@ -652,22 +660,6 @@ public class Firebase extends AppCompatActivity {
                     a350Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) a350Button.getText());
                     a350 = false;
-                }
-            }
-        });
-
-        a340Button.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (!a340) {
-                    a340Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
-                    selected.add((String) a340Button.getText());
-                    a340 = true;
-                } else {
-                    a340Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
-                    selected.remove((String) a340Button.getText());
-                    a340 = false;
                 }
             }
         });
@@ -688,18 +680,18 @@ public class Firebase extends AppCompatActivity {
             }
         });
 
-        b787Button.setOnClickListener(new View.OnClickListener() {
+        belugaButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (!b787) {
-                    b787Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
-                    selected.add((String) b787Button.getText());
-                    b787 = true;
+                if (!beluga) {
+                    belugaButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) belugaButton.getText());
+                    beluga = true;
                 } else {
-                    b787Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
-                    selected.remove((String) b787Button.getText());
-                    b787 = false;
+                    belugaButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) belugaButton.getText());
+                    beluga = false;
                 }
             }
         });
