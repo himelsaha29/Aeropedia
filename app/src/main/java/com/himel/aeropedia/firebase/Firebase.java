@@ -126,7 +126,7 @@ public class Firebase extends AppCompatActivity {
                                     if (s.equalsIgnoreCase("Airbus A220")) {
                                         NeumorphButton button = findViewById(R.id.a220);
                                         TextView status = findViewById(R.id.a220status);
-                                        status.setText("Airbus A220 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A220\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -142,7 +142,7 @@ public class Firebase extends AppCompatActivity {
                                     if (s.equalsIgnoreCase("Airbus A300")) {
                                         NeumorphButton button = findViewById(R.id.a300);
                                         TextView status = findViewById(R.id.a300status);
-                                        status.setText("Airbus A300 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A300\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -158,7 +158,7 @@ public class Firebase extends AppCompatActivity {
                                     if (s.equalsIgnoreCase("Airbus A310")) {
                                         NeumorphButton button = findViewById(R.id.a310);
                                         TextView status = findViewById(R.id.a310status);
-                                        status.setText("Airbus A310 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A310\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -174,7 +174,7 @@ public class Firebase extends AppCompatActivity {
                                     if (s.equalsIgnoreCase("Airbus A318")) {
                                         NeumorphButton button = findViewById(R.id.a318);
                                         TextView status = findViewById(R.id.a318status);
-                                        status.setText("Airbus A318 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A318\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -190,7 +190,7 @@ public class Firebase extends AppCompatActivity {
                                     if (s.equalsIgnoreCase("Airbus A319")) {
                                         NeumorphButton button = findViewById(R.id.a319);
                                         TextView status = findViewById(R.id.a319status);
-                                        status.setText("Airbus A319 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A319\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -206,7 +206,7 @@ public class Firebase extends AppCompatActivity {
                                     if (s.equalsIgnoreCase("Airbus A320")) {
                                         NeumorphButton button = findViewById(R.id.a320);
                                         TextView status = findViewById(R.id.a320status);
-                                        status.setText("Airbus A320 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A320\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -222,7 +222,7 @@ public class Firebase extends AppCompatActivity {
                                     if (s.equalsIgnoreCase("Airbus A321")) {
                                         NeumorphButton button = findViewById(R.id.a321);
                                         TextView status = findViewById(R.id.a321status);
-                                        status.setText("Airbus A321 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A321\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -238,7 +238,7 @@ public class Firebase extends AppCompatActivity {
                                     if (s.equalsIgnoreCase("Airbus A319neo")) {
                                         NeumorphButton button = findViewById(R.id.a319neo);
                                         TextView status = findViewById(R.id.a319neostatus);
-                                        status.setText("Airbus A319neo \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A319neo\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -254,7 +254,7 @@ public class Firebase extends AppCompatActivity {
                                     if (s.equalsIgnoreCase("Airbus A320neo")) {
                                         NeumorphButton button = findViewById(R.id.a320neo);
                                         TextView status = findViewById(R.id.a320neostatus);
-                                        status.setText("Airbus A320neo \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A320neo\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -270,7 +270,7 @@ public class Firebase extends AppCompatActivity {
                                     if (s.equalsIgnoreCase("Airbus A321neo")) {
                                         NeumorphButton button = findViewById(R.id.a321neo);
                                         TextView status = findViewById(R.id.a321neostatus);
-                                        status.setText("Airbus A321neo \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A321neo\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -286,7 +286,7 @@ public class Firebase extends AppCompatActivity {
                                     if (s.equalsIgnoreCase("Airbus A330")) {
                                         NeumorphButton button = findViewById(R.id.a330);
                                         TextView status = findViewById(R.id.a330status);
-                                        status.setText("Airbus A330 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A330\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -302,7 +302,7 @@ public class Firebase extends AppCompatActivity {
                                     if (s.equalsIgnoreCase("Airbus A330neo")) {
                                         NeumorphButton button = findViewById(R.id.a330neo);
                                         TextView status = findViewById(R.id.a330neostatus);
-                                        status.setText("Airbus A330neo \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A330neo\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -315,19 +315,26 @@ public class Firebase extends AppCompatActivity {
                                             button.setBackgroundColor(Color.RED);
                                         }
                                     }
-
-
-
-
-
-
-
-
-
+                                    if (s.equalsIgnoreCase("Airbus A340")) {
+                                        NeumorphButton button = findViewById(R.id.a340);
+                                        TextView status = findViewById(R.id.a340status);
+                                        status.setText("Airbus A340\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Airbus A340")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
                                     if (s.equalsIgnoreCase("Airbus A350")) {
                                         NeumorphButton button = findViewById(R.id.a350);
                                         TextView status = findViewById(R.id.a350status);
-                                        status.setText("Airbus A350 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A350\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -340,29 +347,10 @@ public class Firebase extends AppCompatActivity {
                                             button.setBackgroundColor(Color.RED);
                                         }
                                     }
-
-                                    if (s.equalsIgnoreCase("Airbus A340")) {
-                                        NeumorphButton button = findViewById(R.id.a340);
-                                        TextView status = findViewById(R.id.a340status);
-                                        status.setText("Airbus A340 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A340")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                        System.out.println();
-                                    }
-
                                     if (s.equalsIgnoreCase("Airbus A380")) {
                                         NeumorphButton button = findViewById(R.id.a380);
                                         TextView status = findViewById(R.id.a380status);
-                                        status.setText("Airbus A380 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        status.setText("Airbus A380\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -375,11 +363,10 @@ public class Firebase extends AppCompatActivity {
                                             button.setBackgroundColor(Color.RED);
                                         }
                                     }
-
-                                    if (s.equalsIgnoreCase("Boeing 787")) {
-                                        NeumorphButton button = findViewById(R.id.b787);
-                                        TextView status = findViewById(R.id.b787status);
-                                        status.setText("Boeing 787 \n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                    if (s.equalsIgnoreCase("Airbus Beluga")) {
+                                        NeumorphButton button = findViewById(R.id.beluga);
+                                        TextView status = findViewById(R.id.belugastatus);
+                                        status.setText("Airbus Beluga\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
                                         ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
                                         float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         if(size <= 0 || size <= 100) {
@@ -388,10 +375,11 @@ public class Firebase extends AppCompatActivity {
                                             layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
                                         }
                                         button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Boeing 787")) {
+                                        if(aircraftsChosen.contains("Airbus Beluga")) {
                                             button.setBackgroundColor(Color.RED);
                                         }
                                     }
+
 
 
                                     System.out.println(s + " : " + map.get(s));
