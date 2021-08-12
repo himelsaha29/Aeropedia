@@ -2,6 +2,7 @@ package com.himel.aeropedia.flightmap;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -39,6 +40,7 @@ import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.Global;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -101,6 +103,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private TextView trackTV;
     private TextView squawkTV;
     private TextView positionSourceTV;
+    private TextView originAirportCityTV;
+    private TextView destinationAirportCityTV;
 
     private BitmapDescriptor markerPlaneBlack;
     private BitmapDescriptor markerPlaneRed;
@@ -113,6 +117,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     String[] flightTrack;
     private Polyline polyline;
     private boolean bottomSheetIsExpanded = false;
+
+    private JSONObject airportCities;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,6 +135,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             setContentView(R.layout.activity_maps_dark);
         }
 
+        loadJSONs();
 
         if (enableDarkOnCreate.equals("No")) {
             dialog.setContentView(R.layout.activity_map_loading_dialog_light);
@@ -210,6 +217,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         trackTV = findViewById(R.id.track);
         squawkTV = findViewById(R.id.squawk);
         positionSourceTV = findViewById(R.id.position_source);
+        originAirportCityTV = findViewById(R.id.origin_airport_city);
+        destinationAirportCityTV = findViewById(R.id.destination_airport_city);
 
 
         double latitude = 0.0;
@@ -422,6 +431,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 verticalRateTV.setText(R.string.loading);
                 squawkTV.setText(R.string.loading);
                 positionSourceTV.setText(R.string.loading);
+                destinationAirportCityTV.setText(R.string.loading);
+                originAirportCityTV.setText(R.string.loading);
                 // =========================
 
                 String[] markerInfo = hashMap.get(marker.getSnippet());
@@ -462,6 +473,31 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                 trackTV.setText(String.valueOf(marker.getRotation()) + "°");
                                 squawkTV.setText(markerInfo[7]);
                                 positionSourceTV.setText(markerInfo[9]);
+
+                                // getting city names from JSON
+                                String originAirportCity = null;
+                                String destinationAirportCity = null;
+                                try {
+                                    originAirportCity = airportCities.getString(flightRoute[0]);
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                                try {
+                                    destinationAirportCity = airportCities.getString(flightRoute[1]);
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+
+                                if(originAirportCity == null){
+                                    originAirportCityTV.setText("N/A");
+                                } else {
+                                    originAirportCityTV.setText(originAirportCity);
+                                }
+                                if(destinationAirportCity == null){
+                                    destinationAirportCityTV.setText("N/A");
+                                } else {
+                                    destinationAirportCityTV.setText(destinationAirportCity);
+                                }
 
 
                                 // getting flight track
@@ -974,6 +1010,33 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
         } else {
             super.onBackPressed();
+        }
+    }
+
+
+
+    private String loadJSONFromAsset(Context context) {
+        String json = null;
+        try {
+            InputStream is = context.getAssets().open("AirportCities.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+
+    private void loadJSONs() {
+        try {
+            airportCities = new JSONObject(loadJSONFromAsset(this));
+
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 }

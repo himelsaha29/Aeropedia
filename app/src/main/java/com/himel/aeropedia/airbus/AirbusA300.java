@@ -62,9 +62,11 @@ import com.smarteist.autoimageslider.SliderView;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 
-import org.json.JSONObject;
+import org.json.JSONException;
 
 import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -115,19 +117,6 @@ public class AirbusA300 extends AppCompatActivity {
             langToggle.setShapeType(ShapeType.FLAT);
         } else if (locale.toString().contains("fr")) {
             langToggle.setShapeType(ShapeType.PRESSED);
-        }
-
-        JsonParser jsonParser = new JsonParser();
-
-        try {
-            AssetFileDescriptor descriptor = getAssets().openFd("ThirdInjectedAndFirstModified_final.json");
-            FileReader reader = new FileReader(descriptor.getFileDescriptor());
-            //Read JSON file
-            Object obj = jsonParser.parse(reader);
-            JSONObject airportCity = (JSONObject) obj;
-            System.out.println(airportCity.get("LAX"));
-        } catch (Exception e) {
-            e.printStackTrace();
         }
 
 
