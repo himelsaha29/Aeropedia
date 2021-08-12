@@ -121,12 +121,16 @@ public class AlexaActivity extends CoreActivity {
     private MediaPlayer mp;
     private boolean isNetworkAvailable = false;
     private CoordinatorLayout mainLayout;
+    private boolean doWhile = true;
+    private int doWhileCounter = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         isNetworkAvailable = isNetworkAvailable();
+
+        do {
 
         Thread thread = new Thread(new Runnable() {
             @Override
@@ -142,49 +146,56 @@ public class AlexaActivity extends CoreActivity {
             e.printStackTrace();
         }
 
-        if (!loggedIn) {
 
-            SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
-            String restart = prefs.getString("AlexaRestart", "No");
 
-            if(restart.equalsIgnoreCase("Yes")) {
-                SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
-                editor.putString("AlexaRestart", "No");
-                editor.apply();
+            if (!loggedIn) {
+
+                SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+                String restart = prefs.getString("AlexaRestart", "No");
+
+                if (restart.equalsIgnoreCase("Yes")) {
+                    SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+                    editor.putString("AlexaRestart", "No");
+                    editor.apply();
 //                Intent intent = new Intent(this, AlexaActivity.class);
 //                finish();
 //                startActivity(intent);
-                onCreate(null);
-            }
-
-            loadLocale();
-            locale = Locale.getDefault();
-            enableDarkOnCreate = verifyDarkMode();
-            if(enableDark.equals("No")) {
-                setContentView(R.layout.activity_alexa_login_light);
-                lightStatus();
-            } else {
-                setContentView(R.layout.activity_alexa_login_dark);
-                darkStatus();
-            }
-
-            login = findViewById(R.id.login);
-
-            login.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    alexaManager.sendAudioRequest(requestBody, getRequestCallback());
                 }
-            });
-            languageDarkToggle();
-            loadDrawer();
 
-        }
-        else {
-            loadAlexa();
-            languageDarkToggle();
-            loadDrawer();
-        }
+                loadLocale();
+                locale = Locale.getDefault();
+                enableDarkOnCreate = verifyDarkMode();
+                if (enableDark.equals("No")) {
+                    setContentView(R.layout.activity_alexa_login_light);
+                    lightStatus();
+                } else {
+                    setContentView(R.layout.activity_alexa_login_dark);
+                    darkStatus();
+                }
+
+                login = findViewById(R.id.login);
+
+                login.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        alexaManager.sendAudioRequest(requestBody, getRequestCallback());
+                    }
+                });
+                languageDarkToggle();
+                loadDrawer();
+                doWhileCounter++;
+                if(doWhileCounter == 2) {
+                    doWhile = false;
+                }
+
+            } else {
+                loadAlexa();
+                languageDarkToggle();
+                loadDrawer();
+                doWhile = false;
+            }
+
+        } while (doWhile);
 
         if(!isNetworkAvailable) {
             mainLayout = findViewById(R.id.mainLayout);
