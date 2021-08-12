@@ -385,6 +385,70 @@ public class Firebase extends AppCompatActivity {
                                             button.setBackgroundColor(Color.RED);
                                         }
                                     }
+                                    if (s.equalsIgnoreCase("Antonov An-22")) {
+                                        NeumorphButton button = findViewById(R.id.an22);
+                                        TextView status = findViewById(R.id.an22status);
+                                        status.setText("Antonov An-22\nAntei\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Antonov An-22")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+                                    if (s.equalsIgnoreCase("Antonov An-72")) {
+                                        NeumorphButton button = findViewById(R.id.an72);
+                                        TextView status = findViewById(R.id.an72status);
+                                        status.setText("Antonov An-72\nCheburashka\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Antonov An-72")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+                                    if (s.equalsIgnoreCase("Antonov An-124")) {
+                                        NeumorphButton button = findViewById(R.id.an124);
+                                        TextView status = findViewById(R.id.an124status);
+                                        status.setText("Antonov An-124\nRuslan\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Antonov An-124")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+                                    if (s.equalsIgnoreCase("Antonov An-225")) {
+                                        NeumorphButton button = findViewById(R.id.an225);
+                                        TextView status = findViewById(R.id.an225status);
+                                        status.setText("Antonov An-225\nMriya\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Antonov An-225")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
 
 
 
