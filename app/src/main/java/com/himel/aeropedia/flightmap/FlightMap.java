@@ -121,6 +121,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private boolean bottomSheetIsExpanded = false;
 
     private JSONObject airportCities;
+    private JSONObject countriesInFrench;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,7 +138,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             setContentView(R.layout.activity_maps_dark);
         }
 
-        loadJSONs();
+        loadCitiesJSON();
+        loadCountriesJSON();
 
         if (enableDarkOnCreate.equals("No")) {
             dialog.setContentView(R.layout.activity_map_loading_dialog_light);
@@ -503,6 +505,19 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                 }
                                 if(originAirportCity == null & destinationAirportCity == null){
                                     cities.setVisibility(View.GONE);
+                                }
+
+                                String pays = null;
+                                try {
+                                    pays = countriesInFrench.getString(markerInfo[1]);
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                                if(pays == null) {
+                                    country.setText(markerInfo[1]);
+                                } else {
+                                    country.setText(pays);
+                                    System.out.println("COUNTRY : " + markerInfo[1]);
                                 }
 
 
@@ -1021,7 +1036,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
 
 
-    private String loadJSONFromAsset(Context context) {
+    private String loadCitiesJSONFromAsset(Context context) {
         String json = null;
         try {
             InputStream is = context.getAssets().open("AirportCities.json");
@@ -1036,10 +1051,33 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         }
         return json;
     }
-
-    private void loadJSONs() {
+    private String loadCountriesFrenchJSONFromAsset(Context context) {
+        String json = null;
         try {
-            airportCities = new JSONObject(loadJSONFromAsset(this));
+            InputStream is = context.getAssets().open("Countries.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+
+    private void loadCitiesJSON() {
+        try {
+            airportCities = new JSONObject(loadCitiesJSONFromAsset(this));
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+    private void loadCountriesJSON() {
+        try {
+            countriesInFrench = new JSONObject(loadCountriesFrenchJSONFromAsset(this));
 
         } catch (JSONException e) {
             e.printStackTrace();
