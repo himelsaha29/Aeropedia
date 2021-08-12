@@ -20,15 +20,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/textCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                app:cardElevation="0dp"
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_backgroundColor="#f2f4f6"
+                app:neumorph_shadowColorDark="#eaeaea"
+                android:clickable="false"
+                app:neumorph_shadowColorLight="#fdfdfd"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/maven_pro_medium"
+                    android:text="See which group of aviation enthusiasts you are in...this is a very big big and even big scroll view"
+                    android:textSize="45sp"
+                    android:padding="7dp"
+                    android:textColor="@color/black"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="@font/maven_pro_medium"
-            android:text="See which group of aviation enthusiasts you are in...this is a very big big and even big scroll view"
-            android:textSize="45sp"
-            android:textColor="@color/black"/>
+            </soup.neumorphism.NeumorphCardView>
 
         </HorizontalScrollView>
 

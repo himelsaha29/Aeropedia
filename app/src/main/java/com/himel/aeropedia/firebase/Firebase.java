@@ -15,6 +15,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Display;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -469,6 +470,19 @@ public class Firebase extends AppCompatActivity {
                                 childCount = 0;
                                 mainScroll = findViewById(R.id.mainScroll);
                                 concurrentScroll = findViewById(R.id.concurrentScroll);
+                                concurrentScroll.setOnTouchListener(new View.OnTouchListener() {
+
+                                    @Override
+                                    public boolean onTouch(View v, MotionEvent event) {
+                                        //disable touch event
+                                        return true;
+                                    }
+
+                                });
+
+
+
+
                                 mainScroll.setOnScrollChangeListener(new View.OnScrollChangeListener() {
                                     @Override
                                     public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
