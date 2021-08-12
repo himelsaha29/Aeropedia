@@ -495,13 +495,17 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
                                 if(originAirportCity == null){
                                     originAirportCityTV.setText("N/A");
+                                    cities.setVisibility(View.VISIBLE);
                                 } else {
                                     originAirportCityTV.setText(originAirportCity);
+                                    cities.setVisibility(View.VISIBLE);
                                 }
                                 if(destinationAirportCity == null){
                                     destinationAirportCityTV.setText("N/A");
+                                    cities.setVisibility(View.VISIBLE);
                                 } else {
                                     destinationAirportCityTV.setText(destinationAirportCity);
+                                    cities.setVisibility(View.VISIBLE);
                                 }
                                 if(originAirportCity == null & destinationAirportCity == null){
                                     cities.setVisibility(View.GONE);
@@ -517,7 +521,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                     country.setText(markerInfo[1]);
                                 } else {
                                     country.setText(pays);
-                                    System.out.println("COUNTRY : " + markerInfo[1]);
                                 }
 
 
