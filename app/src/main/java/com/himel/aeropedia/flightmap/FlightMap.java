@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -111,6 +112,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private Marker markerSelected;
     private Button liveButton;
     private ProgressBar progressBar;
+    private LinearLayout cities;
 
     Route route = new Route();
     String[] flightRoute;
@@ -219,6 +221,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         positionSourceTV = findViewById(R.id.position_source);
         originAirportCityTV = findViewById(R.id.origin_airport_city);
         destinationAirportCityTV = findViewById(R.id.destination_airport_city);
+        cities = findViewById(R.id.airport_cities);
 
 
         double latitude = 0.0;
@@ -497,6 +500,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                     destinationAirportCityTV.setText("N/A");
                                 } else {
                                     destinationAirportCityTV.setText(destinationAirportCity);
+                                }
+                                if(originAirportCity == null & destinationAirportCity == null){
+                                    cities.setVisibility(View.GONE);
                                 }
 
 
