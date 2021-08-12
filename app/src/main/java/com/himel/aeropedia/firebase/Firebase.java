@@ -1,14 +1,17 @@
 package com.himel.aeropedia.firebase;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.widget.NestedScrollView;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Display;
@@ -17,6 +20,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -51,12 +55,15 @@ public class Firebase extends AppCompatActivity {
     private NeumorphCardView textCard;
     private ConstraintLayout layout;
     private ScrollView scroll;
+    private HorizontalScrollView mainScroll;
+    private HorizontalScrollView concurrentScroll;
 
     private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
             a340Button, a350Button, a380Button, belugaButton, an22Button, an72Button, an124Button, an225Button, cessnaButton, havillandButton, save;
 
     boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, an22, an72, an124, an225, citation, de_havilland;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,6 +96,8 @@ public class Firebase extends AppCompatActivity {
         textCard = findViewById(R.id.textCard);
         layout = findViewById(R.id.buttonContainer);
         scroll = findViewById(R.id.firebaseScroll);
+
+        concurrentScroll = findViewById(R.id.concurrentScroll);
         Display display = ((android.view.WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
         scroll.setFadingEdgeLength((int) (display.getHeight() *0.12));
         DatabaseReference firebase = FirebaseDatabase.getInstance().getReference().child("Aircraft Preference");
@@ -458,6 +467,16 @@ public class Firebase extends AppCompatActivity {
                                 }
 
                                 childCount = 0;
+                                mainScroll = findViewById(R.id.mainScroll);
+                                concurrentScroll = findViewById(R.id.concurrentScroll);
+                                mainScroll.setOnScrollChangeListener(new View.OnScrollChangeListener() {
+                                    @Override
+                                    public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                                        int x = mainScroll.getScrollX();
+                                        System.out.println(x);
+                                        concurrentScroll.scrollTo(x, concurrentScroll.getTop());
+                                    }
+                                });
 
                             }
 
@@ -472,9 +491,11 @@ public class Firebase extends AppCompatActivity {
 
                 });
 
-
             }
+
         });
+
+
 
 
         save.setOnClickListener(new View.OnClickListener() {
