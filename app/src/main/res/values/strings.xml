@@ -904,23 +904,23 @@
         The An-124\'s main engine is the Lotarev D-18 (238–250 kN). The aircraft uses oleo strut suspension for its 24 wheels. The suspension has been calibrated to
         allow landing on rough terrain and is able to kneel to allow easier front loading. The plane has an onboard overhead crane capable of lifting up to 30
         tonnes of cargo, and items up to 120 tonnes can be winched on board.\n\nUp to 150 tonnes (150 long tons; 170 short tons) of cargo can be carried in a military
-        An-124; it can also carry 88 passengers in an upper deck behind the wing centre section. The cargo compartment of An-124 is 36×6.4×4.4 m (118×21×14 ft), ca.
-        20% larger than the main cargo compartment of the C-5 Galaxy, which is 36.91×5.79×4.09 m (121.1×19.0×13.4 ft). Due to limited pressurisation in the
+        An-124; it can also carry 88 passengers in an upper deck behind the wing centre section. The cargo compartment of An-124 is 36×6.4×4.4 m, ca.
+        20% larger than the main cargo compartment of the C-5 Galaxy, which is 36.91×5.79×4.09 m. Due to limited pressurisation in the
         main cargo compartment (24.6 kPa, 3.57 psi), it seldom carries paratroopers. Pilots have stated that the An-124 is light on the controls and easy to
         handle for an aircraft of its size. Some airports require pavement protection from the heat and blast effects of the An-124\'s 2 TA18-200-124
         auxiliary power units.\n\nAt MAKS Air Show in 2017, the TsAGI announced its An-124-102 Slon (elephant) design to replace the similar An-124-100. The design was
         detailed in January 2019 before wind tunnel testing scheduled for August–September. It is intended to be produced at the Aviastar-SP factory in Ulyanovsk. It
-        should transport 150 t (330,000 lb) over 3,800 nmi (7,000 km) (up from 1,675 nmi, 3,102 km), or 180 t (400,000 lb) over 2,650 nmi (4,910 km) at 460 kn (850 km/h). The
+        should transport 150 t over 3,800 nmi (7,000 km) (up from 1,675 nmi, 3,102 km), or 180 t over 2,650 nmi (4,910 km) at 460 kn (850 km/h). The
         Russian MoD wants a range of 4,100 nmi (7,600 km) with five Sprut-SDM-1 light tanks, their 100 crew and 300 armed soldiers. The planned An-124-102 is larger at
-        82.3 m (270 ft) long from 69 m (227 ft), with a 87–88 m (286–290 ft) span versus 73.3 m (240.5 ft) and 24.0 m (78.7 ft) high compared with 21.0 m (68.9 ft).\n\nA
-        new higher aspect ratio, composite wing and a 214–222 t (472,000–489,000 lb) airframe would allow a 490–500 t (1,080,000–1,100,000 lb) gross weight. It should
-        be powered by Russian PD-35s developed for the CR929 widebody, producing 35 tf (77,000 lbf) up from 23 tf (51,000 lbf). Two fuselages are planned, one for
-        Volga-Dnepr with a width of 5.3 m (17.4 ft) from the An-124\'s 4.4 m (14.4 ft), and one for the Russian MoD of 6.4 m (21 ft) wide to carry vehicles in two lines. By
-        November 2019, the TsAGI had shown a 1.63 m (5 ft 4 in) long and 1.75 m (5 ft 9 in) wide model, ahead of windtunnel testing.\n</string>
+        82.3 m long from 69 m, with a 87–88 m span versus 73.3 m and 24.0 m high compared with 21.0 m.\n\nA
+        new higher aspect ratio, composite wing and a 214–222 t airframe would allow a 490–500 t gross weight. It should
+        be powered by Russian PD-35s developed for the CR929 widebody, producing 35 tf up from 23 tf. Two fuselages are planned, one for
+        Volga-Dnepr with a width of 5.3 m from the An-124\'s 4.4 m, and one for the Russian MoD of 6.4 m wide to carry vehicles in two lines. By
+        November 2019, the TsAGI had shown a 1.63 m long and 1.75 m wide model, ahead of windtunnel testing.\n</string>
 
     <string name="an124_desc3">\nAntonov An-124 variants include An-124 Ruslan (strategic heavy airlift transport aircraft), An-124-100 (commercial transport aircraft),
         An-124-100M-150, An-124-102, An-124-115M, An-124-130 (proposed), An-124-135, An-124-150, An-124-200 (proposed), An-124-210 (joint proposal with Air Foyle), and
-        An-124-300\n</string>
+        An-124-300.\n</string>
 
     <string name="an124_specs_constraint">(-100M variant)\n</string>
 

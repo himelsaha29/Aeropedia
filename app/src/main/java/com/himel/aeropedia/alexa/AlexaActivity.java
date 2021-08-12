@@ -132,35 +132,21 @@ public class AlexaActivity extends CoreActivity {
 
         do {
 
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                loggedIn = checkLogin();
+            Thread thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    loggedIn = checkLogin();
+                }
+            });
+            thread.start();
+
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        });
-        thread.start();
-
-        try {
-            thread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-
 
             if (!loggedIn) {
-
-                SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
-                String restart = prefs.getString("AlexaRestart", "No");
-
-                if (restart.equalsIgnoreCase("Yes")) {
-                    SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
-                    editor.putString("AlexaRestart", "No");
-                    editor.apply();
-//                Intent intent = new Intent(this, AlexaActivity.class);
-//                finish();
-//                startActivity(intent);
-                }
 
                 loadLocale();
                 locale = Locale.getDefault();
@@ -184,7 +170,7 @@ public class AlexaActivity extends CoreActivity {
                 languageDarkToggle();
                 loadDrawer();
                 doWhileCounter++;
-                if(doWhileCounter == 2) {
+                if (doWhileCounter == 2) {
                     doWhile = false;
                 }
 
@@ -197,11 +183,11 @@ public class AlexaActivity extends CoreActivity {
 
         } while (doWhile);
 
-        if(!isNetworkAvailable) {
+        if (!isNetworkAvailable) {
             mainLayout = findViewById(R.id.mainLayout);
             Snackbar snackbar = Snackbar
                     .make(mainLayout, R.string.snackbar, Snackbar.LENGTH_LONG);
-            if(enableDark.equals("No")) {
+            if (enableDark.equals("No")) {
                 snackbar.setBackgroundTint(Color.parseColor("#72A8E1"));
                 snackbar.setTextColor(Color.BLACK);
             } else {
@@ -217,7 +203,7 @@ public class AlexaActivity extends CoreActivity {
         loadLocale();
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
-        if(enableDark.equals("No")) {
+        if (enableDark.equals("No")) {
             setContentView(R.layout.activity_alexa_light);
             lightStatus();
 
@@ -233,11 +219,15 @@ public class AlexaActivity extends CoreActivity {
             @Override
             public void onClick(View v) {
                 if (speak) {
-                    AlexaActivity.super.avsQueue.clear();
-                    onStop();
-                    stateFinished();
-                    speaking.setVisibility(View.GONE);
-                    listening.setVisibility(View.GONE);
+                    try {
+                        AlexaActivity.super.avsQueue.clear();
+                        onStop();
+                        stateFinished();
+                        speaking.setVisibility(View.GONE);
+                        listening.setVisibility(View.GONE);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 } else if (recorder == null) {
                     if (ContextCompat.checkSelfPermission(AlexaActivity.this,
                             Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
@@ -251,8 +241,12 @@ public class AlexaActivity extends CoreActivity {
                         }
                     }
                 } else {
-                    stopListening();
-                    listening.setVisibility(View.GONE);
+                    try {
+                        stopListening();
+                        listening.setVisibility(View.GONE);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
@@ -267,7 +261,7 @@ public class AlexaActivity extends CoreActivity {
         //closeDialog = findViewById(R.id.close_dialog);
 
         Dialog dialog = new Dialog(AlexaActivity.this);
-        if(enableDark.equals("No")) {
+        if (enableDark.equals("No")) {
             dialog.setContentView(R.layout.activity_dialog_alexa_light);
         } else {
             dialog.setContentView(R.layout.activity_dialog_alexa_dark);
@@ -462,7 +456,7 @@ public class AlexaActivity extends CoreActivity {
         super.onRestart();
 
         checkLogin();
-        if(loggedIn != true) {
+        if (loggedIn != true) {
 
             loggedIn = true;
             loadAlexa();
@@ -481,24 +475,22 @@ public class AlexaActivity extends CoreActivity {
             }
         }
 
-        if(!enableDarkOnCreate.equals(verifyDarkMode()) && !locale.equals(Locale.getDefault())) {
+        if (!enableDarkOnCreate.equals(verifyDarkMode()) && !locale.equals(Locale.getDefault())) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+            //createTreeView();
+        } else if (!locale.equals(Locale.getDefault())) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        } else if (!enableDarkOnCreate.equals(verifyDarkMode())) {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
             //createTreeView();
         }
-        else if (!locale.equals(Locale.getDefault())) {
-            Intent intent = getIntent();
-            finish();
-            startActivity(intent);
-        }
-        else if (!enableDarkOnCreate.equals(verifyDarkMode())) {
-            Intent intent = getIntent();
-            finish();
-            startActivity(intent);
-            //createTreeView();
-        }
-        if(mDrawer.getDrawerState() == ElasticDrawer.STATE_OPEN) {
+        if (mDrawer.getDrawerState() == ElasticDrawer.STATE_OPEN) {
             mDrawer.closeMenu(false);
             blur.setVisibility(View.GONE);
             blur.setAlpha(0f);
@@ -542,7 +534,9 @@ public class AlexaActivity extends CoreActivity {
     }
 
 
-    /** TreeView **/
+    /**
+     * TreeView
+     **/
 
     private void createTreeView() {
 
@@ -641,7 +635,9 @@ public class AlexaActivity extends CoreActivity {
 
     }
 
-    /** TreeView **/
+    /**
+     * TreeView
+     **/
 
 
     private void languageDarkToggle() {
@@ -659,7 +655,7 @@ public class AlexaActivity extends CoreActivity {
 
             @Override
             public void onClick(View v) {
-                if(getResources().getConfiguration().locale.toString().contains("fr")) {
+                if (getResources().getConfiguration().locale.toString().contains("fr")) {
                     setLocale("en");
                     Intent intent = getIntent();
                     finish();
@@ -694,7 +690,9 @@ public class AlexaActivity extends CoreActivity {
         });
     }
 
-    /** Changing app language **/
+    /**
+     * Changing app language
+     **/
 
     private void setLocale(String language) {
         Locale locale = new Locale(language);
@@ -720,7 +718,9 @@ public class AlexaActivity extends CoreActivity {
 
     /** Changing app language **/
 
-    /** Dark mode **/
+    /**
+     * Dark mode
+     **/
 
     private void toggleDark(String darkEnabled) {
         SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
@@ -753,7 +753,9 @@ public class AlexaActivity extends CoreActivity {
         return enableDark;
     }
 
-    /** Dark mode **/
+    /**
+     * Dark mode
+     **/
 
     private void darkStatus() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

@@ -833,7 +833,7 @@
     <string name="beluga_fuselage_value">7,31 m (L) / ~7,45 m (H)</string>
     <string name="beluga_mtow_value">155 t</string>
     <string name="beluga_cruise_speed_value">778 km/h (typique)</string>
-    <string name="beluga_range_value">1501 nmi with 40 t payload /\n2501 nmi with 26 t payload</string>
+    <string name="beluga_range_value">1501 nmi avec 40 t de charge utile /\n2501 nmi avec 26 t de charge utile</string>
     <string name="beluga_thrust_value">257 kN</string>
     <!--AIRBUS BELUGA-->
 
@@ -844,7 +844,7 @@
     <string name="a320neo_first_flight_value">25 septembre 2014</string>
     <string name="a320neo_intro_value">25 janvier 2016\navec Lufthansa</string>
     <string name="a320neo_customer_value">IndiGo</string>
-    <string name="a320neo_variants_value">7 (actifs)</string> «Project Sunrise»
+    <string name="a320neo_variants_value">7 (actifs)</string>
 
     <string name="a320neo_desc1" formatted="false">La famille Airbus A320neo (neo pour new engine option en anglais) est un développement de la famille A320 d\'avions de ligne à fuselage étroit.
         La famille A320neo est basée sur les précédents A319, A320 et A321, qui ont été renommés A320ceo, pour «current engine option» en anglais. Remotorisé avec CFM LEAP-1A ou
@@ -895,64 +895,64 @@
 
 
     <!--ANTONOV AN-124 RUSLAN-->
-    <string name="an124_type_value">Heavy transport</string>
+    <string name="an124_type_value">Avion de transport</string>
     <string name="an124_engine_value">Motor Sich\nProgress D-18T (4)</string>
-    <string name="an124_first_flight_value">24 December 1982</string>
+    <string name="an124_first_flight_value">24 decembre 1982</string>
     <string name="an124_intro_value">1986</string>
-    <string name="an124_customer_value">Russian Air Force</string>
-    <string name="an124_variants_value">8 (active)</string>
+    <string name="an124_customer_value">Force aérienne russe</string>
+    <string name="an124_variants_value">8 (actifs)</string>
 
-    <string name="an124_desc1" formatted="false">The Antonov An-124 Ruslan (NATO reporting name: Condor) is a large, strategic airlift, four-engined aircraft that was designed in the 1980s by
-        the Antonov design bureau in the Ukrainian SSR, then part of the Soviet Union (USSR). Until the Boeing 747-8F, the An-124 was, for thirty years, the world\'s
-        heaviest gross weight production cargo airplane and second heaviest operating cargo aircraft, behind the one-off Antonov An-225 Mriya (a greatly enlarged
-        design based on the An-124). The An-124 remains the largest military transport aircraft in service. During development it was known as Izdeliye 400 (Product #400)
-        in house, and An-40 in the West. First flown in 1982, civil certification was issued on 30 December 1992. In July 2013, 26 An-124s were in commercial service with 10 on order. During its production phase from 1982 to 2004, 55 An-124s were built.\n\nDuring the 1970s, the Military Transport Aviation Command
-        (Komandovaniye voyenno-transportnoy aviatsii or VTA) arm of the Soviet Air Forces had a shortfall in strategic heavy airlift capacity. Its largest planes
-        consisted of about 50 Antonov An-22 turboprops, which were used heavily for tactical roles. A declassified 1975 CIA analysis concluded that the USSR
-        did \"…not match the US in ability to provide long-range heavy lift support.\" The An-124 was manufactured in parallel by two plants: the company Aviastar-SP
-        (ex. Ulyanovsk Aviation Industrial Complex) in Ulyanovsk, Russia and by the Kyiv Aviation Plant AVIANT, in Ukraine. Design work started in 1971 and construction
-        of facilities began in 1973. Manufacturing on the first airframe began in 1979. Ultimately this project brought together over 100 factories contracted to
-        produce systems and parts. In the early 2000s, Volga-Dnepr upgraded its freighters with engine improvements to meet Chapter 4 noise regulations, structural
-        improvements to increase service life, and avionics and systems changes for four persons operations down from six or seven.\n</string>
+    <string name="an124_desc1" formatted="false">L\'Antonov An-124 Ruslan (nom de déclaration du NATO : Condor) est un grand avion quadrimoteur de transport aérien stratégique conçu dans les années 1980 par
+        le bureau d\'études Antonov en RSS d\'Ukraine, qui faisait alors partie de l\'Union soviétique (URSS). Jusqu\'au Boeing 747-8F, l\'An-124 a été, pendant trente ans, le
+        l\'avion cargo de production de poids brut le plus lourd et le deuxième avion cargo le plus lourd en exploitation, derrière l\'Antonov An-225 Mriya (un avion considérablement agrandi
+        conception basée sur l\'An-124). L\'An-124 reste le plus gros avion de transport militaire en service. Au cours du développement, il était connu sous le nom d\'Izdeliye 400 (produit #400)
+        dans la maison, et An-40 dans l\'Ouest. Vol pour la première fois en 1982, la certification civile a été délivrée le 30 décembre 1992. En juillet 2013, 26 An-124 étaient en service commercial dont 10 en commande. Au cours de sa phase de production de 1982 à 2004, 55 An-124 ont été construits.\n\nAu cours des années 1970, le Commandement de l\'aviation de transport militaire
+        (Komandovaniye voyenno-transportnoy aviatsii ou VTA) de l\'armée de l\'air soviétique avait un déficit de capacité stratégique de transport aérien lourd. Ses plus gros avions
+        se composait d\'environ 50 turbopropulseurs Antonov An-22, qui ont été largement utilisés pour des rôles tactiques. Une analyse déclassifiée de la CIA en 1975 a conclu que l\'URSS
+        n\'a «…pas égalé la capacité des États-Unis à fournir un support de levage lourd à longue portée.» L\'An-124 était fabriqué en parallèle par deux usines: la société Aviastar-SP
+        (ex. Complexe industriel d\'aviation d\'Oulianovsk) à Oulianovsk, en Russie et par l\'usine d\'aviation de Kiev AVIANT, en Ukraine. Les travaux de conception ont commencé en 1971 et la construction
+        des installations a commencé en 1973. La fabrication de la première cellule a commencé en 1979. En fin de compte, ce projet a réuni plus de 100 usines sous contrat pour
+        produire des systèmes et des pièces. Au début des années 2000, Volga-Dnepr a modernisé ses cargos avec des améliorations de moteur pour répondre aux réglementations du chapitre 4 sur le bruit, la structure
+        des améliorations pour augmenter la durée de vie et des changements d\'avionique et de systèmes pour les opérations à quatre personnes au lieu de six ou sept.\n</string>
 
-    <string name="an124_desc2" formatted="false">Externally, the An-124 is similar to the American Lockheed C-5 Galaxy, having a double fuselage to allow for a rear
-        cargo door (on the lower fuselage) that can open in flight without affecting structural integrity. It is slightly shorter, with a slightly greater wingspan,
-        and a 17% larger payload. Instead of the Galaxy\'s T-tail, the An-124 uses a conventional empennage, similar in design to that of the Boeing 747.
-        The An-124\'s main engine is the Lotarev D-18 (238–250 kN). The aircraft uses oleo strut suspension for its 24 wheels. The suspension has been calibrated to
-        allow landing on rough terrain and is able to kneel to allow easier front loading. The plane has an onboard overhead crane capable of lifting up to 30
-        tonnes of cargo, and items up to 120 tonnes can be winched on board.\n\nUp to 150 tonnes (150 long tons; 170 short tons) of cargo can be carried in a military
-        An-124; it can also carry 88 passengers in an upper deck behind the wing centre section. The cargo compartment of An-124 is 36×6.4×4.4 m (118×21×14 ft), ca.
-        20% larger than the main cargo compartment of the C-5 Galaxy, which is 36.91×5.79×4.09 m (121.1×19.0×13.4 ft). Due to limited pressurisation in the
-        main cargo compartment (24.6 kPa, 3.57 psi), it seldom carries paratroopers. Pilots have stated that the An-124 is light on the controls and easy to
-        handle for an aircraft of its size. Some airports require pavement protection from the heat and blast effects of the An-124\'s 2 TA18-200-124
-        auxiliary power units.\n\nAt MAKS Air Show in 2017, the TsAGI announced its An-124-102 Slon (elephant) design to replace the similar An-124-100. The design was
-        detailed in January 2019 before wind tunnel testing scheduled for August–September. It is intended to be produced at the Aviastar-SP factory in Ulyanovsk. It
-        should transport 150 t (330,000 lb) over 3,800 nmi (7,000 km) (up from 1,675 nmi, 3,102 km), or 180 t (400,000 lb) over 2,650 nmi (4,910 km) at 460 kn (850 km/h). The
-        Russian MoD wants a range of 4,100 nmi (7,600 km) with five Sprut-SDM-1 light tanks, their 100 crew and 300 armed soldiers. The planned An-124-102 is larger at
-        82.3 m (270 ft) long from 69 m (227 ft), with a 87–88 m (286–290 ft) span versus 73.3 m (240.5 ft) and 24.0 m (78.7 ft) high compared with 21.0 m (68.9 ft).\n\nA
-        new higher aspect ratio, composite wing and a 214–222 t (472,000–489,000 lb) airframe would allow a 490–500 t (1,080,000–1,100,000 lb) gross weight. It should
-        be powered by Russian PD-35s developed for the CR929 widebody, producing 35 tf (77,000 lbf) up from 23 tf (51,000 lbf). Two fuselages are planned, one for
-        Volga-Dnepr with a width of 5.3 m (17.4 ft) from the An-124\'s 4.4 m (14.4 ft), and one for the Russian MoD of 6.4 m (21 ft) wide to carry vehicles in two lines. By
-        November 2019, the TsAGI had shown a 1.63 m (5 ft 4 in) long and 1.75 m (5 ft 9 in) wide model, ahead of windtunnel testing.\n</string>
+    <string name="an124_desc2" formatted="false">Extérieurement, l\'An-124 est similaire au Lockheed C-5 Galaxy américain, ayant un double fuselage pour permettre un arrière
+        porte cargo (sur la partie inférieure du fuselage) qui peut s\'ouvrir en vol sans affecter l\'intégrité structurelle. Il est légèrement plus court, avec une envergure légèrement plus grande,
+        et une charge utile 17% plus importante. Au lieu de la queue en T du Galaxy, l\'An-124 utilise un empennage conventionnel, de conception similaire à celui du Boeing 747.
+        Le moteur principal de l\'An-124 est le Lotarev D-18 (238-250 kN). L\'avion utilise une suspension à jambes de force oléo pour ses 24 roues. La suspension a été calibrée pour
+        permet d\'atterrir sur un terrain accidenté et est capable de s\'agenouiller pour permettre un chargement frontal plus facile. L\'avion dispose d\'un pont roulant embarqué capable de soulever jusqu\'à 30
+        tonnes de fret et des articles jusqu\'à 120 tonnes peuvent être treuillés à bord.\n\nJusqu\'à 150 tonnes (150 tonnes longues; 170 tonnes courtes) de marchandises peuvent être transportées dans un
+        An-124 ; il peut également transporter 88 passagers dans un pont supérieur derrière la section centrale de voilure. Le compartiment à bagages de l\'An-124 mesure 36 × 6,4 × 4,4 m, env.
+        20 % plus grand que le compartiment à bagages principal du C-5 Galaxy, qui mesure 36,91 × 5,79 × 4,09 m. En raison de la pression limitée dans le
+        compartiment de chargement principal (24,6 kPa, 3,57 psi), il transporte rarement des parachutistes. Les pilotes ont déclaré que l\'An-124 est léger sur les commandes et facile à
+        poignée pour un avion de sa taille. Certains aéroports nécessitent une protection de la chaussée contre la chaleur et les effets de souffle de l\'An-124 2 TA18-200-124
+        groupes auxiliaires de puissance.\n\nAu spectacle aérien MAKS en 2017, le TsAGI a annoncé sa conception An-124-102 Slon (éléphant) pour remplacer l\'An-124-100 similaire. La conception était
+        détaillé en janvier 2019 avant les essais en soufflerie prévus pour août-septembre. Il est destiné à être produit dans l\'usine Aviastar-SP d'Oulianovsk. Il
+        devrait transporter 150 t sur 3 800 nmi (7000 km) (contre 1675 nmi, 3102 km), ou 180 t sur 2650 nmi (4910 km) à 460 kn (850 km/h). Le
+        Le ministère de la Défense russe veut une portée de 4100 nmi (7600 km) avec cinq chars légers Sprut-SDM-1, leurs 100 membres d\'équipage et 300 soldats armés. L\'An-124-102 prévu est plus grand à
+        82,3 m de long contre 69 m, avec une portée de 87 à 88 m contre 73,3 m et 24,0 m de haut contre 21,0 m.\n\nUn nouveau rapport hauteur/largeur plus élevé, une aile composite et une cellule de 214-222 t permettraient un poids brut de 490-500 t. Cela devrait
+        être alimenté par des PD-35 russes développés pour le corps large CR929, produisant 35 tf contre 23 tf. Deux fuselages sont prévus, un pour
+        Volga-Dnepr d\'une largeur de 5,3 m contre 4,4 m pour l\'An-124, et une pour le ministère de la Défense russe de 6,4 m de large pour transporter des véhicules en deux lignes. Par
+        En novembre 2019, le TsAGI avait montré un modèle de 1,63 m de long et 1,75 m de large, en amont des essais en soufflerie.\n</string>
 
-    <string name="an124_desc3">\nAntonov An-124 variants include An-124 Ruslan (strategic heavy airlift transport aircraft), An-124-100 (commercial transport aircraft),
-        An-124-100M-150, An-124-102, An-124-115M, An-124-130 (proposed), An-124-135, An-124-150, An-124-200 (proposed), An-124-210 (joint proposal with Air Foyle), and
-        An-124-300\n</string>
+    <string name="an124_desc3">\nLes variantes de l\'Antonov An-124 comprennent l\'An-124 Ruslan (avion de transport aérien lourd stratégique), l\'An-124-100 (avion de transport commercial),
+        An-124-100M-150, An-124-102, An-124-115M, An-124-130 (proposé), An-124-135, An-124-150, An-124-200 (proposé), An-124-210 (proposition conjointe avec Air Foyle), et
+        An-124-300.\n</string>
 
-    <string name="an124_specs_constraint">(-100M variant)\n</string>
+    <string name="an124_specs_constraint">(variante -100M)\n</string>
 
 
-    <string name="an124_identify">How to identify Antonov An-124 Ruslan?</string>
-    <string name="an124_identify_ans">4 engines, wings attached to top part of the fuselage, no wingtips, single vertical stabilizer arrangement.</string>
+    <string name="an124_identify">Comment identifier Antonov An-124 Ruslan?</string>
+    <string name="an124_identify_ans">4 moteurs, ailes attachées à la partie supérieure du fuselage, pas d\'extrémités d\'aile, disposition d\'un seul stabilisateur
+        vertical.</string>
 
     <string name="an124_cockpit_value">6</string>
-    <string name="an124_wingspan_value">73.3 m</string>
-    <string name="an124_length_value">69.1 m</string>
-    <string name="an124_height_value">21.08 m</string>
-    <string name="an124_gross_weight_value">214 t with max. fuel</string>
+    <string name="an124_wingspan_value">73,3 m</string>
+    <string name="an124_length_value">69,1 m</string>
+    <string name="an124_height_value">21,08 m</string>
+    <string name="an124_gross_weight_value">214 t avec max.\ncarburant</string>
     <string name="an124_mtow_value">402 t</string>
-    <string name="an124_cruise_speed_value">800–850 km/h (typical),\n865 km/h (max.)</string>
-    <string name="an124_range_value">2,000 nmi (max. payload) /\n6,200 nmi (40 t payload)</string>
+    <string name="an124_cruise_speed_value">800–850 km/h (typique),\n865 km/h (max.)</string>
+    <string name="an124_range_value">2000 nmi (max. charge utile) /\n6200 nmi (40 t charge utile)</string>
     <string name="an124_thrust_value">229 kN</string>
     <!--ANTONOV AN-124 RUSLAN-->
 
