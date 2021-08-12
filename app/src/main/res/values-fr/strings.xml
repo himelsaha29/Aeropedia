@@ -455,7 +455,7 @@
 
 
     <string name="a320_identify">Comment identifier l\'Airbus A320?</string>
-    <string name="a320_identify_ans">Conception de fenêtre «crantée», nez «bulbeux», 2 trains d\'atterrissage principaux à deux roues, nacelle moteur sans extensions de fuite,
+    <string name="a320_identify_ans">Conception de fenêtre «crantée», nez «bulbeux», 2 trains d\'atterrissage principaux à deux roues, nacelle moteur sans extensions arrière,
         4 sorties - 2 au-dessus de l\'aile et 2 près de chaque extrémité du fuselage, et soit de petits bouts d\'ailes triangulaires (clôture de bout d\'aile) similaires à ceux
         de l\'A380 ou de grands sharklets en forme de L.</string>
 
@@ -506,7 +506,7 @@
 
 
     <string name="a319_identify">Comment identifier l\'Airbus A319?</string>
-    <string name="a319_identify_ans">Conception de fenêtre «crantée», nez «bulbeux», 2 trains d\'atterrissage principaux à deux roues, nacelle moteur sans extensions de fuite,
+    <string name="a319_identify_ans">Conception de fenêtre «crantée», nez «bulbeux», 2 trains d\'atterrissage principaux à deux roues, nacelle moteur sans extensions arrière,
         3 sorties - 1 au-dessus de l\'aile et 2 près de chaque extrémité du fuselage, et soit de petits bouts d\'aile triangulaires (clôture de bout d\'aile) similaires à ceux de l\'A380 ou de grande taille
         sharklets en forme de L.</string>
 
@@ -564,7 +564,7 @@
 
 
     <string name="a318_identify">Comment identifier l\'Airbus A318?</string>
-    <string name="a318_identify_ans">Fuselage court, queue haute, conception de fenêtre «encochée», nez «bulbeux», 2 trains d\'atterrissage principaux à deux roues, nacelle de moteur sans extensions de fuite,
+    <string name="a318_identify_ans">Fuselage court, queue haute, conception de fenêtre «encochée», nez «bulbeux», 2 trains d\'atterrissage principaux à deux roues, nacelle de moteur sans extensions arrière,
         3 sorties - 1 au-dessus de l\'aile et 2 près de chaque extrémité du fuselage, 11 fenêtres entre la porte de cabine avant et la sortie de secours au-dessus de l\'aile, et petite triangulaire
         bouts d\'aile (clôture de bout d\'aile) similaires à ceux de l\'A380.</string>
 
@@ -839,57 +839,58 @@
 
 
     <!--AIRBUS A320neo FAMILY-->
-    <string name="a320neo_type_value">Narrow-body\nairliner</string>
+    <string name="a320neo_type_value">Avion de ligne à\nfuselage étroit</string>
     <string name="a320neo_engine_value">CFM LEAP-1A /\nPratt &amp; Whitney PW1100G (2)</string>
-    <string name="a320neo_first_flight_value">25 September 2014</string>
-    <string name="a320neo_intro_value">25 January 2016\nwith Lufthansa</string>
+    <string name="a320neo_first_flight_value">25 septembre 2014</string>
+    <string name="a320neo_intro_value">25 janvier 2016\navec Lufthansa</string>
     <string name="a320neo_customer_value">IndiGo</string>
-    <string name="a320neo_variants_value">7 (active)</string>
+    <string name="a320neo_variants_value">7 (actifs)</string> «Project Sunrise»
 
-    <string name="a320neo_desc1" formatted="false">The Airbus A320neo family (neo for new engine option) is a development of the A320 family of narrow-body airliners.
-        The A320neo family is based on the previous A319, A320 and A321, which was renamed to A320ceo, for \"current engine option\". Re-engined with CFM LEAP-1A or
-        Pratt &amp; Whitney PW1000G engines and fitted with sharklets as standard, it is 15% to 20% more fuel efficient than the A320ceo family. It was launched on
-        1 December 2010, made its first flight on 25 September 2014 and was introduced by Lufthansa on 25 January 2016. By 2019, the A320neo had a 60% market share
-        against the competing Boeing 737 MAX. As of June 2021, a total of 7,469 A320neo family aircraft had been ordered by more than 115 airlines,
-        of which 1,838 aircraft had been delivered.\n\nAirbus launched the sharklet blended wingtip device during the November 2009 Dubai Airshow. The installation
-        adds 200 kilograms (440 lb) but offers a 3.5% fuel burn reduction on flights over 2,800 km (1,500 nmi). The neo is 1.8 t heavier than the ceo, but take-off
-        and landing performance is the same with a modified rotation law, adjusted wing flap and wing slat angles and rudder deflection increased by 5° to cope with
-        the higher thrust. It is also is half as loud as an A320 at take-off, with an 85 decibel noise footprint. The LEAP-powered A321neo has 83.3 dB flyover noise,
-        substantially lower than the older CFM56 and V2500 used for most A320ceo family aircraft.\n</string>
-
-
-    <string name="a320neo_desc2" formatted="false">Compared to the re-engine improvement of 15%, an all-new single-aisle would have brought only 3% more gain while
-        high volume manufacturing in carbon fibre could be much more expensive. At the February 2010 Singapore Air Show, Airbus said its decision to launch was scheduled
-        for the July 2010 Farnborough Air Show. The decision had still not been taken by August, but the engine choice included the CFM International LEAP-1A and the
-        Pratt &amp; Whitney PW1000G, with 20% lower maintenance cost than current A320 engines. The new engines burn 16% less fuel, though the actual gain is slightly less
-        as 1–2% is typically lost when installed on an existing aircraft.\n\nThe aircraft family features new "Space-Flex" optional cabin configuration increases
-        space-efficiency with a new rear galley configuration and a "Smart-Lav" modular lavatory design – allowing an in-flight change of two lavatories into one
-        accessible toilet. The rearranged cabin allows up to 20 more passengers for the A321neo without "putting more sardines in the can" with the larger "Cabin-Flex"
-        modified exits described below. Total fuel consumption per seat is reduced by over 20%, while the rearranged cabin allows up to nine more passengers
-        for the A320neo. After a year in service, Lufthansa confirmed the 20% efficiency gain per passenger with up to 180 seats, along with reduced noise and CO<sub><small><small>2</small></small></sub>
-        emissions. Operators confirm the 15% per seat fuel-burn savings even counterbalanced by the added weight on short sectors, which can rise to 16–17% on longer
-        routes and to 20% or more for Lufthansa with 180 passengers up from 168 with two more seat rows. It was Lufthansa again that confirmed the 16% fuel savings
-        but had to block the last seating row due to centre-of-gravity concerns.\n</string>
-
-    <string name="a320neo_desc3">\nAirbus offers three variants of the A320neo family: the A319neo, A320neo and A321neo. A neo variant for the Airbus A318 was not
-        proposed but could be developed should demand arise. Other variants include A321LR, A321XLR (officially launched at the Paris Air Show on 17 June 2019,
-        with deliveries expected from 2023), ACJ319neo and the ACJ320neo as the corporate variants.\n</string>
-
-    <string name="a320neo_specs_constraint">(A319neo, A320neo, A321neo compared in order)\n</string>
+    <string name="a320neo_desc1" formatted="false">La famille Airbus A320neo (neo pour new engine option en anglais) est un développement de la famille A320 d\'avions de ligne à fuselage étroit.
+        La famille A320neo est basée sur les précédents A319, A320 et A321, qui ont été renommés A320ceo, pour «current engine option» en anglais. Remotorisé avec CFM LEAP-1A ou
+        Moteurs Pratt &amp; Whitney PW1000G et équipés de série de sharklets, il est 15 à 20% plus économe en carburant que la famille A320ceo. Il a été lancé le
+        Le 1er décembre 2010, a effectué son premier vol le 25 septembre 2014 et a été introduit par Lufthansa le 25 janvier 2016. En 2019, l\'A320neo détenait une part de marché de 60 %.
+        contre le Boeing 737 MAX concurrent. En juin 2021, un total de 7469 avions de la famille A320neo avaient été commandés par plus de 115 compagnies aériennes,
+        dont 1838 avions ont été livrés.\n\nAirbus a lancé le dispositif de bout d'aile mélangé sharklet lors du spectacle aérien de Dubaï en novembre 2009. L\'installation
+        ajoute 200 kilogrammes mais offre une réduction de la consommation de carburant de 3,5% sur les vols de plus de 2800 km (1500 nmi). Le neo est 1,8 t plus lourd que le ceo, mais le décollage
+        et les performances d\'atterrissage sont les mêmes avec une loi de rotation modifiée, des angles de volet et de bec d\'aile ajustés et une déflexion de la gouverne de direction augmentée de 5° pour faire face à
+        la poussée plus élevée. Il est également deux fois moins bruyant qu\'un A320 au décollage, avec une empreinte sonore de 85 décibels. L\'A321neo alimenté par LEAP a un bruit de survol de 83,3 dB,
+        nettement inférieur aux anciens CFM56 et V2500 utilisés pour la plupart des avions de la famille A320ceo.\n</string>
 
 
-    <string name="a320neo_identify">How to identify Airbus A320neo family aircraft?</string>
-    <string name="a320neo_identify_ans">\"Notched\" window design, \"bulbous\" nose, 2 dual-wheel main landing gears, engine nacelle with small top/bottom trailing extensions, large L-shaped sharklets.</string>
+    <string name="a320neo_desc2" formatted="false">Par rapport à l\'amélioration de 15% de la refonte du moteur, un tout nouveau monocouloir n\'aurait apporté que 3 % de gain supplémentaire tout en
+        la fabrication à grande échelle en fibre de carbone pourrait être beaucoup plus chère. Lors du salon aéronautique de Singapour de février 2010, Airbus a déclaré que sa décision de lancer était prévue
+        pour le spectacle aérien de Farnborough en juillet 2010. La décision n\'avait toujours pas été prise en août, mais le choix du moteur comprenait le CFM International LEAP-1A et le
+        Pratt &amp; Whitney PW1000G, avec des coûts de maintenance 20% inférieurs à ceux des moteurs A320 actuels. Les nouveaux moteurs consomment 16% de carburant en moins, bien que le gain réel soit légèrement inférieur
+        car 1 à 2 % sont généralement perdus lorsqu\'ils sont installés sur un avion existant.\n\nLa famille d\'avions comprend de nouvelles augmentations de la configuration de la cabine en option «Space-Flex»
+        gain de place avec une nouvelle configuration de cuisine arrière et une conception de toilettes modulaires «Smart-Lav» - permettant un changement en vol de deux toilettes en un seul
+        toilettes accessibles. La cabine réaménagée permet jusqu\'à 20 passagers de plus pour l\'A321neo sans «mettre plus de sardines dans la boîte» avec le plus grand «Cabin-Flex»
+        sorties modifiées décrites ci-dessous. La consommation totale de carburant par siège est réduite de plus de 20%, tandis que la cabine réorganisée permet jusqu'à neuf passagers supplémentaires
+        pour l\'A320neo. Après un an de service, Lufthansa a confirmé le gain d\'efficacité de 20 % par passager avec jusqu\'à 180 sièges, ainsi qu'une réduction du bruit et du CO<sub><small><small>2</small></small></sub>
+        émissions. Les opérateurs confirment les économies de consommation de carburant de 15% par siège, même contrebalancées par le poids supplémentaire sur les secteurs courts, qui peut atteindre 16 à 17 % sur les plus longs
+        et à 20 % ou plus pour Lufthansa avec 180 passagers contre 168 avec deux rangées de sièges supplémentaires. C\'est à nouveau Lufthansa qui a confirmé les 16% d\'économies de carburant
+        mais a dû bloquer la dernière rangée de sièges en raison de problèmes de centre de gravité.\n</string>
+
+    <string name="a320neo_desc3">\nAirbus propose trois variantes de la famille A320neo: l\'A319neo, l\'A320neo et l\'A321neo. Une variante «neo» pour l\'Airbus A318 n\'a pas été
+        proposé mais pourrait être développé en cas de demande. D\'autres variantes incluent A321LR, A321XLR (officiellement lancé au salon du Bourget le 17 juin 2019,
+        avec des livraisons prévues à partir de 2023), l\'ACJ319neo et l\'ACJ320neo comme variantes d\'entreprise.\n</string>
+
+    <string name="a320neo_specs_constraint">(comparaison ordonnée des variantes A319neo, A320neo, A321neo)\n</string>
+
+
+    <string name="a320neo_identify">Comment identifier les avions de la famille Airbus A320neo ?</string>
+    <string name="a320neo_identify_ans">Conception de fenêtre «encochée», nez «bulbeux», 2 trains d\'atterrissage principaux à deux roues, nacelle du moteur avec de petites extensions arrière supérieures et inférieures, grands
+        sharklets en forme de L.</string>
 
     <string name="a320neo_cockpit_value">2</string>
-    <string name="a320neo_wingspan_value">35.80 m</string>
-    <string name="a320neo_length_value">33.84 / 37.57 / 44.51 m</string>
-    <string name="a320neo_height_value">11.76 m</string>
-    <string name="a320neo_fuselage_value">3.95 m (W) / 4.14 m (H)</string>
-    <string name="a320neo_mtow_value">75.5 / 79 / 97 t</string>
-    <string name="a320neo_cruise_speed_value">833 km/h (typical),\n876 km/h (max.)</string>
-    <string name="a320neo_range_value">3,750 / 3,500 / 4,000 nmi</string>
-    <string name="a320neo_thrust_value">107 / 120.6 / 147.3 kN</string>
+    <string name="a320neo_wingspan_value">35,80 m</string>
+    <string name="a320neo_length_value">33,84 / 37,57 / 44,51 m</string>
+    <string name="a320neo_height_value">11,76 m</string>
+    <string name="a320neo_fuselage_value">3,95 m (L) / 4,14 m (H)</string>
+    <string name="a320neo_mtow_value">75,5 / 79 / 97 t</string>
+    <string name="a320neo_cruise_speed_value">833 km/h (typique),\n876 km/h (max.)</string>
+    <string name="a320neo_range_value">3750 / 3500 / 4000 nmi</string>
+    <string name="a320neo_thrust_value">107 / 120,6 / 147,3 kN</string>
     <!--AIRBUS A320neo FAMILY-->
 
 
