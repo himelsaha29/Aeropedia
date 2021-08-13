@@ -534,6 +534,71 @@ public class Firebase extends AppCompatActivity {
                                             button.setBackgroundColor(Color.RED);
                                         }
                                     }
+                                    if (s.equalsIgnoreCase("Boeing 777")) {
+                                        NeumorphButton button = findViewById(R.id.b777);
+                                        TextView status = findViewById(R.id.b777status);
+                                        status.setText("Boeing 777\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Boeing 777")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+                                    if (s.equalsIgnoreCase("Boeing 787")) {
+                                        NeumorphButton button = findViewById(R.id.b787);
+                                        TextView status = findViewById(R.id.b787status);
+                                        status.setText("Boeing 787\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Boeing 787")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+                                    if (s.equalsIgnoreCase("Bombardier\nChallenger 650")) {
+                                        NeumorphButton button = findViewById(R.id.bombardier_challenger_650);
+                                        TextView status = findViewById(R.id.bombardier_challenger_650_status);
+                                        status.setText("Bombardier\nChallenger 650\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Bombardier\nChallenger 650")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+                                    if (s.equalsIgnoreCase("Bombardier\nCRJ 100/200")) {
+                                        NeumorphButton button = findViewById(R.id.bombardier_crj);
+                                        TextView status = findViewById(R.id.bombardier_crj_status);
+                                        status.setText("Bombardier\nCRJ 100/200\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Bombardier\nCRJ 100/200")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+
 
 
 
