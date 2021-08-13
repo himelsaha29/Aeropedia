@@ -941,7 +941,7 @@
 
 
     <!--ANTONOV AN-72 CHEBURASHKA-->
-    <string name="an72_type_value">Medium-transport, STOL</string>
+    <string name="an72_type_value">Transport aircraft</string>
     <string name="an72_engine_value">Ivchenko-Progress\nMotor Sich Lotarev D-36 (2)</string>
     <string name="an72_first_flight_value">31 August 1977</string>
     <string name="an72_customer_value">Russian Air Force</string>
@@ -962,17 +962,17 @@
     <string name="an72_desc2" formatted="false">The rear fuselage of the aircraft has a hinged loading ramp with a rear fairing that slides backwards and up to clear the
         opening. Up to 7.5 tons can be airdropped while there are folding side seats for 52 passengers. In 2018, it was reported that six An-72 aircraft will be
         upgraded for the Russian Aerospace Forces and Navy to carry more fuel and payload for Arctic operations. The An-72 has STOL capabilities; its takeoff roll
-        is 620 metres (2,030 ft) and its landing run is 420 metres (1,380 ft). This aircraft was designed to be used on unprepared surfaces: its robust undercarriage
+        is 620 metres and its landing run is 420 metres. This aircraft was designed to be used on unprepared surfaces: its robust undercarriage
         and high-flotation tyres allow operations on sand, grass, or other unpaved surfaces. In January 1997 and 1998, the Paris-Dakar rally was assisted by two
         An-72 aircraft. In 1999, a total of four aircraft of this type joined the rally.\n</string>
 
-    <string name="an72_desc3">\nAntonov An-72 variants include An-72 (Coaler-A), An-72A (Coaler-C), An-72AT (Coaler-C), An-72S (Coaler-C), An-72P, and An-74\n</string>
+    <string name="an72_desc3">\nAntonov An-72 variants include An-72 (Coaler-A), An-72A (Coaler-C), An-72AT (Coaler-C), An-72S (Coaler-C), An-72P, and An-74.\n</string>
 
     <string name="an72_specs_constraint">(-72 variant)\n</string>
 
 
     <string name="an72_identify">How to identify Antonov An-72 Cheburashka?</string>
-    <string name="an72_identify_ans">Large engine intake ducts, that resemble the oversized ears of the popular Soviet animated character Cheburashka, 2 engines
+    <string name="an72_identify_ans">Large engine intake ducts that resemble the oversized ears of the popular Soviet animated character Cheburashka, 2 engines
         attached above the wings, pointed nose, no wingtips, horizontal stabilizers attached to the top part of the tail with a pointed extension attached
         to the front section of the tail on the same axis as the horizontal stabilizers.</string>
 

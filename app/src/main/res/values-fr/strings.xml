@@ -958,49 +958,51 @@
 
 
     <!--ANTONOV AN-72 CHEBURASHKA-->
-    <string name="an72_type_value">Medium-transport, STOL</string>
+    <string name="an72_type_value">Avion cargo</string>
     <string name="an72_engine_value">Ivchenko-Progress\nMotor Sich Lotarev D-36 (2)</string>
-    <string name="an72_first_flight_value">31 August 1977</string>
-    <string name="an72_customer_value">Russian Air Force</string>
+    <string name="an72_first_flight_value">31 août 1977</string>
+    <string name="an72_customer_value">Force aérienne russe</string>
     <string name="an72_variants_value">6</string>
 
-    <string name="an72_desc1" formatted="false">The Antonov An-72 (NATO reporting name: Coaler) is a Soviet/Ukrainian transport aircraft, developed by Antonov. It
-        was designed as an STOL (short takeoff and landing) transport and intended as a replacement for the Antonov An-26, but variants have found success as commercial
-        freighters. The An-72 and the related An-74 get their nickname, Cheburashka, from the large engine intake ducts, which resemble the oversized ears of the
-        popular Soviet animated character of the same name. The aircraft is still in production and a total of 195 (its variants included) have been built so far. The
-        An-72 first flew in December 1977. Produced in tandem with the An-72, the An-74 variant adds the ability to operate in harsh weather conditions in polar
-        regions, because it can be fitted with wheel-skis landing gear, de-icing equipment and a number of other upgrades, allowing the aircraft to support
-        operations in Arctic or Antarctic environments. Other An-72 versions include the An-72S VIP transport and An-72P maritime patrol aircraft.\n\nAn unusual design feature
-        of the An-72 is the use of the Coandă effect to improve STOL performance, utilizing engine exhaust gases blown over the wing\'s upper surface to boost lift. The
-        first flight was made on 31 August 1977, but it was only in the 1980s that production started. The powerplant used is the Lotarev D-36 turbofan engine. The
-        An-72 bears some resemblance to the unsuccessful Boeing YC-14, a prototype design from the early 1970s (design submitted to the Air Force in February 1972) which
-        had also used overwing engines and the Coandă effect.\n</string>
+    <string name="an72_desc1" formatted="false">L\'Antonov An-72 (nom de l\'OTAN : Coaler) est un avion de transport soviétique/ukrainien, développé par Antonov. Il
+        a été conçu comme un transport STOL (décollage et atterrissage courts) et destiné à remplacer l\'Antonov An-26, mais des variantes ont rencontré le succès en tant que commercial
+        cargos. L\'An-72 et l\'An-74 apparenté tirent leur surnom, Cheburashka, des grands conduits d\'admission du moteur, qui ressemblent aux oreilles surdimensionnées du
+        personnage d\'animation soviétique populaire du même nom. L\'avion est toujours en production et un total de 195 (ses variantes incluses) ont été construits à ce jour. Le
+        L\'An-72 a volé pour la première fois en décembre 1977. Produite en tandem avec l\'An-72, la variante An-74 ajoute la possibilité de fonctionner dans des conditions météorologiques difficiles dans les régions polaires.
+        régions, car il peut être équipé d\'un train d\'atterrissage roues-skis, d\'un équipement de dégivrage et d\'un certain nombre d\'autres améliorations, permettant à l\'avion de supporter
+        opérations en milieu arctique ou antarctique. Les autres versions An-72 incluent le transport VIP An-72S et l\'avion de patrouille maritime An-72P.\n\nUne
+        caractéristique de conception inhabituelle de l\'An-72 est l\'utilisation de l\'effet Coandă pour améliorer les performances STOL, en utilisant les gaz d\'échappement
+        du moteur soufflés sur la surface supérieure de l\'aile pour augmenter la portance. Le premier vol a été effectué le 31 août 1977, mais ce n\'est que dans les
+        années 1980 que la production a commencé. Le groupe motopropulseur utilisé est le turboréacteur Lotarev D-36. L\'An-72 ressemble un peu à l\'échec du Boeing
+        YC-14, un prototype de conception du début des années 1970 (conception soumise à l\'Air Force en février 1972) qui avait également utilisé des moteurs d\'aile
+        et l\'effet Coandă.\n</string>
 
-    <string name="an72_desc2" formatted="false">The rear fuselage of the aircraft has a hinged loading ramp with a rear fairing that slides backwards and up to clear the
-        opening. Up to 7.5 tons can be airdropped while there are folding side seats for 52 passengers. In 2018, it was reported that six An-72 aircraft will be
-        upgraded for the Russian Aerospace Forces and Navy to carry more fuel and payload for Arctic operations. The An-72 has STOL capabilities; its takeoff roll
-        is 620 metres (2,030 ft) and its landing run is 420 metres (1,380 ft). This aircraft was designed to be used on unprepared surfaces: its robust undercarriage
-        and high-flotation tyres allow operations on sand, grass, or other unpaved surfaces. In January 1997 and 1998, the Paris-Dakar rally was assisted by two
-        An-72 aircraft. In 1999, a total of four aircraft of this type joined the rally.\n</string>
+    <string name="an72_desc2" formatted="false">Le fuselage arrière de l\'avion a une rampe de chargement articulée avec un carénage arrière qui coulisse vers l\'arrière
+        et vers le haut pour dégager l\'ouverture. Jusqu\'à 7,5 tonnes peuvent être larguées tandis qu\'il y a des sièges latéraux rabattables pour 52 passagers. En 2018,
+        il a été signalé que six avions An-72 seraient mis à niveau pour les forces aérospatiales et la marine russes afin de transporter plus de carburant et de charge
+        utile pour les opérations dans l\'Arctique. L\'An-72 a des capacités STOL; sa course au décollage est de 620 mètres et sa course d\'atterrissage est de 420
+        mètres. Cet avion a été conçu pour être utilisé sur des surfaces non préparées: son train d\'atterrissage robuste et ses pneus à haute flottaison permettent des
+        opérations sur du sable, de l\'herbe ou d\'autres surfaces non pavées. En janvier 1997 et 1998, le rallye Paris-Dakar était assisté par deux avions An-72. En 1999,
+        un total de quatre avions de ce type ont rejoint le rallye.\n</string>
 
-    <string name="an72_desc3">\nAntonov An-72 variants include An-72 (Coaler-A), An-72A (Coaler-C), An-72AT (Coaler-C), An-72S (Coaler-C), An-72P, and An-74\n</string>
+    <string name="an72_desc3">\nLes variantes d\'Antonov An-72 incluent An-72 (Coaler-A), An-72A (Coaler-C), An-72AT (Coaler-C), An-72S (Coaler-C), An-72P et An-74.\n</string>
 
-    <string name="an72_specs_constraint">(-72 variant)\n</string>
+    <string name="an72_specs_constraint">(variante -72)\n</string>
 
 
-    <string name="an72_identify">How to identify Antonov An-72 Cheburashka?</string>
-    <string name="an72_identify_ans">Large engine intake ducts, that resemble the oversized ears of the popular Soviet animated character Cheburashka, 2 engines
-        attached above the wings, pointed nose, no wingtips, horizontal stabilizers attached to the top part of the tail with a pointed extension attached
-        to the front section of the tail on the same axis as the horizontal stabilizers.</string>
+    <string name="an72_identify">Comment identifier Antonov An-72 Cheburashka?</string>
+    <string name="an72_identify_ans">Grands conduits d\'admission d\'air du moteur qui ressemblent aux oreilles surdimensionnées du populaire personnage d\'animation soviétique Cheburashka, 2 moteurs
+        attaché au-dessus des ailes, nez pointu, pas de bout d\'aile, stabilisateurs horizontaux attachés à la partie supérieure de la queue avec une extension pointue attachée
+        à la partie avant de la queue sur le même axe que les stabilisateurs horizontaux.</string>
 
     <string name="an72_cockpit_value">5</string>
-    <string name="an72_wingspan_value">31.89 m</string>
-    <string name="an72_length_value">28.07 m</string>
-    <string name="an72_height_value">8.65 m</string>
-    <string name="an72_gross_weight_value">34.5 t</string>
-    <string name="an72_cruise_speed_value">540 km/h (typical),\n700 km/h (max.)</string>
-    <string name="an72_range_value">2,336 nmi</string>
-    <string name="an72_thrust_value">62.75 kN</string>
+    <string name="an72_wingspan_value">31,89 m</string>
+    <string name="an72_length_value">28,07 m</string>
+    <string name="an72_height_value">8,65 m</string>
+    <string name="an72_gross_weight_value">34,5 t</string>
+    <string name="an72_cruise_speed_value">540 km/h (typique),\n700 km/h (max.)</string>
+    <string name="an72_range_value">2336 nmi</string>
+    <string name="an72_thrust_value">62,75 kN</string>
     <!--ANTONOV AN-72 CHEBURASHKA-->
 
 
