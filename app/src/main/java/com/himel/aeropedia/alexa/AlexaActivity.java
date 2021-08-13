@@ -146,6 +146,8 @@ public class AlexaActivity extends CoreActivity {
                 e.printStackTrace();
             }
 
+            System.out.println("LOGIN STATUS : " + loggedIn);
+
             if (!loggedIn) {
 
                 loadLocale();

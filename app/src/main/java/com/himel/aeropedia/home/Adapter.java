@@ -98,12 +98,12 @@ public class Adapter extends PagerAdapter {
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
                 else if (position == 1) {
-                    Intent showContent = new Intent(context, AlexaActivity.class);
+                    Intent showContent = new Intent(context, FlightMap.class);
                     context.startActivity(showContent);
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
                 else if (position == 2) {
-                    Intent showContent = new Intent(context, FlightMap.class);
+                    Intent showContent = new Intent(context, AlexaActivity.class);
                     context.startActivity(showContent);
                     ((Activity)context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
