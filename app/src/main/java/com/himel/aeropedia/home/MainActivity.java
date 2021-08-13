@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         }
         models = new ArrayList<Model>();
         models.add(new Model(R.drawable.aircraft_gallery_cover, "Aircraft Gallery"));
-        models.add(new Model(R.drawable.alexa_cover, "Ask Alexa"));
         models.add(new Model(R.drawable.real_time_flight_tracker_cover, "Real time flight tracker"));
+        models.add(new Model(R.drawable.alexa_cover, "Ask Alexa"));
         models.add(new Model(R.drawable.airliners_photoshop, "BOEING"));
 
         adapter = new Adapter(models, this);
@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
         Integer[] colors_temp = {
                 getResources().getColor(R.color.back_color1),
-                getResources().getColor(R.color.back_color2),
                 getResources().getColor(R.color.back_color3),
+                getResources().getColor(R.color.back_color2),
                 getResources().getColor(R.color.back_color4)
         };
 
