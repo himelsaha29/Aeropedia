@@ -22,6 +22,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -54,10 +55,10 @@ public class Firebase extends AppCompatActivity {
     private Set<String> chosenAircrafts = new HashSet<String>();;
     private Animation translate = null;
     private NeumorphCardView textCard;
+    private NeumorphCardView textViewCard;
     private ConstraintLayout layout;
     private ScrollView scroll;
-    private HorizontalScrollView mainScroll;
-    private HorizontalScrollView concurrentScroll;
+    private LinearLayout mainScroll;
 
     private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
             a340Button, a350Button, a380Button, belugaButton, an22Button, an72Button, an124Button, an225Button, b737Button, b747Button, b757Button, b767Button,
@@ -66,7 +67,7 @@ public class Firebase extends AppCompatActivity {
     boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, an22, an72, an124, an225, b737, b747, b757, b767,
             b777, b787, bombardierChallenger650, bombardierCRJ, citation, de_havilland;
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,7 +110,6 @@ public class Firebase extends AppCompatActivity {
         layout = findViewById(R.id.buttonContainer);
         scroll = findViewById(R.id.firebaseScroll);
 
-        concurrentScroll = findViewById(R.id.concurrentScroll);
         Display display = ((android.view.WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
         scroll.setFadingEdgeLength((int) (display.getHeight() *0.12));
         DatabaseReference firebase = FirebaseDatabase.getInstance().getReference().child("Aircraft Preference");
@@ -608,34 +608,10 @@ public class Firebase extends AppCompatActivity {
                                 }
 
                                 childCount = 0;
-                                mainScroll = findViewById(R.id.mainScroll);
-                                concurrentScroll = findViewById(R.id.concurrentScroll);
-                                concurrentScroll.setOnTouchListener(new View.OnTouchListener() {
-
-                                    @Override
-                                    public boolean onTouch(View v, MotionEvent event) {
-                                        //disable touch event
-                                        return true;
-                                    }
-
-                                });
-
-
-
-
-                                mainScroll.setOnScrollChangeListener(new View.OnScrollChangeListener() {
-                                    @Override
-                                    public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                                        int x = mainScroll.getScrollX();
-                                        System.out.println(x);
-                                        concurrentScroll.scrollTo(x, concurrentScroll.getTop());
-                                    }
-                                });
 
                             }
 
                         }
-
                     }
 
                     @Override
