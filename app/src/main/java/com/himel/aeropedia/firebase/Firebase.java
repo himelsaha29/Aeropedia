@@ -60,10 +60,11 @@ public class Firebase extends AppCompatActivity {
     private HorizontalScrollView concurrentScroll;
 
     private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
-            a340Button, a350Button, a380Button, belugaButton, an22Button, an72Button, an124Button, an225Button, b737Button, b747Button, b757Button, b767Button, cessnaButton, havillandButton, save;
+            a340Button, a350Button, a380Button, belugaButton, an22Button, an72Button, an124Button, an225Button, b737Button, b747Button, b757Button, b767Button,
+            b777Button, b787Button, bombardierChallenger650Button, bombardierCRJButton, cessnaButton, havillandButton, save;
 
     boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, an22, an72, an124, an225, b737, b747, b757, b767,
-            citation, de_havilland;
+            b777, b787, bombardierChallenger650, bombardierCRJ, citation, de_havilland;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -94,6 +95,10 @@ public class Firebase extends AppCompatActivity {
         b747Button = findViewById(R.id.b747);
         b757Button = findViewById(R.id.b757);
         b767Button = findViewById(R.id.b767);
+        b777Button = findViewById(R.id.b777);
+        b787Button = findViewById(R.id.b787);
+        bombardierChallenger650Button = findViewById(R.id.bombardier_challenger_650);
+        bombardierCRJButton = findViewById(R.id.bombardier_crj_100_200);
 
 
 
@@ -983,6 +988,70 @@ public class Firebase extends AppCompatActivity {
                     b767Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) b767Button.getText());
                     b767 = false;
+                }
+            }
+        });
+
+        b777Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!b777) {
+                    b777Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) b777Button.getText());
+                    b777 = true;
+                } else {
+                    b777Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) b777Button.getText());
+                    b777 = false;
+                }
+            }
+        });
+
+        b787Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!b787) {
+                    b787Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) b787Button.getText());
+                    b787 = true;
+                } else {
+                    b787Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) b787Button.getText());
+                    b787 = false;
+                }
+            }
+        });
+
+        bombardierChallenger650Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!bombardierChallenger650) {
+                    bombardierChallenger650Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) bombardierChallenger650Button.getText());
+                    bombardierChallenger650 = true;
+                } else {
+                    bombardierChallenger650Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) bombardierChallenger650Button.getText());
+                    bombardierChallenger650 = false;
+                }
+            }
+        });
+
+        bombardierCRJButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!bombardierCRJ) {
+                    bombardierCRJButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) bombardierCRJButton.getText());
+                    bombardierCRJ = true;
+                } else {
+                    bombardierCRJButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) bombardierCRJButton.getText());
+                    bombardierCRJ = false;
                 }
             }
         });
