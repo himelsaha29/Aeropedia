@@ -60,9 +60,10 @@ public class Firebase extends AppCompatActivity {
     private HorizontalScrollView concurrentScroll;
 
     private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
-            a340Button, a350Button, a380Button, belugaButton, an22Button, an72Button, an124Button, an225Button, cessnaButton, havillandButton, save;
+            a340Button, a350Button, a380Button, belugaButton, an22Button, an72Button, an124Button, an225Button, b737Button, b747Button, b757Button, b767Button, cessnaButton, havillandButton, save;
 
-    boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, an22, an72, an124, an225, citation, de_havilland;
+    boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, an22, an72, an124, an225, b737, b747, b757, b767,
+            citation, de_havilland;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -89,6 +90,11 @@ public class Firebase extends AppCompatActivity {
         an72Button = findViewById(R.id.an_72);
         an124Button = findViewById(R.id.an_124);
         an225Button = findViewById(R.id.an_225);
+        b737Button = findViewById(R.id.b737);
+        b747Button = findViewById(R.id.b747);
+        b757Button = findViewById(R.id.b757);
+        b767Button = findViewById(R.id.b767);
+
 
 
         cessnaButton = findViewById(R.id.citation);
@@ -849,6 +855,70 @@ public class Firebase extends AppCompatActivity {
                     an225Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) an225Button.getText());
                     an225 = false;
+                }
+            }
+        });
+
+        b737Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!b737) {
+                    b737Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) b737Button.getText());
+                    b737 = true;
+                } else {
+                    b737Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) b737Button.getText());
+                    b737 = false;
+                }
+            }
+        });
+
+        b747Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!b747) {
+                    b747Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) b747Button.getText());
+                    b747 = true;
+                } else {
+                    b747Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) b747Button.getText());
+                    b747 = false;
+                }
+            }
+        });
+
+        b757Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!b757) {
+                    b757Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) b757Button.getText());
+                    b757 = true;
+                } else {
+                    b757Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) b757Button.getText());
+                    b757 = false;
+                }
+            }
+        });
+
+        b767Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!b767) {
+                    b767Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) b767Button.getText());
+                    b767 = true;
+                } else {
+                    b767Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) b767Button.getText());
+                    b767 = false;
                 }
             }
         });
