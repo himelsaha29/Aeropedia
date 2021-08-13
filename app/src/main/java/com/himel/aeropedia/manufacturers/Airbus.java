@@ -117,7 +117,7 @@ public class Airbus extends AppCompatActivity {
                 Window window = getWindow();
                 window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
                 window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(Color.parseColor("#FF9DA0E7"));
+                window.setStatusBarColor(Color.parseColor("#FF81C0E7"));
             }
         } else {
             setContentView(R.layout.activity_airbus_dark);

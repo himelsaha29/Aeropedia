@@ -53,6 +53,7 @@
           <item android:offset="0" android:color="#FFFFFFFF"/>
           <item android:offset="0" android:color="#FFFDFBFA"/>
           <item android:offset="0.36" android:color="#FF0B0E31"/>
+          <item android:offset="0.508" android:color="#FF0B0E31"/>
           <item android:offset="1" android:color="#FF355278"/>
           <item android:offset="1" android:color="#FF964E24"/>
         </gradient>
