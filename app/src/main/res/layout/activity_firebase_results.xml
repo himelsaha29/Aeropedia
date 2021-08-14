@@ -1761,6 +1761,242 @@
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:padding="10dip">
+
+                                        <TextView
+                                            android:id="@+id/bombardier_learjet_75_status"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:adjustViewBounds="true"
+                                            android:fontFamily="@font/maven_pro_medium"
+                                            android:gravity="center"
+                                            android:text="Bombardier\nLearjet 75\n 0.0%"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp" />
+
+                                        <soup.neumorphism.NeumorphButton
+                                            android:id="@+id/bombardier_learjet_75"
+                                            style="@style/Widget.Neumorph.Button"
+                                            android:layout_width="50dp"
+                                            android:layout_height="250dp"
+                                            android:layout_gravity="center_horizontal"
+                                            android:fontFamily="@font/maven_pro_medium"
+                                            android:padding="5dp"
+                                            android:text=" "
+                                            android:textAllCaps="false"
+                                            android:textColor="#b6d8fc"
+                                            android:textSize="15sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:neumorph_backgroundColor="#b6d8fc"
+                                            app:neumorph_shadowColorDark="#eaeaea"
+                                            app:neumorph_shadowColorLight="#fdfdfd"
+                                            app:neumorph_strokeColor="#f2f4f6"
+                                            app:neumorph_strokeWidth="5dp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:padding="10dip">
+
+                                        <TextView
+                                            android:id="@+id/bombardier_global_7500_status"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:adjustViewBounds="true"
+                                            android:fontFamily="@font/maven_pro_medium"
+                                            android:gravity="center"
+                                            android:text="Bombardier\nGlobal 7500\n 0.0%"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp" />
+
+                                        <soup.neumorphism.NeumorphButton
+                                            android:id="@+id/bombardier_global_7500"
+                                            style="@style/Widget.Neumorph.Button"
+                                            android:layout_width="50dp"
+                                            android:layout_height="250dp"
+                                            android:layout_gravity="center_horizontal"
+                                            android:fontFamily="@font/maven_pro_medium"
+                                            android:padding="5dp"
+                                            android:text=" "
+                                            android:textAllCaps="false"
+                                            android:textColor="#b6d8fc"
+                                            android:textSize="15sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:neumorph_backgroundColor="#b6d8fc"
+                                            app:neumorph_shadowColorDark="#eaeaea"
+                                            app:neumorph_shadowColorLight="#fdfdfd"
+                                            app:neumorph_strokeColor="#f2f4f6"
+                                            app:neumorph_strokeWidth="5dp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:padding="10dip">
+
+                                        <TextView
+                                            android:id="@+id/embraer_erj_status"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:adjustViewBounds="true"
+                                            android:fontFamily="@font/maven_pro_medium"
+                                            android:gravity="center"
+                                            android:text="Embraer ERJ\n 0.0%"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp" />
+
+                                        <soup.neumorphism.NeumorphButton
+                                            android:id="@+id/embraer_erj"
+                                            style="@style/Widget.Neumorph.Button"
+                                            android:layout_width="50dp"
+                                            android:layout_height="250dp"
+                                            android:layout_gravity="center_horizontal"
+                                            android:fontFamily="@font/maven_pro_medium"
+                                            android:padding="5dp"
+                                            android:text=" "
+                                            android:textAllCaps="false"
+                                            android:textColor="#b6d8fc"
+                                            android:textSize="15sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:neumorph_backgroundColor="#b6d8fc"
+                                            app:neumorph_shadowColorDark="#eaeaea"
+                                            app:neumorph_shadowColorLight="#fdfdfd"
+                                            app:neumorph_strokeColor="#f2f4f6"
+                                            app:neumorph_strokeWidth="5dp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        android:padding="10dip">
+
+                                        <TextView
+                                            android:id="@+id/embraer_e_jet_e2_status"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:adjustViewBounds="true"
+                                            android:fontFamily="@font/maven_pro_medium"
+                                            android:gravity="center"
+                                            android:text="Embraer E-Jet\nE2\n 0.0%"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp" />
+
+                                        <soup.neumorphism.NeumorphButton
+                                            android:id="@+id/embraer_e_jet_e2"
+                                            style="@style/Widget.Neumorph.Button"
+                                            android:layout_width="50dp"
+                                            android:layout_height="250dp"
+                                            android:layout_gravity="center_horizontal"
+                                            android:fontFamily="@font/maven_pro_medium"
+                                            android:padding="5dp"
+                                            android:text=" "
+                                            android:textAllCaps="false"
+                                            android:textColor="#b6d8fc"
+                                            android:textSize="15sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:neumorph_backgroundColor="#b6d8fc"
+                                            app:neumorph_shadowColorDark="#eaeaea"
+                                            app:neumorph_shadowColorLight="#fdfdfd"
+                                            app:neumorph_strokeColor="#f2f4f6"
+                                            app:neumorph_strokeWidth="5dp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="wrap_content"
