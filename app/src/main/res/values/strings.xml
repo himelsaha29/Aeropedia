@@ -1122,14 +1122,14 @@
         in April 1968. It evolved through four generations, offering several variants for 85 to 215 passengers. The 737-100/200 original variants were powered by
         Pratt &amp; Whitney JT8D low-bypass engines and offered seating for 85 to 130 passengers. Launched in 1980 and introduced in 1984, the 737 Classic -300/400/500
         variants were upgraded with CFM56-3 turbofans and offered 110 to 168 seats.\n\nIntroduced in 1997, the 737 Next Generation (NG) -600/700/800/900 variants have
-        updated CFM56-7s, a larger wing and an upgraded glass cockpit, and seat 108 to 215 passengers. The latest generation, the 737 MAX, 737-7/8/9/10 MAX , powered
+        updated CFM56-7s, a larger wing and an upgraded glass cockpit, and seat 108 to 215 passengers. The latest generation, the 737 MAX, 737-7/8/9/10 MAX, powered
         by improved CFM LEAP-1B high bypass turbofans and accommodating 138 to 204 people, entered service in 2017. Boeing Business Jet versions are produced since the
         737NG, as well as military models. As of December 2019, 15,156 Boeing 737s have been ordered and 10,571 delivered. Initially, its main competitor was the
         McDonnell Douglas DC-9, followed by its MD-80/MD-90 derivatives. It was the highest-selling commercial aircraft until being surpassed by the competing Airbus
         A320 family in October 2019, but maintains the record in total deliveries.\n\nThe fuselage cross section and nose is derived from that of the Boeing 707 and
         Boeing 727. Early 737 cockpits also inherited the \"eyebrow windows\" positioned above the main glareshield, which were a feature of the original 707 and 727
         to allow for better crew visibility. Contrary to popular belief, these windows were not intended for celestial navigation (only the military T-43A had a
-        sextant port for star navigation, which the civilian models lacked.) With modern avionics, the windows became redundant, and many pilots actually placed
+        sextant port for star navigation, which the civilian models lacked). With modern avionics, the windows became redundant, and many pilots actually placed
         newspapers or other objects in them to block out sun glare. They were eliminated from the 737 cockpit design in 2004, although they are still installed on
         customer request. The eyebrow windows were sometimes removed and plugged, usually during maintenance overhauls, and can be distinguished by the metal plug
         which differs from the smooth metal in later aircraft that were not originally fitted with the windows. The 737\'s main landing gear, under the wings at
@@ -1186,7 +1186,7 @@
     <string name="b737_cockpit_value">2</string>
     <string name="b737_wingspan_value">28 m (Original) / 28.88 / 34.32 / 35.92 m</string>
     <string name="b737_length_value">29 / 30.53 / 31–37 / 31–42 / 35.56–43.8 m</string>
-    <string name="b737_height_value">11 m (Original) / 11.13  / 12  / 12.29 m</string>
+    <string name="b737_height_value">11 m (Original) / 11.13 / 12 / 12.29 m</string>
     <string name="b737_fuselage_value">3.8 m (W) / ~4.0 m (H)</string>
     <string name="b737_mtow_value">50 / 58.1 / 60.6-68 / 65.5-85.1 / 80.3-88.3 t</string>
     <string name="b737_cruise_speed_value">796 km/h (typical),\n876 km/h (max.)\n(Original &amp; Classic) /\n838 km/h (NG &amp; MAX)</string>

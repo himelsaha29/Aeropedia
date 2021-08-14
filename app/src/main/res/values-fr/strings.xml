@@ -1133,88 +1133,95 @@
 
 
     <!--BOEING 737-->
-    <string name="b737_type_value">Narrow-body\nairliner</string>
+    <string name="b737_type_value">Avion de ligne à\nfuselage étroit</string>
     <string name="b737_engine_value">Pratt &amp; Whitney JT8D /\nCFM56 / CFM LEAP-1B (2)</string>
-    <string name="b737_first_flight_value">9 April 1967</string>
-    <string name="b737_intro_value">10 February 1968\nwith Lufthansa</string>
+    <string name="b737_first_flight_value">9 avril 1967</string>
+    <string name="b737_intro_value">10 fevrier 1968\navec Lufthansa</string>
     <string name="b737_customer_value">Southwest Airlines</string>
     <string name="b737_variants_value">13</string>
 
-    <string name="b737_desc1" formatted="false">The Boeing 737 is a narrow-body airliner produced by Boeing at its Renton Factory in Washington. Developed to
-        supplement the Boeing 727 on short and thin routes, the twinjet retains the 707 fuselage cross-section and nose with two underwing turbofans. Envisioned
-        in 1964, the initial 737-100 made its first flight in April 1967 and entered service in February 1968 with Lufthansa. The lengthened 737-200 entered service
-        in April 1968. It evolved through four generations, offering several variants for 85 to 215 passengers. The 737-100/200 original variants were powered by
-        Pratt &amp; Whitney JT8D low-bypass engines and offered seating for 85 to 130 passengers. Launched in 1980 and introduced in 1984, the 737 Classic -300/400/500
-        variants were upgraded with CFM56-3 turbofans and offered 110 to 168 seats.\n\nIntroduced in 1997, the 737 Next Generation (NG) -600/700/800/900 variants have
-        updated CFM56-7s, a larger wing and an upgraded glass cockpit, and seat 108 to 215 passengers. The latest generation, the 737 MAX, 737-7/8/9/10 MAX , powered
-        by improved CFM LEAP-1B high bypass turbofans and accommodating 138 to 204 people, entered service in 2017. Boeing Business Jet versions are produced since the
-        737NG, as well as military models. As of December 2019, 15,156 Boeing 737s have been ordered and 10,571 delivered. Initially, its main competitor was the
-        McDonnell Douglas DC-9, followed by its MD-80/MD-90 derivatives. It was the highest-selling commercial aircraft until being surpassed by the competing Airbus
-        A320 family in October 2019, but maintains the record in total deliveries.\n\nThe fuselage cross section and nose is derived from that of the Boeing 707 and
-        Boeing 727. Early 737 cockpits also inherited the \"eyebrow windows\" positioned above the main glareshield, which were a feature of the original 707 and 727
-        to allow for better crew visibility. Contrary to popular belief, these windows were not intended for celestial navigation (only the military T-43A had a
-        sextant port for star navigation, which the civilian models lacked.) With modern avionics, the windows became redundant, and many pilots actually placed
-        newspapers or other objects in them to block out sun glare. They were eliminated from the 737 cockpit design in 2004, although they are still installed on
-        customer request. The eyebrow windows were sometimes removed and plugged, usually during maintenance overhauls, and can be distinguished by the metal plug
-        which differs from the smooth metal in later aircraft that were not originally fitted with the windows. The 737\'s main landing gear, under the wings at
-        mid-cabin, rotates into wheel wells in the aircraft\'s belly. The legs are covered by partial doors, and \"brush-like\" seals aerodynamically smooth (or \"fair\")
-        the wheels in the wells. The sides of the tires are exposed to the air in flight. \"Hub caps\" complete the aerodynamic profile of the wheels. It is forbidden
-        to operate without the caps, because they are linked to the ground speed sensor that interfaces with the anti-skid brake system. The dark circles of the tires
-        are clearly visible when a 737 takes off, or is at low altitude.\n\nFrom July 2008 the steel landing gear brakes on new NGs were replaced by
-        Messier-Bugatti carbon brakes, achieving weight savings up to 250–320 kg depending on whether standard or high-capacity brakes. On a 737-800 this gives a
-        0.5% improvement in fuel efficiency. 737s are not equipped with fuel dump systems. The original design was too small to require this, and adding a fuel dump
-        system to the later, larger variants would have incurred a large weight penalty. Boeing instead demonstrated an \"equivalent level of safety\". Depending upon
-        the nature of the emergency, 737s either circle to burn off fuel or land overweight. If the latter is the case, the aircraft is inspected by maintenance
-        personnel for damage and then returned to service if none is found.\n</string>
+    <string name="b737_desc1" formatted="false">Le Boeing 737 est un avion de ligne à fuselage étroit produit par Boeing dans son usine de Renton à Washington. Développé pour
+        compléter le Boeing 727 sur des routes courtes et minces, le biréacteur conserve la section transversale du fuselage 707 et le nez avec deux turboréacteurs sous les ailes. Envisagé
+        en 1964, le premier 737-100 effectue son premier vol en avril 1967 et entre en service en février 1968 chez Lufthansa. Le 737-200 rallongé est entré en service en avril 1968. Il
+        a évolué sur quatre générations, offrant plusieurs variantes pour 85 à 215 passagers. Les variantes originales du 737-100/200 étaient propulsées par les moteurs à faible dérivation
+        Pratt &amp; Whitney JT8D et offraient des sièges pour 85 à 130 passagers. Lancé en 1980 et introduit en 1984, les variantes 737 Classic -300/400/500 ont été améliorées avec des
+        turboréacteurs CFM56-3 et ont offert 110 à 168 sièges.\n\nLancés en 1997, les variantes 737 Next Generation (NG) -600/700/800/900 ont des CFM56-7 mis à jour, une aile plus grande
+        et un cockpit en verre amélioré, et peuvent accueillir de 108 à 215 passagers. La dernière génération, le 737 MAX, 737-7/8/9/10 MAX, propulsé par des
+        turboréacteurs à double flux CFM LEAP-1B améliorés et pouvant accueillir de 138 à 204 personnes, est entré en service en 2017. Des versions Boeing Business Jet
+        sont produites depuis le 737NG, ainsi que des modèles militaires. En décembre 2019, 15 156 Boeing 737 avaient été commandés et 10 571 livrés. Initialement, son
+        principal concurrent était le McDonnell Douglas DC-9, suivi de ses dérivés MD-80/MD-90. C\'était l\'avion commercial le plus vendu jusqu\'à ce qu\'il soit dépassé
+        par la famille concurrente Airbus A320 en octobre 2019, mais il maintient le record de livraisons totales.\n\nLa section transversale du fuselage et le nez sont
+        dérivés de ceux du Boeing 707 et Boeing 727. Les premiers cockpits du 737 ont également hérité des «fenêtres à sourcils» placées au-dessus du pare-brise principal,
+        qui étaient une caractéristique des 707 et 727 d\'origine pour permettre une meilleure visibilité de l\'équipage. Contrairement aux idées reçues, ces hublots
+        n\'étaient pas destinés à la navigation céleste (seul le T-43A militaire disposait d\'un orifice sextant pour la navigation stellaire, ce qui manquait aux modèles
+        civils). Avec l\'avionique moderne, les fenêtres sont devenues redondantes et de nombreux pilotes ont en fait placé journaux ou autres objets à l\'intérieur pour
+        bloquer l\'éblouissement du soleil. Ils ont été éliminés de la conception du cockpit du 737 en 2004, bien qu\'ils soient toujours installés sur demande du
+        client. Les fenêtres des sourcils ont parfois été retirées et bouchées, généralement lors des révisions de maintenance, et se distinguent par le bouchon
+        métallique qui diffère du métal lisse des avions ultérieurs qui n\'étaient pas équipés à l\'origine de hublots. Le train d\'atterrissage principal du 737, sous
+        les ailes à mi-cabine, tourne dans des passages de roue dans le ventre de l\'avion. Les pieds sont recouverts de portes partielles et de joints «en forme de
+        brosse» aérodynamiquement lisses (ou «équitables») les roues dans les puits. Les flancs des pneus sont exposés à l\'air en vol. Des «hub caps» complètent le profil
+        aérodynamique des roues. Il est interdit de fonctionner sans les capuchons, car ils sont reliés au capteur de vitesse au sol qui s\'interface avec le système de
+        freinage antipatinage. Les cernes des pneus sont bien visibles lorsqu'un 737 décolle ou se trouve à basse altitude.\n\nA partir de juillet 2008, les freins des
+        trains d\'atterrissage en acier des nouveaux NG ont été remplacés par des freins carbone Messier-Bugatti, permettant un gain de poids jusqu\'à 250-320 kg selon
+        qu\'il s\'agisse de freins standard ou de grande capacité. Sur un 737-800, cela donne une amélioration de 0,5% de l\'efficacité énergétique. Les 737 ne sont pas
+        équipés de systèmes de vidange de carburant. La conception d\'origine était trop petite pour l\'exiger, et l\'ajout d\'un système de vidange de carburant aux
+        variantes plus récentes et plus grandes aurait entraîné une pénalité de poids importante. Boeing a plutôt démontré un «niveau de sécurité équivalent». En fonction
+        de la nature de l\'urgence, les 737 tournent en rond pour brûler du carburant ou atterrissent en surpoids. Dans ce dernier cas, l'avion est inspecté par le
+        personnel de maintenance pour déceler les dommages, puis remis en service si aucun n\'est trouvé.\n</string>
 
-    <string name="b737_desc2" formatted="false">Engines on the 737 Classic series (-300, -400, -500) and Next-Generation series (-600, -700, -800, -900) do not
-        have circular inlets like most aircraft but rather a planform on the lower side, which has been dictated largely by the need to accommodate ever larger engine
-        diameters. The 737 Classic series featured CFM56 high bypass turbofan engines, which were 25% more efficient and also reduced noise significantly over JT8D
-        low bypass engines used on the 737 Original series (-100 and -200), but also posed an engineering challenge given the low ground clearance of the Boeing 737
-        family. Boeing and engine supplier CFM International (CFMI) solved the problem by placing the engine ahead of (rather than below) the wing, and by moving
-        engine accessories to the sides (rather than the bottom) of the engine pod, giving the 737 Classic and later generations a distinctive non-circular air intake. The
-        wing also incorporated changes for improved aerodynamics. The engines\' accessory gearbox was moved from the 6 o\'clock position under the engine to the 4 o\'clock
-        position (from a front/forward looking aft perspective). This side-mounted gearbox gives the engine a somewhat rounded triangular shape. Because the engine is
-        close to the ground, 737-300s and later models are more prone to engine foreign object damage (FOD). The improved, higher pressure ratio CFM56-7 turbofan engine
-        on the 737 Next Generation is 7% more fuel-efficient than the previous CFM56-3 on the 737 Classic with the same bypass ratio. The newest 737 variants, the
-        737 MAX series, feature LEAP-1B engines from CFMI with a 1.73 m fan diameter. These engines were expected to be 10-12% more efficient than the CFM56-7B
-        engines on the 737 Next Generation series.\n\nThe 737 is unusual in that it still uses a hydro-mechanical flight control system, similar to the Boeing 707
-        and typical of the period, that transmits pilot commands to control surfaces by steel cables run through the fuselage and wings rather than by an electrical
-        fly-by-wire system as used in all of the Airbus fleet and all later Boeing models. This has been raised as a safety issue because of the impracticality of
-        duplicating such a mechanical cable-based system in the way that an electrical or electronic system can be. This leaves the flight controls as a single point
-        of failure, for example by metal fragments from an uncontained engine failure penetrating the wings or fuselage. The primary flight controls have mechanical
-        backups. In the event of total hydraulic system failure or double engine failure, they will automatically and seamlessly revert to control via servo tab. In
-        this mode, the servo tabs aerodynamically control the elevators and ailerons; these servo tabs are in turn controlled by cables running to the control yoke. The
-        pilot\'s muscle forces alone control the tabs.\n\nThe Original -100 and -200 series were built without wingtip devices but these were later introduced to improve
-        fuel efficiency. The 737 has evolved four winglet types: the 737-200 Mini-winglet, 737 Classic/NG Blended Winglet, 737 Split Scimitar Winglet, and 737 MAX Advanced
-        Technology Winglet. The 737-200 Mini-winglets are part of the Quiet Wing Corp modification kit that received certification in 2005. Blended winglets
-        were standard on the 737 NG and are available for retrofit on 737 Classic models. These winglets stand approximately 2.4 m tall and are installed at the
-        wing tips. They improve fuel efficiency by up to 5% through lift-induced drag reduction achieved by moderating wingtip vortices. Split Scimitar winglets
-        became available in 2014 for the 737-800, 737-900ER, BBJ2 and BBJ3, and in 2015 for the 737-700, 737-900 and BBJ1. Split Scimitar winglets were developed
-        by Aviation Partners, the same Seattle-based corporation that developed the blended winglets; the Split Scimitar winglets produce up to a 5.5% fuel savings
-        per aircraft compared to 3.3% savings for the blended winglets. Southwest Airlines flew their first flight of a 737-800 with Split Scimitar winglets on April
-        14, 2014. The next generation 737, 737 MAX, will feature an Advanced Technology (AT) Winglet that is produced by Boeing. The Boeing AT Winglet resembles a
-        cross between the Blended Winglet and the Split Scimitar Winglet.\n</string>
+    <string name="b737_desc2" formatted="false">Les moteurs des séries 737 Classic (-300, -400, -500) et Next-Generation (-600, -700, -800, -900) n\'ont pas d\'entrées
+        circulaires comme la plupart des avions mais plutôt une forme en plan sur le côté inférieur , qui a été dictée en grande partie par la nécessité de s\'adapter à
+        des diamètres de moteur toujours plus grands. La série 737 Classic comportait des turboréacteurs à double flux CFM56, qui étaient 25 % plus efficaces et
+        réduisaient considérablement le bruit par rapport aux moteurs JT8D à faible dérivation utilisés sur la série 737 Original (-100 et -200), mais constituaient
+        également un défi d\'ingénierie étant donné le faible garde au sol du Boeing 737 famille. Boeing et le fournisseur de moteurs CFM International (CFMI) ont résolu
+        le problème en plaçant le moteur devant (plutôt qu\'en dessous) de l\'aile et en déplaçant accessoires du moteur sur les côtés (plutôt que le bas) de la nacelle
+        du moteur, donnant au 737 Classic et aux générations ultérieures une entrée d\'air non circulaire distinctive. L\'aile a également incorporé des changements pour
+        une meilleure aérodynamique. La boîte d\'accessoires des moteurs a été déplacée de la position 6 heures sous le moteur à la position 4 heures position (d\'un
+        point de vue avant/arrière vers l\'avant). Cette boîte de vitesses latérale donne au moteur une forme triangulaire quelque peu arrondie. Parce que le moteur est
+        proche du sol, les 737-300 et les modèles ultérieurs sont plus sujets aux dommages causés par les corps étrangers (FOD). Le turboréacteur à double flux CFM56-7
+        amélioré et à rapport de pression plus élevé sur le 737 Next Generation est 7% plus économe en carburant que le précédent CFM56-3 sur le 737 Classic avec le même
+        taux de dilution. Les dernières variantes du 737, la série 737 MAX est équipée de moteurs LEAP-1B de CFMI avec un diamètre de ventilateur de 1,73 m. Ces moteurs
+        devaient être 10 à 12 % plus efficaces que les moteurs CFM56-7B de la série 737 Next Generation.\n\nLe 737 a la particularité d\'utiliser toujours un système de
+        commandes de vol hydromécanique, similaire au Boeing 707 et typique de l\'époque, qui transmet les commandes du pilote aux gouvernes par des câbles d\'acier
+        traversant le fuselage et les ailes plutôt que par un circuit électrique système fly-by-wire tel qu\'il est utilisé dans toute la flotte d\'Airbus et tous les
+        modèles Boeing ultérieurs. Cela a été soulevé comme un problème de sécurité en raison de l\'impraticabilité de dupliquer un tel système mécanique à base de câbles
+        de la même manière qu\'un système électrique ou électronique peut l\'être. Cela laisse les commandes de vol comme un seul point de défaillance, par exemple par
+        des fragments de métal provenant d\'une panne de moteur non contenue pénétrant dans les ailes ou le fuselage. Les commandes de vol primaires ont des sauvegardes. En
+        cas de panne totale du système hydraulique ou de double panne de moteur, ils reviendront automatiquement et en toute transparence au contrôle via l\'onglet
+        servo. Dans ce mode, les servo tabs contrôlent aérodynamiquement les gouvernes de profondeur et les ailerons; ces languettes d\'asservissement sont à leur tour
+        commandées par des câbles allant jusqu\'au joug de commande. Seules les forces musculaires du pilote contrôlent les languettes.\n\nLes séries Original -100 et
+        -200 ont été construites sans dispositifs de bout d\'aile, mais ceux-ci ont été introduits plus tard pour améliorer l\'efficacité énergétique. Le 737 a fait
+        évoluer quatre types de winglets : le 737-200 Mini-winglet, le 737 Classic/NG Blended Winglet, le 737 Split Scimitar Winglet et le 737 MAX Advanced Technologie
+        Winglet. Les mini-winglets 737-200 font partie du kit de modification Quiet Wing Corp qui a reçu la certification en 2005. Les winglets mixtes étaient standard
+        sur le 737 NG et sont disponibles pour une mise à niveau sur les modèles 737 Classic. Ces winglets mesurent environ 2,4 m de haut et sont installés au bouts
+        d\'aile. Ils améliorent le rendement énergétique jusqu\'à 5 % grâce à la réduction de la traînée induite par la portance obtenue en modérant les tourbillons de
+        bout d\'aile. Les winglets Split Scimitar sont devenus disponibles en 2014 pour les 737-800, 737-900ER, BBJ2 et BBJ3, et en 2015 pour les 737-700, 737-900 et
+        BBJ1. Des winglets Split Scimitar ont été développés par Aviation Partners, la même société basée à Seattle qui a développé les winglets mixtes; les winglets
+        Split Scimitar produisent jusqu\'à 5,5% d\'économies de carburant par avion contre 3,3% d\'économies pour les winglets mixtes. Southwest Airlines a effectué son
+        premier vol d\'un 737-800 avec des winglets Split Scimitar en avril 14, 2014. La prochaine génération de 737, 737 MAX, comportera un Winglet de technologie
+        avancée (AT) produit par Boeing. Le Boeing AT Winglet ressemble à un croisement entre le Blended Winglet et le Split Scimitar Winglet.\n</string>
 
-    <string name="b737_desc3">\nBoeing 737 variants include 737 Original (first generation) - 737-100, 737-200, 737 Classic (second generation) - 737-300, 737-400,
-        737-500, 737 NG (third generation) - 737-600, 737-700, 737-800, 737-900, and 737 MAX (fourth generation) - 737 MAX-7, 737 MAX-8, 737 MAX-9, 737 MAX-10.\n</string>
+    <string name="b737_desc3">\nLes variantes du Boeing 737 comprennent le 737 Original (première génération) - 737-100, 737-200, 737 Classic (deuxième génération) -
+        737-300, 737-400, 737-500, 737 NG (troisième génération) - 737-600, 737-700, 737-800, 737-900 et 737 MAX (quatrième génération) - 737 MAX-7, 737 MAX-8, 737
+        MAX-9, 737 MAX-10.\n</string>
 
-    <string name="b737_specs_constraint">(-100, -200, -300/-400/-500, -600/-700/-800/-900, MAX-7/-8/-9/-10 compared in order)\n</string>
+    <string name="b737_specs_constraint">(comparaison ordonnée des variantes -100, -200, -300/-400/-500, -600/-700/-800/-900, MAX-7/-8/-9/-10)\n</string>
 
 
-    <string name="b737_identify">How to identify Boeing 737?</string>
-    <string name="b737_identify_ans">\"Pointed\" nose, triangular dorsal-fin section in front of the tail, \"V\" shaped side windshield, retracted main landing gear not enclosed in the
-        fuselage, winglets: none / large L-shaped / \">\" shaped with upward and downward aerofoils (split winglets); cowling design engines / ovoid \"hamster pouch\" inlet / 787-derived engine chevron-toothed pattern on the rim of the nacelles
-        of both the engines of MAX variants.</string>
+    <string name="b737_identify">Comment identifier Boeing 737?</string>
+    <string name="b737_identify_ans">Nez «pointu», section de nageoire dorsale triangulaire devant la queue, pare-brise latéral en «V», train d\'atterrissage principal
+        rentré non enfermé dans le fuselage, winglets: aucun / grand en forme de L / en forme de « > » avec des ailerons vers le haut et vers le bas (ailes fendues) ;
+        moteurs de conception de capot / entrée ovoïde «poche de hamster» / motif denté en chevron de moteur dérivé du 787 sur la jante des nacelles des deux moteurs
+        des variantes MAX.</string>
 
     <string name="b737_cockpit_value">2</string>
-    <string name="b737_wingspan_value">28 m (Original) / 28.88 / 34.32 / 35.92 m</string>
-    <string name="b737_length_value">29 / 30.53 / 31–37 / 31–42 / 35.56–43.8 m</string>
-    <string name="b737_height_value">11 m (Original) / 11.13  / 12  / 12.29 m</string>
-    <string name="b737_fuselage_value">3.8 m (W) / ~4.0 m (H)</string>
-    <string name="b737_mtow_value">50 / 58.1 / 60.6-68 / 65.5-85.1 / 80.3-88.3 t</string>
-    <string name="b737_cruise_speed_value">796 km/h (typical),\n876 km/h (max.)\n(Original &amp; Classic) /\n838 km/h (NG &amp; MAX)</string>
-    <string name="b737_range_value">1,540 / 2,600 / 2,060–2,375 / 2,935–3,010 / 3,300–3,850 nmi</string>
+    <string name="b737_wingspan_value">28 m (Original) / 28,88 / 34,32 / 35,92 m</string>
+    <string name="b737_length_value">29 / 30,53 / 31–37 / 31–42 / 35,56–43,8 m</string>
+    <string name="b737_height_value">11 m (Original) / 11,13 / 12 / 12,29 m</string>
+    <string name="b737_fuselage_value">3,8 m (L) / ~4,0 m (H)</string>
+    <string name="b737_mtow_value">50 / 58,1 / 60,6-68 / 65,5-85,1 / 80,3-88,3 t</string>
+    <string name="b737_cruise_speed_value">796 km/h (typique),\n876 km/h (max.)\n(Original &amp; Classic) /\n838 km/h (NG &amp; MAX)</string>
+    <string name="b737_range_value">1540 / 2600 / 2060–2375 / 2935–3010 / 3300–3850 nmi</string>
     <string name="b737_thrust_value">62 / 64–73 / 89–105 / 89–120 / 130 kN</string>
     <!--BOEING 737-->
 
