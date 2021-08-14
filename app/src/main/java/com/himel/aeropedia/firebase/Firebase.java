@@ -62,10 +62,11 @@ public class Firebase extends AppCompatActivity {
 
     private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
             a340Button, a350Button, a380Button, belugaButton, an22Button, an72Button, an124Button, an225Button, b737Button, b747Button, b757Button, b767Button,
-            b777Button, b787Button, bombardierChallenger650Button, bombardierCRJButton, cessnaButton, havillandButton, save;
+            b777Button, b787Button, bombardierChallenger650Button, bombardierCRJButton, bombardierLearjetButton, bombardierGlobalButton,
+            embraerERJButton, embraerEJetE2Button, cessnaButton, havillandButton, save;
 
     boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, an22, an72, an124, an225, b737, b747, b757, b767,
-            b777, b787, bombardierChallenger650, bombardierCRJ, citation, de_havilland;
+            b777, b787, bombardierChallenger650, bombardierCRJ, bombardierLearjet, bombardierGlobal, embraerERJ, embraerEJetE2, citation, de_havilland;
 
 
     @Override
@@ -100,6 +101,10 @@ public class Firebase extends AppCompatActivity {
         b787Button = findViewById(R.id.b787);
         bombardierChallenger650Button = findViewById(R.id.bombardier_challenger_650);
         bombardierCRJButton = findViewById(R.id.bombardier_crj_100_200);
+        bombardierLearjetButton = findViewById(R.id.bombardier_learjet_75);
+        bombardierGlobalButton = findViewById(R.id.bombardier_global_7500);
+        embraerERJButton = findViewById(R.id.embraer_erj);
+        embraerEJetE2Button = findViewById(R.id.embraer_e_jet_e2_family);
 
 
 
@@ -1096,6 +1101,71 @@ public class Firebase extends AppCompatActivity {
                 }
             }
         });
+
+        bombardierLearjetButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!bombardierLearjet) {
+                    bombardierLearjetButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) bombardierLearjetButton.getText());
+                    bombardierLearjet = true;
+                } else {
+                    bombardierLearjetButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) bombardierLearjetButton.getText());
+                    bombardierLearjet = false;
+                }
+            }
+        });
+
+        bombardierGlobalButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!bombardierGlobal) {
+                    bombardierGlobalButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) bombardierGlobalButton.getText());
+                    bombardierGlobal = true;
+                } else {
+                    bombardierGlobalButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) bombardierGlobalButton.getText());
+                    bombardierGlobal = false;
+                }
+            }
+        });
+
+        embraerERJButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!embraerERJ) {
+                    embraerERJButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) embraerERJButton.getText());
+                    embraerERJ = true;
+                } else {
+                    embraerERJButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) embraerERJButton.getText());
+                    embraerERJ = false;
+                }
+            }
+        });
+
+        embraerEJetE2Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!embraerEJetE2) {
+                    embraerEJetE2Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) embraerEJetE2Button.getText());
+                    embraerEJetE2 = true;
+                } else {
+                    embraerEJetE2Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) embraerEJetE2Button.getText());
+                    embraerEJetE2 = false;
+                }
+            }
+        });
+
 
 
 

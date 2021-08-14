@@ -933,6 +933,126 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="10dip">
+
+                            <soup.neumorphism.NeumorphButton
+                                android:id="@+id/bombardier_learjet_75"
+                                style="@style/Widget.Neumorph.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:padding="5dp"
+                                android:text="Bombardier\nLearjet 75"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="12dp"
+                                app:neumorph_backgroundColor="#f2f4f6"
+                                app:neumorph_shadowColorDark="#eaeaea"
+                                app:neumorph_shadowColorLight="#fdfdfd"
+                                app:neumorph_strokeColor="#f2f4f6"
+                                app:neumorph_strokeWidth="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="10dip">
+
+                            <soup.neumorphism.NeumorphButton
+                                android:id="@+id/bombardier_global_7500"
+                                style="@style/Widget.Neumorph.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:padding="5dp"
+                                android:text="Bombardier\nGlobal 7500"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:neumorph_backgroundColor="#f2f4f6"
+                                app:neumorph_shadowColorDark="#eaeaea"
+                                app:neumorph_shadowColorLight="#fdfdfd"
+                                app:neumorph_strokeColor="#f2f4f6"
+                                app:neumorph_strokeWidth="5dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="10dip">
+
+                            <soup.neumorphism.NeumorphButton
+                                android:id="@+id/embraer_erj"
+                                style="@style/Widget.Neumorph.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:padding="5dp"
+                                android:text="Embraer ERJ"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                app:neumorph_backgroundColor="#f2f4f6"
+                                app:neumorph_shadowColorDark="#eaeaea"
+                                app:neumorph_shadowColorLight="#fdfdfd"
+                                app:neumorph_strokeColor="#f2f4f6"
+                                app:neumorph_strokeWidth="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="10dip">
+
+                            <soup.neumorphism.NeumorphButton
+                                android:id="@+id/embraer_e_jet_e2_family"
+                                style="@style/Widget.Neumorph.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:padding="5dp"
+                                android:text="Embraer E-Jet\nE2"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:neumorph_backgroundColor="#f2f4f6"
+                                app:neumorph_shadowColorDark="#eaeaea"
+                                app:neumorph_shadowColorLight="#fdfdfd"
+                                app:neumorph_strokeColor="#f2f4f6"
+                                app:neumorph_strokeWidth="5dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
 
 
 
