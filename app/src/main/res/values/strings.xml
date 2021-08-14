@@ -1062,7 +1062,7 @@
         of the United States\' Shuttle Carrier Aircraft. The lead designer of the An-225 (and the An-124) was Viktor Tolmachev. The An-225 first flew on 21 December
         1988. It was on static display at the Paris Air Show in 1989, and it flew during the public days at the Farnborough Air Show in 1990. Two aircraft were
         ordered, but only one An-225, (registration CCCP-82060, later UR-82060) was finished. It can carry ultra-heavy and oversized freight weighing up
-        to 250,000 kg (550,000 lb) internally or 200,000 kg (440,000 lb) on the upper fuselage. Cargo on the upper fuselage can be 70 m (230 ft) long. The second An-225
+        to 250,000 kg internally or 200,000 kg on the upper fuselage. Cargo on the upper fuselage can be 70 m long. The second An-225
         was partially built during the late 1980s for the Soviet space program. Following the collapse of the Soviet Union in 1991 and the cancellation of the
         Buran program, the lone operational An-225 was placed in storage in 1994. The six Ivchenko-Progress engines were removed for use on An-124s, and the second
         uncompleted An-225 airframe was also stored. In the 1990s, a cargoliner bigger than the An-124 was clearly needed. The first An-225 was restored
@@ -1075,7 +1075,7 @@
     <string name="an225_desc2" formatted="false">Based on Antonov\'s earlier An-124, the An-225 has fuselage barrel extensions added fore and aft of the wings. The
         wings also received root extensions to increase span. The wings are anhedral. The flight control surfaces are controlled via fly-by-wire and triple-redundant
         hydraulics. Two more Progress D-18T turbofan engines were added to the new wing roots, bringing the total to six. An increased-capacity landing gear system
-        with 32 wheels was designed, some of which are steerable, enabling the aircraft to turn within a 60-metre-wide (200 ft) runway. Like its An-124 predecessor, the
+        with 32 wheels was designed, some of which are steerable, enabling the aircraft to turn within a 60-metre-wide runway. Like its An-124 predecessor, the
         An-225 has nose gear designed to "kneel" so cargo can be more easily loaded and unloaded. Unlike the An-124, which has a rear cargo door and ramp, the
         An-225 design left these off to save weight, and the empennage design was changed from a single vertical stabilizer to a twin tail with an oversized, swept-back
         horizontal stabilizer. The twin tail was essential to enable the plane to carry large, heavy external loads that would disturb the airflow around a conventional
@@ -1083,7 +1083,7 @@
         maximum gross weight of 600 t (660 short tons; 590 long tons), but from 2000 to 2001, the aircraft underwent modifications at a cost of US$20M such as
         the addition of a reinforced floor, which increased the maximum gross weight to 640 t (710 short tons; 630 long tons). Both the earlier and later takeoff
         weights establish the An-225 as the world\'s heaviest aircraft, being heavier than the double-deck Airbus A380. It is surpassed in other size-related
-        categories, but Airbus claims to have improved upon the An-225\'s maximum landing weight by landing an A380 at 591.7 tonnes (1,304,000 lb) during tests, and
+        categories, but Airbus claims to have improved upon the An-225\'s maximum landing weight by landing an A380 at 591.7 tonnes during tests, and
         the Hughes H-4 Hercules, known as the Spruce Goose, has a greater wingspan and a greater overall height, but the Spruce Goose is 20% shorter and overall
         lighter, due to the materials used in its construction. In addition, the H-4 only flew once and for less than a minute, making the An-225 the largest
         aircraft in the world to fly multiple times.\n</string>
