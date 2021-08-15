@@ -453,31 +453,36 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                             @Override
                             public void run() {
                                 icaoTV.setText(marker.getSnippet());
-                                origin.setText(flightRoute[0]);
-                                destination.setText(flightRoute[1]);
-                                if ((flightRoute[2] + " " + flightRoute[3]).contains("N/A")) {
-                                    aircraft.setText(R.string.not_available);
-                                } else {
-                                    aircraft.setText(flightRoute[2] + " " + flightRoute[3]);
+                                if (getResources().getConfiguration().locale.toString().contains("en")) {
+                                    origin.setText(flightRoute[0]);
+                                    destination.setText(flightRoute[1]);
+                                    if ((flightRoute[2] + " " + flightRoute[3]).contains("N/A")) {
+                                        aircraft.setText(R.string.not_available);
+                                    } else {
+                                        aircraft.setText(flightRoute[2] + " " + flightRoute[3]);
+                                    }
+                                    callsignTV.setText(markerInfo[0]);
+                                    country.setText(markerInfo[1]);
+                                    lamitude.setText(String.valueOf(marker.getPosition().latitude));
+                                    lomgitude.setText(String.valueOf(marker.getPosition().longitude));
+                                    airline.setText(flightRoute[5]);
+                                    engineType.setText(flightRoute[4]);
+                                    baroAltitudeTV.setText(markerInfo[2]);
+                                    geoAltitudeTV.setText(markerInfo[3]);
+                                    if (markerInfo[4].equalsIgnoreCase("true")) {
+                                        onGroundTv.setText(R.string._true);
+                                    } else {
+                                        onGroundTv.setText(R.string.not_true);
+                                    }
+                                    velocityTV.setText(markerInfo[5]);
+                                    verticalRateTV.setText(markerInfo[6]);
+                                    trackTV.setText(String.valueOf(marker.getRotation()) + "°");
+                                    squawkTV.setText(markerInfo[7]);
+                                    positionSourceTV.setText(markerInfo[9]);
+                                } else if(getResources().getConfiguration().locale.toString().contains("fr")) {
+                                    populateFieldsInFrench(markerInfo, marker);
                                 }
-                                callsignTV.setText(markerInfo[0]);
-                                country.setText(markerInfo[1]);
-                                lamitude.setText(String.valueOf(marker.getPosition().latitude));
-                                lomgitude.setText(String.valueOf(marker.getPosition().longitude));
-                                airline.setText(flightRoute[5]);
-                                engineType.setText(flightRoute[4]);
-                                baroAltitudeTV.setText(markerInfo[2]);
-                                geoAltitudeTV.setText(markerInfo[3]);
-                                if (markerInfo[4].equalsIgnoreCase("true")) {
-                                    onGroundTv.setText(R.string._true);
-                                } else {
-                                    onGroundTv.setText(R.string.not_true);
-                                }
-                                velocityTV.setText(markerInfo[5]);
-                                verticalRateTV.setText(markerInfo[6]);
-                                trackTV.setText(String.valueOf(marker.getRotation()) + "°");
-                                squawkTV.setText(markerInfo[7]);
-                                positionSourceTV.setText(markerInfo[9]);
+
 
                                 // getting city names from JSON
                                 String originAirportCity = null;
@@ -511,17 +516,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                     cities.setVisibility(View.GONE);
                                 }
 
-                                String pays = null;
-                                try {
-                                    pays = countriesInFrench.getString(markerInfo[1]);
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                                if(pays == null) {
-                                    country.setText(markerInfo[1]);
-                                } else {
-                                    country.setText(pays);
-                                }
+
 
 
                                 // getting flight track
@@ -1085,5 +1080,112 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    private void populateFieldsInFrench(String[] markerInfo, Marker marker) {
+        if (flightRoute[0].equalsIgnoreCase("N/A")) {
+            origin.setText(R.string.not_available);
+        } else {
+            origin.setText(flightRoute[0]);
+        }
+        if (flightRoute[1].equalsIgnoreCase("N/A")) {
+            destination.setText(R.string.not_available);
+        } else {
+            destination.setText(flightRoute[1]);
+        }
+
+        if ((flightRoute[2] + " " + flightRoute[3]).contains("N/A")) {
+            aircraft.setText(R.string.not_available);
+        } else {
+            aircraft.setText(flightRoute[2] + " " + flightRoute[3]);
+        }
+        callsignTV.setText(markerInfo[0]);
+
+        String pays = null;
+        try {
+            pays = countriesInFrench.getString(markerInfo[1]);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if(pays == null) {
+            country.setText(markerInfo[1]);
+        } else {
+            country.setText(pays);
+        }
+
+        if(String.valueOf(marker.getPosition().latitude).contains(".")) {
+            lamitude.setText(String.valueOf(marker.getPosition().latitude).replace('.', ','));
+        } else {
+            lamitude.setText(String.valueOf(marker.getPosition().latitude));
+        }
+
+        if (String.valueOf(marker.getPosition().longitude).contains(".")) {
+            lomgitude.setText(String.valueOf(marker.getPosition().longitude).replace('.', ','));
+        } else {
+            lomgitude.setText(String.valueOf(marker.getPosition().longitude));
+        }
+
+        if (flightRoute[5].equalsIgnoreCase("N/A")){
+            airline.setText(R.string.not_available);
+        } else {
+            airline.setText(flightRoute[5]);
+        }
+
+        if (flightRoute[4].equalsIgnoreCase("N/A")) {
+            engineType.setText(R.string.not_available);
+        } else {
+            engineType.setText(flightRoute[4]);
+        }
+
+
+        if (markerInfo[2].contains(".")) {
+            baroAltitudeTV.setText(markerInfo[2].replace('.', ','));
+        } else {
+            baroAltitudeTV.setText(markerInfo[2]);
+        }
+
+        if (markerInfo[3].contains(".")){
+            geoAltitudeTV.setText(markerInfo[3].replace('.', ','));
+        } else {
+            geoAltitudeTV.setText(markerInfo[3]);
+        }
+
+        if (markerInfo[4].equalsIgnoreCase("true")) {
+            onGroundTv.setText(R.string._true);
+        } else {
+            onGroundTv.setText(R.string.not_true);
+        }
+
+        if (markerInfo[5].contains(".")) {
+            velocityTV.setText(markerInfo[5].replace('.', ','));
+        } else {
+            velocityTV.setText(markerInfo[5]);
+        }
+
+
+        if (markerInfo[6].contains(".")){
+            verticalRateTV.setText(markerInfo[6].replace('.', ','));
+        } else {
+            verticalRateTV.setText(markerInfo[6]);
+        }
+
+        if (String.valueOf(marker.getRotation()).contains(".")) {
+            trackTV.setText(String.valueOf(marker.getRotation()).replace('.', ',') + "°");
+        } else {
+            trackTV.setText(String.valueOf(marker.getRotation()) + "°");
+        }
+
+        if (markerInfo[7].equalsIgnoreCase("N/A")){
+            squawkTV.setText(R.string.not_available);
+        } else {
+            squawkTV.setText(markerInfo[7]);
+        }
+
+        if (markerInfo[9].equalsIgnoreCase("N/A")) {
+            positionSourceTV.setText(R.string.not_available);
+        } else {
+            positionSourceTV.setText(markerInfo[9]);
+        }
+
     }
 }
