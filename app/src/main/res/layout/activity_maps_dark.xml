@@ -64,8 +64,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:padding="10dp">
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/origin_airport"
@@ -77,15 +76,14 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="@color/white"
-                            android:textSize="20sp" />
+                            android:textSize="19sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:padding="10dip">
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -103,8 +101,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:padding="10dip">
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/destination_airport"
@@ -116,7 +113,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="@color/white"
-                            android:textSize="20sp" />
+                            android:textSize="19sp" />
 
 
                     </LinearLayout>
@@ -146,9 +143,9 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:paddingBottom="12dp"
-                            android:text="Montreal"
+                            android:text="@string/loading"
                             android:textColor="@color/white"
-                            android:textSize="18sp" />
+                            android:textSize="17sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -176,9 +173,9 @@
                             android:fontFamily="@font/maven_pro_medium"
                             android:gravity="center"
                             android:paddingBottom="12dp"
-                            android:text="Los Angeles"
+                            android:text="@string/loading"
                             android:textColor="@color/white"
-                            android:textSize="18sp" />
+                            android:textSize="17sp" />
 
 
                     </LinearLayout>
@@ -197,7 +194,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:padding="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -208,7 +205,7 @@
                             android:gravity="center"
                             android:text="@string/aircraft"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/aircraft"
@@ -220,7 +217,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -228,7 +225,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -239,7 +236,7 @@
                             android:gravity="center"
                             android:text="@string/airline"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/airline"
@@ -251,7 +248,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -272,7 +269,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -283,7 +280,7 @@
                             android:gravity="center"
                             android:text="@string/engine_type"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/engine_type"
@@ -295,7 +292,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -303,7 +300,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -314,7 +311,7 @@
                             android:gravity="center"
                             android:text="@string/country"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/country_of_reg"
@@ -326,7 +323,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -343,7 +340,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -354,7 +351,7 @@
                             android:gravity="center"
                             android:text="@string/callsign"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/callsign"
@@ -366,7 +363,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -374,7 +371,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -385,7 +382,7 @@
                             android:gravity="center"
                             android:text="@string/icao"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/icao"
@@ -397,7 +394,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -413,7 +410,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -424,7 +421,7 @@
                             android:gravity="center"
                             android:text="@string/geo_altitude"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/geometric_altitude"
@@ -436,7 +433,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -444,7 +441,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -455,7 +452,7 @@
                             android:gravity="center"
                             android:text="@string/baro_altitude"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/barometric_altitude"
@@ -467,7 +464,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -484,7 +481,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -495,7 +492,7 @@
                             android:gravity="center"
                             android:text="@string/velocity"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/velocity"
@@ -507,7 +504,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -515,7 +512,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -526,7 +523,7 @@
                             android:gravity="center"
                             android:text="@string/vertical_rate"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/vertical_rate"
@@ -538,7 +535,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -555,7 +552,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -566,7 +563,7 @@
                             android:gravity="center"
                             android:text="@string/latitude"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/latitude"
@@ -578,7 +575,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -586,7 +583,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -597,7 +594,7 @@
                             android:gravity="center"
                             android:text="@string/longitude"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/longitude"
@@ -609,7 +606,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -626,7 +623,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -637,7 +634,7 @@
                             android:gravity="center"
                             android:text="@string/on_ground"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/on_ground"
@@ -649,7 +646,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -657,7 +654,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -668,7 +665,7 @@
                             android:gravity="center"
                             android:text="@string/track"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/track"
@@ -680,7 +677,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -697,7 +694,8 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip"
+                        android:paddingBottom="4dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -708,7 +706,7 @@
                             android:gravity="center"
                             android:text="@string/squawk"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/squawk"
@@ -720,7 +718,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -728,7 +726,8 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:padding="10dip">
+                        android:paddingTop="7dip"
+                        android:paddingBottom="4dip">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -739,7 +738,7 @@
                             android:gravity="center"
                             android:text="@string/pos_source"
                             android:textColor="@color/white"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/position_source"
@@ -751,7 +750,7 @@
                             android:gravity="center"
                             android:text="@string/loading"
                             android:textColor="#72A8E1"
-                            android:textSize="17sp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                 </LinearLayout>
