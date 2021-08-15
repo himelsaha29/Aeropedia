@@ -123,6 +123,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private JSONObject airportCities;
     private JSONObject countriesInFrench;
 
+    private Thread currentThreadTrack = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -391,6 +393,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     if (polyline != null) {
                         polyline.remove();
                     }
+                    if(currentThreadTrack != null){
+                        currentThreadTrack.interrupt();
+                        currentThreadTrack = null;
+                    }
                     bottomSheetIsExpanded = false;
                     flightRoute = null;
                     flightTrack = null;
@@ -441,6 +447,11 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 // =========================
 
                 String[] markerInfo = hashMap.get(marker.getSnippet());
+
+                if(currentThreadTrack != null){
+                    currentThreadTrack.interrupt();
+                    currentThreadTrack = null;
+                }
 
                 Thread threadRoute = new Thread(new Runnable() {
                     @Override
@@ -554,6 +565,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                         }
                                     });
 
+                                    currentThreadTrack = threadTrack;
                                     threadTrack.start();
                                 }
 
