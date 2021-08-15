@@ -1305,73 +1305,79 @@
 
 
     <!--BOEING 757-->
-    <string name="b757_type_value">Narrow-body\nairliner</string>
+    <string name="b757_type_value">Avion de ligne à\nfuselage étroit</string>
     <string name="b757_engine_value">Pratt &amp; Whitney PW2000 /\nRolls-Royce RB211 (2)</string>
-    <string name="b757_first_flight_value">19 February 1982</string>
-    <string name="b757_intro_value">1 January 1983 with\nEastern Air Lines</string>
+    <string name="b757_first_flight_value">19 fevrier 1982</string>
+    <string name="b757_intro_value">1 janvier 1983 avec\nEastern Air Lines</string>
     <string name="b757_customer_value">Delta Air Lines</string>
-    <string name="b757_variants_value">12 (active)</string>
+    <string name="b757_variants_value">12 (actifs)</string>
 
-    <string name="b757_desc1" formatted="false">The Boeing 757 is an American narrow-body airliner that was designed and built by Boeing Commercial Airplanes. The
-        then-named 7N7, a twinjet successor for the 727 (a trijet), received its first orders in August 1978. The prototype completed its maiden flight on February
-        19, 1982 and it was FAA certified on December 21, 1982. Eastern Air Lines placed the original 757-200 in commercial service on January 1, 1983. A package
-        freighter (PF) variant entered service in September 1987 and a combi model in September 1988. The stretched 757-300 was launched in September 1996 and began
-        service in March 1999. After 1,050 had been built for 54 customers, production ended in October 2004, while Boeing offered the largest 737 NG variants as
-        a successor. During its production phase from 1981 to 2004, a total of 1,050 757s were built.\n\nThe 757 was intended to be more capable and more efficient
-        than the preceding 727. The focus on fuel efficiency reflected airline concerns over operating costs, which had grown amid rising oil prices during the Yom
-        Kippur War of 1973. Design targets included a 20 percent reduction in fuel consumption from new engines, plus 10 percent from aerodynamic improvements, versus
-        preceding aircraft. Lighter materials and new wings were also expected to improve efficiency. The maximum take-off weight (MTOW) was set at 99,800 kg, which
-        was 4,540 kg more than the 727. The 757\'s higher thrust-to-weight ratio allowed it to take off from short runways and serve airports in hot and high
-        conditions with higher ambient temperatures and thinner air, offering better takeoff performance than that offered by competing aircraft. Competitors needed
-        longer takeoff runs for these hot and high conditions. Boeing also offered options for higher payload capability.\n\nBoeing 757 is a low-wing cantilever monoplane
-        with a conventional tail unit featuring a single fin and rudder. Each wing features a supercritical cross-section and is equipped with five-panel leading edge
-        slats, single- and double-slotted flaps, an outboard aileron, and six spoilers. The wings are largely identical across all 757 variants, swept at 25
-        degrees. The reduced wing sweep eliminates the need for inboard ailerons, yet incurs
-        little drag penalty on short and medium length routes, during which most of the flight is spent climbing or descending. The airframe further incorporates
-        carbon-fiber reinforced plastic wing surfaces, Kevlar fairings and access panels, plus improved aluminum alloys, which together reduce overall weight
-        by 950 kg. To distribute the aircraft\'s weight on the ground, the 757 has a retractable tricycle landing gear with four wheels on each main gear and two
-        for the nose gear. The landing gear was purposely designed to be taller than the company\'s previous narrow-body aircraft to provide ground clearance for
-        stretched models. In 1982, the 757-200 became the first subsonic jetliner to offer longer lasting carbon brakes as a factory option, supplied by Dunlop. The
-        stretched 757-300 features a retractable tailskid on its aft fuselage to prevent damage if the tail section contacts the runway surface during takeoff.\n</string>
-
-
-    <string name="b757_desc2" formatted="false">The longest narrow-body airliner\'s flight deck uses six Rockwell Collins CRT screens to display flight instrumentation, as well as an
-        electronic flight instrument system (EFIS) and an engine indication and crew alerting system (EICAS). These systems allow the pilots to handle monitoring
-        tasks previously performed by the flight engineer. An enhanced flight management system, improved over versions used on early 747s, automates navigation
-        and other functions, while an automatic landing system facilitates CAT IIIb instrument landings in 150 m low visibility conditions. The inertial
-        reference system (IRS) which debuted with the 757-200 was the first to feature laser-light gyros. On the 757-300, the upgraded flight deck features a Honeywell
-        Pegasus flight management computer, enhanced EICAS, and updated software systems.\n\nThree independent hydraulic systems are installed on the 757, one powered
-        by each engine, and the third using electric pumps. A ram air turbine is fitted to provide power for essential controls in the event of an emergency. A basic
-        form of fly-by-wire facilitates spoiler operation, utilizing electric signaling instead of traditional control cables. The fly-by-wire system, shared with the
-        767, reduces weight and provides for the independent operation of individual spoilers. When equipped for extended-range operations, the 757 features a backup
-        hydraulic motor generator and an additional cooling fan in the aircraft\'s electronics bay. The 757 interior allows seat arrangements of up to six per row with a
-        single center aisle. Originally optimized for flights averaging two hours, the 757 features interior lighting and cabin architecture designs aimed at a more
-        spacious impression. As on the 767, garment-bag-length overhead bins and a rear economy-class galley are standard equipment. The bins have twice the capacity
-        as those on the preceding 727. To save weight, honeycomb sandwich is used for interior paneling and bins. Unlike previous evacuation slide designs which are not
-        equipped for water landings, the 757\'s main exits feature combination slide rafts similar to those found on the 747. In the 1980s, Boeing altered the interior
-        designs of its other narrow-body aircraft to be similar to that of the 757.\n</string>
-
-    <string name="b757_desc3">\nThe Boeing 757 variants include 757-100 (dropped), 757-200, 757-200PF, 757-200M, 757-200 SF/PCF, 757-300, Airborne Research Integrated Experiments
-        System (ARIES) for air safety and operational research, C-32 - The United States Air Force (USAF) operates four VIP-configured 757-200s under
-        the designation C-32A for missions including transporting the President of the United States and/or the Vice President of the United States, F-22 Flying
-        Testbed, one for Krueger flap and Natural Laminar Flow Insect Mitigation Test Program, one for Active Flow Control System, Royal New Zealand Air Force 757 Combi, and
-        VIP Transports.\n</string>
-
-    <string name="b757_specs_constraint">(-200, -200F, -300 compared in order)\n</string>
+    <string name="b757_desc1" formatted="false">Le Boeing 757 est un avion de ligne américain à fuselage étroit conçu et construit par Boeing Commercial Airplanes. Le
+        alors nommé 7N7, successeur du biréacteur 727 (un trijet), a reçu ses premières commandes en août 1978. Le prototype a effectué son vol inaugural le 19 février
+        1982 et il a été certifié par la FAA le 21 décembre 1982. Eastern Air Lines a placé le 757-200 original en service commercial le 1er janvier 1983. La variante
+        cargo (PF) est entrée en service en septembre 1987 et un modèle combi en septembre 1988. Le 757-300 allongé a été lancé en septembre 1996 et a commencé
+        service en mars 1999. Après 1050 exemplaires construits pour 54 clients, la production a pris fin en octobre 2004, tandis que Boeing proposait les plus grandes
+        variantes de 737 NG comme un successeur. Au cours de sa phase de production de 1981 à 2004, un total de 1 050 757 a été construit.\n\nLe 757 était censé être plus
+        performant et plus efficace que le 727 précédent. L\'accent mis sur l\'efficacité énergétique reflétait les préoccupations des compagnies aériennes concernant
+        les coûts d\'exploitation, qui avaient augmenté au milieu de la hausse des prix du pétrole pendant la guerre du Yom Kippour de 1973. Les objectifs de conception
+        comprenaient une réduction de 20%. de la consommation de carburant des nouveaux moteurs, plus 10 pour cent des améliorations aérodynamiques, par rapport aux
+        avions précédents. Des matériaux plus légers et de nouvelles ailes devaient également améliorer l\'efficacité. La masse maximale au décollage (MTOW, en anglais)
+        a été fixée à 99800 kg, soit 4540 kg de plus que le 727. Le rapport poussée/poids plus élevé du 757 lui a permis de décoller de pistes courtes et de desservir
+        des aéroports dans des conditions chaudes et élevées avec des températures ambiantes plus élevées et un air plus fin, offrant de meilleures performances de
+        décollage que celles offertes par les avions concurrents. Les concurrents avaient besoin de courses de décollage plus longues pour ces conditions chaudes et
+        élevées. Boeing a également proposé des options pour une capacité de charge utile plus élevée.\n\nBoeing 757 est un monoplan cantilever à aile basse
+        avec un empennage conventionnel doté d\'un seul aileron et d\'un gouvernail. Chaque aile présente une section transversale supercritique et est équipée d\'un
+        bord d\'attaque à cinq panneaux lamelles, volets à fente simple et double, un aileron extérieur et six spoilers. Les ailes sont en grande partie identiques sur
+        les 757 variantes, balayées à 25 degrés. Le balayage réduit de l\'aile élimine le besoin d\'ailerons intérieurs, mais entraîne peu de pénalité de traînée sur les
+        itinéraires de courte et moyenne longueur, au cours desquels la majeure partie du vol est consacrée à la montée ou à la descente. La cellule intègre en outre des
+        surfaces d\'ailes en plastique renforcé de fibre de carbone, des carénages et des panneaux d\'accès en Kevlar, ainsi que des alliages d\'aluminium améliorés,
+        qui, ensemble, réduisent le poids total de 950 kg. Pour répartir le poids de l\'avion au sol, le 757 dispose d\'un train d\'atterrissage tricycle rétractable
+        avec quatre roues sur chaque train principal et deux pour le train avant. Le train d\'atterrissage a été délibérément conçu pour être plus haut que l\'avion à
+        fuselage étroit précédent de la compagnie afin de fournir une garde au sol pour modèles allongés. En 1982, le 757-200 est devenu le premier avion de ligne
+        subsonique à proposer des freins en carbone plus durables en option d\'usine, fournis par Dunlop. Le étiré 757-300 comporte un tailskid rétractable sur son
+        fuselage arrière pour empêcher des dommages si la section de queue entre en contact avec la surface de piste pendant le décollage.\n</string>
 
 
-    <string name="b757_identify">How to identify Boeing 757?</string>
-    <string name="b757_identify_ans">Pointed \"dolphin\" nose, tall landing gears, \"V\" shaped side windshield, 3 cabin doors and either 1 emergency exit aft of wing
-        or 2 over-wing exits (-200) / 4 cabin doors and 2 over-wing emergency exits (-300), winglets: none (-200), blended large L-shaped (-300).</string>
+    <string name="b757_desc2" formatted="false">Le poste de pilotage du plus long avion de ligne à fuselage étroit utilise six écrans CRT Rockwell Collins pour afficher
+        les instruments de vol, ainsi qu\'un système électronique d\'instruments de vol (EFIS, en anglais) et un système d\'indication des moteurs et d\'alerte de
+        l\'équipage (EICAS, en anglais). Ces systèmes permettent aux pilotes de gérer les tâches de surveillance précédemment effectuées par le mécanicien navigant. Un
+        système de gestion de vol amélioré, amélioré par rapport aux versions utilisées sur les premiers 747, automatise la navigation et d\'autres fonctions, tandis
+        qu\'un système d\'atterrissage automatique facilite les atterrissages aux instruments de CAT IIIb dans des conditions de faible visibilité à 150 m. Le système de
+        référence inertielle (IRS, en anglais) qui a fait ses débuts avec le 757-200 a été le premier à comporter des gyroscopes à lumière laser. Sur le 757-300, le poste
+        de pilotage amélioré comprend un Honeywell Pegasus ordinateur de gestion de vol, EICAS amélioré et systèmes logiciels mis à jour.\n\nTrois systèmes hydrauliques
+        indépendants sont installés sur le 757, un alimenté par chaque moteur et le troisième utilisant des pompes électriques. Une turbine à air dynamique est installée
+        pour alimenter les commandes essentielles en cas d\'urgence. Une forme basique de fly-by-wire facilite le fonctionnement du spoiler, en utilisant une signalisation
+        électrique au lieu des câbles de commande traditionnels. Le système fly-by-wire, partagé avec le 767, réduit le poids et permet le fonctionnement indépendant des
+        spoilers individuels. Lorsqu\'il est équipé pour des opérations à longue portée, le 757 dispose d\'un générateur de moteur hydraulique de secours et d\'un
+        ventilateur de refroidissement supplémentaire dans la baie électronique de l\'avion. L\'intérieur du 757 permet de disposer jusqu\'à six sièges par rangée avec
+        un seul couloir central. Optimisé à l\'origine pour des vols d\'une durée moyenne de deux heures, le 757 est doté d\'un éclairage intérieur et d\'une architecture
+        de cabine visant à donner une impression plus spacieuse. Comme sur le 767, des compartiments supérieurs de la longueur d\'un sac à vêtements et une cuisine
+        arrière de classe économique font partie de l\'équipement de série. Les bacs ont deux fois la capacité comme ceux de la 727 précédente. Pour gagner du poids, le
+        sandwich nid d\'abeille est utilisé pour les panneaux intérieurs et les poubelles. Contrairement aux précédents modèles de toboggans d\'évacuation qui ne sont pas
+        équipés pour les amerrissages, les sorties principales du 757 comportent des radeaux de toboggan combinés similaires à ceux du 747. Dans les années 1980, Boeing
+        a modifié la conception intérieure de ses autres avions à fuselage étroit pour qu\'elle soit similaire à celle du 757.\n</string>
+
+    <string name="b757_desc3">\nLes variantes du Boeing 757 incluent 757-100 (abandonné), 757-200, 757-200PF, 757-200M, 757-200 SF/PCF, 757-300, Airborne Research
+        Integrated Experiments System (ARIES) en anglais pour la sécurité aérienne et la recherche opérationnelle, C-32 - Armée de l\'air des États-Unis (USAF, en anglais) exploite quatre
+        757-200 configurés en VIP sous la désignation C-32A pour les missions incluant le transport du président des États-Unis et/ou du vice-président des États-Unis,
+        F-22 Flying Banc d\'essai, un pour le volet Krueger et le programme de test d\'atténuation des insectes à flux laminaire naturel, un pour le système de contrôle
+        de flux actif, Royal New Zealand Air Force 757 Combi, et Transports VIP.\n</string>
+
+    <string name="b757_specs_constraint">(comparaison ordonnée des variantes -200, -200F, -300)\n</string>
+
+
+    <string name="b757_identify">Comment identifier Boeing 757?</string>
+    <string name="b757_identify_ans">Nez pointu «dauphin», trains d\'atterrissage hauts, pare-brise latéral en forme de «V», 3 portes de cabine et soit 1 sortie de secours à l\'arrière de l\'aile
+        ou 2 sorties au-dessus de l\'aile (-200) / 4 portes de cabine et 2 sorties de secours au-dessus de l\'aile (-300), winglets : aucun (-200), grand en forme de L (-300).</string>
 
     <string name="b757_cockpit_value">2</string>
-    <string name="b757_wingspan_value">38.0 m</string>
-    <string name="b757_length_value">47.3 m (-200 / -200F) / 54.4 m</string>
-    <string name="b757_height_value">13.6 m</string>
-    <string name="b757_fuselage_value">3.76 m (W) / ~3.8 m (H)</string>
-    <string name="b757_mtow_value">115.66 t (-200/-200F) /\n123.83 t</string>
-    <string name="b757_cruise_speed_value">854 km/h (typical),\n918 km/h (max.)</string>
-    <string name="b757_range_value">3,915 / 2,935 / 3,400 nmi</string>
+    <string name="b757_wingspan_value">38,0 m</string>
+    <string name="b757_length_value">47,3 m (-200 / -200F) / 54,4 m</string>
+    <string name="b757_height_value">13,6 m</string>
+    <string name="b757_fuselage_value">3,76 m (L) / ~3,8 m (H)</string>
+    <string name="b757_mtow_value">115,66 t (-200/-200F) /\n123,83 t</string>
+    <string name="b757_cruise_speed_value">854 km/h (typique),\n918 km/h (max.)</string>
+    <string name="b757_range_value">3915 / 2935 / 3400 nmi</string>
     <string name="b757_thrust_value">179–193 kN (RR RB211) /\n163–189 kN (P &amp; W PW2000)</string>
     <!--BOEING 757-->
 
