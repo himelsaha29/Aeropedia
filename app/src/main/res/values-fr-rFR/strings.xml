@@ -68,6 +68,7 @@
     <string name="length">Length</string>
     <string name="height">Height</string>
     <string name="fuselage">Fuselage</string>
+    <string name="cabin">Cabine</string>
     <string name="gross_weight">Gross weight</string>
     <string name="mtow">MTOW</string>
     <string name="cruise_speed">Cruise speed</string>

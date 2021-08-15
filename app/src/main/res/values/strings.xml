@@ -67,6 +67,7 @@
     <string name="length">Length</string>
     <string name="height">Height</string>
     <string name="fuselage">Fuselage</string>
+    <string name="cabin">Cabin</string>
     <string name="gross_weight">Gross weight</string>
     <string name="mtow">Max. take-off weight</string>
     <string name="cruise_speed">Cruise speed</string>
@@ -1258,7 +1259,7 @@
     <string name="b747_wingspan_value">59.6 m / 64.4 m (-400) /\n68.4 m (-8)</string>
     <string name="b747_length_value">56.3 m (SP) / 70.66 m /\n76.25 m (-8)</string>
     <string name="b747_height_value">19.9 m (SP) / 19.3 m /\n19.4 m (-400/-8)</string>
-    <string name="b747_fuselage_value">~6.0  (W) / ~6.08 m (H)</string>
+    <string name="b747_fuselage_value">~6.1 (W) / ~6.2 m (H)</string>
     <string name="b747_mtow_value">317.5 / 333.4 / 377.8 (-200B/-300) /\n412.8 / 447.7 t</string>
     <string name="b747_cruise_speed_value">907 km/h (typical),\n939 km/h (max.)</string>
     <string name="b747_range_value">5,830 / 4,620 / 6,560 /\n6,330 / 7,670 / 7,730</string>
