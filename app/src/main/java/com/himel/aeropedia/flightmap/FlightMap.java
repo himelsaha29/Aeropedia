@@ -124,6 +124,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private JSONObject countriesInFrench;
 
     private Thread currentThreadTrack = null;
+    private Thread currentRouteThread = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -397,6 +398,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                         currentThreadTrack.interrupt();
                         currentThreadTrack = null;
                     }
+                    if(currentRouteThread != null){
+                        currentRouteThread.interrupt();
+                        currentRouteThread = null;
+                    }
                     bottomSheetIsExpanded = false;
                     flightRoute = null;
                     flightTrack = null;
@@ -451,6 +456,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if(currentThreadTrack != null){
                     currentThreadTrack.interrupt();
                     currentThreadTrack = null;
+                }
+                if(currentRouteThread != null){
+                    currentRouteThread.interrupt();
+                    currentRouteThread = null;
                 }
 
                 Thread threadRoute = new Thread(new Runnable() {
@@ -529,9 +538,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
 
 
-
                                 // getting flight track
-                                if (!flightRoute[1].equalsIgnoreCase("N/A")) {
+                                if (flightRoute[1] != null && !flightRoute[1].equalsIgnoreCase("N/A")) {
 
                                     Thread threadTrack = new Thread(new Runnable() {
                                         @Override
@@ -565,6 +573,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                         }
                                     });
 
+                                    if(currentThreadTrack != null){
+                                        currentThreadTrack.interrupt();
+                                        currentThreadTrack = null;
+                                    }
                                     currentThreadTrack = threadTrack;
                                     threadTrack.start();
                                 }
@@ -575,6 +587,11 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     }
                 });
 
+                if(currentRouteThread != null){
+                    currentRouteThread.interrupt();
+                    currentRouteThread = null;
+                }
+                currentRouteThread = threadRoute;
                 threadRoute.start();
 
                 markerSelected = marker;
