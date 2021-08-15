@@ -672,6 +672,70 @@ public class Firebase extends AppCompatActivity {
                                             button.setBackgroundColor(Color.RED);
                                         }
                                     }
+                                    if (s.equalsIgnoreCase("Embraer Lineage\n1000")) {
+                                        NeumorphButton button = findViewById(R.id.embraer_lineage);
+                                        TextView status = findViewById(R.id.embraer_lineage_status);
+                                        status.setText("Embraer Lineage\n1000\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Embraer Lineage\n1000")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+                                    if (s.equalsIgnoreCase("Embraer Phenom\n300")) {
+                                        NeumorphButton button = findViewById(R.id.embraer_phenom);
+                                        TextView status = findViewById(R.id.embraer_phenom_status);
+                                        status.setText("Embraer Phenom\n300\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Embraer Phenom\n300")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+                                    if (s.equalsIgnoreCase("Cessna 182\nSkylane")) {
+                                        NeumorphButton button = findViewById(R.id.cessna_skylane);
+                                        TextView status = findViewById(R.id.cessna_skylane_status);
+                                        status.setText("Cessna 182\nSkylane\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Cessna 182\nSkylane")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
+                                    if (s.equalsIgnoreCase("Cessna 208\nCaravan")) {
+                                        NeumorphButton button = findViewById(R.id.cessna_caravan);
+                                        TextView status = findViewById(R.id.cessna_caravan_status);
+                                        status.setText("Cessna 208\nCaravan\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        if(size <= 0 || size <= 100) {
+                                            layoutParams.height = 100;
+                                        } else {
+                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                                        }
+                                        button.setLayoutParams(layoutParams);
+                                        if(aircraftsChosen.contains("Cessna 208\nCaravan")) {
+                                            button.setBackgroundColor(Color.RED);
+                                        }
+                                    }
 
 
 
