@@ -2513,4 +2513,6 @@
 
     <string name="snackbar">No internet connection</string>
 
+    <string name="not_available">N/A</string>
+
 </resources>

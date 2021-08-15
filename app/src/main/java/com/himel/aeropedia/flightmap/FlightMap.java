@@ -456,7 +456,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                 origin.setText(flightRoute[0]);
                                 destination.setText(flightRoute[1]);
                                 if ((flightRoute[2] + " " + flightRoute[3]).contains("N/A")) {
-                                    aircraft.setText("N/A");
+                                    aircraft.setText(R.string.not_available);
                                 } else {
                                     aircraft.setText(flightRoute[2] + " " + flightRoute[3]);
                                 }
@@ -494,14 +494,14 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                 }
 
                                 if(originAirportCity == null){
-                                    originAirportCityTV.setText("N/A");
+                                    originAirportCityTV.setText(R.string.not_available);
                                     cities.setVisibility(View.VISIBLE);
                                 } else {
                                     originAirportCityTV.setText(originAirportCity);
                                     cities.setVisibility(View.VISIBLE);
                                 }
                                 if(destinationAirportCity == null){
-                                    destinationAirportCityTV.setText("N/A");
+                                    destinationAirportCityTV.setText(R.string.not_available);
                                     cities.setVisibility(View.VISIBLE);
                                 } else {
                                     destinationAirportCityTV.setText(destinationAirportCity);

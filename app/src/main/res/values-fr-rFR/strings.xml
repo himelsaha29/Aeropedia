@@ -2516,4 +2516,6 @@
 
     <string name="snackbar">Pas de connexion internet</string>
 
+    <string name="not_available">S/O</string>
+
 </resources>
