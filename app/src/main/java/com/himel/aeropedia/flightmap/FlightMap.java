@@ -107,7 +107,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private TextView originAirportCityTV;
     private TextView destinationAirportCityTV;
 
-    private BitmapDescriptor markerPlaneBlack;
+    private BitmapDescriptor markerPlaneDefault;
     private BitmapDescriptor markerPlaneRed;
     private Marker markerSelected;
     private Button liveButton;
@@ -169,10 +169,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         dynamicDialog();
 
         if (enableDarkOnCreate.equals("No")) {
-            markerPlaneBlack = vectorToBitmap(R.drawable.marker_plane_black);
+            markerPlaneDefault = vectorToBitmap(R.drawable.marker_plane_black);
             markerPlaneRed = vectorToBitmap(R.drawable.marker_plane_red_light);
         } else {
-            markerPlaneBlack = vectorToBitmap(R.drawable.marker_plane_white);
+            markerPlaneDefault = vectorToBitmap(R.drawable.marker_plane_white);
             markerPlaneRed = vectorToBitmap(R.drawable.marker_plane_red_dark);
         }
 
@@ -192,6 +192,28 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if (polyline != null) {
                     polyline.remove();
                 }
+                if (markerSelected != null) {
+                    markerSelected.setIcon(markerPlaneDefault);
+                }
+                if(bottomSheetBehavior != null) {
+                    if(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                    } else if(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
+                        bottomSheetBehavior.setPeekHeight(0, true);
+                    }
+                }
+                loadDefaultFields();
+                if(currentThreadTrack != null){
+                    currentThreadTrack.interrupt();
+                    currentThreadTrack = null;
+                }
+                if(currentRouteThread != null){
+                    currentRouteThread.interrupt();
+                    currentRouteThread = null;
+                }
+                bottomSheetIsExpanded = false;
+                flightRoute = null;
+                flightTrack = null;
             }
         });
 
@@ -257,7 +279,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if (icao == null) System.out.println("ICAO24 IS NULL");
                 LatLng latLng = new LatLng(latitude, longitude);
                 Marker marker = mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f, 0.5f)
-                        .rotation(true_track).icon(markerPlaneBlack).snippet(icao).flat(true));
+                        .rotation(true_track).icon(markerPlaneDefault).snippet(icao).flat(true));
 
                 if (!markerTracker.containsKey(icao)) {
                     markerTracker.put(icao, marker);
@@ -389,7 +411,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if (newState == BottomSheetBehavior.STATE_COLLAPSED) {
                     bottomSheetBehavior.setPeekHeight(0, true);
                     if (markerSelected != null) {
-                        markerSelected.setIcon(markerPlaneBlack);
+                        markerSelected.setIcon(markerPlaneDefault);
                     }
                     if (polyline != null) {
                         polyline.remove();
@@ -422,7 +444,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             @Override
             public boolean onMarkerClick(Marker marker) {
                 if (markerSelected != null) {
-                    markerSelected.setIcon(markerPlaneBlack);
+                    markerSelected.setIcon(markerPlaneDefault);
                 }
                 if (polyline != null) {
                     polyline.remove();
@@ -430,25 +452,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 bottomSheetBehavior.setPeekHeight(120);
                 String snippet = marker.getSnippet();
                 // ======== LOADING ========
-                icaoTV.setText(R.string.loading);
-                origin.setText(R.string.loading);
-                destination.setText(R.string.loading);
-                aircraft.setText(R.string.loading);
-                callsignTV.setText(R.string.loading);
-                country.setText(R.string.loading);
-                lamitude.setText(R.string.loading);
-                lomgitude.setText(R.string.loading);
-                airline.setText(R.string.loading);
-                engineType.setText(R.string.loading);
-                baroAltitudeTV.setText(R.string.loading);
-                geoAltitudeTV.setText(R.string.loading);
-                onGroundTv.setText(R.string.loading);
-                velocityTV.setText(R.string.loading);
-                verticalRateTV.setText(R.string.loading);
-                squawkTV.setText(R.string.loading);
-                positionSourceTV.setText(R.string.loading);
-                destinationAirportCityTV.setText(R.string.loading);
-                originAirportCityTV.setText(R.string.loading);
+                loadDefaultFields();
                 // =========================
 
                 String[] markerInfo = hashMap.get(marker.getSnippet());
@@ -858,7 +862,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if (!markerTracker.containsKey(icao)) {
                     LatLng latLng = new LatLng(latitude, longitude);
                     Marker marker = mMap.addMarker(new MarkerOptions().position(latLng).anchor(0.5f, 0.5f)
-                            .rotation(true_track).icon(markerPlaneBlack).snippet(icao).flat(true));
+                            .rotation(true_track).icon(markerPlaneDefault).snippet(icao).flat(true));
 
                     markerTracker.put(icao, marker);
                 } else {
@@ -1216,5 +1220,27 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             positionSourceTV.setText(markerInfo[9]);
         }
 
+    }
+
+    private void loadDefaultFields() {
+        icaoTV.setText(R.string.loading);
+        origin.setText(R.string.loading);
+        destination.setText(R.string.loading);
+        aircraft.setText(R.string.loading);
+        callsignTV.setText(R.string.loading);
+        country.setText(R.string.loading);
+        lamitude.setText(R.string.loading);
+        lomgitude.setText(R.string.loading);
+        airline.setText(R.string.loading);
+        engineType.setText(R.string.loading);
+        baroAltitudeTV.setText(R.string.loading);
+        geoAltitudeTV.setText(R.string.loading);
+        onGroundTv.setText(R.string.loading);
+        velocityTV.setText(R.string.loading);
+        verticalRateTV.setText(R.string.loading);
+        squawkTV.setText(R.string.loading);
+        positionSourceTV.setText(R.string.loading);
+        destinationAirportCityTV.setText(R.string.loading);
+        originAirportCityTV.setText(R.string.loading);
     }
 }
