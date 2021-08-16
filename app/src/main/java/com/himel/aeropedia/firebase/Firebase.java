@@ -63,11 +63,12 @@ public class Firebase extends AppCompatActivity {
     private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
             a340Button, a350Button, a380Button, belugaButton, an22Button, an72Button, an124Button, an225Button, b737Button, b747Button, b757Button, b767Button,
             b777Button, b787Button, bombardierChallenger650Button, bombardierCRJButton, bombardierLearjetButton, bombardierGlobalButton,
-            embraerERJButton, embraerEJetE2Button, embraerLineageButton, embraerPhenomButton, cessnaSkylaneButton, cessnaCaravanButton, cessnaButton, havillandButton, save;
+            embraerERJButton, embraerEJetE2Button, embraerLineageButton, embraerPhenomButton, cessnaSkylaneButton, cessnaCaravanButton, cessnaLatitudeButton,
+            cessnaLongitudeButton, gulfstreamG650Button, gulfstreamG280Button, cessnaButton, havillandButton, save;
 
     boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, an22, an72, an124, an225, b737, b747, b757, b767,
             b777, b787, bombardierChallenger650, bombardierCRJ, bombardierLearjet, bombardierGlobal, embraerERJ, embraerEJetE2, embraerLineage, embraerPhenom, cessnaSkylane,
-            cessnaCaravan, citation, de_havilland;
+            cessnaCaravan, cessnaLatitude, cessnaLongitude, gulfstreamG650, gulfstreamG280, citation, de_havilland;
 
 
     @Override
@@ -110,7 +111,10 @@ public class Firebase extends AppCompatActivity {
         embraerPhenomButton = findViewById(R.id.embraer_phenom);
         cessnaSkylaneButton = findViewById(R.id.cessna_skylane);
         cessnaCaravanButton = findViewById(R.id.cessna_caravan);
-
+        cessnaLongitudeButton = findViewById(R.id.cessna_longitude);
+        cessnaLatitudeButton = findViewById(R.id.cessna_latitude);
+        gulfstreamG650Button = findViewById(R.id.gulfstream_g650);
+        gulfstreamG280Button = findViewById(R.id.gulfstream_g280);
 
 
         cessnaButton = findViewById(R.id.citation);
@@ -1359,6 +1363,70 @@ public class Firebase extends AppCompatActivity {
                     cessnaCaravanButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) cessnaCaravanButton.getText());
                     cessnaCaravan = false;
+                }
+            }
+        });
+
+        cessnaLatitudeButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!cessnaLatitude) {
+                    cessnaLatitudeButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) cessnaLatitudeButton.getText());
+                    cessnaLatitude = true;
+                } else {
+                    cessnaLatitudeButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) cessnaLatitudeButton.getText());
+                    cessnaLatitude = false;
+                }
+            }
+        });
+
+        cessnaLongitudeButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!cessnaLongitude) {
+                    cessnaLongitudeButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) cessnaLongitudeButton.getText());
+                    cessnaLongitude = true;
+                } else {
+                    cessnaLongitudeButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) cessnaLongitudeButton.getText());
+                    cessnaLongitude = false;
+                }
+            }
+        });
+
+        gulfstreamG650Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!gulfstreamG650) {
+                    gulfstreamG650Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) gulfstreamG650Button.getText());
+                    gulfstreamG650 = true;
+                } else {
+                    gulfstreamG650Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) gulfstreamG650Button.getText());
+                    gulfstreamG650 = false;
+                }
+            }
+        });
+
+        gulfstreamG280Button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!gulfstreamG280) {
+                    gulfstreamG280Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) gulfstreamG280Button.getText());
+                    gulfstreamG280 = true;
+                } else {
+                    gulfstreamG280Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) gulfstreamG280Button.getText());
+                    gulfstreamG280 = false;
                 }
             }
         });

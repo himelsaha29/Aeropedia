@@ -1173,7 +1173,125 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
 
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="10dip">
+
+                            <soup.neumorphism.NeumorphButton
+                                android:id="@+id/cessna_latitude"
+                                style="@style/Widget.Neumorph.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:padding="5dp"
+                                android:text="Cessna Latitude"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="14.5dp"
+                                app:neumorph_backgroundColor="#f2f4f6"
+                                app:neumorph_shadowColorDark="#eaeaea"
+                                app:neumorph_shadowColorLight="#fdfdfd"
+                                app:neumorph_strokeColor="#f2f4f6"
+                                app:neumorph_strokeWidth="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="10dip">
+
+                            <soup.neumorphism.NeumorphButton
+                                android:id="@+id/cessna_longitude"
+                                style="@style/Widget.Neumorph.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:padding="5dp"
+                                android:text="Cessna Longitude"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="14.5sp"
+                                app:neumorph_backgroundColor="#f2f4f6"
+                                app:neumorph_shadowColorDark="#eaeaea"
+                                app:neumorph_shadowColorLight="#fdfdfd"
+                                app:neumorph_strokeColor="#f2f4f6"
+                                app:neumorph_strokeWidth="5dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="10dip">
+
+                            <soup.neumorphism.NeumorphButton
+                                android:id="@+id/gulfstream_g650"
+                                style="@style/Widget.Neumorph.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:padding="5dp"
+                                android:text="Gulfstream G650"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="14.5dp"
+                                app:neumorph_backgroundColor="#f2f4f6"
+                                app:neumorph_shadowColorDark="#eaeaea"
+                                app:neumorph_shadowColorLight="#fdfdfd"
+                                app:neumorph_strokeColor="#f2f4f6"
+                                app:neumorph_strokeWidth="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="10dip">
+
+                            <soup.neumorphism.NeumorphButton
+                                android:id="@+id/gulfstream_g280"
+                                style="@style/Widget.Neumorph.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:padding="5dp"
+                                android:text="Gulfstream G280"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="14.5sp"
+                                app:neumorph_backgroundColor="#f2f4f6"
+                                app:neumorph_shadowColorDark="#eaeaea"
+                                app:neumorph_shadowColorLight="#fdfdfd"
+                                app:neumorph_strokeColor="#f2f4f6"
+                                app:neumorph_strokeWidth="5dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
 
 
 
