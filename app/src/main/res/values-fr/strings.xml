@@ -1404,7 +1404,7 @@
         un cockpit en verre numérique à deux équipages. Écrans couleur à tube cathodique (CRT, en anglais) et nouveau l\'électronique a remplacé le rôle du mécanicien
         navigant en permettant au pilote et au copilote de surveiller directement les systèmes de l\'avion. Malgré la promesse de réduction des coûts d\'équipage, United
         Airlines a initialement exigé un poste de pilotage conventionnel pour trois personnes, citant des inquiétudes concernant les risques associés à l\'introduction
-        d\'un nouvel avion. Le transporteur a maintenu cette position jusqu'en juillet 1981, lorsqu\'un groupe de travail présidentiel américain a déterminé qu\'un
+        d\'un nouvel avion. Le transporteur a maintenu cette position jusqu\'en juillet 1981, lorsqu\'un groupe de travail présidentiel américain a déterminé qu\'un
         équipage de deux personnes était sûr pour l\'exploitation de gros porteurs. Un cockpit à trois équipages est resté en option et a été monté sur les premiers modèles
         de production. Ansett Australia a commandé des 767 avec des cockpits à trois équipages en raison des demandes des syndicats; c\'était la seule compagnie aérienne
         à exploiter des 767 ainsi configurés. Le cockpit à deux équipages du 767 a également été appliqué au 757, permettant aux pilotes d\'opérer les deux avions après
@@ -1441,7 +1441,7 @@
     <string name="b767_desc3">\n767 variantes incluent 767-200, 767-2C, 767-200ER, 767-300, 767-300ER, 767-300F, 767-400ER. Les variantes militaires et gouvernementales
         sont comprises du banc d\'essai de surveillance aéroportée, E-767, KC-767 Tanker Transport, KC-767 Advanced Tanker, KC-46, 767 MMTT, E-10 MC2A. D\'autres
         variantes une fois envisagées par Boeing qui n\'est pas entré dans la phase de production comprend 767-X et 767-400ERX. Boeing étudie également un 767-XF
-        remotorisé pour 2025 environ, sur la base des 767-400ER avec un train d'atterrissage allongé pour accueillir de plus gros turboréacteurs General Electric GEnx. Le
+        remotorisé pour 2025 environ, sur la base des 767-400ER avec un train d\'atterrissage allongé pour accueillir de plus gros turboréacteurs General Electric GEnx. Le
         marché du fret est la cible principale, mais un passager version pourrait être une alternative moins chère au nouvel avion intermédiaire proposé.\n</string>
 
     <string name="b767_specs_constraint">(comparaison ordonnée des variantes -200, -200ER, -300, -300ER/F, -400ER)\n</string>
