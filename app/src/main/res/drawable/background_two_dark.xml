@@ -25,7 +25,9 @@
       </aapt:attr>
     </path>
     <path
-        android:pathData="M1.452,203.828a515.5,457.5 98,1 0,906.095 127.343a515.5,457.5 98,1 0,-906.095 -127.343z">
+        android:pathData="M1.452,203.828a515.5,457.5 98,1 0,906.095 127.343a515.5,457.5 98,1 0,-906.095 -127.343z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000">
       <aapt:attr name="android:fillColor">
         <gradient 
             android:startY="-258.66443"
@@ -41,6 +43,11 @@
         </gradient>
       </aapt:attr>
     </path>
+    <path
+        android:pathData="M1.947,203.898a515,457 98,1 0,905.105 127.204a515,457 98,1 0,-905.105 -127.204z"
+        android:strokeWidth="1"
+        android:fillColor="#00000000"
+        android:strokeColor="#394569"/>
     <path
         android:pathData="M-16,99.5a457.5,515.5 0,1 0,915 0a457.5,515.5 0,1 0,-915 0z">
       <aapt:attr name="android:fillColor">
