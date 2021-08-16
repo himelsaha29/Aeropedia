@@ -1465,8 +1465,8 @@
         unit. The aircraft also features the largest landing gear and the biggest tires ever used in a commercial jetliner. The six-wheel bogies are designed to spread
         the load of the aircraft over a wide area without requiring an additional centerline gear. This helps reduce weight and simplifies the aircraft\'s braking and
         hydraulic systems. Each tire of a 777-300ER six-wheel main landing gear can carry a load of 26,980 kg, which is heavier than other wide-bodies such as the
-        747-400. The aircraft has triple redundant hydraulic systems with only one system required for landing. A ram air turbine—a small retractable device which can
-        provide emergency power—is also fitted in the wing root fairing.\n</string>
+        747-400. The aircraft has triple redundant hydraulic systems with only one system required for landing. A ram air turbine - a small retractable device which can
+        provide emergency power - is also fitted in the wing root fairing.\n</string>
 
     <string name="b777_desc3">\nBoeing 777 variants include 777-200, 777-200ER, 777-200LR, 777-300, 777-300ER, 777 Freighter, 777-300ER Special Freighter (SF), the
         upcoming 777X, 777 Business Jet (777 VIP), and 777 Tanker (KC-777).\n</string>
@@ -1483,7 +1483,7 @@
     <string name="b777_length_value">63.73 m / 73.86 m (-300/-300ER) /\n63.73 m</string>
     <string name="b777_height_value">18.5 / 18.5 / 18.6 m</string>
     <string name="b777_fuselage_value">6.20 m (W) / ~6.30 m (H)</string>
-    <string name="b777_mtow_value">247.2 - 297.55 / 299.37 /\n351.53 / 347,45 - 347.82 t</string>
+    <string name="b777_mtow_value">247.2 - 297.55 / 299.37 /\n351.53 / 347.45 - 347.82 t</string>
     <string name="b777_cruise_speed_value">892 km/h (typical),\n924–945 km/h (max.)</string>
     <string name="b777_range_value">5,240 - 7,065 / 6,030 /\n4,650 - 7,370 / 4,980 - 10,450 nmi</string>
     <string name="b777_thrust_value">343 - 417 / 440 / 513 / 489–513 kN</string>
