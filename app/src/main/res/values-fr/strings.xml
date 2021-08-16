@@ -1383,76 +1383,84 @@
 
 
     <!--BOEING 767-->
-    <string name="b767_type_value">Wide-body\nairliner</string>
+    <string name="b767_type_value">Avion de ligne à\nfuselage large</string>
     <string name="b767_engine_value">P&amp;W JT9D / PW4000 /\nGE CF6 / RR RB211 (2)</string>
-    <string name="b767_first_flight_value">26 September 1981</string>
-    <string name="b767_intro_value">8 September 1982\nwith United Airlines</string>
+    <string name="b767_first_flight_value">26 septembre 1981</string>
+    <string name="b767_intro_value">8 septembre 1982\navec United Airlines</string>
     <string name="b767_customer_value">Delta Air Lines</string>
-    <string name="b767_variants_value">14 (active)</string>
+    <string name="b767_variants_value">14 (actifs)</string> «Project Sunrise»
 
-    <string name="b767_desc1" formatted="false">Boeing 767 was launched as the 7X7 project on July 14, 1978, the prototype first flew on September 26, 1981, and it was
-        certified on July 30, 1982. The original 767-200 entered service on September 8, 1982 with United Airlines, and the extended-range 767-200ER in 1984. It was
-        stretched into the 767-300 in October 1986, followed by the 767-300ER in 1988, the most popular variant. The 767-300F, a production freighter version, debuted
-        in October 1995. It was stretched again into the 767-400ER from September 2000. In the late 1970s, operating cost replaced capacity as the primary factor in
-        airliner purchases. As a result, the 767\'s design process emphasized fuel efficiency from the outset. Boeing targeted a 20 to 30 percent cost saving over
-        earlier aircraft, mainly through new engine and wing technology. As development progressed, engineers used computer-aided design for over a third of the
-        767\'s design drawings, and performed 26,000 hours of wind tunnel tests. Design work occurred concurrently with the 757 twinjet, leading Boeing to treat both as
-        almost one program to reduce risk and cost. Both aircraft would ultimately receive shared design features, including avionics, flight management systems,
-        instruments, and handling characteristics. Combined development costs were estimated at $3.5 to $4 billion. As of June 2021, a total of 1219 767s have been
-        built.\n\nThe 767 was the first Boeing wide-body to be designed with a two-crew digital glass cockpit. Cathode ray tube (CRT) color displays and new
-        electronics replaced the role of the flight engineer by enabling the pilot and co-pilot to monitor aircraft systems directly. Despite the promise of reduced
-        crew costs, United Airlines initially demanded a conventional three-person cockpit, citing concerns about the risks associated with introducing a new
-        aircraft. The carrier maintained this position until July 1981, when a US presidential task force determined that a crew of two was safe for operating
-        wide-body jets. A three-crew cockpit remained as an option and was fitted to the first production models. Ansett Australia ordered 767s with three-crew cockpits
-        due to union demands; it was the only airline to operate 767s so configured. The 767\'s two-crew cockpit was also applied to the 757, allowing pilots to operate
-        both aircraft after a short conversion course, and adding incentive for airlines to purchase both types.\n</string>
-
-
-    <string name="b767_desc2" formatted="false">The 767 is a low-wing cantilever monoplane with a conventional tail unit featuring a single fin and rudder. The wings
-        are swept at 31.5 degrees and optimized for a cruising speed of Mach 0.8 (858 km/h). Each wing features a supercritical airfoil cross-section and is equipped
-        with six-panel leading edge slats, single- and double-slotted flaps, inboard and outboard ailerons, and six spoilers. The airframe further incorporates
-        Carbon-fiber-reinforced polymer composite material wing surfaces, Kevlar fairings and access panels, plus improved aluminum alloys, which together reduce
-        overall weight by 860 kg versus preceding aircraft. To distribute the aircraft\'s weight on the ground, the 767 has a retractable tricycle landing gear with
-        four wheels on each main gear and two for the nose gear. The original wing and gear design accommodated the stretched 767-300 without major changes. The
-        767-400ER features a larger, more widely spaced main gear with 777 wheels, tires, and brakes. To prevent damage if the tail section contacts the runway surface
-        during takeoff, 767-300 and 767-400ER models are fitted with a retractable tailskid.\n\nIn addition to shared avionics and computer technology, the 767 uses the same auxiliary power unit, electric power systems, and hydraulic parts as
-        the 757. A raised cockpit floor and the same forward cockpit windows result in similar pilot viewing angles. Related design and functionality allows 767
-        pilots to obtain a common type rating to operate the 757 and share the same seniority roster with pilots of either aircraft. The original 767 flight deck uses
-        six Rockwell Collins CRT screens to display Electronic flight instrument system (EFIS) and engine indication and crew alerting system (EICAS) information,
-        allowing pilots to handle monitoring tasks previously performed by the flight engineer. The CRTs replace conventional electromechanical instruments found on
-        earlier aircraft. An enhanced flight management system, improved over versions used on early 747s, automates navigation and other functions, while
-        an automatic landing system facilitates CAT IIIb instrument landings in low visibility situations. The 767 became the first aircraft to receive CAT IIIb
-        certification from the FAA for landings with 300 m minimum visibility in 1984. On the 767-400ER, the cockpit layout is simplified further with six Rockwell
-        Collins liquid crystal display (LCD) screens, and adapted for similarities with the 777 and the Next Generation 737.\n\nTo retain operational commonality, the
-        LCD screens can be programmed to display information in the same manner as earlier 767s. In 2012, Boeing and Rockwell Collins launched a further 787-based cockpit
-        upgrade for the 767, featuring three landscape-format LCD screens that can display two windows each. The 767 is equipped with three redundant hydraulic systems
-        for operation of control surfaces, landing gear, and utility actuation systems. Each engine powers a separate hydraulic system, and the third system uses
-        electric pumps. A ram air turbine provides power for basic controls in the event of an emergency. An early form of fly-by-wire is employed for spoiler operation,
-        utilizing electric signaling instead of traditional control cables. The fly-by-wire system reduces weight and allows independent operation of
-        individual spoilers.\n</string>
-
-    <string name="b767_desc3">\n767 variants include 767-200, 767-2C, 767-200ER, 767-300, 767-300ER, 767-300F, 767-400ER. Military and government variants are comprised
-        of Airborne Surveillance Testbed, E-767, KC-767 Tanker Transport, KC-767 Advanced Tanker, KC-46, 767 MMTT, E-10 MC2A. Other variants once considered by
-        Boeing that did not make into the production phase include 767-X and 767-400ERX. Boeing is also studying a re-engined 767-XF for around 2025, based on the
-        767-400ER with an extended landing gear to accommodate larger General Electric GEnx turbofan engines. The cargo market is the main target, but a passenger
-        version could be a cheaper alternative to the proposed New Midsize Airplane.\n</string>
-
-    <string name="b767_specs_constraint">(-200, -200ER, -300, -300ER/F, -400ER compared in order)\n</string>
+    <string name="b767_desc1" formatted="false">Boeing 767 a été lancé en tant que projet 7X7 le 14 juillet 1978, le prototype a volé pour la première fois le 26 septembre
+        1981, et il a été certifié le 30 juillet 1982. Le 767-200 original est entré en service le 8 septembre 1982 avec United Airlines, et le 767-200ER à rayon d\'action
+        étendu en 1984. Il a été étendu dans le 767-300 en octobre 1986, suivi du 767-300ER en 1988, la variante la plus populaire. Le 767-300F, une version cargo de
+        production, a fait ses débuts en octobre 1995. Il a de nouveau été étendu au 767-400ER à partir de septembre 2000. À la fin des années 1970, les coûts d\'exploitation
+        ont remplacé la capacité en tant que facteur principal dans les achats d\'avions de ligne. En conséquence, le processus de conception du 767 a mis l\'accent sur
+        l\'efficacité énergétique dès le départ. Boeing visait une économie de 20 à 30 pour cent sur avions antérieurs, principalement grâce à une nouvelle technologie de m
+        oteur et d\'aile. Au fur et à mesure que le développement progressait, les ingénieurs ont utilisé la conception assistée par ordinateur pour plus d\'un tiers des
+        767 et réalisé 26 000 heures d\'essais en soufflerie. Les travaux de conception se sont déroulés en même temps que le biréacteur 757, ce qui a conduit Boeing à
+        traiter les deux comme presque un programme pour réduire les risques et les coûts. Les deux avions finiraient par recevoir des caractéristiques de conception
+        communes, notamment l\'avionique, les systèmes de gestion de vol, les instruments et les caractéristiques de conduite. Les coûts de développement combinés ont été
+        estimés entre 3,5 et 4 milliards de dollars. En juin 2021, un total de 1219 767 ont été construit.\n\nLe 767 a été le premier gros-porteur Boeing à être conçu avec
+        un cockpit en verre numérique à deux équipages. Écrans couleur à tube cathodique (CRT, en anglais) et nouveau l\'électronique a remplacé le rôle du mécanicien
+        navigant en permettant au pilote et au copilote de surveiller directement les systèmes de l\'avion. Malgré la promesse de réduction des coûts d\'équipage, United
+        Airlines a initialement exigé un poste de pilotage conventionnel pour trois personnes, citant des inquiétudes concernant les risques associés à l\'introduction
+        d\'un nouvel avion. Le transporteur a maintenu cette position jusqu'en juillet 1981, lorsqu\'un groupe de travail présidentiel américain a déterminé qu\'un
+        équipage de deux personnes était sûr pour l\'exploitation de gros porteurs. Un cockpit à trois équipages est resté en option et a été monté sur les premiers modèles
+        de production. Ansett Australia a commandé des 767 avec des cockpits à trois équipages en raison des demandes des syndicats; c\'était la seule compagnie aérienne
+        à exploiter des 767 ainsi configurés. Le cockpit à deux équipages du 767 a également été appliqué au 757, permettant aux pilotes d\'opérer les deux avions après
+        un court cours de conversion, et incitant les compagnies aériennes à acheter les deux types.\n</string>
 
 
-    <string name="b767_identify">How to identify Boeing 767?</string>
-    <string name="b767_identify_ans">\"V\" shaped side windshield, The 767-300 and -400 have emergency exit doors before the wing and after the wing, 4-wheel main landing gear. The -200
-        has one emergency exit above the wing. The 767-300 and -400 each come with a retractable tailskid added to protect the tail of
-        these longer versions from damaging tail strikes on takeoff. Added bonus for -400, it has blended large L-shaped wingtips, while other variants don\'t.</string>
+    <string name="b767_desc2" formatted="false">Le 767 est un monoplan cantilever à aile basse avec un empennage conventionnel doté d\'un seul aileron et d\'un gouvernail.
+        Les ailes sont balayées à 31,5 degrés et optimisées pour une vitesse de croisière de Mach 0,8 (858 km/h). Chaque aile présente une section transversale de profil
+        aérodynamique supercritique et est équipée de lattes de bord d\'attaque à six panneaux, de volets à fente simple et double, d\'ailerons intérieurs et extérieurs
+        et de six spoilers. La cellule intègre en outre surfaces d\'aile en matériau composite polymère renforcé de fibres de carbone, carénages et panneaux d\'accès en
+        Kevlar, ainsi que des alliages d\'aluminium améliorés, qui, ensemble, réduisent le poids total de 860 kg par rapport aux avions précédents. Pour répartir le poids
+        de l\'avion au sol, le 767 dispose d\'un train d\'atterrissage tricycle rétractable avec quatre roues sur chaque train principal et deux pour le train avant. La
+        conception originale de l\'aile et du train s\'adaptait au 767-300 allongé sans changements majeurs. Le 767-400ER est doté d\'un train principal plus grand et plus
+        espacé avec 777 roues, pneus et freins. Pour éviter les dommages si la section de queue entre en contact avec la surface de la piste au décollage, les modèles
+        767-300 et 767-400ER sont équipés d\'un sabot arrière rétractable.\n\nEn plus de l\'avionique et de la technologie informatique partagées, le 767 utilise la même
+        unité d\'alimentation auxiliaire, les mêmes systèmes d\'alimentation électrique et les mêmes pièces hydrauliques que le 757. Un plancher de cockpit surélevé et
+        les mêmes fenêtres de cockpit avant permettent des angles de vision similaires pour le pilote. La conception et la fonctionnalité connexes permettent aux pilotes
+        du 767 d\'obtenir une qualification de type commune pour exploiter le 757 et de partager la même liste d\'ancienneté avec les pilotes de l\'un ou l\'autre avion. Le
+        poste de pilotage d\'origine du 767 utilise six écrans Rockwell Collins CRT pour afficher les informations du système d\'instruments de vol électroniques (EFIS, en
+        anglais) et du système d\'indication des moteurs et d\'alerte de l\'équipage (EICAS, en anglais), permettant aux pilotes de gérer les tâches de surveillance
+        précédemment effectuées par le mécanicien navigant. Les tubes cathodiques remplacent les instruments électromécaniques conventionnels que l\'on trouve sur avions
+        antérieurs. Un système de gestion de vol amélioré, amélioré par rapport aux versions utilisées sur les premiers 747, automatise la navigation et d\'autres
+        fonctions, tandis qu\'un système d\'atterrissage automatique facilite les atterrissages aux instruments CAT IIIb dans des situations de faible visibilité. Le 767
+        est devenu le premier avion à recevoir la CAT IIIb certification de la FAA pour les atterrissages avec une visibilité minimale de 300 m en 1984. Sur le 767-400ER,
+        l\'aménagement du cockpit est encore simplifié avec six Rockwell écrans à cristaux liquides (LCD, en anglais) Collins et adaptés aux similitudes avec le 777 et le
+        737 Next Generation.\n\nPour conserver une communauté opérationnelle, les écrans LCD peuvent être programmés pour afficher des informations de la même manière
+        que les 767 précédents. En 2012, Boeing et Rockwell Collins ont lancé un autre cockpit basé sur le 787 mise à niveau pour le 767, avec trois écrans LCD au format
+        paysage pouvant afficher deux fenêtres chacun. Le 767 est équipé de trois systèmes hydrauliques redondants pour le fonctionnement des gouvernes, du train
+        d\'atterrissage et des systèmes d\'actionnement des services publics. Chaque moteur alimente un système hydraulique distinct et le troisième système utilise
+        pompes électriques. Une turbine à air dynamique fournit de l\'énergie pour les commandes de base en cas d\'urgence. Une première forme de fly-by-wire est
+        utilisée pour le fonctionnement du spoiler, utilisant la signalisation électrique au lieu des câbles de commande traditionnels. Le système fly-by-wire réduit le
+        poids et permet un fonctionnement indépendant de spoilers individuels.\n</string>
+
+    <string name="b767_desc3">\n767 variantes incluent 767-200, 767-2C, 767-200ER, 767-300, 767-300ER, 767-300F, 767-400ER. Les variantes militaires et gouvernementales
+        sont comprises du banc d\'essai de surveillance aéroportée, E-767, KC-767 Tanker Transport, KC-767 Advanced Tanker, KC-46, 767 MMTT, E-10 MC2A. D\'autres
+        variantes une fois envisagées par Boeing qui n\'est pas entré dans la phase de production comprend 767-X et 767-400ERX. Boeing étudie également un 767-XF
+        remotorisé pour 2025 environ, sur la base des 767-400ER avec un train d'atterrissage allongé pour accueillir de plus gros turboréacteurs General Electric GEnx. Le
+        marché du fret est la cible principale, mais un passager version pourrait être une alternative moins chère au nouvel avion intermédiaire proposé.\n</string>
+
+    <string name="b767_specs_constraint">(comparaison ordonnée des variantes -200, -200ER, -300, -300ER/F, -400ER)\n</string>
+
+
+    <string name="b767_identify">Comment identifier Boeing 767?</string>
+    <string name="b767_identify_ans">Pare-brise latéral en forme de «V», Les 767-300 et -400 ont des portes de sortie de secours avant l\'aile et après l\'aile, train
+        d\'atterrissage principal à 4 roues. Le -200 a une sortie de secours au-dessus de l\'aile. Les 767-300 et -400 sont chacun livrés avec un patin arrière rétractable
+        ajouté pour protéger la queue de ces versions plus longues des coups de queue dommageables au décollage. Bonus supplémentaire pour -400, il a de grands
+        bouts d\'ailes en forme de L, contrairement aux autres variantes.</string>
 
     <string name="b767_cockpit_value">2</string>
-    <string name="b767_wingspan_value">47.57 m / 51.92 m (-400ER)</string>
-    <string name="b767_length_value">48.51 m (-200/ER) / 54.94 m (-300/ER) /\n61.37 m</string>
-    <string name="b767_height_value">15.85 m / 16.87 m (-400ER)</string>
-    <string name="b767_fuselage_value">5.03 m (W) / 5.41 m (H)</string>
-    <string name="b767_mtow_value">142.9 / 179.2 / 158.8 /\n 186.9 / 204.1 t</string>
-    <string name="b767_cruise_speed_value">850 km/h (typical),\n900 km/h (max.)</string>
-    <string name="b767_range_value">3,900 / 6,590 / 3,900 /\n5,980 / 5,625 nmi</string>
+    <string name="b767_wingspan_value">47,57 m / 51,92 m (-400ER)</string>
+    <string name="b767_length_value">48,51 m (-200/ER) / 54,94 m (-300/ER) /\n61,37 m</string>
+    <string name="b767_height_value">15,85 m / 16,87 m (-400ER)</string>
+    <string name="b767_fuselage_value">5,03 m (L) / 5,41 m (H)</string>
+    <string name="b767_mtow_value">142,9 / 179,2 / 158,8 /\n 186,9 / 204,1 t</string>
+    <string name="b767_cruise_speed_value">850 km/h (typique),\n900 km/h (max.)</string>
+    <string name="b767_range_value">3900 / 6590 / 3900 /\n5980 / 5625 nmi</string>
     <string name="b767_thrust_value">214–234 / 214–270 / 214–270 /\n252–274 / 270 kN</string>
     <!--BOEING 767-->
 
