@@ -136,6 +136,9 @@ public class AlexaActivity extends CoreActivity {
                 @Override
                 public void run() {
                     loggedIn = checkLogin();
+                    System.out.println("1 : " + loggedIn);
+                    loggedIn = checkLogin();
+                    System.out.println("2 : " + loggedIn);
                 }
             });
             thread.start();

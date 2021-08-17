@@ -1635,53 +1635,55 @@
 
 
     <!--LEARJET 75-->
-    <string name="learjet75_type_value">Business jet</string>
+    <string name="learjet75_type_value">Avion d\'affaires</string>
     <string name="learjet75_engine_value">Honeywell TFE731-40BR\n(2)</string>
     <string name="learjet75_customer_value">Zenith Aviation</string>
     <string name="learjet75_variants_value">2</string>
-    <string name="learjet75_numbers_value">145 by end of 2019</string>
+    <string name="learjet75_numbers_value">145 d\'ici fin 2019</string>
 
-    <string name="learjet75_desc1" formatted="false">The Learjet 75 is a mid-sized business jet airplane manufactured by the Learjet division of Canadian aircraft
-        manufacturer Bombardier Aerospace. With the end of production in 2021 it will be the last LearJet model. These models feature new avionics, winglets, and
-        powerful engines that use less fuel. It has been updated with touchscreen-controlled Garmin G5000 avionics and a modern interior. The combination
-        of aerodynamic improvements, which lowered the design\'s drag by 2%, and 200 lbs less weight in the nose section resulted in an increased range of 4%. The
-        canted winglet design was incorporated from the Bombardier Global 7500/8000. It is powered by 17.1 kN Honeywell TFE731-40BR turbofans with thrust
-        reversers, have a MTOW of 9,800 kg and a fuel capacity of 2,750 kg for a maximum range of 2,050 nmi with four passengers. Typical cruise is Mach .76 and high-speed cruise
-        is Mach .79, the ceiling is FL510 where the cabin altitude is 2,400 m. Their flat-floor cabin width is 1.50m by 1.55 m high, the Learjet 70\'s seven-seat cabin
-        length is 5.38 and 6.05 m for the nine-seat, double-club Learjet 75. The forward galley facing the entry door is isolated by a pocket door from the seating
-        area with a Lufthansa Technik cabin management, and the aft lavatory has a belted seat. The 1.4 m<sup><small><small>3</small></small></sup> external baggage
-        hold is heated but not pressurized.\n</string>
+    <string name="learjet75_desc1" formatted="false">Le Learjet 75 est un avion à réaction d\'affaires de taille moyenne fabriqué par la division Learjet d\'avions canadiens
+        constructeur Bombardier Aéronautique. Avec la fin de la production en 2021, ce sera le dernier modèle LearJet. Ces modèles sont dotés de nouvelles avioniques,
+        winglets et moteurs puissants qui consomment moins de carburant. Il a été mis à jour avec une avionique Garmin G5000 contrôlée par écran tactile et un intérieur
+        moderne. La combinaison d\'améliorations aérodynamiques, qui ont réduit la traînée de la conception de 2%, et 200 lb de poids en moins dans la section du nez ont
+        entraîné une augmentation de la portée de 4%. La conception de l\'ailette inclinée a été incorporée à partir du Bombardier Global 7500/8000. Il est propulsé par
+        des turboréacteurs Honeywell TFE731-40BR de 17,1 kN avec inverseurs de poussée, a une MTOW de 9 800 kg et une capacité de carburant de 2750 kg pour une autonomie
+        maximale de 2050 nmi avec quatre passagers. La croisière typique est de Mach 0,76 et la croisière à grande vitesse est de Mach 0,79, le plafond est le FL510 où
+        l\'altitude de la cabine est de 2 400 m. Leur largeur de cabine à plancher plat est de 1,50 m sur 1,55 m de haut, la cabine à sept places du Learjet 70 la
+        longueur est de 5,38 m et de 6,05 m pour le Learjet 75 club double neuf places. La cuisine avant face à la porte d\'entrée est isolée par une porte escamotable
+        de la banquette zone avec une gestion de cabine Lufthansa Technik, et les toilettes arrière ont un siège ceinturé. Le bagage externe de 1,4 m<sup><small><small>3</small></small></sup>
+        la cale est chauffée mais pas pressurisée.\n</string>
 
 
-    <string name="learjet75_desc2" formatted="false">At FL410, ISA + 3 °C (5 °F) and Mach .78 for 462 kn (856 km/h), its hourly fuel burn is 450 kg and 640 kg at
-        Mach .80. Certified to the stricter FAR Part 25, the $13.8 million Learjet 75 competes with the Embraer Phenom 300 and the Citation CJ4, beating them in
-        cabin volume, with 10.3 m<sup><small><small>3</small></small></sup> against 9.3 and 8.4 m<sup><small><small>3</small></small></sup> respectively, the Phenom
-        having the same cross-section, larger than the 1.45 by 1.47 m CJ4. The Mach .81 capable Learjet is faster than the Mach .78 Phenom and the Mach .77
-        CJ4, and the Phenom can fly 1,971 nmi (3,650 km) while the CJ4 can fly 2,165 nmi (4,010 km). The Learjet 75 received its type certificate from the FAA on 14
-        November 2013. Deliveries began shortly thereafter. This delay in certification caused order cancellations, and Bombardier\'s overall deliveries fell below
-        expectations. By 2016, production of Learjet 70 has been temporarily discontinued due to lack of orders (with Learjet 75 still being produced). The 100th
-        Learjet 75 was delivered in June 2017. By January 2019, Bombardier has delivered 132 Learjet 40/40XRs, 454 45/45XRs, and nearly 130 70/75s, including 24 in
-        2016 and 14 in 2017. In June, Bombardier launched the sub-$10 million Learjet 75 Liberty to compete with the Cessna CitationJet and Embraer Phenom 300 from
-        2020, with six seats down from eight, no standard APU or lavatory sink, but still Part 25 and not FAR Part 23 certified, with a maximum payload of 1,320 kg
-        and a range of 2,080 nmi (3,850 km). Bombardier announced the end of the production of Learjet aircraft by the end of 2021.\n</string>
+    <string name="learjet75_desc2" formatted="false">Au FL410, ISA + 3 °C (5 °F) et Mach 0,78 pour 462 kn (856 km/h), sa consommation horaire est de 450 kg et de 640 kg à
+        Mach 0,80. Certifié selon la plus stricte FAR Part 25, le Learjet 75 de 13,8 millions de dollars rivalise avec l\'Embraer Phenom 300 et le Citation CJ4, les
+        battant dans volume de la cabine, avec 10,3 m<sup><small><small>3</small></small></sup> contre 9,3 et 8,4 m<sup><small><small>3</small></small ></sup>
+        respectivement, le Phenom ayant la même section transversale, plus grand que le CJ4 de 1,45 sur 1,47 m. Le Learjet capable de Mach .81 est plus rapide que le
+        Mach .78 Phenom et le Mach .77 CJ4, et le Phenom peut parcourir 1 971 nmi (3 650 km) tandis que le CJ4 peut parcourir 2165 nmi (4010 km). Le Learjet 75 a reçu son
+        certificat de type de la FAA le 14 novembre 2013. Les livraisons ont commencé peu après. Ce retard dans la certification a entraîné des annulations de commandes
+        et les livraisons globales de Bombardier sont tombées en deçà des attentes. En 2016, la production du Learjet 70 a été temporairement interrompue en raison du
+        manque de commandes (le Learjet 75 étant toujours produit). Le 100e Learjet 75 a été livré en juin 2017. En janvier 2019, Bombardier avait livré 132 Learjet
+        40/40XR, 454 45/45XR et près de 130 70/75, dont 24 en 2016 et 14 en 2017. En juin, Bombardier a lancé le moins de 10 millions de dollars Learjet 75 Liberty pour
+        concurrencer le Cessna CitationJet et l'Embraer Phenom 300 à partir de 2020, avec six sièges au lieu de huit, pas d\'APU ou de lavabo standard, mais toujours
+        certifiés Part 25 et non FAR Part 23, avec une charge utile maximale de 1 320 kg et une autonomie de 2080 nmi (3850 km). Bombardier a annoncé la fin de la
+        production d\'avions Learjet d\'ici la fin de 2021.\n</string>
 
-    <string name="learjet75_desc3">\nThe business jet comes in 2 variants, the Learjet 75 and the Learjet 75 Liberty.\n</string>
+    <string name="learjet75_desc3">\nLe jet d\'affaires se décline en 2 variantes, le Learjet 75 et le Learjet 75 Liberty.\n</string>
 
     <string name="learjet75_specs_constraint">(Learjet 75)\n</string>
 
 
-    <string name="learjet75_identify">How to identify Learjet 75?</string>
+    <string name="learjet75_identify">Comment identifier Learjet 75?</string>
     <string name="learjet75_identify_ans"></string>
 
     <string name="learjet75_cockpit_value">2</string>
-    <string name="learjet75_wingspan_value">15.5 m</string>
-    <string name="learjet75_length_value">17.7 m</string>
-    <string name="learjet75_height_value">4.31 m</string>
-    <string name="learjet75_fuselage_value">1.56 m (W) /  1.50 m (H)</string>
-    <string name="learjet75_mtow_value">9.75 t</string>
+    <string name="learjet75_wingspan_value">15,5 m</string>
+    <string name="learjet75_length_value">17,7 m</string>
+    <string name="learjet75_height_value">4,31 m</string>
+    <string name="learjet75_fuselage_value">1,56 m (L) / 1,50 m (H)</string>
+    <string name="learjet75_mtow_value">9,75 t</string>
     <string name="learjet75_cruise_speed_value">861 km/h (typical)</string>
-    <string name="learjet75_range_value">2,040 nmi</string>
-    <string name="learjet75_thrust_value">17.1 kN</string>
+    <string name="learjet75_range_value">2040 nmi</string>
+    <string name="learjet75_thrust_value">17,1 kN</string>
     <!--LEARJET 75-->
 
 

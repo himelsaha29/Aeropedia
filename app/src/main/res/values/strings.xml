@@ -1612,7 +1612,7 @@
     <string name="learjet75_wingspan_value">15.5 m</string>
     <string name="learjet75_length_value">17.7 m</string>
     <string name="learjet75_height_value">4.31 m</string>
-    <string name="learjet75_fuselage_value">1.56 m (W) /  1.50 m (H)</string>
+    <string name="learjet75_fuselage_value">1.56 m (W) / 1.50 m (H)</string>
     <string name="learjet75_mtow_value">9.75 t</string>
     <string name="learjet75_cruise_speed_value">861 km/h (typical)</string>
     <string name="learjet75_range_value">2,040 nmi</string>
