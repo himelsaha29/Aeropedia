@@ -1,27 +1,21 @@
 package com.himel.aeropedia.firebase;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.widget.NestedScrollView;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Display;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -32,12 +26,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.himel.aeropedia.R;
-import com.himel.aeropedia.firebase.AircraftPreference;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -138,8 +132,6 @@ public class Firebase extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         map = new HashMap<>();
-                        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
-                        Set<String> aircraftsChosen = prefs.getStringSet("ChosenAircrafts", null);
 
                         System.out.println("Children count : " + dataSnapshot.getChildrenCount());
 
@@ -148,675 +140,15 @@ public class Firebase extends AppCompatActivity {
                                 map.put(ds.child("preferredAircraft").getValue().toString(), 1);
                             } else {
                                 int count = map.get(ds.child("preferredAircraft").getValue().toString());
-                                map.put(ds.child("preferredAircraft").getValue().toString(), ++count);
+                                count++;
+                                map.put(ds.child("preferredAircraft").getValue().toString(), count);
                             }
 
                             childCount++;
 
-                            if (childCount == dataSnapshot.getChildrenCount()) {
-
-                                switchLayout();
-                                DisplayMetrics displayMetrics = new DisplayMetrics();
-                                getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-                                int height = displayMetrics.heightPixels;
-                                int width = displayMetrics.widthPixels;
-
-                                for (String s : map.keySet()) {
-
-                                    if (s.equalsIgnoreCase("Airbus A220")) {
-                                        NeumorphButton button = findViewById(R.id.a220);
-                                        TextView status = findViewById(R.id.a220status);
-                                        status.setText("Airbus A220\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A220")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A300")) {
-                                        NeumorphButton button = findViewById(R.id.a300);
-                                        TextView status = findViewById(R.id.a300status);
-                                        status.setText("Airbus A300\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A300")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A310")) {
-                                        NeumorphButton button = findViewById(R.id.a310);
-                                        TextView status = findViewById(R.id.a310status);
-                                        status.setText("Airbus A310\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A310")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A318")) {
-                                        NeumorphButton button = findViewById(R.id.a318);
-                                        TextView status = findViewById(R.id.a318status);
-                                        status.setText("Airbus A318\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A318")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A319")) {
-                                        NeumorphButton button = findViewById(R.id.a319);
-                                        TextView status = findViewById(R.id.a319status);
-                                        status.setText("Airbus A319\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A319")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A320")) {
-                                        NeumorphButton button = findViewById(R.id.a320);
-                                        TextView status = findViewById(R.id.a320status);
-                                        status.setText("Airbus A320\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A320")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A321")) {
-                                        NeumorphButton button = findViewById(R.id.a321);
-                                        TextView status = findViewById(R.id.a321status);
-                                        status.setText("Airbus A321\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A321")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A319neo")) {
-                                        NeumorphButton button = findViewById(R.id.a319neo);
-                                        TextView status = findViewById(R.id.a319neostatus);
-                                        status.setText("Airbus A319neo\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A319neo")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A320neo")) {
-                                        NeumorphButton button = findViewById(R.id.a320neo);
-                                        TextView status = findViewById(R.id.a320neostatus);
-                                        status.setText("Airbus A320neo\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A320neo")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A321neo")) {
-                                        NeumorphButton button = findViewById(R.id.a321neo);
-                                        TextView status = findViewById(R.id.a321neostatus);
-                                        status.setText("Airbus A321neo\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A321neo")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A330")) {
-                                        NeumorphButton button = findViewById(R.id.a330);
-                                        TextView status = findViewById(R.id.a330status);
-                                        status.setText("Airbus A330\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A330")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A330neo")) {
-                                        NeumorphButton button = findViewById(R.id.a330neo);
-                                        TextView status = findViewById(R.id.a330neostatus);
-                                        status.setText("Airbus A330neo\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A330neo")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A340")) {
-                                        NeumorphButton button = findViewById(R.id.a340);
-                                        TextView status = findViewById(R.id.a340status);
-                                        status.setText("Airbus A340\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A340")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A350")) {
-                                        NeumorphButton button = findViewById(R.id.a350);
-                                        TextView status = findViewById(R.id.a350status);
-                                        status.setText("Airbus A350\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A350")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus A380")) {
-                                        NeumorphButton button = findViewById(R.id.a380);
-                                        TextView status = findViewById(R.id.a380status);
-                                        status.setText("Airbus A380\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus A380")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Airbus Beluga")) {
-                                        NeumorphButton button = findViewById(R.id.beluga);
-                                        TextView status = findViewById(R.id.belugastatus);
-                                        status.setText("Airbus Beluga\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Airbus Beluga")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Antonov An-22")) {
-                                        NeumorphButton button = findViewById(R.id.an22);
-                                        TextView status = findViewById(R.id.an22status);
-                                        status.setText("Antonov An-22\nAntei\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Antonov An-22")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Antonov An-72")) {
-                                        NeumorphButton button = findViewById(R.id.an72);
-                                        TextView status = findViewById(R.id.an72status);
-                                        status.setText("Antonov An-72\nCheburashka\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Antonov An-72")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Antonov An-124")) {
-                                        NeumorphButton button = findViewById(R.id.an124);
-                                        TextView status = findViewById(R.id.an124status);
-                                        status.setText("Antonov An-124\nRuslan\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Antonov An-124")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Antonov An-225")) {
-                                        NeumorphButton button = findViewById(R.id.an225);
-                                        TextView status = findViewById(R.id.an225status);
-                                        status.setText("Antonov An-225\nMriya\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Antonov An-225")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Boeing 737")) {
-                                        NeumorphButton button = findViewById(R.id.b737);
-                                        TextView status = findViewById(R.id.b737status);
-                                        status.setText("Boeing 737\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Boeing 737")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Boeing 747")) {
-                                        NeumorphButton button = findViewById(R.id.b747);
-                                        TextView status = findViewById(R.id.b747status);
-                                        status.setText("Boeing 747\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Boeing 747")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Boeing 757")) {
-                                        NeumorphButton button = findViewById(R.id.b757);
-                                        TextView status = findViewById(R.id.b757status);
-                                        status.setText("Boeing 757\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Boeing 757")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Boeing 767")) {
-                                        NeumorphButton button = findViewById(R.id.b767);
-                                        TextView status = findViewById(R.id.b767status);
-                                        status.setText("Boeing 767\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Boeing 767")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Boeing 777")) {
-                                        NeumorphButton button = findViewById(R.id.b777);
-                                        TextView status = findViewById(R.id.b777status);
-                                        status.setText("Boeing 777\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Boeing 777")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Boeing 787")) {
-                                        NeumorphButton button = findViewById(R.id.b787);
-                                        TextView status = findViewById(R.id.b787status);
-                                        status.setText("Boeing 787\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Boeing 787")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Bombardier\nChallenger 650")) {
-                                        NeumorphButton button = findViewById(R.id.bombardier_challenger_650);
-                                        TextView status = findViewById(R.id.bombardier_challenger_650_status);
-                                        status.setText("Bombardier\nChallenger 650\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Bombardier\nChallenger 650")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Bombardier\nCRJ 100/200")) {
-                                        NeumorphButton button = findViewById(R.id.bombardier_crj);
-                                        TextView status = findViewById(R.id.bombardier_crj_status);
-                                        status.setText("Bombardier\nCRJ 100/200\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Bombardier\nCRJ 100/200")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Bombardier\nLearjet 75")) {
-                                        NeumorphButton button = findViewById(R.id.bombardier_learjet_75);
-                                        TextView status = findViewById(R.id.bombardier_learjet_75_status);
-                                        status.setText("Bombardier\nLearjet 75\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Bombardier\nLearjet 75")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Bombardier\nGlobal 7500")) {
-                                        NeumorphButton button = findViewById(R.id.bombardier_global_7500);
-                                        TextView status = findViewById(R.id.bombardier_global_7500_status);
-                                        status.setText("Bombardier\nGlobal 7500\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Bombardier\nGlobal 7500")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Embraer ERJ")) {
-                                        NeumorphButton button = findViewById(R.id.embraer_erj);
-                                        TextView status = findViewById(R.id.embraer_erj_status);
-                                        status.setText("Embraer ERJ\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Embraer ERJ")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Embraer E-Jet\nE2")) {
-                                        NeumorphButton button = findViewById(R.id.embraer_e_jet_e2);
-                                        TextView status = findViewById(R.id.embraer_e_jet_e2_status);
-                                        status.setText("Embraer E-Jet\nE2\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Embraer E-Jet\nE2")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Embraer Lineage\n1000")) {
-                                        NeumorphButton button = findViewById(R.id.embraer_lineage);
-                                        TextView status = findViewById(R.id.embraer_lineage_status);
-                                        status.setText("Embraer Lineage\n1000\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Embraer Lineage\n1000")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Embraer Phenom\n300")) {
-                                        NeumorphButton button = findViewById(R.id.embraer_phenom);
-                                        TextView status = findViewById(R.id.embraer_phenom_status);
-                                        status.setText("Embraer Phenom\n300\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Embraer Phenom\n300")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Cessna 182\nSkylane")) {
-                                        NeumorphButton button = findViewById(R.id.cessna_skylane);
-                                        TextView status = findViewById(R.id.cessna_skylane_status);
-                                        status.setText("Cessna 182\nSkylane\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Cessna 182\nSkylane")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Cessna 208\nCaravan")) {
-                                        NeumorphButton button = findViewById(R.id.cessna_caravan);
-                                        TextView status = findViewById(R.id.cessna_caravan_status);
-                                        status.setText("Cessna 208\nCaravan\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Cessna 208\nCaravan")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Cessna Latitude")) {
-                                        NeumorphButton button = findViewById(R.id.cessna_latitude);
-                                        TextView status = findViewById(R.id.cessna_latitude_status);
-                                        status.setText("Cessna Latitude\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Cessna Latitude")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Cessna Longitude")) {
-                                        NeumorphButton button = findViewById(R.id.cessna_longitude);
-                                        TextView status = findViewById(R.id.cessna_longitude_status);
-                                        status.setText("Cessna Longitude\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Cessna Longitude")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Gulfstream G650")) {
-                                        NeumorphButton button = findViewById(R.id.gulfstream_g650);
-                                        TextView status = findViewById(R.id.gulfstream_g650_status);
-                                        status.setText("Gulfstream G650\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Gulfstream G650")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-                                    if (s.equalsIgnoreCase("Gulfstream G280")) {
-                                        NeumorphButton button = findViewById(R.id.gulfstream_g280);
-                                        TextView status = findViewById(R.id.gulfstream_g280_status);
-                                        status.setText("Gulfstream G280\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
-                                        ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                                        float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        if(size <= 0 || size <= 100) {
-                                            layoutParams.height = 100;
-                                        } else {
-                                            layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
-                                        }
-                                        button.setLayoutParams(layoutParams);
-                                        if(aircraftsChosen.contains("Gulfstream G280")) {
-                                            button.setBackgroundColor(Color.RED);
-                                        }
-                                    }
-
-
-
-
-                                    System.out.println(s + " : " + map.get(s));
-                                    System.out.println(childCount);
-
-                                }
-
-                                childCount = 0;
-
-                            }
-
                         }
+                        findLargest();
+                        drawGraph();
                     }
 
                     @Override
@@ -1531,6 +863,684 @@ public class Firebase extends AppCompatActivity {
         translate = AnimationUtils.loadAnimation(this, R.anim.animation);
         textCard.setAnimation(translate);
         layout.setAnimation(translate);
+    }
+
+    private void findLargest() {
+        Iterator<String> key = map.keySet().iterator();
+        int count = 0;
+        int largestValue = 0;
+        while (key.hasNext()) {
+            String keyValue = key.next();
+            if(map.get(keyValue) > largestValue) {
+                largestValue = map.get(keyValue);
+            }
+            count += map.get(keyValue);
+        }
+        System.out.println("TOTAL : " + count);
+        System.out.println("LARGEST : " + largestValue);
+    }
+
+    private void drawGraph() {
+
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        Set<String> aircraftsChosen = prefs.getStringSet("ChosenAircrafts", null);
+
+        switchLayout();
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int height = displayMetrics.heightPixels;
+        int width = displayMetrics.widthPixels;
+
+        for (String s : map.keySet()) {
+
+//            if (s.equalsIgnoreCase("Airbus A220")) {
+//                NeumorphButton button = findViewById(R.id.a220);
+//                TextView status = findViewById(R.id.a220status);
+//                status.setText("Airbus A220\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+//                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+//                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+//                if(size <= 0 || size <= 100) {
+//                    layoutParams.height = 100;
+//                } else {
+//                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+//                }
+//                button.setLayoutParams(layoutParams);
+//                if(aircraftsChosen.contains("Airbus A220")) {
+//                    button.setBackgroundColor(Color.RED);
+//                }
+//            }
+            if (s.equalsIgnoreCase("Airbus A300")) {
+                NeumorphButton button = findViewById(R.id.a300);
+                TextView status = findViewById(R.id.a300status);
+                status.setText("Airbus A300\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A300")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A310")) {
+                NeumorphButton button = findViewById(R.id.a310);
+                TextView status = findViewById(R.id.a310status);
+                status.setText("Airbus A310\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A310")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A318")) {
+                NeumorphButton button = findViewById(R.id.a318);
+                TextView status = findViewById(R.id.a318status);
+                status.setText("Airbus A318\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A318")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A319")) {
+                NeumorphButton button = findViewById(R.id.a319);
+                TextView status = findViewById(R.id.a319status);
+                status.setText("Airbus A319\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A319")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A320")) {
+                NeumorphButton button = findViewById(R.id.a320);
+                TextView status = findViewById(R.id.a320status);
+                status.setText("Airbus A320\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A320")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A321")) {
+                NeumorphButton button = findViewById(R.id.a321);
+                TextView status = findViewById(R.id.a321status);
+                status.setText("Airbus A321\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A321")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A319neo")) {
+                NeumorphButton button = findViewById(R.id.a319neo);
+                TextView status = findViewById(R.id.a319neostatus);
+                status.setText("Airbus A319neo\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A319neo")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A320neo")) {
+                NeumorphButton button = findViewById(R.id.a320neo);
+                TextView status = findViewById(R.id.a320neostatus);
+                status.setText("Airbus A320neo\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A320neo")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A321neo")) {
+                NeumorphButton button = findViewById(R.id.a321neo);
+                TextView status = findViewById(R.id.a321neostatus);
+                status.setText("Airbus A321neo\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A321neo")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A330")) {
+                NeumorphButton button = findViewById(R.id.a330);
+                TextView status = findViewById(R.id.a330status);
+                status.setText("Airbus A330\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A330")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A330neo")) {
+                NeumorphButton button = findViewById(R.id.a330neo);
+                TextView status = findViewById(R.id.a330neostatus);
+                status.setText("Airbus A330neo\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A330neo")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A340")) {
+                NeumorphButton button = findViewById(R.id.a340);
+                TextView status = findViewById(R.id.a340status);
+                status.setText("Airbus A340\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A340")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A350")) {
+                NeumorphButton button = findViewById(R.id.a350);
+                TextView status = findViewById(R.id.a350status);
+                status.setText("Airbus A350\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A350")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus A380")) {
+                NeumorphButton button = findViewById(R.id.a380);
+                TextView status = findViewById(R.id.a380status);
+                status.setText("Airbus A380\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus A380")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Airbus Beluga")) {
+                NeumorphButton button = findViewById(R.id.beluga);
+                TextView status = findViewById(R.id.belugastatus);
+                status.setText("Airbus Beluga\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Airbus Beluga")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Antonov An-22")) {
+                NeumorphButton button = findViewById(R.id.an22);
+                TextView status = findViewById(R.id.an22status);
+                status.setText("Antonov An-22\nAntei\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Antonov An-22")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Antonov An-72")) {
+                NeumorphButton button = findViewById(R.id.an72);
+                TextView status = findViewById(R.id.an72status);
+                status.setText("Antonov An-72\nCheburashka\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Antonov An-72")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Antonov An-124")) {
+                NeumorphButton button = findViewById(R.id.an124);
+                TextView status = findViewById(R.id.an124status);
+                status.setText("Antonov An-124\nRuslan\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Antonov An-124")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Antonov An-225")) {
+                NeumorphButton button = findViewById(R.id.an225);
+                TextView status = findViewById(R.id.an225status);
+                status.setText("Antonov An-225\nMriya\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Antonov An-225")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Boeing 737")) {
+                NeumorphButton button = findViewById(R.id.b737);
+                TextView status = findViewById(R.id.b737status);
+                status.setText("Boeing 737\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Boeing 737")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Boeing 747")) {
+                NeumorphButton button = findViewById(R.id.b747);
+                TextView status = findViewById(R.id.b747status);
+                status.setText("Boeing 747\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Boeing 747")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Boeing 757")) {
+                NeumorphButton button = findViewById(R.id.b757);
+                TextView status = findViewById(R.id.b757status);
+                status.setText("Boeing 757\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Boeing 757")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Boeing 767")) {
+                NeumorphButton button = findViewById(R.id.b767);
+                TextView status = findViewById(R.id.b767status);
+                status.setText("Boeing 767\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Boeing 767")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Boeing 777")) {
+                NeumorphButton button = findViewById(R.id.b777);
+                TextView status = findViewById(R.id.b777status);
+                status.setText("Boeing 777\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Boeing 777")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Boeing 787")) {
+                NeumorphButton button = findViewById(R.id.b787);
+                TextView status = findViewById(R.id.b787status);
+                status.setText("Boeing 787\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Boeing 787")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Bombardier\nChallenger 650")) {
+                NeumorphButton button = findViewById(R.id.bombardier_challenger_650);
+                TextView status = findViewById(R.id.bombardier_challenger_650_status);
+                status.setText("Bombardier\nChallenger 650\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Bombardier\nChallenger 650")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Bombardier\nCRJ 100/200")) {
+                NeumorphButton button = findViewById(R.id.bombardier_crj);
+                TextView status = findViewById(R.id.bombardier_crj_status);
+                status.setText("Bombardier\nCRJ 100/200\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Bombardier\nCRJ 100/200")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Bombardier\nLearjet 75")) {
+                NeumorphButton button = findViewById(R.id.bombardier_learjet_75);
+                TextView status = findViewById(R.id.bombardier_learjet_75_status);
+                status.setText("Bombardier\nLearjet 75\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Bombardier\nLearjet 75")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Bombardier\nGlobal 7500")) {
+                NeumorphButton button = findViewById(R.id.bombardier_global_7500);
+                TextView status = findViewById(R.id.bombardier_global_7500_status);
+                status.setText("Bombardier\nGlobal 7500\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Bombardier\nGlobal 7500")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Embraer ERJ")) {
+                NeumorphButton button = findViewById(R.id.embraer_erj);
+                TextView status = findViewById(R.id.embraer_erj_status);
+                status.setText("Embraer ERJ\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Embraer ERJ")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Embraer E-Jet\nE2")) {
+                NeumorphButton button = findViewById(R.id.embraer_e_jet_e2);
+                TextView status = findViewById(R.id.embraer_e_jet_e2_status);
+                status.setText("Embraer E-Jet\nE2\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Embraer E-Jet\nE2")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Embraer Lineage\n1000")) {
+                NeumorphButton button = findViewById(R.id.embraer_lineage);
+                TextView status = findViewById(R.id.embraer_lineage_status);
+                status.setText("Embraer Lineage\n1000\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Embraer Lineage\n1000")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Embraer Phenom\n300")) {
+                NeumorphButton button = findViewById(R.id.embraer_phenom);
+                TextView status = findViewById(R.id.embraer_phenom_status);
+                status.setText("Embraer Phenom\n300\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Embraer Phenom\n300")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Cessna 182\nSkylane")) {
+                NeumorphButton button = findViewById(R.id.cessna_skylane);
+                TextView status = findViewById(R.id.cessna_skylane_status);
+                status.setText("Cessna 182\nSkylane\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Cessna 182\nSkylane")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Cessna 208\nCaravan")) {
+                NeumorphButton button = findViewById(R.id.cessna_caravan);
+                TextView status = findViewById(R.id.cessna_caravan_status);
+                status.setText("Cessna 208\nCaravan\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Cessna 208\nCaravan")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Cessna Latitude")) {
+                NeumorphButton button = findViewById(R.id.cessna_latitude);
+                TextView status = findViewById(R.id.cessna_latitude_status);
+                status.setText("Cessna Latitude\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Cessna Latitude")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Cessna Longitude")) {
+                NeumorphButton button = findViewById(R.id.cessna_longitude);
+                TextView status = findViewById(R.id.cessna_longitude_status);
+                status.setText("Cessna Longitude\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Cessna Longitude")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Gulfstream G650")) {
+                NeumorphButton button = findViewById(R.id.gulfstream_g650);
+                TextView status = findViewById(R.id.gulfstream_g650_status);
+                status.setText("Gulfstream G650\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Gulfstream G650")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+            if (s.equalsIgnoreCase("Gulfstream G280")) {
+                NeumorphButton button = findViewById(R.id.gulfstream_g280);
+                TextView status = findViewById(R.id.gulfstream_g280_status);
+                status.setText("Gulfstream G280\n" + df.format(((float) map.get(s) / (float) childCount) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) childCount) * 0.7 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Gulfstream G280")) {
+                    button.setBackgroundColor(Color.RED);
+                }
+            }
+
+
+
+
+//                                    System.out.println(s + " : " + map.get(s));
+            System.out.println("CHILD COUNT : " + childCount);
+
+        }
     }
 
 }
