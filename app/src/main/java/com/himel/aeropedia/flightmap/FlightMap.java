@@ -10,6 +10,8 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.KeyEvent;
@@ -114,7 +116,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private ProgressBar progressBar;
     private LinearLayout cities;
 
-    Route route = new Route();
+    private Route route = new Route();
     String[] flightRoute;
     String[] flightTrack;
     private Polyline polyline;
@@ -125,6 +127,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
     private Thread currentThreadTrack = null;
     private Thread currentRouteThread = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -195,21 +198,29 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if (markerSelected != null) {
                     markerSelected.setIcon(markerPlaneDefault);
                 }
-                if(bottomSheetBehavior != null) {
-                    if(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+                if (bottomSheetBehavior != null) {
+                    if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
                         bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-                    } else if(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
+                    } else if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
                         bottomSheetBehavior.setPeekHeight(0, true);
                     }
                 }
                 loadDefaultFields();
-                if(currentThreadTrack != null){
-                    currentThreadTrack.interrupt();
-                    currentThreadTrack = null;
+                if (currentThreadTrack != null) {
+                    try {
+                        currentThreadTrack.interrupt();
+                        currentThreadTrack = null;
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
-                if(currentRouteThread != null){
-                    currentRouteThread.interrupt();
-                    currentRouteThread = null;
+                if (currentRouteThread != null) {
+                    try {
+                        currentRouteThread.interrupt();
+                        currentRouteThread = null;
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
                 bottomSheetIsExpanded = false;
                 flightRoute = null;
@@ -416,13 +427,21 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     if (polyline != null) {
                         polyline.remove();
                     }
-                    if(currentThreadTrack != null){
-                        currentThreadTrack.interrupt();
-                        currentThreadTrack = null;
+                    if (currentThreadTrack != null) {
+                        try {
+                            currentThreadTrack.interrupt();
+                            currentThreadTrack = null;
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
-                    if(currentRouteThread != null){
-                        currentRouteThread.interrupt();
-                        currentRouteThread = null;
+                    if (currentRouteThread != null) {
+                        try {
+                            currentRouteThread.interrupt();
+                            currentRouteThread = null;
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                     bottomSheetIsExpanded = false;
                     flightRoute = null;
@@ -457,13 +476,21 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
                 String[] markerInfo = hashMap.get(marker.getSnippet());
 
-                if(currentThreadTrack != null){
-                    currentThreadTrack.interrupt();
-                    currentThreadTrack = null;
+                if (currentThreadTrack != null) {
+                    try {
+                        currentThreadTrack.interrupt();
+                        currentThreadTrack = null;
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
-                if(currentRouteThread != null){
-                    currentRouteThread.interrupt();
-                    currentRouteThread = null;
+                if (currentRouteThread != null) {
+                    try {
+                        currentRouteThread.interrupt();
+                        currentRouteThread = null;
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
 
                 Thread threadRoute = new Thread(new Runnable() {
@@ -503,7 +530,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                     trackTV.setText(String.valueOf(marker.getRotation()) + "°");
                                     squawkTV.setText(markerInfo[7]);
                                     positionSourceTV.setText(markerInfo[9]);
-                                } else if(getResources().getConfiguration().locale.toString().contains("fr")) {
+                                } else if (getResources().getConfiguration().locale.toString().contains("fr")) {
                                     populateFieldsInFrench(markerInfo, marker);
                                 }
 
@@ -522,24 +549,23 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                     e.printStackTrace();
                                 }
 
-                                if(originAirportCity == null){
+                                if (originAirportCity == null) {
                                     originAirportCityTV.setText(R.string.not_available);
                                     cities.setVisibility(View.VISIBLE);
                                 } else {
                                     originAirportCityTV.setText(originAirportCity);
                                     cities.setVisibility(View.VISIBLE);
                                 }
-                                if(destinationAirportCity == null){
+                                if (destinationAirportCity == null) {
                                     destinationAirportCityTV.setText(R.string.not_available);
                                     cities.setVisibility(View.VISIBLE);
                                 } else {
                                     destinationAirportCityTV.setText(destinationAirportCity);
                                     cities.setVisibility(View.VISIBLE);
                                 }
-                                if(originAirportCity == null & destinationAirportCity == null){
+                                if (originAirportCity == null & destinationAirportCity == null) {
                                     cities.setVisibility(View.GONE);
                                 }
-
 
 
                                 // getting flight track
@@ -577,9 +603,13 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                         }
                                     });
 
-                                    if(currentThreadTrack != null){
-                                        currentThreadTrack.interrupt();
-                                        currentThreadTrack = null;
+                                    if (currentThreadTrack != null) {
+                                        try {
+                                            currentThreadTrack.interrupt();
+                                            currentThreadTrack = null;
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
+                                        }
                                     }
                                     currentThreadTrack = threadTrack;
                                     threadTrack.start();
@@ -591,9 +621,13 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     }
                 });
 
-                if(currentRouteThread != null){
-                    currentRouteThread.interrupt();
-                    currentRouteThread = null;
+                if (currentRouteThread != null) {
+                    try {
+                        currentRouteThread.interrupt();
+                        currentRouteThread = null;
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
                 currentRouteThread = threadRoute;
                 threadRoute.start();
@@ -633,11 +667,22 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                         FlightMap.this.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
+                                boolean isNetworkAvailable = isNetworkAvailable();
+
                                 if (enableDarkOnCreate.equals("No")) {
                                     dialog.setContentView(R.layout.activity_rest_api_failed_dialog_light);
                                 } else {
                                     dialog.setContentView(R.layout.activity_rest_api_failed_dialog_dark);
                                 }
+
+                                if (!isNetworkAvailable) {
+                                    TextView errorMessage = dialog.findViewById(R.id.instruction);
+                                    errorMessage.setText(R.string.snackbar);
+                                } else {
+                                    TextView errorMessage = dialog.findViewById(R.id.instruction);
+                                    errorMessage.setText(R.string.connection_timed_out);
+                                }
+
                                 retry = dialog.findViewById(R.id.retry_rest);
                                 retry.setOnClickListener(new View.OnClickListener() {
                                     @Override
@@ -992,21 +1037,29 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         if (markerSelected != null) {
             markerSelected.setIcon(markerPlaneDefault);
         }
-        if(bottomSheetBehavior != null) {
-            if(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+        if (bottomSheetBehavior != null) {
+            if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
                 bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-            } else if(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
+            } else if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
                 bottomSheetBehavior.setPeekHeight(0, true);
             }
         }
         loadDefaultFields();
-        if(currentThreadTrack != null){
-            currentThreadTrack.interrupt();
-            currentThreadTrack = null;
+        if (currentThreadTrack != null) {
+            try {
+                currentThreadTrack.interrupt();
+                currentThreadTrack = null;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-        if(currentRouteThread != null){
-            currentRouteThread.interrupt();
-            currentRouteThread = null;
+        if (currentRouteThread != null) {
+            try {
+                currentRouteThread.interrupt();
+                currentRouteThread = null;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         bottomSheetIsExpanded = false;
         flightRoute = null;
@@ -1093,7 +1146,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     }
 
 
-
     private String loadCitiesJSONFromAsset(Context context) {
         String json = null;
         try {
@@ -1109,6 +1161,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         }
         return json;
     }
+
     private String loadCountriesFrenchJSONFromAsset(Context context) {
         String json = null;
         try {
@@ -1133,6 +1186,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             e.printStackTrace();
         }
     }
+
     private void loadCountriesJSON() {
         try {
             countriesInFrench = new JSONObject(loadCountriesFrenchJSONFromAsset(this));
@@ -1148,7 +1202,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         } else {
             origin.setText(flightRoute[0]);
         }
-        if (flightRoute[1] != null &&  flightRoute[1].equalsIgnoreCase("N/A")) {
+        if (flightRoute[1] != null && flightRoute[1].equalsIgnoreCase("N/A")) {
             destination.setText(R.string.not_available);
         } else {
             destination.setText(flightRoute[1]);
@@ -1167,13 +1221,13 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        if(pays == null) {
+        if (pays == null) {
             country.setText(markerInfo[1]);
         } else {
             country.setText(pays);
         }
 
-        if(String.valueOf(marker.getPosition().latitude).contains(".")) {
+        if (String.valueOf(marker.getPosition().latitude).contains(".")) {
             lamitude.setText(String.valueOf(marker.getPosition().latitude).replace('.', ','));
         } else {
             lamitude.setText(String.valueOf(marker.getPosition().latitude));
@@ -1185,7 +1239,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             lomgitude.setText(String.valueOf(marker.getPosition().longitude));
         }
 
-        if (flightRoute[5].equalsIgnoreCase("N/A")){
+        if (flightRoute[5].equalsIgnoreCase("N/A")) {
             airline.setText(R.string.not_available);
         } else {
             airline.setText(flightRoute[5]);
@@ -1204,7 +1258,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             baroAltitudeTV.setText(markerInfo[2]);
         }
 
-        if (markerInfo[3].contains(".")){
+        if (markerInfo[3].contains(".")) {
             geoAltitudeTV.setText(markerInfo[3].replace('.', ','));
         } else {
             geoAltitudeTV.setText(markerInfo[3]);
@@ -1223,7 +1277,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         }
 
 
-        if (markerInfo[6].contains(".")){
+        if (markerInfo[6].contains(".")) {
             verticalRateTV.setText(markerInfo[6].replace('.', ','));
         } else {
             verticalRateTV.setText(markerInfo[6]);
@@ -1235,7 +1289,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             trackTV.setText(String.valueOf(marker.getRotation()) + "°");
         }
 
-        if (markerInfo[7].equalsIgnoreCase("N/A")){
+        if (markerInfo[7].equalsIgnoreCase("N/A")) {
             squawkTV.setText(R.string.not_available);
         } else {
             squawkTV.setText(markerInfo[7]);
@@ -1269,5 +1323,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         positionSourceTV.setText(R.string.loading);
         destinationAirportCityTV.setText(R.string.loading);
         originAirportCityTV.setText(R.string.loading);
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }
