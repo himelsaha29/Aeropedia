@@ -905,7 +905,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A220")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A300")) {
@@ -921,7 +921,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A300")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A310")) {
@@ -937,7 +937,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A310")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A318")) {
@@ -953,7 +953,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A318")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A319")) {
@@ -969,7 +969,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A319")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A320")) {
@@ -985,7 +985,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A320")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A321")) {
@@ -1001,7 +1001,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A321")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A319neo")) {
@@ -1017,7 +1017,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A319neo")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A320neo")) {
@@ -1033,7 +1033,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A320neo")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A321neo")) {
@@ -1049,7 +1049,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A321neo")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A330")) {
@@ -1065,7 +1065,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A330")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A330neo")) {
@@ -1081,7 +1081,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A330neo")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A340")) {
@@ -1097,7 +1097,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A340")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A350")) {
@@ -1113,7 +1113,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A350")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus A380")) {
@@ -1129,7 +1129,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A380")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Airbus Beluga")) {
@@ -1145,7 +1145,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus Beluga")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Antonov An-22")) {
@@ -1161,7 +1161,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Antonov An-22")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Antonov An-72")) {
@@ -1177,7 +1177,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Antonov An-72")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Antonov An-124")) {
@@ -1193,7 +1193,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Antonov An-124")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Antonov An-225")) {
@@ -1209,7 +1209,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Antonov An-225")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Boeing 737")) {
@@ -1225,7 +1225,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Boeing 737")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Boeing 747")) {
@@ -1241,7 +1241,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Boeing 747")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Boeing 757")) {
@@ -1257,7 +1257,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Boeing 757")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Boeing 767")) {
@@ -1273,7 +1273,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Boeing 767")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Boeing 777")) {
@@ -1289,7 +1289,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Boeing 777")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Boeing 787")) {
@@ -1305,7 +1305,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Boeing 787")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Bombardier\nChallenger 650")) {
@@ -1321,7 +1321,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Bombardier\nChallenger 650")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Bombardier\nCRJ 100/200")) {
@@ -1337,7 +1337,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Bombardier\nCRJ 100/200")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Bombardier\nLearjet 75")) {
@@ -1353,7 +1353,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Bombardier\nLearjet 75")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Bombardier\nGlobal 7500")) {
@@ -1369,7 +1369,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Bombardier\nGlobal 7500")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Embraer ERJ")) {
@@ -1385,7 +1385,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Embraer ERJ")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Embraer E-Jet\nE2")) {
@@ -1401,7 +1401,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Embraer E-Jet\nE2")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Embraer Lineage\n1000")) {
@@ -1417,7 +1417,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Embraer Lineage\n1000")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Embraer Phenom\n300")) {
@@ -1433,7 +1433,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Embraer Phenom\n300")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Cessna 182\nSkylane")) {
@@ -1449,7 +1449,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Cessna 182\nSkylane")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Cessna 208\nCaravan")) {
@@ -1465,7 +1465,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Cessna 208\nCaravan")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Cessna Latitude")) {
@@ -1481,7 +1481,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Cessna Latitude")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Cessna Longitude")) {
@@ -1497,7 +1497,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Cessna Longitude")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Gulfstream G650")) {
@@ -1513,7 +1513,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Gulfstream G650")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
             else if (s.equalsIgnoreCase("Gulfstream G280")) {
@@ -1529,7 +1529,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Gulfstream G280")) {
-                    button.setBackgroundColor(Color.RED);
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
 
