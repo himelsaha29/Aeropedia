@@ -648,9 +648,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                             dialog.setContentView(R.layout.activity_map_loading_dialog_dark);
                                         }
                                         dynamicDialog();
+                                        getCoordinates();
                                     }
                                 });
-                                getCoordinates();
+
                             }
                         });
 
