@@ -39,6 +39,7 @@ import com.google.android.gms.maps.model.PatternItem;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.snackbar.Snackbar;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.Global;
 
@@ -54,6 +55,7 @@ import java.util.concurrent.TimeUnit;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.content.res.ResourcesCompat;
 
 import org.jetbrains.annotations.NotNull;
@@ -128,6 +130,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private Thread currentThreadTrack = null;
     private Thread currentRouteThread = null;
 
+    private CoordinatorLayout mainLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -191,40 +194,57 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
             @Override
             public void onClick(View v) {
-                updateRequest();
-                if (polyline != null) {
-                    polyline.remove();
-                }
-                if (markerSelected != null) {
-                    markerSelected.setIcon(markerPlaneDefault);
-                }
-                if (bottomSheetBehavior != null) {
-                    if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
-                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-                    } else if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
-                        bottomSheetBehavior.setPeekHeight(0, true);
+                boolean isNetworkAvailable = isNetworkAvailable();
+                if(!isNetworkAvailable) {
+                    mainLayout = findViewById(R.id.mainLayout);
+                    Snackbar snackbar = Snackbar
+                            .make(mainLayout, R.string.snackbar, Snackbar.LENGTH_LONG);
+                    if (enableDark.equals("No")) {
+                        snackbar.setBackgroundTint(Color.parseColor("#72A8E1"));
+                        snackbar.setTextColor(Color.BLACK);
+                    } else {
+                        snackbar.setBackgroundTint(Color.parseColor("#1b1f1f"));
+                        snackbar.setTextColor(Color.WHITE);
                     }
-                }
-                loadDefaultFields();
-                if (currentThreadTrack != null) {
-                    try {
-                        currentThreadTrack.interrupt();
-                        currentThreadTrack = null;
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                    snackbar.show();
+
+
+                } else {
+                    updateRequest();
+                    if (polyline != null) {
+                        polyline.remove();
                     }
-                }
-                if (currentRouteThread != null) {
-                    try {
-                        currentRouteThread.interrupt();
-                        currentRouteThread = null;
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                    if (markerSelected != null) {
+                        markerSelected.setIcon(markerPlaneDefault);
                     }
+                    if (bottomSheetBehavior != null) {
+                        if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+                            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                        } else if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
+                            bottomSheetBehavior.setPeekHeight(0, true);
+                        }
+                    }
+                    loadDefaultFields();
+                    if (currentThreadTrack != null) {
+                        try {
+                            currentThreadTrack.interrupt();
+                            currentThreadTrack = null;
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    if (currentRouteThread != null) {
+                        try {
+                            currentRouteThread.interrupt();
+                            currentRouteThread = null;
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    bottomSheetIsExpanded = false;
+                    flightRoute = null;
+                    flightTrack = null;
                 }
-                bottomSheetIsExpanded = false;
-                flightRoute = null;
-                flightTrack = null;
             }
         });
 
@@ -677,10 +697,14 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
                                 if (!isNetworkAvailable) {
                                     TextView errorMessage = dialog.findViewById(R.id.instruction);
-                                    errorMessage.setText(R.string.snackbar);
+                                    if(errorMessage != null) {
+                                        errorMessage.setText(R.string.snackbar);
+                                    }
                                 } else {
                                     TextView errorMessage = dialog.findViewById(R.id.instruction);
-                                    errorMessage.setText(R.string.connection_timed_out);
+                                    if(errorMessage != null) {
+                                        errorMessage.setText(R.string.connection_timed_out);
+                                    }
                                 }
 
                                 retry = dialog.findViewById(R.id.retry_rest);
