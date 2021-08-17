@@ -664,17 +664,17 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                             String responseData = response.body().string();
                             try {
                                 JSONObject jsonObject = new JSONObject(responseData);
-                                System.out.println(jsonObject);
+                                //System.out.println(jsonObject);
                                 JSONArray jsonArray = jsonObject.getJSONArray("states");
                                 int time = jsonObject.getInt("time");
-                                System.out.println("TIME === " + time);
+                                //System.out.println("TIME === " + time);
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     responseArray.add(jsonArray.getJSONArray(i));
                                 }
-                                System.out.println((jsonArray.get(0)).getClass());
-                                System.out.println("SV size after filling = " + responseArray.size());
-                                System.out.println(jsonArray.length());
-                                System.out.println("jsonARRAY CONTENT : " + jsonArray.getJSONArray(0));
+//                                System.out.println((jsonArray.get(0)).getClass());
+//                                System.out.println("SV size after filling = " + responseArray.size());
+//                                System.out.println(jsonArray.length());
+//                                System.out.println("jsonARRAY CONTENT : " + jsonArray.getJSONArray(0));
                             } catch (JSONException e) {
                                 System.out.println("JSONARRAY EXCEPTION: === " + e.getMessage());
                                 e.printStackTrace();
@@ -793,7 +793,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                 System.out.println(jsonObject);
                                 JSONArray jsonArray = jsonObject.getJSONArray("states");
                                 int time = jsonObject.getInt("time");
-                                System.out.println("TIME === " + time);
+                                //System.out.println("TIME === " + time);
 
                                 try {
                                     for (int i = 0; i < jsonArray.length(); i++) {
@@ -803,10 +803,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                     e.printStackTrace();
                                 }
 
-                                System.out.println((jsonArray.get(0)).getClass());
-                                System.out.println("SV size after filling = " + responseArray.size());
-                                System.out.println(jsonArray.length());
-                                System.out.println("jsonARRAY CONTENT : " + jsonArray.getJSONArray(0));
+//                                System.out.println((jsonArray.get(0)).getClass());
+//                                System.out.println("SV size after filling = " + responseArray.size());
+//                                System.out.println(jsonArray.length());
+//                                System.out.println("jsonARRAY CONTENT : " + jsonArray.getJSONArray(0));
                             } catch (JSONException e) {
                                 System.out.println("JSONARRAY EXCEPTION: === " + e.getMessage());
                                 e.printStackTrace();
@@ -984,6 +984,32 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         }
         progressBar.setVisibility(View.GONE);
         liveButton.setVisibility(View.VISIBLE);
+
+        if (polyline != null) {
+            polyline.remove();
+        }
+        if (markerSelected != null) {
+            markerSelected.setIcon(markerPlaneDefault);
+        }
+        if(bottomSheetBehavior != null) {
+            if(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            } else if(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
+                bottomSheetBehavior.setPeekHeight(0, true);
+            }
+        }
+        loadDefaultFields();
+        if(currentThreadTrack != null){
+            currentThreadTrack.interrupt();
+            currentThreadTrack = null;
+        }
+        if(currentRouteThread != null){
+            currentRouteThread.interrupt();
+            currentRouteThread = null;
+        }
+        bottomSheetIsExpanded = false;
+        flightRoute = null;
+        flightTrack = null;
     }
 
 
@@ -1116,12 +1142,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     }
 
     private void populateFieldsInFrench(String[] markerInfo, Marker marker) {
-        if (flightRoute[0].equalsIgnoreCase("N/A")) {
+        if (flightRoute[0] != null && flightRoute[0].equalsIgnoreCase("N/A")) {
             origin.setText(R.string.not_available);
         } else {
             origin.setText(flightRoute[0]);
         }
-        if (flightRoute[1].equalsIgnoreCase("N/A")) {
+        if (flightRoute[1] != null &&  flightRoute[1].equalsIgnoreCase("N/A")) {
             destination.setText(R.string.not_available);
         } else {
             destination.setText(flightRoute[1]);
