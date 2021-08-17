@@ -12,11 +12,14 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
@@ -143,8 +146,10 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         // This contains the MapView in XML and needs to be called after the access token is configured.
         if (enableDarkOnCreate.equals("No")) {
             setContentView(R.layout.activity_maps_light);
+            lightStatus();
         } else {
             setContentView(R.layout.activity_maps_dark);
+            darkStatus();
         }
 
         loadCitiesJSON();
@@ -1373,4 +1378,23 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
+
+    private void darkStatus() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#ff104652"));
+        }
+    }
+
+    private void lightStatus() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#ffaddbff"));
+        }
+    }
+
 }
