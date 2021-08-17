@@ -482,6 +482,24 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
+
+                boolean isNetworkAvailable = isNetworkAvailable();
+                if(!isNetworkAvailable) {
+                    mainLayout = findViewById(R.id.mainLayout);
+                    Snackbar snackbar = Snackbar
+                            .make(mainLayout, R.string.snackbar, Snackbar.LENGTH_LONG);
+                    if (enableDark.equals("No")) {
+                        snackbar.setBackgroundTint(Color.parseColor("#72A8E1"));
+                        snackbar.setTextColor(Color.BLACK);
+                    } else {
+                        snackbar.setBackgroundTint(Color.parseColor("#1b1f1f"));
+                        snackbar.setTextColor(Color.WHITE);
+                    }
+                    snackbar.show();
+                }
+
+
+
                 if (markerSelected != null) {
                     markerSelected.setIcon(markerPlaneDefault);
                 }
