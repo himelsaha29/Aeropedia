@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="8dp"
             app:cardElevation="0dp"
             style="@style/Widget.Neumorph.CardView"
             app:neumorph_backgroundColor="#f2f4f6"
@@ -101,8 +100,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a220"
@@ -127,8 +125,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a300"
@@ -161,8 +158,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a310"
@@ -187,8 +183,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a318"
@@ -221,8 +216,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a319"
@@ -247,8 +241,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a320"
@@ -281,8 +274,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a321"
@@ -307,8 +299,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a319neo"
@@ -342,8 +333,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a320neo"
@@ -368,8 +358,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a321neo"
@@ -403,8 +392,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a330"
@@ -429,8 +417,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a330neo"
@@ -463,8 +450,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a340"
@@ -489,8 +475,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a350"
@@ -523,8 +508,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/a380"
@@ -549,8 +533,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/beluga"
@@ -583,8 +566,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/an_22"
@@ -609,8 +591,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/an_72"
@@ -643,8 +624,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/an_124"
@@ -669,8 +649,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/an_225"
@@ -703,8 +682,32 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
+
+                            <soup.neumorphism.NeumorphButton
+                                android:id="@+id/b727"
+                                style="@style/Widget.Neumorph.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/maven_pro_medium"
+                                android:padding="5dp"
+                                android:text="Boeing 727"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                app:neumorph_backgroundColor="#f2f4f6"
+                                app:neumorph_shadowColorDark="#eaeaea"
+                                app:neumorph_shadowColorLight="#fdfdfd"
+                                app:neumorph_strokeColor="#f2f4f6"
+                                app:neumorph_strokeWidth="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/b737"
@@ -725,12 +728,19 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/b747"
@@ -751,20 +761,11 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/b757"
@@ -785,12 +786,19 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/b767"
@@ -811,20 +819,11 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/b777"
@@ -845,12 +844,19 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/b787"
@@ -871,20 +877,11 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/bombardier_challenger_650"
@@ -905,12 +902,19 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/bombardier_crj_100_200"
@@ -931,20 +935,11 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/bombardier_learjet_75"
@@ -965,12 +960,19 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/bombardier_global_7500"
@@ -991,20 +993,11 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/embraer_erj"
@@ -1025,12 +1018,19 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/embraer_e_jet_e2_family"
@@ -1051,20 +1051,11 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/embraer_lineage"
@@ -1085,12 +1076,19 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/embraer_phenom"
@@ -1111,20 +1109,11 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/cessna_skylane"
@@ -1145,12 +1134,19 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/cessna_caravan"
@@ -1171,20 +1167,11 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/cessna_latitude"
@@ -1205,12 +1192,19 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/cessna_longitude"
@@ -1231,20 +1225,11 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/gulfstream_g650"
@@ -1265,12 +1250,20 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/gulfstream_g280"
@@ -1291,52 +1284,11 @@
                                 app:neumorph_strokeWidth="5dp" />
                         </LinearLayout>
 
-                    </LinearLayout>
-
-
-
-
-
-
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
-
-                            <soup.neumorphism.NeumorphButton
-                                android:id="@+id/citation"
-                                style="@style/Widget.Neumorph.Button"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/maven_pro_medium"
-                                android:padding="5dp"
-                                android:text="Cessna Citation"
-                                android:textAllCaps="false"
-                                android:textColor="@color/black"
-                                android:textSize="15sp"
-                                app:neumorph_backgroundColor="#f2f4f6"
-                                app:neumorph_shadowColorDark="#eaeaea"
-                                app:neumorph_shadowColorLight="#fdfdfd"
-                                app:neumorph_strokeColor="#f2f4f6"
-                                app:neumorph_strokeWidth="5dp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="fill_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 android:id="@+id/havilland"
@@ -1370,8 +1322,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 style="@style/Widget.Neumorph.Button"
@@ -1391,8 +1342,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 style="@style/Widget.Neumorph.Button"
@@ -1420,8 +1370,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 style="@style/Widget.Neumorph.Button"
@@ -1441,8 +1390,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 style="@style/Widget.Neumorph.Button"
@@ -1471,8 +1419,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 style="@style/Widget.Neumorph.Button"
@@ -1492,8 +1439,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 style="@style/Widget.Neumorph.Button"
@@ -1522,8 +1468,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 style="@style/Widget.Neumorph.Button"
@@ -1543,8 +1488,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 style="@style/Widget.Neumorph.Button"
@@ -1573,8 +1517,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 style="@style/Widget.Neumorph.Button"
@@ -1594,8 +1537,7 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:padding="10dip">
+                            android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
                                 style="@style/Widget.Neumorph.Button"
