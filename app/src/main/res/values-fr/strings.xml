@@ -1727,13 +1727,13 @@
         du Challenger.\n\nDiverses avioniques sont présentes sur le Challenger. En standard, le CL-600 est équipé d\'un système de contrôle de vol automatique Sperry
         SPZ-600 à double canal, incorporant un directeur de vol et des ordinateurs de données aérodynamiques; plus typique des avions commerciaux plus gros, ce système est
         certifiable pour effectuer des atterrissages automatiques de catégorie 3A. Le système de commandes de vol présente une redondance importante, y compris trois
-        systèmes hydrauliques individuels; même en cas de panne complète et de perte d'un actionneur, un niveau viable de contrôle assisté sur les principales surfaces
+        systèmes hydrauliques individuels; même en cas de panne complète et de perte d\'un actionneur, un niveau viable de contrôle assisté sur les principales surfaces
         de vol reste présent. Le radar météorologique et les écrans d\'instruments à semi-conducteurs construits par Marconi sont fournis en standard, ainsi qu\'un
         ensemble radio construit par Collins; des équipements radio longue portée en option, tels qu\'un poste radio HF et des aides à la navigation VHF, peuvent être
         installés. Dans une configuration d\'avion d\'affaires standard, la cabine est divisée entre la cuisine avant et deux sections de sièges, qui sont généralement
         équipées d\'une section club à quatre chaises suivie d\'une zone de regroupement de conférence ou de divans, ainsi que de toilettes à l\'arrière . Les chaises
         sont entièrement inclinables et peuvent pivoter, tandis que les divans peuvent servir de couchage. Les premiers exemples présentent des produits de luxe tels que
-        des téléphones, des commandes d'éclairage et des systèmes stéréo; des tables escamotables fixées aux parois de la cabine ont également été installées, ainsi qu\'une
+        des téléphones, des commandes d\'éclairage et des systèmes stéréo; des tables escamotables fixées aux parois de la cabine ont également été installées, ainsi qu\'une
         paire d\'armoires, une à l\'avant et une à l\'arrière, pour ranger les bagages à main et autres petits objets.\n</string>
 
     <string name="challenger650_desc3">\nLe Challenger 650 se décline en une seule variante, le CL-650.\n</string>
