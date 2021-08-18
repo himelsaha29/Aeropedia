@@ -598,7 +598,7 @@
                                     android:adjustViewBounds="true"
                                     android:fontFamily="@font/maven_pro_medium"
                                     android:gravity="center"
-                                    android:text="@string/fuselage"
+                                    android:text="@string/cabin"
                                     android:textColor="@color/black"
                                     android:textSize="17sp" />
 
