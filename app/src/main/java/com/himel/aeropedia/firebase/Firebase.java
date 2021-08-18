@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -45,13 +46,11 @@ public class Firebase extends AppCompatActivity {
     private Map<String, Integer> map;
     private List<String> selected = new ArrayList<>();
     private DecimalFormat df = new DecimalFormat("###.##");
-    private Set<String> chosenAircrafts = new HashSet<String>();;
+    private Set<String> chosenAircrafts = new HashSet<String>();
     private Animation translate = null;
     private NeumorphCardView textCard;
-    private NeumorphCardView textViewCard;
     private ConstraintLayout layout;
     private ScrollView scroll;
-    private LinearLayout mainScroll;
     private int totalAircraft = 0;
 
     private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
@@ -897,11 +896,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a220status);
                 status.setText("Airbus A220\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A220")) {
@@ -913,11 +912,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a300status);
                 status.setText("Airbus A300\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A300")) {
@@ -929,11 +928,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a310status);
                 status.setText("Airbus A310\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A310")) {
@@ -945,11 +944,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a318status);
                 status.setText("Airbus A318\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A318")) {
@@ -961,11 +960,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a319status);
                 status.setText("Airbus A319\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A319")) {
@@ -977,11 +976,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a320status);
                 status.setText("Airbus A320\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A320")) {
@@ -993,11 +992,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a321status);
                 status.setText("Airbus A321\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A321")) {
@@ -1009,11 +1008,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a319neostatus);
                 status.setText("Airbus A319neo\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A319neo")) {
@@ -1025,11 +1024,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a320neostatus);
                 status.setText("Airbus A320neo\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A320neo")) {
@@ -1041,11 +1040,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a321neostatus);
                 status.setText("Airbus A321neo\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A321neo")) {
@@ -1057,11 +1056,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a330status);
                 status.setText("Airbus A330\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A330")) {
@@ -1073,11 +1072,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a330neostatus);
                 status.setText("Airbus A330neo\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A330neo")) {
@@ -1089,11 +1088,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a340status);
                 status.setText("Airbus A340\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A340")) {
@@ -1105,11 +1104,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a350status);
                 status.setText("Airbus A350\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A350")) {
@@ -1121,11 +1120,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.a380status);
                 status.setText("Airbus A380\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus A380")) {
@@ -1137,11 +1136,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.belugastatus);
                 status.setText("Airbus Beluga\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Airbus Beluga")) {
@@ -1153,11 +1152,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.an22status);
                 status.setText("Antonov An-22\nAntei\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Antonov An-22")) {
@@ -1169,11 +1168,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.an72status);
                 status.setText("Antonov An-72\nCheburashka\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Antonov An-72")) {
@@ -1185,11 +1184,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.an124status);
                 status.setText("Antonov An-124\nRuslan\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Antonov An-124")) {
@@ -1201,11 +1200,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.an225status);
                 status.setText("Antonov An-225\nMriya\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Antonov An-225")) {
@@ -1217,11 +1216,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.b737status);
                 status.setText("Boeing 737\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Boeing 737")) {
@@ -1233,11 +1232,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.b747status);
                 status.setText("Boeing 747\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Boeing 747")) {
@@ -1249,11 +1248,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.b757status);
                 status.setText("Boeing 757\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Boeing 757")) {
@@ -1265,11 +1264,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.b767status);
                 status.setText("Boeing 767\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Boeing 767")) {
@@ -1281,11 +1280,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.b777status);
                 status.setText("Boeing 777\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Boeing 777")) {
@@ -1297,11 +1296,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.b787status);
                 status.setText("Boeing 787\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Boeing 787")) {
@@ -1313,11 +1312,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.bombardier_challenger_650_status);
                 status.setText("Bombardier\nChallenger 650\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Bombardier\nChallenger 650")) {
@@ -1329,11 +1328,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.bombardier_crj_status);
                 status.setText("Bombardier\nCRJ 100/200\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Bombardier\nCRJ 100/200")) {
@@ -1345,11 +1344,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.bombardier_learjet_75_status);
                 status.setText("Bombardier\nLearjet 75\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Bombardier\nLearjet 75")) {
@@ -1361,11 +1360,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.bombardier_global_7500_status);
                 status.setText("Bombardier\nGlobal 7500\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Bombardier\nGlobal 7500")) {
@@ -1377,11 +1376,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.embraer_erj_status);
                 status.setText("Embraer ERJ\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Embraer ERJ")) {
@@ -1393,11 +1392,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.embraer_e_jet_e2_status);
                 status.setText("Embraer E-Jet\nE2\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Embraer E-Jet\nE2")) {
@@ -1409,11 +1408,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.embraer_lineage_status);
                 status.setText("Embraer Lineage\n1000\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Embraer Lineage\n1000")) {
@@ -1425,11 +1424,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.embraer_phenom_status);
                 status.setText("Embraer Phenom\n300\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Embraer Phenom\n300")) {
@@ -1441,11 +1440,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.cessna_skylane_status);
                 status.setText("Cessna 182\nSkylane\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Cessna 182\nSkylane")) {
@@ -1457,11 +1456,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.cessna_caravan_status);
                 status.setText("Cessna 208\nCaravan\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Cessna 208\nCaravan")) {
@@ -1473,11 +1472,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.cessna_latitude_status);
                 status.setText("Cessna Latitude\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Cessna Latitude")) {
@@ -1489,11 +1488,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.cessna_longitude_status);
                 status.setText("Cessna Longitude\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Cessna Longitude")) {
@@ -1505,11 +1504,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.gulfstream_g650_status);
                 status.setText("Gulfstream G650\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Gulfstream G650")) {
@@ -1521,11 +1520,11 @@ public class Firebase extends AppCompatActivity {
                 TextView status = findViewById(R.id.gulfstream_g280_status);
                 status.setText("Gulfstream G280\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
                 ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
-                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 if(size <= 0 || size <= 100) {
                     layoutParams.height = 100;
                 } else {
-                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.65 * height);
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Gulfstream G280")) {
@@ -1533,13 +1532,8 @@ public class Firebase extends AppCompatActivity {
                 }
             }
 
-
-
-
-//                                    System.out.println(s + " : " + map.get(s));
-            System.out.println("CHILD COUNT : " + highestValue);
-
         }
+
     }
 
 }

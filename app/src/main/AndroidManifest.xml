@@ -18,7 +18,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".gulfstream.GulfstreamIV"></activity>
+        <activity android:name=".home.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".gulfstream.GulfstreamIV" />
         <activity android:name=".gulfstream.G280" />
         <activity android:name=".manufacturers.Gulfstream" />
         <activity android:name=".gulfstream.G650" />
@@ -81,11 +88,7 @@
         <activity android:name=".airbus.AirbusA350" />
         <activity android:name=".manufacturers.Airbus" />
         <activity android:name=".home.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".alexa.LoginActivity">
             <intent-filter>
@@ -120,14 +123,12 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/notification_icon" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/notification" />
-
     </application>
 
 </manifest>
