@@ -35,4 +35,11 @@
         <item name="neumorph_cornerSizeBottomRight">156dp</item>
     </style>
 
+    <style name="SplashScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
 </resources>

@@ -11,9 +11,9 @@
        <KeyFrameSet>
            <KeyAttribute
                motion:motionTarget="@id/imageView"
-               motion:framePosition="50"
-               android:scaleX="1.12"
-               android:scaleY="1.12" />
+               motion:framePosition="65"
+               android:scaleX="1.04"
+               android:scaleY="1.04" />
        </KeyFrameSet>
     </Transition>
 
