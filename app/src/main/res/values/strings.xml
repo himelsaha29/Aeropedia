@@ -1700,7 +1700,7 @@
         assessing the handling and flying qualities of the aircraft, its maiden flight was performed on November 4, 2016, climbing to 6,096 m and reaching 240 knots
         during the 2 h 27 min flight. The production wing was in final design in February 2017. FTV2 flew on March 6, 2017, \"The Powerhouse\" is designed to test
         aircraft systems, including propulsion, electrical and mechanical systems. FTV1 is used to open the performance envelope and reached Mach 0.995 on March
-        29, 2017. FTV3 flew on May 10, 2017, "The Navigator" will be used to test the avionics and electrical system performance. By the end of May 2017, the three
+        29, 2017. FTV3 flew on May 10, 2017, \"The Navigator\" will be used to test the avionics and electrical system performance. By the end of May 2017, the three
         prototypes flew a combined 250 hours. The fourth prototype, used for cabin interior validation, is called \"The Architect\" and the fifth and final, for the
         entry-into-service, is called \"The Masterpiece\". The fifth has a slightly lighter production wing supplied by the Triumph Group, after a dispute over the
         wing weight was resolved.\n\nBy mid-July 2017, the three flight-test aircraft had accumulated 500 hours. On 15 August 2017, after \"high vibration and high
@@ -1737,7 +1737,7 @@
     <string name="global7500_specs_constraint">()\n</string>
 
 
-    <string name="global7500_identify">How to identify Global 7500</string>
+    <string name="global7500_identify">How to identify Global 7500?</string>
     <string name="global7500_identify_ans"></string>
 
     <string name="global7500_cockpit_value">2</string>
