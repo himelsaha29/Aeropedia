@@ -4,5 +4,7 @@
         android:drawable="@drawable/splash_background"/>
     <item
         android:drawable="@drawable/main_logo_foreground"
-        android:gravity="center" />
+        android:gravity="center"
+        android:height="320dp"
+        android:width="320dp"/>
 </layer-list>

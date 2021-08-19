@@ -1904,72 +1904,77 @@
 
 
     <!--ERJ FAMILY-->
-    <string name="erj_family_type_value">Regional jet</string>
+    <string name="erj_family_type_value">Avion régional</string>
     <string name="erj_family_engine_value">Rolls-Royce AE 3007-A1/3 /\nAE 3007-A1E (2)</string>
-    <string name="erj_family_first_flight_value">11 August 1995</string>
-    <string name="erj_family_intro_value">6 April 1997</string>
+    <string name="erj_family_first_flight_value">11 août 1995</string>
+    <string name="erj_family_intro_value">6 avril 1997</string>
     <string name="erj_family_customer_value">Envoy Air</string>
     <string name="erj_family_variants_value">22</string>
 
-    <string name="erj_family_desc1" formatted="false">The Embraer ERJ family (for Embraer Regional Jet, model names EMB-135, EMB-140 and EMB-145) are regional jets
-        produced by Brazilian aerospace company Embraer. The 45–48 seat EMB145 was launched in 1989 as a turbofan-powered stretch of the EMB 120 Brasilia turboprop.
-        It first flew on August 11, 1995 and it received its type certificate on December 10, 1996. The ERJ145 was introduced on April 6, 1997 and the shortened
-        ERJ135 and ERJ140 were introduced in 1999. Keeping the three-abreast seating of the Brasilia, the twinjet has a new swept wing and is powered by two
-        rear-fuselage-mounted AE3007 turbofans for a range up to 2,000 nmi (3,700 km). The series includes the ERJ135 (37 passengers), ERJ140 (44 passengers), and
-        ERJ145 (50 passengers), as well as the Legacy 600 business jet and the R-99 family of military aircraft. The family\'s primary competition comes from the
-        Bombardier CRJ regional jets. Production ended in 2020 after 1,231 were built.\n\nThe ERJ145 was designed for a perceived new market for regional jet aircraft,
-        where the increased speed, comfort and passenger appeal would outweigh the inherent fuel economy of the turboprop aircraft which were in service and
-        in development. The 45–48 seat EMB145 was launched at the Paris Air Show in 1989 as an 5.5 m stretch of the EMB 120 Brasilia developed for $150M plus $50M for
-        training and marketing, one third the cost of the cancelled Short Brothers FJX project. Its $11M unit cost would have been $3M less than the Canadair CRJ. The
-        400 kn (740 km/h) jet would be powered by GE/Garrett CFE738s, Lycoming ALF 502s or Rolls-Royce plc/Allison Engine AB580s turbofans, to be selected in the summer
-        of 1989.\n\nIt was targeted for a late 1992 introduction with six produced then ramping to 60 per year in 1995. It aimed for half of a market for 1000 with
-        break-even after twelve years with 400 sold. Keeping 75% of the Brasilia parts and systems, the EMB145 Amazon aimed for a 1991 first flight. The stretch resulted
-        from two 3.4 m plugs of the 2.29 m diameter fuselage in the front and behind the redesigned 538 sq ft (50.0 m<sup><small><small>2</small></small></sup>) wing. Its supercritical airfoil with a 14% root
-        thickness had its chord extended at the leading edge with a slight sweepback, increased aspect ratio and winglets. The overwing podded engines generated
-        28 kN of thrust. Designed for 500–600 nmi stages, up to 1,400 nmi with a reduced payload, it had a 16,500 kg maximum takeoff weight (MTOW) and a 9,546 kg
-        operating empty weight.\n</string>
+    <string name="erj_family_desc1" formatted="false">La famille Embraer ERJ (pour Embraer Regional Jet, noms de modèles EMB-135, EMB-140 et EMB-145) sont des jets
+        régionaux produit par la société aérospatiale brésilienne Embraer. L\'EMB145 de 45 à 48 places a été lancé en 1989 en tant que tronçon propulsé par un turboréacteur
+        du turbopropulseur EMB 120 Brasilia. Il effectua son premier vol le 11 août 1995 et reçut son certificat de type le 10 décembre 1996. L\'ERJ145 fut introduit le 6
+        avril 1997 et le raccourci ERJ135 et ERJ140 ont été introduits en 1999. Conservant les trois sièges de front du Brasilia, le biréacteur a une nouvelle aile en
+        flèche et est propulsé par deux turboréacteurs AE3007 montés à l\'arrière du fuselage pour une autonomie allant jusqu\'à 2 000 nmi (3 700 km). La série comprend les
+        ERJ135 (37 passagers), ERJ140 (44 passagers) et ERJ145 (50 passagers), ainsi que le jet d\'affaires Legacy 600 et la famille d\'avions militaires R-99. Le principal
+        concurrent de la famille vient de la Jets régionaux Bombardier CRJ. La production s\'est terminée en 2020 après la construction de 1 231.\n\nL\'ERJ145 a été conçu
+        pour un nouveau marché perçu pour les avions à réaction régionaux, où la vitesse accrue, le confort et l\'attrait pour les passagers l\'emporteraient sur
+        l\'économie de carburant inhérente aux avions à turbopropulseurs en service et en développement. L\'EMB145 de 45 à 48 places a été lancé au salon du Bourget en
+        1989 en tant que tronçon de 5,5 m de l\'EMB 120 Brasilia développé pour 150 millions de dollars plus 50 millions de dollars pour la formation et le marketing, un
+        tiers du coût du projet annulé Short Brothers FJX. Son coût unitaire de 11 M$ aurait été inférieur de 3 M$ à celui du Canadair CRJ. Le jet de 400 kn (740 km/h)
+        serait propulsé par des turboréacteurs à double flux GE/Garrett CFE738, Lycoming ALF 502 ou Rolls-Royce plc/Allison Engine AB580, qui seront sélectionnés à l\'été
+        1989.\n\nIl visait une introduction fin 1992 avec six produits, puis une montée en puissance à 60 par an en 1995. Il visait la moitié d\'un marché pour 1000 avec
+        un seuil de rentabilité après douze ans avec 400 vendus. Conservant 75% des pièces et systèmes de Brasilia, l\'EMB145 Amazon visait un premier vol en 1991.
+        L\'étirement a résulté à partir de deux prises de 3,4 m du fuselage de 2,29 m de diamètre à l\'avant et à l\'arrière de l\'aile redessinée de 538 pieds carrés
+        (50,0 m<sup><small><small>2</small></small></sup>). Son profil aérodynamique supercritique avec une épaisseur d\'emplanture de 14% avait sa corde étendue au bord
+        d\'attaque avec un léger balayage, un allongement et des winglets accrus. Les moteurs à nacelle au-dessus des ailes ont généré 28 kN de poussée. Conçu pour des
+        étapes de 500 à 600 nmi, jusqu\'à 1 400 nmi avec une charge utile réduite, il avait une masse maximale au décollage (MTOW) de 16500 kg et une masse à vide de
+        9546 kg.\n</string>
 
-    <string name="erj_family_desc2" formatted="false">In March 1991, a revised configuration started wind tunnel testing: the quarter chord wing sweep increased to 22.3° with underslung
-        engines for lower aerodynamic drag. This reduced the span by almost 2 to 20.5 m, reducing its aspect ratio from 9.3 to 8.4 and wing area from 50 to
-        47 m<sup><small><small>2</small></small></sup>. The semi-monocoque wing has two main and one auxiliary spar and holds 4,500 kg of fuel, it has double-slotted
-        fowler flaps and spoilers. To accommodate the underwing engines, the landing gear is longer, allowing using jetways, and the fuselage was lengthened from 25.8 to
-        26 m. In June 1991, the Brazilian Government loaned $600 million to Embraer and in July the programme was re-evaluated while tooling was 80% complete. By
-        November 1991, Embraer was still looking for partners to share the risk of the $350 million project, hoping to obtain Government approval by the end of the
-        year. Sold at $12 million with an all-digital cockpit and 31.8 kN engines, it had letters of intent for 337 units. First flight slipped to 1992 and
-        certification for late 1993.\n\nEmbraer has introduced two shortened versions of the ERJ145. All three aircraft share the same crew type rating,
-        allowing pilots to fly any of the three aircraft without the need for further training. The ERJ140 is 1.42 metres shorter, seating 44 passengers, and has 96%
-        parts commonality with the ERJ145. The only significant changes are a shorter fuselage, a slightly derated engine and an increased range. The ERJ140 was designed
-        with fewer seats in order to meet the needs of some major United States airlines, which have an agreement with the pilots\' union to limit the number of 50-seat
-        aircraft that can be flown by their affiliates. At launch, Embraer estimated the cost of an ERJ140 to be approximately US $15.2 million. The estimated cost of
-        development of the ERJ140 was US $45 million. The ERJ135 is 3.54 metres shorter, seating 37 passengers, and has 95% parts commonality with the ERJ145. The
-        first ERJ135 entered service in 1999.\n\nThe airframe is mainly stretched, machined and chemically milled aluminium, with CFRP for moving parts, GFRP for
-        fairings and sidewalls, kevlar for leading edges and Nomex honeycomb-CFRP/GFRP sandwiches for floors. The EMB145 family of aircraft generally comes equipped
-        with two Rolls-Royce AE 3007 series turbofan engines. The engines have a bypass ratio of 5:1. The engines are controlled by two FADECs (Full Authority Digital
-        Engine Controls). The FADECs control virtually all aspects of the engine and send engine data to be displayed on the EICAS for the pilot. The Embraer ERJ145
-        family of aircraft typically comes equipped with the Honeywell Primus 1000 avionics suite. The suite normally consists of five CRT display units (DUs) or screens.
-        From left to right, the system consists of a Primary Flight Display (PFD), Multi-Function Display (MFD), Engine Indication and Crew Alerting System (EICAS),
-        Multi-Function Display (MFD) (Co-pilot) and Primary Flight Display (PFD) (Co-pilot). The DUs are normally CRTs but can be upgraded to lighter LCD displays. These
-        upgraded DUs also have added functionality.\n</string>
+    <string name="erj_family_desc2" formatted="false">En mars 1991, une configuration révisée a commencé les essais en soufflerie : le balayage de l\'aile au quart de
+        corde est passé à 22,3° avec moteurs pour réduire la traînée aérodynamique. Cela a réduit l\'envergure de près de 2 à 20,5 m, réduisant son allongement de 9,3 à
+        8,4 et la surface de l\'aile de 50 à 47 m<sup><small><small>2</small></small></sup>. L\'aile semi-monocoque a deux longerons principaux et un auxiliaire et
+        contient 4500 kg de carburant, elle a des volets d\'aviateur à double fente et des spoilers. Pour loger les moteurs sous les ailes, le train d\'atterrissage est
+        plus long, permettant l\'utilisation de passerelles, et le fuselage a été rallongé de 25,8 à 26 m. En juin 1991, le gouvernement brésilien a prêté 600 millions de
+        dollars à Embraer et en juillet, le programme a été réévalué alors que l\'outillage était terminé à 80%. En novembre 1991, Embraer cherchait toujours des
+        partenaires pour partager les risques du projet de 350 millions de dollars, espérant obtenir l\'approbation du gouvernement d\'ici la fin de l\'année. Vendu 12
+        millions de dollars avec un cockpit entièrement numérique et des moteurs de 31,8 kN, il avait des lettres d'intention pour 337 unités. Le premier vol a glissé à
+        1992 et la certification à la fin de 1993.\n\nEmbraer a introduit deux versions raccourcies de l\'ERJ145. Les trois avions partagent la même qualification de type
+        d\'équipage, ce qui permet aux pilotes de piloter n\'importe lequel des trois avions sans avoir besoin de formation supplémentaire. L\'ERJ140 mesure 1,42 mètre de
+        moins, peut accueillir 44 passagers et présente 96% de points communs avec l\'ERJ145. Les seuls changements significatifs sont un fuselage plus court, un moteur
+        légèrement déclassé et une autonomie accrue. L\'ERJ140 a été conçu avec moins de sièges afin de répondre aux besoins de certaines grandes compagnies aériennes
+        américaines, qui ont un accord avec le syndicat des pilotes pour limiter le nombre d\'avions de 50 places pouvant être pilotés par leurs affiliés. Au lancement,
+        Embraer a estimé le coût d\'un ERJ140 à environ 15,2 millions de dollars US. Le coût estimé du développement de l\'ERJ140 était de 45 millions de dollars US.
+        L\'ERJ135 est plus court de 3,54 mètres, peut accueillir 37 passagers et présente 95% de points communs avec l\'ERJ145. Le premier ERJ135 est entré en service en
+        1999.\n\nLa cellule est principalement en aluminium étiré, usiné et fraisé chimiquement, avec CFRP pour les pièces mobiles, GFRP pour carénages et parois latérales,
+        kevlar pour les bords d\'attaque et sandwichs Nomex nid d\'abeille-CFRP/GFRP pour les sols. La famille d\'avions EMB145 est généralement équipée de deux
+        turboréacteurs à double flux Rolls-Royce AE 3007. Les moteurs ont un taux de dilution de 5:1. Les moteurs sont contrôlés par deux FADEC (Full Authority Digital
+        Engine Controls, en anglais). Les FADEC contrôlent pratiquement tous les aspects du moteur et envoient les données du moteur à afficher sur l\'EICAS pour le
+        pilote. L\'Embraer ERJ145 famille d\'avions est généralement équipée de la suite avionique Honeywell Primus 1000. La suite se compose normalement de cinq unités
+        d\'affichage CRT (DU) ou écrans. De gauche à droite, le système se compose d\'un affichage de vol principal (PFD), d\'un affichage multifonction (MFD), d\'un
+        système d\'indication du moteur et d\'alerte d\'équipage (EICAS), Affichage multifonction (MFD) (copilote) et affichage de vol principal (PFD) (copilote). Les DU
+        sont normalement des tubes cathodiques mais peuvent être mis à niveau vers des écrans LCD plus légers. Ces les DU mis à niveau ont également des fonctionnalités
+        supplémentaires.\n</string>
 
-    <string name="erj_family_desc3">\nERJ Family variants include ERJ135ER, ERJ135LR, ERJ135KL, ERJ140ER, ERJ140LR, ERJ145STD, ERJ145EU, ERJ145ER, ERJ145EP, ERJ145LR, ERJ145LU, ERJ145MK,
-        ERJ145XR, Legacy 600 (EMB135BJ), Legacy 650 (EMB145BJ), Harbin Embraer ERJ145, C-99A, EMB 145SA (R-99A), EMB 145RS (R-99B), EMB 145MP/ASW (P-99), EMB 145H (Hellenic Air Force),
-        EMB 145I (Indian Air Force).\n</string>
+    <string name="erj_family_desc3">\nLes variantes de la famille ERJ incluent ERJ135ER, ERJ135LR, ERJ135KL, ERJ140ER, ERJ140LR, ERJ145STD, ERJ145EU, ERJ145ER, ERJ145EP,
+        ERJ145LR, ERJ145LU, ERJ145MK, ERJ145XR, Legacy 600 (EMB135BJ), Legacy 650 (EMB145BJ), Harbin Embraer ERJ145, C-99A, EMB 145SA (R-99A), EMB 145RS (R-99B),
+        EMB 145MP/ASW (P-99), EMB 145H (Force aérienne hellénique), EMB 145I (Force aérienne indienne).\n</string>
 
-    <string name="erj_family_specs_constraint">(ERJ135LR, ERJ140LR, ERJ145XR compared in order)\n</string>
+    <string name="erj_family_specs_constraint">(comparaison ordonnée des variantes ERJ135LR, ERJ140LR, ERJ145XR)\n</string>
 
 
-    <string name="erj_family_identify">How to identify ERJ Family aircraft?</string>
+    <string name="erj_family_identify">Comment identifier les avions de la famille ERJ?</string>
     <string name="erj_family_identify_ans"></string>
 
     <string name="erj_family_cockpit_value">2</string>
-    <string name="erj_family_wingspan_value">20.04 m</string>
-    <string name="erj_family_length_value">26.33 / 28.45 / 29.87 m</string>
-    <string name="erj_family_height_value">6.76 m</string>
-    <string name="erj_family_fuselage_value">~2.29 m (W) / ~2.32 m (H)</string>
-    <string name="erj_family_mtow_value">20 / 21.1 / 24.1 t</string>
+    <string name="erj_family_wingspan_value">20,04 m</string>
+    <string name="erj_family_length_value">26,33 / 28,45 / 29,87 m</string>
+    <string name="erj_family_height_value">6,76 m</string>
+    <string name="erj_family_fuselage_value">~2,29 m (L) / ~2,32 m (H)</string>
+    <string name="erj_family_mtow_value">20 / 21,1 / 24,1 t</string>
     <string name="erj_family_cruise_speed_value">833 km/h (max.),\n854 km/h (max.) (145XR)</string>
-    <string name="erj_family_range_value">1,750 / 1,650 / 2,000 nmi</string>
-    <string name="erj_family_thrust_value">33.71 kN / 39.67 kN (145XR)</string>
+    <string name="erj_family_range_value">1750 / 1650 / 2000 nmi</string>
+    <string name="erj_family_thrust_value">33,71 kN / 39,67 kN (145XR)</string>
     <!--ERJ FAMILY-->
 
 
