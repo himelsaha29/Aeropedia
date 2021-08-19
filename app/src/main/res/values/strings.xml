@@ -1753,7 +1753,7 @@
 
 
     <!--CRJ 100/200-->
-    <string name="crj_100_200_type_value"> Regional/Business jet</string>
+    <string name="crj_100_200_type_value">Regional/Business jet</string>
     <string name="crj_100_200_engine_value">General Electric\nCF34-3A1/3B1 (2)</string>
     <string name="crj_100_200_first_flight_value">10 May 1991</string>
     <string name="crj_100_200_intro_value">19 October 1992\nwith Lufthansa CityLine</string>
@@ -1774,7 +1774,7 @@
         program being terminated during the following year. Despite the cancellation of the 610E, neither the concept or general interest in the development of an
         enlarged derivative had disappeared. During 1987, the year following Canadair\'s sale to Bombardier, design studies commenced into options for producing a
         substantially more ambitious stretched configuration of the Challenger. In July 1988, Canadair targeted a $13-14 million unit price, for a demand of over 1,000
-        by 1999. The 48-seat jet would be stretched over the Challenger by a 128 in (3.3 m) forward plug and a 112 in (2.8 m) aft plug. Over 300 mi (480 km) routes, the
+        by 1999. The 48-seat jet would be stretched over the Challenger by a 3.3 m forward plug and a 2.8 m aft plug. Over 300 mi (480 km) routes, the
         faster climb and cruise gave it a one third time advantage to 50 min compared to similarly sized turboprops. The higher cost per seat of the RJ, of $270,000 each
         compared to $186,600, would be balanced by its higher productivity.\n</string>
 
@@ -1816,10 +1816,10 @@
     <string name="crj_100_200_wingspan_value">21.21 m </string>
     <string name="crj_100_200_length_value">26.77 m</string>
     <string name="crj_100_200_height_value">6.22 m</string>
-    <string name="crj_100_200_fuselage_value">2.69 m  (W) / ~2.69 m (H)</string>
+    <string name="crj_100_200_fuselage_value">2.69 m (W) / ~2.69 m (H)</string>
     <string name="crj_100_200_mtow_value">24.04 t (LR)</string>
     <string name="crj_100_200_cruise_speed_value">785 km/h (typical),\n860 km/h (max.)</string>
-    <string name="crj_100_200_range_value">1,650 (LR) /\n1,700 nmi (LR)</string>
+    <string name="crj_100_200_range_value">1,650 (100LR) /\n1,700 nmi (200LR)</string>
     <string name="crj_100_200_thrust_value">38.84 kN</string>
     <!--CRJ 100/200 -->
 

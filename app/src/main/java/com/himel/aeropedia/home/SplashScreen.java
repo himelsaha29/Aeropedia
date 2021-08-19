@@ -32,6 +32,6 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(new Intent(SplashScreen.this, MainActivity.class));
                 overridePendingTransition(R.anim.zoom_in, R.anim.zoom_in);
                 finish();
-            }}, 1500);
+            }}, 900);
     }
 }
