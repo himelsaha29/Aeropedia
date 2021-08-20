@@ -2059,45 +2059,46 @@
 
 
     <!--LINEAGE 1000-->
-    <string name="lineage_1000_type_value">Business jet</string>
+    <string name="lineage_1000_type_value">Jet d\'affaires</string>
     <string name="lineage_1000_engine_value">General Electric\nCF34-10E (2)</string>
-    <string name="lineage_1000_first_flight_value">26 October 2007</string>
-    <string name="lineage_1000_intro_value">7 May 2009 with HE Aamer\nAbdul Jalil Al Fahim</string>
+    <string name="lineage_1000_first_flight_value">26 octobre 2007</string>
+    <string name="lineage_1000_intro_value">7 mai 2009 avec HE Aamer\nAbdul Jalil Al Fahim</string>
     <string name="lineage_1000_customer_value">AirX Charter</string>
     <string name="lineage_1000_variants_value">2</string>
 
-    <string name="lineage_1000_desc1" formatted="false">The Embraer Lineage 1000 is a variant of the Embraer 190 regional jet airliner, launched as a private jet on May
-        2, 2006. Manufactured by the Brazilian aerospace firm Embraer, the Lineage is advertised as an \"ultra-large\" business jet with comfortable seating
-        for 19. The Lineage 1000 received its certification from Brazil\'s ANAC and from EASA in December 2008. It was certified by the USA Federal Aviation
-        Administration on 7 January 2009. The first Lineage 1000 was delivered to Aamer Abdul Jalil Al Fahim on May 7, 2009. As of 31 December 2018, only 28 Lineage
-        1000s have been built.\n\nIn October 2013, Embraer introduced the Lineage 1000E, which delivers greater range - 4,600 nm (8,519 km). In addition, the new Lineage
-        1000E features new in-flight entertainment and cockpit options. In August 2020 Embraer announced that it was stopping sales of the Lineage 1000.\n</string>
+    <string name="lineage_1000_desc1" formatted="false">L\'Embraer Lineage 1000 est une variante de l\'avion de ligne régional Embraer 190, lancé en tant que jet privé le
+        2 mai 2006. Fabriqué par la société aérospatiale brésilienne Embraer, le Lineage est présenté comme un jet d\'affaires «ultra-large» avec des sièges confortables
+        pour 19. Le Lineage 1000 a reçu sa certification de l\'ANAC du Brésil et de l\'EASA en décembre 2008. Il a été certifié par la Federal Aviation Administration (en anglais) des
+        États-Unis le 7 janvier 2009. Le premier Lineage 1000 a été livré à Aamer Abdul Jalil Al Fahim le 7 mai 2009. En date du 31 décembre 2018, seuls 28 Lineage 1000
+        ont été construits.\n\nEn octobre 2013, Embraer a présenté le Lineage 1000E, qui offre une plus grande autonomie - 4600 nm (8519 km). De plus, la nouvelle lignée
+        1000E propose de nouvelles options de divertissement en vol et de cockpit. En août 2020, Embraer a annoncé qu\'il arrêtait les ventes du Lineage 1000.\n</string>
 
-    <string name="lineage_1000_desc2" formatted="false">On 6 October 2020, the Pakistan Navy announced the selection of the Lineage 1000 to replace its P-3C Orion in
-        the maritime patrol role, with 10 converted commercial jets, the first of which has been ordered. It was unclear whether the aircraft is being acquired directly
-        from the manufacturer or another party. In-service aircraft may not be available due to low production numbers, while existing operators may be selling their
-        aircraft due to COVID restrictions on air travel.\n\nThe Lineage 1000 is based on the Embraer 190 airliner, with added fuel tanks in the lower deck cargo hold
-        space, nearly doubling the jet\'s range. It boasts a lavish interior, divided into up to 5 sections including an optional bedroom, washroom with running water,
-        and a walk-in cargo area at the rear. Its fuselage cross-section is larger than similarly priced business jets like the $50.4M Global 5000, $53.8M Falcon 7X or
-        $54.5M Gulfstream G600, but smaller than other airliner conversions : the Sukhoi Superjet 100, B737-based $71.4M Boeing Business Jet-1 or A320-based $87.0M Airbus
-        Corporate Jets.\n</string>
+    <string name="lineage_1000_desc2" formatted="false">Le 6 octobre 2020, la marine pakistanaise a annoncé la sélection du Lineage 1000 pour remplacer son P-3C Orion dans
+        le rôle de patrouille maritime, avec 10 jets commerciaux convertis, dont le premier a été commandé. Il n\'était pas clair si l\'avion était acquis directement du
+        constructeur ou d\'une autre partie. Les avions en service peuvent ne pas être disponibles en raison de la faible production, tandis que les opérateurs existants
+        peuvent vendre leurs avions en raison des restrictions COVID sur les voyages aériens.\n\nLe Lineage 1000 est basé sur l\'avion de ligne Embraer 190, avec des
+        réservoirs de carburant ajoutés dans l\'espace de soute du pont inférieur, doublant presque la portée du jet. Il bénéficie d\'un intérieur somptueux, divisé en
+        jusqu\'à 5 sections comprenant une chambre en option, une salle de bain avec eau courante, et un espace de chargement de plain-pied à l\'arrière. Sa section
+        transversale de fuselage est plus grande que celle d\'avions d'affaires à prix similaire comme le Global 5000 à 50,4 M$, le Falcon 7X à 53,8 M$ ou le Gulfstream
+        G600 à 54,5 M$, mais plus petite que d\'autres conversions d\'avions de ligne : le Sukhoi Superjet 100, le Boeing Business Jet-1 basé sur un B737 à 71,4 millions de
+        dollars ou Airbus Corporate Jets (en anglais) à 87,0 millions de dollars basé sur l'A320.\n</string>
 
-    <string name="lineage_1000_desc3">\nThe Lineage 1000 comes in 2 variants - Lineage 1000 and Lineage 1000E.\n</string>
+    <string name="lineage_1000_desc3">\nLe Lineage 1000 est disponible en 2 variantes - Lineage 1000 et Lineage 1000E.\n</string>
 
     <string name="lineage_1000_specs_constraint">()\n</string>
 
 
-    <string name="lineage_1000_identify">How to identify Lineage 1000?</string>
+    <string name="lineage_1000_identify">Comment identifier Lineage 1000?</string>
     <string name="lineage_1000_identify_ans"></string>
 
     <string name="lineage_1000_cockpit_value">2</string>
-    <string name="lineage_1000_wingspan_value">28.72 m</string>
-    <string name="lineage_1000_length_value">36.24 m</string>
-    <string name="lineage_1000_height_value">10.57 m</string>
-    <string name="lineage_1000_fuselage_value">2.67 m (W) / ~2.2 m (H)</string>
-    <string name="lineage_1000_mtow_value">54.5 t</string>
-    <string name="lineage_1000_cruise_speed_value">850 km/h (typical),\n874 km/h (max.)</string>
-    <string name="lineage_1000_range_value">4,600 nmi</string>
+    <string name="lineage_1000_wingspan_value">28,72 m</string>
+    <string name="lineage_1000_length_value">36,24 m</string>
+    <string name="lineage_1000_height_value">10,57 m</string>
+    <string name="lineage_1000_fuselage_value">2,67 m (L) / ~2,2 m (H)</string>
+    <string name="lineage_1000_mtow_value">54,5 t</string>
+    <string name="lineage_1000_cruise_speed_value">850 km/h (typique),\n874 km/h (max.)</string>
+    <string name="lineage_1000_range_value">4600 nmi</string>
     <string name="lineage_1000_thrust_value">82 kN</string>
     <!--LINEAGE 1000-->
 
