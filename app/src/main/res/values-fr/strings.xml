@@ -2104,49 +2104,51 @@
 
 
     <!--PHENOM 300-->
-    <string name="phenom_300_type_value">Light business jet</string>
+    <string name="phenom_300_type_value">Avion d\'affaires léger</string>
     <string name="phenom_300_engine_value">Pratt &amp; Whitney Canada\nPW535E1 (2)</string>
     <string name="phenom_300_first_flight_value">2008</string>
     <string name="phenom_300_intro_value">2009</string>
-    <string name="phenom_300_numbers_value">600 (May 2021)</string>
+    <string name="phenom_300_numbers_value">600 (mai 2021)</string>
     <string name="phenom_300_variants_value">4</string>
 
-    <string name="phenom_300_desc1" formatted="false">The Embraer EMB-505 Phenom 300 is a single pilot certified light business jet developed by the Brazilian aerospace
-        manufacturer Embraer. It can carry up to 11 occupants. Embraer began designing the Phenom 300 after finding that potential customers of the Phenom 100 would also
-        like a bigger aircraft. It was a new design with the aim of allowing operation to smaller airports such as London City and Telluride Regional Airport. It first
-        flew on 29 April 2008, and received its type certification on 3 December 2009. On 29 December 2009 Embraer delivered the first Phenom 300 to Executive Flight
-        Services at the company\'s headquarters at São José dos Campos, Brazil. On 31 January 2020, Embraer announced significant upgrades to the Phenom 300, with
-        maximum speed increased from Mach 0.78 to 0.80 (446 to 464 kn, 826 to 859 km/h), and range increased from 1,992 to 2,010 nmi (3,689 to 3,723 km). Rated engine
-        thrust was increased from 3,360 to 3,478 lbf (14.95 to 15.47 kN) on upgraded PW535E1 turbofans. In 2021, its equipped price was $9.65M.\n</string>
+    <string name="phenom_300_desc1" formatted="false">L\'Embraer EMB-505 Phenom 300 est un avion d\'affaires léger certifié monopilote développé par le constructeur
+        aérospatial brésilien Embraer. Il peut transporter jusqu\'à 11 occupants. Embraer a commencé à concevoir le Phenom 300 après avoir découvert que les clients
+        potentiels du Phenom 100 aimeraient également un avion plus gros. Il s\'agissait d\'une nouvelle conception dans le but de permettre l\'exploitation de petits
+        aéroports tels que Londres et l\'aéroport régional de Telluride. Il a effectué son premier vol le 29 avril 2008 et a reçu sa certification de type le 3 décembre
+        2009. Le 29 décembre 2009, Embraer a livré le premier Phenom 300 à Executive Flight. Services au siège de l\'entreprise à São José dos Campos, Brésil. Le 31 janvier
+        2020, Embraer a annoncé des améliorations importantes du Phenom 300, avec une vitesse maximale augmentée de Mach 0,78 à 0,80 (446 à 464 kn, 826 à 859 km/h) et une
+        autonomie augmentée de 1992 à 2010 nmi (3689 à 3723 km ). La poussée nominale du moteur a été augmentée de 3360 à 3478 lbf (14,95 à 15,47 kN) sur les turboréacteurs
+        à double flux PW535E1 améliorés. En 2021, son prix équipé était de 9,65 M$.\n</string>
 
-    <string name="phenom_300_desc2" formatted="false">The Phenom 300 is a twin-engined cantilever monoplane with low-positioned, swept wings. It has a horizontal
-        stabiliser in a T-tail configuration and a retractable tricycle landing gear. It has two rear-pylon-mounted Pratt &amp; Whitney Canada PW535E turbofan engines. The
-        flight deck is based on Garmin G1000 (G3000 on the later variants). The enclosed cabin has room for nine passengers and a two-pilot crew; during single-pilot operation an additional passenger can be carried. Access to the cockpit and
-        cabin is via an airstair on the left-hand side. Its structural life is 28,000 flight cycles or 35,000 hours. It is built of 18% composite materials; it has
-        winglets, but not thrust reversers. The Phenom 300 has single-point refueling and an externally serviced private rear lavatory.\n\nThe Phenom 300 became the most
-        delivered business jet with 60 units in 2013. This was also the case in 2014 and 2015. All Phenom assembly was moved to the Melbourne, Florida line after July
-        2016, with a capability of assembling 96 Phenoms and 72 Embraer Legacy 450/Embraer Legacy 500 annually. More than 170 Phenom jets had been produced at the site
-        by June 2016, mainly for the US market. In March 2019, Embraer delivered the 500th Phenom 300, claiming more than half of the light jet market share since
-        2012. It was being used in over 30 countries and had carried 2.5 million passengers in 600,000 flights and 800,000 hours. The 600th unit was delivered in
-        May 2021.\n</string>
+    <string name="phenom_300_desc2" formatted="false">Le Phenom 300 est un monoplan bimoteur en porte-à-faux avec des ailes en flèche bas. Il a une horizontale stabilisateur
+        dans une configuration de queue en T et un train d\'atterrissage tricycle rétractable. Il est équipé de deux turboréacteurs à double flux Pratt &amp; Whitney Canada
+        PW535E montés sur le pylône arrière. Le poste de pilotage est basé sur Garmin G1000 (G3000 sur les versions ultérieures). La cabine fermée peut accueillir neuf
+        passagers et un équipage de deux pilotes; pendant l\'exploitation monopilote, un passager supplémentaire peut être transporté. L\'accès au cockpit et à la cabine
+        se fait par un escalier sur le côté gauche. Sa durée de vie structurelle est de 28000 cycles de vol ou 35000 heures. Il est construit avec 18% de matériaux
+        composites; il a des winglets, mais pas d\'inverseurs de poussée. Le Phenom 300 dispose d\'un point de ravitaillement unique et de toilettes arrière privées avec
+        service externe.\n\nLe Phenom 300 est devenu le plus livré des avions d\'affaires avec 60 unités en 2013. C\'était également le cas en 2014 et 2015. Tous les
+        assemblages de Phenom ont été déplacés vers la ligne de Melbourne, en Floride, après juillet 2016, avec une capacité d\'assemblage de 96 Phenom et 72 Embraer
+        Legacy 450/Embraer Legacy 500 annuellement. Plus de 170 jets Phenom avaient été produits sur le site en juin 2016, principalement pour le marché américain. En mars
+        2019, Embraer a livré le 500e Phenom 300, revendiquant plus de la moitié des parts de marché des jets légers depuis 2012. Il était utilisé dans plus de 30 pays et
+        avait transporté 2,5 millions de passagers en 600 000 vols et 800 000 heures. La 600e unité a été livrée en mai 2021.\n</string>
 
-    <string name="phenom_300_desc3">\nThe light business jet comes in 4 variants - Phenom 300, Phenom 300E, 2020 Phenom 300E, 2020 Phenom 300MED.\n</string>
+    <string name="phenom_300_desc3">\nL\'avion d\'affaires léger est disponible en 4 variantes - Phenom 300, Phenom 300E, 2020 Phenom 300E, 2020 Phenom 300MED.\n</string>
 
     <string name="phenom_300_specs_constraint">(2020 Phenom 300E)\n</string>
 
 
-    <string name="phenom_300_identify">How to identify Phenom 300?</string>
+    <string name="phenom_300_identify">Comment identifier Phenom 300?</string>
     <string name="phenom_300_identify_ans"></string>
 
     <string name="phenom_300_cockpit_value">1 / 2</string>
-    <string name="phenom_300_wingspan_value">16.20 m</string>
-    <string name="phenom_300_length_value">15.90 m</string>
+    <string name="phenom_300_wingspan_value">16,20 m</string>
+    <string name="phenom_300_length_value">15,90 m</string>
     <string name="phenom_300_height_value">5 m</string>
-    <string name="phenom_300_fuselage_value">1.55 m (W) / 1.49 m (H)</string>
-    <string name="phenom_300_mtow_value">8.15 t</string>
+    <string name="phenom_300_fuselage_value">1,55 m (L) / 1,49 m (H)</string>
+    <string name="phenom_300_mtow_value">8,15 t</string>
     <string name="phenom_300_cruise_speed_value">834 km/h (max.)</string>
-    <string name="phenom_300_range_value">2,010 nmi with IFR reserves,\n5 occupants</string>
-    <string name="phenom_300_thrust_value">15.47 kN</string>
+    <string name="phenom_300_range_value">2010 nmi avec réserves IFR, 5 occupants</string>
+    <string name="phenom_300_thrust_value">15,47 kN</string>
     <!--PHENOM 300-->
 
 
