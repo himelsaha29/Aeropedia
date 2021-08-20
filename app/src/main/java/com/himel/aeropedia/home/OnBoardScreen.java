@@ -65,13 +65,13 @@ public class OnBoardScreen extends AppCompatActivity {
             dotsArray[i] = new TextView(this);
             dotsArray[i].setText(Html.fromHtml("&#8226;"));
             dotsArray[i].setTextSize(35);
-            dotsArray[i].setTextColor(Color.parseColor("#000000"));
+            dotsArray[i].setTextColor(Color.parseColor("#cccccc"));
             dotsArray[i].setGravity(Gravity.CENTER);
             dots.addView(dotsArray[i]);
         }
 
         if(dotsArray.length > 0){
-            dotsArray[position].setTextColor(Color.parseColor("#0000ff"));
+            dotsArray[position].setTextColor(Color.parseColor("#ffffff"));
         }
     }
 
@@ -111,13 +111,5 @@ public class OnBoardScreen extends AppCompatActivity {
 
         }
     };
-
-
-
-
-
-
-
-
 
 }

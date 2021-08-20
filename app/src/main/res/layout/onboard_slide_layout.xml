@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:background="@android:color/transparent"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/slide_image"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/main_logo_foreground"
+        android:layout_height="370dp"
+        android:padding="20dp"
+        android:src="@drawable/background_three_light"
         android:layout_gravity="center" />
 
     <TextView
