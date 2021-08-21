@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_three_light"
+    android:background="#f2f4f6"
     android:orientation="vertical"
     tools:context=".home.OnBoardScreen">
 
@@ -41,18 +41,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
+
+            <soup.neumorphism.NeumorphButton
                 android:id="@+id/back"
+                style="@style/Widget.Neumorph.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:fontFamily="@font/maven_pro_medium"
-                android:background="@android:color/transparent"
                 android:text="BACK"
-                android:textColor="@color/black"
+                android:fontFamily="@font/maven_pro_medium"
+                android:textSize="18sp"
+                android:textColor="#042234"
+                android:background="#f2f4f6"
+                app:neumorph_shadowColorLight="#fdfdfd"
+                app:neumorph_shadowColorDark="#ececec"
+                app:neumorph_shapeType="flat"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
+
 
             <LinearLayout
                 android:id="@+id/dots"
@@ -66,17 +72,24 @@
 
             </LinearLayout>
 
-            <Button
+
+            <soup.neumorphism.NeumorphButton
                 android:id="@+id/next"
+                style="@style/Widget.Neumorph.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
                 android:text="NEXT"
-                android:textColor="@color/black"
                 android:fontFamily="@font/maven_pro_medium"
+                android:textSize="18sp"
+                android:textColor="#042234"
+                android:background="#f2f4f6"
+                app:neumorph_shadowColorLight="#fdfdfd"
+                app:neumorph_shadowColorDark="#ececec"
+                app:neumorph_shapeType="flat"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

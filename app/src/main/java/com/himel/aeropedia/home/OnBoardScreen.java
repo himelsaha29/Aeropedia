@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.himel.aeropedia.R;
 
+import soup.neumorphism.NeumorphButton;
+
 public class OnBoardScreen extends AppCompatActivity {
 
     private ViewPager viewPager;
@@ -21,8 +23,8 @@ public class OnBoardScreen extends AppCompatActivity {
     private TextView[] dotsArray;
     private OnBoardAdapter onBoardAdapter;
 
-    private Button nextButton;
-    private Button prevButton;
+    private NeumorphButton nextButton;
+    private NeumorphButton prevButton;
     private int currentPage;
 
     @Override
