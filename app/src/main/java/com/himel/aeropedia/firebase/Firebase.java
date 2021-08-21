@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -88,6 +89,7 @@ import io.alterac.blurkit.BlurLayout;
 import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphCardView;
 import soup.neumorphism.NeumorphImageButton;
+import soup.neumorphism.ShapeType;
 
 public class Firebase extends AppCompatActivity {
     private Button button;
@@ -126,7 +128,65 @@ public class Firebase extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_firebase_light);
+        loadLocale();
+        locale = Locale.getDefault();
+        enableDarkOnCreate = verifyDarkMode();
+        if(enableDark.equals("No")) {
+            setContentView(R.layout.activity_firebase_light);
+        } else {
+            setContentView(R.layout.activity_firebase_dark);
+        }
+
+        langToggle = findViewById(R.id.lang_toggle);
+        darkToggle = findViewById(R.id.dark_toggle);
+        mDrawer = findViewById(R.id.drawerlayout);
+        blur = findViewById(R.id.blurLayout);
+
+        // setting NeumorphismButton shape based on state
+        if (locale.toString().contains("en")) {
+            langToggle.setShapeType(ShapeType.FLAT);
+        } else if (locale.toString().contains("fr")) {
+            langToggle.setShapeType(ShapeType.PRESSED);
+        }
+
+        langToggle.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(getResources().getConfiguration().locale.toString().contains("fr")) {
+                    setLocale("en");
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                } else if (getResources().getConfiguration().toString().contains("en")) {
+                    setLocale("fr");
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }
+            }
+        });
+
+        darkToggle.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+                if (prefs.getString("DarkMode", "").equals("Yes")) {
+                    toggleDark("No");
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                } else if (prefs.getString("DarkMode", "").equals("No")) {
+                    toggleDark("Yes");
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }
+
+            }
+        });
+
         a220Button = findViewById(R.id.a220);
         a300Button = findViewById(R.id.a300);
         a310Button = findViewById(R.id.a310);
@@ -174,10 +234,7 @@ public class Firebase extends AppCompatActivity {
         textCard = findViewById(R.id.textCard);
         layout = findViewById(R.id.buttonContainer);
         scroll = findViewById(R.id.firebaseScroll);
-        langToggle = findViewById(R.id.lang_toggle);
-        darkToggle = findViewById(R.id.dark_toggle);
-        mDrawer = findViewById(R.id.drawerlayout);
-        blur = findViewById(R.id.blurLayout);
+
 
         Display display = ((android.view.WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
         scroll.setFadingEdgeLength((int) (display.getHeight() *0.12));
@@ -1781,5 +1838,31 @@ public class Firebase extends AppCompatActivity {
     }
 
     /** Dark mode **/
+
+    /** Changing app language **/
+
+    private void setLocale(String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("Language", language);
+        editor.apply();
+    }
+
+    private void loadLocale() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2)).equals("")) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+            editor.apply();
+        }
+        String language = prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+        setLocale(language);
+    }
+
+    /** Changing app language **/
 
 }
