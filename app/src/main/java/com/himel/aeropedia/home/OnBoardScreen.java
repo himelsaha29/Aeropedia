@@ -3,16 +3,23 @@ package com.himel.aeropedia.home;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.himel.aeropedia.R;
+
+import java.util.Locale;
 
 import soup.neumorphism.NeumorphButton;
 
@@ -22,7 +29,9 @@ public class OnBoardScreen extends AppCompatActivity {
     private LinearLayout dots;
     private TextView[] dotsArray;
     private OnBoardAdapter onBoardAdapter;
-
+    private Locale locale;
+    private String enableDark;
+    private String enableDarkOnCreate;
     private NeumorphButton nextButton;
     private NeumorphButton prevButton;
     private int currentPage;
@@ -30,7 +39,27 @@ public class OnBoardScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_on_board_screen);
+        loadLocale();
+        locale = Locale.getDefault();
+        enableDarkOnCreate = verifyDarkMode();
+        if(enableDark.equals("No")) {
+            setContentView(R.layout.activity_on_board_screen_light);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                Window window = getWindow();
+                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                window.setStatusBarColor(Color.parseColor("#E6f2f4f6"));
+            }
+        } else {
+            setContentView(R.layout.activity_on_board_screen_dark);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                Window window = getWindow();
+                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                window.setStatusBarColor(Color.parseColor("#ff1b1f1f"));
+            }
+        }
+
 
         viewPager = findViewById(R.id.viewPager);
         dots = findViewById(R.id.dots);
@@ -38,7 +67,12 @@ public class OnBoardScreen extends AppCompatActivity {
         prevButton = findViewById(R.id.back);
         nextButton = findViewById(R.id.next);
 
-        onBoardAdapter = new OnBoardAdapter(this);
+        if(enableDark.equals("No")) {
+            onBoardAdapter = new OnBoardAdapter(this, false);
+        } else {
+            onBoardAdapter = new OnBoardAdapter(this, true);
+        }
+
         viewPager.setAdapter(onBoardAdapter);
 
         addDotsIndicator(0);
@@ -73,7 +107,7 @@ public class OnBoardScreen extends AppCompatActivity {
         }
 
         if(dotsArray.length > 0){
-            dotsArray[position].setTextColor(Color.parseColor("#ffffff"));
+            dotsArray[position].setTextColor(getResources().getColor(R.color.colorPrimary));
         }
     }
 
@@ -113,5 +147,71 @@ public class OnBoardScreen extends AppCompatActivity {
 
         }
     };
+
+    /** Changing app language **/
+
+    private void setLocale(String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("Language", language);
+        editor.apply();
+    }
+
+    private void loadLocale() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2)).equals("")) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+            editor.apply();
+        }
+        String language = prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+        setLocale(language);
+    }
+
+    /** Changing app language **/
+
+    /** Dark mode **/
+
+    private void toggleDark(String darkEnabled) {
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("DarkMode", darkEnabled);
+        editor.apply();
+    }
+
+    private String verifyDarkMode() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("DarkMode", "").equals("")) {
+
+            SharedPreferences.Editor editor = prefs.edit();
+            int currentNightMode = getResources().getConfiguration().uiMode
+                    & Configuration.UI_MODE_NIGHT_MASK;
+
+            switch (currentNightMode) {
+                case Configuration.UI_MODE_NIGHT_NO:
+                    editor.putString("DarkMode", "No");
+                    editor.apply();
+                    break;
+                default:
+                    editor.putString("DarkMode", "Yes");
+                    editor.apply();
+                    break;
+
+            }
+        }
+        enableDark = prefs.getString("DarkMode", "Yes");
+
+        return enableDark;
+    }
+
+    /** Dark mode **/
+
+
+    /** TreeView **/
+
+
 
 }

@@ -17,9 +17,11 @@ public class OnBoardAdapter extends PagerAdapter {
 
     Context context;
     LayoutInflater layoutInflater;
+    boolean dark;
 
-    public OnBoardAdapter (Context context) {
+    public OnBoardAdapter (Context context, boolean dark) {
         this.context = context;
+        this.dark = dark;
     }
 
     public int[] slideImages = {
@@ -54,7 +56,12 @@ public class OnBoardAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.onboard_slide_layout, container, false);
+        View view;
+        if(dark == false) {
+            view = layoutInflater.inflate(R.layout.onboard_slide_layout_light, container, false);
+        } else {
+            view = layoutInflater.inflate(R.layout.onboard_slide_layout_dark, container, false);
+        }
 
         ImageView slideImage = view.findViewById(R.id.slide_image);
         TextView slideHeader = view.findViewById(R.id.slide_header);
