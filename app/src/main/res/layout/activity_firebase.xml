@@ -1291,17 +1291,17 @@
                             android:orientation="vertical">
 
                             <soup.neumorphism.NeumorphButton
-                                android:id="@+id/havilland"
+                                android:id="@+id/gulfstream_giv"
                                 style="@style/Widget.Neumorph.Button"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:padding="5dp"
-                                android:text="De Havilland"
+                                android:text="Gulfstream G-IV"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
-                                android:textSize="15sp"
+                                android:textSize="14.5sp"
                                 app:neumorph_backgroundColor="#f2f4f6"
                                 app:neumorph_shadowColorDark="#eaeaea"
                                 app:neumorph_shadowColorLight="#fdfdfd"

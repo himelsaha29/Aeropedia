@@ -57,11 +57,11 @@ public class Firebase extends AppCompatActivity {
             a340Button, a350Button, a380Button, belugaButton, an22Button, an72Button, an124Button, an225Button, b737Button, b747Button, b757Button, b767Button,
             b777Button, b787Button, bombardierChallenger650Button, bombardierCRJButton, bombardierLearjetButton, bombardierGlobalButton,
             embraerERJButton, embraerEJetE2Button, embraerLineageButton, embraerPhenomButton, cessnaSkylaneButton, cessnaCaravanButton, cessnaLatitudeButton,
-            cessnaLongitudeButton, gulfstreamG650Button, gulfstreamG280Button, havillandButton, save;
+            cessnaLongitudeButton, gulfstreamG650Button, gulfstreamG280Button, gulfstreamGIVButton, save;
 
     boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, an22, an72, an124, an225, b737, b747, b757, b767,
             b777, b787, bombardierChallenger650, bombardierCRJ, bombardierLearjet, bombardierGlobal, embraerERJ, embraerEJetE2, embraerLineage, embraerPhenom, cessnaSkylane,
-            cessnaCaravan, cessnaLatitude, cessnaLongitude, gulfstreamG650, gulfstreamG280, de_havilland;
+            cessnaCaravan, cessnaLatitude, cessnaLongitude, gulfstreamG650, gulfstreamG280, gulfstreamGIV;
 
 
     @Override
@@ -110,7 +110,7 @@ public class Firebase extends AppCompatActivity {
         gulfstreamG280Button = findViewById(R.id.gulfstream_g280);
 
 
-        havillandButton = findViewById(R.id.havilland);
+        gulfstreamGIVButton = findViewById(R.id.gulfstream_giv);
         save = findViewById(R.id.save);
         textCard = findViewById(R.id.textCard);
         layout = findViewById(R.id.buttonContainer);
@@ -828,18 +828,18 @@ public class Firebase extends AppCompatActivity {
 
 
 
-        havillandButton.setOnClickListener(new View.OnClickListener() {
+        gulfstreamGIVButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (!de_havilland) {
-                    havillandButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
-                    selected.add((String) havillandButton.getText());
-                    de_havilland = true;
+                if (!gulfstreamGIV) {
+                    gulfstreamGIVButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    selected.add((String) gulfstreamGIVButton.getText());
+                    gulfstreamGIV = true;
                 } else {
-                    havillandButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
-                    selected.remove((String) havillandButton.getText());
-                    de_havilland = false;
+                    gulfstreamGIVButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    selected.remove((String) gulfstreamGIVButton.getText());
+                    gulfstreamGIV = false;
                 }
             }
         });
