@@ -248,6 +248,7 @@ public class Firebase extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                switchLayout();
                 firebase.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -472,7 +473,7 @@ public class Firebase extends AppCompatActivity {
                     selected.add((String) a330Button.getText());
                     a330 = true;
                 } else {
-                    a321neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    a330Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
                     selected.remove((String) a330Button.getText());
                     a330 = false;
                 }
@@ -1004,7 +1005,6 @@ public class Firebase extends AppCompatActivity {
 
         int highestValue = findLargest();
 
-        switchLayout();
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int height = displayMetrics.heightPixels;
