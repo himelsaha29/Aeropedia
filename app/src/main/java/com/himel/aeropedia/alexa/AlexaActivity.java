@@ -29,6 +29,8 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.material.snackbar.Snackbar;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA220;
@@ -139,6 +141,19 @@ public class AlexaActivity extends CoreActivity {
                     System.out.println("1 : " + loggedIn);
                     loggedIn = checkLogin();
                     System.out.println("2 : " + loggedIn);
+
+                    if (loggedIn) {
+
+                        AlexaActivity.this.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                loadAlexa();
+                                languageDarkToggle();
+                                loadDrawer();
+                            }
+                        });
+                        
+                    }
                 }
             });
             thread.start();

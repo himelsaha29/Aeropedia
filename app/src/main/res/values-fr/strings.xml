@@ -421,7 +421,7 @@
     <!--AIRBUS A320-->
     <string name="a320_type_value">Avion de ligne à\nfuselage étroit</string>
     <string name="a320_engine_value">CFM56 /\nIAE V2500 (2)</string>
-    <string name="a320_first_flight_value">22 fevrier 1987</string>
+    <string name="a320_first_flight_value">22 février 1987</string>
     <string name="a320_intro_value">18 avril 1988\navec Air France</string>
     <string name="a320_customer_value">China Eastern Airlines</string>
     <string name="a320_variants_value">2</string>
@@ -1010,7 +1010,7 @@
     <!--ANTONOV AN-22 ANTEI-->
     <string name="an22_type_value">Avion de transport\nstratégique</string>
     <string name="an22_engine_value">Turbopropulseur\nKuznetsov NK-12MA (4)</string>
-    <string name="an22_first_flight_value">27 fevrier 1965</string>
+    <string name="an22_first_flight_value">27 février 1965</string>
     <string name="an22_intro_value">1967</string>
     <string name="an22_customer_value">Force aérienne soviétique</string>
     <string name="an22_variants_value">4 (actifs)</string>
@@ -1137,7 +1137,7 @@
     <string name="b737_type_value">Avion de ligne à\nfuselage étroit</string>
     <string name="b737_engine_value">Pratt &amp; Whitney JT8D /\nCFM56 / CFM LEAP-1B (2)</string>
     <string name="b737_first_flight_value">9 avril 1967</string>
-    <string name="b737_intro_value">10 fevrier 1968\navec Lufthansa</string>
+    <string name="b737_intro_value">10 février 1968\navec Lufthansa</string>
     <string name="b737_customer_value">Southwest Airlines</string>
     <string name="b737_variants_value">13</string>
 
@@ -1230,7 +1230,7 @@
     <!--BOEING 747-->
     <string name="b747_type_value">Avion de ligne à\nfuselage large</string>
     <string name="b747_engine_value">P&amp;W JT9D/PW4000 /\nRR RB211 / GE CF6/GEnx-2B67 (4)</string>
-    <string name="b747_first_flight_value">9 fevrier 1969</string>
+    <string name="b747_first_flight_value">9 février 1969</string>
     <string name="b747_intro_value">22 janvier 1970\navec Pan Am</string>
     <string name="b747_customer_value">Atlas Air</string>
     <string name="b747_variants_value">22 (actifs)</string>
@@ -1307,7 +1307,7 @@
     <!--BOEING 757-->
     <string name="b757_type_value">Avion de ligne à\nfuselage étroit</string>
     <string name="b757_engine_value">Pratt &amp; Whitney PW2000 /\nRolls-Royce RB211 (2)</string>
-    <string name="b757_first_flight_value">19 fevrier 1982</string>
+    <string name="b757_first_flight_value">19 février 1982</string>
     <string name="b757_intro_value">1 janvier 1983 avec\nEastern Air Lines</string>
     <string name="b757_customer_value">Delta Air Lines</string>
     <string name="b757_variants_value">12 (actifs)</string>
@@ -2221,112 +2221,119 @@
 
 
     <!--CITATION LATITUDE-->
-    <string name="citation_latitude_type_value">Corporate Jet</string>
+    <string name="citation_latitude_type_value">Avion d\'affaires</string>
     <string name="citation_latitude_engine_value">Pratt &amp; Whitney Canada\nPW306D1 (2)</string>
-    <string name="citation_latitude_first_flight_value">18 February 2014</string>
-    <string name="citation_latitude_numbers_value">200 (April 2019)</string>
+    <string name="citation_latitude_first_flight_value">18 février 2014</string>
+    <string name="citation_latitude_numbers_value">200 (avril 2019)</string>
     <string name="citation_latitude_variants_value">1</string>
 
-    <string name="citation_latitude_desc1" formatted="false">The Model 680A was announced at the 2011 NBAA convention, the prototype first flew on 18 February 2014, it
-        achieved FAA certification on June 5, 2015, and first deliveries began on August 27. It keeps the Model 680 Sovereign wing, twin P&amp;WC PW306D turbofans and
-        cruciform tail for a 2,700 nmi (5,000 km) range. Its new stand-up circular fuselage has a flat floor and was kept in the later Cessna Citation Longitude.\n\nThe
-        $14.9 million Citation Latitude was announced by Cessna at the annual NBAA convention in October 2011, between the $12.6 million Citation XLS+ and the $17.5
-        million Citation Sovereign. The prototype first flew on 18 February 2014 in Wichita, Kansas. Cessna announced on June 5, 2015, that it had achieved FAA
-        certification for the type. On August 27, 2015, Cessna announced the first deliveries had begun. In 2021, its equipped price was $19.1M.\n</string>
+    <string name="citation_latitude_desc1" formatted="false">Le modèle 680A a été annoncé lors de la convention NBAA 2011, le prototype a volé pour la première fois le
+        18 février 2014, il a obtenu la certification FAA le 5 juin 2015 et les premières livraisons ont commencé le 27 août. Il conserve l\'aile Sovereign modèle 680, les
+        doubles turboréacteurs P&amp;WC PW306D et queue cruciforme pour une autonomie de 2700 nmi (5000 km). Son nouveau fuselage circulaire debout a un plancher plat et
+        a été conservé dans le dernier Cessna Citation Longitude.\n\nLe Citation Latitude de 14,9 millions de dollars a été annoncé par Cessna lors de la convention
+        annuelle de la NBAA en octobre 2011, entre le Citation XLS+ de 12,6 millions de dollars et le 17,5 millions de dollars millions de Citation Souveraine. Le prototype
+        a volé pour la première fois le 18 février 2014 à Wichita, au Kansas. Cessna a annoncé le 5 juin 2015, qu\'il avait atteint la FAA certification pour le type. Le
+        27 août 2015, Cessna a annoncé que les premières livraisons avaient commencé. En 2021, son prix équipé était de 19,1 M$.\n</string>
 
-    <string name="citation_latitude_desc2" formatted="false">It keeps the Citation Sovereign wing, twin Pratt &amp; Whitney Canada PW306D turbofans and cruciform tail. For the
-        Avionics, Garmin G5000 was chosen for the Citation Latitude. Its newly-designed all-metal stand-up circular fuselage has a flat floor and seats nine. Typical missions are 2.0–2.7 hours and with 400 kn (740 km/h) block speeds
-        and most operators can fly 5–6 hours at Mach 0.72–0.76 for a 2,000–2,400 nmi range, with short takeoff requirements and good hot and high performance. A first
-        hour fuel burn of 910–1,130 kg followed by 730–860 kg the second hour and fuel burn can reach 1,500 kg for a 2-hour trip with favorable conditions. It lists for
-        $17.5–18 million typically equipped, the same as the Embraer Legacy 450 with a similar flat floor cabin for club four plus two chairs and over 200 miles more
-        range, 25–30 kn (46–56 km/h) higher cruise and fly-by-wire controls. Embraer is firm on list price while Textron discounts the Latitude by up to 20% for
-        $13.5–14 million to sell three times as many aircraft.\n\nDeliveries to customers began in the third quarter of 2015 and sixteen had been handed over by the end
-        of the year. By May 2018, almost three years since introduction, 124 were delivered and logged 80,000 flight hours. In June 2018, of 129 delivered, 104 were
-        in the US, three in Mexico, two each are based in China, France and Turkey, and there was one in Chile, Paraguay, the Philippines, Poland, Scotland and
-        Switzerland. It is used by medium-size corporations, typically flying 200–300 hours per year, and large fleet operators, the largest being NetJets which booked
-        25 firm orders and 125 options in 2012 and received 44 aircraft for its U.S. operations and 10 for Europe by June 2018, flying theirs over 1,000 hours per
-        year. By mid-September, the 136 delivered have logged 115,000 flight hours, and Textron claims it outsells the competition by four to one.\n</string>
+    <string name="citation_latitude_desc2" formatted="false">Il conserve l\'aile Citation Sovereign, les turboréacteurs jumeaux Pratt &amp; Whitney Canada PW306D et la
+        queue cruciforme. Pour l\'avionique, Garmin G5000 a été choisi pour le Citation Latitude. Son fuselage circulaire debout tout en métal nouvellement conçu a un
+        plancher plat et peut accueillir neuf personnes. Les missions typiques durent de 2,0 à 2,7 heures et avec des vitesses de bloc de 400 nœuds (740 km/h) et la plupart
+        des opérateurs peuvent voler de 5 à 6 heures à Mach 0,72 à 0,76 pour une plage de 2000 à 2400 nmi, avec des exigences de décollage courtes et de bonnes températures
+        élevées et élevées. performance. Une première heure de consommation de carburant de 910 à 1130 kg suivie de 730 à 860 kg la deuxième heure et la consommation de
+        carburant peut atteindre 1500 kg pour un trajet de 2 heures dans des conditions favorables. Il répertorie pour 17,5 à 18 millions de dollars généralement équipé, le
+        même que l\'Embraer Legacy 450 avec une cabine à plancher plat similaire pour le club quatre plus deux chaises et plus de 200 miles de plus autonomie, 25 à 30 nœuds
+        (46 à 56 km/h) de vitesse de croisière et commandes de vol électriques plus élevées. Embraer est ferme sur le prix catalogue tandis que Textron réduit le Latitude
+        jusqu\'à 20% pour 13,5 à 14 millions de dollars pour vendre trois fois plus d\'avions.\n\nLes livraisons aux clients ont commencé au troisième trimestre 2015 et
+        seize ont été livrées à la fin de l\'année. En mai 2018, près de trois ans après son introduction, 124 ont été livrés et ont enregistré 80000 heures de vol. En juin
+        2018, sur les 129 livrées, 104 se trouvaient aux États-Unis, trois au Mexique, deux chacun sont basés en Chine, en France et en Turquie, et il y en avait un au
+        Chili, au Paraguay, aux Philippines, en Pologne, en Écosse et en Suisse. Il est utilisé par des entreprises de taille moyenne, qui effectuent généralement des vols
+        de 200 à 300 heures par an, et par de grands exploitants de flottes, le plus important étant NetJets qui a enregistré 25 commandes fermes et 125 options en 2012 et
+        reçu 44 avions pour ses opérations aux États-Unis et 10 pour l\'Europe par juin 2018, volant le leur plus de 1000 heures par an. À la mi-septembre, les 136 livrés
+        totalisaient 115000 heures de vol, et Textron affirme qu\'il surpasse la concurrence de quatre contre un.\n</string>
 
     <string name="citation_latitude_desc3">\n</string>
 
     <string name="citation_latitude_specs_constraint">()\n</string>
 
 
-    <string name="citation_latitude_identify">How to identify Citation Latitude?</string>
+    <string name="citation_latitude_identify">Comment identifier Citation Latitude?</string>
     <string name="citation_latitude_identify_ans"></string>
 
     <string name="citation_latitude_cockpit_value">2</string>
-    <string name="citation_latitude_wingspan_value">22.05 m</string>
-    <string name="citation_latitude_length_value">18.97 m</string>
-    <string name="citation_latitude_height_value">6.38 m</string>
-    <string name="citation_latitude_fuselage_value">1.96 m (W) / 1.83 m (H)</string>
-    <string name="citation_latitude_mtow_value">13.97 t</string>
+    <string name="citation_latitude_wingspan_value">22,05 m</string>
+    <string name="citation_latitude_length_value">18,97 m</string>
+    <string name="citation_latitude_height_value">6,38 m</string>
+    <string name="citation_latitude_fuselage_value">1,96 m (L) / 1,83 m (H)</string>
+    <string name="citation_latitude_mtow_value">13,97 t</string>
     <string name="citation_latitude_cruise_speed_value">826 km/h (max.)</string>
-    <string name="citation_latitude_range_value">2,700 nmi with 4\npassengers</string>
-    <string name="citation_latitude_thrust_value">26.28 kN</string>
+    <string name="citation_latitude_range_value">2700 nmi avec 4\npassagers</string>
+    <string name="citation_latitude_thrust_value">26,28 kN</string>
     <!--CITATION LATITUDE-->
 
 
     <!--CESSNA CARAVAN-->
-    <string name="caravan_type_value">Utility aircraft</string>
+    <string name="caravan_type_value">Avion utilitaire</string>
     <string name="caravan_engine_value">Pratt &amp; Whitney\nCanada PT6A-114A (2)</string>
-    <string name="caravan_first_flight_value">9 December 1982</string>
+    <string name="caravan_first_flight_value">9 décembre 1982</string>
     <string name="caravan_intro_value">1984</string>
     <string name="caravan_customer_value">FedEx</string>
     <string name="caravan_variants_value">19</string>
 
-    <string name="caravan_desc1" formatted="false">The project was commenced on November 20, 1981, and the prototype first flew on December 9, 1982. The production model
-        was certified by the FAA in October 1984 and its Cargomaster freighter variant was developed for FedEx. The 1.2 m longer 208B Super Cargomaster first flew in
-        1986 and was developed into the passenger 208B Grand Caravan. The strutted, high wing 208 typically seats nine passengers in its unpressurized cabin, is powered
-        by a single Pratt &amp; Whitney Canada PT6A tractor turboprop and has a fixed tricycle landing gear, floats or skis. By November 2017, 2,600 have been delivered
-        and 20 million flight hours logged. Caravans are used for flight training, commuter airlines, VIP transport, air cargo and humanitarian missions. As
-        of November 2007, a total of 2,600 Caravans have been built.\n\nOn November 20, 1981, the project was given a go-ahead by Cessna for its Pawnee engineering
-        facility. John Berwick, chief engineer at Pawnee, came with a concept of a single engine, high-wing airplane with a large payload. Berwick had originally
-        approached VP Bill Boettger with the idea and once Dwane Wallace approved it, Berwick told Russ Meyer he would design it. The prototype first flew on December
-        9, 1982. The production model was certified by the Federal Aviation Administration (FAA) in October 1984. A freighter variant without cabin windows was developed
-        at the request of Federal Express as the Cargomaster. Another cargo variant for Federal Express, with a longer fuselage and a cargo pod under the belly, was
-        developed as the 208B Super Cargomaster and flew for the first time in 1986. FedEx was initially planning to build twin-engine piston-powered airplanes with
-        Piper Aircraft, but picked the Caravan after surveying it and having flown the prototype, becoming its standard carrier. A passenger model, the 208B Grand Caravan,
-        was derived from the Super Cargomaster. Since then, the Caravan has undergone a number of design evolutions, including upgrading the avionics in 2008 to provide
-        a glass cockpit with the Garmin G1000 system. In January 2013 a higher-powered (867 shp from P&amp;WC PT6A-140) version, the Grand Caravan EX, received FAA
-        certification.\n</string>
+    <string name="caravan_desc1" formatted="false">Le projet a commencé le 20 novembre 1981 et le prototype a volé pour la première fois le 9 décembre 1982. Le modèle de
+        production a été certifié par la FAA en octobre 1984 et sa variante cargo Cargomaster a été développée pour FedEx. Le 208B Super Cargomaster, plus long de 1,2 m, a
+        volé pour la première fois en 1986 et a été développé pour devenir le passager 208B Grand Caravan. La 208 à ailes hautes et à entretoises peut généralement
+        accueillir neuf passagers dans sa cabine non pressurisée, est motorisée par un seul turbopropulseur de tracteur Pratt &amp; Whitney Canada PT6A et possède un train
+        d\'atterrissage tricycle fixe, des flotteurs ou des skis. En novembre 2017, 2 600 ont été livrées et 20 millions d\'heures de vol enregistrées. Les caravanes sont
+        utilisées pour la formation au pilotage, les compagnies aériennes de banlieue, le transport VIP, le fret aérien et les missions humanitaires. En novembre 2007,
+        2600 caravanes au total avaient été construites.\n\nLe 20 novembre 1981, le projet a reçu le feu vert de Cessna pour son installation d\'ingénierie de Pawnee. John
+        Berwick, ingénieur en chef chez Pawnee, est venu avec le concept d\'un avion monomoteur à aile haute avec une grande charge utile. Berwick avait initialement
+        approché le vice-président Bill Boettger avec l\'idée et une fois que Dwane Wallace l\'a approuvée, Berwick a dit à Russ Meyer qu\'il la concevrait. Le prototype
+        a volé pour la première fois le 9 décembre 1982. Le modèle de production a été certifié par la Federal Aviation Administration (FAA) en octobre 1984. Une variante
+        de cargo sans hublot de cabine a été développée à la demande de Federal Express en tant que Cargomaster. Une autre variante de fret pour Federal Express, avec un
+        fuselage plus long et une nacelle de fret sous le ventre, a été développé sous le nom de 208B Super Cargomaster et a volé pour la première fois en 1986. FedEx
+        prévoyait initialement de construire des avions bimoteurs à pistons avec Piper Aircraft, mais a choisi le Caravan après l\'avoir inspecté et avoir piloté le
+        prototype, devenant ainsi son transporteur standard. Un modèle passager, la 208B Grand Caravan, a été dérivé du Super Cargomaster. Depuis lors, la Caravan a subi
+        un certain nombre d\'évolutions de conception, notamment la mise à niveau de l\'avionique en 2008 pour fournir un cockpit en verre avec le système Garmin G1000. En
+        janvier 2013, une version plus puissante (867 shp de P&amp;WC PT6A-140), la Grand Caravan EX, a reçu la certification FAA.\n</string>
 
-    <string name="caravan_desc2" formatted="false">In August 2016, Textron announced that it would move the Cessna 208 production line from its Wichita headquarters to
-        its Independence, Kansas production facility, for manufacture alongside along the piston-powered 172, 182, 206 and TTx; and the Citation M2 light jet. The move
-        was made to make room for production of the Citation Longitude and Denali in Wichita. In 2021, the 208 Caravan unit cost was US$2.45 million and US$2.845
-        million for the 208B Grand Caravan EX.\n\nThe Cessna 208 is a high-wing braced cabin monoplane powered by a single Pratt &amp; Whitney Canada PT6A turboprop in
-        tractor configuration. The cabin has room for nine passengers and two crew when used as a passenger aircraft with four doors: one for each crew member, an
-        airstair door on the right side of the cabin and a cargo door on the left. The aircraft can be optionally fitted with an underslung cargo pod. The basic 208
-        airframe has a fixed tricycle landing gear but can also be fitted with various types of landing gear, allowing it to operate in a wide variety of environments. Some
-        common adaptations include floats with retractable landing gear on the Caravan Amphibian model, and skis. The Caravan interior can be outfitted with seats or as a
-        cargo compartment. The standard high-density airline configuration has four rows of 1-2 seating behind the two seats in the cockpit. This variant is capable of
-        holding up to thirteen passengers, although it is marketed as being able to make a profit carrying just four. The cabin can be configured in a low density
-        passenger configuration, with 1-1 seating, as a combination of passengers and cargo, or as a strictly cargo aircraft.\n\nMany variants include an underbelly cargo
-        pod, which can be used for additional freight capacity, or for passenger baggage. A number of Caravans are operated as skydiving aircraft with the left-side cargo
-        hatch converted to a roll-up door. The airplane typically seats nine passengers with a single pilot, although with a FAR Part 23 waiver it can seat up to fourteen
-        passengers. The aircraft is also used for cargo operations. The short-fuselage Caravan burns 180 L of fuel per hour at 170 kn (310 km/h) for 200 nmi (370 km)
-        stages.\n</string>
+    <string name="caravan_desc2" formatted="false">En août 2016, Textron a annoncé qu\'elle déplacerait la ligne de production du Cessna 208 de son siège social de Wichita
+        à son usine de production Independence, au Kansas, pour la fabrication aux côtés des 172, 182, 206 et TTx à pistons; et le jet léger Citation M2. Le déménagement
+        a été fait pour faire place à la production de la Citation Longitude et Denali à Wichita. En 2021, le coût unitaire de la 208 Caravan était de 2,45 millions de
+        dollars US et de 2,845 millions de dollars US pour la 208B Grand Caravan EX.\n\nLe Cessna 208 est un monoplan à cabine contreventée à ailes hautes propulsé par un
+        seul turbopropulseur Pratt &amp; Whitney Canada PT6A en configuration tracteur. La cabine peut accueillir neuf passagers et deux membres d\'équipage lorsqu\'elle
+        est utilisée comme avion de passagers avec quatre portes : une pour chaque membre d\'équipage, une porte d\'escalier sur le côté droit de la cabine et une porte
+        cargo sur la gauche. L\'avion peut être équipé en option d\'une nacelle cargo suspendue. La cellule de base de la 208 est dotée d\'un train d\'atterrissage tricycle
+        fixe mais peut également être équipée de divers types de trains d\'atterrissage, ce qui lui permet de fonctionner dans une grande variété d\'environnements.
+        Certaines adaptations courantes incluent des flotteurs avec train d\'atterrissage rétractable sur le modèle Caravan Amphibian et des skis. L\'intérieur de la
+        caravane peut être équipé de sièges ou comme compartiment à bagages. La configuration standard des compagnies aériennes à haute densité comporte quatre rangées de
+        1 à 2 sièges derrière les deux sièges du cockpit. Cette variante est capable de transporter jusqu\'à treize passagers, bien qu\'elle soit commercialisée comme
+        étant capable de réaliser un bénéfice en n\'en transportant que quatre. La cabine peut être configurée dans une configuration de passagers à faible densité, avec
+        1-1 sièges, comme une combinaison de passagers et de fret, ou comme un avion strictement cargo.\n\nDe nombreuses variantes incluent une cargaison sous le ventre
+        pod, qui peut être utilisé pour une capacité de fret supplémentaire, ou pour les bagages des passagers. Un certain nombre de caravanes sont exploitées comme des
+        avions de parachutisme avec la trappe de chargement du côté gauche convertie en porte à enroulement. L\'avion peut généralement accueillir neuf passagers avec un
+        seul pilote, bien qu\'avec une dérogation FAR Part 23, il puisse accueillir jusqu\'à quatorze passagers. L\'avion est également utilisé pour les opérations de
+        fret. La caravane à fuselage court consomme 180 L de carburant par heure à 170 nœuds (310 km/h) pour 200 nmi (370 km) étapes.\n</string>
 
-    <string name="caravan_desc3">\nThe Cessna aircraft variants include 208 Caravan, 208 Caravan 675, 208A Cargomaster, 208B Grand Caravan, 208B Grand Caravan
-        EX, 208B Super Cargomaster, Caravan Amphibian. Aftermarket variants are comprised of Soloy Pathfinder 21, 850 Caravan, 950 Grand Caravan, Blackhawk
-        Caravan, Supervan 900, XP42A Upgrade; experimentals include the all electric eCaravan and military variants include U-27A, C-16, C-98, AC-208 Combat
+    <string name="caravan_desc3">\nLes variantes d\'avion Cessna comprennent 208 Caravan, 208 Caravan 675, 208A Cargomaster, 208B Grand Caravan, 208B Grand Caravan EX,
+        208B Super Cargomaster, Caravan Amphibian. Les variantes du marché secondaire comprennent Soloy Pathfinder 21, 850 Caravan, 950 Grand Caravan, Blackhawk Caravan,
+        Supervan 900, XP42A Upgrade; les expérimentations incluent l\'eCaravan tout électrique et les variantes militaires incluent U-27A, C-16, C-98, AC-208 Combat
         Caravan, MC-208 Guardian.\n</string>
 
     <string name="caravan_specs_constraint">(208 Caravan)\n</string>
 
 
-    <string name="caravan_identify">How to identify 208 Caravan?</string>
-    <string name="caravan_identify_ans">The standard Cessna Caravan has unequally sized air intakes on each side of the prop spinner and a large exhaust on the right
-        side.</string>
+    <string name="caravan_identify">Comment identifier 208 Caravan?</string>
+    <string name="caravan_identify_ans">Le Cessna Caravan standard a des prises d\'air de taille inégale de chaque côté du cône d\'hélice et un grand échappement sur le
+        côté droit.</string>
 
     <string name="caravan_cockpit_value">1 / 2</string>
-    <string name="caravan_wingspan_value">15.87 m</string>
-    <string name="caravan_length_value">11.46 m</string>
-    <string name="caravan_height_value">4.53 m</string>
-    <string name="caravan_fuselage_value">1.63 m (W) / 1.37 m (H)</string>
-    <string name="caravan_mtow_value">3.63 t</string>
+    <string name="caravan_wingspan_value">15,87 m</string>
+    <string name="caravan_length_value">11,46 m</string>
+    <string name="caravan_height_value">4,53 m</string>
+    <string name="caravan_fuselage_value">1,63 m (L) / 1,37 m (H)</string>
+    <string name="caravan_mtow_value">3,63 t</string>
     <string name="caravan_cruise_speed_value">344 km/h (max.)</string>
-    <string name="caravan_range_value">1,070 nmi</string>
+    <string name="caravan_range_value">1070 nmi</string>
     <string name="caravan_thrust_value">675 shp (503 kW)</string>
     <!--CESSNA CARAVAN-->
 
