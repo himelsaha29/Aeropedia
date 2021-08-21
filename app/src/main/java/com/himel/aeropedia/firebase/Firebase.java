@@ -1,6 +1,7 @@
 package com.himel.aeropedia.firebase;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -30,6 +31,7 @@ import com.himel.aeropedia.R;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -52,6 +54,7 @@ public class Firebase extends AppCompatActivity {
     private ConstraintLayout layout;
     private ScrollView scroll;
     private int totalAircraft = 0;
+
 
     private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
             a340Button, a350Button, a380Button, belugaButton, an22Button, an72Button, an124Button, an225Button, b737Button, b747Button, b757Button, b767Button,
@@ -1528,6 +1531,22 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Gulfstream G280")) {
+                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
+                }
+            }
+            else if (s.equalsIgnoreCase("Gulfstream G-IV")) {
+                NeumorphButton button = findViewById(R.id.gulfstream_giv);
+                TextView status = findViewById(R.id.gulfstream_giv_status);
+                status.setText("Gulfstream G-IV\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("Gulfstream G-IV")) {
                     button.setBackgroundColor(Color.parseColor("#fcb6b6"));
                 }
             }
