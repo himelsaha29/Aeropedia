@@ -8,12 +8,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -101,8 +105,20 @@ public class Cessna extends AppCompatActivity {
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_cessna_light);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                Window window = getWindow();
+                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                window.setStatusBarColor(Color.parseColor("#FF81C0E7"));
+            }
         } else {
             setContentView(R.layout.activity_cessna_dark);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                Window window = getWindow();
+                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                window.setStatusBarColor(Color.parseColor("#FF0B0E31"));
+            }
         }
         darkToggle = findViewById(R.id.dark_toggle);
         scrollView = findViewById(R.id.main_scroll);
@@ -273,9 +289,6 @@ public class Cessna extends AppCompatActivity {
             blur.setAlpha(0f);
         }
 
-        scrollView = findViewById(R.id.main_scroll);
-        scrollView.scrollTo(0, scrollView.getTop());
-        animateCards();
     }
 
 
