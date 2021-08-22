@@ -130,8 +130,6 @@ public class AlexaActivity extends CoreActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        isNetworkAvailable = isNetworkAvailable();
-
         do {
 
             Thread thread = new Thread(new Runnable() {
@@ -184,12 +182,19 @@ public class AlexaActivity extends CoreActivity {
                 login.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        isNetworkAvailable = isNetworkAvailable();
+                        showSnackBar(isNetworkAvailable);
                         alexaManager.sendAudioRequest(requestBody, getRequestCallback());
                     }
                 });
                 languageDarkToggle();
                 loadDrawer();
+
+                isNetworkAvailable = isNetworkAvailable();
+                showSnackBar(isNetworkAvailable);
+
                 doWhileCounter++;
+
                 if (doWhileCounter == 2) {
                     doWhile = false;
                 }
@@ -203,19 +208,6 @@ public class AlexaActivity extends CoreActivity {
 
         } while (doWhile);
 
-        if (!isNetworkAvailable) {
-            mainLayout = findViewById(R.id.mainLayout);
-            Snackbar snackbar = Snackbar
-                    .make(mainLayout, R.string.snackbar, Snackbar.LENGTH_LONG);
-            if (enableDark.equals("No")) {
-                snackbar.setBackgroundTint(Color.parseColor("#72A8E1"));
-                snackbar.setTextColor(Color.BLACK);
-            } else {
-                snackbar.setBackgroundTint(Color.parseColor("#1b1f1f"));
-                snackbar.setTextColor(Color.WHITE);
-            }
-            snackbar.show();
-        }
 
     }
 
@@ -232,6 +224,8 @@ public class AlexaActivity extends CoreActivity {
             darkStatus();
         }
 
+        isNetworkAvailable = isNetworkAvailable();
+        showSnackBar(isNetworkAvailable);
 
         mp = MediaPlayer.create(this, R.raw.google_notification);
         recorderView = findViewById(R.id.recorder);
@@ -268,6 +262,8 @@ public class AlexaActivity extends CoreActivity {
                         e.printStackTrace();
                     }
                 }
+                isNetworkAvailable = isNetworkAvailable();
+                showSnackBar(isNetworkAvailable);
             }
         });
 
@@ -801,6 +797,23 @@ public class AlexaActivity extends CoreActivity {
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    private void showSnackBar(boolean isNetworkAvailable) {
+        if (!isNetworkAvailable) {
+            System.out.println("Network not available");
+            mainLayout = findViewById(R.id.mainLayout);
+            Snackbar snackbar = Snackbar
+                    .make(mainLayout, R.string.snackbar, Snackbar.LENGTH_LONG);
+            if (enableDark.equals("No")) {
+                snackbar.setBackgroundTint(Color.parseColor("#72A8E1"));
+                snackbar.setTextColor(Color.BLACK);
+            } else {
+                snackbar.setBackgroundTint(Color.parseColor("#1b1f1f"));
+                snackbar.setTextColor(Color.WHITE);
+            }
+            snackbar.show();
+        }
     }
 
 }

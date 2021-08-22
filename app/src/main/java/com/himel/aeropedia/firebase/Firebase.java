@@ -3,6 +3,7 @@ package com.himel.aeropedia.firebase;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +11,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -22,6 +25,7 @@ import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -112,6 +116,8 @@ public class Firebase extends AppCompatActivity {
     private NeumorphButton langToggle;
     private Locale locale;
     private NeumorphImageButton darkToggle;
+    private boolean isNetworkAvailable;
+    private CoordinatorLayout mainLayout;
 
 
     private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
@@ -234,6 +240,10 @@ public class Firebase extends AppCompatActivity {
         textCard = findViewById(R.id.textCard);
         layout = findViewById(R.id.buttonContainer);
         scroll = findViewById(R.id.firebaseScroll);
+        mainLayout = findViewById(R.id.mainLayout);
+
+        isNetworkAvailable = isNetworkAvailable();
+        showSnackBar(isNetworkAvailable);
 
 
         Display display = ((android.view.WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
@@ -288,14 +298,18 @@ public class Firebase extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                for (String aircraft : selected) {
-                    AircraftPreference preference = new AircraftPreference(aircraft);
-                    firebase.push().setValue(preference);
-                    chosenAircrafts.add(aircraft);
+                isNetworkAvailable = isNetworkAvailable();
+                showSnackBar(isNetworkAvailable);
+                if(isNetworkAvailable) {
+                    for (String aircraft : selected) {
+                        AircraftPreference preference = new AircraftPreference(aircraft);
+                        firebase.push().setValue(preference);
+                        chosenAircrafts.add(aircraft);
+                    }
+                    SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+                    editor.putStringSet("ChosenAircrafts", chosenAircrafts);
+                    editor.apply();
                 }
-                SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
-                editor.putStringSet("ChosenAircrafts", chosenAircrafts);
-                editor.apply();
             }
         });
 
@@ -1292,6 +1306,9 @@ public class Firebase extends AppCompatActivity {
 
     private void switchLayout() {
         setContentView(R.layout.activity_firebase_results_dark);
+        mainLayout = findViewById(R.id.mainLayout);
+        isNetworkAvailable = isNetworkAvailable();
+        showSnackBar(isNetworkAvailable);
     }
 
     @Override
@@ -1990,7 +2007,7 @@ public class Firebase extends AppCompatActivity {
                 }
                 button.setLayoutParams(layoutParams);
                 if(aircraftsChosen.contains("Gulfstream G-IV")) {
-                    button.setBackgroundColor(Color.parseColor("#fcb6b6"));
+                    button.setBackgroundColor(Color.parseColor("#4c2121"));
                 }
             }
 
@@ -2189,5 +2206,29 @@ public class Firebase extends AppCompatActivity {
     }
 
     /** Changing app language **/
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    private void showSnackBar(boolean isNetworkAvailable) {
+        if (!isNetworkAvailable) {
+            System.out.println("Network not available");
+            mainLayout = findViewById(R.id.mainLayout);
+            Snackbar snackbar = Snackbar
+                    .make(mainLayout, R.string.snackbar, Snackbar.LENGTH_LONG);
+            if (enableDark.equals("No")) {
+                snackbar.setBackgroundTint(Color.parseColor("#72A8E1"));
+                snackbar.setTextColor(Color.BLACK);
+            } else {
+                snackbar.setBackgroundTint(Color.parseColor("#1b1f1f"));
+                snackbar.setTextColor(Color.WHITE);
+            }
+            snackbar.show();
+        }
+    }
 
 }
