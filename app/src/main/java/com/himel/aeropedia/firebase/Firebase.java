@@ -249,7 +249,7 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 switchLayout();
-                createTreeView();
+                drawer();
                 firebase.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -1291,7 +1291,7 @@ public class Firebase extends AppCompatActivity {
     }
 
     private void switchLayout() {
-        setContentView(R.layout.activity_firebase_results_light);
+        setContentView(R.layout.activity_firebase_results_dark);
     }
 
     @Override
