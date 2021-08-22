@@ -2351,7 +2351,7 @@
         variante 182A a été introduite avec le nom Skylane. Au fur et à mesure que la production se poursuivait, les modèles ultérieurs étaient régulièrement améliorés avec
         des caractéristiques telles qu\'un fuselage plus large, un aileron en flèche avec fenêtre «omni-vision» arrière, compartiment à bagages agrandi, masses brutes plus
         élevées, changements de train d\'atterrissage, etc. Les avions «restart» construits après 1996 étaient différents dans de nombreux autres détails, notamment un
-        moteur différent, une nouvelle conception des sièges, etc. À la mi-2013, Cessna prévoyait d'introduire le modèle suivant du 182T, le JT-A, utilisant le moteur
+        moteur différent, une nouvelle conception des sièges, etc. À la mi-2013, Cessna prévoyait d\'introduire le modèle suivant du 182T, le JT-A, utilisant le moteur
         diesel SMA SR305-230 de 227 ch (169 kW) fonctionnant au Jet-A avec un taux de combustion de 42 L par heure et une vitesse de croisière de 155 kn (287 km/h). Cessna
         n\'a pas fixé de calendrier pour le JT-A et le 172 diesel. Le 182 à moteur à aspiration normale et à essence a été retiré de la production en 2012, mais est revenu
         en 2015. Des Cessna 182 ont également été construits en Argentine par DINFIA (appelés A182), et par Reims Aviation, en France, sous le nom de F182.\n</string>
@@ -2365,10 +2365,10 @@
         commercial de «Skylane RG».\n\nLes R182 et TR182 offrent une amélioration de 10 à 15 % des vitesses de montée et de croisière par rapport à leurs homologues à
         engrenage fixe ou, alternativement, une économie de carburant de 10 à 15% meilleure aux mêmes vitesses au détriment des coûts de maintenance accrus et de la
         réduction des engrenages robustesse. Le R182 de 1978 a un taux de montée au niveau de la mer de 1140 pi/min et une vitesse de croisière (75% BHP) à 2300 m de 156
-        KTAS à température standard. Le système de rentrée du train d'atterrissage du Skylane RG utilise des actionneurs hydrauliques alimentés par une pompe à commande
+        KTAS à température standard. Le système de rentrée du train d\'atterrissage du Skylane RG utilise des actionneurs hydrauliques alimentés par une pompe à commande
         électrique. Le système comprend un avertissement de position de train qui émet une tonalité intermittente à travers le haut-parleur de la cabine
         lorsque le train est en position rentrée et que soit la manette des gaz est réduite en dessous d\'environ 12\" MAP (pression du collecteur) ou les volets sont
-        sortis au-delà de 20 degrés. Dans le En cas de panne d'une pompe hydraulique, le train d\'atterrissage peut être descendu à l\'aide d\'une pompe à main pour
+        sortis au-delà de 20 degrés. Dans le En cas de panne d\'une pompe hydraulique, le train d\'atterrissage peut être descendu à l\'aide d\'une pompe à main pour
         pressuriser le système hydraulique, mais le système ne permet pas de rentrer manuellement le train d\'atterrissage.\n</string>
 
     <string name="skylane_desc3">\nLes variantes de Skylane incluent 182, 182A Skylane, 182B Skylane, 182C Skylane, 182D Skylane, 182E Skylane, 182F Skylane, 182G Skylane,
