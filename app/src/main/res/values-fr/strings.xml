@@ -2339,52 +2339,55 @@
 
 
     <!--SKYLANE-->
-    <string name="skylane_type_value">Light utility aircraft</string>
+    <string name="skylane_type_value">Avion utilitaire léger</string>
     <string name="skylane_engine_value">Lycoming\nIO-540-AB1A5 (2)</string>
     <string name="skylane_intro_value">1956</string>
     <string name="skylane_variants_value">25</string>
 
-    <string name="skylane_desc1" formatted="false">The Cessna 182 Skylane is an American four-seat, single-engined light airplane, built by Cessna of Wichita, Kansas. It
-        has the option of adding two child seats, installed in the baggage area. Introduced in 1956, the 182 has been produced in a number of variants, including a
-        version with retractable landing gear, and is the second most popular Cessna model still in production, after the 172. So far, a total of over
-        23,237 Skylanes have been built.\n\nThe Cessna 182 was introduced in 1956 as a tricycle gear variant of the 180. In 1957, the 182A variant was introduced along
-        with the name Skylane. As production continued, later models were improved regularly with features such as a wider fuselage, swept tailfin with
-        rear \"omni-vision\" window, enlarged baggage compartment, higher gross weights, landing gear changes, etc. The \"restart\" aircraft built after 1996 were
-        different in many other details including a different engine, new seating design, etc. By mid-2013, Cessna planned to introduce the next model of the 182T, the
-        JT-A, using the 227 hp (169 kW) SMA SR305-230 diesel engine running on Jet-A with a burn rate of 42 L per hour and cruise at 155
-        kn (287 km/h). Cessna has no timeline for the JT-A and the diesel 172. The normally aspirated, avgas fueled 182 went out of production in 2012, but came back
-        in 2015. Cessna 182s were also built in Argentina by DINFIA (called A182), and by Reims Aviation, France, as the F182.\n</string>
+    <string name="skylane_desc1" formatted="false">Le Cessna 182 Skylane est un avion léger américain monomoteur à quatre places, construit par Cessna de Wichita, Kansas.
+        Il a la possibilité d\'ajouter deux sièges enfants, installés dans la zone des bagages. Introduit en 1956, le 182 a été produit dans un certain nombre de variantes,
+        y compris une version avec train d\'atterrissage rétractable, et est le deuxième modèle Cessna le plus populaire encore en production, après le 172. Jusqu\'à
+        présent, un total de plus de 23 237 Skylanes ont été construites.\n\nLe Cessna 182 a été introduit en 1956 en tant que variante à tricycle du 180. En 1957, la
+        variante 182A a été introduite avec le nom Skylane. Au fur et à mesure que la production se poursuivait, les modèles ultérieurs étaient régulièrement améliorés avec
+        des caractéristiques telles qu\'un fuselage plus large, un aileron en flèche avec fenêtre «omni-vision» arrière, compartiment à bagages agrandi, masses brutes plus
+        élevées, changements de train d\'atterrissage, etc. Les avions «restart» construits après 1996 étaient différents dans de nombreux autres détails, notamment un
+        moteur différent, une nouvelle conception des sièges, etc. À la mi-2013, Cessna prévoyait d'introduire le modèle suivant du 182T, le JT-A, utilisant le moteur
+        diesel SMA SR305-230 de 227 ch (169 kW) fonctionnant au Jet-A avec un taux de combustion de 42 L par heure et une vitesse de croisière de 155 kn (287 km/h). Cessna
+        n\'a pas fixé de calendrier pour le JT-A et le 172 diesel. Le 182 à moteur à aspiration normale et à essence a été retiré de la production en 2012, mais est revenu
+        en 2015. Des Cessna 182 ont également été construits en Argentine par DINFIA (appelés A182), et par Reims Aviation, en France, sous le nom de F182.\n</string>
 
-    <string name="skylane_desc2" formatted="false">The Cessna 182 is an all-metal (mostly aluminum alloy) aircraft, although some parts – such as engine cowling nosebowl
-        and wingtips – are made of fiberglass or thermoplastic material. Its wing has the same planform as the smaller Cessna 172 and the larger 205/206 series; however,
-        some wing details such as flap and aileron design are the same as the 172 and are not like the 205/206 components. The retractable gear R182 and TR182 were
-        offered from 1978 to 1986, without and with engine turbocharging respectively. The model designation nomenclature differs from some other Cessna models with
-        optional retractable gear. For instance the retractable version of the Cessna 172 was designated as the 172RG, whereas the retractable gear version of the Cessna
-        182 is the R182. Cessna gave the R182 the marketing name of \"Skylane RG\".\n\nThe R182 and TR182 offer 10-15% improvement in climb and cruise speeds over their
-        fixed gear counterparts or, alternatively, 10-15% better fuel economy at the same speeds at the expense of increased maintenance costs and decreased gear
-        robustness. The 1978 R182 has a sea level climb rate of 1140 fpm and cruising speed (75% BHP) at 2,300 m of 156 KTAS at standard temperature. The landing gear
-        retraction system in the Skylane RG uses hydraulic actuators powered by an electrically driven pump. The system includes a gear position warning that emits an
-        intermittent tone through the cabin speaker when the gear is in the retracted position and either the throttle is reduced below approximately 12\" MAP (manifold
-        pressure) or the flaps are extended beyond 20 degrees. In the event of a hydraulic pump failure, the landing gear may be lowered using a hand pump to pressurize
-        the hydraulic system. The system does not, however, allow the landing gear to be manually retracted.\n</string>
+    <string name="skylane_desc2" formatted="false">Le Cessna 182 est un avion tout en métal (principalement en alliage d\'aluminium), bien que certaines pièces - telles
+        que le capot avant du capot moteur et les extrémités des ailes - soient en fibre de verre ou en matériau thermoplastique. Son aile a la même forme de plan que le
+        plus petit Cessna 172 et la plus grande série 205/206; cependant, certains détails de l\'aile tels que la conception des volets et des ailerons sont les mêmes que
+        ceux du 172 et ne ressemblent pas aux composants 205/206. Les trains rétractables R182 et TR182 ont été proposés de 1978 à 1986, respectivement sans et avec
+        turbocompresseur. La nomenclature de désignation du modèle diffère de certains autres modèles Cessna avec train rétractable en option. Par exemple, la version
+        rétractable du Cessna 172 a été désignée sous le nom de 172RG, tandis que la version à train rétractable du Cessna 182 est le R182. Cessna a donné au R182 le nom
+        commercial de «Skylane RG».\n\nLes R182 et TR182 offrent une amélioration de 10 à 15 % des vitesses de montée et de croisière par rapport à leurs homologues à
+        engrenage fixe ou, alternativement, une économie de carburant de 10 à 15% meilleure aux mêmes vitesses au détriment des coûts de maintenance accrus et de la
+        réduction des engrenages robustesse. Le R182 de 1978 a un taux de montée au niveau de la mer de 1140 pi/min et une vitesse de croisière (75% BHP) à 2300 m de 156
+        KTAS à température standard. Le système de rentrée du train d'atterrissage du Skylane RG utilise des actionneurs hydrauliques alimentés par une pompe à commande
+        électrique. Le système comprend un avertissement de position de train qui émet une tonalité intermittente à travers le haut-parleur de la cabine
+        lorsque le train est en position rentrée et que soit la manette des gaz est réduite en dessous d\'environ 12\" MAP (pression du collecteur) ou les volets sont
+        sortis au-delà de 20 degrés. Dans le En cas de panne d'une pompe hydraulique, le train d\'atterrissage peut être descendu à l\'aide d\'une pompe à main pour
+        pressuriser le système hydraulique, mais le système ne permet pas de rentrer manuellement le train d\'atterrissage.\n</string>
 
-    <string name="skylane_desc3">\nSkylane variants include 182, 182A Skylane, 182B Skylane, 182C Skylane, 182D Skylane, 182E Skylane, 182F Skylane, 182G Skylane,
-        182H Skylane, 182J Skylane, 182K Skylane, 182L Skylane, 182M Skylane, 182N Skylane, 182P Skylane, 182Q Skylane, 182R, 182S Skylane, 182T Skylane, R182 Skylane RG,
-        T182, T182T Skylane, TR182 Turbo Skylane RG, T182JT-A Turbo Skylane JT-A, Robertson STOL 182.\n</string>
+    <string name="skylane_desc3">\nLes variantes de Skylane incluent 182, 182A Skylane, 182B Skylane, 182C Skylane, 182D Skylane, 182E Skylane, 182F Skylane, 182G Skylane,
+        Skylane 182H, Skylane 182J, Skylane 182K, Skylane 182L, Skylane 182M, Skylane 182N, Skylane 182P, Skylane 182Q, 182R, Skylane 182S, Skylane 182T, Skylane R182
+        RG, T182, T182T Skylane, TR182 Turbo Skylane RG, T182JT-A Turbo Skylane JT-A, Robertson STOL (Short Take Off and Landing, en anglais) 182.\n</string>
 
     <string name="skylane_specs_constraint">(Cessna 182T)\n</string>
 
 
-    <string name="skylane_identify">How to identify Skylane?</string>
+    <string name="skylane_identify">Comment identifier Skylane?</string>
     <string name="skylane_identify_ans"></string>
 
     <string name="skylane_cockpit_value">1</string>
-    <string name="skylane_wingspan_value">10.97 m</string>
-    <string name="skylane_length_value">8.84 m</string>
-    <string name="skylane_height_value">2.84 m</string>
-    <string name="skylane_fuselage_value">1.07 m (W) / 1.2 m (H)</string>
-    <string name="skylane_mtow_value">1.41 t</string>
-    <string name="skylane_cruise_speed_value">269 km/h (typical),\n280 km/h (max.)</string>
+    <string name="skylane_wingspan_value">10,97 m</string>
+    <string name="skylane_length_value">8,84 m</string>
+    <string name="skylane_height_value">2,84 m</string>
+    <string name="skylane_fuselage_value">1,07 m (L) / 1,2 m (H)</string>
+    <string name="skylane_mtow_value">1,41 t</string>
+    <string name="skylane_cruise_speed_value">269 km/h (typique),\n280 km/h (max.)</string>
     <string name="skylane_range_value">930 nmi</string>
     <string name="skylane_thrust_value">230 hp (170 kW)</string>
     <!--SKYLANE-->
