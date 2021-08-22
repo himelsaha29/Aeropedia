@@ -309,11 +309,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a220) {
-                    a220Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a220Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a220Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a220Button.getText());
                     a220 = true;
                 } else {
-                    a220Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a220Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a220Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a220Button.getText());
                     a220 = false;
                 }
@@ -325,11 +333,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a300) {
-                    a300Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a300Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a300Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a300Button.getText());
                     a300 = true;
                 } else {
-                    a300Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a300Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a300Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a300Button.getText());
                     a300 = false;
                 }
@@ -341,11 +357,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a310) {
-                    a310Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a310Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a310Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a310Button.getText());
                     a310 = true;
                 } else {
-                    a310Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a310Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a310Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a310Button.getText());
                     a310 = false;
                 }
@@ -357,11 +381,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a318) {
-                    a318Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a318Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a318Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a318Button.getText());
                     a318 = true;
                 } else {
-                    a318Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a318Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a318Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a318Button.getText());
                     a318 = false;
                 }
@@ -373,11 +405,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a319) {
-                    a319Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a319Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a319Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a319Button.getText());
                     a319 = true;
                 } else {
-                    a319Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a319Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a319Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a319Button.getText());
                     a319 = false;
                 }
@@ -389,11 +429,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a320) {
-                    a320Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a320Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a320Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a320Button.getText());
                     a320 = true;
                 } else {
-                    a320Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a320Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a320Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a320Button.getText());
                     a320 = false;
                 }
@@ -405,11 +453,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a321) {
-                    a321Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a321Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a321Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a321Button.getText());
                     a321 = true;
                 } else {
-                    a321Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a321Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a321Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a321Button.getText());
                     a321 = false;
                 }
@@ -421,11 +477,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a319neo) {
-                    a319neoButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a319neoButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a319neoButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a319neoButton.getText());
                     a319neo = true;
                 } else {
-                    a319neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a319neoButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a319neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a319neoButton.getText());
                     a319neo = false;
                 }
@@ -437,11 +501,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a320neo) {
-                    a320neoButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a320neoButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a320neoButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a320neoButton.getText());
                     a320neo = true;
                 } else {
-                    a320neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a320neoButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a320neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a320neoButton.getText());
                     a320neo = false;
                 }
@@ -453,11 +525,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a321neo) {
-                    a321neoButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a321neoButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a321neoButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a321neoButton.getText());
                     a321neo = true;
                 } else {
-                    a321neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a321neoButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a321neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a321neoButton.getText());
                     a321neo = false;
                 }
@@ -469,11 +549,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a330) {
-                    a330Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a330Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a330Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a330Button.getText());
                     a330 = true;
                 } else {
-                    a330Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a330Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a330Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a330Button.getText());
                     a330 = false;
                 }
@@ -485,11 +573,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a330neo) {
-                    a330neoButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a330neoButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a330neoButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a330neoButton.getText());
                     a330neo = true;
                 } else {
-                    a330neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a330neoButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a330neoButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a330neoButton.getText());
                     a330neo = false;
                 }
@@ -501,11 +597,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a340) {
-                    a340Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a340Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a340Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a340Button.getText());
                     a340 = true;
                 } else {
-                    a340Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a340Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a340Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a340Button.getText());
                     a340 = false;
                 }
@@ -517,11 +621,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a350) {
-                    a350Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a350Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a350Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a350Button.getText());
                     a350 = true;
                 } else {
-                    a350Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a350Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a350Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a350Button.getText());
                     a350 = false;
                 }
@@ -533,11 +645,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!a380) {
-                    a380Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a380Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        a380Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) a380Button.getText());
                     a380 = true;
                 } else {
-                    a380Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        a380Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        a380Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) a380Button.getText());
                     a380 = false;
                 }
@@ -549,11 +669,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!beluga) {
-                    belugaButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        belugaButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        belugaButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) belugaButton.getText());
                     beluga = true;
                 } else {
-                    belugaButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        belugaButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        belugaButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) belugaButton.getText());
                     beluga = false;
                 }
@@ -565,11 +693,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!an22) {
-                    an22Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        an22Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        an22Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) an22Button.getText());
                     an22 = true;
                 } else {
-                    an22Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        an22Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        an22Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) an22Button.getText());
                     an22 = false;
                 }
@@ -581,11 +717,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!an72) {
-                    an72Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        an72Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        an72Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) an72Button.getText());
                     an72 = true;
                 } else {
-                    an72Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        an72Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        an72Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) an72Button.getText());
                     an72 = false;
                 }
@@ -597,11 +741,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!an124) {
-                    an124Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        an124Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        an124Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) an124Button.getText());
                     an124 = true;
                 } else {
-                    an124Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        an124Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        an124Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) an124Button.getText());
                     an124 = false;
                 }
@@ -613,11 +765,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!an225) {
-                    an225Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        an225Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        an225Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) an225Button.getText());
                     an225 = true;
                 } else {
-                    an225Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        an225Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        an225Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) an225Button.getText());
                     an225 = false;
                 }
@@ -629,11 +789,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!b737) {
-                    b737Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        b737Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        b737Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) b737Button.getText());
                     b737 = true;
                 } else {
-                    b737Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        b737Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        b737Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) b737Button.getText());
                     b737 = false;
                 }
@@ -645,11 +813,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!b747) {
-                    b747Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        b747Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        b747Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) b747Button.getText());
                     b747 = true;
                 } else {
-                    b747Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        b747Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        b747Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) b747Button.getText());
                     b747 = false;
                 }
@@ -661,11 +837,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!b757) {
-                    b757Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        b757Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        b757Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) b757Button.getText());
                     b757 = true;
                 } else {
-                    b757Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        b757Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        b757Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) b757Button.getText());
                     b757 = false;
                 }
@@ -677,11 +861,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!b767) {
-                    b767Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        b767Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        b767Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) b767Button.getText());
                     b767 = true;
                 } else {
-                    b767Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        b767Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        b767Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) b767Button.getText());
                     b767 = false;
                 }
@@ -693,11 +885,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!b777) {
-                    b777Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        b777Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        b777Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) b777Button.getText());
                     b777 = true;
                 } else {
-                    b777Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        b777Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        b777Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) b777Button.getText());
                     b777 = false;
                 }
@@ -709,11 +909,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!b787) {
-                    b787Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        b787Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        b787Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) b787Button.getText());
                     b787 = true;
                 } else {
-                    b787Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        b787Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        b787Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) b787Button.getText());
                     b787 = false;
                 }
@@ -725,11 +933,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!bombardierChallenger650) {
-                    bombardierChallenger650Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        bombardierChallenger650Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        bombardierChallenger650Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) bombardierChallenger650Button.getText());
                     bombardierChallenger650 = true;
                 } else {
-                    bombardierChallenger650Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        bombardierChallenger650Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        bombardierChallenger650Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) bombardierChallenger650Button.getText());
                     bombardierChallenger650 = false;
                 }
@@ -741,11 +957,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!bombardierCRJ) {
-                    bombardierCRJButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        bombardierCRJButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        bombardierCRJButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) bombardierCRJButton.getText());
                     bombardierCRJ = true;
                 } else {
-                    bombardierCRJButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        bombardierCRJButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        bombardierCRJButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) bombardierCRJButton.getText());
                     bombardierCRJ = false;
                 }
@@ -757,11 +981,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!bombardierLearjet) {
-                    bombardierLearjetButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        bombardierLearjetButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        bombardierLearjetButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) bombardierLearjetButton.getText());
                     bombardierLearjet = true;
                 } else {
-                    bombardierLearjetButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        bombardierLearjetButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        bombardierLearjetButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) bombardierLearjetButton.getText());
                     bombardierLearjet = false;
                 }
@@ -773,11 +1005,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!bombardierGlobal) {
-                    bombardierGlobalButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        bombardierGlobalButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        bombardierGlobalButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) bombardierGlobalButton.getText());
                     bombardierGlobal = true;
                 } else {
-                    bombardierGlobalButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        bombardierGlobalButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        bombardierGlobalButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) bombardierGlobalButton.getText());
                     bombardierGlobal = false;
                 }
@@ -789,11 +1029,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!embraerERJ) {
-                    embraerERJButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        embraerERJButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        embraerERJButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) embraerERJButton.getText());
                     embraerERJ = true;
                 } else {
-                    embraerERJButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        embraerERJButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        embraerERJButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) embraerERJButton.getText());
                     embraerERJ = false;
                 }
@@ -805,11 +1053,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!embraerEJetE2) {
-                    embraerEJetE2Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        embraerEJetE2Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        embraerEJetE2Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) embraerEJetE2Button.getText());
                     embraerEJetE2 = true;
                 } else {
-                    embraerEJetE2Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        embraerEJetE2Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        embraerEJetE2Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) embraerEJetE2Button.getText());
                     embraerEJetE2 = false;
                 }
@@ -821,11 +1077,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!embraerLineage) {
-                    embraerLineageButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        embraerLineageButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        embraerLineageButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) embraerLineageButton.getText());
                     embraerLineage = true;
                 } else {
-                    embraerLineageButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        embraerLineageButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        embraerLineageButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) embraerLineageButton.getText());
                     embraerLineage = false;
                 }
@@ -837,11 +1101,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!embraerPhenom) {
-                    embraerPhenomButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        embraerPhenomButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        embraerPhenomButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) embraerPhenomButton.getText());
                     embraerPhenom = true;
                 } else {
-                    embraerPhenomButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        embraerPhenomButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        embraerPhenomButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) embraerPhenomButton.getText());
                     embraerPhenom = false;
                 }
@@ -853,11 +1125,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!cessnaSkylane) {
-                    cessnaSkylaneButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        cessnaSkylaneButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        cessnaSkylaneButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) cessnaSkylaneButton.getText());
                     cessnaSkylane = true;
                 } else {
-                    cessnaSkylaneButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        cessnaSkylaneButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        cessnaSkylaneButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) cessnaSkylaneButton.getText());
                     cessnaSkylane = false;
                 }
@@ -869,11 +1149,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!cessnaCaravan) {
-                    cessnaCaravanButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        cessnaCaravanButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        cessnaCaravanButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) cessnaCaravanButton.getText());
                     cessnaCaravan = true;
                 } else {
-                    cessnaCaravanButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        cessnaCaravanButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        cessnaCaravanButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) cessnaCaravanButton.getText());
                     cessnaCaravan = false;
                 }
@@ -885,11 +1173,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!cessnaLatitude) {
-                    cessnaLatitudeButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        cessnaLatitudeButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        cessnaLatitudeButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) cessnaLatitudeButton.getText());
                     cessnaLatitude = true;
                 } else {
-                    cessnaLatitudeButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        cessnaLatitudeButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        cessnaLatitudeButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) cessnaLatitudeButton.getText());
                     cessnaLatitude = false;
                 }
@@ -901,11 +1197,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!cessnaLongitude) {
-                    cessnaLongitudeButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        cessnaLongitudeButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        cessnaLongitudeButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) cessnaLongitudeButton.getText());
                     cessnaLongitude = true;
                 } else {
-                    cessnaLongitudeButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        cessnaLongitudeButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        cessnaLongitudeButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) cessnaLongitudeButton.getText());
                     cessnaLongitude = false;
                 }
@@ -917,11 +1221,19 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!gulfstreamG650) {
-                    gulfstreamG650Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        gulfstreamG650Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        gulfstreamG650Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) gulfstreamG650Button.getText());
                     gulfstreamG650 = true;
                 } else {
-                    gulfstreamG650Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        gulfstreamG650Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        gulfstreamG650Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) gulfstreamG650Button.getText());
                     gulfstreamG650 = false;
                 }
@@ -933,33 +1245,43 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!gulfstreamG280) {
-                    gulfstreamG280Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        gulfstreamG280Button.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        gulfstreamG280Button.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) gulfstreamG280Button.getText());
                     gulfstreamG280 = true;
                 } else {
-                    gulfstreamG280Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        gulfstreamG280Button.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        gulfstreamG280Button.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) gulfstreamG280Button.getText());
                     gulfstreamG280 = false;
                 }
             }
         });
 
-
-
-
-
-
-
         gulfstreamGIVButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 if (!gulfstreamGIV) {
-                    gulfstreamGIVButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        gulfstreamGIVButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        gulfstreamGIVButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
                     selected.add((String) gulfstreamGIVButton.getText());
                     gulfstreamGIV = true;
                 } else {
-                    gulfstreamGIVButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        gulfstreamGIVButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        gulfstreamGIVButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
                     selected.remove((String) gulfstreamGIVButton.getText());
                     gulfstreamGIV = false;
                 }
