@@ -1,73 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
+<com.mxn.soul.flowingdrawer_core.FlowingDrawer xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/drawerlayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:clipChildren="false"
+android:clipToPadding="false"
+app:edMenuBackground="#72A8E1"
+app:edMenuSize="260dp"
+app:edPosition="1">
 
+<!--content-->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f2f4f6"
-    android:orientation="vertical">
+    android:id="@+id/mainLayout">
 
-    <HorizontalScrollView
-        android:id="@+id/mainScroll"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f4f6"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <HorizontalScrollView
+            android:id="@+id/mainScroll"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
 
-                <soup.neumorphism.NeumorphCardView
-                    android:id="@+id/textViewCard"
-                    style="@style/Widget.Neumorph.CardView"
-                    android:layout_width="3700dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:clickable="false"
-                    app:cardElevation="0dp"
-                    app:cardPreventCornerOverlap="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:neumorph_backgroundColor="#f2f4f6"
-                    app:neumorph_shadowColorDark="#eaeaea"
-                    app:neumorph_shadowColorLight="#fdfdfd">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:padding="7dp"
-                        android:text="See which group of aviation enthusiasts you are in...this is a very big big and even big scroll view"
-                        android:textColor="@color/black"
-                        android:textSize="35sp" />
-
-                </soup.neumorphism.NeumorphCardView>
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.75"
-                android:orientation="vertical">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:id="@+id/textViewCard"
+                        style="@style/Widget.Neumorph.CardView"
+                        android:layout_width="3700dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:clickable="false"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:neumorph_backgroundColor="#f2f4f6"
+                        app:neumorph_shadowColorDark="#eaeaea"
+                        app:neumorph_shadowColorLight="#fdfdfd">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:padding="7dp"
+                            android:text="See which group of aviation enthusiasts you are in...this is a very big big and even big scroll view"
+                            android:textColor="@color/black"
+                            android:textSize="35sp" />
+
+                    </soup.neumorphism.NeumorphCardView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
 
                         <LinearLayout
@@ -2533,25 +2547,135 @@
 
 
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.05"
+                    android:orientation="vertical">
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.05"
-                android:orientation="vertical">
+        </HorizontalScrollView>
 
-            </LinearLayout>
+    </LinearLayout>
+
+
+
+    <io.alterac.blurkit.BlurLayout
+        android:id="@+id/blurLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        app:blk_blurRadius="10"
+        app:blk_downscaleFactor="0.34"
+        app:blk_fps="0" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+<!--menu-->
+<com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
+    android:id="@+id/menulayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#72A8E1"
+        android:orientation="vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.05"
+            android:orientation="vertical">
+
 
         </LinearLayout>
 
-    </HorizontalScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
 
-</LinearLayout>
+            <ScrollView
+                android:id="@+id/inside"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="true"
+                android:fadingEdgeLength="150dp"
+                android:overScrollMode="always"
+                android:requiresFadingEdge="vertical"/>
 
 
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/lang_toggle"
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:text="@string/language"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/maven_pro_medium"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:neumorph_backgroundColor="#72A8E1"
+                    app:neumorph_shadowColorDark="#689ace"
+                    app:neumorph_shadowColorLight="#78afeb"
+                    app:neumorph_shapeType="flat" />
+
+
+                <soup.neumorphism.NeumorphImageButton
+                    android:id="@+id/dark_toggle"
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bulb_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:neumorph_backgroundColor="#72A8E1"
+                    app:neumorph_shadowColorDark="#689ace"
+                    app:neumorph_shadowColorLight="#78afeb"
+                    app:neumorph_shapeType="pressed" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
+
+</com.mxn.soul.flowingdrawer_core.FlowingDrawer>
 
 

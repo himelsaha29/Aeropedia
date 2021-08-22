@@ -249,6 +249,7 @@ public class Firebase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 switchLayout();
+                createTreeView();
                 firebase.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -1290,7 +1291,7 @@ public class Firebase extends AppCompatActivity {
     }
 
     private void switchLayout() {
-        setContentView(R.layout.activity_firebase_results);
+        setContentView(R.layout.activity_firebase_results_light);
     }
 
     @Override
@@ -1308,14 +1309,16 @@ public class Firebase extends AppCompatActivity {
     private int findLargest() {
         Iterator<String> key = map.keySet().iterator();
         int largestValue = 0;
+        int x = 0;
         while (key.hasNext()) {
             String keyValue = key.next();
             if(map.get(keyValue) > largestValue) {
                 largestValue = map.get(keyValue);
             }
             totalAircraft += map.get(keyValue);
+            x++;
         }
-        System.out.println("TOTAL : " + totalAircraft);
+        System.out.println("TOTAL : " + totalAircraft + " = " + x);
         System.out.println("LARGEST : " + largestValue);
         return largestValue;
     }
