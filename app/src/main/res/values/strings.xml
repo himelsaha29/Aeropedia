@@ -2317,7 +2317,7 @@
     <string name="gulfstream_g650_desc2" formatted="false">In 2021, its equipped price was $68.5M for the G650, and $70.5M for the G650ER. On the eve of the
         October 2019 NBAA Convention &amp; Exhibition in Las Vegas, Gulfstream announced its new flagship, the G700, showing a video of the aircraft taxiing under its own
         power in Savannah. It should fly 7,500 nmi/13,890 km at Mach 0.85 or 6,400 nmi/11,853 km at Mach 0.90. Its longer cabin can accommodate up to five areas. It is powered
-        by Rolls-Royce Pearl 700 engines and has new winglets. Customer deliveries should start in 2022. The $75 million jet is a 10 ft (3.0 m) stretch of the G650. The
+        by Rolls-Royce Pearl 700 engines and has new winglets. Customer deliveries should start in 2022. The $75 million jet is a 3.0 m stretch of the G650. The
         aircraft completed its first flight on February 14, 2020.\n\nThe G650 has a cruise speed of Mach 0.85 to 0.90, with maximum speed of Mach 0.925 and a range of up to 7,000
         nmi (13,000 km). It can be equipped with a full kitchen and bar and may be equipped with a variety of entertainment features including satellite telephones and
         wireless Internet. The jet uses two Rolls-Royce BR725 engines, each producing a maximum thrust of 75.6 kN. Gulfstream states that with a
@@ -2334,7 +2334,7 @@
         500. At FL 470 and ISA-7°C, it cruises at Mach 0.85 or 480 kn (890 km/h) TAS and burns 1,100 kg per hour at a weight of 30,600 kg, raising to 1,400 kg per hour at
         Mach 0.90 or 506 kn (937 km/h) TAS. The G700\'s flight deck is upgraded to the Symmetry flight deck from the G500/G600.\n</string>
 
-    <string name="gulfstream_g650_desc3">\nThe G650 variants include the initial production version G650, G650ER, G700\n</string>
+    <string name="gulfstream_g650_desc3">\nThe G650 variants include the initial production version G650, G650ER, G700.\n</string>
 
     <string name="gulfstream_g650_specs_constraint">(G650, G650ER, G700 compared in order)\n</string>
 

@@ -2394,71 +2394,76 @@
 
 
     <!--GULFSTREAM G650-->
-    <string name="gulfstream_g650_type_value">Business jet</string>
+    <string name="gulfstream_g650_type_value">Avion d\'affaires</string>
     <string name="gulfstream_g650_engine_value">Rolls-Royce BR725\nA1-12 / Pearl 700 (2)</string>
-    <string name="gulfstream_g650_first_flight_value">25 November 2009</string>
-    <string name="gulfstream_g650_customer_value">Qatar Executive as\nofJuly 2016</string>
-    <string name="gulfstream_g650_variants_value">2 (active)</string>
+    <string name="gulfstream_g650_first_flight_value">25 novembre 2009</string>
+    <string name="gulfstream_g650_customer_value">Qatar Executive en July 2016</string>
+    <string name="gulfstream_g650_variants_value">2 (actifs)</string>
 
-    <string name="gulfstream_g650_desc1" formatted="false">The Gulfstream G650 was formally launched as an internal company project in May 2005, and publicly unveiled
-        on March 13, 2008. At the public announcement occasion, company executives stated the new model would become Gulfstream\'s largest, fastest and most expensive
-        business jet on entry to the market. The wing design was completed in 2006. A total of 1,400 hours of wind tunnel testing was completed by 2008. A pressure-test
-        fuselage was built and tested, including an ultimate-pressure test of 18.37 psi (1,267 hPa). The G650 taxied under its own power for the first time on September
-        26, 2009. A public rollout ceremony was later held on September 29, 2009. The G650 had its maiden flight on November 25, 2009. Flight testing for the maximum
-        operating speed of Mach 0.925 was announced as completed on May 4, 2010. Gulfstream reported on August 26, 2010 that the G650 hit a maximum speed of Mach 0.995
-        during a dive as part of its 1,800-hour flight test program. In April 2011, a G650 crashed shortly after lift off. The cause was determined to be related to the
-        speeds carried out for the single engine take off run. The G650 test aircraft were grounded until May 28, 2011, when the remaining test aircraft were allowed to
-        return to flight testing. On September 7, 2012, the G650 received its type certificate from the US Federal Aviation Administration (FAA). Its first delivery was
-        to an American customer, Preston Henn, on December 27, 2012.\n\nThe G650 had a nominal list price of $64.5 million in 2013, but there was a three-year waiting
-        list. Some aircraft produced for delivery in 2013 sold for more than $70 million to buyers that wanted to take immediate delivery. After rising to $71-73 million
-        in 2014, initial enthusiasm dissipated and the value of pre-owned G650s stabilized at $50 million after the competing Bombardier Global 7500 was certified in
-        2018. On May 18, 2014, Gulfstream announced at the annual European Business Aviation Association exhibition, that it had developed an extended range version
-        called the G650ER. The G650ER is capable of flying 7,500 nautical miles (13,900 km; 8,600 mi) at Mach 0.85, due to its 1,814 kg increase in fuel
-        capacity. Gulfstream stated that in March a G650ER development aircraft had flown non-stop from Hong Kong to Teterboro, New Jersey in the United States,a
-        distance of 7,494 nautical miles (13,879 km; 8,624 mi).\n\nIt had also flown non-stop from Los Angeles to Melbourne in Australia. The extra fuel is housed in
-        existing space inside the G650\'s wings and aircraft already built may be quickly upgraded to the ER version. The G650ER received its certification in October
-        2014 and began deliveries in late 2014 ahead of its 2015 target. The G650ER attempted two world records from New York to Beijing to Savannah in February
-        2015. The same year, a G650ER set a new record for the longest non-stop flight by a purpose-built business jet, flying 8,010 nautical miles (14,835 km; 9,218 mi)
-        from Singapore to Las Vegas with four passengers and crew. The record was surpassed by a Bombardier Global 7500 in March 2019, before the G650ER retook the record
-        in April 2019 by flying 8,379 nmi (15,518 km) from Singapore to Tucson.\n</string>
+    <string name="gulfstream_g650_desc1" formatted="false">Le Gulfstream G650 a été officiellement lancé en tant que projet d\'entreprise interne en mai 2005, et dévoilé
+        publiquement le 13 mars 2008. À l\'occasion de l\'annonce publique, les dirigeants de l\'entreprise ont déclaré que le nouveau modèle deviendrait le jet d\'affaires
+        le plus grand, le plus rapide et le plus cher de Gulfstream à son entrée sur le marché. La conception de l\'aile a été achevée en 2006. Un total de 1400 heures
+        d\'essais en soufflerie a été achevée en 2008. Un fuselage de test de pression a été construit et testé, y compris un test de pression ultime de 18,37 psi (1 267 hPa).
+        Le G650 a roulé par ses propres moyens pour la première fois en septembre 26, 2009. Une cérémonie de déploiement publique a eu lieu plus tard le 29 septembre 2009.
+        Le G650 a effectué son vol inaugural le 25 novembre 2009. Les essais en vol pour la vitesse de fonctionnement maximale de Mach 0,925 ont été annoncés comme terminés
+        le 4 mai 2010. Gulfstream a rapporté le 26 août 2010 que le G650 avait atteint une vitesse maximale de Mach 0,995 lors d\'une plongée dans le cadre de son programme
+        d\'essais en vol de 1800 heures. En avril 2011, un G650 s\'est écrasé peu de temps après son décollage. La cause a été déterminée comme étant liée aux vitesses
+        effectuées pour la course au décollage d\'un seul moteur. Les avions d\'essai G650 ont été immobilisés jusqu\'au 28 mai 2011, date à laquelle les avions d\'essai
+        restants ont été autorisés à reprendre les essais en vol. Le 7 septembre 2012, le G650 a reçu son certificat de type de la Federal Aviation Administration (FAA)
+        des États-Unis. Sa première livraison a été à un client américain, Preston Henn, le 27 décembre 2012.\n\nLe G650 avait un prix catalogue nominal de 64,5 millions de
+        dollars en 2013, mais il y avait une liste d\'attente de trois ans. Certains avions produits pour livraison en 2013 se sont vendus pour plus de 70 millions de
+        dollars à des acheteurs qui souhaitaient être livrés immédiatement. Après avoir atteint 71-73 millions de dollars en 2014, l\'enthousiasme initial s\'est dissipé
+        et la valeur des G650 d\'occasion s\'est stabilisée à 50 millions de dollars après la certification du Bombardier Global 7500 concurrent en 2018. Le 18 mai 2014,
+        Gulfstream a annoncé lors de l\'European Business Aviation Exposition de l\'association, qu\'elle avait développé une version à gamme étendue appelé le G650ER. Le
+        G650ER est capable de parcourir 7 500 milles marins (13900 km ; 8600 mi) à Mach 0,85, en raison de son augmentation de 1814 kg de carburant capacité. Gulfstream
+        a déclaré qu\'en mars un avion de développement G650ER avait volé sans escale de Hong Kong à Teterboro, New Jersey aux États-Unis, a distance de 7494 milles marins
+        (13 879 km; 8 624 mi).\n\nIl avait également volé sans escale de Los Angeles à Melbourne en Australie. Le carburant supplémentaire est logé dans l\'espace existant
+        à l\'intérieur des ailes du G650 et les avions déjà construits peuvent être rapidement mis à niveau vers la version ER. Le G650ER a reçu sa certification en octobre
+        2014 et a commencé à être livré fin 2014 avant son objectif 2015. Le G650ER a tenté deux records du monde de New York à Pékin à Savannah en février 2015. La même
+        année, un G650ER a établi un nouveau record pour le plus long vol sans escale effectué par un jet d'affaires spécialement conçu, parcourant 8010 milles marins
+        (14835 km ; 9218 mi) de Singapour à Las Vegas avec quatre passagers et membres d\'équipage. Le record a été dépassé par un Bombardier Global 7500 en mars 2019,
+        avant que le G650ER ne reprenne le record en avril 2019 en parcourant 8 379 nmi (15518 km) de Singapour à Tucson.\n</string>
 
-    <string name="gulfstream_g650_desc2" formatted="false">In 2021, its equipped price was $68.5M for the G650, and $70.5M for the G650ER. On the eve of the
-        October 2019 NBAA Convention &amp; Exhibition in Las Vegas, Gulfstream announced its new flagship, the G700, showing a video of the aircraft taxiing under its own
-        power in Savannah. It should fly 7,500 nmi/13,890 km at Mach 0.85 or 6,400 nmi/11,853 km at Mach 0.90. Its longer cabin can accommodate up to five areas. It is powered
-        by Rolls-Royce Pearl 700 engines and has new winglets. Customer deliveries should start in 2022. The $75 million jet is a 10 ft (3.0 m) stretch of the G650. The
-        aircraft completed its first flight on February 14, 2020.\n\nThe G650 has a cruise speed of Mach 0.85 to 0.90, with maximum speed of Mach 0.925 and a range of up to 7,000
-        nmi (13,000 km). It can be equipped with a full kitchen and bar and may be equipped with a variety of entertainment features including satellite telephones and
-        wireless Internet. The jet uses two Rolls-Royce BR725 engines, each producing a maximum thrust of 75.6 kN. Gulfstream states that with a
-        weight of less than 45,400 kg, it is able to land at small airports avoiding the busy airports around the world. To provide better usage of the internal volume,
-        Gulfstream designers rejected the usual circular fuselage cross-section in favor of an oval which uses a flatter lower portion. The cabin is 2.59 m wide and 1.96 m
-        high, allowing the craft to be configured to carry between 11 and 18 passengers. The fuselage is of metal construction; composite materials are used for
-        empennage, winglets, rear pressure bulkhead, engine cowlings, cabin floor structure and many fairings. The elliptical cabin windows, eight on each side of the
-        fuselage, are 71 cm wide. Panels are bonded rather than riveted, reducing parts count compared to the G550.\n\nThe wing uses greater sweep (36 degrees) than
-        previous Gulfstream aircraft (for example, the G550 wing has 27 degrees of sweep). It does not use leading-edge high-lift devices, and tracks for rear-mounted
-        flaps are completely enclosed within the airfoil contour. The wing\'s leading edge is a continuously-changing curve, and the airfoil varies continuously from
-        root to tip, which incorporates winglets. The aircraft controls are completely fly-by-wire, with no mechanical control between pilot and flight surfaces. The
-        surfaces are moved by dual hydraulic systems. The G650 shares its yokes and column with the G550 in an effort to receive a common type rating. While most newer
-        airliners now employ fly-by-wire technology, the G650 was only the second fly-by-wire business jet, after the Dassault Falcon 7X and before the Embraer Legacy
-        500. At FL 470 and ISA-7°C, it cruises at Mach 0.85 or 480 kn (890 km/h) TAS and burns 1,100 kg per hour at a weight of 30,600 kg, raising to 1,400 kg per hour at
-        Mach 0.90 or 506 kn (937 km/h) TAS. The G700\'s flight deck is upgraded to the Symmetry flight deck from the G500/G600.\n</string>
+    <string name="gulfstream_g650_desc2" formatted="false">En 2021, son prix équipé était de 68,5 M$ pour le G650 et de 70,5 M$ pour le G650ER. À la veille de la convention
+        et de l\'exposition NBAA d\'octobre 2019 à Las Vegas, Gulfstream a annoncé son nouveau produit phare, le G700, montrant une vidéo de l\'avion roulant par ses propres
+        moyens à Savannah. Il devrait parcourir 7 500 nmi/13 890 km à Mach 0,85 ou 6 400 nmi/11 853 km à Mach 0,90. Sa cabine plus longue peut accueillir jusqu\'à cinq
+        zones. Il est propulsé par des moteurs Rolls-Royce Pearl 700 et dispose de nouveaux winglets. Les livraisons aux clients devraient commencer en 2022. Le jet de
+        75 millions de dollars est un tronçon de 3 m du G650. L\'avion a effectué son premier vol le 14 février 2020.\n\nLe G650 a une vitesse de croisière de Mach 0,85 à
+        0,90, avec une vitesse maximale de Mach 0,925 et une autonomie allant jusqu\'à 7000 nmi (13000 km). Il peut être équipé d\'une cuisine complète et d\'un bar et
+        peut être équipé d\'une variété de fonctions de divertissement, notamment des téléphones satellite et internet sans fil. Le jet utilise deux moteurs Rolls-Royce
+        BR725, chacun produisant une poussée maximale de 75,6 kN. Gulfstream déclare qu\'avec un poids inférieur à 45 400 kg, il est capable d\'atterrir dans de petits
+        aéroports en évitant les aéroports très fréquentés du monde entier. Pour une meilleure utilisation du volume interne, les concepteurs de Gulfstream ont rejeté la
+        section transversale circulaire habituelle du fuselage en faveur d\'un ovale qui utilise une partie inférieure plus plate. La cabine mesure 2,59 m de large et
+        1,96 m de haut, ce qui permet de configurer l\'engin pour transporter entre 11 et 18 passagers. Le fuselage est de construction métallique; les matériaux composites
+        sont utilisés pour l\'empennage, les winglets, la cloison de pression arrière, les capots moteur, la structure du plancher de la cabine et de nombreux carénages.
+        Les hublots elliptiques de la cabine, huit de chaque côté du fuselage, mesurent 71 cm de large. Les panneaux sont collés plutôt que rivetés, ce qui réduit le
+        nombre de pièces par rapport au G550.\n\nL\'aile utilise un balayage plus grand (36 degrés) que les avions Gulfstream précédents (par exemple, l\'aile G550 a 27
+        degrés de balayage). Il n\'utilise pas de dispositifs à haute portance de pointe et les chenilles des volets montés à l\'arrière sont complètement enfermées dans
+        le contour du profil aérodynamique. Le bord d\'attaque de l\'aile est une courbe en constante évolution, et le profil aérodynamique varie continuellement de la
+        racine à la pointe, qui incorpore des winglets. Les commandes de l\'avion sont entièrement pilotées par fil, sans contrôle mécanique entre le pilote et les surfaces
+        de vol. Les surfaces sont déplacées par des systèmes hydrauliques doubles. Le G650 partage ses culasses et sa colonne avec le G550 dans le but de recevoir une
+        qualification de type commune. Alors que la plupart des nouveaux avions de ligne utilisent désormais la technologie fly-by-wire, le G650 n\'était que le
+        deuxième jet d\'affaires fly-by-wire, après le Dassault Falcon 7X et avant l\'Embraer Legacy 500. Au FL 470 et ISA-7°C, il croise à Mach 0,85 ou 480 kn (890 km/h)
+        TAS et brûle 1100 kg par heure à un poids de 30600 kg, passant à 1400 kg par heure à Mach 0,90 ou 506 kn (937 km/h) TAS. Le poste de pilotage du G700 est mis à
+        niveau vers le poste de pilotage Symmetry du G500/G600.\n</string>
 
-    <string name="gulfstream_g650_desc3">\nThe G650 variants include the initial production version G650, G650ER, G700\n</string>
+    <string name="gulfstream_g650_desc3">\nLes variantes G650 incluent la version de production initiale G650, G650ER, G700.\n</string>
 
-    <string name="gulfstream_g650_specs_constraint">(G650, G650ER, G700 compared in order)\n</string>
+    <string name="gulfstream_g650_specs_constraint">(comparaison ordonnée des variantes G650, G650ER, G700)\n</string>
 
 
-    <string name="gulfstream_g650_identify">How to identify Gulfstream G650?</string>
+    <string name="gulfstream_g650_identify">Comment identifier Gulfstream G650?</string>
     <string name="gulfstream_g650_identify_ans"></string>
 
     <string name="gulfstream_g650_cockpit_value">2</string>
-    <string name="gulfstream_g650_wingspan_value">30.36 m / 31.39 m (G700)</string>
-    <string name="gulfstream_g650_length_value">30.41 m / 33.48 m (G700)</string>
-    <string name="gulfstream_g650_height_value">7.72 m / 7.75 m (G700)</string>
-    <string name="gulfstream_g650_fuselage_value">2.49 m (W) / 1.91 m (H)</string>
-    <string name="gulfstream_g650_mtow_value">45.18 / 46.99 / 48.81 t</string>
-    <string name="gulfstream_g650_cruise_speed_value">904 km/h (typical),\n956 km/h (max.)</string>
-    <string name="gulfstream_g650_range_value">7,000 nmi (G650) / 7,500 nmi</string>
-    <string name="gulfstream_g650_thrust_value">75.2 kN / 81.2 kN (G700)</string>
+    <string name="gulfstream_g650_wingspan_value">30,36 m / 31,39 m (G700)</string>
+    <string name="gulfstream_g650_length_value">30,41 m / 33,48 m (G700)</string>
+    <string name="gulfstream_g650_height_value">7,72 m / 7,75 m (G700)</string>
+    <string name="gulfstream_g650_fuselage_value">2,49 m (L) / 1,91 m (H)</string>
+    <string name="gulfstream_g650_mtow_value">45,18 / 46,99 / 48,81 t</string>
+    <string name="gulfstream_g650_cruise_speed_value">904 km/h (typique),\n956 km/h (max.)</string>
+    <string name="gulfstream_g650_range_value">7000 nmi (G650) / 7500 nmi</string>
+    <string name="gulfstream_g650_thrust_value">75,2 kN / 81,2 kN (G700)</string>
     <!--GULFSTREAM G650-->
 
 
