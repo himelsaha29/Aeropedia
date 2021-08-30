@@ -20,6 +20,7 @@ import android.view.WindowManager;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.himel.aeropedia.R;
+import com.himel.aeropedia.airbus.AirbusA220;
 import com.himel.aeropedia.airbus.AirbusA300;
 import com.himel.aeropedia.airbus.AirbusA310;
 import com.himel.aeropedia.airbus.AirbusA318;
@@ -305,12 +306,7 @@ public class BoeingGlobemaster extends AppCompatActivity {
 
 
         TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.airbus), "No", "airbus", null));
-        TreeNode a220Node = null;
-        if (verifyDarkMode().equals("Yes")) {
-            a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a220), "HighlightLight", "a220", null));
-        } else {
-            a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a220), "HighlightDark", "a220", null));
-        }
+        TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a220), "No", "a220", AirbusA220.class));
         TreeNode a300Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a300), "No", "a300", AirbusA300.class));
         TreeNode a310Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a310), "No", "a310", AirbusA310.class));
         TreeNode a318Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a318), "No", "a318", AirbusA318.class));
@@ -343,7 +339,13 @@ public class BoeingGlobemaster extends AppCompatActivity {
         TreeNode b757 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b757), "No", "b757", Boeing757.class));
         TreeNode b747 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b747), "No", "b747", Boeing747.class));
         TreeNode b767 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b767), "No", "b767", Boeing767.class));
-        boeing.addChildren(b737, b747, b757, b767, b777, b787);
+        TreeNode globemaster = null;
+        if (verifyDarkMode().equals("Yes")) {
+            globemaster = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "C-17 Globemaster III", "HighlightLight", "globemaster", null));
+        } else {
+            globemaster = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "C-17 Globemaster III", "HighlightDark", "globemaster", null));
+        }
+        boeing.addChildren(b737, b747, b757, b767, b777, b787, globemaster);
         TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
         TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "b767", Learjet75.class));
         TreeNode challenger650 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.challenger650), "No", "challenger650", Challenger650.class));
@@ -381,7 +383,7 @@ public class BoeingGlobemaster extends AppCompatActivity {
         root.addChildren(flightTrackerRoot);
         root.addChildren(firebaseRoot);
         manufacturerRoot.setExpanded(true);
-        airbus.setExpanded(true);
+        boeing.setExpanded(true);
 
         tView = new AndroidTreeView(this, root);
         tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom);

@@ -345,7 +345,8 @@ public class Boeing767 extends AppCompatActivity {
         } else {
             b767 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b767), "HighlightDark", "b767", null));
         }
-        boeing.addChildren(b737, b747, b757, b767, b777, b787);
+        TreeNode globemaster = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "C-17 Globemaster III", "No", "globemaster", BoeingGlobemaster.class));
+        boeing.addChildren(b737, b747, b757, b767, b777, b787, globemaster);
 
         TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
         TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "b767", Learjet75.class));

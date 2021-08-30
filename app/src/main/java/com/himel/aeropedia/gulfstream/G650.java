@@ -44,6 +44,7 @@ import com.himel.aeropedia.boeing.Boeing747;
 import com.himel.aeropedia.boeing.Boeing757;
 import com.himel.aeropedia.boeing.Boeing777;
 import com.himel.aeropedia.boeing.Boeing787;
+import com.himel.aeropedia.boeing.BoeingGlobemaster;
 import com.himel.aeropedia.bombardier.CRJ100200;
 import com.himel.aeropedia.bombardier.Challenger650;
 import com.himel.aeropedia.bombardier.Global7500;
@@ -342,8 +343,8 @@ public class G650 extends AppCompatActivity {
         TreeNode b767 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b767), "No", "b767", Boeing777.class));
         TreeNode b777 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b777), "No", "b777", Boeing777.class));
         TreeNode b787 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.b787), "No", "b787", Boeing787.class));
-
-        boeing.addChildren(b737, b747, b757, b767, b777, b787);
+        TreeNode globemaster = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, "C-17 Globemaster III", "No", "globemaster", BoeingGlobemaster.class));
+        boeing.addChildren(b737, b747, b757, b767, b777, b787, globemaster);
 
         TreeNode bombardier = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.bombardier), "No", "bombardier", null));
         TreeNode learjet75 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.learjet75), "No", "learjet75", Learjet75.class));
