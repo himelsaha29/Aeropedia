@@ -38,12 +38,6 @@ import com.himel.aeropedia.antonov.AntonovAn124Ruslan;
 import com.himel.aeropedia.antonov.AntonovAn225Mriya;
 import com.himel.aeropedia.antonov.AntonovAn22Antei;
 import com.himel.aeropedia.antonov.AntonovAn72Cheburashka;
-import com.himel.aeropedia.boeing.Boeing737;
-import com.himel.aeropedia.boeing.Boeing747;
-import com.himel.aeropedia.boeing.Boeing757;
-import com.himel.aeropedia.boeing.Boeing767;
-import com.himel.aeropedia.boeing.Boeing777;
-import com.himel.aeropedia.boeing.Boeing787;
 import com.himel.aeropedia.bombardier.CRJ100200;
 import com.himel.aeropedia.bombardier.Challenger650;
 import com.himel.aeropedia.bombardier.Global7500;
@@ -67,7 +61,6 @@ import com.himel.aeropedia.util.SliderItem;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
-import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 import com.unnamed.b.atv.model.TreeNode;
@@ -103,9 +96,9 @@ public class BoeingGlobemaster extends AppCompatActivity {
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
         if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_boeing_globemaster);
+            setContentView(R.layout.activity_boeing_globemaster_light);
         } else {
-            setContentView(R.layout.activity_airbus_a220_dark);
+            setContentView(R.layout.activity_boeing_globemaster_dark);
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
@@ -430,14 +423,16 @@ public class BoeingGlobemaster extends AppCompatActivity {
 
     private void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
-                sliderItem.setImageLocation(R.drawable.a220_slider01);
+                sliderItem.setImageLocation(R.drawable.globemaster_slider1);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.a220_slider02);
+                sliderItem.setImageLocation(R.drawable.globemaster_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.a220_slider03);
+                sliderItem.setImageLocation(R.drawable.globemaster_slider3);
+            } else if (i == 3) {
+                sliderItem.setImageLocation(R.drawable.globemaster_slider4);
             }
 
             sliderItemList.add(sliderItem);
