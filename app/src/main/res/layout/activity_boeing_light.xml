@@ -274,7 +274,7 @@
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/b787_cover" />
+                            android:src="@drawable/globemaster_cover" />
 
                         <TextView
                             android:layout_width="match_parent"
