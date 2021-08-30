@@ -1569,6 +1569,40 @@
     <!--BOEING 787-->
 
 
+
+    <!--BOEING C-17 GLOBEMASTER III-->
+    <string name="globemaster_type_value">Narrow-body\nairliner</string>
+    <string name="globemaster_engine_value">Pratt &amp; Whitney\nPW1500G (2)</string>
+    <string name="globemaster_first_flight_value">16 September 2013</string>
+    <string name="globemaster_intro_value">15 July 2016 with\nSwiss International Air Lines</string>
+    <string name="globemaster_customer_value">Delta Air Lines</string>
+    <string name="globemaster_variants_value">3</string>
+
+    <string name="globemaster_desc1" formatted="false">\n</string>
+
+    <string name="globemaster_desc2" formatted="false">\n</string>
+
+    <string name="globemaster_desc3">\n\n</string>
+
+    <string name="globemaster_specs_constraint">()\n</string>
+
+
+    <string name="globemaster_identify">How to identify Boeing C-17 Globemaster III?</string>
+    <string name="globemaster_identify_ans"></string>
+
+    <string name="globemaster_cockpit_value">2</string>
+    <string name="globemaster_wingspan_value">35.10 m</string>
+    <string name="globemaster_length_value">35.0 / 38.70 m</string>
+    <string name="globemaster_height_value">11.50 m</string>
+    <string name="globemaster_fuselage_value">3.5 m (W) / ~3.7 m (H)</string>
+    <string name="globemaster_mtow_value">63.1 / 70.9 t</string>
+    <string name="globemaster_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
+    <string name="globemaster_range_value">3,450 / 3,600 nmi</string>
+    <string name="globemaster_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
+    <!--BOEING C-17 GLOBEMASTER III-->
+
+
+
     <!--LEARJET 75-->
     <string name="learjet75_type_value">Business jet</string>
     <string name="learjet75_engine_value">Honeywell TFE731-40BR\n(2)</string>
