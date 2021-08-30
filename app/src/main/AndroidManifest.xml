@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".home.OnBoardScreen"></activity>
+        <activity android:name=".boeing.BoeingGlobemaster"></activity>
+        <activity android:name=".home.OnBoardScreen" />
         <activity
             android:name=".home.SplashScreen"
             android:theme="@style/SplashScreen">
@@ -91,7 +92,7 @@
         <activity android:name=".manufacturers.ManufacturerMenu" />
         <activity android:name=".airbus.AirbusA350" />
         <activity android:name=".manufacturers.Airbus" />
-        <activity android:name=".home.MainActivity"></activity>
+        <activity android:name=".home.MainActivity" />
         <activity android:name=".alexa.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

@@ -1569,38 +1569,75 @@
     <!--BOEING 787-->
 
 
-
     <!--BOEING C-17 GLOBEMASTER III-->
-    <string name="globemaster_type_value">Narrow-body\nairliner</string>
-    <string name="globemaster_engine_value">Pratt &amp; Whitney\nPW1500G (2)</string>
-    <string name="globemaster_first_flight_value">16 September 2013</string>
-    <string name="globemaster_intro_value">15 July 2016 with\nSwiss International Air Lines</string>
-    <string name="globemaster_customer_value">Delta Air Lines</string>
-    <string name="globemaster_variants_value">3</string>
+    <string name="globemaster_type_value">Military transport aircraft</string>
+    <string name="globemaster_engine_value">Pratt &amp; Whitney\nF117-PW-100 (4)</string>
+    <string name="globemaster_first_flight_value">15 September 1991</string>
+    <string name="globemaster_intro_value">17 January 1995</string>
+    <string name="globemaster_customer_value">United States Air Force</string>
+    <string name="globemaster_variants_value">4</string>
 
-    <string name="globemaster_desc1" formatted="false">\n</string>
+    <string name="globemaster_desc1" formatted="false">The C-17 Globemaster III is a large military transport aircraft that was developed for the United States Air Force
+        (USAF) from the 1980s to the early 1990s by McDonnell Douglas. The C-17 carries forward the name of two previous piston-engined military cargo aircraft, the Douglas
+        C-74 Globemaster and the Douglas C-124 Globemaster II. The C-17 commonly performs tactical and strategic airlift missions, transporting troops and cargo throughout
+        the world; additional roles include medical evacuation and airdrop duties. It was designed to replace the Lockheed C-141 Starlifter, and also fulfill some of the
+        duties of the Lockheed C-5 Galaxy. Boeing, which merged with McDonnell Douglas in 1997, continued to manufacture C-17 aircraft after the merger. The transport is
+        in service with the U.S. Air Force along with air arms of India, the United Kingdom, Australia, Canada, Qatar, the United Arab Emirates, Kuwait, and the
+        Europe-based multilateral organization Heavy Airlift Wing. During its production phase from 1991 to 2005, a total of 279 Globemasters were built. The final
+        C-17 was completed at the Long Beach, California plant and flown on 29 November 2015.\n\nIn the 1970s, the U.S. Air Force began looking for a replacement for its
+        Lockheed C-130 Hercules tactical cargo aircraft. The Advanced Medium STOL Transport (AMST) competition was held, with Boeing proposing the YC-14, and McDonnell
+        Douglas proposing the YC-15. Though both entrants exceeded specified requirements, the AMST competition was canceled before a winner was selected. The Air Force
+        started the C-X program in November 1979 to develop a larger AMST with longer range to augment its strategic airlift. By 1980, the USAF found itself with a large
+        fleet of aging C-141 Starlifter cargo aircraft. Compounding matters, USAF needed increased strategic airlift capabilities to fulfill its rapid-deployment airlift
+        requirements. The USAF set mission requirements and released a request for proposals (RFP) for C-X in October 1980. McDonnell Douglas elected to develop a new
+        aircraft based on the YC-15. Boeing bid an enlarged three-engine version of its AMST YC-14. Lockheed submitted two designs, a C-5-based design and an enlarged
+        C-141 design. On 28 August 1981, McDonnell Douglas was chosen to build its proposed aircraft, then designated C-17. Compared to the YC-15, the new aircraft differed
+        in having swept wings, increased size, and more powerful engines. This would allow it to perform the work done by the C-141, and to fulfill some of the duties of
+        the Lockheed C-5 Galaxy, freeing the C-5 fleet for outsize cargo.\n\nAlternative proposals were pursued to fill airlift needs after the C-X contest. These were
+        lengthening of C-141As into C-141Bs, ordering more C-5s, continued purchases of KC-10s, and expansion of the Civil Reserve Air Fleet. Limited budgets reduced
+        program funding, requiring a delay of four years. During this time contracts were awarded for preliminary design work and for the completion of engine
+        certification. In December 1985, a full-scale development contract was awarded, under Program Manager Bob Clepper. At this time, first flight was planned for 1990.
+        The Air Force had formed a requirement for 210 aircraft. Development problems and limited funding caused delays in the late 1980s. Criticisms were made of the
+        developing aircraft and questions were raised about more cost-effective alternatives during this time. In April 1990, Secretary of Defense Dick Cheney reduced the
+        order from 210 to 120 aircraft. The maiden flight of the C-17 took place on 15 September 1991 from the McDonnell Douglas\'s plant in Long Beach, California, about
+        a year behind schedule. The first aircraft (T-1) and five more production models (P1-P5) participated in extensive flight testing and evaluation at Edwards Air
+        Force Base. Two complete airframes were built for static and repeated load testing.\n</string>
 
-    <string name="globemaster_desc2" formatted="false">\n</string>
+    <string name="globemaster_desc2" formatted="false">The C-17 Globemaster III is a strategic transport aircraft, able to airlift cargo close to a battle area. The size
+        and weight of U.S. mechanized firepower and equipment have grown in recent decades from increased air mobility requirements, particularly for large or heavy
+        non-palletized outsize cargo. It has a length of 174 feet (53 m) and a wingspan of 169 feet 10 inches (51.77 m), and uses about 8% composite materials, mostly in
+        secondary structure and control surfaces. The C-17 is powered by four Pratt &amp; Whitney F117-PW-100 turbofan engines, which are based on the commercial Pratt
+        &amp; Whitney PW2040 used on the Boeing 757. Each engine is rated at 180 kN of thrust. The engine\'s thrust reversers direct engine exhaust air upwards and forward,
+        reducing the chances of foreign object damage by ingestion of runway debris, and providing enough reverse thrust to back the aircraft up on the ground while
+        taxiing. The thrust reversers can also be used in flight at idle-reverse for added drag in maximum-rate descents. In vortex surfing tests performed by two C-17s, up
+        to 10% fuel savings were reported.\n\nFor cargo operations the C-17 requires a crew of three: pilot, copilot, and loadmaster. The cargo compartment is 27 m long
+        by 5.5 m wide by 3.76 m high. The cargo floor has rollers for palletized cargo but it can be flipped to provide a flat floor suitable for vehicles and other
+        rolling stock. Cargo is loaded through a large aft ramp that accommodates rolling stock, such as a 69-ton (63-metric ton) M1 Abrams main battle tank, other armored
+        vehicles, trucks, and trailers, along with palletized cargo. Maximum payload of the C-17 is 77,500 kg, and its maximum takeoff weight is 265,000 kg. With a payload
+        of 73,000 kg and an initial cruise altitude of 8,500 m, the C-17 has an unrefueled range of about 2,400 nautical miles (4,400 kilometres) on the first 71 aircraft,
+        and 2,800 nautical miles (5,200 kilometres) on all subsequent extended-range models that include a sealed center wing bay as a fuel tank. Boeing informally calls
+        these aircraft the C-17 ER. The C-17\'s cruise speed is about 450 knots (830 km/h) (Mach 0.74). It is designed to airdrop 102 paratroopers and their
+        equipment.\n\nThe C-17 is designed to operate from runways as short as 1,100 m and as narrow as 27 m. In addition, the C-17 can operate from unpaved, unimproved
+        runways (although with greater chance of damage to the aircraft). The thrust reversers can be used to move the aircraft backwards and reverse direction on narrow
+        taxiways using a three- (or more) point turn. The plane is designed for 20 man-hours of maintenance per flight hour, and a 74% mission availability rate.\n</string>
 
-    <string name="globemaster_desc3">\n\n</string>
+    <string name="globemaster_desc3">\nThe Globemaster comes in 4 variants, C-17A, C-17A ER, C-17B, and MD-17.\n</string>
 
-    <string name="globemaster_specs_constraint">()\n</string>
+    <string name="globemaster_specs_constraint">(C-17A)\n</string>
 
 
     <string name="globemaster_identify">How to identify Boeing C-17 Globemaster III?</string>
-    <string name="globemaster_identify_ans"></string>
+    <string name="globemaster_identify_ans">4 engines, T-shape tail, blended L-shaped wingtips, wide fuselage, most aircraft come in grey livery.</string>
 
-    <string name="globemaster_cockpit_value">2</string>
-    <string name="globemaster_wingspan_value">35.10 m</string>
-    <string name="globemaster_length_value">35.0 / 38.70 m</string>
-    <string name="globemaster_height_value">11.50 m</string>
-    <string name="globemaster_fuselage_value">3.5 m (W) / ~3.7 m (H)</string>
-    <string name="globemaster_mtow_value">63.1 / 70.9 t</string>
-    <string name="globemaster_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
-    <string name="globemaster_range_value">3,450 / 3,600 nmi</string>
-    <string name="globemaster_thrust_value">84.1–103.6 kN /\n93.4–103.6 kN</string>
+    <string name="globemaster_cockpit_value">3</string>
+    <string name="globemaster_wingspan_value">51.76 m</string>
+    <string name="globemaster_length_value">53 m</string>
+    <string name="globemaster_height_value">16.79 m</string>
+    <string name="globemaster_mtow_value">265.3 t</string>
+    <string name="globemaster_cruise_speed_value">830 km/h (typical),\n1,080 km/h (max.)</string>
+    <string name="globemaster_range_value">2,420 nmi with\n71.2 t payload</string>
+    <string name="globemaster_thrust_value">179.9 kN</string>
     <!--BOEING C-17 GLOBEMASTER III-->
-
 
 
     <!--LEARJET 75-->

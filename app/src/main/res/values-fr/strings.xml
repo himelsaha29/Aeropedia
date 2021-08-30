@@ -1658,7 +1658,6 @@
     <string name="globemaster_wingspan_value">35.10 m</string>
     <string name="globemaster_length_value">35.0 / 38.70 m</string>
     <string name="globemaster_height_value">11.50 m</string>
-    <string name="globemaster_fuselage_value">3.5 m (W) / ~3.7 m (H)</string>
     <string name="globemaster_mtow_value">63.1 / 70.9 t</string>
     <string name="globemaster_cruise_speed_value">829 km/h (typical),\n871 km/h (max.)</string>
     <string name="globemaster_range_value">3,450 / 3,600 nmi</string>
