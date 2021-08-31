@@ -69,9 +69,9 @@ public class OnBoardScreen extends AppCompatActivity {
         nextButton = findViewById(R.id.next);
 
         if(enableDark.equals("No")) {
-            onBoardAdapter = new OnBoardAdapter(this, false);
+            onBoardAdapter = new OnBoardAdapter(OnBoardScreen.this, false, locale.toString());
         } else {
-            onBoardAdapter = new OnBoardAdapter(this, true);
+            onBoardAdapter = new OnBoardAdapter(OnBoardScreen.this, true, locale.toString());
         }
 
         viewPager.setAdapter(onBoardAdapter);

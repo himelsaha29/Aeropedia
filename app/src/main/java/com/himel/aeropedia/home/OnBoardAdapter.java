@@ -13,15 +13,19 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.himel.aeropedia.R;
 
+import java.util.Locale;
+
 public class OnBoardAdapter extends PagerAdapter {
 
     Context context;
     LayoutInflater layoutInflater;
     boolean dark;
+    String locale;
 
-    public OnBoardAdapter (Context context, boolean dark) {
+    public OnBoardAdapter (Context context, boolean dark, String locale) {
         this.context = context;
         this.dark = dark;
+        this.locale = locale;
     }
 
     public int[] slideImages = {
@@ -32,8 +36,16 @@ public class OnBoardAdapter extends PagerAdapter {
             R.drawable.onboard_4
     };
 
-    public String[] slideHeadings = {
+    public String[] slideHeadingsEn = {
             "Welcome Aboard",
+            "Swipe from the left bezel to open the drawer for easy navigation, light/dark mode and language toggles",
+            "On the interactive flight map, tap on an aircraft for flight route and more information about the flight/aircraft",
+            "Tap LIVE to get the latest flight data",
+            "To interact with Amazon Alexa, tap the recorder to start recording and tap again when you are done or wait for it to respond automatically"
+    };
+
+    public String[] slideHeadingsFr = {
+            "Wilkommen Aboard",
             "Swipe from the left bezel to open the drawer for easy navigation, light/dark mode and language toggles",
             "On the interactive flight map, tap on an aircraft for flight route and more information about the flight/aircraft",
             "Tap LIVE to get the latest flight data",
@@ -50,7 +62,7 @@ public class OnBoardAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return slideHeadings.length;
+        return slideHeadingsEn.length;
     }
 
     @Override
@@ -74,7 +86,11 @@ public class OnBoardAdapter extends PagerAdapter {
         TextView slideDesc = view.findViewById(R.id.slide_desc);
 
         slideImage.setImageResource(slideImages[position]);
-        slideHeader.setText(slideHeadings[position]);
+        if(this.locale.equalsIgnoreCase("fr")) {
+            slideHeader.setText(slideHeadingsFr[position]);
+        } else if(this.locale.equalsIgnoreCase("en")) {
+            slideHeader.setText(slideHeadingsEn[position]);
+        }
         slideDesc.setText(descriptions[position]);
 
         container.addView(view);
