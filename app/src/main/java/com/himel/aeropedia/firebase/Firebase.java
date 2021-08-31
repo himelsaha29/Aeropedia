@@ -123,12 +123,12 @@ public class Firebase extends AppCompatActivity {
 
     private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
             a340Button, a350Button, a380Button, belugaButton, an22Button, an72Button, an124Button, an225Button, b737Button, b747Button, b757Button, b767Button,
-            b777Button, b787Button, bombardierChallenger650Button, bombardierCRJButton, bombardierLearjetButton, bombardierGlobalButton,
+            b777Button, b787Button, globemasterButton, bombardierChallenger650Button, bombardierCRJButton, bombardierLearjetButton, bombardierGlobalButton,
             embraerERJButton, embraerEJetE2Button, embraerLineageButton, embraerPhenomButton, cessnaSkylaneButton, cessnaCaravanButton, cessnaLatitudeButton,
             cessnaLongitudeButton, gulfstreamG650Button, gulfstreamG280Button, gulfstreamGIVButton, save;
 
     boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, an22, an72, an124, an225, b737, b747, b757, b767,
-            b777, b787, bombardierChallenger650, bombardierCRJ, bombardierLearjet, bombardierGlobal, embraerERJ, embraerEJetE2, embraerLineage, embraerPhenom, cessnaSkylane,
+            b777, b787, globemaster, bombardierChallenger650, bombardierCRJ, bombardierLearjet, bombardierGlobal, embraerERJ, embraerEJetE2, embraerLineage, embraerPhenom, cessnaSkylane,
             cessnaCaravan, cessnaLatitude, cessnaLongitude, gulfstreamG650, gulfstreamG280, gulfstreamGIV;
 
 
@@ -220,6 +220,7 @@ public class Firebase extends AppCompatActivity {
         b767Button = findViewById(R.id.b767);
         b777Button = findViewById(R.id.b777);
         b787Button = findViewById(R.id.b787);
+        globemasterButton = findViewById(R.id.globemaster);
         bombardierChallenger650Button = findViewById(R.id.bombardier_challenger_650);
         bombardierCRJButton = findViewById(R.id.bombardier_crj_100_200);
         bombardierLearjetButton = findViewById(R.id.bombardier_learjet_75);
@@ -234,9 +235,8 @@ public class Firebase extends AppCompatActivity {
         cessnaLatitudeButton = findViewById(R.id.cessna_latitude);
         gulfstreamG650Button = findViewById(R.id.gulfstream_g650);
         gulfstreamG280Button = findViewById(R.id.gulfstream_g280);
-
-
         gulfstreamGIVButton = findViewById(R.id.gulfstream_giv);
+
         save = findViewById(R.id.save);
         textCard = findViewById(R.id.textCard);
         layout = findViewById(R.id.buttonContainer);
@@ -796,6 +796,30 @@ public class Firebase extends AppCompatActivity {
                     }
                     selected.remove((String) an225Button.getText());
                     an225 = false;
+                }
+            }
+        });
+
+        globemasterButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!globemaster) {
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        globemasterButton.setBackgroundColor(Color.parseColor("#092c51"));
+                    } else {
+                        globemasterButton.setBackgroundColor(Color.parseColor("#b6d8fc"));
+                    }
+                    selected.add((String) globemasterButton.getText());
+                    globemaster = true;
+                } else {
+                    if (enableDarkOnCreate.equalsIgnoreCase("Yes")) {
+                        globemasterButton.setBackgroundColor(Color.parseColor("#141635"));
+                    } else {
+                        globemasterButton.setBackgroundColor(Color.parseColor("#f2f4f6"));
+                    }
+                    selected.remove((String) globemasterButton.getText());
+                    globemaster = false;
                 }
             }
         });

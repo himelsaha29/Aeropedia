@@ -18,7 +18,7 @@
         android:visibility="gone"
         app:iconText="@string/drawer_airplane"
         app:iconColor="#12558C"
-        app:iconFont="fonts/trial.ttf"
+        app:iconFont="fonts/glyphs.ttf"
         app:iconSize="20dp" />
 
     <com.github.johnkil.print.PrintView
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         app:iconText="@string/drawer_tail"
         app:iconColor="#12558C"
-        app:iconFont="fonts/trial.ttf"
+        app:iconFont="fonts/glyphs.ttf"
         app:iconSize="24dp" />
 
     <TextView

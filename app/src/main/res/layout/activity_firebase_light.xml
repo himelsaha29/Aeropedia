@@ -699,17 +699,17 @@
                                     android:orientation="vertical">
 
                                     <soup.neumorphism.NeumorphButton
-                                        android:id="@+id/b727"
+                                        android:id="@+id/globemaster"
                                         style="@style/Widget.Neumorph.Button"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_gravity="center"
                                         android:fontFamily="@font/maven_pro_medium"
                                         android:padding="5dp"
-                                        android:text="Boeing 727"
+                                        android:text="C-17 Globemaster III"
                                         android:textAllCaps="false"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp"
+                                        android:textSize="12.9dp"
                                         app:neumorph_backgroundColor="#f2f4f6"
                                         app:neumorph_shadowColorDark="#eaeaea"
                                         app:neumorph_shadowColorLight="#fdfdfd"
