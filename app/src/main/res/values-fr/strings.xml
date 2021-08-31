@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Aéropedia</string>
-    <string name="manufacturers">Manufacturers</string>
-    <string name="ask_alexa">Ask Alexa</string>
-    <string name="flight_tracker">Flight Tracker</string>
-    <string name="firebase">My Aircraft</string>
+    <string name="manufacturers">Galerie d\'avions</string>
+    <string name="ask_alexa">Demandez à Alexa</string>
+    <string name="flight_tracker">Suivi des vols</string>
+    <string name="firebase">Communauté</string>
     <string name="airbus">Airbus</string>
     <string name="boeing">Boeing</string>
     <string name="embraer">Embraer</string>
