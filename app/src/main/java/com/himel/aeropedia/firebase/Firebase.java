@@ -119,6 +119,7 @@ public class Firebase extends AppCompatActivity {
     private NeumorphImageButton darkToggle;
     private boolean isNetworkAvailable;
     private CoordinatorLayout mainLayout;
+    private boolean voted;
 
 
     private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
@@ -138,16 +139,151 @@ public class Firebase extends AppCompatActivity {
         loadLocale();
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
-        if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_firebase_light);
+
+        voted = verifyVoted();
+
+        if(!voted) {
+            if(enableDark.equals("No")) {
+                setContentView(R.layout.activity_firebase_light);
+            } else {
+                setContentView(R.layout.activity_firebase_dark);
+            }
+
+            a220Button = findViewById(R.id.a220);
+            a300Button = findViewById(R.id.a300);
+            a310Button = findViewById(R.id.a310);
+            a318Button = findViewById(R.id.a318);
+            a319Button = findViewById(R.id.a319);
+            a320Button = findViewById(R.id.a320);
+            a321Button = findViewById(R.id.a321);
+            a319neoButton = findViewById(R.id.a319neo);
+            a320neoButton = findViewById(R.id.a320neo);
+            a321neoButton = findViewById(R.id.a321neo);
+            a330Button = findViewById(R.id.a330);
+            a330neoButton = findViewById(R.id.a330neo);
+            a340Button = findViewById(R.id.a340);
+            a350Button = findViewById(R.id.a350);
+            a380Button = findViewById(R.id.a380);
+            belugaButton = findViewById(R.id.beluga);
+            an22Button = findViewById(R.id.an_22);
+            an72Button = findViewById(R.id.an_72);
+            an124Button = findViewById(R.id.an_124);
+            an225Button = findViewById(R.id.an_225);
+            b737Button = findViewById(R.id.b737);
+            b747Button = findViewById(R.id.b747);
+            b757Button = findViewById(R.id.b757);
+            b767Button = findViewById(R.id.b767);
+            b777Button = findViewById(R.id.b777);
+            b787Button = findViewById(R.id.b787);
+            globemasterButton = findViewById(R.id.globemaster);
+            bombardierChallenger650Button = findViewById(R.id.bombardier_challenger_650);
+            bombardierCRJButton = findViewById(R.id.bombardier_crj_100_200);
+            bombardierLearjetButton = findViewById(R.id.bombardier_learjet_75);
+            bombardierGlobalButton = findViewById(R.id.bombardier_global_7500);
+            embraerERJButton = findViewById(R.id.embraer_erj);
+            embraerEJetE2Button = findViewById(R.id.embraer_e_jet_e2_family);
+            embraerLineageButton = findViewById(R.id.embraer_lineage);
+            embraerPhenomButton = findViewById(R.id.embraer_phenom);
+            cessnaSkylaneButton = findViewById(R.id.cessna_skylane);
+            cessnaCaravanButton = findViewById(R.id.cessna_caravan);
+            cessnaLongitudeButton = findViewById(R.id.cessna_longitude);
+            cessnaLatitudeButton = findViewById(R.id.cessna_latitude);
+            gulfstreamG650Button = findViewById(R.id.gulfstream_g650);
+            gulfstreamG280Button = findViewById(R.id.gulfstream_g280);
+            gulfstreamGIVButton = findViewById(R.id.gulfstream_giv);
+            save = findViewById(R.id.save);
+            textCard = findViewById(R.id.textCard);
+            layout = findViewById(R.id.buttonContainer);
+            scroll = findViewById(R.id.firebaseScroll);
+
+            mainLayout = findViewById(R.id.mainLayout);
+
+            isNetworkAvailable = isNetworkAvailable();
+            showSnackBar(isNetworkAvailable);
+
+            animate();
+            assignButtons();
+
+            Display display = ((android.view.WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+            scroll.setFadingEdgeLength((int) (display.getHeight() *0.12));
+            DatabaseReference firebase = FirebaseDatabase.getInstance().getReference().child("Aircraft Preference");
+
+            save.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    isNetworkAvailable = isNetworkAvailable();
+                    showSnackBar(isNetworkAvailable);
+                    if(isNetworkAvailable) {
+                        for (String aircraft : selected) {
+                            AircraftPreference preference = new AircraftPreference(aircraft);
+                            firebase.push().setValue(preference);
+                            chosenAircrafts.add(aircraft);
+                        }
+                        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+                        editor.putStringSet("ChosenAircrafts", chosenAircrafts);
+                        editor.putString("Voted", "Yes");
+                        editor.apply();
+                        Intent intent = getIntent();
+                        finish();
+                        startActivity(intent);
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    }
+                }
+            });
+
         } else {
-            setContentView(R.layout.activity_firebase_dark);
+            if(enableDarkOnCreate.equals("No")) {
+                setContentView(R.layout.activity_firebase_results_light);
+            } else {
+                setContentView(R.layout.activity_firebase_results_dark);
+            }
+            mainLayout = findViewById(R.id.mainLayout);
+            isNetworkAvailable = isNetworkAvailable();
+            showSnackBar(isNetworkAvailable);
+
+            DatabaseReference firebase = FirebaseDatabase.getInstance().getReference().child("Aircraft Preference");
+            firebase.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    map = new HashMap<>();
+
+                    System.out.println("Children count : " + dataSnapshot.getChildrenCount());
+
+                    for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                        if (!map.containsKey(ds.child("preferredAircraft").getValue().toString())) {
+                            map.put(ds.child("preferredAircraft").getValue().toString(), 1);
+                        } else {
+                            int count = map.get(ds.child("preferredAircraft").getValue().toString());
+                            count++;
+                            map.put(ds.child("preferredAircraft").getValue().toString(), count);
+                        }
+
+                    }
+                    drawGraph();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+
+            });
         }
+
+
+
 
         langToggle = findViewById(R.id.lang_toggle);
         darkToggle = findViewById(R.id.dark_toggle);
         mDrawer = findViewById(R.id.drawerlayout);
         blur = findViewById(R.id.blurLayout);
+        drawer();
+        if(!voted) {
+            mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_FULLSCREEN);
+        } else {
+            mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
+        }
 
         // setting NeumorphismButton shape based on state
         if (locale.toString().contains("en")) {
@@ -171,6 +307,7 @@ public class Firebase extends AppCompatActivity {
                     finish();
                     startActivity(intent);
                 }
+                selected.clear();
             }
         });
 
@@ -190,130 +327,9 @@ public class Firebase extends AppCompatActivity {
                     finish();
                     startActivity(intent);
                 }
-
+                selected.clear();
             }
         });
-
-        a220Button = findViewById(R.id.a220);
-        a300Button = findViewById(R.id.a300);
-        a310Button = findViewById(R.id.a310);
-        a318Button = findViewById(R.id.a318);
-        a319Button = findViewById(R.id.a319);
-        a320Button = findViewById(R.id.a320);
-        a321Button = findViewById(R.id.a321);
-        a319neoButton = findViewById(R.id.a319neo);
-        a320neoButton = findViewById(R.id.a320neo);
-        a321neoButton = findViewById(R.id.a321neo);
-        a330Button = findViewById(R.id.a330);
-        a330neoButton = findViewById(R.id.a330neo);
-        a340Button = findViewById(R.id.a340);
-        a350Button = findViewById(R.id.a350);
-        a380Button = findViewById(R.id.a380);
-        belugaButton = findViewById(R.id.beluga);
-        an22Button = findViewById(R.id.an_22);
-        an72Button = findViewById(R.id.an_72);
-        an124Button = findViewById(R.id.an_124);
-        an225Button = findViewById(R.id.an_225);
-        b737Button = findViewById(R.id.b737);
-        b747Button = findViewById(R.id.b747);
-        b757Button = findViewById(R.id.b757);
-        b767Button = findViewById(R.id.b767);
-        b777Button = findViewById(R.id.b777);
-        b787Button = findViewById(R.id.b787);
-        globemasterButton = findViewById(R.id.globemaster);
-        bombardierChallenger650Button = findViewById(R.id.bombardier_challenger_650);
-        bombardierCRJButton = findViewById(R.id.bombardier_crj_100_200);
-        bombardierLearjetButton = findViewById(R.id.bombardier_learjet_75);
-        bombardierGlobalButton = findViewById(R.id.bombardier_global_7500);
-        embraerERJButton = findViewById(R.id.embraer_erj);
-        embraerEJetE2Button = findViewById(R.id.embraer_e_jet_e2_family);
-        embraerLineageButton = findViewById(R.id.embraer_lineage);
-        embraerPhenomButton = findViewById(R.id.embraer_phenom);
-        cessnaSkylaneButton = findViewById(R.id.cessna_skylane);
-        cessnaCaravanButton = findViewById(R.id.cessna_caravan);
-        cessnaLongitudeButton = findViewById(R.id.cessna_longitude);
-        cessnaLatitudeButton = findViewById(R.id.cessna_latitude);
-        gulfstreamG650Button = findViewById(R.id.gulfstream_g650);
-        gulfstreamG280Button = findViewById(R.id.gulfstream_g280);
-        gulfstreamGIVButton = findViewById(R.id.gulfstream_giv);
-
-        save = findViewById(R.id.save);
-        textCard = findViewById(R.id.textCard);
-        layout = findViewById(R.id.buttonContainer);
-        scroll = findViewById(R.id.firebaseScroll);
-        mainLayout = findViewById(R.id.mainLayout);
-
-        isNetworkAvailable = isNetworkAvailable();
-        showSnackBar(isNetworkAvailable);
-
-
-        Display display = ((android.view.WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-        scroll.setFadingEdgeLength((int) (display.getHeight() *0.12));
-        DatabaseReference firebase = FirebaseDatabase.getInstance().getReference().child("Aircraft Preference");
-
-        animate();
-        assignButtons();
-        drawer();
-
-        textCard.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                switchLayout();
-                drawer();
-                firebase.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        map = new HashMap<>();
-
-                        System.out.println("Children count : " + dataSnapshot.getChildrenCount());
-
-                        for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                            if (!map.containsKey(ds.child("preferredAircraft").getValue().toString())) {
-                                map.put(ds.child("preferredAircraft").getValue().toString(), 1);
-                            } else {
-                                int count = map.get(ds.child("preferredAircraft").getValue().toString());
-                                count++;
-                                map.put(ds.child("preferredAircraft").getValue().toString(), count);
-                            }
-
-                        }
-                        drawGraph();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-
-                });
-
-            }
-
-        });
-
-
-
-
-        save.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                isNetworkAvailable = isNetworkAvailable();
-                showSnackBar(isNetworkAvailable);
-                if(isNetworkAvailable) {
-                    for (String aircraft : selected) {
-                        AircraftPreference preference = new AircraftPreference(aircraft);
-                        firebase.push().setValue(preference);
-                        chosenAircrafts.add(aircraft);
-                    }
-                    SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
-                    editor.putStringSet("ChosenAircrafts", chosenAircrafts);
-                    editor.apply();
-                }
-            }
-        });
-
 
     }
 
@@ -1329,16 +1345,6 @@ public class Firebase extends AppCompatActivity {
         });
     }
 
-    private void switchLayout() {
-        if(enableDarkOnCreate.equals("No")) {
-            setContentView(R.layout.activity_firebase_results_light);
-        } else {
-            setContentView(R.layout.activity_firebase_results_dark);
-        }
-        mainLayout = findViewById(R.id.mainLayout);
-        isNetworkAvailable = isNetworkAvailable();
-        showSnackBar(isNetworkAvailable);
-    }
 
     @Override
     public void finish() {
@@ -2283,6 +2289,21 @@ public class Firebase extends AppCompatActivity {
             button.setBackgroundColor(Color.parseColor("#4c2121"));
         } else {
             button.setBackgroundColor(Color.parseColor("#fcb6b6"));
+        }
+    }
+
+    private boolean verifyVoted() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("Voted", "No").equalsIgnoreCase("") || prefs.getString("OnBoardDone", "No") == null) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("Voted", "No");
+            editor.apply();
+        }
+        String voted = prefs.getString("Voted", "No");
+        if(voted.equalsIgnoreCase("No")) {
+            return false;
+        } else {
+            return true;
         }
     }
 
