@@ -105,7 +105,7 @@ public class OnBoardScreen extends AppCompatActivity {
     }
 
     private void addDotsIndicator(int position){
-        dotsArray = new TextView[3];
+        dotsArray = new TextView[5];
         dots.removeAllViews();
         for(int i = 0; i < dotsArray.length; i++) {
             dotsArray[i] = new TextView(this);

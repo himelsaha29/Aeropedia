@@ -25,18 +25,24 @@ public class OnBoardAdapter extends PagerAdapter {
     }
 
     public int[] slideImages = {
+            R.drawable.main_logo_foreground,
             R.drawable.onboard_1,
             R.drawable.onboard_2,
             R.drawable.onboard_3,
+            R.drawable.onboard_4
     };
 
     public String[] slideHeadings = {
+            "Welcome Aboard",
             "Swipe from the left bezel to open the drawer for easy navigation, light/dark mode and language toggles",
             "On the interactive flight map, tap on an aircraft for flight route and more information about the flight/aircraft",
-            "Tap LIVE to get the latest flight data"
+            "Tap LIVE to get the latest flight data",
+            "To interact with Amazon Alexa, tap the recorder to start recording and tap again when you are done or wait for it to respond automatically"
     };
 
     public String[] descriptions = {
+            "",
+            "",
             "",
             "",
             ""
