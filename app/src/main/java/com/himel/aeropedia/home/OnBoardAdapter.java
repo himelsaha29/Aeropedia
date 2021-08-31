@@ -31,15 +31,15 @@ public class OnBoardAdapter extends PagerAdapter {
     };
 
     public String[] slideHeadings = {
-            "Page 1",
-            "Page 2",
-            "Page 3"
+            "Swipe from the left bezel to open the drawer for easy navigation, light/dark mode and language toggles",
+            "On the interactive flight map, tap on an aircraft for flight route and more information about the flight/aircraft",
+            "Tap LIVE to get the latest flight data"
     };
 
     public String[] descriptions = {
-            "Page 1 desc",
-            "Page 2 desc",
-            "Page 3 desc"
+            "",
+            "",
+            ""
     };
 
     @Override
