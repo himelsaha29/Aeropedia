@@ -1703,6 +1703,22 @@ public class Firebase extends AppCompatActivity {
                     graphChosenAircraft(button);
                 }
             }
+            else if (s.equalsIgnoreCase("C-17 Globemaster III")) {
+                NeumorphButton button = findViewById(R.id.globemaster);
+                TextView status = findViewById(R.id.globemasterstatus);
+                status.setText("C-17 Globemaster\nIII\n" + df.format(((float) map.get(s) / (float) totalAircraft) * 100) + "%");
+                ViewGroup.LayoutParams layoutParams = button.getLayoutParams();
+                float size = (float) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
+                if(size <= 0 || size <= 100) {
+                    layoutParams.height = 100;
+                } else {
+                    layoutParams.height = (int) (((float) map.get(s) / (float) highestValue) * 0.60 * height);
+                }
+                button.setLayoutParams(layoutParams);
+                if(aircraftsChosen.contains("C-17 Globemaster III")) {
+                    graphChosenAircraft(button);
+                }
+            }
             else if (s.equalsIgnoreCase("Boeing 737")) {
                 NeumorphButton button = findViewById(R.id.b737);
                 TextView status = findViewById(R.id.b737status);
