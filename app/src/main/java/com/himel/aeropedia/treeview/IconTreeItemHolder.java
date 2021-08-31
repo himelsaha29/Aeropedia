@@ -44,7 +44,7 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
 
 
 
-        iconView.setIconFont(Typeface.createFromAsset(context.getAssets(), "fonts/trial.ttf"));
+        iconView.setIconFont(Typeface.createFromAsset(context.getAssets(), "fonts/glyphs.ttf"));
         iconView.setIconText(context.getResources().getString(value.icon));
 
 

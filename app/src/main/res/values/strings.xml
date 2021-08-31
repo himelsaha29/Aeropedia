@@ -2574,12 +2574,12 @@
     <string name="_true">True</string>
 
 
-    <string name="drawer_airplane">&#xe900;</string>
-    <string name="drawer_radar">&#xe902;</string>
-    <string name="drawer_alexa">&#xe903;</string>
-    <string name="drawer_tail">&#xe901;</string>
-    <string name="drawer_manufacturer">&#xe904;</string>
-    <string name="drawer_firebase">&#xe907;</string>
+    <string name="drawer_airplane">&#xe902;</string>
+    <string name="drawer_radar">&#xe903;</string>
+    <string name="drawer_alexa">&#xe900;</string>
+    <string name="drawer_tail">&#xe904;</string>
+    <string name="drawer_manufacturer">&#xe901;</string>
+    <string name="drawer_firebase">&#xe905;</string>
 
 
     <string name="snackbar">No internet connection</string>
