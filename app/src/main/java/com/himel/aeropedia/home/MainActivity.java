@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
             window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
         models = new ArrayList<Model>();
-        models.add(new Model(R.drawable.aircraft_gallery_cover, "Aircraft Gallery"));
-        models.add(new Model(R.drawable.real_time_flight_tracker_cover, "Real time flight tracker"));
-        models.add(new Model(R.drawable.alexa_cover, "Ask Alexa"));
-        models.add(new Model(R.drawable.airliners_photoshop, "BOEING"));
+        models.add(new Model(R.drawable.aircraft_gallery_cover, getString(R.string.aircraft_gallery)));
+        models.add(new Model(R.drawable.real_time_flight_tracker_cover, getString(R.string.tracker_menu)));
+        models.add(new Model(R.drawable.alexa_cover, getString(R.string.alexa_menu)));
+        models.add(new Model(R.drawable.airliners_photoshop, getString(R.string.community)));
 
         adapter = new Adapter(models, this);
 

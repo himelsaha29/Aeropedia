@@ -2586,4 +2586,11 @@
 
     <string name="not_available">N/A</string>
 
+    <string name="aircraft_gallery">Aircraft Gallery</string>
+    <string name="tracker_menu">Real Time Flight Tracker</string>
+    <string name="alexa_menu">Ask Alexa</string>
+    <string name="community">Community</string>
+
+
+
 </resources>

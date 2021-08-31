@@ -2548,4 +2548,9 @@
 
     <string name="not_available">S/O</string>
 
+    <string name="aircraft_gallery">Galerie d\'avions</string>
+    <string name="tracker_menu">Suivi des vols en temps réel</string>
+    <string name="alexa_menu">Demandez à Alexa</string>
+    <string name="community">Communauté</string>
+
 </resources>

@@ -13,12 +13,15 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -145,8 +148,10 @@ public class Firebase extends AppCompatActivity {
         if(!voted) {
             if(enableDark.equals("No")) {
                 setContentView(R.layout.activity_firebase_light);
+                lightStatus();
             } else {
                 setContentView(R.layout.activity_firebase_dark);
+                darkStatus();
             }
 
             a220Button = findViewById(R.id.a220);
@@ -235,8 +240,10 @@ public class Firebase extends AppCompatActivity {
         } else {
             if(enableDarkOnCreate.equals("No")) {
                 setContentView(R.layout.activity_firebase_results_light);
+                lightStatus();
             } else {
                 setContentView(R.layout.activity_firebase_results_dark);
+                darkStatus();
             }
             mainLayout = findViewById(R.id.mainLayout);
             isNetworkAvailable = isNetworkAvailable();
@@ -2304,6 +2311,24 @@ public class Firebase extends AppCompatActivity {
             return false;
         } else {
             return true;
+        }
+    }
+
+    private void darkStatus() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#ff141635"));
+        }
+    }
+
+    private void lightStatus() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#E6f2f4f6"));
         }
     }
 
