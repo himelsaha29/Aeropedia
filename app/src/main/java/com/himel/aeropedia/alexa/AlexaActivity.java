@@ -101,7 +101,7 @@ import soup.neumorphism.ShapeType;
 public class AlexaActivity extends CoreActivity {
 
     private TextView status;
-    private View loading;
+    //private View loading;
     private LottieAnimationView listening;
     private LottieAnimationView speaking;
     private final static int MY_PERMISSIONS_REQUEST_RECORD_AUDIO = 1;
@@ -271,7 +271,7 @@ public class AlexaActivity extends CoreActivity {
 
         //statusBar = findViewById(R.id.status_bar);
         status = findViewById(R.id.status);
-        loading = findViewById(R.id.loading);
+        //loading = findViewById(R.id.loading);
         listening = findViewById(R.id.listening);
         speaking = findViewById(R.id.speaking);
         informationButton = findViewById(R.id.info);
@@ -408,7 +408,7 @@ public class AlexaActivity extends CoreActivity {
         if (loggedIn) {
             if (status != null) {
                 status.setText(R.string.status_listening);
-                loading.setVisibility(View.GONE);
+                //loading.setVisibility(View.GONE);
                 speak = false;
             }
             listening.setVisibility(View.VISIBLE);
@@ -419,7 +419,7 @@ public class AlexaActivity extends CoreActivity {
         if (loggedIn) {
             if (status != null) {
                 status.setText(R.string.status_processing);
-                loading.setVisibility(View.VISIBLE);
+                //loading.setVisibility(View.VISIBLE);
             }
             speak = false;
         }
@@ -430,7 +430,7 @@ public class AlexaActivity extends CoreActivity {
             speak = true;
             if (status != null) {
                 status.setText(R.string.status_speaking);
-                loading.setVisibility(View.VISIBLE);
+                //loading.setVisibility(View.VISIBLE);
                 //statusBar.animate().alpha(1);
             }
             listening.setVisibility(View.GONE);
@@ -442,7 +442,7 @@ public class AlexaActivity extends CoreActivity {
         if (loggedIn) {
             if (status != null) {
                 status.setText("");
-                loading.setVisibility(View.VISIBLE);
+                //loading.setVisibility(View.VISIBLE);
             }
         }
     }
@@ -454,7 +454,7 @@ public class AlexaActivity extends CoreActivity {
                 //statusBar.animate().alpha(0);
                 speak = false;
             }
-            loading.setVisibility(View.GONE);
+            //loading.setVisibility(View.GONE);
             listening.setVisibility(View.GONE);
             speaking.setVisibility(View.GONE);
         }

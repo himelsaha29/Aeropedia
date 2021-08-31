@@ -2,7 +2,9 @@ package com.himel.aeropedia.home;
 
 import android.animation.ArgbEvaluator;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,12 +20,14 @@ import com.himel.aeropedia.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
     ViewPager viewPager;
     Adapter adapter;
     List<Model> models;
+    private Locale locale;
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
     private boolean flag = false;
@@ -32,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadLocale();
+        locale = Locale.getDefault();
         setContentView(R.layout.activity_main);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
@@ -129,6 +135,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         modifyAlexaRestart();
+
+        if (!locale.equals(Locale.getDefault())) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+
     }
 
     private void modifyAlexaRestart() {
@@ -136,4 +149,32 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("AlexaRestart", "Yes");
         editor.apply();
     }
+
+    /** Changing app language **/
+
+    private void setLocale(String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("Language", language);
+        editor.apply();
+    }
+
+    private void loadLocale() {
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        if (prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2)).equals("")) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+            editor.apply();
+        }
+        String language = prefs.getString("Language", getResources().getConfiguration().locale.toString().substring(0, 2));
+        setLocale(language);
+    }
+
+    /** Changing app language **/
+
+
 }
