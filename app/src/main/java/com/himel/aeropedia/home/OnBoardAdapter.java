@@ -25,9 +25,9 @@ public class OnBoardAdapter extends PagerAdapter {
     }
 
     public int[] slideImages = {
-            R.drawable.airbus_beluga_cover,
-            R.drawable.bombardier_learjet75_cover,
-            R.drawable.b787_cover
+            R.drawable.onboard_1,
+            R.drawable.onboard_2,
+            R.drawable.onboard_3,
     };
 
     public String[] slideHeadings = {
