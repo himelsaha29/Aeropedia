@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -81,7 +82,16 @@ public class OnBoardScreen extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewPager.setCurrentItem(currentPage + 1);
+                if(nextButton.getText().toString().equalsIgnoreCase("Finish")) {
+                    SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+                    editor.putString("OnBoardDone", "Yes");
+                    editor.apply();
+                    startActivity(new Intent(OnBoardScreen.this, MainActivity.class));
+                    overridePendingTransition(R.anim.zoom_in, R.anim.zoom_in);
+                    finish();
+                } else {
+                    viewPager.setCurrentItem(currentPage + 1);
+                }
             }
         });
 
