@@ -41,6 +41,7 @@
         android:textColor="@color/black"
         android:layout_gravity="center"
         android:textSize="21sp"
+        android:padding="3dp"
         android:fontFamily="@font/maven_pro_medium"
         android:gravity="center"/>
 

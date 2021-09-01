@@ -43,22 +43,12 @@ public class OnBoardScreen extends AppCompatActivity {
         loadLocale();
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
-        if(enableDark.equals("No")) {
-            setContentView(R.layout.activity_on_board_screen_light);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                Window window = getWindow();
-                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(Color.parseColor("#E6f2f4f6"));
-            }
-        } else {
-            setContentView(R.layout.activity_on_board_screen_dark);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                Window window = getWindow();
-                window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(Color.parseColor("#ff141635"));
-            }
+        setContentView(R.layout.activity_on_board_screen);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#E6f2f4f6"));
         }
 
 
