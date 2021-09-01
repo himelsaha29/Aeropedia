@@ -2714,5 +2714,7 @@
     <string name="tracker_menu">Suivi des vols en temps réel</string>
     <string name="alexa_menu">Demandez à Alexa</string>
     <string name="community">Communauté</string>
+    <string name="next_button">&#10095;</string>
+    <string name="finish_button">Terminer</string>
 
 </resources>

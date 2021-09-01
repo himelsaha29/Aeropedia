@@ -28,14 +28,6 @@ public class OnBoardAdapter extends PagerAdapter {
         this.locale = locale;
     }
 
-    public int[] slideImagesLightEn = {
-            R.drawable.main_logo_foreground,
-            R.drawable.onboard_1_light,
-            R.drawable.onboard_2_light,
-            R.drawable.onboard_3_light_en,
-            R.drawable.onboard_4_light
-    };
-
     public int[] slideImagesDarkEn = {
             R.drawable.main_logo_foreground,
             R.drawable.onboard_1,
@@ -44,13 +36,6 @@ public class OnBoardAdapter extends PagerAdapter {
             R.drawable.onboard_4
     };
 
-    public int[] slideImagesLightFr = {
-            R.drawable.main_logo_foreground,
-            R.drawable.onboard_1_light,
-            R.drawable.onboard_2_light,
-            R.drawable.onboard_3_light_fr,
-            R.drawable.onboard_4_light
-    };
 
     public int[] slideImagesDarkFr = {
             R.drawable.main_logo_foreground,
@@ -98,12 +83,7 @@ public class OnBoardAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view;
-        if(dark == false) {
-            view = layoutInflater.inflate(R.layout.onboard_slide_layout_light, container, false);
-        } else {
-            view = layoutInflater.inflate(R.layout.onboard_slide_layout_dark, container, false);
-        }
+        View view = layoutInflater.inflate(R.layout.onboard_slide_layout_light, container, false);
 
         ImageView slideImage = view.findViewById(R.id.slide_image);
         TextView slideHeader = view.findViewById(R.id.slide_header);
@@ -111,14 +91,10 @@ public class OnBoardAdapter extends PagerAdapter {
 
 
 
-        if(this.locale.equalsIgnoreCase("fr") && dark) {
-            slideImage.setImageResource(slideImagesLightFr[position]);
-        } else if(this.locale.equalsIgnoreCase("fr") && !dark) {
+        if(this.locale.equalsIgnoreCase("fr")) {
             slideImage.setImageResource(slideImagesDarkFr[position]);
-        } else if(this.locale.equalsIgnoreCase("en") && !dark) {
+        } else if(this.locale.equalsIgnoreCase("en")) {
             slideImage.setImageResource(slideImagesDarkEn[position]);
-        } else if(this.locale.equalsIgnoreCase("en") && dark) {
-            slideImage.setImageResource(slideImagesLightEn[position]);
         }
 
 

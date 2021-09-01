@@ -136,19 +136,19 @@ public class OnBoardScreen extends AppCompatActivity {
                 nextButton.setEnabled(true);
                 prevButton.setEnabled(false);
                 prevButton.setVisibility(View.INVISIBLE);
-                nextButton.setText("Next");
+                nextButton.setText(Html.fromHtml("&#10095"));
             } else if (position == dotsArray.length - 1) {
                 nextButton.setEnabled(true);
                 prevButton.setEnabled(true);
                 prevButton.setVisibility(View.VISIBLE);
-                nextButton.setText("Finish");
-                prevButton.setText("Back");
+                nextButton.setText(Html.fromHtml("&#10140")); // finish
+                prevButton.setText(Html.fromHtml("&#10094"));
             } else {
                 nextButton.setEnabled(true);
                 prevButton.setEnabled(true);
                 prevButton.setVisibility(View.VISIBLE);
-                nextButton.setText("Next");
-                prevButton.setText("Back");
+                nextButton.setText(Html.fromHtml("&#10095"));
+                prevButton.setText(Html.fromHtml("&#10094"));
             }
         }
 

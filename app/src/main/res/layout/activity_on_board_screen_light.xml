@@ -80,7 +80,7 @@
                 style="@style/Widget.Neumorph.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Next"
+                android:text="@string/next_button"
                 android:textAllCaps="false"
                 android:fontFamily="@font/maven_pro_medium"
                 android:textSize="16sp"

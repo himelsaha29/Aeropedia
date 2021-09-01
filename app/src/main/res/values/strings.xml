@@ -2590,6 +2590,8 @@
     <string name="tracker_menu">Real Time Flight Tracker</string>
     <string name="alexa_menu">Ask Alexa</string>
     <string name="community">Community</string>
+    <string name="next_button">&#10095;</string>
+    <string name="finish_button">Finish</string>
 
 
 
