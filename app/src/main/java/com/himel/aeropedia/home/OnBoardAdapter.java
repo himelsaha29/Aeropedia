@@ -54,11 +54,11 @@ public class OnBoardAdapter extends PagerAdapter {
     };
 
     public String[] slideHeadingsFr = {
-            "Wilkommen Aboard",
-            "Swipe from the left bezel to open the drawer for easy navigation, light/dark mode and language toggles",
-            "On the interactive flight map, tap on an aircraft for flight route and more information about the flight/aircraft",
-            "Tap LIVE to get the latest flight data",
-            "To interact with Amazon Alexa, tap the recorder to start recording and tap again when you are done or wait for it to respond automatically"
+            "Bienvenue",
+            "Faites glisser depuis le cadre gauche pour ouvrir le tiroir pour une navigation facile, des bascules de mode clair/foncé et de langue",
+            "Sur la carte de vol interactive, appuyez sur un avion pour l\'itinéraire de vol et plus d\'informations sur le vol/l\'avion",
+            "Appuyez sur EN DIRECT pour obtenir les données de vol les plus récentes",
+            "Pour interagir avec Amazon Alexa, appuyez sur l\'enregistreur pour démarrer l\'enregistrement et appuyez à nouveau lorsque vous avez terminé ou attendez qu\'il réponde automatiquement"
     };
 
     public String[] descriptions = {

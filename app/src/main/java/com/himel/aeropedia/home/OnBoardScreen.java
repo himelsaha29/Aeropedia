@@ -82,7 +82,7 @@ public class OnBoardScreen extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(nextButton.getText().toString().equalsIgnoreCase("Finish")) {
+                if(nextButton.getText().toString().equalsIgnoreCase(String.valueOf(Html.fromHtml("&#10140")))) {
                     SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
                     editor.putString("OnBoardDone", "Yes");
                     editor.apply();
