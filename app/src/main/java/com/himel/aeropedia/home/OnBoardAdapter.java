@@ -28,11 +28,35 @@ public class OnBoardAdapter extends PagerAdapter {
         this.locale = locale;
     }
 
-    public int[] slideImages = {
+    public int[] slideImagesLightEn = {
+            R.drawable.main_logo_foreground,
+            R.drawable.onboard_1_light,
+            R.drawable.onboard_2_light,
+            R.drawable.onboard_3_light_en,
+            R.drawable.onboard_4_light
+    };
+
+    public int[] slideImagesDarkEn = {
             R.drawable.main_logo_foreground,
             R.drawable.onboard_1,
             R.drawable.onboard_2,
-            R.drawable.onboard_3,
+            R.drawable.onboard_3_en,
+            R.drawable.onboard_4
+    };
+
+    public int[] slideImagesLightFr = {
+            R.drawable.main_logo_foreground,
+            R.drawable.onboard_1_light,
+            R.drawable.onboard_2_light,
+            R.drawable.onboard_3_light_fr,
+            R.drawable.onboard_4_light
+    };
+
+    public int[] slideImagesDarkFr = {
+            R.drawable.main_logo_foreground,
+            R.drawable.onboard_1,
+            R.drawable.onboard_2,
+            R.drawable.onboard_3_fr,
             R.drawable.onboard_4
     };
 
@@ -85,7 +109,19 @@ public class OnBoardAdapter extends PagerAdapter {
         TextView slideHeader = view.findViewById(R.id.slide_header);
         TextView slideDesc = view.findViewById(R.id.slide_desc);
 
-        slideImage.setImageResource(slideImages[position]);
+
+
+        if(this.locale.equalsIgnoreCase("fr") && dark) {
+            slideImage.setImageResource(slideImagesLightFr[position]);
+        } else if(this.locale.equalsIgnoreCase("fr") && !dark) {
+            slideImage.setImageResource(slideImagesDarkFr[position]);
+        } else if(this.locale.equalsIgnoreCase("en") && !dark) {
+            slideImage.setImageResource(slideImagesDarkEn[position]);
+        } else if(this.locale.equalsIgnoreCase("en") && dark) {
+            slideImage.setImageResource(slideImagesLightEn[position]);
+        }
+
+
         if(this.locale.equalsIgnoreCase("fr")) {
             slideHeader.setText(slideHeadingsFr[position]);
         } else if(this.locale.equalsIgnoreCase("en")) {
@@ -102,4 +138,5 @@ public class OnBoardAdapter extends PagerAdapter {
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         container.removeView((LinearLayout) object);
     }
+
 }
