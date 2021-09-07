@@ -2121,7 +2121,7 @@
 
 
     <string name="ejet_e2_identify">Comment identifier Embraer E-Jet E2?</string>
-    <string name="ejet_e2_identify_ans"></string>
+    <string name="ejet_e2_identify_ans">Nez «distinctif», pas de section triangulaire de la nageoire dorsale devant la queue, pas d\'ailettes.</string>
 
     <string name="ejet_e2_cockpit_value">2</string>
     <string name="ejet_e2_wingspan_value">31,0 / 33,72 / 35,12 m</string>
