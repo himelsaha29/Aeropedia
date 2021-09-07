@@ -993,8 +993,8 @@
 
     <string name="an72_identify">Comment identifier Antonov An-72 Cheburashka?</string>
     <string name="an72_identify_ans">Grands conduits d\'admission d\'air du moteur qui ressemblent aux oreilles surdimensionnées du populaire personnage d\'animation soviétique Cheburashka, 2 moteurs
-        attaché au-dessus des ailes, nez pointu, pas de bout d\'aile, stabilisateurs horizontaux attachés à la partie supérieure de la queue avec une extension pointue attachée
-        à la partie avant de la queue sur le même axe que les stabilisateurs horizontaux.</string>
+        attaché au-dessus des ailes, nez pointu, pas de bout d\'aile, «T-tail» avec une extension pointue attachée à la partie avant de la queue sur le même axe que les
+        stabilisateurs horizontaux.</string>
 
     <string name="an72_cockpit_value">5</string>
     <string name="an72_wingspan_value">31,89 m</string>
@@ -2040,7 +2040,7 @@
     <string name="erj_family_specs_constraint">(comparaison ordonnée des variantes ERJ135LR, ERJ140LR, ERJ145XR)\n</string>
 
 
-    <string name="erj_family_identify">Comment identifier les avions de la famille ERJ?</string> «distinctif»
+    <string name="erj_family_identify">Comment identifier les avions de la famille ERJ?</string>
     <string name="erj_family_identify_ans">Nez «pointu», conception «T-tail», deux turboréacteurs à double flux montés à l\'arrière des ailes sur les côtés du fuselage arrière.</string>
 
     <string name="erj_family_cockpit_value">2</string>

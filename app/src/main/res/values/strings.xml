@@ -974,8 +974,8 @@
 
     <string name="an72_identify">How to identify Antonov An-72 Cheburashka?</string>
     <string name="an72_identify_ans">Large engine intake ducts that resemble the oversized ears of the popular Soviet animated character Cheburashka, 2 engines
-        attached above the wings, pointed nose, no wingtips, horizontal stabilizers attached to the top part of the tail with a pointed extension attached
-        to the front section of the tail on the same axis as the horizontal stabilizers.</string>
+        attached above the wings, pointed nose, no wingtips, T-tail with a pointed extension attached to the front section of the tail on the same axis as the
+        horizontal stabilizers.</string>
 
     <string name="an72_cockpit_value">5</string>
     <string name="an72_wingspan_value">31.89 m</string>
