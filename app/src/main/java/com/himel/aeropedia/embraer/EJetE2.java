@@ -429,14 +429,16 @@ public class EJetE2 extends AppCompatActivity {
 
     private void renewItems(View view) {
         List<SliderItem> sliderItemList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             SliderItem sliderItem = new SliderItem();
             if (i == 0) {
                 sliderItem.setImageLocation(R.drawable.embraer_ejet_e2_family_slider01);
             } else if (i == 1) {
-                sliderItem.setImageLocation(R.drawable.embraer_ejet_e2_family_slider02);
+                sliderItem.setImageLocation(R.drawable.embraer_ejet_e2_family_slider2);
             } else if (i == 2) {
-                sliderItem.setImageLocation(R.drawable.embraer_ejet_e2_family_slider03);
+                sliderItem.setImageLocation(R.drawable.embraer_ejet_e2_family_slider3);
+            } else if (i == 3) {
+                sliderItem.setImageLocation(R.drawable.embraer_ejet_e2_family_slider4);
             }
 
             sliderItemList.add(sliderItem);
