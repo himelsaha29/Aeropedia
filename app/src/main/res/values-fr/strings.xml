@@ -2028,8 +2028,8 @@
         turboréacteurs à double flux Rolls-Royce AE 3007. Les moteurs ont un taux de dilution de 5:1. Les moteurs sont contrôlés par deux FADEC (Full Authority Digital
         Engine Controls, en anglais). Les FADEC contrôlent pratiquement tous les aspects du moteur et envoient les données du moteur à afficher sur l\'EICAS pour le
         pilote. L\'Embraer ERJ145 famille d\'avions est généralement équipée de la suite avionique Honeywell Primus 1000. La suite se compose normalement de cinq unités
-        d\'affichage CRT (DU) ou écrans. De gauche à droite, le système se compose d\'un affichage de vol principal (PFD), d\'un affichage multifonction (MFD), d\'un
-        système d\'indication du moteur et d\'alerte d\'équipage (EICAS), Affichage multifonction (MFD) (copilote) et affichage de vol principal (PFD) (copilote). Les DU
+        d\'affichage CRT (DU) ou écrans. De gauche à droite, le système se compose d\'un affichage de vol principal (PFD, en anglais), d\'un affichage multifonction (MFD, en anglais), d\'un
+        système d\'indication du moteur et d\'alerte d\'équipage (EICAS, en anglais), Affichage multifonction (MFD) (copilote) et affichage de vol principal (PFD) (copilote). Les DU
         sont normalement des tubes cathodiques mais peuvent être mis à niveau vers des écrans LCD plus légers. Ces les DU mis à niveau ont également des fonctionnalités
         supplémentaires.\n</string>
 
@@ -2040,8 +2040,8 @@
     <string name="erj_family_specs_constraint">(comparaison ordonnée des variantes ERJ135LR, ERJ140LR, ERJ145XR)\n</string>
 
 
-    <string name="erj_family_identify">Comment identifier les avions de la famille ERJ?</string>
-    <string name="erj_family_identify_ans"></string>
+    <string name="erj_family_identify">Comment identifier les avions de la famille ERJ?</string> «distinctif»
+    <string name="erj_family_identify_ans">Nez «pointu», conception «T-tail», deux turboréacteurs à double flux montés à l\'arrière des ailes sur les côtés du fuselage arrière.</string>
 
     <string name="erj_family_cockpit_value">2</string>
     <string name="erj_family_wingspan_value">20,04 m</string>

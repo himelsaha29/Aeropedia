@@ -1951,7 +1951,7 @@
 
 
     <string name="erj_family_identify">How to identify ERJ Family aircraft?</string>
-    <string name="erj_family_identify_ans"></string>
+    <string name="erj_family_identify_ans">\"Pointed\" nose, \"T-tail\" design, two turbofan jet engines mounted aft of the wings on the sides of the rear fuselage.</string>
 
     <string name="erj_family_cockpit_value">2</string>
     <string name="erj_family_wingspan_value">20.04 m</string>

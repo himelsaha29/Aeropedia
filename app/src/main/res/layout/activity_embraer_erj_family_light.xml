@@ -848,6 +848,29 @@
                     android:textSize="20sp" />
 
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/maven_pro_medium"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="3dp"
+                    android:text="@string/erj_family_identify"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/maven_pro_medium"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/erj_family_identify_ans"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
             </LinearLayout>
 
 
