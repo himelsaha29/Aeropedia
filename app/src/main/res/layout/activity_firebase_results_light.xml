@@ -59,11 +59,12 @@ app:edPosition="1">
                         app:neumorph_shadowColorLight="#fdfdfd">
 
                         <TextView
+                            android:id="@+id/topText"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:fontFamily="@font/maven_pro_medium"
                             android:padding="7dp"
-                            android:text="@string/firebase_result"
+                            android:text="placeholder"
                             android:textColor="@color/black"
                             android:textSize="35sp" />
 

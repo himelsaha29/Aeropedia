@@ -123,6 +123,7 @@ public class Firebase extends AppCompatActivity {
     private boolean isNetworkAvailable;
     private CoordinatorLayout mainLayout;
     private boolean voted;
+    private TextView topText;
 
 
     private Button a220Button, a300Button, a310Button, a318Button, a319Button, a320Button, a321Button, a319neoButton, a320neoButton, a321neoButton, a330Button, a330neoButton,
@@ -134,6 +135,9 @@ public class Firebase extends AppCompatActivity {
     boolean a220, a300, a310, a318, a319, a320, a321, a319neo, a320neo, a321neo, a330, a330neo, a340, a350, a380, beluga, an22, an72, an124, an225, b737, b747, b757, b767,
             b777, b787, globemaster, bombardierChallenger650, bombardierCRJ, bombardierLearjet, bombardierGlobal, embraerERJ, embraerEJetE2, embraerLineage, embraerPhenom, cessnaSkylane,
             cessnaCaravan, cessnaLatitude, cessnaLongitude, gulfstreamG650, gulfstreamG280, gulfstreamGIV;
+
+    private String topTextEn = "For  most  people,  sky  is  just  a  blue,  infinite  canvas,  it  is  the  limit.  To  those  who  are  really  into  the  beautiful  world  of  air,  sky,  and  flying,  the  lure  of  adventure,  the  appreciation  of  beauty,  sky  is  home.  A  home  where  enthusiasts  want  to  return  to  over  and  over  again ";
+    private String topTextFr = "Pour la plupart des gens, le ciel n\'est qu\'une toile bleue et infinie,  c\'est seulement la limite. Pour ceux qui aiment vraiment le beau monde de l\'air, du ciel et du vol, l\'attrait de l\'aventure, l\'appréciation de la beauté, le ciel est la maison. Une maison où les passionnés veulent revenir encore ";
 
 
     @Override
@@ -244,6 +248,12 @@ public class Firebase extends AppCompatActivity {
             } else {
                 setContentView(R.layout.activity_firebase_results_dark);
                 darkStatus();
+            }
+            topText = findViewById(R.id.topText);
+            if(locale.toString().contains("en")) {
+                topText.setText(topTextEn);
+            } else if(locale.toString().contains("fr")) {
+                topText.setText(topTextFr);
             }
             mainLayout = findViewById(R.id.mainLayout);
             isNetworkAvailable = isNetworkAvailable();

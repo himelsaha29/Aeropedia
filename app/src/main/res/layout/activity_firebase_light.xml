@@ -1366,7 +1366,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:fontFamily="@font/maven_pro_medium"
-                    android:text="Submit"
+                    android:text="@string/submit"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     android:textSize="15sp"
