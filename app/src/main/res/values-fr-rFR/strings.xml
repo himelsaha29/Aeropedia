@@ -2717,4 +2717,8 @@
     <string name="next_button">&#10095;</string>
     <string name="finish_button">Terminer</string>
 
+    <string name="firebase_result">Pour la plupart des gens, le ciel n\'est qu\'une toile bleue et infinie, c\'est la limite. Pour ceux qui aiment vraiment le beau monde de l\'air, du ciel et du vol, l\'attrait de l\'aventure, l\'appréciation de la beauté, le ciel est la maison. Une maison où les passionnés veulent revenir encore et encore</string>
+    <string name="firebase_vote">Sélectionnez votre avion préféré et partagez-le avec la communauté aéronautique</string>
+
+
 </resources>
