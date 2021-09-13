@@ -44,7 +44,7 @@
                         <soup.neumorphism.NeumorphCardView
                             android:id="@+id/textViewCard"
                             style="@style/Widget.Neumorph.CardView"
-                            android:layout_width="3700dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="8dp"
                             android:clickable="false"
@@ -63,7 +63,7 @@
                                 android:layout_height="match_parent"
                                 android:fontFamily="@font/maven_pro_medium"
                                 android:padding="7dp"
-                                android:text="See which group of aviation enthusiasts you are in...this is a very big big and even big scroll view"
+                                android:text="@string/firebase_result"
                                 android:textColor="@color/white"
                                 android:textSize="35sp" />
 

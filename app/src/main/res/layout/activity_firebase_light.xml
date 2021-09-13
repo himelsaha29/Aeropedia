@@ -53,7 +53,7 @@
                         android:fontFamily="@font/maven_pro_medium"
                         android:gravity="top"
                         android:padding="7dp"
-                        android:text="Select your preferred aircraft and share with the aviation community"
+                        android:text="@string/firebase_vote"
                         android:textColor="@color/black"
                         android:textSize="26sp"
                         app:layout_constraintBottom_toBottomOf="parent"

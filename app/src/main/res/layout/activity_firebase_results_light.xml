@@ -63,7 +63,7 @@ app:edPosition="1">
                             android:layout_height="match_parent"
                             android:fontFamily="@font/maven_pro_medium"
                             android:padding="7dp"
-                            android:text="For  most  people,  sky  is  just  a  blue,  infinite  canvas,  it  is  the  limit.  To  those  who  are  really  into  the  beautiful  world  of  air,  sky,  and  flying,  the  lure  of  adventure,  the  appreciation  of  beauty,  sky  is  home.  A  home  where  enthusiasts  want  to  return  to  over  and  over  again"
+                            android:text="@string/firebase_result"
                             android:textColor="@color/black"
                             android:textSize="35sp" />
 
