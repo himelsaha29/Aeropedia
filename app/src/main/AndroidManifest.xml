@@ -19,10 +19,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aeropedia">
-        <activity android:name=".boeing.BoeingGlobemaster"></activity>
-        <activity android:name=".home.OnBoardScreen" />
+        <activity android:name=".boeing.BoeingGlobemaster" android:screenOrientation="portrait"></activity>
+        <activity android:name=".home.OnBoardScreen" android:screenOrientation="portrait"/>
         <activity
             android:name=".home.SplashScreen"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,51 +31,51 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".gulfstream.GulfstreamIV" />
-        <activity android:name=".gulfstream.G280" />
-        <activity android:name=".manufacturers.Gulfstream" />
-        <activity android:name=".gulfstream.G650" />
-        <activity android:name=".cessna.Skylane" />
-        <activity android:name=".cessna.Caravan" />
-        <activity android:name=".cessna.CitationLatitude" />
-        <activity android:name=".manufacturers.Cessna" />
-        <activity android:name=".cessna.CitationLongitude" />
-        <activity android:name=".embraer.Phenom300" />
-        <activity android:name=".embraer.Lineage1000" />
-        <activity android:name=".embraer.EJetE2" />
-        <activity android:name=".embraer.ERJFamily" />
-        <activity android:name=".manufacturers.Embraer" />
-        <activity android:name=".bombardier.CRJ100200" />
-        <activity android:name=".bombardier.Global7500" />
-        <activity android:name=".bombardier.Challenger650" />
-        <activity android:name=".manufacturers.Bombardier" />
-        <activity android:name=".bombardier.Learjet75" />
-        <activity android:name=".boeing.Boeing787" />
-        <activity android:name=".boeing.Boeing777" />
-        <activity android:name=".boeing.Boeing767" />
-        <activity android:name=".boeing.Boeing747" />
-        <activity android:name=".boeing.Boeing757" />
-        <activity android:name=".boeing.Boeing737" />
-        <activity android:name=".manufacturers.Boeing" />
-        <activity android:name=".antonov.AntonovAn225Mriya" />
-        <activity android:name=".antonov.AntonovAn22Antei" />
-        <activity android:name=".antonov.AntonovAn72Cheburashka" />
-        <activity android:name=".manufacturers.Antonov" />
-        <activity android:name=".antonov.AntonovAn124Ruslan" />
-        <activity android:name=".airbus.AirbusBeluga" />
-        <activity android:name=".airbus.AirbusA220" />
-        <activity android:name=".airbus.AirbusA300" />
-        <activity android:name=".airbus.AirbusA310" />
-        <activity android:name=".airbus.AirbusA318" />
-        <activity android:name=".airbus.AirbusA319" />
-        <activity android:name=".airbus.AirbusA320" />
-        <activity android:name=".airbus.AirbusA320neoFamily" />
-        <activity android:name=".airbus.AirbusA321" />
-        <activity android:name=".airbus.AirbusA330neo" />
-        <activity android:name=".airbus.AirbusA330" />
-        <activity android:name=".airbus.AirbusA340" />
-        <activity android:name=".airbus.AirbusA380" />
-        <activity android:name=".firebase.Firebase" />
+        <activity android:name=".gulfstream.GulfstreamIV"  android:screenOrientation="portrait"/>
+        <activity android:name=".gulfstream.G280"  android:screenOrientation="portrait"/>
+        <activity android:name=".manufacturers.Gulfstream"  android:screenOrientation="portrait"/>
+        <activity android:name=".gulfstream.G650"  android:screenOrientation="portrait"/>
+        <activity android:name=".cessna.Skylane"  android:screenOrientation="portrait"/>
+        <activity android:name=".cessna.Caravan"  android:screenOrientation="portrait"/>
+        <activity android:name=".cessna.CitationLatitude"  android:screenOrientation="portrait"/>
+        <activity android:name=".manufacturers.Cessna"  android:screenOrientation="portrait"/>
+        <activity android:name=".cessna.CitationLongitude"  android:screenOrientation="portrait"/>
+        <activity android:name=".embraer.Phenom300"  android:screenOrientation="portrait"/>
+        <activity android:name=".embraer.Lineage1000"  android:screenOrientation="portrait"/>
+        <activity android:name=".embraer.EJetE2"  android:screenOrientation="portrait"/>
+        <activity android:name=".embraer.ERJFamily"  android:screenOrientation="portrait"/>
+        <activity android:name=".manufacturers.Embraer"  android:screenOrientation="portrait"/>
+        <activity android:name=".bombardier.CRJ100200"  android:screenOrientation="portrait"/>
+        <activity android:name=".bombardier.Global7500"  android:screenOrientation="portrait"/>
+        <activity android:name=".bombardier.Challenger650"  android:screenOrientation="portrait"/>
+        <activity android:name=".manufacturers.Bombardier"  android:screenOrientation="portrait"/>
+        <activity android:name=".bombardier.Learjet75"  android:screenOrientation="portrait"/>
+        <activity android:name=".boeing.Boeing787"  android:screenOrientation="portrait"/>
+        <activity android:name=".boeing.Boeing777"  android:screenOrientation="portrait"/>
+        <activity android:name=".boeing.Boeing767"  android:screenOrientation="portrait"/>
+        <activity android:name=".boeing.Boeing747"  android:screenOrientation="portrait"/>
+        <activity android:name=".boeing.Boeing757"  android:screenOrientation="portrait"/>
+        <activity android:name=".boeing.Boeing737"  android:screenOrientation="portrait"/>
+        <activity android:name=".manufacturers.Boeing"  android:screenOrientation="portrait"/>
+        <activity android:name=".antonov.AntonovAn225Mriya"  android:screenOrientation="portrait"/>
+        <activity android:name=".antonov.AntonovAn22Antei"  android:screenOrientation="portrait"/>
+        <activity android:name=".antonov.AntonovAn72Cheburashka"  android:screenOrientation="portrait"/>
+        <activity android:name=".manufacturers.Antonov"  android:screenOrientation="portrait"/>
+        <activity android:name=".antonov.AntonovAn124Ruslan"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusBeluga"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA220"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA300"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA310"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA318"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA319"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA320"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA320neoFamily"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA321"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA330neo"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA330"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA340"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA380"  android:screenOrientation="portrait"/>
+        <activity android:name=".firebase.Firebase"  android:screenOrientation="portrait"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -87,13 +88,13 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".flightmap.FlightMap" />
-        <activity android:name=".alexa.AlexaActivity" />
-        <activity android:name=".manufacturers.ManufacturerMenu" />
-        <activity android:name=".airbus.AirbusA350" />
-        <activity android:name=".manufacturers.Airbus" />
-        <activity android:name=".home.MainActivity" />
-        <activity android:name=".alexa.LoginActivity">
+        <activity android:name=".flightmap.FlightMap"  android:screenOrientation="portrait"/>
+        <activity android:name=".alexa.AlexaActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".manufacturers.ManufacturerMenu"  android:screenOrientation="portrait"/>
+        <activity android:name=".airbus.AirbusA350"  android:screenOrientation="portrait"/>
+        <activity android:name=".manufacturers.Airbus"  android:screenOrientation="portrait"/>
+        <activity android:name=".home.MainActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".alexa.LoginActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
