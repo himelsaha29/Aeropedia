@@ -137,7 +137,7 @@ public class Firebase extends AppCompatActivity {
             cessnaCaravan, cessnaLatitude, cessnaLongitude, gulfstreamG650, gulfstreamG280, gulfstreamGIV;
 
     private String topTextEn = "For  most  people,  sky  is  just  a  blue,  infinite  canvas,  it  is  the  limit.  To  those  who  are  really  into  the  beautiful  world  of  air,  sky,  and  flying,  the  lure  of  adventure,  the  appreciation  of  beauty,  sky  is  home.  A  home  where  enthusiasts  want  to  return  to  over  and  over  again ";
-    private String topTextFr = "Pour la plupart des gens, le ciel n\'est qu\'une toile bleue et infinie,  c\'est seulement la limite. Pour ceux qui aiment vraiment le beau monde de l\'air, du ciel et du vol, l\'attrait de l\'aventure, l\'appréciation de la beauté, le ciel est la maison. Une maison où les passionnés veulent revenir encore ";
+    private String topTextFr = "Pour la plupart des gens, le ciel n\'est qu\'une toile bleue et infinie,  c\'est seulement la limite. Pour ceux qui aiment vraiment le beau monde de l\'air, du ciel et du vol, l\'attrait de l\'aventure, l\'appréciation de la beauté, le ciel est la maison. Une maison où les passionnés veulent revenir encore et encore";
 
 
     @Override
