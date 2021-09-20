@@ -1300,7 +1300,15 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         if (flightRoute[4].equalsIgnoreCase("N/A")) {
             engineType.setText(R.string.not_available);
         } else {
-            engineType.setText(flightRoute[4]);
+            if(locale.toString().contains("en")) {
+                engineType.setText(flightRoute[4]);
+            } else if(locale.toString().contains("fr")) {
+                if(flightRoute[4].contains("Twin") || flightRoute[4].contains("twin")) {
+                    engineType.setText("Bi-jet");
+                } else  {
+                    engineType.setText(flightRoute[4]);
+                }
+            }
         }
 
 
