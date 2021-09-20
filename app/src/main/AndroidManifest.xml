@@ -18,6 +18,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:resizeableActivity="false"
         android:theme="@style/Theme.Aeropedia">
         <activity android:name=".boeing.BoeingGlobemaster" android:screenOrientation="portrait"></activity>
         <activity android:name=".home.OnBoardScreen" android:screenOrientation="portrait"/>
