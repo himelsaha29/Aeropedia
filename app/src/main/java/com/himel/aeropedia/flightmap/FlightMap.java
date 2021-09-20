@@ -596,14 +596,14 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                     originAirportCityTV.setText(R.string.not_available);
                                     cities.setVisibility(View.VISIBLE);
                                 } else {
-                                    originAirportCityTV.setText(originAirportCity);
+                                    originAirportCityTV.setText(originAirportCity.trim());
                                     cities.setVisibility(View.VISIBLE);
                                 }
                                 if (destinationAirportCity == null) {
                                     destinationAirportCityTV.setText(R.string.not_available);
                                     cities.setVisibility(View.VISIBLE);
                                 } else {
-                                    destinationAirportCityTV.setText(destinationAirportCity);
+                                    destinationAirportCityTV.setText(destinationAirportCity.trim());
                                     cities.setVisibility(View.VISIBLE);
                                 }
                                 if (originAirportCity == null & destinationAirportCity == null) {
@@ -1195,8 +1195,13 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
     private String loadCitiesJSONFromAsset(Context context) {
         String json = null;
+        InputStream is = null;
         try {
-            InputStream is = context.getAssets().open("AirportCities.json");
+            if (locale.toString().contains("en")) {
+                is = context.getAssets().open("AirportCities.json");
+            } else if(locale.toString().contains("fr")){
+                is = context.getAssets().open("AirportCities_fr.json");
+            }
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
