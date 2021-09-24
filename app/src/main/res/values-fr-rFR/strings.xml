@@ -993,8 +993,8 @@
 
     <string name="an72_identify">Comment identifier Antonov An-72 Cheburashka?</string>
     <string name="an72_identify_ans">Grands conduits d\'admission d\'air du moteur qui ressemblent aux oreilles surdimensionnées du populaire personnage d\'animation soviétique Cheburashka, 2 moteurs
-        attaché au-dessus des ailes, nez pointu, pas de bout d\'aile, stabilisateurs horizontaux attachés à la partie supérieure de la queue avec une extension pointue attachée
-        à la partie avant de la queue sur le même axe que les stabilisateurs horizontaux.</string>
+        attaché au-dessus des ailes, nez pointu, pas de bout d\'aile, «T-tail» avec une extension pointue attachée à la partie avant de la queue sur le même axe que les
+        stabilisateurs horizontaux.</string>
 
     <string name="an72_cockpit_value">5</string>
     <string name="an72_wingspan_value">31,89 m</string>
@@ -2028,8 +2028,8 @@
         turboréacteurs à double flux Rolls-Royce AE 3007. Les moteurs ont un taux de dilution de 5:1. Les moteurs sont contrôlés par deux FADEC (Full Authority Digital
         Engine Controls, en anglais). Les FADEC contrôlent pratiquement tous les aspects du moteur et envoient les données du moteur à afficher sur l\'EICAS pour le
         pilote. L\'Embraer ERJ145 famille d\'avions est généralement équipée de la suite avionique Honeywell Primus 1000. La suite se compose normalement de cinq unités
-        d\'affichage CRT (DU) ou écrans. De gauche à droite, le système se compose d\'un affichage de vol principal (PFD), d\'un affichage multifonction (MFD), d\'un
-        système d\'indication du moteur et d\'alerte d\'équipage (EICAS), Affichage multifonction (MFD) (copilote) et affichage de vol principal (PFD) (copilote). Les DU
+        d\'affichage CRT (DU) ou écrans. De gauche à droite, le système se compose d\'un affichage de vol principal (PFD, en anglais), d\'un affichage multifonction (MFD, en anglais), d\'un
+        système d\'indication du moteur et d\'alerte d\'équipage (EICAS, en anglais), Affichage multifonction (MFD) (copilote) et affichage de vol principal (PFD) (copilote). Les DU
         sont normalement des tubes cathodiques mais peuvent être mis à niveau vers des écrans LCD plus légers. Ces les DU mis à niveau ont également des fonctionnalités
         supplémentaires.\n</string>
 
@@ -2041,7 +2041,7 @@
 
 
     <string name="erj_family_identify">Comment identifier les avions de la famille ERJ?</string>
-    <string name="erj_family_identify_ans"></string>
+    <string name="erj_family_identify_ans">Nez «pointu», conception «T-tail», deux turboréacteurs à double flux montés à l\'arrière des ailes sur les côtés du fuselage arrière.</string>
 
     <string name="erj_family_cockpit_value">2</string>
     <string name="erj_family_wingspan_value">20,04 m</string>
@@ -2121,7 +2121,7 @@
 
 
     <string name="ejet_e2_identify">Comment identifier Embraer E-Jet E2?</string>
-    <string name="ejet_e2_identify_ans"></string>
+    <string name="ejet_e2_identify_ans">Nez «distinctif», pas de section triangulaire de la nageoire dorsale devant la queue, pas d\'ailettes.</string>
 
     <string name="ejet_e2_cockpit_value">2</string>
     <string name="ejet_e2_wingspan_value">31,0 / 33,72 / 35,12 m</string>
@@ -2716,8 +2716,8 @@
     <string name="community">Communauté</string>
     <string name="next_button">&#10095;</string>
     <string name="finish_button">Terminer</string>
+
     <string name="firebase_vote">Sélectionnez votre avion préféré et partagez-le avec la communauté aéronautique</string>
     <string name="submit">Soumettre</string>
-
 
 </resources>
