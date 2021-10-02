@@ -1,6 +1,6 @@
 # Aeropedia
 
-## Get to know about various aircraft out there from different manufacturers. Dive into their history and features. 
+## Get to know about various aircraft out there from different manufacturers like Airbus, Boeing, Bombardier, Antonov, Cessna and more. Dive into their history and features. 
 
 <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/1.png width="318.5">  <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/5.png width="318.5"> <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/6.png width="318.5">
 
