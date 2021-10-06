@@ -1,6 +1,0 @@
-include ':app',
-        ':libs:AmazonAlexa',
-        ':libs:RecorderLevelView',
-        ':libs:speechutils'
-
-rootProject.name = "Aeropedia"
