@@ -10,5 +10,7 @@
 
 Stretch your aviation interest by communicating with Amazon Alexa, asking for more. Most importantly, get involved with other aviation enthusiasts and be a part of the amazing community.
 
+<img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/11.png width="318.5">
+
 ## Available in English 🇺🇸 / Disponible en français 🇫🇷
 <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/7.png width="350">
