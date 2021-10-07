@@ -8,7 +8,7 @@
 
 <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/8.png width="318.5"> <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/9.png width="318.5"> <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/10.png width="318.5">
 
-Stretch your aviation interest by communicating with Amazon Alexa, asking for more. Most importantly, get involved with other aviation enthusiasts and be a part of the amazing community.
+## Stretch your aviation interest by communicating with Amazon Alexa, asking for more. Most importantly, get involved with other aviation enthusiasts and be a part of the amazing community.
 
 <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/11.png width="318.5">
 
