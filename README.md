@@ -18,4 +18,10 @@
 
 # How the live flight tracker works?
 
-The live flight tracker relies on the network created by advanced technologies such as ADS-B (Automatic Dependent Surveillance–Broadcast), ASTERIX (All Purpose Structured Eurocontrol Surveillance Information Exchange), and MLAT (Multilateration).
+The live flight tracker relies on the network created by advanced technologies such as ADS-B (Automatic Dependent Surveillance–Broadcast), ASTERIX (All Purpose Structured Eurocontrol Surveillance Information Exchange), and MLAT (Multilateration), and sometimes satellites as well.
+
+The source of the system data is mainly ADS-B which is a relatively new technology under development, which means that today it is rarely used by Air Traffic Control (ATC). According to FlightRadar24, roughly 70% of all commercial passenger aircraft (80% in Europe, 60% in the US) are equipped with an ADS-B transponder. For general aviation this number is probably below 20%. The percentage of aircraft equipped with ADS-B receivers is steadily increasing though, as they will become mandatory for most aircraft around the world in the future. When mandatory, ADS-B will replace primary radar as the primary surveillance method used by ATC.
+
+1. Aircraft gets its location from a GPS navigation source (satellite)
+2. The ADS-B transponder on aircraft transmits signal containing the location (flight information and much more)
+3. ADS-B signal is picked up by a receiver 
