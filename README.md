@@ -1,5 +1,9 @@
 # Aeropedia
 
+
+[<img src="https://github.com/himelsaha29/Aeropedia/raw/main/app/src/main/assets/promos/samsung.png" width="250" alt="Samsung Galaxy Store">](https://galaxy.store/remastered)
+[<img src="https://github.com/himelsaha29/Aeropedia/raw/main/app/src/main/assets/promos/huawei.png" width="230" alt="Huawei AppGallery">](https://galaxy.store/remastered)
+
 ## Get to know about various aircraft out there from different manufacturers like Airbus, Boeing, Bombardier, Antonov, Cessna and more. Dive into their history and features. 
 
 <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/1.png width="271.5">  <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/5.png width="271.5"> <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/6.png width="271.5">
