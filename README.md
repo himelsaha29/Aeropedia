@@ -2,7 +2,7 @@
 
 
 [<img src="https://github.com/himelsaha29/Aeropedia/raw/main/app/src/main/assets/promos/samsung.png" width="250" alt="Samsung Galaxy Store">](https://galaxy.store/aeropedia)
-[<img src="https://github.com/himelsaha29/Aeropedia/raw/main/app/src/main/assets/promos/huawei.png" width="230" alt="Huawei AppGallery">](https://galaxy.store/remastered)
+[<img src="https://github.com/himelsaha29/Aeropedia/raw/main/app/src/main/assets/promos/huawei.png" width="230" alt="Huawei AppGallery">](https://appgallery.huawei.com/#/app/C104775361)
 
 ## Get to know about various aircraft out there from different manufacturers like Airbus, Boeing, Bombardier, Antonov, Cessna and more. Dive into their history and features. 
 
