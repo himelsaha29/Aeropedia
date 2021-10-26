@@ -29,3 +29,16 @@ The source of the system data is mainly ADS-B which is a relatively new technolo
 1. Aircraft gets its location from a GPS navigation source (satellite)
 2. The ADS-B transponder on aircraft transmits signal containing the location (flight information and much more)
 3. ADS-B signal is picked up by a receiver 
+
+ADS-B data is broadcast every half-second on a 1090MHz, digital data link. ADS-B broadcasts may include:
+
+    Flight Identification (flight number callsign or call sign)
+    ICAO 24-bit Aircraft Address (globally unique airframe code)
+    Position (latitude/longitude)
+    Position integrity/accuracy (GPS horizontal protection limit)
+    Barometric and Geometric Altitudes
+    Vertical Rate (rate of climb/descent)
+    Track Angle and Ground Speed (velocity)
+    Emergency indication (when emergency code selected)
+    Special position identification (when IDENT selected)
+
