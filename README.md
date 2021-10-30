@@ -6,7 +6,7 @@
 
 ## Get to know about various aircraft out there from different manufacturers like Airbus, Boeing, Bombardier, Antonov, Cessna and more. Dive into their history and features. 
 
-<img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/1.png width="271.5">  <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/5.png width="271.5"> <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/6.png width="271.5">
+<img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/1.png width="271.0">  <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/5.png width="271.0"> <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/6.png width="271.0">
 
 ## Take a moment to think about all the aircraft flying at the moment abstracted by the clouds in real life but exposed in the live interactive world map. 
 
@@ -42,3 +42,4 @@ ADS-B data is broadcast every half-second on a 1090MHz, digital data link. ADS-B
     Emergency indication (when emergency code selected)
     Special position identification (when IDENT selected)
 
+<img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/ads-b.jpg width="471.5">
