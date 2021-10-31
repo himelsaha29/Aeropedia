@@ -6,7 +6,7 @@
 
 ## Get to know about various aircraft out there from different manufacturers like Airbus, Boeing, Bombardier, Antonov, Cessna and more. Dive into their history and features. 
 
-<img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/1.png width="270.0">  <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/5.png width="270.0"> <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/6.png width="270.0">
+<img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/1.png width="269.0">  <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/5.png width="269.0"> <img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/6.png width="269.0">
 
 ## Take a moment to think about all the aircraft flying at the moment abstracted by the clouds in real life but exposed in the live interactive world map. 
 
