@@ -392,7 +392,7 @@
                         android:layout_height="70dp"
                         android:background="@android:color/transparent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_bulb_black"
+                        android:src="@drawable/ic_bulb_black_lit"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:neumorph_backgroundColor="#1b1f1f"
