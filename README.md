@@ -42,4 +42,7 @@ ADS-B data is broadcast every half-second on a 1090MHz, digital data link. ADS-B
     Emergency indication (when emergency code selected)
     Special position identification (when IDENT selected)
 
-<img src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/ads-b.jpg width="471.5">
+<p align="center">
+  <img align="center" src=https://github.com/himelsaha29/Aeropedia/blob/main/app/src/main/assets/promos/ads-b.jpg width="471.5"/>
+</p>
+
