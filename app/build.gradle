@@ -12,8 +12,8 @@ android {
         applicationId "com.himel.aeropedia"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "Sapphire"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -48,19 +48,33 @@ dependencies {
     implementation files('C:\\Users\\HimelSaha\\Downloads\\assets\\lib.jar')
     implementation 'com.google.firebase:firebase-database:20.0.0'
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation 'com.google.firebase:firebase-inappmessaging-display'
+    implementation 'com.google.firebase:firebase-analytics'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.mxn.soul:flowingdrawer-core:2.1.0'
     implementation 'com.nineoldandroids:library:2.4.0'
     implementation 'io.alterac.blurkit:blurkit:1.1.0'
+
     compile 'com.github.bmelnychuk:atv:1.2.+'
     compile 'com.github.johnkil.print:print:1.3.1'
+    compile project(path: ':libs:AmazonAlexa')
+    compile project(path: ':libs:RecorderLevelView')
+    compile project(path: ':libs:speechutils')
+
     implementation 'com.github.fornewid:neumorphism:0.3.0'
+
     implementation 'com.airbnb.android:lottie:3.7.0'
+
     compile 'org.opensky:opensky-api:1.3.0'
+
+
     implementation 'com.squareup.okhttp3:okhttp:3.12.13'
+
     implementation 'com.google.android.material:material:1.3.0-alpha01'
+
     implementation 'com.github.smarteist:autoimageslider:1.4.0-appcompat'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
