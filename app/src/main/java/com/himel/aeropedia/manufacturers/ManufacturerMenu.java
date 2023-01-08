@@ -21,6 +21,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ScrollView;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.himel.aeropedia.airbus.AirbusA220;
 import com.himel.aeropedia.airbus.AirbusA300;
 import com.himel.aeropedia.airbus.AirbusA310;
@@ -100,6 +101,8 @@ public class ManufacturerMenu extends AppCompatActivity {
     private FlowingMenuLayout flowingMenuLayout;
     private BlurLayout blur;
     private AndroidTreeView tView;
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private int id = 1;
 
 
     @Override
@@ -108,6 +111,12 @@ public class ManufacturerMenu extends AppCompatActivity {
         loadLocale();
         locale = Locale.getDefault();
         enableDarkOnCreate = verifyDarkMode();
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        try {
+            Bundle bundle = new Bundle();
+            bundle.putString("gallery", "gallery");
+            mFirebaseAnalytics.logEvent("gallery", bundle);
+        } catch (Exception e) {}
         if(enableDark.equals("No")) {
             setContentView(R.layout.activity_manufacturer_menu_light);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -312,6 +321,13 @@ public class ManufacturerMenu extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
+
+        try {
+            Bundle bundle = new Bundle();
+            bundle.putString("return_to_gallery", String.valueOf(id));
+            mFirebaseAnalytics.logEvent("return_to_gallery", bundle);
+            id++;
+        } catch(Exception e) {}
 
         if(!enableDarkOnCreate.equals(verifyDarkMode()) && !locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
