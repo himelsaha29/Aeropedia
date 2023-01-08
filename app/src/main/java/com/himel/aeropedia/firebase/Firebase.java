@@ -29,6 +29,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -139,6 +140,9 @@ public class Firebase extends AppCompatActivity {
     private String topTextEn = "For  most  people,  sky  is  just  a  blue,  infinite  canvas,  it  is  the  limit.  To  those  who  are  really  into  the  beautiful  world  of  air,  sky,  and  flying,  the  lure  of  adventure,  the  appreciation  of  beauty,  sky  is  home.  A  home  where  enthusiasts  want  to  return  to  over  and  over  again ";
     private String topTextFr = "Pour la plupart des gens, le ciel n\'est qu\'une toile bleue et infinie,  c\'est seulement la limite. Pour ceux qui aiment vraiment le beau monde de l\'air, du ciel et du vol, l\'attrait de l\'aventure, l\'appréciation de la beauté, le ciel est la maison. Une maison où les passionnés veulent revenir encore et encore";
 
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private int id = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,6 +152,13 @@ public class Firebase extends AppCompatActivity {
         enableDarkOnCreate = verifyDarkMode();
 
         voted = verifyVoted();
+
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        try {
+            Bundle bundle = new Bundle();
+            bundle.putString("community", "community");
+            mFirebaseAnalytics.logEvent("community", bundle);
+        } catch (Exception e) {}
 
         if(!voted) {
             if(enableDark.equals("No")) {
