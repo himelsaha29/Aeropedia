@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.himel.aeropedia.R;
 
 import java.util.ArrayList;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
     private boolean flag = false;
     private SharedPreferences.Editor editor;
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private int id = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
         loadLocale();
         locale = Locale.getDefault();
         setContentView(R.layout.activity_main);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        try {
+            Bundle bundle = new Bundle();
+            bundle.putString("home", "home");
+            mFirebaseAnalytics.logEvent("home", bundle);
+        } catch (Exception e) {}
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.clearFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -135,6 +144,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         modifyAlexaRestart();
+
+        try {
+            Bundle bundle = new Bundle();
+            bundle.putString("return_to_home", String.valueOf(id));
+            mFirebaseAnalytics.logEvent("return_to_home", bundle);
+            id++;
+        } catch(Exception e) {}
 
         if (!locale.equals(Locale.getDefault())) {
             Intent intent = getIntent();
