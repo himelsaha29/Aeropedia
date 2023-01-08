@@ -32,6 +32,7 @@ import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.airbus.AirbusA220;
 import com.himel.aeropedia.airbus.AirbusA300;
@@ -126,10 +127,18 @@ public class AlexaActivity extends CoreActivity {
     private CoordinatorLayout mainLayout;
     private boolean doWhile = true;
     private int doWhileCounter = 0;
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private int id = 1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        try {
+            Bundle bundle = new Bundle();
+            bundle.putString("alexa", "alexa");
+            mFirebaseAnalytics.logEvent("alexa", bundle);
+        } catch (Exception e) {}
 
         do {
 
@@ -151,7 +160,7 @@ public class AlexaActivity extends CoreActivity {
                                 loadDrawer();
                             }
                         });
-                        
+
                     }
                 }
             });
@@ -471,6 +480,13 @@ public class AlexaActivity extends CoreActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
+
+        try {
+            Bundle bundle = new Bundle();
+            bundle.putString("return_to_alexa", String.valueOf(id));
+            mFirebaseAnalytics.logEvent("return_to_alexa", bundle);
+            id++;
+        } catch(Exception e) {}
 
         checkLogin();
         if (loggedIn != true) {
