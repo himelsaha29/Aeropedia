@@ -43,6 +43,7 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.himel.aeropedia.R;
 import com.himel.aeropedia.alexa.Global;
 
@@ -134,6 +135,8 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private Thread currentRouteThread = null;
 
     private CoordinatorLayout mainLayout;
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private int id = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -142,6 +145,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         loadLocale();
         locale = Locale.getDefault();
         dialog = new Dialog(FlightMap.this);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         getCoordinates();
         // This contains the MapView in XML and needs to be called after the access token is configured.
         if (enableDarkOnCreate.equals("No")) {
@@ -550,7 +554,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                 if (getResources().getConfiguration().locale.toString().contains("en")) {
                                     origin.setText(flightRoute[0]);
                                     destination.setText(flightRoute[1]);
-                                    if ((flightRoute[2] + " " + flightRoute[3]).contains("N/A")) {
+                                    if ((flightRoute[2] + " " + flightRoute[3]).contains("N/A") || (flightRoute[2] + " " + flightRoute[3]).contains("shortName")) {
                                         aircraft.setText(R.string.not_available);
                                     } else {
                                         aircraft.setText(flightRoute[2] + " " + flightRoute[3]);
@@ -678,6 +682,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 markerSelected = marker;
                 marker.setIcon(markerPlaneRed);
 
+                try {
+                    Bundle bundle = new Bundle();
+                    bundle.putString("PlaneMarker", "PlaneMarker");
+                    mFirebaseAnalytics.logEvent("PlaneMarker", bundle);
+                } catch (Exception e) {}
+
                 return true;
             }
         });
@@ -685,6 +695,12 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
 
     private void getCoordinates() {
+        try {
+            Bundle bundle = new Bundle();
+            bundle.putString("map", String.valueOf(id));
+            mFirebaseAnalytics.logEvent("map", bundle);
+            id++;
+        } catch (Exception e) {}
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -1260,7 +1276,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             destination.setText(flightRoute[1]);
         }
 
-        if ((flightRoute[2] + " " + flightRoute[3]).contains("N/A")) {
+        if ((flightRoute[2] + " " + flightRoute[3]).contains("N/A") || (flightRoute[2] + " " + flightRoute[3]).contains("shortName")) {
             aircraft.setText(R.string.not_available);
         } else {
             aircraft.setText(flightRoute[2] + " " + flightRoute[3]);
@@ -1400,13 +1416,13 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             window.setStatusBarColor(Color.parseColor("#ff104652"));
         }
     }
-
+ 
     private void lightStatus() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.parseColor("#ffaddbff"));
+            window.setStatusBarColor(Color.parseColor("#ff8cb6ff"));
         }
     }
 
