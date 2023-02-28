@@ -1,9 +1,10 @@
 # Aeropedia
 
 
-[<img src="https://github.com/himelsaha29/Aeropedia/raw/main/app/src/main/assets/promos/samsung.png" width="250" alt="Samsung Galaxy Store">](https://galaxy.store/aeropedia)
-[<img src="https://github.com/himelsaha29/Aeropedia/raw/main/app/src/main/assets/promos/amazon.png" width="235" alt="Amazon AppStore">](https://www.amazon.com/gp/product/B09GPVB4XH)
-[<img src="https://github.com/himelsaha29/Aeropedia/raw/main/app/src/main/assets/promos/huawei.png" width="230" alt="Huawei AppGallery">](https://appgallery.huawei.com/#/app/C104775361)
+[<img src="https://github.com/himelsaha29/Aeropedia/raw/main/app/src/main/assets/promos/samsung.png" width="183" alt="Samsung Galaxy Store">](https://galaxy.store/aeropedia)
+[<img src="https://github.com/himelsaha29/Aeropedia/raw/main/app/src/main/assets/promos/amazon.png" width="168" alt="Amazon AppStore">](https://www.amazon.com/gp/product/B09GPVB4XH)
+[<img src="https://github.com/himelsaha29/Aeropedia/raw/main/app/src/main/assets/promos/huawei.png" width="163" alt="Huawei AppGallery">](https://appgallery.huawei.com/#/app/C104775361)
+[<img src="https://github.com/himelsaha29/Aeropedia/raw/main/app/src/main/assets/promos/uptodown.png" width="163" alt="Uptodown">](https://aeropedia.en.uptodown.com/android)
 
 ## Get to know about various aircraft out there from different manufacturers like Airbus, Boeing, Bombardier, Antonov, Cessna and more. Dive into their history and features. 
 
