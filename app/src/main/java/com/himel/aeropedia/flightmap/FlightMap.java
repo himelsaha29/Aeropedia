@@ -1,5 +1,7 @@
 package com.himel.aeropedia.flightmap;
 
+import static android.view.HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -15,6 +17,7 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.HapticFeedbackConstants;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -124,7 +127,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
     private Route route = new Route();
     String[] flightRoute;
-    String[] flightTrack;
+    Double[] flightTrack;
     private Polyline polyline;
     private boolean bottomSheetIsExpanded = false;
 
@@ -137,6 +140,9 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
     private CoordinatorLayout mainLayout;
     private FirebaseAnalytics mFirebaseAnalytics;
     private int id = 1;
+
+    // new track
+    HashMap<String, Double[]> airportCoordinate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -311,10 +317,24 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
         for (int i = 0; i < responseArray.size(); i++) {
             try {
+                icao = responseArray.get(i).getString(0);
+                callsign = responseArray.get(i).getString(1);
+                if(icao == null || icao.trim().equalsIgnoreCase("") ||
+                        icao.equalsIgnoreCase("n/a") ||
+                        callsign == null || callsign.trim().equalsIgnoreCase("")
+                        || callsign.equalsIgnoreCase("n/a")){
+                    continue;
+                }
+            } catch (Exception e) {
+                System.out.println(e);
+                continue;
+            }
+
+
+            try {
                 latitude = (double) responseArray.get(i).getDouble(6);
                 longitude = (double) responseArray.get(i).getDouble(5);
                 true_track = (float) responseArray.get(i).getDouble(10);
-                icao = responseArray.get(i).getString(0);
 
                 if (icao == null) System.out.println("ICAO24 IS NULL");
                 LatLng latLng = new LatLng(latitude, longitude);
@@ -427,6 +447,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
 
 
             } catch (JSONException e) {
+                System.out.println(e);
                 e.printStackTrace();
             } catch (Exception e) {
                 System.out.println("Marker add EXCEPTION");
@@ -435,6 +456,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
             }
         }
 
+        airportCoordinate = AirportCoordinates.getAirportCoordinates();
 
         FrameLayout bottomSheetLayout;
         if (enableDarkOnCreate.equals("No")) {
@@ -476,9 +498,21 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                     flightRoute = null;
                     flightTrack = null;
 
+                    try {
+                        bottomSheetLayout.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY, FLAG_IGNORE_VIEW_SETTING);
+                    } catch (Exception e) {
+                        System.out.println("Haptic error" + e.getMessage());
+                    }
+
                 } else if (newState == BottomSheetBehavior.STATE_EXPANDED) {
                     bottomSheetIsExpanded = true;
+                    try {
+                        bottomSheetLayout.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY, FLAG_IGNORE_VIEW_SETTING);
+                    } catch (Exception e) {
+                        System.out.println("Haptic error" + e.getMessage());
+                    }
                 }
+
             }
 
             @Override
@@ -515,6 +549,7 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                 if (polyline != null) {
                     polyline.remove();
                 }
+
                 bottomSheetBehavior.setPeekHeight(120);
                 String snippet = marker.getSnippet();
                 // ======== LOADING ========
@@ -618,38 +653,28 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                 // getting flight track
                                 if (flightRoute[1] != null && !flightRoute[1].equalsIgnoreCase("N/A")) {
 
-                                    Thread threadTrack = new Thread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            flightTrack = route.getTrack(flightRoute[1]);
-                                            if (flightTrack[0].equalsIgnoreCase("true")) {
-                                                Float destinationAirportLat = Float.valueOf(flightTrack[1]);
-                                                Float destinationAirportLong = Float.valueOf(flightTrack[2]);
 
-                                                FlightMap.this.runOnUiThread(new Runnable() {
-                                                    @Override
-                                                    public void run() {
-                                                        if (enableDarkOnCreate.equals("No")) {
-                                                            polyline = mMap.addPolyline(new PolylineOptions()
-                                                                    .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
-                                                                    .width(7)
-                                                                    .pattern(pattern)
-                                                                    .color(Color.BLUE)
-                                                                    .geodesic(true));
-                                                        } else {
-                                                            polyline = mMap.addPolyline(new PolylineOptions()
-                                                                    .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
-                                                                    .width(7)
-                                                                    .pattern(pattern)
-                                                                    .color(Color.YELLOW)
-                                                                    .geodesic(true));
-                                                        }
-                                                    }
-                                                });
-                                            }
+                                    flightTrack = airportCoordinate.get(flightRoute[1]);
+                                    if (flightTrack != null) {
+                                        Double destinationAirportLat = Double.valueOf(flightTrack[0]);
+                                        Double destinationAirportLong = Double.valueOf(flightTrack[1]);
+
+                                        if (enableDarkOnCreate.equals("No")) {
+                                            polyline = mMap.addPolyline(new PolylineOptions()
+                                                    .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
+                                                    .width(7)
+                                                    .pattern(pattern)
+                                                    .color(Color.BLUE)
+                                                    .geodesic(true));
+                                        } else {
+                                            polyline = mMap.addPolyline(new PolylineOptions()
+                                                    .add(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude), new LatLng(destinationAirportLat, destinationAirportLong))
+                                                    .width(7)
+                                                    .pattern(pattern)
+                                                    .color(Color.YELLOW)
+                                                    .geodesic(true));
                                         }
-                                    });
-
+                                    }
                                     if (currentThreadTrack != null) {
                                         try {
                                             currentThreadTrack.interrupt();
@@ -658,8 +683,6 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
                                             e.printStackTrace();
                                         }
                                     }
-                                    currentThreadTrack = threadTrack;
-                                    threadTrack.start();
                                 }
 
                             }
@@ -959,12 +982,25 @@ public class FlightMap extends AppCompatActivity implements OnMapReadyCallback {
         int positionSource = 0;
 
         for (int i = 0; i < responseArray.size(); i++) {
+
+            try {
+                icao = responseArray.get(i).getString(0);
+                callsign = responseArray.get(i).getString(1);
+                if(icao == null || icao.trim().equalsIgnoreCase("") ||
+                        icao.equalsIgnoreCase("n/a") ||
+                        callsign == null || callsign.trim().equalsIgnoreCase("")
+                || callsign.equalsIgnoreCase("n/a")){
+                    continue;
+                }
+            } catch (Exception e) {
+                System.out.println(e);
+                continue;
+            }
+
             try {
                 latitude = (double) responseArray.get(i).getDouble(6);
                 longitude = (double) responseArray.get(i).getDouble(5);
                 true_track = (float) responseArray.get(i).getDouble(10);
-                icao = responseArray.get(i).getString(0);
-
                 if (icao == null) System.out.println("ICAO24 IS NULL");
 
 

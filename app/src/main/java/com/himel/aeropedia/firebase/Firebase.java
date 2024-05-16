@@ -1,5 +1,7 @@
 package com.himel.aeropedia.firebase;
 
+import static android.view.HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -18,6 +20,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -75,6 +78,7 @@ import com.himel.aeropedia.embraer.ERJFamily;
 import com.himel.aeropedia.embraer.Lineage1000;
 import com.himel.aeropedia.embraer.Phenom300;
 import com.himel.aeropedia.flightmap.FlightMap;
+import com.himel.aeropedia.flightstatus.FlightStatus;
 import com.himel.aeropedia.gulfstream.G280;
 import com.himel.aeropedia.gulfstream.G650;
 import com.himel.aeropedia.gulfstream.GulfstreamIV;
@@ -2108,6 +2112,11 @@ public class Firebase extends AppCompatActivity {
                     blur.setVisibility(View.GONE);
                     blur.setAlpha(0f);
                 } else if (newState == ElasticDrawer.STATE_OPENING) {
+                    try {
+                        mainLayout.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY, FLAG_IGNORE_VIEW_SETTING);
+                    } catch (Exception e) {
+                        System.out.println("Haptic error" + e.getMessage());
+                    }
                     blur.invalidate();
                     blur.setAlpha(0.0f);
                     blur.setVisibility(View.VISIBLE);
@@ -2135,6 +2144,7 @@ public class Firebase extends AppCompatActivity {
         TreeNode manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_manufacturer, this.getString(R.string.manufacturers), "No", "Manufacturers", null));
         TreeNode alexaRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_alexa, this.getString(R.string.ask_alexa), "No", "Alexa", AlexaActivity.class));
         TreeNode flightTrackerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_radar, this.getString(R.string.flight_tracker), "No", "flightTracker", FlightMap.class));
+        TreeNode flightStatusRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_status, this.getString(R.string.flightStatus), "No", "flightStatus", FlightStatus.class));
         TreeNode firebaseRoot = null;
         if (verifyDarkMode().equals("Yes")) {
             firebaseRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_firebase, this.getString(R.string.firebase), "HighlightLight", "firebase", null));
@@ -2213,8 +2223,9 @@ public class Firebase extends AppCompatActivity {
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, cessna, embraer, gulfstream);
 
         root.addChildren(manufacturerRoot);
-        root.addChildren(alexaRoot);
         root.addChildren(flightTrackerRoot);
+        root.addChildren(flightStatusRoot);
+        root.addChildren(alexaRoot);
         root.addChildren(firebaseRoot);
 
         tView = new AndroidTreeView(this, root);
