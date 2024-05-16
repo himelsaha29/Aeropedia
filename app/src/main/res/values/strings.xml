@@ -51,6 +51,20 @@
     <string name="g280">G280</string>
     <string name="gulfstream_iv">G-IV</string>
     <string name="language"><b>FR</b></string>
+    <string name="flightStatus">Flight Status</string>
+    <string name="findStatus">Find Status</string>
+    <string name="flightNumber">Flight Number</string>
+    <string name="terminal">Terminal</string>
+    <string name="gate">Gate</string>
+    <string name="validFlightNumber">Please enter valid flight number</string>
+    <string name="departureTime">Departure time</string>
+    <string name="arrivalTime">Arrival time</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="flightTime">Flight time</string>
+    <string name="airborneFor">Airborne for</string>
+    <string name="toGo">to go</string>
+
 
 
     <!--BASICS-->
@@ -2574,12 +2588,13 @@
     <string name="_true">True</string>
 
 
-    <string name="drawer_airplane">&#xe902;</string>
-    <string name="drawer_radar">&#xe903;</string>
-    <string name="drawer_alexa">&#xe900;</string>
-    <string name="drawer_tail">&#xe904;</string>
-    <string name="drawer_manufacturer">&#xe901;</string>
-    <string name="drawer_firebase">&#xe905;</string>
+    <string name="drawer_airplane">&#xe904;</string>
+    <string name="drawer_radar">&#xe905;</string>
+    <string name="drawer_alexa">&#xe902;</string>
+    <string name="drawer_tail">&#xe906;</string>
+    <string name="drawer_manufacturer">&#xe903;</string>
+    <string name="drawer_firebase">&#xe901;</string>
+    <string name="drawer_status">&#xe900;</string>
 
 
     <string name="snackbar">No internet connection</string>
@@ -2595,7 +2610,6 @@
 
     <string name="firebase_vote">Select your preferred aircraft and share with the aviation community</string>
     <string name="submit">Submit</string>
-
 
 
 </resources>

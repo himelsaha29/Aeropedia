@@ -2699,12 +2699,13 @@
     <string name="_true">Vrai</string>
 
 
-    <string name="drawer_airplane">&#xe902;</string>
-    <string name="drawer_radar">&#xe903;</string>
-    <string name="drawer_alexa">&#xe900;</string>
-    <string name="drawer_tail">&#xe904;</string>
-    <string name="drawer_manufacturer">&#xe901;</string>
-    <string name="drawer_firebase">&#xe905;</string>
+    <string name="drawer_airplane">&#xe904;</string>
+    <string name="drawer_radar">&#xe905;</string>
+    <string name="drawer_alexa">&#xe902;</string>
+    <string name="drawer_tail">&#xe906;</string>
+    <string name="drawer_manufacturer">&#xe903;</string>
+    <string name="drawer_firebase">&#xe901;</string>
+    <string name="drawer_status">&#xe900;</string>
 
     <string name="snackbar">Pas de connexion internet</string>
 
@@ -2719,5 +2720,18 @@
 
     <string name="firebase_vote">Sélectionnez votre avion préféré et partagez-le avec la communauté aéronautique</string>
     <string name="submit">Soumettre</string>
+    <string name="flightStatus">L\'état du vol</string>
+    <string name="findStatus">Trouver le statut</string>
+    <string name="flightNumber">Numéro de vol</string>
+    <string name="gate">Porte</string>
+    <string name="validFlightNumber">Veuillez saisir un numéro de vol valide</string>
+    <string name="terminal">Aérogare</string>
+    <string name="departureTime">Heure de départ</string>
+    <string name="arrivalTime">Heure d\'arrivée</string>
+    <string name="from">De</string>
+    <string name="to">À</string>
+    <string name="flightTime">Temps de vol</string>
+    <string name="toGo">Il reste</string>
+    <string name="airborneFor">En vol pendant</string>
 
 </resources>
