@@ -1,5 +1,7 @@
 package com.himel.aeropedia.home;
 
+import static android.view.HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING;
+
 import android.animation.ArgbEvaluator;
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +11,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.HapticFeedbackConstants;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -56,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         models = new ArrayList<Model>();
         models.add(new Model(R.drawable.aircraft_gallery_cover, getString(R.string.aircraft_gallery)));
         models.add(new Model(R.drawable.real_time_flight_tracker_cover, getString(R.string.tracker_menu)));
+        models.add(new Model(R.drawable.landing_gear_cover, getString(R.string.flightStatus)));
         models.add(new Model(R.drawable.cover_alexa, getString(R.string.alexa_menu)));
         models.add(new Model(R.drawable.community_cover, getString(R.string.community)));
 
@@ -68,8 +72,9 @@ public class MainActivity extends AppCompatActivity {
         Integer[] colors_temp = {
                 getResources().getColor(R.color.back_color1),
                 getResources().getColor(R.color.back_color3),
+                getResources().getColor(R.color.back_color4),
                 getResources().getColor(R.color.back_color2),
-                getResources().getColor(R.color.back_color4)
+                getResources().getColor(R.color.back_color5)
         };
 
         colors = colors_temp;
@@ -88,19 +93,19 @@ public class MainActivity extends AppCompatActivity {
                             )
                     );
                 }
-
                 else {
                     viewPager.setBackgroundColor(colors[colors.length - 1]);
                 }
             }
 
-
             @Override
             public void onPageSelected(int position) {
-
+                try {
+                    viewPager.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY, FLAG_IGNORE_VIEW_SETTING);
+                } catch (Exception e) {
+                    System.out.println("Haptic error" + e.getMessage());
+                }
             }
-
-
 
             @Override
             public void onPageScrollStateChanged(int state) {

@@ -1,5 +1,7 @@
 package com.himel.aeropedia.alexa;
 
+import static android.view.HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING;
+
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
@@ -22,6 +24,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.util.Log;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -73,6 +76,7 @@ import com.himel.aeropedia.embraer.Lineage1000;
 import com.himel.aeropedia.embraer.Phenom300;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
+import com.himel.aeropedia.flightstatus.FlightStatus;
 import com.himel.aeropedia.gulfstream.G280;
 import com.himel.aeropedia.gulfstream.G650;
 import com.himel.aeropedia.gulfstream.GulfstreamIV;
@@ -139,6 +143,7 @@ public class AlexaActivity extends CoreActivity {
             bundle.putString("alexa", "alexa");
             mFirebaseAnalytics.logEvent("alexa", bundle);
         } catch (Exception e) {}
+
 
         do {
 
@@ -217,6 +222,7 @@ public class AlexaActivity extends CoreActivity {
             }
 
         } while (doWhile);
+        mainLayout = findViewById(R.id.mainLayout);
 
 
     }
@@ -326,6 +332,11 @@ public class AlexaActivity extends CoreActivity {
                     blur.setVisibility(View.GONE);
                     blur.setAlpha(0f);
                 } else if (newState == ElasticDrawer.STATE_OPENING) {
+                    try {
+                        mainLayout.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY, FLAG_IGNORE_VIEW_SETTING);
+                    } catch (Exception e) {
+                        System.out.println("Haptic error" + e.getMessage());
+                    }
                     blur.invalidate();
                     blur.setAlpha(0.0f);
                     blur.setVisibility(View.VISIBLE);
@@ -585,10 +596,11 @@ public class AlexaActivity extends CoreActivity {
             alexaRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_alexa, this.getString(R.string.ask_alexa), "HighlightDark", "ask_alexa", null));
         }
         TreeNode flightTrackerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_radar, this.getString(R.string.flight_tracker), "No", "flightTracker", FlightMap.class));
+        TreeNode flightStatusRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_status, this.getString(R.string.flightStatus), "No", "flightStatus", FlightStatus.class));
         TreeNode firebaseRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_firebase, this.getString(R.string.firebase), "No", "firebase", Firebase.class));
 
 
-        TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.airbus), "No", "airbus", null));
+        TreeNode airbus = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_airplane, this.getString(R.string.airbus), "No", "airbus", null));
         TreeNode a220Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a220), "No", "a220", AirbusA220.class));
         TreeNode a300Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a300), "No", "a300", AirbusA300.class));
         TreeNode a310Node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_tail, this.getString(R.string.a310), "No", "a310", AirbusA310.class));
@@ -658,8 +670,9 @@ public class AlexaActivity extends CoreActivity {
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, cessna, embraer, gulfstream);
 
         root.addChildren(manufacturerRoot);
-        root.addChildren(alexaRoot);
         root.addChildren(flightTrackerRoot);
+        root.addChildren(flightStatusRoot);
+        root.addChildren(alexaRoot);
         root.addChildren(firebaseRoot);
 
         tView = new AndroidTreeView(this, root);
@@ -821,7 +834,6 @@ public class AlexaActivity extends CoreActivity {
     private void showSnackBar(boolean isNetworkAvailable) {
         if (!isNetworkAvailable) {
             System.out.println("Network not available");
-            mainLayout = findViewById(R.id.mainLayout);
             Snackbar snackbar = Snackbar
                     .make(mainLayout, R.string.snackbar, Snackbar.LENGTH_LONG);
             if (enableDark.equals("No")) {

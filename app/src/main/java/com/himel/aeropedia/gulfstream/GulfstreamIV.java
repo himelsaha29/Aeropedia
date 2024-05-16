@@ -1,6 +1,9 @@
 package com.himel.aeropedia.gulfstream;
 
+import static android.view.HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +13,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -54,6 +58,7 @@ import com.himel.aeropedia.embraer.Lineage1000;
 import com.himel.aeropedia.embraer.Phenom300;
 import com.himel.aeropedia.firebase.Firebase;
 import com.himel.aeropedia.flightmap.FlightMap;
+import com.himel.aeropedia.flightstatus.FlightStatus;
 import com.himel.aeropedia.treeview.IconTreeItemHolder;
 import com.himel.aeropedia.util.SliderAdapter;
 import com.himel.aeropedia.util.SliderItem;
@@ -88,6 +93,7 @@ public class GulfstreamIV extends AppCompatActivity {
     private CollapsingToolbarLayout collapsingToolbarLayout;
     private SliderView sliderView;
     private SliderAdapter adapter;
+    private CoordinatorLayout mainLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +110,7 @@ public class GulfstreamIV extends AppCompatActivity {
         darkToggle = findViewById(R.id.dark_toggle);
         mDrawer = findViewById(R.id.drawerlayout);
         blur = findViewById(R.id.blurLayout);
+        mainLayout = findViewById(R.id.mainLayout);
 
         // setting NeumorphismButton shape based on state
         if (locale.toString().contains("en")) {
@@ -169,6 +176,11 @@ public class GulfstreamIV extends AppCompatActivity {
                     blur.setVisibility(View.GONE);
                     blur.setAlpha(0f);
                 } else if (newState == ElasticDrawer.STATE_OPENING) {
+                    try {
+                        mainLayout.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY, FLAG_IGNORE_VIEW_SETTING);
+                    } catch (Exception e) {
+                        System.out.println("Haptic error" + e.getMessage());
+                    }
                     blur.invalidate();
                     blur.setAlpha(0.0f);
                     blur.setVisibility(View.VISIBLE);
@@ -293,6 +305,7 @@ public class GulfstreamIV extends AppCompatActivity {
         TreeNode manufacturerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_manufacturer, this.getString(R.string.manufacturers), "No", "Manufacturers", null));
         TreeNode alexaRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_alexa, this.getString(R.string.ask_alexa), "No", "Alexa", AlexaActivity.class));
         TreeNode flightTrackerRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_radar, this.getString(R.string.flight_tracker), "No", "flightTracker", FlightMap.class));
+        TreeNode flightStatusRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_status, this.getString(R.string.flightStatus), "No", "flightStatus", FlightStatus.class));
         TreeNode firebaseRoot = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.drawer_firebase, this.getString(R.string.firebase), "No", "firebase", Firebase.class));
 
 
@@ -374,8 +387,9 @@ public class GulfstreamIV extends AppCompatActivity {
         manufacturerRoot.addChildren(airbus, antonov, boeing, bombardier, cessna, embraer, gulfstream);
 
         root.addChildren(manufacturerRoot);
-        root.addChildren(alexaRoot);
         root.addChildren(flightTrackerRoot);
+        root.addChildren(flightStatusRoot);
+        root.addChildren(alexaRoot);
         root.addChildren(firebaseRoot);
         manufacturerRoot.setExpanded(true);
         gulfstream.setExpanded(true);
